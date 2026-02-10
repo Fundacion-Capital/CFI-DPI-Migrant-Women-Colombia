@@ -46,9 +46,9 @@
 *		II. Label variables y values		*
 *-------------------------------------------*
 
-	*-----------------*
-	*    Bloque 0     *
-	*-----------------*
+	*---------------------------------*
+	*    Bloque 0 : Consentimiento    *
+	*---------------------------------*
 
 	label variable consent "¿Le gustaría continuar y participar en esta encuesta?"
 	note consent: "¿Le gustaría continuar y participar en esta encuesta?"
@@ -740,7 +740,7 @@
 
 
 	*--------------------------------------------------------------*
-	*    Bloque 11 : F. Confianza,autonomía y normas sociales      *
+	*    Bloque 10 : F. Confianza,autonomía y normas sociales      *
 	*--------------------------------------------------------------*
 
 	label variable q9_1 "Confío en que mi proveedor principal de pagos o cuenta mantendrá mi dinero segur"
@@ -840,7 +840,7 @@
 	label values q9_22 q9_22
 
 	*------------------------------------------------------------*
-	*    Bloque 12 : G. Barreras, habilitadores y programas      *
+	*    Bloque 11 : G. Barreras, habilitadores y programas      *
 	*------------------------------------------------------------*
 
 	label variable q10_1 "¿Cuál diría que es el principal motivo por el cual no usa más pagos digitales (o"
@@ -952,3 +952,111 @@
 
 
 
+*-------------------------------*
+*		III. Data Cleaning		*
+*-------------------------------*
+
+	*-------------------------------------*
+	*    Drops and Manual corrections     *
+	*-------------------------------------*
+
+	*Fecha
+	split submissiondate
+	rename submissiondate1 survey_date
+
+	*Eliminación de encuestas
+	drop if key == ""
+
+
+	*----------------------------------*
+	*    Create segment categories     *
+	*----------------------------------*
+
+	*Cuota 1:
+
+	*Cuota 2:
+
+	*Cuota 3:
+
+
+
+	*---------------------------------*
+	*    Bloque 0 : Consentimiento    *
+	*---------------------------------*
+
+	gen S0_CONSENT = "+", before()
+	
+
+
+	*-------------------------------*
+	*    Bloque 1 : Elegibilidad    *
+	*-------------------------------*
+
+	gen S1_ELIGIBILITY = "+", before()
+
+	*---------------------------------------------------------------*
+	*    Bloque 2 : Sección B. Caracterización del la encuestada    *
+	*---------------------------------------------------------------*
+
+	gen S2_DEMOGRAPHY = "+", before()
+
+	*----------------------------------------------------*
+	*    Bloque 3 : C.0 Acceso a telecomunicaciones      *
+	*----------------------------------------------------*
+
+	gen S3_ACCESS_TELECOM = "+", before()
+
+	
+
+	*---------------------------------------------------------*
+	*    Bloque 4 : C.1 Habilidades digitales percibidas      *
+	*---------------------------------------------------------*
+
+	gen S4_DIGITAL_SKILLS = "+", before()
+
+	*--------------------------------------------------------------------------*
+	*    Bloque 5 : C.2 Habilidades prácticas de seguridad y uso de pagos      *
+	*--------------------------------------------------------------------------*
+
+	gen S5_SECURITY_SKILLS = "+", before()
+
+	*----------------------------------------------------------------*
+	*    Bloque 6 : C.3 Documentos, cuentas y acceso financiero      *
+	*----------------------------------------------------------------*
+
+	gen S6_FINANCIAL_ACCESS = "+", before()
+
+	*---------------------------------------------------------------------*
+	*    Bloque 7 : C.4 Sistemas de pago y experiencia de onboarding      *
+	*---------------------------------------------------------------------*
+
+	gen S7_PAYMENT_SYSTEMS = "+", before()
+
+	*-----------------------------------------------------------*
+	*    Bloque 8 : D. Remesas y experiencia transaccional      *
+	*-----------------------------------------------------------*
+
+	gen S8_REMIT_TRANSACTIONS = "+", before()
+
+	*----------------------------------------------------*
+	*    Bloque 9 : E. Seguridad, fraude y reclamos      *
+	*----------------------------------------------------*
+
+	gen S9_FRAUD_CLAIMS = "+", before()
+
+	*--------------------------------------------------------------*
+	*    Bloque 10 : F. Confianza,autonomía y normas sociales      *
+	*--------------------------------------------------------------*
+
+	gen S10_TRUST_NORMS = "+", before()
+
+
+	*------------------------------------------------------------*
+	*    Bloque 11 : G. Barreras, habilitadores y programas      *
+	*------------------------------------------------------------*
+
+	gen S11_BARRIERS_PROGRAM = "+", before()
+
+*---------------------------------------------------*
+*		IV. Construct variables for analysis		*
+*---------------------------------------------------*
