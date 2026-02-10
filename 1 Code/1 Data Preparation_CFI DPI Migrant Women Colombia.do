@@ -11,8 +11,28 @@
 | Version: Stata 16	                        							 	    |
 *-------------------------------------------------------------------------------*/
 
-	
 
+/*--------------------------*
+*           INDEX           *
+*---------------------------*
+
+	I. Data intake
+	II. Label variables y values
+	III. Data Cleaning
+	IV. Construct variables for analysis
+
+
+*---------------------------*
+*		I. Data intake		*
+*---------------------------*/
+
+	import excel "${input_dir}\1 Raw\CFI DPI Encuesta Cuantitativa_WIDE.xlsx", ///
+	sheet("data") firstrow
+
+
+	* consolidate unique ID into "key" variable
+	replace key=instanceID if KEY==""
+	drop instanceID
 
 	* label variables
 	label variable key "Unique submission ID"
@@ -22,6 +42,13 @@
 	cap label variable review_comments "Comments made during review"
 	cap label variable review_corrections "Corrections made during review"
 
+*-------------------------------------------*
+*		II. Label variables y values		*
+*-------------------------------------------*
+
+	*-----------------*
+	*    Bloque 0     *
+	*-----------------*
 
 	label variable consent "¿Le gustaría continuar y participar en esta encuesta?"
 	note consent: "¿Le gustaría continuar y participar en esta encuesta?"
@@ -30,6 +57,11 @@
 
 	label variable enumerator "Nombre completo de la encuestadora"
 	note enumerator: "Nombre completo de la encuestadora"
+
+
+	*-------------------------------*
+	*    Bloque 1 : Elegibilidad    *
+	*-------------------------------*
 
 	label variable q1 "¿Con cuál de las siguientes opciones se identifica mejor?"
 	note q1: "¿Con cuál de las siguientes opciones se identifica mejor?"
@@ -57,6 +89,11 @@
 	label define q6 1 "Sí" 0 "No" 98 "Prefiero no responder"
 	label values q6 q6
 
+
+	*---------------------------------------------------------------*
+	*    Bloque 2 : Sección B. Caracterización del la encuestada    *
+	*---------------------------------------------------------------*
+
 	label variable q2_1 "¿En qué año llegó a vivir a Colombia por primera vez?"
 	note q2_1: "¿En qué año llegó a vivir a Colombia por primera vez?"
 
@@ -72,6 +109,11 @@
 
 	label variable q2_3_otro "Por favor especifique cuál es su ocupación principal"
 	note q2_3_otro: "Por favor especifique cuál es su ocupación principal"
+
+
+	*----------------------------------------------------*
+	*    Bloque 3 : C.0 Acceso a telecomunicaciones      *
+	*----------------------------------------------------*
 
 	label variable q3_1 "¿Usted tiene personalmente un teléfono móvil que usa con regularidad?"
 	note q3_1: "¿Usted tiene personalmente un teléfono móvil que usa con regularidad?"
@@ -111,6 +153,11 @@
 	label define q3_12 1 "Siempre" 2 "A veces" 3 "Nunca"
 	label values q3_12 q3_12
 
+
+	*---------------------------------------------------------*
+	*    Bloque 4 : C.1 Habilidades digitales percibidas      *
+	*---------------------------------------------------------*
+
 	label variable q3_15 "Sé descargar e instalar una aplicación en mi teléfono."
 	note q3_15: "Sé descargar e instalar una aplicación en mi teléfono."
 	label define q3_15 1 "Nada cierta" 2 "Poco cierta" 3 "Medianamente cierta" 4 "Muy cierta" 5 "Totalmente cierta"
@@ -125,6 +172,11 @@
 	note q3_17: "Me siento segura evitando fraudes y mensajes sospechosos en línea (PIN, códigos OTP, enlaces)."
 	label define q3_17 1 "Nada cierta" 2 "Poco cierta" 3 "Medianamente cierta" 4 "Muy cierta" 5 "Totalmente cierta"
 	label values q3_17 q3_17
+
+
+	*--------------------------------------------------------------------------*
+	*    Bloque 5 : C.2 Habilidades prácticas de seguridad y uso de pagos      *
+	*--------------------------------------------------------------------------*
 
 	label variable q3_20 "En los últimos 3 meses, ¿escaneó un código QR para pagar o para que le paguen?"
 	note q3_20: "En los últimos 3 meses, ¿escaneó un código QR para pagar o para que le paguen?"
@@ -146,8 +198,25 @@
 	label define q3_23 1 "No hago click/No respondo y verifico con la entidad por otro canal" 2 "Bloqueo y reporto el número" 3 "Pido más información al remitente" 4 "Hago clic/comparto datos si parece urgente" 5 "No sabe"
 	label values q3_23 q3_23
 
+
+	*----------------------------------------------------------------*
+	*    Bloque 6 : C.3 Documentos, cuentas y acceso financiero      *
+	*----------------------------------------------------------------*
+	
+	*Múltiple 1
 	label variable q4_1 "¿Cuáles de los siguientes documentos de identidad posee actualmente? (Marque tod"
 	note q4_1: "¿Cuáles de los siguientes documentos de identidad posee actualmente? (Marque todas las que apliquen)."
+
+	label var q4_1_1 "Documento de Identidad: Cédula de ciudadanía colombiana"
+	label var q4_1_2 "Documento de Identidad: Carnet de extranjería"
+	label var q4_1_3 "Documento de Identidad: Estatuto Temporal de Protección(PPT)"
+	label var q4_1_4 "Documento de Identidad: Pasaporte (vigente)"
+	label var q4_1_5 "Documento de Identidad: Pasaporte (vencido)"
+	label var q4_1_6 "Documento de Identidad: Cédula venezolana"
+	label var q4_1_7 "Documento de Identidad: Registro civil/Acta de nacimiento"
+	label var q4_1_8 "Documento de Identidad: Otro"
+	label var q4_1_9 "Documento de Identidad: Ninguno"
+	label var q4_1_98 "Documento de Identidad: Prefiere no decirlo"
 
 	label variable q4_1_otro "Qué otro documento de identidad posee"
 	note q4_1_otro: "Qué otro documento de identidad posee"
@@ -157,8 +226,15 @@
 	label define q4_2 1 "Sí" 2 "No" 3 "No intenté abrir una cuenta bancaria" 98 "Prefiero no decir"
 	label values q4_2 q4_2
 
+	*Múltiple 2
 	label variable q4_3 "( SOLO SI HUBO RECHAZO ) ¿En qué tipo de entidad ocurrió el rechazo por document"
 	note q4_3: "( SOLO SI HUBO RECHAZO ) ¿En qué tipo de entidad ocurrió el rechazo por documentación? (Marque todas las que apliquen)."
+
+	label var q4_3_1 "Entidad de rechazo: Banco"
+	label var q4_3_2 "Entidad de rechazo: Billetera digital"
+	label var q4_3_3 "Entidad de rechazo: Cooperativa/Financiera solidaria"
+	label var q4_3_4 "Entidad de rechazo: Fintech/EMI"
+	label var q4_3_5 "Entidad de rechazo: Otro"
 
 	label variable q4_3_otro "En qupe otra entidad ocurrió el rechazo"
 	note q4_3_otro: "En qupe otra entidad ocurrió el rechazo"
@@ -186,8 +262,14 @@
 	label variable q4_11_otro "Otro motivo para no tener documento de identidad"
 	note q4_11_otro: "Otro motivo para no tener documento de identidad"
 
+	*Múltiple 3
 	label variable q4_12 "¿Usted tiene personalmente alguna cuenta en una institución financiera o una cue"
 	note q4_12: "¿Usted tiene personalmente alguna cuenta en una institución financiera o una cuenta/billetera de dinero móvil? (Marque todas las que apliquen)."
+
+	label var q4_12_1 "Posee cuenta: en Banco"
+	label var q4_12_2 "Posee cuenta: en Billetera digital"
+	label var q4_12_3 "Posee cuenta: en Cooperativa/financiera solidaria"
+	label var q4_12_4 "Posee cuenta: en fintech/EMI"
 
 	label variable q4_13 "De las cuentas o billeteras que mencionó, ¿cuál es la principal para recibir o m"
 	note q4_13: "De las cuentas o billeteras que mencionó, ¿cuál es la principal para recibir o manejar dinero?"
@@ -242,14 +324,36 @@
 	label define q4_27 1 "Sí" 0 "No" 98 "Prefiero no responder"
 	label values q4_27 q4_27
 
+
+	*---------------------------------------------------------------------*
+	*    Bloque 7 : C.4 Sistemas de pago y experiencia de onboarding      *
+	*---------------------------------------------------------------------*
+
+	*Múltiple 4
 	label variable q5_1 "¿Ha escuchado de alguno de estos sistemas o rieles de pago en Colombia? (Marque "
 	note q5_1: "¿Ha escuchado de alguno de estos sistemas o rieles de pago en Colombia? (Marque todo lo que aplique)."
+
+	label var q5_1_1 "Esucho sobre sistema/riel de pago: Bre-B (Banco de la República)"
+	label var q5_1_2 "Esucho sobre sistema/riel de pago: Transfiyá/ACH"
+	label var q5_1_3 "Esucho sobre sistema/riel de pago: Redeban (transferencia cuenta-cuenta/QR)"
+	label var q5_1_4 "Esucho sobre sistema/riel de pago: Visionamos/redes cooperativas"
+	label var q5_1_5 "Esucho sobre sistema/riel de pago: Otro"
+	label var q5_1_6 "Esucho sobre sistema/riel de pago: Ninguno de los anteriores"
 
 	label variable q5_1_otro "Qué otro sistema o riel de pago en Colombia ha escuchado"
 	note q5_1_otro: "Qué otro sistema o riel de pago en Colombia ha escuchado"
 
+	*Múltiple 5
 	label variable q5_2 "En los últimos 60 días (2 meses), ¿usó alguno de estos sistemas para recibir, en"
 	note q5_2: "En los últimos 60 días (2 meses), ¿usó alguno de estos sistemas para recibir, enviar o retirar dinero? (Marque todo lo que aplique)."
+
+	label var q5_2_1 "Usó sistema/riel de pago: Bre-B (Banco de la República)"
+	label var q5_2_2 "Usó sistema/riel de pago: Transfiyá/ACH"
+	label var q5_2_3 "Usó sistema/riel de pago: Redeban (transferencia cuenta-cuenta/QR)"
+	label var q5_2_4 "Usó sistema/riel de pago: Visionamos/redes cooperativas"
+	label var q5_2_5 "Usó sistema/riel de pago: Otro"
+	label var q5_2_6 "Usó sistema/riel de pago: Ninguno de los anteriores"
+	label var q5_2_98 "Usó sistema/riel de pago: No sabe/No recuerda"
 
 	label variable q5_2_otro "Qué otro sistema para recibir o enviar dinero ha usado"
 	note q5_2_otro: "Qué otro sistema para recibir o enviar dinero ha usado"
@@ -310,8 +414,18 @@
 	label variable q5_12_otro "Qué otro identificador o llave usa con más frecuencia"
 	note q5_12_otro: "Qué otro identificador o llave usa con más frecuencia"
 
+	*Múltiple 6
 	label variable q5_13 "En su registro (onboarding) más reciente, ¿qué le pidieron para verificar su ide"
 	note q5_13: "En su registro (onboarding) más reciente, ¿qué le pidieron para verificar su identidad? (Marque todo lo que aplique)."
+
+	label var q5_13_1 "Documento de verificación: Documento con foto"
+	label var q5_13_2 "Documento de verificación: Foto o biometría"
+	label var q5_13_3 "Documento de verificación: Huella dactilar"
+	label var q5_13_4 "Documento de verificación: Prueba de dirección/domicilio(recibo)"
+	label var q5_13_5 "Documento de verificación: Línea a su nombre"
+	label var q5_13_6 "Documento de verificación: Referencia personal"
+	label var q5_13_7 "Documento de verificación: Otro"
+	label var q5_13_98 "Documento de verificación: No sabe/No recuerda"
 
 	label variable q5_13_otro "Qué otro documento le pidieron para verificar su identidad"
 	note q5_13_otro: "Qué otro documento le pidieron para verificar su identidad"
@@ -376,6 +490,11 @@
 	label define q5_27 1 "Sí, claramente" 2 "Sí, pero limitada" 3 "No" 98 "No sabe / No recuerda"
 	label values q5_27 q5_27
 
+
+	*-----------------------------------------------------------*
+	*    Bloque 8 : D. Remesas y experiencia transaccional      *
+	*-----------------------------------------------------------*
+
 	label variable q6_2 "Pensando solo en los últimos 12 meses, ¿con qué frecuencia recibió remesas del e"
 	note q6_2: "Pensando solo en los últimos 12 meses, ¿con qué frecuencia recibió remesas del exterior?"
 	label define q6_2 1 "Mensualmente o más frecuente" 2 "Cada 2 a 3 meses" 3 "1 a 2 veces en el año" 99 "No aplica / No recuerda"
@@ -425,8 +544,17 @@
 	label define q6_11 1 "SMS" 2 "Notificación en app" 3 "Recibo en papel" 4 "Correo electrónico" 5 "No recibí confirmación" 98 "No sabe / No recuerda"
 	label values q6_11 q6_11
 
+	*Múltiple 7
 	label variable q6_12 "¿Para qué usó principalmente esa remesa más reciente? (Marque todas las opciones"
 	note q6_12: "¿Para qué usó principalmente esa remesa más reciente? (Marque todas las opciones que apliquen)."
+
+	label var q6_12_1 "Uso de remesa: Gastos de hogar/alimentos"
+	label var q6_12_2 "Uso de remesa: Salud"
+	label var q6_12_3 "Uso de remesa: Educación"
+	label var q6_12_4 "Uso de remesa: Ahorro"
+	label var q6_12_5 "Uso de remesa: Negocio/emprendimiento"
+	label var q6_12_6 "Uso de remesa: Pago de deudas"
+	label var q6_12_7 "Uso de remesa: Otro"
 
 	label variable q6_12_otro "De qué otra manera usó esa remesa más reciente"
 	note q6_12_otro: "De qué otra manera usó esa remesa más reciente"
@@ -506,6 +634,11 @@
 
 	label variable q6_26_otro "Qué otro sistema o riel de pago le ha dado la mejor experiencia"
 	note q6_26_otro: "Qué otro sistema o riel de pago le ha dado la mejor experiencia"
+
+
+	*----------------------------------------------------*
+	*    Bloque 9 : E. Seguridad, fraude y reclamos      *
+	*----------------------------------------------------*
 
 	label variable q7_1 "En los últimos 12 meses, ¿recibió mensajes o llamadas sospechosas (SMS, WhatsApp"
 	note q7_1: "En los últimos 12 meses, ¿recibió mensajes o llamadas sospechosas (SMS, WhatsApp, redes sociales o teléfono) pidiéndole códigos SMS/OTP, claves, PIN o que hiciera una transferencia urgente?"
@@ -605,6 +738,11 @@
 	label variable q7_21_otro "Qué otro aspecto del proceso de reclamos mejoraría"
 	note q7_21_otro: "Qué otro aspecto del proceso de reclamos mejoraría"
 
+
+	*--------------------------------------------------------------*
+	*    Bloque 11 : F. Confianza,autonomía y normas sociales      *
+	*--------------------------------------------------------------*
+
 	label variable q9_1 "Confío en que mi proveedor principal de pagos o cuenta mantendrá mi dinero segur"
 	note q9_1: "Confío en que mi proveedor principal de pagos o cuenta mantendrá mi dinero seguro."
 	label define q9_1 1 "Totalmente en desacuerdo" 2 "En desacuerdo" 3 "Ni de acuerdo ni en desacuerdo" 4 "De acuerdo" 5 "Totalmente de acuerdo"
@@ -660,8 +798,16 @@
 	label define q9_16 1 "Sí" 0 "No" 98 "Prefiero no responder"
 	label values q9_16 q9_16
 
+	*Múltiple 8
 	label variable q9_17 "Si usted rechaza compartir su PIN/OTP o su teléfono para manejar la remesa, ¿qué"
 	note q9_17: "Si usted rechaza compartir su PIN/OTP o su teléfono para manejar la remesa, ¿qué podría ocurrir en su hogar?"
+
+	label var q9_17_1 "Consecuencia: No pasaría nada"
+	label var q9_17_2 "Consecuencia: Discusión o enojo"
+	label var q9_17_3 "Consecuencia: Restricción de enojo"
+	label var q9_17_4 "Consecuencia: Restricción de movilidad/comunicación"
+	label var q9_17_5 "Consecuencia: Ninguna de las anteriores"
+	label var q9_17_98 "Consecuencia: Prefiere no responder"	
 
 	label variable q9_18 "En general, siento que mi opinión sobre el uso de la remesa es escuchada y respe"
 	note q9_18: "En general, siento que mi opinión sobre el uso de la remesa es escuchada y respetada en mi hogar."
@@ -678,24 +824,68 @@
 	label define q9_20 1 "Sí" 0 "No" 98 "Prefiero no responder"
 	label values q9_20 q9_20
 
+	*Múltiple 9
 	label variable q9_21 "¿Qué cambios harían más seguro para usted usar pagos digitales y evitar conflict"
 	note q9_21: "¿Qué cambios harían más seguro para usted usar pagos digitales y evitar conflictos en el hogar?"
+
+	label var q9_21_1 "Mejora: Más privacidad (ocultar saldos/notificaciones)"
+	label var q9_21_2 "Mejora: Clave o biometría solo mía"
+	label var q9_21_3 "Mejora: Educación para la familia"
+	label var q9_21_4 "Mejora: Soporte o ayuda si hay coerción"
+	label var q9_21_5 "Mejora: Otra"
 
 	label variable q9_22 "En su comunidad, ¿la mayoría cree que las mujeres deben poder decidir sobre el u"
 	note q9_22: "En su comunidad, ¿la mayoría cree que las mujeres deben poder decidir sobre el uso de las remesas del hogar?"
 	label define q9_22 1 "Sí, la mayoría" 2 "Aproximadamente la mitad" 3 "Pocas personas" 4 "Casi nadie" 98 "No sabe / No recuerda"
 	label values q9_22 q9_22
 
+	*------------------------------------------------------------*
+	*    Bloque 12 : G. Barreras, habilitadores y programas      *
+	*------------------------------------------------------------*
+
 	label variable q10_1 "¿Cuál diría que es el principal motivo por el cual no usa más pagos digitales (o"
 	note q10_1: "¿Cuál diría que es el principal motivo por el cual no usa más pagos digitales (o no los usa en absoluto)?"
 	label define q10_1 1 "No tengo teléfono propio" 2 "No tengo datos / internet" 3 "No confío en estos sistemas" 4 "No sé cómo usarlos" 5 "Costos o comisiones son altos" 6 "Documentos no aceptados" 7 "Mala señal de celular o servicio inestable" 8 "Agentes o cajeros lejos" 9 "Por familia / prefiero efectivo" 10 "Tuve malas experiencias o casos de fraude" 11 "Idioma o términos que no entiendo" 12 "Baja alfabetización" 14 "Miedo a equivocarme" 15 "Soporte o atención al cliente difícil de contactar" 16 "Ninguna de las anteriores" 98 "Prefiero no responder"
 	label values q10_1 q10_1
 
+	*Múltiple 10
 	label variable q10_2 "Además de esa razón principal, ¿qué otras dificultades o barreras siente que enf"
 	note q10_2: "Además de esa razón principal, ¿qué otras dificultades o barreras siente que enfrenta para usar pagos digitales?"
 
+	label var q10_2_1 "Barrera: No tiene teléfono propio"
+	label var q10_2_2 "Barrera: No tiene datos/internet"
+	label var q10_2_3 "Barrera: No confia en estos sistemas"
+	label var q10_2_4 "Barrera: No sabe cómo usarlos"
+	label var q10_2_5 "Barrera: Costos o comisiones son altos"
+	label var q10_2_6 "Barrera: Documentos no aceptados"
+	label var q10_2_7 "Barrera: Mala señal de celular o servicio inestable"
+	label var q10_2_8 "Barrera: Agentes o cajeros lejos"
+	label var q10_2_9 "Barrera: Por familia/prefiero efectivo"
+	label var q10_2_10 "Barrera: Tuvo malas experiencias/casos de fraude"
+	label var q10_2_11 "Barrera: Idioma o términos que no entiende"
+	label var q10_2_12 "Barrera: Baja alfabetización"
+	label var q10_2_13 "Barrera: Miedo a equivocarse"
+	label var q10_2_14 "Barrera: Miedo a equivocarse"
+	label var q10_2_15 "Barrera: Soporte/atención al cliente difícil de contactar"
+	label var q10_2_16 "Barrera: Ninguna de las anteriores"
+	label var q10_2_98 "Barrera: Prefiere no responder"
+
+
+
+	*Múltiple 11
 	label variable q10_3 "Pensando en el futuro, ¿qué cambios o apoyos cree que más le ayudarían a usar pa"
 	note q10_3: "Pensando en el futuro, ¿qué cambios o apoyos cree que más le ayudarían a usar pagos digitales con tranquilidad y frecuencia?"
+
+	label var q10_3_1 "Cambio: Capacitación breve y práctica"
+	label var q10_3_2 "Cambio: Acompañamiento de alguien de confianza"
+	label var q10_3_3 "Comisiones más bajas/claras"
+	label var q10_3_4 "Cambio: Mensajes claros y en español sencillo"
+	label var q10_3_5 "Cambio: Biometría/PIN fácil de usar"
+	label var q10_3_6 "Cambio: Agentes más cercanos"
+	label var q10_3_7 "Cambio: Aceptación de QR en comercios"
+	label var q10_3_8 "Cambio: Protección o seguridad ante fraudes"
+	label var q10_3_9 "Cambio: Aceptación de documentos (PPT/CE)"
+	label var q10_3_10 "Cambio: Ninguna de las anteriores"
 
 	label variable q10_4 "En general, ¿cuánta información siente que tiene sobre comisiones, tipos de camb"
 	note q10_4: "En general, ¿cuánta información siente que tiene sobre comisiones, tipos de cambio y qué hacer si tiene un problema con un pago digital o remesa?"
@@ -737,8 +927,17 @@
 	label define q10_16 1 "Siempre" 2 "A menudo" 3 "Pocas veces" 4 "Nunca" 98 "No sabe / No recuerda"
 	label values q10_16 q10_16
 
+	*Múltiple 12 (error no activaron p10_17)
 	label variable q10_17 "En su opinión, ¿qué temas debería priorizar una formación pensada especialmente "
 	note q10_17: "En su opinión, ¿qué temas debería priorizar una formación pensada especialmente para mujeres migrantes sobre pagos digitales y remesas?"
+
+	label var q10_17_1 "Tema a priorizar: Comisiones y límites"
+	label var q10_17_2 "Tema a priorizar: Tiempos de abono"
+	label var q10_17_3 "Tema a priorizar: Riesgos y cómo evitarlos"
+	label var q10_17_4 "Tema a priorizar: Proceso de reclamos"
+	label var q10_17_5 "Tema a priorizar: Ubicación de agentes"
+	label var q10_17_6 "Tema a priorizar: Beneficios vs efectivo"
+	label var q10_17_7 "Tema a priorizar: Otro"
 
 	label variable q11_1 "¿Estaría dispuesto/a a ser contactado/a en el futuro para participar en un grupo"
 	note q11_1: "¿Estaría dispuesto/a a ser contactado/a en el futuro para participar en un grupo focal/entrevista relacionado con los temas abordados en esta encuesta?"

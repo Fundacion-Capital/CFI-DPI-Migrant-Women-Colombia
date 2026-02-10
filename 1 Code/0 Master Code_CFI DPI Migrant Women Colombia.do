@@ -43,16 +43,16 @@ else if "`c(username)'" == "jzava" { // Jorge's personal laptop
 }
 
 else if "`c(username)'" == "USUARIO" { // Sarita's personal laptop
-    global dropbox 	"C:\Users\USUARIO\Dropbox\4 IFC Inclusion Financiera NARP & Indigenas Colombia"
-	global git 		""
+    global dropbox 	"D:\Dropbox\DPI Inclusion Migrant Women Colombia"
+	global git 		"C:\Users\USUARIO\OneDrive - pucp.edu.pe\Documentos\GitHub\CFI-DPI-Migrant-Women-Colombia"
 	local os        "windows"
 }
 
 
 * Set globals for sub-folders 
-	global input_dir 	"${dropbox}/1 Data"
-	global code_dir 	"${git}/2 Code"
-	global output_dir 	"${git}/3 Output"
+	global input_dir 	"${dropbox}/2 Data"
+	global code_dir 	"${git}/1 Code"
+	global output_dir 	"${git}/2 Output"
 	
 	sysdir set PLUS "${code_dir}/ado"
 
