@@ -964,9 +964,13 @@
 	split submissiondate
 	rename submissiondate1 survey_date
 
-	*Eliminación de encuestas
+	*Eliminación de encuestas manualmente
 	drop if key == ""
 
+	*Eliminación de encuestas que no cumplen criterios de inclusión
+	drop if consent==0 | consent==98 
+	drop if q1==2
+	drop if q5==0 | q5==98
 
 	*----------------------------------*
 	*    Create segment categories     *
