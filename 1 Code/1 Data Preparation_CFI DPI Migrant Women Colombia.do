@@ -25,17 +25,18 @@
 *---------------------------*
 *		I. Data intake		*
 *---------------------------*/
+	clear all
 
 	import excel "${input_dir}\1 Raw\CFI DPI Encuesta Cuantitativa_WIDE.xlsx", ///
 	sheet("data") firstrow
 
 
 	* consolidate unique ID into "key" variable
-	replace key=instanceID if KEY==""
+	replace KEY=instanceID if KEY==""
 	drop instanceID
 
 	* label variables
-	label variable key "Unique submission ID"
+	label variable KEY "Unique submission ID"
 	cap label variable submissiondate "Date/time submitted"
 	cap label variable formdef_version "Form version used on device"
 	cap label variable review_status "Review status"
@@ -864,7 +865,6 @@
 	label var q10_2_10 "Barrera: Tuvo malas experiencias/casos de fraude"
 	label var q10_2_11 "Barrera: Idioma o términos que no entiende"
 	label var q10_2_12 "Barrera: Baja alfabetización"
-	label var q10_2_13 "Barrera: Miedo a equivocarse"
 	label var q10_2_14 "Barrera: Miedo a equivocarse"
 	label var q10_2_15 "Barrera: Soporte/atención al cliente difícil de contactar"
 	label var q10_2_16 "Barrera: Ninguna de las anteriores"
@@ -951,21 +951,26 @@
 	note q11_3: "Encuestador, ingrese el teléfono del entrevistado"
 
 
+save "${output_dir}/CFI_DPI Data for audit.dta", replace	
+
 
 *-------------------------------*
 *		III. Data Cleaning		*
 *-------------------------------*
+
+use "${output_dir}/CFI_DPI Data for audit.dta", clear
+
 
 	*-------------------------------------*
 	*    Drops and Manual corrections     *
 	*-------------------------------------*
 
 	*Fecha
-	split submissiondate
-	rename submissiondate1 survey_date
+	gen fecha = dofc(SubmissionDate)
+	format fecha %td
 
 	*Eliminación de encuestas manualmente
-	drop if key == ""
+	drop if KEY == ""
 
 	*Eliminación de encuestas que no cumplen criterios de inclusión
 	drop if consent==0 | consent==98 
@@ -977,85 +982,1042 @@
 	*    Bloque 0 : Consentimiento    *
 	*---------------------------------*
 
-	gen S0_CONSENT = "+", before()
+	gen S0_CONSENT = "+", before(consent)
 	
-
-
 	*-------------------------------*
 	*    Bloque 1 : Elegibilidad    *
 	*-------------------------------*
 
-	gen S1_ELIGIBILITY = "+", before()
+	gen S1_ELIGIBILITY = "+", before(q1)
 
 	*---------------------------------------------------------------*
 	*    Bloque 2 : Sección B. Caracterización del la encuestada    *
 	*---------------------------------------------------------------*
 
-	gen S2_DEMOGRAPHY = "+", before()
+	gen S2_DEMOGRAPHY = "+", before(q2_1)
 
 	*----------------------------------------------------*
 	*    Bloque 3 : C.0 Acceso a telecomunicaciones      *
 	*----------------------------------------------------*
 
-	gen S3_ACCESS_TELECOM = "+", before()
-
+	gen S3_ACCESS_TELECOM = "+", before(q3_1)
 	
 	*---------------------------------------------------------*
 	*    Bloque 4 : C.1 Habilidades digitales percibidas      *
 	*---------------------------------------------------------*
 
-	gen S4_DIGITAL_SKILLS = "+", before()
+	gen S4_DIGITAL_SKILLS = "+", before(q3_15)
 
 	*--------------------------------------------------------------------------*
 	*    Bloque 5 : C.2 Habilidades prácticas de seguridad y uso de pagos      *
 	*--------------------------------------------------------------------------*
 
-	gen S5_SECURITY_SKILLS = "+", before()
+	gen S5_SECURITY_SKILLS = "+", before(q3_20)
 
 	*----------------------------------------------------------------*
 	*    Bloque 6 : C.3 Documentos, cuentas y acceso financiero      *
 	*----------------------------------------------------------------*
 
-	gen S6_FINANCIAL_ACCESS = "+", before()
+	gen S6_FINANCIAL_ACCESS = "+", before(q4_1)
 
 	*---------------------------------------------------------------------*
 	*    Bloque 7 : C.4 Sistemas de pago y experiencia de onboarding      *
 	*---------------------------------------------------------------------*
 
-	gen S7_PAYMENT_SYSTEMS = "+", before()
+	gen S7_PAYMENT_SYSTEMS = "+", before(q5_1)
 
 	*-----------------------------------------------------------*
 	*    Bloque 8 : D. Remesas y experiencia transaccional      *
 	*-----------------------------------------------------------*
 
-	gen S8_REMIT_TRANSACTIONS = "+", before()
+	gen S8_REMIT_TRANSACTIONS = "+", before(q6_2)
 
 	*----------------------------------------------------*
 	*    Bloque 9 : E. Seguridad, fraude y reclamos      *
 	*----------------------------------------------------*
 
-	gen S9_FRAUD_CLAIMS = "+", before()
+	gen S9_FRAUD_CLAIMS = "+", before(q7_1)
 
 	*--------------------------------------------------------------*
 	*    Bloque 10 : F. Confianza,autonomía y normas sociales      *
 	*--------------------------------------------------------------*
 
-	gen S10_TRUST_NORMS = "+", before()
-
+	gen S10_TRUST_NORMS = "+", before(q9_1)
 
 	*------------------------------------------------------------*
 	*    Bloque 11 : G. Barreras, habilitadores y programas      *
 	*------------------------------------------------------------*
 
-	gen S11_BARRIERS_PROGRAM = "+", before()
+	gen S11_BARRIERS_PROGRAM = "+", before(q10_1)
+
+
 
 
 *---------------------------------------------------*
 *		IV. Construct variables for analysis		*
 *---------------------------------------------------*
 
+	*****************************************************
+	* SECCIÓN B – Índice de Vulnerabilidad Socioeconómica
+	*****************************************************
+	
+	* 1. Antiguedad migratoria 
+	gen years_in_col = 2026 - q2_1 if q2_1 < 2026
+	label var years_in_col "Años viviendo en el país"
+
+	egen max_years = max(years_in_col)
+	gen antig_norm = years_in_col / max_years
+	label var antig_norm "Antigüedad migratoria normalizada (0-1)"
+
+	drop max_years
+
+	* 2. Educación
+	gen educ_norm = .
+	replace educ_norm = 0.00 if q2_2 == 1   // Sin estudios
+	replace educ_norm = 0.11 if q2_2 == 2
+	replace educ_norm = 0.22 if q2_2 == 3
+	replace educ_norm = 0.33 if q2_2 == 4
+	replace educ_norm = 0.44 if q2_2 == 5
+	replace educ_norm = 0.56 if q2_2 == 6
+	replace educ_norm = 0.67 if q2_2 == 7
+	replace educ_norm = 0.78 if q2_2 == 8
+	replace educ_norm = 0.89 if q2_2 == 9
+	replace educ_norm = 1.00 if q2_2 == 10
+
+	label var educ_norm "Nivel educativo normalizado (0-1)"
+
+	* 3. Inserción laboral
+	gen ocup_norm = .
+	replace ocup_norm = 1   if inlist(q2_3, 1, 3)
+	replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 8)
+	replace ocup_norm = 0   if inlist(q2_3, 5, 6, 7)
+
+	label var ocup_norm "Inserción laboral normalizada (0-1)"
+
+	* 4. Índice agregado
+	egen ivs_score = rowmean(antig_norm educ_norm ocup_norm)
+	label var ivs_score "Índice de Vulnerabilidad Socioeconómica (0-1)"
+
+	* 5. Versión estandarizada (para regresión)
+	egen ivs_score_std = std(ivs_score)
+	label var ivs_score_std "IVS estandarizado (media 0, sd 1)"
+
+	* 6. Categorización analítica 
+	gen ivs_cat = .
+	replace ivs_cat = 1 if ivs_score <= 0.33
+	replace ivs_cat = 2 if ivs_score > 0.33 & ivs_score <= 0.66
+	replace ivs_cat = 3 if ivs_score > 0.66
+
+	label define ivs_cat_lab ///
+	1 "Alta vulnerabilidad socioeconómica" ///
+	2 "Vulnerabilidad media" ///
+	3 "Baja vulnerabilidad"
+
+	label values ivs_cat ivs_cat_lab
+	label var ivs_cat "Categoría IVS (solo descriptiva)"
+
+
+
+* =====================================================
+* C0. ÍNDICE DE ACCESO A TELECOMUNICACIONES (IAT)
+* =====================================================
+
+	* 1. Tipo de teléfono móvil
+	gen tel_score = .
+	replace tel_score = 100 if q3_1 == 1
+	replace tel_score = 50  if q3_1 == 2
+	replace tel_score = 0   if q3_1 == 3
+	label var tel_score "Acceso a dispositivo móvil"
+
+	* 2. Frecuencia de uso de Internet
+	gen internet_score = .
+	replace internet_score = 100 if q3_5 == 1
+	replace internet_score = 75  if q3_5 == 2
+	replace internet_score = 50  if q3_5 == 3
+	replace internet_score = 25  if q3_5 == 4
+	replace internet_score = 0   if q3_5 == 5
+	label var internet_score "Frecuencia de uso de Internet"
+
+	* 3. Lugar principal de acceso a Internet
+	gen access_score = .
+	replace access_score = 100 if q3_6 == 1
+	replace access_score = 75  if q3_6 == 2
+	replace access_score = 75  if q3_6 == 3
+	replace access_score = 25  if q3_6 == 4
+	replace access_score = 50  if q3_6 == 5
+	replace access_score = 25  if q3_6 == 6
+	label var access_score "Calidad del punto de acceso a Internet"
+
+	* 4. Índice agregado (promedio simple)
+	egen iat_score = rowmean(tel_score internet_score access_score)
+	label var iat_score "Índice de Acceso a Telecomunicaciones (0-100)"
+
+	gen iat_score_01 = iat_score / 100
+	label var iat_score_01 "Índice de Acceso a Telecomunicaciones (0-1)"
+
+	* 5. Versión estandarizada (para regresión)
+	egen iat_score_std = std(iat_score)
+	label var iat_score_std "IAT estandarizado"
+
+	* 6. Categorización analítica
+	gen iat_cat = .
+	replace iat_cat = 1 if iat_score <= 39
+	replace iat_cat = 2 if iat_score > 39 & iat_score <= 79
+	replace iat_cat = 3 if iat_score > 79
+	label define iat_cat_lab 1 "Acceso digital bajo" 2 "Acceso digital medio" 3 "Acceso digital alto"
+	label values iat_cat iat_cat_lab
+	label var iat_cat "Nivel de acceso a telecomunicaciones"
+
+
+* =====================================================
+* C1.1 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT)
+* =====================================================
+
+	* 1. Limpieza de valores inválidos (si existieran)
+	recode q3_15 q3_16 q3_17 (98=.) (99=.)
+
+	* 2. Normalización Likert a escala 0–1
+	gen iadt_appinstall = (q3_15 - 1) / 4
+	label var iadt_appinstall "Autoeficacia para instalar aplicaciones (0-1)"
+
+	gen iadt_sendmoney = (q3_16 - 1) / 4
+	label var iadt_sendmoney "Autoeficacia para enviar/recibir dinero digital (0-1)"
+
+	gen iadt_fraudesafe = (q3_17 - 1) / 4
+	label var iadt_fraudesafe "Autoeficacia para evitar fraudes digitales (0-1)"
+
+	* 3. Índice agregado
+	egen iadt_score = rowmean(iadt_appinstall iadt_sendmoney iadt_fraudesafe)
+	label var iadt_score "Índice de Autoeficacia Digital Transaccional (0-1)"
+
+	* 4. Versión estandarizada
+	egen iadt_score_std = std(iadt_score)
+	label var iadt_score_std "IADT estandarizado (media 0, sd 1)"
+
+	* 5. Clasificación descriptiva (opcional)
+	gen iadt_cat = .
+	replace iadt_cat = 1 if iadt_score <= 0.33
+	replace iadt_cat = 2 if iadt_score > 0.33 & iadt_score <= 0.66
+	replace iadt_cat = 3 if iadt_score > 0.66
+
+	label define iadt_cat_lab ///
+	1 "Autoeficacia digital baja" ///
+	2 "Autoeficacia digital media" ///
+	3 "Autoeficacia digital alta"
+
+	label values iadt_cat iadt_cat_lab
+	label var iadt_cat "Nivel de autoeficacia digital percibida"
+
+
+* =====================================================
+* C2.1 ÍNDICE DE COMPETENCIA DIGITAL PRÁCTICA (ICDP)
+* =====================================================
+
+
+	* 1. Uso de códigos QR (q3_20)
+	gen icdp_qr = .
+	replace icdp_qr = 100 if q3_20 == 3   // Paga y recibe
+	replace icdp_qr = 75  if inlist(q3_20,1,2)   // Solo paga o solo recibe
+	replace icdp_qr = 0   if q3_20 == 4   // No usa QR
+	label var icdp_qr "Competencia práctica en uso de códigos QR (0-100)"
+
+	* 2. Uso de SMS / OTP (q3_21)
+	gen icdp_sms = .
+	replace icdp_sms = 100 if q3_21 == 1   // Siempre
+	replace icdp_sms = 50  if q3_21 == 2   // A veces
+	replace icdp_sms = 25  if q3_21 == 3   // Nunca
+	replace icdp_sms = 0   if q3_21 == 4   // No sabe qué es OTP
+	label var icdp_sms "Competencia práctica en uso de SMS/OTP (0-100)"
+
+	* 3. Manejo de PIN (q3_22)
+	gen icdp_pin = .
+	replace icdp_pin = 100 if q3_22 == 1   // Sí
+	replace icdp_pin = 0   if inlist(q3_22,2,3)   // No / No usa apps
+	label var icdp_pin "Competencia práctica en manejo de PIN (0-100)"
+
+	* 4. Respuesta ante mensaje sospechoso (q3_23)
+	gen icdp_fraud = .
+	replace icdp_fraud = 100 if q3_23 == 2   // Bloquea y reporta
+	replace icdp_fraud = 75  if q3_23 == 1   // Verifica por otro canal
+	replace icdp_fraud = 25  if q3_23 == 3   // Pide más información
+	replace icdp_fraud = 0   if inlist(q3_23,4,5)   // Hace clic / No sabe
+	label var icdp_fraud "Competencia práctica ante mensajes sospechosos (0-100)"
+
+	* 5. Índice agregado
+	egen icdp_score = rowmean(icdp_qr icdp_sms icdp_pin icdp_fraud)
+	label var icdp_score "Índice de Competencia Digital Práctica (0-100)"
+
+	gen icdp_score_01 = icdp_score / 100
+	label var icdp_score_01 "ICDP normalizado (0-1)"
+
+	egen icdp_score_std = std(icdp_score)
+	label var icdp_score_std "ICDP estandarizado (media 0, sd 1)"
+
+
+	* 6. Clasificación descriptiva
+	gen icdp_cat = .
+	replace icdp_cat = 1 if icdp_score <= 39
+	replace icdp_cat = 2 if icdp_score > 39 & icdp_score <= 79
+	replace icdp_cat = 3 if icdp_score > 79
+
+	label define icdp_cat_lab ///
+	1 "Competencia digital práctica baja" ///
+	2 "Competencia digital práctica media" ///
+	3 "Competencia digital práctica alta"
+
+	label values icdp_cat icdp_cat_lab
+	label var icdp_cat "Nivel de competencia digital práctica"
+
+
+* =====================================================
+* C3.1 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF)
+* =====================================================
+
+	* 1. Documento válido para KYC – q4_1_*
+	gen iaff_doc = 0
+	replace iaff_doc = 100 if ///
+	q4_1_1 == 1 | /// Cédula colombiana
+	q4_1_2 == 1 | /// Carnet de extranjería
+	q4_1_3 == 1 | /// PPT
+	q4_1_4 == 1     // Pasaporte vigente
+	label var iaff_doc "Documento válido para KYC (0-100)"
+
+
+	* 2. Comprobante de dirección – q4_5
+	gen iaff_address = .
+	replace iaff_address = 100 if q4_5 == 1   // Sí
+	replace iaff_address = 50  if q4_5 == 3   // En trámite
+	replace iaff_address = 0   if q4_5 == 2   // No
+	label var iaff_address "Comprobante de dirección aceptado (0-100)"
+
+	* 3. Teléfono a nombre propio – q4_6
+	gen iaff_phone = .
+	replace iaff_phone = 100 if q4_6 == 1     // Sí
+	replace iaff_phone = 50  if q4_6 == 3     // No tiene línea propia
+	replace iaff_phone = 0   if inlist(q4_6,2,4)
+	label var iaff_phone "Teléfono registrado a nombre propio (0-100)"
+
+	* 4. Tenencia de cuenta o billetera – q4_12_*
+	gen iaff_account = 0
+	replace iaff_account = 100 if ///
+	q4_12_1 == 1 | /// Cuenta bancaria
+	q4_12_2 == 1 | /// Billetera digital
+	q4_12_3 == 1 | /// Cooperativa
+	q4_12_4 == 1    // Fintech / EMI
+	label var iaff_account "Tenencia de cuenta o billetera (0-100)"
+
+	* 5. Índice agregado IAFF
+	egen iaff_score = rowmean(iaff_doc iaff_address iaff_phone iaff_account)
+	label var iaff_score "Índice de Acceso Financiero Formal (0-100)"
+
+	gen iaff_score_01 = iaff_score / 100
+	label var iaff_score_01 "IAFF normalizado (0-1)"
+
+	egen iaff_score_std = std(iaff_score)
+	label var iaff_score_std "IAFF estandarizado"
+
+	* 6. Clasificación descriptiva
+	gen iaff_cat = .
+	replace iaff_cat = 1 if iaff_score <= 39
+	replace iaff_cat = 2 if iaff_score > 39 & iaff_score <= 79
+	replace iaff_cat = 3 if iaff_score > 79
+
+	label define iaff_cat_lab ///
+	1 "Acceso financiero bajo" ///
+	2 "Acceso financiero medio" ///
+	3 "Acceso financiero alto"
+
+	label values iaff_cat iaff_cat_lab
+	label var iaff_cat "Nivel de acceso financiero formal"
 
 
 
 
+* =====================================================
+* C3.2 ÍNDICE DE USO Y OPERATIVIDAD FINANCIERA (IUOF)
+* =====================================================
+
+	* (A) Frecuencia de uso – q4_15
+	gen iuof_freq = .
+	replace iuof_freq = 100 if q4_15==1
+	replace iuof_freq = 80  if q4_15==2
+	replace iuof_freq = 60  if q4_15==3
+	replace iuof_freq = 40  if q4_15==4
+	replace iuof_freq = 0   if q4_15==5
+	label var iuof_freq "Frecuencia de uso de la cuenta (0-100)"
+
+	* (B) Facilidad cash-in / cash-out – q4_16
+	gen iuof_cash = .
+	replace iuof_cash = 100 if q4_16==1
+	replace iuof_cash = 70  if q4_16==2
+	replace iuof_cash = 30  if q4_16==3
+	replace iuof_cash = 0   if q4_16==4
+	label var iuof_cash "Facilidad cash-in/cash-out (0-100)"
+
+	* (C) Tiempo al punto financiero – q4_17
+	gen iuof_time = .
+	replace iuof_time = 100 if q4_17==1
+	replace iuof_time = 75  if q4_17==2
+	replace iuof_time = 40  if q4_17==3
+	replace iuof_time = 0   if q4_17==4
+	label var iuof_time "Proximidad a punto financiero (0-100)"
+
+	* (D) Uso para pagos – q4_24
+	gen iuof_pay = .
+	replace iuof_pay = 100 if q4_24==1
+	replace iuof_pay = 50  if q4_24==2
+	replace iuof_pay = 0   if q4_24==3
+	label var iuof_pay "Uso de cuenta para pagos (0-100)"
+
+	* (E) Ahorro – q4_25
+	gen iuof_save = .
+	replace iuof_save = 100 if q4_25==1
+	replace iuof_save = 50  if q4_25==2
+	replace iuof_save = 0   if q4_25==3
+	label var iuof_save "Uso de cuenta para ahorro (0-100)"
+
+	* (F) Notificaciones – q4_26
+	gen iuof_notify = .
+	replace iuof_notify = 100 if q4_26==1
+	replace iuof_notify = 50  if q4_26==2
+	replace iuof_notify = 0   if q4_26==3
+	label var iuof_notify "Recepción de notificaciones (0-100)"
+
+	* (G) Riesgo: préstamo de cuenta – q4_27
+	gen iuof_risk = .
+	replace iuof_risk = 0   if q4_27==1
+	replace iuof_risk = 100 if q4_27==2
+	label var iuof_risk "No préstamo de cuenta (0-100)"
+
+	* (H) Índice IUOF
+	egen iuof_score = rowmean(iuof_freq iuof_cash iuof_time iuof_pay ///
+							  iuof_save iuof_notify iuof_risk)
+	label var iuof_score "Índice de Uso y Operatividad Financiera (0-100)"
+
+	gen iuof_score_01 = iuof_score/100
+	label var iuof_score_01 "IUOF normalizado (0-1)"
+
+	egen iuof_score_std = std(iuof_score)
+	label var iuof_score_std "IUOF estandarizado"
+
+	* Categorización
+	gen iuof_cat = .
+	replace iuof_cat = 1 if iuof_score < 40
+	replace iuof_cat = 2 if iuof_score >= 40 & iuof_score < 70
+	replace iuof_cat = 3 if iuof_score >= 70
+
+	label define iuof_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values iuof_cat iuof_cat_lbl
+	label var iuof_cat "Categoría IUOF"
+
+* =====================================================
+* C4.1 ÍNDICE DE FRICCIÓN DE ONBOARDING (IFO)
+* =====================================================
+
+	* (A) Facilidad del registro – q5_14
+	gen ifo_easy = .
+	replace ifo_easy = 100 if q5_14==1
+	replace ifo_easy = 75  if q5_14==2
+	replace ifo_easy = 25  if q5_14==3
+	replace ifo_easy = 0   if q5_14==4
+	label var ifo_easy "Facilidad percibida del registro (0-100)"
+
+	* (B) Tiempo hasta activación – q5_15
+	gen ifo_time = .
+	replace ifo_time = 100 if q5_15==1
+	replace ifo_time = 80  if q5_15==2
+	replace ifo_time = 60  if q5_15==3
+	replace ifo_time = 30  if q5_15==4
+	replace ifo_time = 0   if q5_15==5
+	label var ifo_time "Rapidez de activación de la cuenta (0-100)"
+
+	* (C) Registro sin ayuda – q5_16
+
+	gen ifo_help = .
+	replace ifo_help = 100 if q5_16==0 | q5_16==4
+	replace ifo_help = 50  if inlist(q5_16,1,2,3)
+	label var ifo_help "Registro sin necesidad de ayuda (0-100)"
+
+	* (D) Requisitos KYC (menos = mejor) – q5_13_*
+	egen kyc_count = rowtotal(q5_13_1 q5_13_2 q5_13_3 q5_13_4 q5_13_5 q5_13_6)
+	gen ifo_kyc = .
+	replace ifo_kyc = 100 if kyc_count<=2
+	replace ifo_kyc = 70  if kyc_count==3
+	replace ifo_kyc = 40  if kyc_count==4
+	replace ifo_kyc = 0   if kyc_count>=5
+	label var ifo_kyc "Baja carga de requisitos KYC (0-100)"
+
+	* (E) Documento aceptado sin problemas – q5_25
+	gen ifo_doc = .
+	replace ifo_doc = 100 if q5_25==1
+	replace ifo_doc = 0   if q5_25==2
+	label var ifo_doc "Documento aceptado sin objeciones (0-100)"
+
+	* (F) Claridad de costos – q5_7
+	gen ifo_cost = .
+	replace ifo_cost = 100 if q5_7==1
+	replace ifo_cost = 70  if q5_7==2
+	replace ifo_cost = 30  if q5_7==3
+	replace ifo_cost = 0   if q5_7==4
+	label var ifo_cost "Costos visibles y claros (0-100)"
+
+	* (G) Confirmación de transferencia – q5_5
+	gen ifo_confirm = .
+	replace ifo_confirm = 100 if inlist(q5_5,1,2,3)
+	replace ifo_confirm = 0   if q5_5==4
+	label var ifo_confirm "Confirmación de transacción recibida (0-100)"
+
+	* (H) Sin fallos o reversos – q5_9
+	gen ifo_fail = .
+	replace ifo_fail = 100 if q5_9==3
+	replace ifo_fail = 50  if q5_9==1
+	replace ifo_fail = 0   if q5_9==2
+	label var ifo_fail "Ausencia de fallos o reversos (0-100)"
+
+	* (I) Términos y privacidad claros – q5_21 y q5_22
+	gen ifo_terms = .
+	replace ifo_terms = 100 if q5_21==1 & q5_22==1
+	replace ifo_terms = 50  if inlist(q5_21,1,2) & inlist(q5_22,1,2)
+	replace ifo_terms = 0   if q5_21==3 | q5_22==3
+	label var ifo_terms "Términos y privacidad claros (0-100)"
+
+	* (J) Asistencia durante registro – q5_23
+	gen ifo_support = .
+	replace ifo_support = 100 if q5_23==1
+	replace ifo_support = 50  if q5_23==2
+	replace ifo_support = 0   if q5_23==3
+	label var ifo_support "Asistencia durante registro (0-100)"
+
+	* (K) Índice final IFO
+	egen ifo_score = rowmean(ifo_easy ifo_time ifo_help ifo_kyc ///
+							 ifo_doc ifo_cost ifo_confirm ifo_fail ///
+							 ifo_terms ifo_support)
+	label var ifo_score "Índice de Fricción de Onboarding (0-100)"
+
+	gen ifo_score_01 = ifo_score/100
+	label var ifo_score_01 "IFO normalizado (0-1)"
+
+	egen ifo_score_std = std(ifo_score)
+	label var ifo_score_std "IFO estandarizado"
+
+	* Categorización
+	gen ifo_cat = .
+	replace ifo_cat = 1 if ifo_score < 40
+	replace ifo_cat = 2 if ifo_score >= 40 & ifo_score < 70
+	replace ifo_cat = 3 if ifo_score >= 70
+
+	label define ifo_cat_lbl 1 "Alto fricción / Bajo desempeño" ///
+							 2 "Fricción media" ///
+							 3 "Baja fricción / Buen onboarding"
+	label values ifo_cat ifo_cat_lbl
+	label var ifo_cat "Categoría IFO"
+
+
+	drop kyc_count
+
+
+
+
+/******************************************************************
+D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
+******************************************************************/
+
+	* (A) Frecuencia de remesas del exterior – q6_2
+	gen iurd_freq = .
+	replace iurd_freq = 100 if q6_2==1
+	replace iurd_freq = 60  if q6_2==2
+	replace iurd_freq = 30  if q6_2==3
+	label var iurd_freq "Frecuencia de recepción de remesas (0-100)"
+
+	* (B) Uso reciente de pagos/remesas digitales – q6_14
+	gen iurd_recent = .
+	replace iurd_recent = 100 if q6_14==1
+	replace iurd_recent = 0   if q6_14==0
+	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
+
+	* (C) Número de operaciones digitales – q6_15
+	gen iurd_ops = .
+	replace iurd_ops = 20  if q6_15==1
+	replace iurd_ops = 40  if q6_15==2
+	replace iurd_ops = 60  if q6_15==3
+	replace iurd_ops = 80  if q6_15==4
+	replace iurd_ops = 100 if q6_15==5
+	label var iurd_ops "Volumen de operaciones digitales (0-100)"
+
+	* (D) Proporción digital de la remesa – q6_13
+	gen iurd_digital = .
+	replace iurd_digital = 0   if q6_13==1
+	replace iurd_digital = 25  if q6_13==2
+	replace iurd_digital = 50  if q6_13==3
+	replace iurd_digital = 75  if q6_13==4
+	replace iurd_digital = 100 if q6_13==5
+	label var iurd_digital "Proporción de remesa usada digitalmente (0-100)"
+
+	* (E) Índice final IURD
+	egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital)
+	label var iurd_score "Índice de Intensidad de Uso de Remesas Digitales (0-100)"
+
+	gen iurd_score_01 = iurd_score/100
+	label var iurd_score_01 "IURD normalizado (0-1)"
+
+	egen iurd_score_std = std(iurd_score)
+	label var iurd_score_std "IURD estandarizado"
+
+	* Categorización
+	gen iurd_cat = .
+	replace iurd_cat = 1 if iurd_score < 40
+	replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70
+	replace iurd_cat = 3 if iurd_score >= 70
+
+	label define iurd_cat_lbl 1 "Baja intensidad" ///
+							  2 "Intensidad media" ///
+							  3 "Alta intensidad"
+	label values iurd_cat iurd_cat_lbl
+	label var iurd_cat "Categoría IURD"
+
+
+
+/******************************************************************
+D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
+******************************************************************/
+
+	* (A) Tiempo para usar la remesa – q6_6
+	gen ietr_time = .
+	replace ietr_time = 100 if q6_6==1
+	replace ietr_time = 80  if q6_6==2
+	replace ietr_time = 60  if q6_6==3
+	replace ietr_time = 30  if q6_6==4
+	replace ietr_time = 0   if q6_6==5
+	label var ietr_time "Rapidez de acreditación de remesa (0-100)"
+
+	* (B) Claridad de comisiones y tipo de cambio – q6_9 y q6_18
+	gen ietr_cost = .
+	replace ietr_cost = 100 if q6_9==1 & q6_18==1
+	replace ietr_cost = 60  if inlist(q6_9,1,2) & inlist(q6_18,1,2)
+	replace ietr_cost = 0   if q6_9>=3 | q6_18==3
+	label var ietr_cost "Claridad de costos y tipo de cambio (0-100)"
+
+	* (C) Confirmaciones recibidas – q6_11 y q6_20
+	gen ietr_confirm = .
+	replace ietr_confirm = 100 if q6_11!=5 & q6_20==1
+	replace ietr_confirm = 50  if q6_11!=5 & q6_20==2
+	replace ietr_confirm = 0   if q6_11==5 | q6_20==3
+	label var ietr_confirm "Confirmaciones oportunas de la operación (0-100)"
+
+	* (D) Ausencia de problemas o fallas – q6_16
+	gen ietr_problem = .
+	replace ietr_problem = 100 if q6_16==4
+	replace ietr_problem = 50  if q6_16==1
+	replace ietr_problem = 30  if q6_16==2
+	replace ietr_problem = 0   if q6_16==3
+	label var ietr_problem "Ausencia de problemas transaccionales (0-100)"
+
+	* (E) Sin límites restrictivos – q6_17
+	gen ietr_limits = .
+	replace ietr_limits = 100 if q6_17==4
+	replace ietr_limits = 0   if inlist(q6_17,1,2,3)
+	label var ietr_limits "Ausencia de límites operativos (0-100)"
+
+	* (F) Rapidez percibida general – q6_21
+	gen ietr_speed = .
+	replace ietr_speed = 100 if q6_21==1
+	replace ietr_speed = 80  if q6_21==2
+	replace ietr_speed = 60  if q6_21==3
+	replace ietr_speed = 30  if q6_21==4
+	replace ietr_speed = 0   if q6_21>=5
+	label var ietr_speed "Rapidez percibida de pagos digitales (0-100)"
+
+	* (G) Evaluación global – q6_24
+	gen ietr_eval = .
+	replace ietr_eval = 0   if q6_24==1
+	replace ietr_eval = 25  if q6_24==2
+	replace ietr_eval = 50  if q6_24==3
+	replace ietr_eval = 75  if q6_24==4
+	replace ietr_eval = 100 if q6_24==5
+	label var ietr_eval "Evaluación global de experiencia digital (0-100)"
+
+	* (H) Índice final IETR
+	egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ///
+							  ietr_problem ietr_limits ietr_speed ///
+							  ietr_eval)
+	label var ietr_score "Índice de Experiencia Transaccional en Remesas (0-100)"
+
+	gen ietr_score_01 = ietr_score/100
+	label var ietr_score_01 "IETR normalizado (0-1)"
+
+	egen ietr_score_std = std(ietr_score)
+	label var ietr_score_std "IETR estandarizado"
+
+	* Categorización
+	gen ietr_cat = .
+	replace ietr_cat = 1 if ietr_score < 40
+	replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70
+	replace ietr_cat = 3 if ietr_score >= 70
+
+	label define ietr_cat_lbl 1 "Mala experiencia" ///
+							  2 "Experiencia regular" ///
+							  3 "Buena experiencia"
+	label values ietr_cat ietr_cat_lbl
+	label var ietr_cat "Categoría IETR"
+
+
+* ---------------------------------------------------------
+* E1. Índice de Prevención y Conducta Segura (IPCS)
+* ---------------------------------------------------------
+
+	* Reacción ante mensaje sospechoso (q7_2)
+	gen e1_reaccion_segura = .
+	replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)
+	replace e1_reaccion_segura = 0 if q7_2==4
+	label var e1_reaccion_segura "Reacción segura ante mensaje sospechoso"
+
+	* Uso de autenticación segura (q7_6)
+	gen e1_autenticacion = .
+	replace e1_autenticacion = 1 if inlist(q7_6,1,2)
+	replace e1_autenticacion = 0 if q7_6==3
+	label var e1_autenticacion "Uso de métodos de autenticación segura"
+
+	* Hábitos de cambio de claves / revisión (q7_7)
+	gen e1_habitos_claves = .
+	replace e1_habitos_claves = 1 if inlist(q7_7,1,2)
+	replace e1_habitos_claves = 0 if inlist(q7_7,3,4)
+	label var e1_habitos_claves "Hábitos de cambio de claves y revisión"
+
+	* Educación / alertas antifraude (q7_8)
+	gen e1_educacion = .
+	replace e1_educacion = 1 if q7_8==1
+	replace e1_educacion = 0 if inlist(q7_8,2,3)
+	label var e1_educacion "Recepción de educación o alertas antifraude"
+
+	* Seguridad percibida (q7_9)
+	gen e1_seguridad_percibida = .
+	replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)
+	replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)
+	label var e1_seguridad_percibida "Sensación de seguridad en pagos/remesas"
+
+	* Valora medidas preventivas (q7_10)
+	gen e1_valora_prevencion = .
+	replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)
+	replace e1_valora_prevencion = 0 if q7_10==6
+	label var e1_valora_prevencion "Valora medidas de prevención del fraude"
+
+	* IPCS: promedio y normalización 0–100
+	egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves ///
+							e1_educacion e1_seguridad_percibida e1_valora_prevencion)
+	gen IPCS = IPCS_raw*100
+	label var IPCS "Índice de Prevención y Conducta Segura (0–100)"
+
+	* Categorización IPCS
+	gen IPCS_cat = .
+	replace IPCS_cat = 1 if IPCS < 40
+	replace IPCS_cat = 2 if IPCS >= 40 & IPCS < 70
+	replace IPCS_cat = 3 if IPCS >= 70
+
+	label define IPCS_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values IPCS_cat IPCS_cat_lbl
+	label var IPCS_cat "Categoría IPCS"
+
+
+
+* ---------------------------------------------------------
+* E2. Índice de Exposición y Daño por Fraude (IEDF)
+* ---------------------------------------------------------
+
+	* Exposición a mensajes sospechosos (q7_1)
+	gen e2_exposicion = .
+	replace e2_exposicion = 1 if inlist(q7_1,1,2)
+	replace e2_exposicion = 0 if q7_1==3
+	label var e2_exposicion "Exposición a mensajes o llamadas sospechosas"
+
+	* Bloqueos por fraude o error (q7_5)
+	gen e2_bloqueo = .
+	replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)
+	replace e2_bloqueo = 0 if q7_5==4
+	label var e2_bloqueo "Cuenta/app bloqueada por sospecha de fraude"
+
+	* Problemas con pagos o remesas (q7_11)
+	gen e2_problema = .
+	replace e2_problema = 1 if q7_11==1
+	replace e2_problema = 0 if q7_11==2
+	label var e2_problema "Tuvo problemas con pagos/remesas digitales"
+
+	* Problema no resuelto (q7_14)
+	gen e2_no_resuelto = .
+	replace e2_no_resuelto = 1 if inlist(q7_14,2,3)
+	replace e2_no_resuelto = 0 if q7_14==1
+	label var e2_no_resuelto "Problema no resuelto completamente"
+
+	* Demora en respuesta (q7_13)
+	gen e2_demora = .
+	replace e2_demora = 1 if inlist(q7_13,3,4,5)
+	replace e2_demora = 0 if inlist(q7_13,1,2)
+	label var e2_demora "Demora en respuesta al reclamo"
+
+	* IEDF: promedio y normalización 0–100
+	egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema ///
+							e2_no_resuelto e2_demora)
+	gen IEDF = IEDF_raw*100
+	label var IEDF "Índice de Exposición y Daño por Fraude (0–100)"
+
+	* Categorización IEDF
+	gen IEDF_cat = .
+	replace IEDF_cat = 1 if IEDF < 40
+	replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70
+	replace IEDF_cat = 3 if IEDF >= 70
+
+	label define IEDF_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values IEDF_cat IEDF_cat_lbl
+	label var IEDF_cat "Categoría IEDF"
+
+
+
+* =========================================================
+* F. CONFIANZA, AUTONOMÍA Y NORMAS SOCIALES
+* =========================================================
+
+* ---------------------------------------------------------
+* F1. Índice de Autonomía Económica en Remesas (IAER)
+* ---------------------------------------------------------
+
+	* Decide uso de remesas (q9_4)
+	gen f1_decide_remesa = .
+	replace f1_decide_remesa = 1 if inlist(q9_4,4,5)
+	replace f1_decide_remesa = 0 if inlist(q9_4,1,2)
+	label var f1_decide_remesa "Decide uso de remesas"
+
+	* Quién administra la remesa (q9_5)
+	gen f1_administra = .
+	replace f1_administra = 1 if inlist(q9_5,1,3)
+	replace f1_administra = 0 if inlist(q9_5,2,4,5)
+	label var f1_administra "Administra o codirige remesa"
+
+	* Puede destinar remesa a ahorro/negocio (q9_6)
+	gen f1_ahorro_negocio = .
+	replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)
+	replace f1_ahorro_negocio = 0 if q9_6==3
+	label var f1_ahorro_negocio "Autonomía para ahorro o negocio"
+
+	* Control general del dinero (q9_7)
+	gen f1_control = .
+	replace f1_control = 1 if inlist(q9_7,4,5)
+	replace f1_control = 0 if inlist(q9_7,1,2)
+	label var f1_control "Control sobre decisiones financieras"
+
+	* Coerción para mostrar teléfono o códigos (q9_8)
+	gen f1_no_coercion = .
+	replace f1_no_coercion = 1 if q9_8==0
+	replace f1_no_coercion = 0 if q9_8==1
+	label var f1_no_coercion "No sufrió coerción por códigos/telefono"
+
+	* Preferencia de cuenta a su nombre (q9_9)
+	gen f1_cuenta_propia = .
+	replace f1_cuenta_propia = 1 if q9_9==1
+	replace f1_cuenta_propia = 0 if inlist(q9_9,2,3)
+	label var f1_cuenta_propia "Prefiere cuenta a su nombre"
+
+	* Decide atención de salud (q9_11)
+	gen f1_salud = .
+	replace f1_salud = 1 if inlist(q9_11,1,2)
+	replace f1_salud = 0 if inlist(q9_11,3,4)
+	label var f1_salud "Decisión sobre salud"
+
+	* Decide gastos importantes del hogar (q9_13)
+	gen f1_gastos = .
+	replace f1_gastos = 1 if inlist(q9_13,1,2)
+	replace f1_gastos = 0 if inlist(q9_13,3,4)
+	label var f1_gastos "Decisión sobre gastos del hogar"
+
+	* Opinión escuchada en el hogar (q9_18)
+	gen f1_opinion = .
+	replace f1_opinion = 1 if inlist(q9_18,4,5)
+	replace f1_opinion = 0 if inlist(q9_18,1,2)
+	label var f1_opinion "Opinión respetada en el hogar"
+
+	* Puede abrir/cambiar cuenta (q9_19)
+	gen f1_cambiar_cuenta = .
+	replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)
+	replace f1_cambiar_cuenta = 0 if q9_19==3
+	label var f1_cambiar_cuenta "Autonomía para abrir/cambiar cuenta"
+
+	* Evitó pagos digitales por conflictos (q9_20)
+	gen f1_no_evito = .
+	replace f1_no_evito = 1 if q9_20==0
+	replace f1_no_evito = 0 if q9_20==1
+	label var f1_no_evito "No evitó pagos digitales por conflictos"
+
+	* IAER: promedio y normalización
+	egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio ///
+							f1_control f1_no_coercion f1_cuenta_propia ///
+							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
+							f1_no_evito)
+	gen IAER = IAER_raw*100
+	label var IAER "Índice de Autonomía Económica en Remesas (0–100)"
+
+	* Categorización IAER
+	gen IAER_cat = .
+	replace IAER_cat = 1 if IAER < 40
+	replace IAER_cat = 2 if IAER >= 40 & IAER < 70
+	replace IAER_cat = 3 if IAER >= 70
+
+	label define IAER_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values IAER_cat IAER_cat_lbl
+	label var IAER_cat "Categoría IAER"
+
+* ---------------------------------------------------------
+* F2. Índice de Confianza en Proveedores Financieros (ICPF)
+* ---------------------------------------------------------
+
+	* Confianza en proveedor (q9_1)
+	gen f2_confianza = .
+	replace f2_confianza = 1 if inlist(q9_1,4,5)
+	replace f2_confianza = 0 if inlist(q9_1,1,2)
+	label var f2_confianza "Confianza en proveedor financiero"
+
+	* Seguridad percibida en normas del hogar (q9_15)
+	gen f2_normas = .
+	replace f2_normas = 1 if inlist(q9_15,4,5)
+	replace f2_normas = 0 if inlist(q9_15,1,2)
+	label var f2_normas "Normas favorables a pagos digitales"
+
+	* Confianza comunitaria (q9_22)
+	gen f2_comunidad = .
+	replace f2_comunidad = 1 if q9_22==1
+	replace f2_comunidad = 0 if inlist(q9_22,3,4)
+	label var f2_comunidad "Confianza comunitaria en autonomía femenina"
+
+	* ICPF: promedio y normalización
+	egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad)
+	gen ICPF = ICPF_raw*100
+	label var ICPF "Índice de Confianza en Proveedores Financieros (0–100)"
+
+	* Categorización ICPF
+	gen ICPF_cat = .
+	replace ICPF_cat = 1 if ICPF < 40
+	replace ICPF_cat = 2 if ICPF >= 40 & ICPF < 70
+	replace ICPF_cat = 3 if ICPF >= 70
+
+	label define ICPF_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values ICPF_cat ICPF_cat_lbl
+	label var ICPF_cat "Categoría ICPF"
+
+
+
+* =========================================================
+* G. BARRERAS, HABILITADORES Y PROGRAMAS
+* =========================================================
+
+* ---------------------------------------------------------
+* G1. Índice de Entorno Habilitante (IEH)
+* ---------------------------------------------------------
+
+	* Información sobre comisiones, tipo de cambio y reclamos (q10_4)
+	gen g1_info = .
+	replace g1_info = 1 if inlist(q10_4,3,4)
+	replace g1_info = 0 if inlist(q10_4,1,2)
+	label var g1_info "Información suficiente sobre pagos digitales"
+
+	* Facilidad de cash-out (q10_6)
+	gen g1_cashout = .
+	replace g1_cashout = 1 if inlist(q10_6,1,2)
+	replace g1_cashout = 0 if inlist(q10_6,3,4,5)
+	label var g1_cashout "Entorno favorable para retiro de efectivo"
+
+	* Participó en capacitación (q10_10)
+	gen g1_capacitacion = .
+	replace g1_capacitacion = 1 if q10_10==1
+	replace g1_capacitacion = 0 if q10_10==2
+	label var g1_capacitacion "Participó en capacitación"
+
+	* Cambio positivo tras capacitación (q10_12)
+	gen g1_impacto_cap = .
+	replace g1_impacto_cap = 1 if inlist(q10_12,3,4)
+	replace g1_impacto_cap = 0 if inlist(q10_12,1,2)
+	label var g1_impacto_cap "Capacitación aumentó disposición"
+
+	* Acompañamiento individual (q10_13)
+	gen g1_acompanamiento = .
+	replace g1_acompanamiento = 1 if q10_13==1
+	replace g1_acompanamiento = 0 if q10_13==0
+	label var g1_acompanamiento "Recibió acompañamiento individual"
+
+	* Exposición frecuente a materiales educativos (q10_16)
+	gen g1_materiales = .
+	replace g1_materiales = 1 if inlist(q10_16,1,2)
+	replace g1_materiales = 0 if inlist(q10_16,3,4)
+	label var g1_materiales "Exposición a materiales educativos"
+
+	* IEH: promedio y normalización
+	egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion ///
+						   g1_impacto_cap g1_acompanamiento g1_materiales)
+	gen IEH = IEH_raw*100
+	label var IEH "Índice de Entorno Habilitante (0–100)"
+
+	* Categorización IEH
+	gen IEH_cat = .
+	replace IEH_cat = 1 if IEH < 40
+	replace IEH_cat = 2 if IEH >= 40 & IEH < 70
+	replace IEH_cat = 3 if IEH >= 70
+
+	label define IEH_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values IEH_cat IEH_cat_lbl
+	label var IEH_cat "Categoría IEH"
+
+* ---------------------------------------------------------
+* G2. Índice de Barreras Percibidas a la Digitalización (IBPD)
+* ---------------------------------------------------------
+
+	* Barrera principal declarada (q10_1)
+	gen g2_barrera_principal = .
+	replace g2_barrera_principal = 0 if q10_1==16
+	replace g2_barrera_principal = 1 if inrange(q10_1,1,15)
+	label var g2_barrera_principal "Tiene barrera principal"
+
+	* Barreras adicionales (select_multiple q10_2)
+	egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 ///
+									  q10_2_5 q10_2_6 q10_2_7 q10_2_8 ///
+									  q10_2_9 q10_2_10 q10_2_11 q10_2_12 ///
+									  q10_2_14 q10_2_15)
+	gen g2_barreras_extra_bin = g2_barreras_extra>0
+	label var g2_barreras_extra_bin "Barreras adicionales percibidas"
+
+	* Bajo nivel de información (q10_4)
+	gen g2_poca_info = .
+	replace g2_poca_info = 1 if inlist(q10_4,1,2)
+	replace g2_poca_info = 0 if inlist(q10_4,3,4)
+	label var g2_poca_info "Poca información percibida"
+
+	* Cash-out difícil o inexistente (q10_6)
+	gen g2_cashout_dificil = .
+	replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5)
+	replace g2_cashout_dificil = 0 if inlist(q10_6,1,2)
+	label var g2_cashout_dificil "Dificultad para retirar efectivo"
+
+	* Nunca vio materiales educativos (q10_16)
+	gen g2_sin_materiales = .
+	replace g2_sin_materiales = 1 if q10_16==4
+	replace g2_sin_materiales = 0 if inlist(q10_16,1,2,3)
+	label var g2_sin_materiales "Sin exposición educativa"
+
+	* IBPD: promedio y normalización
+	egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin ///
+							g2_poca_info g2_cashout_dificil g2_sin_materiales)
+	gen IBPD = IBPD_raw*100
+	label var IBPD "Índice de Barreras Percibidas a la Digitalización (0–100)"
+
+	* Categorización IBPD
+	gen IBPD_cat = .
+	replace IBPD_cat = 1 if IBPD < 40
+	replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70
+	replace IBPD_cat = 3 if IBPD >= 70
+
+	label define IBPD_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+	label values IBPD_cat IBPD_cat_lbl
+	label var IBPD_cat "Categoría IBPD"
+
+
+
+
+save "${output_dir}/CFI_DPI Data for analysis.dta", replace	
+
+save "${output_dir}/CFI_DPI Data for analysis_NoPII.dta", replace
 
