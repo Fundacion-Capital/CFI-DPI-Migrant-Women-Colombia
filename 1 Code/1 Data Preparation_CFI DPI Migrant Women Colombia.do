@@ -1089,8 +1089,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* 3. Inserción laboral
 	gen ocup_norm = .
 	replace ocup_norm = 1   if inlist(q2_3, 1, 3)
-	replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 8)
-	replace ocup_norm = 0   if inlist(q2_3, 5, 6, 7)
+	replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 6, 9)
+	replace ocup_norm = 0   if inlist(q2_3, 5, 7, 8)
 
 	label var ocup_norm "Inserción laboral normalizada (0-1)"
 
@@ -1122,6 +1122,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 * C0. ÍNDICE DE ACCESO A TELECOMUNICACIONES (IAT)
 * =====================================================
 
+* q7 q8 repensar para agregar: condicionadas imputa ceros
+
 	* 1. Tipo de teléfono móvil
 	gen tel_score = .
 	replace tel_score = 100 if q3_1 == 1
@@ -1150,10 +1152,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* 4. Índice agregado (promedio simple)
 	egen iat_score = rowmean(tel_score internet_score access_score)
-	label var iat_score "Índice de Acceso a Telecomunicaciones (0-100)"
+	label var iat_score "Índice de Acceso a Telecomunicaciones (0-1)"
 
-	gen iat_score_01 = iat_score / 100
-	label var iat_score_01 "Índice de Acceso a Telecomunicaciones (0-1)"
+	replace iat_score = iat_score / 100
 
 	* 5. Versión estandarizada (para regresión)
 	egen iat_score_std = std(iat_score)
@@ -1245,10 +1246,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* 5. Índice agregado
 	egen icdp_score = rowmean(icdp_qr icdp_sms icdp_pin icdp_fraud)
-	label var icdp_score "Índice de Competencia Digital Práctica (0-100)"
+	label var icdp_score "Índice de Competencia Digital Práctica (0-1)"
 
-	gen icdp_score_01 = icdp_score / 100
-	label var icdp_score_01 "ICDP normalizado (0-1)"
+	replace icdp_score = icdp_score / 100
 
 	egen icdp_score_std = std(icdp_score)
 	label var icdp_score_std "ICDP estandarizado (media 0, sd 1)"
@@ -1272,6 +1272,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 * =====================================================
 * C3.1 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF)
 * =====================================================
+
+* q4_2 que solo si sea completo y no , no intentó cero
 
 	* 1. Documento válido para KYC – q4_1_*
 	gen iaff_doc = 0
@@ -1308,10 +1310,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* 5. Índice agregado IAFF
 	egen iaff_score = rowmean(iaff_doc iaff_address iaff_phone iaff_account)
-	label var iaff_score "Índice de Acceso Financiero Formal (0-100)"
+	label var iaff_score "Índice de Acceso Financiero Formal (0-1)"
 
-	gen iaff_score_01 = iaff_score / 100
-	label var iaff_score_01 "IAFF normalizado (0-1)"
+	gen iaff_score = iaff_score / 100
 
 	egen iaff_score_std = std(iaff_score)
 	label var iaff_score_std "IAFF estandarizado"
@@ -1485,7 +1486,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	gen ifo_support = .
 	replace ifo_support = 100 if q5_23==1
 	replace ifo_support = 50  if q5_23==2
-	replace ifo_support = 0   if q5_23==3
+	replace ifo_support = 0   if q5_23==3 | q5_23==98
 	label var ifo_support "Asistencia durante registro (0-100)"
 
 	* (K) Índice final IFO
@@ -1668,13 +1669,13 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	* Reacción ante mensaje sospechoso (q7_2)
 	gen e1_reaccion_segura = .
 	replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)
-	replace e1_reaccion_segura = 0 if q7_2==4
+	replace e1_reaccion_segura = 0 if q7_2==4 | q7_2==5
 	label var e1_reaccion_segura "Reacción segura ante mensaje sospechoso"
 
 	* Uso de autenticación segura (q7_6)
 	gen e1_autenticacion = .
 	replace e1_autenticacion = 1 if inlist(q7_6,1,2)
-	replace e1_autenticacion = 0 if q7_6==3
+	replace e1_autenticacion = 0 if q7_6==3 | q7_6==98
 	label var e1_autenticacion "Uso de métodos de autenticación segura"
 
 	* Hábitos de cambio de claves / revisión (q7_7)
@@ -1686,7 +1687,7 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	* Educación / alertas antifraude (q7_8)
 	gen e1_educacion = .
 	replace e1_educacion = 1 if q7_8==1
-	replace e1_educacion = 0 if inlist(q7_8,2,3)
+	replace e1_educacion = 0 if inlist(q7_8,2,3,98)
 	label var e1_educacion "Recepción de educación o alertas antifraude"
 
 	* Seguridad percibida (q7_9)
@@ -1698,7 +1699,7 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	* Valora medidas preventivas (q7_10)
 	gen e1_valora_prevencion = .
 	replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)
-	replace e1_valora_prevencion = 0 if q7_10==6
+	replace e1_valora_prevencion = 0 if q7_10==6 |q7_10==7
 	label var e1_valora_prevencion "Valora medidas de prevención del fraude"
 
 	* IPCS: promedio y normalización 0–100
@@ -1722,6 +1723,14 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 * ---------------------------------------------------------
 * E2. Índice de Exposición y Daño por Fraude (IEDF)
 * ---------------------------------------------------------
+/*Experiencia en interacción: q7_15
+q7_16
+q7_17
+q7_18
+q7_19
+q7_20
+q7_21
+*/
 
 	* Exposición a mensajes sospechosos (q7_1)
 	gen e2_exposicion = .
@@ -1782,72 +1791,67 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	* Decide uso de remesas (q9_4)
 	gen f1_decide_remesa = .
 	replace f1_decide_remesa = 1 if inlist(q9_4,4,5)
-	replace f1_decide_remesa = 0 if inlist(q9_4,1,2)
+	replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)
 	label var f1_decide_remesa "Decide uso de remesas"
+
 
 	* Quién administra la remesa (q9_5)
 	gen f1_administra = .
 	replace f1_administra = 1 if inlist(q9_5,1,3)
-	replace f1_administra = 0 if inlist(q9_5,2,4,5)
+	replace f1_administra = 0 if inlist(q9_5,2,4,5,98)
 	label var f1_administra "Administra o codirige remesa"
 
 	* Puede destinar remesa a ahorro/negocio (q9_6)
 	gen f1_ahorro_negocio = .
 	replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)
-	replace f1_ahorro_negocio = 0 if q9_6==3
+	replace f1_ahorro_negocio = 0 if q9_6==3 |q9_6==98
 	label var f1_ahorro_negocio "Autonomía para ahorro o negocio"
 
 	* Control general del dinero (q9_7)
 	gen f1_control = .
 	replace f1_control = 1 if inlist(q9_7,4,5)
-	replace f1_control = 0 if inlist(q9_7,1,2)
+	replace f1_control = 0 if inlist(q9_7,1,2,3)
 	label var f1_control "Control sobre decisiones financieras"
-
-	* Coerción para mostrar teléfono o códigos (q9_8)
-	gen f1_no_coercion = .
-	replace f1_no_coercion = 1 if q9_8==0
-	replace f1_no_coercion = 0 if q9_8==1
-	label var f1_no_coercion "No sufrió coerción por códigos/telefono"
 
 	* Preferencia de cuenta a su nombre (q9_9)
 	gen f1_cuenta_propia = .
-	replace f1_cuenta_propia = 1 if q9_9==1
-	replace f1_cuenta_propia = 0 if inlist(q9_9,2,3)
+	replace f1_cuenta_propia = 1 if q9_9==1 |q9_9==2
+	replace f1_cuenta_propia = 0 if inlist(q9_9,3,4,98)
 	label var f1_cuenta_propia "Prefiere cuenta a su nombre"
 
 	* Decide atención de salud (q9_11)
 	gen f1_salud = .
 	replace f1_salud = 1 if inlist(q9_11,1,2)
-	replace f1_salud = 0 if inlist(q9_11,3,4)
+	replace f1_salud = 0 if inlist(q9_11,3,4,98)
 	label var f1_salud "Decisión sobre salud"
 
 	* Decide gastos importantes del hogar (q9_13)
 	gen f1_gastos = .
 	replace f1_gastos = 1 if inlist(q9_13,1,2)
-	replace f1_gastos = 0 if inlist(q9_13,3,4)
+	replace f1_gastos = 0 if inlist(q9_13,3,4,98)
 	label var f1_gastos "Decisión sobre gastos del hogar"
 
 	* Opinión escuchada en el hogar (q9_18)
 	gen f1_opinion = .
 	replace f1_opinion = 1 if inlist(q9_18,4,5)
-	replace f1_opinion = 0 if inlist(q9_18,1,2)
+	replace f1_opinion = 0 if inlist(q9_18,1,2,3)
 	label var f1_opinion "Opinión respetada en el hogar"
 
 	* Puede abrir/cambiar cuenta (q9_19)
 	gen f1_cambiar_cuenta = .
 	replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)
-	replace f1_cambiar_cuenta = 0 if q9_19==3
+	replace f1_cambiar_cuenta = 0 if q9_19==3 | q9_19==98
 	label var f1_cambiar_cuenta "Autonomía para abrir/cambiar cuenta"
 
 	* Evitó pagos digitales por conflictos (q9_20)
 	gen f1_no_evito = .
-	replace f1_no_evito = 1 if q9_20==0
-	replace f1_no_evito = 0 if q9_20==1
+	replace f1_no_evito = 1 if q9_20==0 
+	replace f1_no_evito = 0 if q9_20==1 |q9_20==98
 	label var f1_no_evito "No evitó pagos digitales por conflictos"
 
 	* IAER: promedio y normalización
 	egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio ///
-							f1_control f1_no_coercion f1_cuenta_propia ///
+							f1_control f1_cuenta_propia ///
 							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
 							f1_no_evito)
 	gen IAER = IAER_raw*100
@@ -1863,6 +1867,16 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	label values IAER_cat IAER_cat_lbl
 	label var IAER_cat "Categoría IAER"
 
+/*
+pca f1_decide_remesa f1_administra f1_ahorro_negocio ///
+							f1_control f1_cuenta_propia ///
+							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
+							f1_no_evito,comp(3)
+rotate, varimax blanks(.1)
+estat kmo
+screeplot
+*/
+
 * ---------------------------------------------------------
 * F2. Índice de Confianza en Proveedores Financieros (ICPF)
 * ---------------------------------------------------------
@@ -1870,19 +1884,19 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	* Confianza en proveedor (q9_1)
 	gen f2_confianza = .
 	replace f2_confianza = 1 if inlist(q9_1,4,5)
-	replace f2_confianza = 0 if inlist(q9_1,1,2)
+	replace f2_confianza = 0 if inlist(q9_1,1,2,3)
 	label var f2_confianza "Confianza en proveedor financiero"
 
 	* Seguridad percibida en normas del hogar (q9_15)
 	gen f2_normas = .
 	replace f2_normas = 1 if inlist(q9_15,4,5)
-	replace f2_normas = 0 if inlist(q9_15,1,2)
+	replace f2_normas = 0 if inlist(q9_15,1,2,3)
 	label var f2_normas "Normas favorables a pagos digitales"
 
 	* Confianza comunitaria (q9_22)
 	gen f2_comunidad = .
 	replace f2_comunidad = 1 if q9_22==1
-	replace f2_comunidad = 0 if inlist(q9_22,3,4)
+	replace f2_comunidad = 0 if inlist(q9_22,2,3,4,98)
 	label var f2_comunidad "Confianza comunitaria en autonomía femenina"
 
 	* ICPF: promedio y normalización
