@@ -977,6 +977,11 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	drop if q1==2
 	drop if q5==0 | q5==98
 
+	*Residencia
+	label define ciudades_lbl 1 "Bogotá" 2 "Cali" 3 "Medellín" 4 "Soacha" 5 "Meta", modify
+	label values q3 ciudades_lbl
+
+
 
 	*---------------------------------*
 	*    Bloque 0 : Consentimiento    *
@@ -1170,6 +1175,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var iat_cat "Nivel de acceso a telecomunicaciones"
 
 
+
+
 * =====================================================
 * C1.1 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT)
 * =====================================================
@@ -1289,7 +1296,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	gen iaff_address = .
 	replace iaff_address = 100 if q4_5 == 1   // Sí
 	replace iaff_address = 50  if q4_5 == 3   // En trámite
-	replace iaff_address = 0   if q4_5 == 2   // No
+	replace iaff_address = 0   if q4_5 == 2 | q4_5 == 4   // No o no dice
 	label var iaff_address "Comprobante de dirección aceptado (0-100)"
 
 	* 3. Teléfono a nombre propio – q4_6
@@ -1312,7 +1319,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	egen iaff_score = rowmean(iaff_doc iaff_address iaff_phone iaff_account)
 	label var iaff_score "Índice de Acceso Financiero Formal (0-1)"
 
-	gen iaff_score = iaff_score / 100
+	replace iaff_score = iaff_score / 100
 
 	egen iaff_score_std = std(iaff_score)
 	label var iaff_score_std "IAFF estandarizado"
@@ -1352,7 +1359,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace iuof_cash = 100 if q4_16==1
 	replace iuof_cash = 70  if q4_16==2
 	replace iuof_cash = 30  if q4_16==3
-	replace iuof_cash = 0   if q4_16==4
+	replace iuof_cash = 0   if q4_16==4 | q4_16==99
 	label var iuof_cash "Facilidad cash-in/cash-out (0-100)"
 
 	* (C) Tiempo al punto financiero – q4_17
@@ -1360,34 +1367,34 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace iuof_time = 100 if q4_17==1
 	replace iuof_time = 75  if q4_17==2
 	replace iuof_time = 40  if q4_17==3
-	replace iuof_time = 0   if q4_17==4
+	replace iuof_time = 0   if q4_17==4 | q4_17==99
 	label var iuof_time "Proximidad a punto financiero (0-100)"
 
 	* (D) Uso para pagos – q4_24
 	gen iuof_pay = .
 	replace iuof_pay = 100 if q4_24==1
 	replace iuof_pay = 50  if q4_24==2
-	replace iuof_pay = 0   if q4_24==3
+	replace iuof_pay = 0   if q4_24==3 | q4_24==99
 	label var iuof_pay "Uso de cuenta para pagos (0-100)"
 
 	* (E) Ahorro – q4_25
 	gen iuof_save = .
 	replace iuof_save = 100 if q4_25==1
 	replace iuof_save = 50  if q4_25==2
-	replace iuof_save = 0   if q4_25==3
+	replace iuof_save = 0   if q4_25==3 | q4_25==99
 	label var iuof_save "Uso de cuenta para ahorro (0-100)"
 
 	* (F) Notificaciones – q4_26
 	gen iuof_notify = .
 	replace iuof_notify = 100 if q4_26==1
 	replace iuof_notify = 50  if q4_26==2
-	replace iuof_notify = 0   if q4_26==3
+	replace iuof_notify = 0   if q4_26==3 | q4_26==99
 	label var iuof_notify "Recepción de notificaciones (0-100)"
 
 	* (G) Riesgo: préstamo de cuenta – q4_27
 	gen iuof_risk = .
 	replace iuof_risk = 0   if q4_27==1
-	replace iuof_risk = 100 if q4_27==2
+	replace iuof_risk = 100 if q4_27==0 | q4_27==98 
 	label var iuof_risk "No préstamo de cuenta (0-100)"
 
 	* (H) Índice IUOF
@@ -1411,6 +1418,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label values iuof_cat iuof_cat_lbl
 	label var iuof_cat "Categoría IUOF"
 
+
+
+
 * =====================================================
 * C4.1 ÍNDICE DE FRICCIÓN DE ONBOARDING (IFO)
 * =====================================================
@@ -1420,7 +1430,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ifo_easy = 100 if q5_14==1
 	replace ifo_easy = 75  if q5_14==2
 	replace ifo_easy = 25  if q5_14==3
-	replace ifo_easy = 0   if q5_14==4
+	replace ifo_easy = 0   if q5_14==4 | q5_14==98
 	label var ifo_easy "Facilidad percibida del registro (0-100)"
 
 	* (B) Tiempo hasta activación – q5_15
@@ -1429,14 +1439,14 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ifo_time = 80  if q5_15==2
 	replace ifo_time = 60  if q5_15==3
 	replace ifo_time = 30  if q5_15==4
-	replace ifo_time = 0   if q5_15==5
+	replace ifo_time = 0   if q5_15==5 | q5_15==98
 	label var ifo_time "Rapidez de activación de la cuenta (0-100)"
 
 	* (C) Registro sin ayuda – q5_16
 
 	gen ifo_help = .
-	replace ifo_help = 100 if q5_16==0 | q5_16==4
-	replace ifo_help = 50  if inlist(q5_16,1,2,3)
+	replace ifo_help = 100 if q5_16==0
+	replace ifo_help = 0  if q5_16==1 | q5_16==98 
 	label var ifo_help "Registro sin necesidad de ayuda (0-100)"
 
 	* (D) Requisitos KYC (menos = mejor) – q5_13_*
@@ -1451,7 +1461,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* (E) Documento aceptado sin problemas – q5_25
 	gen ifo_doc = .
 	replace ifo_doc = 100 if q5_25==1
-	replace ifo_doc = 0   if q5_25==2
+	replace ifo_doc = 0   if q5_25==2 | q5_25==98 | q5_25==99
 	label var ifo_doc "Documento aceptado sin objeciones (0-100)"
 
 	* (F) Claridad de costos – q5_7
@@ -1459,27 +1469,27 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ifo_cost = 100 if q5_7==1
 	replace ifo_cost = 70  if q5_7==2
 	replace ifo_cost = 30  if q5_7==3
-	replace ifo_cost = 0   if q5_7==4
+	replace ifo_cost = 0   if q5_7==4 | q5_7==98
 	label var ifo_cost "Costos visibles y claros (0-100)"
 
 	* (G) Confirmación de transferencia – q5_5
 	gen ifo_confirm = .
 	replace ifo_confirm = 100 if inlist(q5_5,1,2,3)
-	replace ifo_confirm = 0   if q5_5==4
+	replace ifo_confirm = 0   if q5_5==4 | q5_5==98
 	label var ifo_confirm "Confirmación de transacción recibida (0-100)"
 
 	* (H) Sin fallos o reversos – q5_9
 	gen ifo_fail = .
 	replace ifo_fail = 100 if q5_9==3
 	replace ifo_fail = 50  if q5_9==1
-	replace ifo_fail = 0   if q5_9==2
+	replace ifo_fail = 0   if q5_9==2 | q5_9 ==98
 	label var ifo_fail "Ausencia de fallos o reversos (0-100)"
 
 	* (I) Términos y privacidad claros – q5_21 y q5_22
 	gen ifo_terms = .
 	replace ifo_terms = 100 if q5_21==1 & q5_22==1
-	replace ifo_terms = 50  if inlist(q5_21,1,2) & inlist(q5_22,1,2)
-	replace ifo_terms = 0   if q5_21==3 | q5_22==3
+	replace ifo_terms = 50  if inlist(q5_21,2) & inlist(q5_22,2)
+	replace ifo_terms = 0   if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98
 	label var ifo_terms "Términos y privacidad claros (0-100)"
 
 	* (J) Asistencia durante registro – q5_23
@@ -1526,19 +1536,20 @@ D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
 	* (A) Frecuencia de remesas del exterior – q6_2
 	gen iurd_freq = .
 	replace iurd_freq = 100 if q6_2==1
-	replace iurd_freq = 60  if q6_2==2
-	replace iurd_freq = 30  if q6_2==3
+	replace iurd_freq = 75  if q6_2==2
+	replace iurd_freq = 25  if q6_2==3
+	replace iurd_freq = 0   if q6_2==99
 	label var iurd_freq "Frecuencia de recepción de remesas (0-100)"
 
 	* (B) Uso reciente de pagos/remesas digitales – q6_14
 	gen iurd_recent = .
 	replace iurd_recent = 100 if q6_14==1
-	replace iurd_recent = 0   if q6_14==0
+	replace iurd_recent = 0   if q6_14==0 | q6_14==98
 	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
 
 	* (C) Número de operaciones digitales – q6_15
 	gen iurd_ops = .
-	replace iurd_ops = 20  if q6_15==1
+	replace iurd_ops = 20  if q6_15==1 | q6_15==98
 	replace iurd_ops = 40  if q6_15==2
 	replace iurd_ops = 60  if q6_15==3
 	replace iurd_ops = 80  if q6_15==4
@@ -1588,29 +1599,30 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	replace ietr_time = 80  if q6_6==2
 	replace ietr_time = 60  if q6_6==3
 	replace ietr_time = 30  if q6_6==4
-	replace ietr_time = 0   if q6_6==5
+	replace ietr_time = 0   if q6_6==5 | q6_6==98
 	label var ietr_time "Rapidez de acreditación de remesa (0-100)"
 
 	* (B) Claridad de comisiones y tipo de cambio – q6_9 y q6_18
 	gen ietr_cost = .
 	replace ietr_cost = 100 if q6_9==1 & q6_18==1
-	replace ietr_cost = 60  if inlist(q6_9,1,2) & inlist(q6_18,1,2)
-	replace ietr_cost = 0   if q6_9>=3 | q6_18==3
+	replace ietr_cost = 75  if inlist(q6_9,1,2) & inlist(q6_18,1,2)
+	replace ietr_cost = 25   if q6_9>=3 | q6_18==3
+	replace ietr_cost = 0   if q6_9>=3 | q6_18==3 | q6_9==99 | q6_18==98
 	label var ietr_cost "Claridad de costos y tipo de cambio (0-100)"
 
 	* (C) Confirmaciones recibidas – q6_11 y q6_20
 	gen ietr_confirm = .
-	replace ietr_confirm = 100 if q6_11!=5 & q6_20==1
-	replace ietr_confirm = 50  if q6_11!=5 & q6_20==2
-	replace ietr_confirm = 0   if q6_11==5 | q6_20==3
+	replace ietr_confirm = 100 if q6_11<=5 & q6_20==1
+	replace ietr_confirm = 50  if q6_11<=5 & q6_20==2
+	replace ietr_confirm = 0   if q6_11==5 | q6_20==3 | q6_11==98 | q6_20==98
 	label var ietr_confirm "Confirmaciones oportunas de la operación (0-100)"
 
 	* (D) Ausencia de problemas o fallas – q6_16
 	gen ietr_problem = .
 	replace ietr_problem = 100 if q6_16==4
-	replace ietr_problem = 50  if q6_16==1
-	replace ietr_problem = 30  if q6_16==2
-	replace ietr_problem = 0   if q6_16==3
+	replace ietr_problem = 75  if q6_16==1
+	replace ietr_problem = 25  if q6_16==2
+	replace ietr_problem = 0   if q6_16==98
 	label var ietr_problem "Ausencia de problemas transaccionales (0-100)"
 
 	* (E) Sin límites restrictivos – q6_17
@@ -1735,19 +1747,19 @@ q7_21
 	* Exposición a mensajes sospechosos (q7_1)
 	gen e2_exposicion = .
 	replace e2_exposicion = 1 if inlist(q7_1,1,2)
-	replace e2_exposicion = 0 if q7_1==3
+	replace e2_exposicion = 0 if q7_1==3 | q7_1==98
 	label var e2_exposicion "Exposición a mensajes o llamadas sospechosas"
 
 	* Bloqueos por fraude o error (q7_5)
 	gen e2_bloqueo = .
 	replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)
-	replace e2_bloqueo = 0 if q7_5==4
+	replace e2_bloqueo = 0 if q7_5==4 | q7_5==98 
 	label var e2_bloqueo "Cuenta/app bloqueada por sospecha de fraude"
 
 	* Problemas con pagos o remesas (q7_11)
 	gen e2_problema = .
 	replace e2_problema = 1 if q7_11==1
-	replace e2_problema = 0 if q7_11==2
+	replace e2_problema = 0 if q7_11==2 | q7_11==98
 	label var e2_problema "Tuvo problemas con pagos/remesas digitales"
 
 	* Problema no resuelto (q7_14)
@@ -1938,8 +1950,8 @@ screeplot
 
 	* Participó en capacitación (q10_10)
 	gen g1_capacitacion = .
-	replace g1_capacitacion = 1 if q10_10==1
-	replace g1_capacitacion = 0 if q10_10==2
+	replace g1_capacitacion = 1 if inlist(q10_10,1,2)
+	replace g1_capacitacion = 0 if inlist(q10_10,3,98)
 	label var g1_capacitacion "Participó en capacitación"
 
 	* Cambio positivo tras capacitación (q10_12)
@@ -1951,13 +1963,13 @@ screeplot
 	* Acompañamiento individual (q10_13)
 	gen g1_acompanamiento = .
 	replace g1_acompanamiento = 1 if q10_13==1
-	replace g1_acompanamiento = 0 if q10_13==0
+	replace g1_acompanamiento = 0 if q10_13==0 | q10_13==98
 	label var g1_acompanamiento "Recibió acompañamiento individual"
 
 	* Exposición frecuente a materiales educativos (q10_16)
 	gen g1_materiales = .
 	replace g1_materiales = 1 if inlist(q10_16,1,2)
-	replace g1_materiales = 0 if inlist(q10_16,3,4)
+	replace g1_materiales = 0 if inlist(q10_16,3,4,98)
 	label var g1_materiales "Exposición a materiales educativos"
 
 	* IEH: promedio y normalización
@@ -1982,7 +1994,7 @@ screeplot
 
 	* Barrera principal declarada (q10_1)
 	gen g2_barrera_principal = .
-	replace g2_barrera_principal = 0 if q10_1==16
+	replace g2_barrera_principal = 0 if q10_1==16 | q10_1==98
 	replace g2_barrera_principal = 1 if inrange(q10_1,1,15)
 	label var g2_barrera_principal "Tiene barrera principal"
 
@@ -2002,13 +2014,13 @@ screeplot
 
 	* Cash-out difícil o inexistente (q10_6)
 	gen g2_cashout_dificil = .
-	replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5)
+	replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5,98)
 	replace g2_cashout_dificil = 0 if inlist(q10_6,1,2)
 	label var g2_cashout_dificil "Dificultad para retirar efectivo"
 
 	* Nunca vio materiales educativos (q10_16)
 	gen g2_sin_materiales = .
-	replace g2_sin_materiales = 1 if q10_16==4
+	replace g2_sin_materiales = 1 if q10_16==4 | q10_16==98
 	replace g2_sin_materiales = 0 if inlist(q10_16,1,2,3)
 	label var g2_sin_materiales "Sin exposición educativa"
 
