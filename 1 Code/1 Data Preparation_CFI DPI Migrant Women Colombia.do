@@ -995,11 +995,36 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	gen S1_ELIGIBILITY = "+", before(q1)
 
+	gen age_cat = .
+	replace age_cat = 1 if q4 >= 18 & q4 <= 29
+	replace age_cat = 2 if q4 >= 30 & q4 <= 44
+	replace age_cat = 3 if q4 >= 45 & q4 <= 59
+	replace age_cat = 4 if q4 >= 60
+
+	label define age_cat_lab ///
+    1 "18–29" ///
+    2 "30–44" ///
+    3 "45–59" ///
+    4 "60+"
+
+	label values age_cat age_cat_lab
+	label var age_cat "Grupo etario"
+
 	*---------------------------------------------------------------*
 	*    Bloque 2 : Sección B. Caracterización del la encuestada    *
 	*---------------------------------------------------------------*
 
 	gen S2_DEMOGRAPHY = "+", before(q2_1)
+
+	gen years_in_col = 2026 - q2_1 if q2_1 < 2026
+	label var years_in_col "Años viviendo en el país"
+
+	recode years_in_col ///
+    (0/2=1 "0–2 años") ///
+    (3/5=2 "3–5 años") ///
+    (6/10=3 "6–10 años") ///
+    (11/max=4 "11+ años"), gen(years_cat)
+	label var years_cat "Tramos de residencia en Colombia"
 
 	*----------------------------------------------------*
 	*    Bloque 3 : C.0 Acceso a telecomunicaciones      *
@@ -1067,8 +1092,6 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	*****************************************************
 	
 	* 1. Antiguedad migratoria 
-	gen years_in_col = 2026 - q2_1 if q2_1 < 2026
-	label var years_in_col "Años viviendo en el país"
 
 	egen max_years = max(years_in_col)
 	gen antig_norm = years_in_col / max_years
@@ -1154,6 +1177,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace access_score = 50  if q3_6 == 5
 	replace access_score = 25  if q3_6 == 6
 	label var access_score "Calidad del punto de acceso a Internet"
+
+
+
 
 	* 4. Índice agregado (promedio simple)
 	egen iat_score = rowmean(tel_score internet_score access_score)

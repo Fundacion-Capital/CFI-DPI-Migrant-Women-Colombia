@@ -54,10 +54,70 @@ graph pie, over(q3) sort ///
     note("Fuente: Elaboración propia basada en q3")
 
 
-
 *2.2 Migration trajectory and human capital
 
+
+	summarize q2_1 years_in_col
+
+	histogram years_in_col, ///
+    width(2) ///
+    frequency ///
+    title("Años de residencia en Colombia") ///
+    xtitle("Años en Colombia") ///
+    ytitle("Número de encuestados")
+
+	kdensity years_in_col, ///
+    title("Densidad de años de residencia en Colombia") ///
+    xtitle("Años en Colombia") ///
+    ytitle("Densidad")
+
+	graph bar (count), over(years_cat) ///
+    title("Tramos de residencia en Colombia") ///
+    ytitle("Número de encuestados") ///
+    blabel(bar)
+
+	tab q2_2
+	tab q2_2, col
+	graph bar (percent), over(q2_2) ///
+    title("Nivel educativo de los encuestados") ///
+    ytitle("Porcentaje")
+
+	tab q2_3, col
+	graph bar (percent), over(q2_3) ///
+    title("Estatus laboral de los encuestados") ///
+    ytitle("Porcentaje")
+
+	tab q2_2 q2_3
+
 *2.3 Socioeconomic vulnerability indicator (IVS)
+
+	histogram ivs_score, ///
+    width(0.05) ///
+    frequency ///
+    title("Distribución del Índice de Vulnerabilidad Socioeconómica") ///
+    xtitle("IVS (0–1)") ///
+    ytitle("Número de encuestados")
+
+	kdensity ivs_score, ///
+    title("Densidad del Índice de Vulnerabilidad Socioeconómica") ///
+    xtitle("IVS (0–1)") ///
+    ytitle("Densidad")
+
+	tab ivs_cat
+
+	graph bar (count), over(ivs_cat) ///
+    title("Niveles de vulnerabilidad socioeconómica") ///
+    ytitle("Número de encuestados") ///
+    blabel(bar)
+
+
+	tab age_cat ivs_cat, col
+	tab age_cat, c(mean ivs_score)
+
+	tab q3 ivs_cat, col
+	table q3, c(mean ivs_score)
+
+
 
 *3.1 Digital access and telecom constraints (Section C0) — IAT
 
