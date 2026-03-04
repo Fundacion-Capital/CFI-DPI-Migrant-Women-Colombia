@@ -110,31 +110,41 @@ graph export "${output_dir}/bar_occupation.png", replace
 
 *2.3 Socioeconomic vulnerability indicator (IVS)
 
-	histogram ivs_score, ///
-    width(0.05) ///
-    frequency ///
-    title("Distribución del Índice de Vulnerabilidad Socioeconómica") ///
-    xtitle("IVS (0–1)") ///
-    ytitle("Número de encuestados")
-
-	kdensity ivs_score, ///
-    title("Densidad del Índice de Vulnerabilidad Socioeconómica") ///
-    xtitle("IVS (0–1)") ///
-    ytitle("Densidad")
-
-	tab ivs_cat
-
-	graph bar (count), over(ivs_cat) ///
-    title("Niveles de vulnerabilidad socioeconómica") ///
-    ytitle("Número de encuestados") ///
-    blabel(bar)
+twoway (hist ivs_score, width(0.05) color(gray%50) lcolor(white)) ///
+       (kdensity ivs_score, lcolor(navy) lwidth(medthick)), ///
+    xtitle("Socioeconomic Vulnerability Index (0-1)", size(small)) ///
+    ytitle("Density / Frequency", size(small)) ///
+    legend(off) ///
+    graphregion(color(white)) plotregion(color(white))
+graph export "${output_dir}/ivs_distribution_apa.png", replace
 
 
-	tab age_cat ivs_cat, col
-	tab age_cat, c(mean ivs_score)
 
-	tab q3 ivs_cat, col
-	table q3, c(mean ivs_score)
+
+*IVS x City
+graph bar, over(ivs_cat) over(q3) stack asyvars percent ///
+    bar(1, color("58 103 177%80")) /// Low: Azul
+    bar(2, color("167 169 172%80")) /// Medium: Gris
+    bar(3, color("245 130 48%80")) /// High: Naranja
+    ytitle("Percentage (%)", size(small)) ///
+    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+
+graph export "${output_dir}/ivs_by_city.png", replace
+
+*IVS x Age Category
+graph bar, over(ivs_cat) over(age_cat) stack asyvars percent ///
+    bar(1, color("58 103 177%80")) /// 
+    bar(2, color("167 169 172%80")) /// 
+    bar(3, color("245 130 48%80")) /// 
+    ytitle("Percentage (%)", size(small)) ///
+    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+
+graph export "${output_dir}/ivs_by_age.png", replace
+
 
 
 

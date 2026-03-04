@@ -1127,31 +1127,31 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* 1. Antiguedad migratoria 
 
 	egen max_years = max(years_in_col)
-	gen antig_norm = years_in_col / max_years
-	label var antig_norm "Antigüedad migratoria normalizada (0-1)"
+	gen antig_norm = (r(max) - years_in_col) / (r(max) - r(min))
+	label var antig_norm "Antigüedad migratoria (1=Recién llegado, 0=Estable)"
 
 	drop max_years
 
 	* 2. Educación
 	gen educ_norm = .
-	replace educ_norm = 0.00 if q2_2 == 1   // Sin estudios
-	replace educ_norm = 0.11 if q2_2 == 2
-	replace educ_norm = 0.22 if q2_2 == 3
-	replace educ_norm = 0.33 if q2_2 == 4
-	replace educ_norm = 0.44 if q2_2 == 5
-	replace educ_norm = 0.56 if q2_2 == 6
-	replace educ_norm = 0.67 if q2_2 == 7
-	replace educ_norm = 0.78 if q2_2 == 8
-	replace educ_norm = 0.89 if q2_2 == 9
-	replace educ_norm = 1.00 if q2_2 == 10
+	replace educ_norm = 1.00 if q2_2 == 1   // Sin estudios
+	replace educ_norm = 0.89 if q2_2 == 2
+	replace educ_norm = 0.78 if q2_2 == 3
+	replace educ_norm = 0.67 if q2_2 == 4
+	replace educ_norm = 0.56 if q2_2 == 5
+	replace educ_norm = 0.44 if q2_2 == 6
+	replace educ_norm = 0.33 if q2_2 == 7
+	replace educ_norm = 0.22 if q2_2 == 8
+	replace educ_norm = 0.11 if q2_2 == 9
+	replace educ_norm = 0.00 if q2_2 == 10
 
 	label var educ_norm "Nivel educativo normalizado (0-1)"
 
 	* 3. Inserción laboral
 	gen ocup_norm = .
-	replace ocup_norm = 1   if inlist(q2_3, 1, 3)
+	replace ocup_norm = 0   if inlist(q2_3, 1, 3)
 	replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 6, 9)
-	replace ocup_norm = 0   if inlist(q2_3, 5, 7, 8)
+	replace ocup_norm = 1   if inlist(q2_3, 5, 7, 8)
 
 	label var ocup_norm "Inserción laboral normalizada (0-1)"
 
@@ -1170,9 +1170,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ivs_cat = 3 if ivs_score > 0.66
 
 	label define ivs_cat_lab ///
-	1 "Alta vulnerabilidad socioeconómica" ///
-	2 "Vulnerabilidad media" ///
-	3 "Baja vulnerabilidad"
+    1 "Low vulnerability (0-0.33)" ///
+    2 "Medium vulnerability" (0.34-0.66)" ///
+    3 "High vulnerability" (0.67-1)"
 
 	label values ivs_cat ivs_cat_lab
 	label var ivs_cat "Categoría IVS (solo descriptiva)"
