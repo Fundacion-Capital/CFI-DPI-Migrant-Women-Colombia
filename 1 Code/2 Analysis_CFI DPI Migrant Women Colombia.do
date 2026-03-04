@@ -32,26 +32,46 @@
 *---------------------------------------*
 
 *2.1 Demographic profile
+graph set window fontface "Times New Roman"
 
 *Edad
 summarize q4, detail
 local med = r(p50) // Guarda la mediana
 
 hist q4, percent kdensity ///
-    title("Distribución de Edad") ///
-    xtitle("Años") ytitle("Porcentaje") ///
-    xline(`med', lcolor(red) lwidth(medium)) ///
-    note("Línea roja indica la mediana: `med' años")
+    color(gray) lcolor(black) /// Colores para consistencia visual
+    xtitle("Age (years)", size(small)) ///
+    ytitle("Percentage of respondents", size(small)) ///
+    ylabel(, nogrid) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    addplot(pci 0 `med' 16 `med', lcolor(red) lwidth(medthick)) /// Esta línea va al frente
+    legend(off) // Oculta la leyenda del addplot
+
+graph export "${output_dir}/hist_edad.png", replace
 
 graph box q4, title("Distribución de Edad") ytitle("Años")
 
 *Residencia
-tab q3
-graph pie, over(q3) sort ///
-    plabel(_all percent, format(%2.0f) size(medium) color(white)) ///
-    title("Distribución por Departamento/Ciudad") ///
-    legend(region(lcolor(none))) ///
-    note("Fuente: Elaboración propia basada en q3")
+* Definición de colores
+local color1 "245 130 48"  // Orange (Bogotá)
+local color2 "140 198 63"  // Green (Meta)
+local color3 "255 196 0"   // Yellow (Medellín)
+local color4 "167 169 172" // Gray (Soacha)
+local color5 "58 103 177"  // Blue (Cali)
+
+graph pie, over(q3) sort(q3) ///
+    pie(1, color("`color1'")) ///
+    pie(2, color("`color5'")) ///
+    pie(3, color("`color3'")) ///
+    pie(4, color("`color4'")) ///
+    pie(5, color("`color2'")) ///
+    plabel(_all percent, format(%2.1f) size(large) color(white) gap(3)) ///
+    legend(region(lcolor(none)) position(3) cols(1) size(medium)) ///
+    graphregion(color(white)) ///
+    plotregion(color(white) margin(large))
+
+graph export "${output_dir}/pie_residence.png", replace
+
 
 
 *2.2 Migration trajectory and human capital
@@ -149,34 +169,34 @@ graph pie, over(q3) sort ///
 *		II. Análisis con regresiones  		*
 *-------------------------------------------*
 
-4.1 Empirical strategy (descriptive-causal boundary)
+*4.1 Empirical strategy (descriptive-causal boundary)
 
-4.2 Outcomes (dependent variables) — recommended core set
+*4.2 Outcomes (dependent variables) — recommended core set
 
-4.3 Predictors (key independent variables)
+*4.3 Predictors (key independent variables)
 
-4.4 Core regression specifications (report-ready templates)
+*4.4 Core regression specifications (report-ready templates)
 
-4.5 Heterogeneity and interactions (policy-relevant cuts)
+*4.5 Heterogeneity and interactions (policy-relevant cuts)
 
-4.6 Presentation of regression results
+*4.6 Presentation of regression results
 
 *---------------------------------------*
 *		III. Análisis de cluster   		*
 *---------------------------------------*
 
 
-5.1 Objective and conceptual framing
+*5.1 Objective and conceptual framing
 
-5.2 Feature selection for clustering (what goes in)
+*5.2 Feature selection for clustering (what goes in)
 
-5.3 Pre-processing
+*5.3 Pre-processing
 
-5.4 Choosing number of clusters
+*5.4 Choosing number of clusters
 
-5.5 Cluster interpretation and labeling
+*5.5 Cluster interpretation and labeling
 
-5.6 Comparing clusters on key outcomes and risks
+*5.6 Comparing clusters on key outcomes and risks
 
-5.7 Deliverable: “5-profile typology” (report-ready)
+*5.7 Deliverable: “5-profile typology” (report-ready)
 
