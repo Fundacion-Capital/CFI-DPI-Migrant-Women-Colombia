@@ -98,19 +98,52 @@
 	label variable q2_1 "¿En qué año llegó a vivir a Colombia por primera vez?"
 	note q2_1: "¿En qué año llegó a vivir a Colombia por primera vez?"
 
-	label variable q2_2 "¿Cuál es el último nivel de estudios que completó?"
-	note q2_2: "¿Cuál es el último nivel de estudios que completó?"
-	label define q2_2 1 "Sin estudios" 2 "Primaria incompleta" 3 "Primaria completa" 4 "Secundaria incompleta" 5 "Secundaria completa" 6 "Técnico superior incompleto" 7 "Técnico superior completo" 8 "Universitario incompleto" 9 "Universitario completo" 10 "Maestría o posgrado"
-	label values q2_2 q2_2
+*	label variable q2_2 "¿Cuál es el último nivel de estudios que completó?"
+*	note q2_2: "¿Cuál es el último nivel de estudios que completó?"
+*	label define q2_2 1 "Sin estudios" 2 "Primaria incompleta" 3 "Primaria completa" 4 "Secundaria incompleta" 5 "Secundaria completa" 6 "Técnico superior incompleto" 7 "Técnico superior completo" 8 "Universitario incompleto" 9 "Universitario completo" 10 "Maestría o posgrado"
+*	label values q2_2 q2_2
 
-	label variable q2_3 "Actualmente, ¿cuál es su ocupación principal?"
-	note q2_3: "Actualmente, ¿cuál es su ocupación principal?"
-	label define q2_3 1 "Empleador o patrono" 2 "Trabajador independiente" 3 "Empleado u obrero" 4 "Trabajador del hogar remunerado" 5 "Estudiante" 6 "Jubilado(a)/Pensionista" 7 "Trabajador familiar no remunerado" 8 "Actualmente no trabaja" 9 "Otro (especifique)"
-	label values q2_3 q2_3
+* --- Coding for Education Level (q2_2) ---
+label variable q2_2 "Highest level of education completed"
+note q2_2: "Source Question: ¿Cuál es el último nivel de estudios que completó?"
+
+label define q2_2 ///
+    1 "No formal education" ///
+    2 "Primary (incomplete)" ///
+    3 "Primary (complete)" ///
+    4 "Secondary (incomplete)" ///
+    5 "Secondary (complete)" ///
+    6 "Technical (incomplete)" ///
+    7 "Technical (complete)" ///
+    8 "University (incomplete)" ///
+    9 "University (complete)" ///
+    10 "Postgraduate/Master's"
+label values q2_2 q2_2
+
+
+*	label variable q2_3 "Actualmente, ¿cuál es su ocupación principal?"
+*	note q2_3: "Actualmente, ¿cuál es su ocupación principal?"
+*	label define q2_3 1 "Empleador o patrono" 2 "Trabajador independiente" 3 "Empleado u obrero" 4 "Trabajador del hogar remunerado" 5 "Estudiante" 6 "Jubilado(a)/Pensionista" 7 "Trabajador familiar no remunerado" 8 "Actualmente no trabaja" 9 "Otro (especifique)"
+*	label values q2_3 q2_3
 
 	label variable q2_3_otro "Por favor especifique cuál es su ocupación principal"
 	note q2_3_otro: "Por favor especifique cuál es su ocupación principal"
 
+* --- Coding for Main Occupation (q2_3) ---
+label variable q2_3 "Current primary occupation"
+note q2_3: "Source Question: Actualmente, ¿cuál es su ocupación principal?"
+
+label define q2_3 ///
+    1 "Employer" ///
+    2 "Self-employed/Independent worker" ///
+    3 "Employee/Wage worker" ///
+    4 "Paid domestic worker" ///
+    5 "Student" ///
+    6 "Retired/Pensioner" ///
+    7 "Unpaid family worker" ///
+    8 "Currently unemployed/Not working" ///
+    9 "Other"
+label values q2_3 q2_3
 
 	*----------------------------------------------------*
 	*    Bloque 3 : C.0 Acceso a telecomunicaciones      *

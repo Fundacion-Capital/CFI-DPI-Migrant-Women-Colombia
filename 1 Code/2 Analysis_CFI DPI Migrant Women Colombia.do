@@ -76,38 +76,37 @@ graph export "${output_dir}/pie_residence.png", replace
 
 *2.2 Migration trajectory and human capital
 
+	*Years in Colombia
+kdensity years_in_col, ///
+	title("") ///
+    lcolor(navy) lwidth(medium) ///
+    xtitle("Years in Colombia", size(small)) ///
+    ytitle("Density", size(small)) ///
+    graphregion(color(white)) plotregion(color(white))
+graph export "${output_dir}/density_years_in_col.png", replace
 
-	summarize q2_1 years_in_col
 
-	histogram years_in_col, ///
-    width(2) ///
-    frequency ///
-    title("Años de residencia en Colombia") ///
-    xtitle("Años en Colombia") ///
-    ytitle("Número de encuestados")
+	*Education
 
-	kdensity years_in_col, ///
-    title("Densidad de años de residencia en Colombia") ///
-    xtitle("Años en Colombia") ///
-    ytitle("Densidad")
+graph hbar (percent), over(q2_2, sort(1) descending) ///
+    blabel(bar, format(%2.1f) size(vsmall)) /// Mostrar decimal
+    bar(1, color("58 103 177")) /// Azul consistente
+    ytitle("Percentage (%)", size(small)) ///
+    graphregion(color(white)) plotregion(color(white))
+graph export "${output_dir}/bar_education.png", replace
 
-	graph bar (count), over(years_cat) ///
-    title("Tramos de residencia en Colombia") ///
-    ytitle("Número de encuestados") ///
-    blabel(bar)
+	*Occupation
+graph hbar (percent), over(q2_3, sort(1) descending) ///
+    blabel(bar, format(%2.1f) size(vsmall)) ///
+    bar(1, color("245 130 48")) /// Naranja consistente
+    ytitle("Percentage (%)", size(small)) ///
+    graphregion(color(white)) plotregion(color(white))
+graph export "${output_dir}/bar_occupation.png", replace
 
-	tab q2_2
-	tab q2_2, col
-	graph bar (percent), over(q2_2) ///
-    title("Nivel educativo de los encuestados") ///
-    ytitle("Porcentaje")
+	
 
-	tab q2_3, col
-	graph bar (percent), over(q2_3) ///
-    title("Estatus laboral de los encuestados") ///
-    ytitle("Porcentaje")
 
-	tab q2_2 q2_3
+
 
 *2.3 Socioeconomic vulnerability indicator (IVS)
 
