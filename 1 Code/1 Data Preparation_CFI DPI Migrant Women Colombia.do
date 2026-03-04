@@ -1171,8 +1171,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	label define ivs_cat_lab ///
     1 "Low vulnerability (0-0.33)" ///
-    2 "Medium vulnerability" (0.34-0.66)" ///
-    3 "High vulnerability" (0.67-1)"
+    2 "Medium vulnerability (0.34-0.66)" ///
+    3 "High vulnerability (0.67-1)"
 
 	label values ivs_cat ivs_cat_lab
 	label var ivs_cat "Categoría IVS (solo descriptiva)"
