@@ -127,7 +127,7 @@ graph bar, over(ivs_cat) over(q3) stack asyvars percent ///
     bar(2, color("167 169 172%80")) /// Medium: Gris
     bar(3, color("245 130 48%80")) /// High: Naranja
     ytitle("Percentage (%)", size(small)) ///
-    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("SVI Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
 
@@ -139,7 +139,7 @@ graph bar, over(ivs_cat) over(age_cat) stack asyvars percent ///
     bar(2, color("167 169 172%80")) /// 
     bar(3, color("245 130 48%80")) /// 
     ytitle("Percentage (%)", size(small)) ///
-    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("SVI Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
 
