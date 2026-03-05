@@ -66,6 +66,8 @@ else if "`c(username)'" == "USUARIO" { // Sarita's personal laptop
 		   ssc install `command'
 	   }
 	}
+	* Install plotplain scheme for graphs formatting
+	net install gr0070, from(http://www.stata-journal.com/software/sj17-3)		
 
 	* Run do files 
 	* Switch to 0/1 to not-run/run do-files 

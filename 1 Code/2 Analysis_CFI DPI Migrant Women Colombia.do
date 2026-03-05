@@ -24,53 +24,54 @@
 *---------------------------*
 *		0. Data intake		*
 *---------------------------*/
-	clear
-	use "${output_dir}/CFI_DPI Data for analysis.dta", replace
+	use "${output_dir}/CFI_DPI Data for analysis.dta", clear
 
-*---------------------------------------*
-*		I. Análisis descriptivo  		*
-*---------------------------------------*
+*-------------------------------*
+*		I. Descriptive  		*
+*-------------------------------*
 
-*2.1 Demographic profile
-graph set window fontface "Times New Roman"
+	*2.1 Demographic profile
+	graph set window fontface "Times New Roman"
 
-*Edad
-summarize q4, detail
-local med = r(p50) // Guarda la mediana
+	*Edad
+	summarize q4, detail
+	local med = r(p50) // Guarda la mediana
 
-hist q4, percent kdensity ///
-    color(gray) lcolor(black) /// Colores para consistencia visual
-    xtitle("Age (years)", size(small)) ///
-    ytitle("Percentage of respondents", size(small)) ///
-    ylabel(, nogrid) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    addplot(pci 0 `med' 16 `med', lcolor(red) lwidth(medthick)) /// Esta línea va al frente
-    legend(off) // Oculta la leyenda del addplot
+	hist q4, percent kdensity ///
+		color(gray) lcolor(black) /// Colores para consistencia visual
+		xtitle("Age (years)", size(small)) ///
+		ytitle("Percentage of respondents", size(small)) ///
+		ylabel(, nogrid) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		addplot(pci 0 `med' 16 `med', lcolor(red) lwidth(medthick)) /// Esta línea va al frente
+		legend(off) /// Oculta la leyenda del addplot
+		scheme(plotplain)
 
-graph export "${output_dir}/hist_edad.png", replace
+	graph export "${output_dir}/hist_edad.png", replace
 
-graph box q4, title("Distribución de Edad") ytitle("Años")
+	graph box q4, title("Distribución de Edad") ytitle("Años")
 
-*Residencia
-* Definición de colores
-local color1 "245 130 48"  // Orange (Bogotá)
-local color2 "140 198 63"  // Green (Meta)
-local color3 "255 196 0"   // Yellow (Medellín)
-local color4 "167 169 172" // Gray (Soacha)
-local color5 "58 103 177"  // Blue (Cali)
+	*Residencia
+	* Definición de colores
+	local color1 "245 130 48"  // Orange (Bogotá)
+	local color2 "140 198 63"  // Green (Meta)
+	local color3 "255 196 0"   // Yellow (Medellín)
+	local color4 "167 169 172" // Gray (Soacha)
+	local color5 "58 103 177"  // Blue (Cali)
 
-graph pie, over(q3) sort(q3) ///
-    pie(1, color("`color1'")) ///
-    pie(2, color("`color5'")) ///
-    pie(3, color("`color3'")) ///
-    pie(4, color("`color4'")) ///
-    pie(5, color("`color2'")) ///
-    plabel(_all percent, format(%2.1f) size(large) color(white) gap(3)) ///
-    legend(region(lcolor(none)) position(3) cols(1) size(medium)) ///
-    graphregion(color(white)) ///
-    plotregion(color(white) margin(large))
+	graph pie, over(q3) sort(q3) ///
+		pie(1, color("`color1'")) ///
+		pie(2, color("`color5'")) ///
+		pie(3, color("`color3'")) ///
+		pie(4, color("`color4'")) ///
+		pie(5, color("`color2'")) ///
+		plabel(_all percent, format(%2.1f) size(large) color(white) gap(3)) ///
+		legend(region(lcolor(none)) position(3) cols(1) size(medium)) ///
+		graphregion(color(white)) ///
+		plotregion(color(white) margin(large)) ///
+		scheme(plotplain)
 
-graph export "${output_dir}/pie_residence.png", replace
+	graph export "${output_dir}/pie_residence.png", replace
 
 
 
@@ -82,7 +83,9 @@ kdensity years_in_col, ///
     lcolor(navy) lwidth(medium) ///
     xtitle("Years in Colombia", size(small)) ///
     ytitle("Density", size(small)) ///
-    graphregion(color(white)) plotregion(color(white))
+    graphregion(color(white)) plotregion(color(white)) ///
+	note("") ///
+	scheme(plotplain)
 graph export "${output_dir}/density_years_in_col.png", replace
 
 
@@ -92,7 +95,8 @@ graph hbar (percent), over(q2_2, sort(1) descending) ///
     blabel(bar, format(%2.1f) size(vsmall)) /// Mostrar decimal
     bar(1, color("58 103 177")) /// Azul consistente
     ytitle("Percentage (%)", size(small)) ///
-    graphregion(color(white)) plotregion(color(white))
+    graphregion(color(white)) plotregion(color(white)) ///
+	scheme(plotplain)
 graph export "${output_dir}/bar_education.png", replace
 
 	*Occupation
@@ -100,7 +104,8 @@ graph hbar (percent), over(q2_3, sort(1) descending) ///
     blabel(bar, format(%2.1f) size(vsmall)) ///
     bar(1, color("245 130 48")) /// Naranja consistente
     ytitle("Percentage (%)", size(small)) ///
-    graphregion(color(white)) plotregion(color(white))
+    graphregion(color(white)) plotregion(color(white)) ///
+	scheme(plotplain)
 graph export "${output_dir}/bar_occupation.png", replace
 
 	
