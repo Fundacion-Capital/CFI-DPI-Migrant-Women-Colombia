@@ -1242,7 +1242,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace iat_cat = 1 if iat_score <= 0.45
 	replace iat_cat = 2 if iat_score > 0.45 & iat_score <= 0.80
 	replace iat_cat = 3 if iat_score > 0.80
-	label define iat_cat_lab 1 "Low digital access" 2 "Mediuem digital access" 3 "High digital access"
+	label define iat_cat_lab 1 "Low digital access" 2 "Medium digital access" 3 "High digital access"
 	label values iat_cat iat_cat_lab
 	label var iat_cat "Nivel de acceso a telecomunicaciones"
 

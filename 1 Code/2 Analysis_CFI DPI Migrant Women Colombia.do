@@ -177,7 +177,7 @@ graph pie, over(q3_8) ///
     pie(4, color("160 160 160")) ///
     pie(5, color("120 200 80")) ///
     plabel(_all percent, size(medium) color(white) format(%2.1f)) ///
-    legend(cols(1) position(3) size(small)) ///
+    legend(cols(1) position(3) size(big)) ///
     graphregion(color(white))
 graph export "${output_dir}/fig10_data_stability.png", replace
 
@@ -201,12 +201,22 @@ graph bar (percent), over(q3_16, label(labsize(medium))) ///
     graphregion(color(white)) /// 
     blabel(bar, format(%2.0f) size(medium) color(black)) ///
     b1title("Level of Confidence", size(medium))
-
 graph export "${output_dir}/fig11_sendmoney.png", replace
 
 * --- B. TABLA: Correlación IAT e IADT ---
 * Esto responderá: ¿Tener mejor internet (IAT) se traduce en sentirse más capaz (IADT)?
 pwcorr iat_score iadt_score, sig
+
+graph bar iadt_score, over(iat_cat, label(labsize(medium))) ///
+    bar(1, color("58 103 177")) ///
+    ytitle("Mean self-efficacy score (IADT)", size(medium)) ///
+    ylabel(0(0.2)1, labsize(medium)) ///
+    graphregion(color(white)) ///
+    blabel(bar, format(%4.2f) size(medium)) ///
+    b1title("Level of Digital Access (IAT)", size(medium))
+graph export "${output_dir}/fig12_iat_iadt.png", replace
+
+
 
 
 *3.3 Practical digital competence for payments/security (Section C2) — ICDP
