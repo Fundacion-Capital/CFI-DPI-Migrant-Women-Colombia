@@ -151,13 +151,18 @@ label values q2_3 q2_3
 
 	label variable q3_1 "¿Usted tiene personalmente un teléfono móvil que usa con regularidad?"
 	note q3_1: "¿Usted tiene personalmente un teléfono móvil que usa con regularidad?"
-	label define q3_1 1 "Sí, un teléfono inteligente (smartphone)" 2 "Sí, un teléfono básico" 3 "No"
-	label values q3_1 q3_1
+	*label define q3_1 1 "Sí, un teléfono inteligente (smartphone)" 2 "Sí, un teléfono básico" 3 "No"
+	*label values q3_1 q3_1
+	label define q3_1_lab 1 "Smartphone" 2 "Basic Phone" 3 "No Phone"
+	label values q3_1 q3_1_lab
+
 
 	label variable q3_5 "¿Con qué frecuencia usa Internet en cualquier dispositivo?"
 	note q3_5: "¿Con qué frecuencia usa Internet en cualquier dispositivo?"
-	label define q3_5 1 "Diariamente" 2 "Varias veces por semana" 3 "Una vez a la semana" 4 "Menos de una vez a la semana" 5 "Nunca"
-	label values q3_5 q3_5
+	*label define q3_5 1 "Diariamente" 2 "Varias veces por semana" 3 "Una vez a la semana" 4 "Menos de una vez a la semana" 5 "Nunca"
+	*label values q3_5 q3_5
+	label define q3_5_lab 1 "Daily" 2 "Weekly" 3 "Monthly" 4 "Less often" 5 "Never"
+	label values q3_5 q3_5_lab
 
 	label variable q3_6 "¿Dónde accede principalmente a Internet?"
 	note q3_6: "¿Dónde accede principalmente a Internet?"
@@ -1183,53 +1188,61 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 * C0. ÍNDICE DE ACCESO A TELECOMUNICACIONES (IAT)
 * =====================================================
 
-* q7 q8 repensar para agregar: condicionadas imputa ceros
 
-	* 1. Tipo de teléfono móvil
+	* 1. Phone type (q3_1)
 	gen tel_score = .
-	replace tel_score = 100 if q3_1 == 1
-	replace tel_score = 50  if q3_1 == 2
-	replace tel_score = 0   if q3_1 == 3
+	replace tel_score = 100 if q3_1 == 1 // Smartphone
+	replace tel_score = 50  if q3_1 == 2 // Básico
+	replace tel_score = 0   if q3_1 == 3 // No tiene
 	label var tel_score "Acceso a dispositivo móvil"
 
-	* 2. Frecuencia de uso de Internet
+	* 2. Internet frequency (q3_5)
 	gen internet_score = .
-	replace internet_score = 100 if q3_5 == 1
+	replace internet_score = 100 if q3_5 == 1 // Diario
 	replace internet_score = 75  if q3_5 == 2
 	replace internet_score = 50  if q3_5 == 3
 	replace internet_score = 25  if q3_5 == 4
-	replace internet_score = 0   if q3_5 == 5
+	replace internet_score = 0   if q3_5 == 5 // Nunca
 	label var internet_score "Frecuencia de uso de Internet"
 
-	* 3. Lugar principal de acceso a Internet
+	* 3. Main access point (q3_6)
 	gen access_score = .
-	replace access_score = 100 if q3_6 == 1
-	replace access_score = 75  if q3_6 == 2
-	replace access_score = 75  if q3_6 == 3
-	replace access_score = 25  if q3_6 == 4
-	replace access_score = 50  if q3_6 == 5
-	replace access_score = 25  if q3_6 == 6
+	replace access_score = 100 if q3_6 == 1 // Plan Postpago (Máximo)
+	replace access_score = 80  if inlist(q3_6, 2, 5) // WiFi Hogar o Recargas
+	replace access_score = 40  if inlist(q3_6, 3, 4, 6) // Público/Vecino/Trabajo
 	label var access_score "Calidad del punto de acceso a Internet"
 
+	* 4. Data stability (q3_7 y q3_8)
+	gen data_stability = .
+	replace data_stability = 100 if q3_7 <= 2 & q3_8 == 3 // Tiene plan y nunca se acaba
+	replace data_stability = 50  if q3_8 == 2 // A veces se acaba
+	replace data_stability = 0   if q3_8 == 1 | q3_7 == 3 // Siempre se acaba o no tiene
+	label var data_stability "Estabilidad de datos móviles"
+ 
+
+	* 5. Can read messages (q3_12)
+	gen read_score = .
+	replace read_score = 100 if q3_12 == 1
+	replace read_score = 25  if q3_12 == 2 // Riesgo alto si necesita ayuda
+	replace read_score = 0   if q3_12 == 3
+	label var read_score "Puede leer notificaciones sin ayuda"
 
 
-
-	* 4. Índice agregado (promedio simple)
-	egen iat_score = rowmean(tel_score internet_score access_score)
+	* Índice agregado (promedio simple)
+	egen iat_score = rowmean(tel_score internet_score access_score data_stability read_score)
 	label var iat_score "Índice de Acceso a Telecomunicaciones (0-1)"
-
 	replace iat_score = iat_score / 100
 
-	* 5. Versión estandarizada (para regresión)
+	* Versión estandarizada (para regresión)
 	egen iat_score_std = std(iat_score)
 	label var iat_score_std "IAT estandarizado"
 
-	* 6. Categorización analítica
+	* Categorización analítica
 	gen iat_cat = .
-	replace iat_cat = 1 if iat_score <= 39
-	replace iat_cat = 2 if iat_score > 39 & iat_score <= 79
-	replace iat_cat = 3 if iat_score > 79
-	label define iat_cat_lab 1 "Acceso digital bajo" 2 "Acceso digital medio" 3 "Acceso digital alto"
+	replace iat_cat = 1 if iat_score <= 0.45
+	replace iat_cat = 2 if iat_score > 0.45 & iat_score <= 0.80
+	replace iat_cat = 3 if iat_score > 0.80
+	label define iat_cat_lab 1 "Low digital access" 2 "Mediuem digital access" 3 "High digital access"
 	label values iat_cat iat_cat_lab
 	label var iat_cat "Nivel de acceso a telecomunicaciones"
 
