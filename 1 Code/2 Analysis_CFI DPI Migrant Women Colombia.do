@@ -184,12 +184,30 @@ graph export "${output_dir}/fig10_data_stability.png", replace
 
 * IAT X VSI
 tab ivs_cat iat_cat, row
-tab ivs_cat, summarize(iat_score) 
-
+tab ivs_cat, summarize(iat_score) // Tabla 1
 
 
 
 *3.2 Perceived transactional digital self-efficacy (Section C1) — IADT
+
+label define escala_en 1 "Not at all true" 2 "Hardly true" 3 "Moderately true" 4 "Very true" 5 "Exactly true"
+label values q3_16 escala_en
+
+*Ability to send/recieve digital money
+graph bar (percent), over(q3_16, label(labsize(medium))) ///
+    bar(1, color("58 103 177")) /// Color azul aplicado correctamente
+    ytitle("Percentage (%)", size(medium)) ///
+    ylabel(, labsize(medium)) ///
+    graphregion(color(white)) /// 
+    blabel(bar, format(%2.0f) size(medium) color(black)) ///
+    b1title("Level of Confidence", size(medium))
+
+graph export "${output_dir}/fig11_sendmoney.png", replace
+
+* --- B. TABLA: Correlación IAT e IADT ---
+* Esto responderá: ¿Tener mejor internet (IAT) se traduce en sentirse más capaz (IADT)?
+pwcorr iat_score iadt_score, sig
+
 
 *3.3 Practical digital competence for payments/security (Section C2) — ICDP
 
