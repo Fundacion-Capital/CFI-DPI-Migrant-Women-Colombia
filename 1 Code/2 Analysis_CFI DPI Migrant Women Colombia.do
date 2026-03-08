@@ -248,7 +248,7 @@ graph bar, over(icdp_cat) over(age_cat) stack asyvars percent ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
 
-graph export "figure14_icdp_age.png", replace
+graph export "${output_dir}/figure14_icdp_age.png", replace
 
 
 *ICDP by Education
@@ -266,17 +266,77 @@ graph hbar icdp_score, over(q2_2, label(labsize(vsmall))) ///
     ylabel(0(0.2)1, labsize(small)) ///
     graphregion(color(white)) ///
     blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
-    b1title("Highest level of education completed", size(small))
+    b1title("", size(small))
 
-graph export "figure15_icdp_edu.png", replace
+graph export "${output_dir}/figure15_icdp_edu.png", replace
 
 
 
 
 *3.4 Formal access constraints: documents, proof of address, phone registration, account ownership (Section C3) — IAFF
 
+* --- FIGURA 16: Account Ownership Rates ---
+label variable q4_12_1 "Bank Account"
+label variable q4_12_2 "Digital Wallet"
+label variable q4_12_3 "Cooperative"
+label variable q4_12_4 "Fintech/EMI"
+
+* Crear variable categórica
+gen product = .
+replace product = 1 if q4_12_1==1
+replace product = 2 if q4_12_2==1
+replace product = 3 if q4_12_3==1
+replace product = 4 if q4_12_4==1
+
+label define product_lab ///
+1 "Bank Account" ///
+2 "Digital Wallet" ///
+3 "Cooperative" ///
+4 "Fintech/EMI"
+
+label values product product_lab
+
+graph bar (count), over(product) ///
+    bar(1, color("58 103 177%90")) ///
+    ytitle("Number of Users (Count)", size(small)) ///
+    ylabel(, labsize(small)) ///
+    blabel(bar, format(%9.0f) size(vsmall) pos(outside)) ///
+    legend(off) ///
+    b1title("Financial Products", size(small)) ///
+    graphregion(color(white))
+
+graph export "fig16_account_types.png", replace
 
 
+
+*IAFF by years in Colombia
+label define iaff_cat_en 1 "Low financial access" 2 "Medium financial access" 3 "High financial access"
+label values iaff_cat iaff_cat_en
+
+graph bar, over(iaff_cat) over(years_cat) stack asyvars percent ///
+    bar(1, color("245 130 48%80")) /// Naranja para Low (Barrera)
+    bar(2, color("167 169 172%80")) /// Gris para Medium
+    bar(3, color("58 103 177%80")) /// Azul para High
+    ytitle("Percentage (%)", size(small)) ///
+    b1title("Years of Residency in Colombia", size(small)) ///
+    legend(title("Access Level (IAFF)", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+    
+graph export "figure17_iaff_time.png", replace
+
+
+*IAFF by Education
+*drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
+graph hbar iaff_score, over(q2_2, label(labsize(vsmall))) ///
+    bar(1, color("58 103 177%90")) /// Consistent Blue
+    ytitle("Mean Practical Competence (0-1)", size(small)) ///
+    ylabel(0(0.2)1, labsize(small)) ///
+    graphregion(color(white)) ///
+    blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
+    b1title("", size(small))
+
+graph export "${output_dir}/fig18_iaff_edu.png", replace
 
 *3.5 Usage and operability of financial tools (C3 continued) — IUOF
 

@@ -1372,7 +1372,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* 3. Teléfono a nombre propio – q4_6
 	gen iaff_phone = .
 	replace iaff_phone = 100 if q4_6 == 1     // Sí
-	replace iaff_phone = 50  if q4_6 == 3     // No tiene línea propia
+	replace iaff_phone = 0  if q4_6 == 3     // No tiene línea propia
 	replace iaff_phone = 0   if inlist(q4_6,2,4)
 	label var iaff_phone "Teléfono registrado a nombre propio (0-100)"
 
@@ -1396,9 +1396,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* 6. Clasificación descriptiva
 	gen iaff_cat = .
-	replace iaff_cat = 1 if iaff_score <= 39
-	replace iaff_cat = 2 if iaff_score > 39 & iaff_score <= 79
-	replace iaff_cat = 3 if iaff_score > 79
+	replace iaff_cat = 1 if iaff_score < 0.5
+	replace iaff_cat = 2 if iaff_score >= 0.5 & iaff_score <= 0.8
+	replace iaff_cat = 3 if iaff_score > 0.8
 
 	label define iaff_cat_lab ///
 	1 "Acceso financiero bajo" ///
