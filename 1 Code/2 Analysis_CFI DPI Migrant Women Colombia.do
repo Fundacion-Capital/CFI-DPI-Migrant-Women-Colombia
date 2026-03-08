@@ -203,7 +203,7 @@ graph bar (percent), over(q3_16, label(labsize(medium))) ///
     b1title("Level of Confidence", size(medium))
 graph export "${output_dir}/fig11_sendmoney.png", replace
 
-* --- B. TABLA: Correlación IAT e IADT ---
+* B. TABLA: Correlación IAT e IADT
 * Esto responderá: ¿Tener mejor internet (IAT) se traduce en sentirse más capaz (IADT)?
 pwcorr iat_score iadt_score, sig
 
@@ -221,7 +221,62 @@ graph export "${output_dir}/fig12_iat_iadt.png", replace
 
 *3.3 Practical digital competence for payments/security (Section C2) — ICDP
 
+
+* Prevalence of QR Code Usage (q3_20)
+label define qr_en 1 "Only to pay" 2 "Only to receive" 3 "To pay and receive" 4 "Does not use QR"
+label values q3_20 qr_en
+graph bar (percent), over(q3_20, label(labsize(medium))) ///
+    bar(1, color("58 103 177")) ///
+    ytitle("Percentage (%)", size(medium)) ///
+    ylabel(, labsize(medium)) ///
+    graphregion(color(white)) ///
+    blabel(bar, format(%2.0f) size(medium) color(black)) ///
+    b1title("QR Code Usage Experience", size(medium))
+
+graph export "${output_dir}/fig13_qr.png", replace
+
+*ICDP by Age Category
+label define icdp_cat_en 1 "Low practical competence" 2 "Medium practical competence" 3 "High practical competence"
+label values icdp_cat icdp_cat_en
+graph bar, over(icdp_cat) over(age_cat) stack asyvars percent ///
+    bar(1, color("245 130 48%80")) /// Rojo para Low
+    bar(2, color("167 169 172%80")) /// Gris para Medium
+    bar(3, color("58 103 177%80")) /// Azul para High
+    ytitle("Percentage (%)", size(small)) ///
+	b1title("Age Category", size(small)) ///
+    legend(title("Competence Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+
+graph export "figure14_icdp_age.png", replace
+
+
+*ICDP by Education
+* 1. Define English labels for Education (matching Figure 4)
+label define edu_en 1 "No formal education" 2 "Primary (incomplete)" 3 "Primary (complete)" ///
+    4 "Secondary (incomplete)" 5 "Secondary (complete)" 6 "Technical (incomplete)" ///
+    7 "Technical (complete)" 8 "University (incomplete)" 9 "University (complete)" ///
+    10 "Postgraduate/Master's"
+label values q2_2 edu_en
+
+* 2. Generate Horizontal Bar Chart of Means
+graph hbar icdp_score, over(q2_2, label(labsize(vsmall))) ///
+    bar(1, color("58 103 177%90")) /// Consistent Blue
+    ytitle("Mean Practical Competence (0-1)", size(small)) ///
+    ylabel(0(0.2)1, labsize(small)) ///
+    graphregion(color(white)) ///
+    blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
+    b1title("Highest level of education completed", size(small))
+
+graph export "figure15_icdp_edu.png", replace
+
+
+
+
 *3.4 Formal access constraints: documents, proof of address, phone registration, account ownership (Section C3) — IAFF
+
+
+
 
 *3.5 Usage and operability of financial tools (C3 continued) — IUOF
 

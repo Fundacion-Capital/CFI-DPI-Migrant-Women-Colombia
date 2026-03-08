@@ -1250,7 +1250,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 * =====================================================
-* C1.1 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT)
+* C1 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT)
 * =====================================================
 
 	* 1. Limpieza de valores inválidos (si existieran)
@@ -1290,7 +1290,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 * =====================================================
-* C2.1 ÍNDICE DE COMPETENCIA DIGITAL PRÁCTICA (ICDP)
+* C2 ÍNDICE DE COMPETENCIA DIGITAL PRÁCTICA (ICDP)
 * =====================================================
 
 
@@ -1335,9 +1335,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* 6. Clasificación descriptiva
 	gen icdp_cat = .
-	replace icdp_cat = 1 if icdp_score <= 39
-	replace icdp_cat = 2 if icdp_score > 39 & icdp_score <= 79
-	replace icdp_cat = 3 if icdp_score > 79
+	replace icdp_cat = 1 if icdp_score <= 0.45
+	replace icdp_cat = 2 if icdp_score > 0.45 & icdp_score <= 0.80
+	replace icdp_cat = 3 if icdp_score > 0.80
 
 	label define icdp_cat_lab ///
 	1 "Competencia digital práctica baja" ///
@@ -1349,10 +1349,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 * =====================================================
-* C3.1 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF)
+* C3 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF)
 * =====================================================
-
-* q4_2 que solo si sea completo y no , no intentó cero
 
 	* 1. Documento válido para KYC – q4_1_*
 	gen iaff_doc = 0
