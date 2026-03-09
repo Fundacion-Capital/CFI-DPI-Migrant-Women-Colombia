@@ -163,7 +163,6 @@ graph bar, over(q3_1) over(q3_5) stack asyvars percent ///
     legend(title("Device type", size(small)) position(3) cols(1) size(vsmall)) ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
-
 graph export "${output_dir}/fig9_iat_phone_internet.png", replace
 
 *Data Stability
@@ -248,7 +247,7 @@ graph bar, over(icdp_cat) over(age_cat) stack asyvars percent ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
 
-graph export "${output_dir}/figure14_icdp_age.png", replace
+graph export "${output_dir}/fig14_icdp_age.png", replace
 
 
 *ICDP by Education
@@ -262,13 +261,13 @@ label values q2_2 edu_en
 * 2. Generate Horizontal Bar Chart of Means
 graph hbar icdp_score, over(q2_2, label(labsize(vsmall))) ///
     bar(1, color("58 103 177%90")) /// Consistent Blue
-    ytitle("Mean Practical Competence (0-1)", size(small)) ///
+    ytitle("Mean Practical Digital Competence Index (ICDP)", size(small)) ///
     ylabel(0(0.2)1, labsize(small)) ///
     graphregion(color(white)) ///
     blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
     b1title("", size(small))
 
-graph export "${output_dir}/figure15_icdp_edu.png", replace
+graph export "${output_dir}/fig15_icdp_edu.png", replace
 
 
 
@@ -305,7 +304,7 @@ graph bar (count), over(product) ///
     b1title("Financial Products", size(small)) ///
     graphregion(color(white))
 
-graph export "fig16_account_types.png", replace
+graph export "${output_dir}/fig16_account_types.png", replace
 
 
 
@@ -323,11 +322,11 @@ graph bar, over(iaff_cat) over(years_cat) stack asyvars percent ///
     graphregion(color(white)) plotregion(color(white)) ///
     blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
     
-graph export "figure17_iaff_time.png", replace
+graph export "${output_dir}/fig17_iaff_time.png", replace
 
 
 *IAFF by Education
-*drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
+drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
 graph hbar iaff_score, over(q2_2, label(labsize(vsmall))) ///
     bar(1, color("58 103 177%90")) /// Consistent Blue
     ytitle("Mean Practical Competence (0-1)", size(small)) ///
