@@ -1058,10 +1058,10 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var years_in_col "Años viviendo en el país"
 
 	recode years_in_col ///
-    (0/2=1 "0–2 años") ///
-    (3/5=2 "3–5 años") ///
-    (6/10=3 "6–10 años") ///
-    (11/max=4 "11+ años"), gen(years_cat)
+    (0/2=1 "0–2 years") ///
+    (3/5=2 "3–5 years") ///
+    (6/10=3 "6–10 years") ///
+    (11/max=4 "11+ years"), gen(years_cat)
 	label var years_cat "Tramos de residencia en Colombia"
 
 	*----------------------------------------------------*
@@ -2109,7 +2109,6 @@ screeplot
 	label define IBPD_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IBPD_cat IBPD_cat_lbl
 	label var IBPD_cat "Categoría IBPD"
-
 
 
 

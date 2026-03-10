@@ -51,7 +51,6 @@
 
 
 	*Residencia
-	* Definición de colores
 	local color1 "245 130 48"  // Orange (Bogotá)
 	local color2 "140 198 63"  // Green (Meta)
 	local color3 "255 196 0"   // Yellow (Medellín)
@@ -76,6 +75,7 @@
 
 *2.2 Migration trajectory and human capital
 
+
 	*Years in Colombia
 kdensity years_in_col, ///
 	title("") ///
@@ -96,6 +96,7 @@ graph hbar (percent), over(q2_2) ///
     graphregion(color(white)) plotregion(color(white)) ///
 	scheme(plotplain)
 graph export "${output_dir}/fig4_bar_education.png", replace
+
 
 	*Occupation
 graph hbar (percent), over(q2_3, sort(1) descending) ///
@@ -121,7 +122,6 @@ twoway (hist ivs_score, width(0.05) color(gray%50) lcolor(white)) ///
     graphregion(color(white)) plotregion(color(white)) ///
 	scheme(plotplain)
 graph export "${output_dir}/fig6_ivs_distribution_apa.png", replace
-
 
 
 
@@ -152,7 +152,7 @@ graph bar, over(ivs_cat) over(age_cat) stack asyvars percent ///
 graph export "${output_dir}/fig8_ivs_by_age.png", replace
 
 
-*3.1 Digital access and telecom constraints (Section C0) — IAT
+*3.1 Digital access and telecom constraints — IAT
 
 
 *Divice type y frequency
@@ -195,7 +195,7 @@ tab ivs_cat, summarize(iat_score) // Tabla 1
 
 
 
-*3.2 Perceived transactional digital self-efficacy (Section C1) — IADT
+*3.2 Perceived transactional digital self-efficacy — IADT
 
 label define escala_en 1 "Not at all true" 2 "Hardly true" 3 "Moderately true" 4 "Very true" 5 "Exactly true"
 label values q3_16 escala_en
@@ -211,8 +211,7 @@ graph bar (percent), over(q3_16, label(labsize(medium))) ///
 	scheme(plotplain)
 graph export "${output_dir}/fig11_sendmoney.png", replace
 
-* B. TABLA: Correlación IAT e IADT
-* Esto responderá: ¿Tener mejor internet (IAT) se traduce en sentirse más capaz (IADT)?
+* Correlación IAT e IADT
 pwcorr iat_score iadt_score, sig
 
 graph bar iadt_score, over(iat_cat, label(labsize(medium))) ///
@@ -228,7 +227,7 @@ graph export "${output_dir}/fig12_iat_iadt.png", replace
 
 
 
-*3.3 Practical digital competence for payments/security (Section C2) — ICDP
+*3.3 Practical digital competence for payments/security — ICDP
 
 
 * Prevalence of QR Code Usage (q3_20)
@@ -263,14 +262,13 @@ graph export "${output_dir}/fig14_icdp_age.png", replace
 
 
 *ICDP by Education
-* 1. Define English labels for Education (matching Figure 4)
+
 label define edu_en 1 "No formal education" 2 "Primary (incomplete)" 3 "Primary (complete)" ///
     4 "Secondary (incomplete)" 5 "Secondary (complete)" 6 "Technical (incomplete)" ///
     7 "Technical (complete)" 8 "University (incomplete)" 9 "University (complete)" ///
     10 "Postgraduate/Master's"
 label values q2_2 edu_en
 
-* 2. Generate Horizontal Bar Chart of Means
 preserve
 	drop if q2_2==1
     statsby mean=r(mean) ub=r(ub) lb=r(lb), by(q2_2) clear: ci mean icdp_score
@@ -290,7 +288,7 @@ preserve
         yscale(reverse) /// 
         legend(off) ///
         graphregion(color(white)) ///
-        scheme(s2mono) // Cambiado a s2mono (estándar) ya que no tienes plotplain
+        scheme(plotplain) // Cambiado a s2mono (estándar) ya que no tienes plotplain
     
     graph export "${output_dir}/fig15_icdp_edu.png", replace
 restore
@@ -298,14 +296,13 @@ restore
 
 
 
-*3.4 Formal access constraints: documents, proof of address, phone registration, account ownership (Section C3) — IAFF
+*3.4 Formal access constraints: documents, proof of address, phone registration, account ownership — IAFF
 
 label variable q4_12_1 "Bank Account"
 label variable q4_12_2 "Digital Wallet"
 label variable q4_12_3 "Cooperative"
 label variable q4_12_4 "Fintech/EMI"
 
-* Crear variable categórica
 gen product = .
 replace product = 1 if q4_12_1==1
 replace product = 2 if q4_12_2==1
@@ -320,19 +317,13 @@ label define product_lab ///
 label values product product_lab
 
 preserve
-    * 1. Definir la base total
     scalar total_base = 423
-
-    * 2. Colapsar para contar
     gen count = 1
     collapse (sum) count, by(product)
     drop if product == .
-
-    * 3. Calcular porcentaje y etiqueta
     gen pct = (count / total_base) * 100
     gen pct_lab = string(pct, "%2.1f") + "%"
 
-    * 4. Graficar (Capas: barras + etiquetas de texto)
     twoway ///
         (bar pct product, barwidth(0.6) color("58 103 177%90")) /// Capa 1: Barras
         (scatter pct product, mlabel(pct_lab) mlabpos(12) mlabsize(vsmall) mcolor(none)), /// Capa 2: Texto
@@ -368,9 +359,6 @@ graph export "${output_dir}/fig17_iaff_time.png", replace
 
 
 *IAFF by Education
-*drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
-
-
 preserve
 drop if q2_2 == 1
 statsby mean=r(mean) ub=r(ub) lb=r(lb), by(q2_2) clear: ci mean iaff_score
@@ -390,6 +378,7 @@ twoway (bar mean q2_2, horizontal barwidth(0.6) color("58 103 177%85")) ///
 
 graph export "${output_dir}/fig18_iaff_edu_plain.png", replace
 restore
+
 
 
 *3.5 Usage and operability of financial tools (C3 continued) — IUOF
