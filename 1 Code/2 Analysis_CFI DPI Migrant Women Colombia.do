@@ -428,15 +428,27 @@ graph bar, over(iuof_cat) over(iaff_cat, label(labsize(vsmall))) asyvars stack /
 
 graph export "${output_dir}/fig20_iuof_iaff_final.png", replace
 
+
+
+
+
 *3.6 Awareness and usage of payment rails + onboarding experience
+*Pendiente nuevo construir en prep
+
+
 
 
 *3.7 Remittances: channels, formalization, intensity, and user experience — IURD & IETR
 
+
+
 *3.8 Fraud, safety behaviors, and recourse — IPCS & IEDF
 
 
+
 *3.9 Trust, autonomy, and social norms — IAER & ICPF
+
+
 
 *3.10 Barriers, enabling environment, and program exposure — IEH & IBPD
 
