@@ -1,4 +1,4 @@
-* 00000012
+* 00000014
 *! version 1.0.0
 * Do not erase or edit this file
 * It is used by Stata to track the ado and help
@@ -446,4 +446,70 @@ f g\grc1leg2.ado
 f g\grc1leg2.sthlp
 f g\grc1leg2_examples.ado
 f g\grc1leg2.dlg
+e
+S http://fmwww.bc.edu/repec/bocode/o
+N outreg2.pkg
+D 16 Feb 2026
+U 13
+d 'OUTREG2': module to arrange regression outputs into an illustrative table
+d 
+d  outreg2 provides a fast and easy way to produce an illustrative
+d table  of regression outputs. The regression outputs are produced
+d piecemeal and are  difficult to compare without some type of
+d rearrangement. outreg2  automates this process by concatenating
+d the successive regression outputs in a  vertical format. The
+d resulting table is saved to the disk in ASCII  format, which can
+d be read by other programs. outreg2 thus facilitates  the
+d convertion of regression outputs to a standard format suitable
+d for  inclusion in a scholarly publication. The functionality of
+d outreg2 is based on the earlier package outreg,  by John Luke
+d Gallup. Unlike outreg, outreg2 is capable of writing LaTeX-format
+d tables, as well as ASCII, MS Word and MS Excel.
+d 
+d KW: regression
+d KW: output
+d KW: tables
+d KW: tab-delimited output
+d KW: LaTeX
+d KW: Word
+d KW: Excel
+d 
+d Requires: Stata version 7
+d 
+d Distribution-Date: 20140817
+d 
+d Author: Roy Wada
+d Support: email roywada@@hotmail.com
+d 
+f o\outreg2.ado
+f o\outreg2_prf.ado
+f o\outreg2.hlp
+f s\shellout.ado
+f s\shellout.hlp
+f s\seeout.ado
+f s\seeout.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/b
+N betterbar.pkg
+D  9 Mar 2026
+U 14
+d 'BETTERBAR': module to produce bar graphs with optional standard error bars and cross-group comparisons
+d 
+d  betterbar and betterbarci produce bar graphs with optional
+d standard error bars and cross-group comparisons.
+d 
+d KW: graphics
+d KW: bar graph
+d 
+d Requires: Stata version 13.1
+d 
+d Distribution-Date: 20200209
+d 
+d Author: Benjamin Daniels, World Bank
+d Support: email bbdaniels@@gmail.com
+d 
+f b\betterbar.ado
+f b\betterbar.sthlp
+f b\betterbarci.ado
+f b\betterbarci.sthlp
 e

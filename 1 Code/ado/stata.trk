@@ -1,4 +1,4 @@
-* 00000013
+* 00000015
 *! version 1.0.0
 * Do not erase or edit this file
 * It is used by Stata to track the ado and help
@@ -488,4 +488,55 @@ f s\shellout.ado
 f s\shellout.hlp
 f s\seeout.ado
 f s\seeout.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/b
+N betterbar.pkg
+D  9 Mar 2026
+U 14
+d 'BETTERBAR': module to produce bar graphs with optional standard error bars and cross-group comparisons
+d 
+d  betterbar and betterbarci produce bar graphs with optional
+d standard error bars and cross-group comparisons.
+d 
+d KW: graphics
+d KW: bar graph
+d 
+d Requires: Stata version 13.1
+d 
+d Distribution-Date: 20200209
+d 
+d Author: Benjamin Daniels, World Bank
+d Support: email bbdaniels@@gmail.com
+d 
+f b\betterbar.ado
+f b\betterbar.sthlp
+f b\betterbarci.ado
+f b\betterbarci.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/c
+N coefplot.pkg
+D  9 Mar 2026
+U 15
+d 'COEFPLOT': module to plot regression coefficients and other results
+d 
+d   coefplot plots results from estimation commands or Stata
+d matrices. Results from multiple models or matrices can be
+d combined in a single graph. The default behavior of coefplot is
+d to draw markers for coefficients and horizontal spikes for
+d confidence intervals. However, coefplot can also produce various
+d other types of graphs.
+d 
+d KW: graphics
+d KW: coefficients
+d KW: estimation
+d 
+d Requires: Stata version 11
+d 
+d Distribution-Date: 20250822
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f c\coefplot.ado
+f c\coefplot.sthlp
 e

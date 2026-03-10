@@ -49,7 +49,6 @@
 
 	graph export "${output_dir}/fig1_hist_edad.png", replace
 
-	graph box q4, title("Distribución de Edad") ytitle("Años")
 
 	*Residencia
 	* Definición de colores
@@ -119,7 +118,8 @@ twoway (hist ivs_score, width(0.05) color(gray%50) lcolor(white)) ///
     xtitle("Socioeconomic Vulnerability Index (0-1)", size(small)) ///
     ytitle("Density / Frequency", size(small)) ///
     legend(off) ///
-    graphregion(color(white)) plotregion(color(white))
+    graphregion(color(white)) plotregion(color(white)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig6_ivs_distribution_apa.png", replace
 
 
@@ -131,9 +131,10 @@ graph bar, over(ivs_cat) over(q3) stack asyvars percent ///
     bar(2, color("167 169 172%80")) /// Medium: Gris
     bar(3, color("245 130 48%80")) /// High: Naranja
     ytitle("Percentage (%)", size(small)) ///
-    legend(title("SVI Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
-    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig7_ivs_by_city.png", replace
 
 
@@ -143,9 +144,10 @@ graph bar, over(ivs_cat) over(age_cat) stack asyvars percent ///
     bar(2, color("167 169 172%80")) /// 
     bar(3, color("245 130 48%80")) /// 
     ytitle("Percentage (%)", size(small)) ///
-    legend(title("SVI Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("IVS Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
-    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall)) ///
+	scheme(plotplain)
 
 graph export "${output_dir}/fig8_ivs_by_age.png", replace
 
@@ -159,11 +161,15 @@ graph bar, over(q3_1) over(q3_5) stack asyvars percent ///
     bar(2, color("167 169 172")) /// Basic (Gris)
     bar(3, color("245 130 48")) /// No phone (Naranja)
     ytitle("Percentage (%)") ///
-    b1title("Internet usage frequency") /// <--- Esta es la opción correcta
-    legend(title("Device type", size(small)) position(3) cols(1) size(vsmall)) ///
+    b1title("Internet usage frequency") ///
+    legend(title("Device type", size(small)) position(3) cols(1) size(small) ///
+        region(lcolor(gs12) lwidth(vthin))) /// 
     graphregion(color(white)) plotregion(color(white)) ///
-    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall)) ///
+    scheme(plotplain)
 graph export "${output_dir}/fig9_iat_phone_internet.png", replace
+
+
 
 *Data Stability
 label define q3_8_lab 1 "Yes, multiple times" 2 "Yes, once" 3 "No" 99 "N/A"
@@ -176,8 +182,10 @@ graph pie, over(q3_8) ///
     pie(4, color("160 160 160")) ///
     pie(5, color("120 200 80")) ///
     plabel(_all percent, size(medium) color(white) format(%2.1f)) ///
-    legend(cols(1) position(3) size(big)) ///
-    graphregion(color(white))
+    legend(cols(1) position(3) size(big) ///
+        region(lcolor(gs12) lwidth(vthin))) /// 
+    graphregion(color(white)) ///
+    scheme(plotplain)
 graph export "${output_dir}/fig10_data_stability.png", replace
 
 
@@ -199,7 +207,8 @@ graph bar (percent), over(q3_16, label(labsize(medium))) ///
     ylabel(, labsize(medium)) ///
     graphregion(color(white)) /// 
     blabel(bar, format(%2.0f) size(medium) color(black)) ///
-    b1title("Level of Confidence", size(medium))
+    b1title("Level of Confidence", size(medium)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig11_sendmoney.png", replace
 
 * B. TABLA: Correlación IAT e IADT
@@ -212,7 +221,8 @@ graph bar iadt_score, over(iat_cat, label(labsize(medium))) ///
     ylabel(0(0.2)1, labsize(medium)) ///
     graphregion(color(white)) ///
     blabel(bar, format(%4.2f) size(medium)) ///
-    b1title("Level of Digital Access (IAT)", size(medium))
+    b1title("Level of Digital Access (IAT)", size(medium)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig12_iat_iadt.png", replace
 
 
@@ -224,29 +234,31 @@ graph export "${output_dir}/fig12_iat_iadt.png", replace
 * Prevalence of QR Code Usage (q3_20)
 label define qr_en 1 "Only to pay" 2 "Only to receive" 3 "To pay and receive" 4 "Does not use QR"
 label values q3_20 qr_en
+
 graph bar (percent), over(q3_20, label(labsize(medium))) ///
     bar(1, color("58 103 177")) ///
     ytitle("Percentage (%)", size(medium)) ///
     ylabel(, labsize(medium)) ///
     graphregion(color(white)) ///
     blabel(bar, format(%2.0f) size(medium) color(black)) ///
-    b1title("QR Code Usage Experience", size(medium))
-
+    b1title("QR Code Usage Experience", size(medium)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig13_qr.png", replace
 
 *ICDP by Age Category
 label define icdp_cat_en 1 "Low practical competence" 2 "Medium practical competence" 3 "High practical competence"
 label values icdp_cat icdp_cat_en
+
 graph bar, over(icdp_cat) over(age_cat) stack asyvars percent ///
     bar(1, color("245 130 48%80")) /// Rojo para Low
     bar(2, color("167 169 172%80")) /// Gris para Medium
     bar(3, color("58 103 177%80")) /// Azul para High
     ytitle("Percentage (%)", size(small)) ///
 	b1title("Age Category", size(small)) ///
-    legend(title("Competence Level", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("Practical competence level (ICDP)", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
-    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
-
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall)) ///
+	scheme(plotplain)
 graph export "${output_dir}/fig14_icdp_age.png", replace
 
 
@@ -259,22 +271,35 @@ label define edu_en 1 "No formal education" 2 "Primary (incomplete)" 3 "Primary 
 label values q2_2 edu_en
 
 * 2. Generate Horizontal Bar Chart of Means
-graph hbar icdp_score, over(q2_2, label(labsize(vsmall))) ///
-    bar(1, color("58 103 177%90")) /// Consistent Blue
-    ytitle("Mean Practical Digital Competence Index (ICDP)", size(small)) ///
-    ylabel(0(0.2)1, labsize(small)) ///
-    graphregion(color(white)) ///
-    blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
-    b1title("", size(small))
-
-graph export "${output_dir}/fig15_icdp_edu.png", replace
+preserve
+	drop if q2_2==1
+    statsby mean=r(mean) ub=r(ub) lb=r(lb), by(q2_2) clear: ci mean icdp_score
+    gen mean_lab = "  " + string(mean, "%4.2f")
+    
+    twoway ///
+        (bar mean q2_2, horizontal barwidth(0.7) color("58 103 177%85")) ///
+        (rcap lb ub q2_2, horizontal lcolor(gs10) lwidth(medium)) /// Ajustado de msize a medium
+        (scatter q2_2 ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), ///
+        xtitle("Mean Practical Digital Competence Index (ICDP)", size(small)) ///
+        xlabel(0(0.2)1, labsize(vsmall)) ///
+        ylabel(2 "Primary (incomplete)" 3 "Primary (complete)" ///
+               4 "Secondary (incomplete)" 5 "Secondary (complete)" 6 "Technical (incomplete)" ///
+               7 "Technical (complete)" 8 "University (incomplete)" 9 "University (complete)" ///
+               10 "Postgraduate/Master's", ///
+               labsize(vsmall) angle(0) nogrid) ///
+        yscale(reverse) /// 
+        legend(off) ///
+        graphregion(color(white)) ///
+        scheme(s2mono) // Cambiado a s2mono (estándar) ya que no tienes plotplain
+    
+    graph export "${output_dir}/fig15_icdp_edu.png", replace
+restore
 
 
 
 
 *3.4 Formal access constraints: documents, proof of address, phone registration, account ownership (Section C3) — IAFF
 
-* --- FIGURA 16: Account Ownership Rates ---
 label variable q4_12_1 "Bank Account"
 label variable q4_12_2 "Digital Wallet"
 label variable q4_12_3 "Cooperative"
@@ -292,19 +317,35 @@ label define product_lab ///
 2 "Digital Wallet" ///
 3 "Cooperative" ///
 4 "Fintech/EMI"
-
 label values product product_lab
 
-graph bar (count), over(product) ///
-    bar(1, color("58 103 177%90")) ///
-    ytitle("Number of Users (Count)", size(small)) ///
-    ylabel(, labsize(small)) ///
-    blabel(bar, format(%9.0f) size(vsmall) pos(outside)) ///
-    legend(off) ///
-    b1title("Financial Products", size(small)) ///
-    graphregion(color(white))
+preserve
+    * 1. Definir la base total
+    scalar total_base = 423
 
-graph export "${output_dir}/fig16_account_types.png", replace
+    * 2. Colapsar para contar
+    gen count = 1
+    collapse (sum) count, by(product)
+    drop if product == .
+
+    * 3. Calcular porcentaje y etiqueta
+    gen pct = (count / total_base) * 100
+    gen pct_lab = string(pct, "%2.1f") + "%"
+
+    * 4. Graficar (Capas: barras + etiquetas de texto)
+    twoway ///
+        (bar pct product, barwidth(0.6) color("58 103 177%90")) /// Capa 1: Barras
+        (scatter pct product, mlabel(pct_lab) mlabpos(12) mlabsize(vsmall) mcolor(none)), /// Capa 2: Texto
+        ytitle("Percentage (%)", size(small)) ///
+        ylabel(0(10)100, labsize(small) nogrid) ///
+        xlabel(1 "Bank Account" 2 "Digital Wallet" 3 "Cooperative" 4 "Fintech/EMI", labsize(small)) ///
+        xtitle("Financial Products", size(small)) ///
+        legend(off) ///
+        graphregion(color(white)) ///
+        scheme(s2color)
+
+    graph export "${output_dir}/fig16_account_types_pct.png", replace
+restore
 
 
 
@@ -318,24 +359,38 @@ graph bar, over(iaff_cat) over(years_cat) stack asyvars percent ///
     bar(3, color("58 103 177%80")) /// Azul para High
     ytitle("Percentage (%)", size(small)) ///
     b1title("Years of Residency in Colombia", size(small)) ///
-    legend(title("Access Level (IAFF)", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
+    legend(title("Formal financial access level (IAFF)", size(small)) position(3) cols(1) size(small) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
-    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall))
+    blabel(bar, pos(center) format(%2.0f) color(white) size(vsmall)) ///
+	scheme(plotplain)
     
 graph export "${output_dir}/fig17_iaff_time.png", replace
 
 
 *IAFF by Education
-drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
-graph hbar iaff_score, over(q2_2, label(labsize(vsmall))) ///
-    bar(1, color("58 103 177%90")) /// Consistent Blue
-    ytitle("Mean Practical Competence (0-1)", size(small)) ///
-    ylabel(0(0.2)1, labsize(small)) ///
-    graphregion(color(white)) ///
-    blabel(bar, format(%4.2f) size(vsmall) pos(outside)) /// Shows the mean value next to the bar
-    b1title("", size(small))
+*drop if q2_2==1 // Solo una persona sin nivel sesga el gráfico
 
-graph export "${output_dir}/fig18_iaff_edu.png", replace
+
+preserve
+drop if q2_2 == 1
+statsby mean=r(mean) ub=r(ub) lb=r(lb), by(q2_2) clear: ci mean iaff_score
+gen mean_lab = "  " + string(mean, "%4.2f")
+twoway (bar mean q2_2, horizontal barwidth(0.6) color("58 103 177%85")) ///
+       (rcap lb ub q2_2, horizontal lcolor(black) lwidth(medium)) ///
+       (scatter q2_2 ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), ///
+    xtitle("Formal Financial Access Index (IAFF)", size(small)) ///
+    xlabel(0(0.2)1, labsize(vsmall)) ///
+    ylabel(2 "Primary (incomplete)" 3 "Primary (complete)" 4 "Secondary (incomplete)" 5 "Secondary (complete)" ///
+           6 "Technical (incomplete)" 7 "Technical (complete)" 8 "University (incomplete)" 9 "University (complete)" ///
+           10 "Postgraduate", labsize(vsmall) angle(0)) ///
+	graphregion(color(white)) ///
+	yscale(reverse) ///
+    legend(off) ///
+    scheme(plotplain) 
+
+graph export "${output_dir}/fig18_iaff_edu_plain.png", replace
+restore
+
 
 *3.5 Usage and operability of financial tools (C3 continued) — IUOF
 
