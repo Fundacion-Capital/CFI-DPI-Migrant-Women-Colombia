@@ -1472,17 +1472,17 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 							  iuof_save iuof_notify iuof_risk)
 	label var iuof_score "Índice de Uso y Operatividad Financiera (0-100)"
 
-	gen iuof_score_01 = iuof_score/100
-	label var iuof_score_01 "IUOF normalizado (0-1)"
+	replace iuof_score = iuof_score/100
+	*label var iuof_score_01 "IUOF normalizado (0-1)"
 
 	egen iuof_score_std = std(iuof_score)
 	label var iuof_score_std "IUOF estandarizado"
 
 	* Categorización
 	gen iuof_cat = .
-	replace iuof_cat = 1 if iuof_score < 40
-	replace iuof_cat = 2 if iuof_score >= 40 & iuof_score < 70
-	replace iuof_cat = 3 if iuof_score >= 70
+	replace iuof_cat = 1 if iuof_score < 0.5
+	replace iuof_cat = 2 if iuof_score >= 0.5 & iuof_score < 0.8
+	replace iuof_cat = 3 if iuof_score >= 0.8
 
 	label define iuof_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values iuof_cat iuof_cat_lbl

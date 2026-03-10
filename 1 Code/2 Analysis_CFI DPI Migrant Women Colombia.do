@@ -333,7 +333,7 @@ preserve
         xtitle("Financial Products", size(small)) ///
         legend(off) ///
         graphregion(color(white)) ///
-        scheme(s2color)
+        scheme(plotplain)
 
     graph export "${output_dir}/fig16_account_types_pct.png", replace
 restore
@@ -381,17 +381,64 @@ restore
 
 
 
-*3.5 Usage and operability of financial tools (C3 continued) — IUOF
+*3.5 Usage and operability of financial tool — IUOF
 
-*3.6 Awareness and usage of payment rails + onboarding experience (Section C4)
 
-*3.7 Remittances: channels, formalization, intensity, and user experience (Section D) — IURD & IETR
+* Crear terciles de IAFF (Acceso) para el cruce
+xtile iaff_tercile = iaff_score, n(3)
+label define iaff_terc_lbl 1 "Low Access" 2 "Medium Access" 3 "High Access"
+label values iaff_tercile iaff_terc_lbl
 
-*3.8 Fraud, safety behaviors, and recourse (Section E) — IPCS & IEDF
+* --- Gráfico 1: Distribución del IUOF (Score) ---
+* Distribution of Financial Usage Score (IUOF)
+twoway (hist iuof_score_01, width(0.05) start(0) color("120 120 120%60") lcolor(white)) ///
+       (kdensity iuof_score_01, lcolor("58 103 177") lwidth(medium)), ///
+    title("", size(medium)) ///
+    xtitle("Index Score (0-1)", size(small)) ///
+    ytitle("Density", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    legend(off) ///
+    graphregion(color(white)) scheme(plotplain)
+graph export "${output_dir}/fig19_iuof_distrib.png", replace
 
-*3.9 Trust, autonomy, and social norms (Section F) — IAER & ICPF
 
-*3.10 Barriers, enabling environment, and program exposure (Section G) — IEH & IBPD
+
+* --- Gráfico 2: IUOF por Terciles de IAFF (Cruce solicitado) ---
+*Financial Usage (IUOF) by Access Terciles (IAFF)
+
+* 1. Definir etiquetas en inglés con los rangos definidos en tu código
+label define iaff_eng 1 "Low Access (<0.5)" 2 "Mid Access (0.5-0.8)" 3 "High Access (>0.8)", replace
+label values iaff_cat iaff_eng
+
+label define iuof_eng 1 "Low Usage (<0.5)" 2 "Mid Usage (0.5-0.8)" 3 "High Usage (>0.8)", replace
+label values iuof_cat iuof_eng
+
+* 2. Generar el gráfico de barras apiladas
+*Financial Usage (IUOF) by Access Level (IAFF)
+graph bar, over(iuof_cat) over(iaff_cat, label(labsize(vsmall))) asyvars stack ///
+    percent ///
+    bar(1, color("210 210 210")) bar(2, color("150 150 150")) bar(3, color("58 103 177")) ///
+    blabel(bar, pos(center) format(%4.0f) color(white) size(1.8)) ///
+    title("", size(medium)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    legend(title("IUOF Score", size(vsmall)) pos(3) cols(1) size(vsmall) region(lcolor(gs12))) ///
+    graphregion(color(white)) ///
+    plotregion(lcolor(gs12) lwidth(thin) margin(medium)) /// 
+    scheme(plotplain)
+
+graph export "${output_dir}/fig20_iuof_iaff_final.png", replace
+
+*3.6 Awareness and usage of payment rails + onboarding experience
+
+
+*3.7 Remittances: channels, formalization, intensity, and user experience — IURD & IETR
+
+*3.8 Fraud, safety behaviors, and recourse — IPCS & IEDF
+
+
+*3.9 Trust, autonomy, and social norms — IAER & ICPF
+
+*3.10 Barriers, enabling environment, and program exposure — IEH & IBPD
 
 
 
