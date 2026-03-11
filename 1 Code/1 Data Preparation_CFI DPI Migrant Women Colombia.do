@@ -1125,11 +1125,11 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 *		IV. Construct variables for analysis		*
 *---------------------------------------------------*
 
-	*****************************************************
-	* SECCIÓN B – Índice de Vulnerabilidad Socioeconómica
-	*****************************************************
+* =====================================================
+* 2.3 Índice de Vulnerabilidad Socioeconómica (IVS)
+* =====================================================
 	
-	* 1. Antiguedad migratoria 
+	* Antiguedad migratoria 
 
 	egen max_years = max(years_in_col)
 	gen antig_norm = (r(max) - years_in_col) / (r(max) - r(min))
@@ -1137,7 +1137,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	drop max_years
 
-	* 2. Educación
+	* Nivel educativo
 	gen educ_norm = .
 	replace educ_norm = 1.00 if q2_2 == 1   // Sin estudios
 	replace educ_norm = 0.89 if q2_2 == 2
@@ -1149,10 +1149,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace educ_norm = 0.22 if q2_2 == 8
 	replace educ_norm = 0.11 if q2_2 == 9
 	replace educ_norm = 0.00 if q2_2 == 10
-
 	label var educ_norm "Nivel educativo normalizado (0-1)"
 
-	* 3. Inserción laboral
+	* Inserción laboral
 	gen ocup_norm = .
 	replace ocup_norm = 0   if inlist(q2_3, 1, 3)
 	replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 6, 9)
@@ -1160,11 +1159,11 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	label var ocup_norm "Inserción laboral normalizada (0-1)"
 
-	* 4. Índice agregado
+	* Indice agregado
 	egen ivs_score = rowmean(antig_norm educ_norm ocup_norm)
 	label var ivs_score "Índice de Vulnerabilidad Socioeconómica (0-1)"
 
-	* 5. Versión estandarizada (para regresión)
+	* Versión estandarizada (para regresión)
 	egen ivs_score_std = std(ivs_score)
 	label var ivs_score_std "IVS estandarizado (media 0, sd 1)"
 
@@ -1184,9 +1183,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-* =====================================================
-* C0. ÍNDICE DE ACCESO A TELECOMUNICACIONES (IAT)
-* =====================================================
+* ============================================================
+* 3.1 ÍNDICE DE ACCESO A TELECOMUNICACIONES (IAT) - Section 0
+* ============================================================
 
 
 	* 1. Phone type (q3_1)
@@ -1249,9 +1248,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-* =====================================================
-* C1 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT)
-* =====================================================
+* ======================================================================
+* 3.2 ÍNDICE DE AUTOEFICACIA DIGITAL TRANSACCIONAL (IADT) - Section C1
+* ======================================================================
 
 	* 1. Limpieza de valores inválidos (si existieran)
 	recode q3_15 q3_16 q3_17 (98=.) (99=.)
@@ -1289,9 +1288,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var iadt_cat "Nivel de autoeficacia digital percibida"
 
 
-* =====================================================
-* C2 ÍNDICE DE COMPETENCIA DIGITAL PRÁCTICA (ICDP)
-* =====================================================
+* ===============================================================
+* 3.3 ÍNDICE DE COMPETENCIA DIGITAL PRÁCTICA (ICDP) - Section C2
+* ===============================================================
 
 
 	* 1. Uso de códigos QR (q3_20)
@@ -1348,9 +1347,10 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var icdp_cat "Nivel de competencia digital práctica"
 
 
-* =====================================================
-* C3 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF)
-* =====================================================
+
+* ============================================================
+* 3.4 ÍNDICE DE ACCESO FINANCIERO FORMAL (IAFF) - Section C3
+* ============================================================
 
 	* 1. Documento válido para KYC – q4_1_*
 	gen iaff_doc = 0
@@ -1411,9 +1411,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-* =====================================================
-* C3.2 ÍNDICE DE USO Y OPERATIVIDAD FINANCIERA (IUOF)
-* =====================================================
+* ==========================================================================
+* 3.5 ÍNDICE DE USO Y OPERATIVIDAD FINANCIERA (IUOF) - Section C3 continued
+* ==========================================================================
 
 	* (A) Frecuencia de uso – q4_15
 	gen iuof_freq = .
@@ -1490,36 +1490,18 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-
 * =====================================================
-* C4.1 ÍNDICE DE FRICCIÓN DE ONBOARDING (IFO)
+* 3.6 ÍNDICE DE FRICCIÓN DE ONBOARDING (IFO) - Section C4
 * =====================================================
 
-	* (A) Facilidad del registro – q5_14
-	gen ifo_easy = .
-	replace ifo_easy = 100 if q5_14==1
-	replace ifo_easy = 75  if q5_14==2
-	replace ifo_easy = 25  if q5_14==3
-	replace ifo_easy = 0   if q5_14==4 | q5_14==98
-	label var ifo_easy "Facilidad percibida del registro (0-100)"
+*Agregar
+*q5_1
+*q5_2
+*q5_4
+*q5_11
+*q5_12
 
-	* (B) Tiempo hasta activación – q5_15
-	gen ifo_time = .
-	replace ifo_time = 100 if q5_15==1
-	replace ifo_time = 80  if q5_15==2
-	replace ifo_time = 60  if q5_15==3
-	replace ifo_time = 30  if q5_15==4
-	replace ifo_time = 0   if q5_15==5 | q5_15==98
-	label var ifo_time "Rapidez de activación de la cuenta (0-100)"
-
-	* (C) Registro sin ayuda – q5_16
-
-	gen ifo_help = .
-	replace ifo_help = 100 if q5_16==0
-	replace ifo_help = 0  if q5_16==1 | q5_16==98 
-	label var ifo_help "Registro sin necesidad de ayuda (0-100)"
-
-	* (D) Requisitos KYC (menos = mejor) – q5_13_*
+    * Requisitos KYC (menos = mejor) – q5_13_*
 	egen kyc_count = rowtotal(q5_13_1 q5_13_2 q5_13_3 q5_13_4 q5_13_5 q5_13_6)
 	gen ifo_kyc = .
 	replace ifo_kyc = 100 if kyc_count<=2
@@ -1528,13 +1510,37 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ifo_kyc = 0   if kyc_count>=5
 	label var ifo_kyc "Baja carga de requisitos KYC (0-100)"
 
-	* (E) Documento aceptado sin problemas – q5_25
-	gen ifo_doc = .
-	replace ifo_doc = 100 if q5_25==1
-	replace ifo_doc = 0   if q5_25==2 | q5_25==98 | q5_25==99
-	label var ifo_doc "Documento aceptado sin objeciones (0-100)"
 
-	* (F) Claridad de costos – q5_7
+	* Facilidad del registro – q5_14
+	gen ifo_easy = .
+	replace ifo_easy = 100 if q5_14==1
+	replace ifo_easy = 75  if q5_14==2
+	replace ifo_easy = 25  if q5_14==3
+	replace ifo_easy = 0   if q5_14==4 | q5_14==98
+	label var ifo_easy "Facilidad percibida del registro (0-100)"
+
+	* Tiempo hasta activación – q5_15
+	gen ifo_time = .
+	replace ifo_time = 100 if q5_15==1
+	replace ifo_time = 80  if q5_15==2
+	replace ifo_time = 60  if q5_15==3
+	replace ifo_time = 30  if q5_15==4
+	replace ifo_time = 0   if q5_15==5 | q5_15==98
+	label var ifo_time "Rapidez de activación de la cuenta (0-100)"
+
+	* Registro sin ayuda – q5_16
+	gen ifo_help = .
+	replace ifo_help = 100 if q5_16==0
+	replace ifo_help = 0  if q5_16==1 | q5_16==98 
+	label var ifo_help "Registro sin necesidad de ayuda (0-100)"
+
+	* Confirmación de transferencia – q5_5
+	gen ifo_confirm = .
+	replace ifo_confirm = 100 if inlist(q5_5,1,2,3)
+	replace ifo_confirm = 0   if q5_5==4 | q5_5==98
+	label var ifo_confirm "Confirmación de transacción recibida (0-100)"
+
+	* Claridad de costos – q5_7
 	gen ifo_cost = .
 	replace ifo_cost = 100 if q5_7==1
 	replace ifo_cost = 70  if q5_7==2
@@ -1542,34 +1548,30 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ifo_cost = 0   if q5_7==4 | q5_7==98
 	label var ifo_cost "Costos visibles y claros (0-100)"
 
-	* (G) Confirmación de transferencia – q5_5
-	gen ifo_confirm = .
-	replace ifo_confirm = 100 if inlist(q5_5,1,2,3)
-	replace ifo_confirm = 0   if q5_5==4 | q5_5==98
-	label var ifo_confirm "Confirmación de transacción recibida (0-100)"
-
-	* (H) Sin fallos o reversos – q5_9
+	* Sin fallos o reversos – q5_9
 	gen ifo_fail = .
 	replace ifo_fail = 100 if q5_9==3
 	replace ifo_fail = 50  if q5_9==1
 	replace ifo_fail = 0   if q5_9==2 | q5_9 ==98
 	label var ifo_fail "Ausencia de fallos o reversos (0-100)"
 
-	* (I) Términos y privacidad claros – q5_21 y q5_22
+	* Términos y privacidad claros – q5_21 y q5_22
 	gen ifo_terms = .
 	replace ifo_terms = 100 if q5_21==1 & q5_22==1
 	replace ifo_terms = 50  if inlist(q5_21,2) & inlist(q5_22,2)
 	replace ifo_terms = 0   if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98
 	label var ifo_terms "Términos y privacidad claros (0-100)"
 
-	* (J) Asistencia durante registro – q5_23
+	* Asistencia durante registro – q5_23
 	gen ifo_support = .
 	replace ifo_support = 100 if q5_23==1
 	replace ifo_support = 50  if q5_23==2
 	replace ifo_support = 0   if q5_23==3 | q5_23==98
 	label var ifo_support "Asistencia durante registro (0-100)"
 
-	* (K) Índice final IFO
+
+
+	* Índice final IFO
 	egen ifo_score = rowmean(ifo_easy ifo_time ifo_help ifo_kyc ///
 							 ifo_doc ifo_cost ifo_confirm ifo_fail ///
 							 ifo_terms ifo_support)
@@ -1592,18 +1594,35 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 							 3 "Baja fricción / Buen onboarding"
 	label values ifo_cat ifo_cat_lbl
 	label var ifo_cat "Categoría IFO"
-
-
 	drop kyc_count
 
 
 
 
-/******************************************************************
-D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
-******************************************************************/
 
-	* (A) Frecuencia de remesas del exterior – q6_2
+/******************************************************************************
+3.7 Remesas: canales, formalización, intensidad y experiencia del usuario 
+    (IURD & IETR) - Section D           
+*******************************************************************************/
+
+*Agregar
+*q6_4
+*q6_5
+*q6_7
+*q6_12
+*q6_22
+*q6_23
+
+
+
+* ==========================================================================
+* 3.7 ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD) - Section D
+* ==========================================================================
+
+
+
+
+	* Frecuencia de remesas del exterior – q6_2
 	gen iurd_freq = .
 	replace iurd_freq = 100 if q6_2==1
 	replace iurd_freq = 75  if q6_2==2
@@ -1611,22 +1630,7 @@ D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
 	replace iurd_freq = 0   if q6_2==99
 	label var iurd_freq "Frecuencia de recepción de remesas (0-100)"
 
-	* (B) Uso reciente de pagos/remesas digitales – q6_14
-	gen iurd_recent = .
-	replace iurd_recent = 100 if q6_14==1
-	replace iurd_recent = 0   if q6_14==0 | q6_14==98
-	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
-
-	* (C) Número de operaciones digitales – q6_15
-	gen iurd_ops = .
-	replace iurd_ops = 20  if q6_15==1 | q6_15==98
-	replace iurd_ops = 40  if q6_15==2
-	replace iurd_ops = 60  if q6_15==3
-	replace iurd_ops = 80  if q6_15==4
-	replace iurd_ops = 100 if q6_15==5
-	label var iurd_ops "Volumen de operaciones digitales (0-100)"
-
-	* (D) Proporción digital de la remesa – q6_13
+	* Proporción digital de la remesa – q6_13
 	gen iurd_digital = .
 	replace iurd_digital = 0   if q6_13==1
 	replace iurd_digital = 25  if q6_13==2
@@ -1635,7 +1639,23 @@ D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
 	replace iurd_digital = 100 if q6_13==5
 	label var iurd_digital "Proporción de remesa usada digitalmente (0-100)"
 
-	* (E) Índice final IURD
+	* Uso reciente de pagos/remesas digitales – q6_14
+	gen iurd_recent = .
+	replace iurd_recent = 100 if q6_14==1
+	replace iurd_recent = 0   if q6_14==0 | q6_14==98
+	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
+
+	* Número de operaciones digitales – q6_15
+	gen iurd_ops = .
+	replace iurd_ops = 20  if q6_15==1 | q6_15==98
+	replace iurd_ops = 40  if q6_15==2
+	replace iurd_ops = 60  if q6_15==3
+	replace iurd_ops = 80  if q6_15==4
+	replace iurd_ops = 100 if q6_15==5
+	label var iurd_ops "Volumen de operaciones digitales (0-100)"
+
+
+	* Índice final IURD
 	egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital)
 	label var iurd_score "Índice de Intensidad de Uso de Remesas Digitales (0-100)"
 
@@ -1659,9 +1679,12 @@ D1. ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
 
 
 
-/******************************************************************
-D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
-******************************************************************/
+* ===============================================================================
+* 3.7 ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR) - Section D continued
+* ===============================================================================
+
+
+
 
 	* (A) Tiempo para usar la remesa – q6_6
 	gen ietr_time = .
@@ -1672,6 +1695,7 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	replace ietr_time = 0   if q6_6==5 | q6_6==98
 	label var ietr_time "Rapidez de acreditación de remesa (0-100)"
 
+
 	* (B) Claridad de comisiones y tipo de cambio – q6_9 y q6_18
 	gen ietr_cost = .
 	replace ietr_cost = 100 if q6_9==1 & q6_18==1
@@ -1679,6 +1703,7 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	replace ietr_cost = 25   if q6_9>=3 | q6_18==3
 	replace ietr_cost = 0   if q6_9>=3 | q6_18==3 | q6_9==99 | q6_18==98
 	label var ietr_cost "Claridad de costos y tipo de cambio (0-100)"
+
 
 	* (C) Confirmaciones recibidas – q6_11 y q6_20
 	gen ietr_confirm = .
@@ -1744,9 +1769,25 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 	label var ietr_cat "Categoría IETR"
 
 
-* ---------------------------------------------------------
-* E1. Índice de Prevención y Conducta Segura (IPCS)
-* ---------------------------------------------------------
+/******************************************************************************
+3.8 Fraude, conductas de seguridad y recurso   
+    (IPCS & IEDF) - Section E           
+*******************************************************************************/
+
+*Agregar
+*q7_12
+*q7_15
+*q7_16
+*q7_17
+*q7_18
+*q7_19
+*q7_20
+*q7_21
+
+* ==========================================================================
+* 3.8 Índice de Prevención y Conducta Segura (IPCS) - Section E
+* ==========================================================================
+
 
 	* Reacción ante mensaje sospechoso (q7_2)
 	gen e1_reaccion_segura = .
@@ -1802,17 +1843,10 @@ D2. ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR)
 
 
 
-* ---------------------------------------------------------
-* E2. Índice de Exposición y Daño por Fraude (IEDF)
-* ---------------------------------------------------------
-/*Experiencia en interacción: q7_15
-q7_16
-q7_17
-q7_18
-q7_19
-q7_20
-q7_21
-*/
+* ==========================================================================
+* 3.8 Índice de Exposición y Daño por Fraude (IEDF) - Section E continued
+* ==========================================================================
+
 
 	* Exposición a mensajes sospechosos (q7_1)
 	gen e2_exposicion = .
@@ -1832,17 +1866,19 @@ q7_21
 	replace e2_problema = 0 if q7_11==2 | q7_11==98
 	label var e2_problema "Tuvo problemas con pagos/remesas digitales"
 
+	* Demora en respuesta (q7_13)
+	gen e2_demora = .
+	replace e2_demora = 1 if inlist(q7_13,3,4,5)
+	replace e2_demora = 0 if inlist(q7_13,1,2)
+	label var e2_demora "Demora en respuesta al reclamo"
+
 	* Problema no resuelto (q7_14)
 	gen e2_no_resuelto = .
 	replace e2_no_resuelto = 1 if inlist(q7_14,2,3)
 	replace e2_no_resuelto = 0 if q7_14==1
 	label var e2_no_resuelto "Problema no resuelto completamente"
 
-	* Demora en respuesta (q7_13)
-	gen e2_demora = .
-	replace e2_demora = 1 if inlist(q7_13,3,4,5)
-	replace e2_demora = 0 if inlist(q7_13,1,2)
-	label var e2_demora "Demora en respuesta al reclamo"
+
 
 	* IEDF: promedio y normalización 0–100
 	egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema ///
@@ -1862,13 +1898,21 @@ q7_21
 
 
 
-* =========================================================
-* F. CONFIANZA, AUTONOMÍA Y NORMAS SOCIALES
-* =========================================================
 
-* ---------------------------------------------------------
-* F1. Índice de Autonomía Económica en Remesas (IAER)
-* ---------------------------------------------------------
+/******************************************************************************
+3.9 CONFIANZA, AUTONOMÍA Y NORMAS SOCIALES  
+    (IAER & ICPF) - Section F           
+*******************************************************************************/
+*Agregar
+*q9_8
+*q9_16
+*q9_17*
+*q9_21
+
+
+* ==========================================================================
+* 3.9 Índice de Autonomía Económica en Remesas (IAER) - Section F 
+* ==========================================================================
 
 	* Decide uso de remesas (q9_4)
 	gen f1_decide_remesa = .
@@ -1949,19 +1993,13 @@ q7_21
 	label values IAER_cat IAER_cat_lbl
 	label var IAER_cat "Categoría IAER"
 
-/*
-pca f1_decide_remesa f1_administra f1_ahorro_negocio ///
-							f1_control f1_cuenta_propia ///
-							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
-							f1_no_evito,comp(3)
-rotate, varimax blanks(.1)
-estat kmo
-screeplot
-*/
 
-* ---------------------------------------------------------
-* F2. Índice de Confianza en Proveedores Financieros (ICPF)
-* ---------------------------------------------------------
+
+
+
+* ==============================================================================
+* 3.9 Índice de Confianza en Proveedores Financieros (ICPF) - Sectio F continued
+* ==============================================================================
 
 	* Confianza en proveedor (q9_1)
 	gen f2_confianza = .
@@ -1998,13 +2036,22 @@ screeplot
 
 
 
-* =========================================================
-* G. BARRERAS, HABILITADORES Y PROGRAMAS
-* =========================================================
 
-* ---------------------------------------------------------
-* G1. Índice de Entorno Habilitante (IEH)
-* ---------------------------------------------------------
+/******************************************************************************
+3.10 BARRERAS, HABILITADORES Y PROGRAMAS
+    (IEH & IBPD) - Section G           
+*******************************************************************************/
+
+*Agregar
+*q10_3*
+*q10_5
+*q10_11
+*q10_14
+*q10_17
+
+* ==============================================================================
+* 3.10 Índice de Entorno Habilitante (IEH) - Section G
+* ==============================================================================
 
 	* Información sobre comisiones, tipo de cambio y reclamos (q10_4)
 	gen g1_info = .
@@ -2058,9 +2105,11 @@ screeplot
 	label values IEH_cat IEH_cat_lbl
 	label var IEH_cat "Categoría IEH"
 
-* ---------------------------------------------------------
-* G2. Índice de Barreras Percibidas a la Digitalización (IBPD)
-* ---------------------------------------------------------
+
+
+* ==============================================================================
+* 3.10 Índice de Barreras Percibidas a la Digitalización (IBPD) - Section G continued
+* ==============================================================================
 
 	* Barrera principal declarada (q10_1)
 	gen g2_barrera_principal = .
@@ -2109,6 +2158,20 @@ screeplot
 	label define IBPD_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IBPD_cat IBPD_cat_lbl
 	label var IBPD_cat "Categoría IBPD"
+
+
+/*
+
+*Prueva pca
+pca f1_decide_remesa f1_administra f1_ahorro_negocio ///
+							f1_control f1_cuenta_propia ///
+							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
+							f1_no_evito,comp(3)
+rotate, varimax blanks(.1)
+estat kmo
+screeplot
+*/
+
 
 
 
