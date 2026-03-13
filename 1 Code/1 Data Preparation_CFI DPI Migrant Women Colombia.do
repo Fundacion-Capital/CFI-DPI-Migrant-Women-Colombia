@@ -1490,110 +1490,126 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-* =====================================================
-* 3.6 ÍNDICE DE FRICCIÓN DE ONBOARDING (IFO) - Section C4
-* =====================================================
+* =========================================================================
+* 3.6 AWARENESS AND USAGE OF PAYMENT RAILS + ONBOARDING QUALITY INDEX (OQI)
+* =========================================================================
 
-*Agregar
-*q5_1
-*q5_2
-*q5_4
-*q5_11
-*q5_12
+	* -------------------------------------------------------------------------
+	* PARTE A: "Rails" awareness/usage (Insumo para la Figura solicitada)
+	* -------------------------------------------------------------------------
 
-    * Requisitos KYC (menos = mejor) – q5_13_*
+
+	* Uso de QR en los últimos 30 días – q5_4
+	gen qr_usage = .
+	replace qr_usage = 1 if q5_4 == 1
+	replace qr_usage = 0 if q5_4 == 0
+	label var qr_usage "Usó código QR en los últimos 30 días"
+
+	* -------------------------------------------------------------------------
+	* PARTE B: Onboarding Descriptive (Descriptivas, no entran al índice)
+	* -------------------------------------------------------------------------
+	* q5_11: How created account (App, sucursal, etc.) - Se usa directo en tabulados
+	* q5_12: Main key/identifier (Celular, cédula, etc.) - Se usa directo en tabulados
+
+	* -------------------------------------------------------------------------
+	* PARTE C: Onboarding Quality Index (OQI - Antes IFO)
+	* (Nota del jefe: "higher = better onboarding performance")
+	* -------------------------------------------------------------------------
+
+	* 1. Requisitos KYC (menos = mejor) – q5_13_*
 	egen kyc_count = rowtotal(q5_13_1 q5_13_2 q5_13_3 q5_13_4 q5_13_5 q5_13_6)
-	gen ifo_kyc = .
-	replace ifo_kyc = 100 if kyc_count<=2
-	replace ifo_kyc = 70  if kyc_count==3
-	replace ifo_kyc = 40  if kyc_count==4
-	replace ifo_kyc = 0   if kyc_count>=5
-	label var ifo_kyc "Baja carga de requisitos KYC (0-100)"
+	gen oqi_kyc = .
+	replace oqi_kyc = 100 if kyc_count<=2
+	replace oqi_kyc = 70  if kyc_count==3
+	replace oqi_kyc = 40  if kyc_count==4
+	replace oqi_kyc = 0   if kyc_count>=5
+	label var oqi_kyc "Baja carga de requisitos KYC (0-100)"
+
+	* 2. Facilidad del registro – q5_14
+	gen oqi_easy = .
+	replace oqi_easy = 100 if q5_14==1
+	replace oqi_easy = 75  if q5_14==2
+	replace oqi_easy = 25  if q5_14==3
+	replace oqi_easy = 0   if q5_14==4 | q5_14==98
+	label var oqi_easy "Facilidad percibida del registro (0-100)"
+
+	* 3. Tiempo hasta activación – q5_15
+	gen oqi_time = .
+	replace oqi_time = 100 if q5_15==1
+	replace oqi_time = 80  if q5_15==2
+	replace oqi_time = 60  if q5_15==3
+	replace oqi_time = 30  if q5_15==4
+	replace oqi_time = 0   if q5_15==5 | q5_15==98
+	label var oqi_time "Rapidez de activación de la cuenta (0-100)"
+
+	* 4. Registro sin ayuda – q5_16
+	gen oqi_help = .
+	replace oqi_help = 100 if q5_16==0
+	replace oqi_help = 0   if q5_16==1 | q5_16==98 
+	label var oqi_help "Registro sin necesidad de ayuda (0-100)"
+
+	* 5. Confirmación de transferencia – q5_5
+	gen oqi_confirm = .
+	replace oqi_confirm = 100 if inlist(q5_5,1,2,3)
+	replace oqi_confirm = 0   if q5_5==4 | q5_5==98
+	label var oqi_confirm "Confirmación de transacción recibida (0-100)"
+
+	* 6. Claridad de costos – q5_7
+	gen oqi_cost = .
+	replace oqi_cost = 100 if q5_7==1
+	replace oqi_cost = 70  if q5_7==2
+	replace oqi_cost = 30  if q5_7==3
+	replace oqi_cost = 0   if q5_7==4 | q5_7==98
+	label var oqi_cost "Costos visibles y claros (0-100)"
+
+	* 7. Sin fallos o reversos – q5_9
+	gen oqi_fail = .
+	replace oqi_fail = 100 if q5_9==3
+	replace oqi_fail = 50  if q5_9==1
+	replace oqi_fail = 0   if q5_9==2 | q5_9 ==98
+	label var oqi_fail "Ausencia de fallos o reversos (0-100)"
+
+	* 8. Términos y privacidad claros – q5_21 y q5_22
+	gen oqi_terms = .
+	replace oqi_terms = 100 if q5_21==1 & q5_22==1
+	replace oqi_terms = 50  if inlist(q5_21,2) & inlist(q5_22,2)
+	replace oqi_terms = 0   if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98
+	label var oqi_terms "Términos y privacidad claros (0-100)"
+
+	* 9. Asistencia durante registro – q5_23
+	gen oqi_support = .
+	replace oqi_support = 100 if q5_23==1
+	replace oqi_support = 50  if q5_23==2
+	replace oqi_support = 0   if q5_23==3 | q5_23==98
+	label var oqi_support "Asistencia durante registro (0-100)"
 
 
-	* Facilidad del registro – q5_14
-	gen ifo_easy = .
-	replace ifo_easy = 100 if q5_14==1
-	replace ifo_easy = 75  if q5_14==2
-	replace ifo_easy = 25  if q5_14==3
-	replace ifo_easy = 0   if q5_14==4 | q5_14==98
-	label var ifo_easy "Facilidad percibida del registro (0-100)"
+	* =========================================================================
+	* CÁLCULO DEL ÍNDICE FINAL (OQI)
+	* =========================================================================
+	egen oqi_score = rowmean(oqi_easy oqi_time oqi_help oqi_kyc ///
+							 oqi_cost oqi_confirm oqi_fail ///
+							 oqi_terms oqi_support)
+	label var oqi_score "Onboarding Quality Index (0-100)"
 
-	* Tiempo hasta activación – q5_15
-	gen ifo_time = .
-	replace ifo_time = 100 if q5_15==1
-	replace ifo_time = 80  if q5_15==2
-	replace ifo_time = 60  if q5_15==3
-	replace ifo_time = 30  if q5_15==4
-	replace ifo_time = 0   if q5_15==5 | q5_15==98
-	label var ifo_time "Rapidez de activación de la cuenta (0-100)"
+	gen oqi_score_01 = oqi_score/100
+	label var oqi_score_01 "OQI normalizado (0-1)"
 
-	* Registro sin ayuda – q5_16
-	gen ifo_help = .
-	replace ifo_help = 100 if q5_16==0
-	replace ifo_help = 0  if q5_16==1 | q5_16==98 
-	label var ifo_help "Registro sin necesidad de ayuda (0-100)"
+	egen oqi_score_std = std(oqi_score)
+	label var oqi_score_std "OQI estandarizado"
 
-	* Confirmación de transferencia – q5_5
-	gen ifo_confirm = .
-	replace ifo_confirm = 100 if inlist(q5_5,1,2,3)
-	replace ifo_confirm = 0   if q5_5==4 | q5_5==98
-	label var ifo_confirm "Confirmación de transacción recibida (0-100)"
+	* Categorización del Índice
+	gen oqi_cat = .
+	replace oqi_cat = 1 if oqi_score < 40
+	replace oqi_cat = 2 if oqi_score >= 40 & oqi_score < 70
+	replace oqi_cat = 3 if oqi_score >= 70
 
-	* Claridad de costos – q5_7
-	gen ifo_cost = .
-	replace ifo_cost = 100 if q5_7==1
-	replace ifo_cost = 70  if q5_7==2
-	replace ifo_cost = 30  if q5_7==3
-	replace ifo_cost = 0   if q5_7==4 | q5_7==98
-	label var ifo_cost "Costos visibles y claros (0-100)"
+	label define oqi_cat_lbl 1 "Bajo desempeño / Alta fricción" ///
+							 2 "Desempeño medio" ///
+							 3 "Buen onboarding / Baja fricción"
+	label values oqi_cat oqi_cat_lbl
+	label var oqi_cat "Categoría OQI"
 
-	* Sin fallos o reversos – q5_9
-	gen ifo_fail = .
-	replace ifo_fail = 100 if q5_9==3
-	replace ifo_fail = 50  if q5_9==1
-	replace ifo_fail = 0   if q5_9==2 | q5_9 ==98
-	label var ifo_fail "Ausencia de fallos o reversos (0-100)"
-
-	* Términos y privacidad claros – q5_21 y q5_22
-	gen ifo_terms = .
-	replace ifo_terms = 100 if q5_21==1 & q5_22==1
-	replace ifo_terms = 50  if inlist(q5_21,2) & inlist(q5_22,2)
-	replace ifo_terms = 0   if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98
-	label var ifo_terms "Términos y privacidad claros (0-100)"
-
-	* Asistencia durante registro – q5_23
-	gen ifo_support = .
-	replace ifo_support = 100 if q5_23==1
-	replace ifo_support = 50  if q5_23==2
-	replace ifo_support = 0   if q5_23==3 | q5_23==98
-	label var ifo_support "Asistencia durante registro (0-100)"
-
-
-
-	* Índice final IFO
-	egen ifo_score = rowmean(ifo_easy ifo_time ifo_help ifo_kyc ///
-							 ifo_doc ifo_cost ifo_confirm ifo_fail ///
-							 ifo_terms ifo_support)
-	label var ifo_score "Índice de Fricción de Onboarding (0-100)"
-
-	gen ifo_score_01 = ifo_score/100
-	label var ifo_score_01 "IFO normalizado (0-1)"
-
-	egen ifo_score_std = std(ifo_score)
-	label var ifo_score_std "IFO estandarizado"
-
-	* Categorización
-	gen ifo_cat = .
-	replace ifo_cat = 1 if ifo_score < 40
-	replace ifo_cat = 2 if ifo_score >= 40 & ifo_score < 70
-	replace ifo_cat = 3 if ifo_score >= 70
-
-	label define ifo_cat_lbl 1 "Alto fricción / Bajo desempeño" ///
-							 2 "Fricción media" ///
-							 3 "Baja fricción / Buen onboarding"
-	label values ifo_cat ifo_cat_lbl
-	label var ifo_cat "Categoría IFO"
 	drop kyc_count
 
 

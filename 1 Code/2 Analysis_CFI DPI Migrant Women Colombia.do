@@ -417,7 +417,7 @@ label values iuof_cat iuof_eng
 *Financial Usage (IUOF) by Access Level (IAFF)
 graph bar, over(iuof_cat) over(iaff_cat, label(labsize(vsmall))) asyvars stack ///
     percent ///
-    bar(1, color("210 210 210")) bar(2, color("150 150 150")) bar(3, color("58 103 177")) ///
+    bar(1, color("245 130 48%80")) bar(2, color("167 169 172%80")) bar(3, color("58 103 177%80")) ///
     blabel(bar, pos(center) format(%4.0f) color(white) size(1.8)) ///
     title("", size(medium)) ///
     ytitle("Percentage (%)", size(small)) ///
@@ -426,15 +426,94 @@ graph bar, over(iuof_cat) over(iaff_cat, label(labsize(vsmall))) asyvars stack /
     plotregion(lcolor(gs12) lwidth(thin) margin(medium)) /// 
     scheme(plotplain)
 
-graph export "${output_dir}/fig20_iuof_iaff_final.png", replace
+graph export "${output_dir}/fig20_iuof_iaff.png", replace
 
 
 
 
 
 *3.6 Awareness and usage of payment rails + onboarding experience
-*Pendiente nuevo construir en prep
 
+* FIGURE: AWARENESS VS USAGE OF PAYMENT RAILS (q5_1 vs q5_2)
+preserve
+foreach var of varlist q5_1_1 q5_1_2 q5_1_3 q5_1_4 q5_2_1 q5_2_2 q5_2_3 q5_2_4 {
+    replace `var' = `var' * 100
+}
+
+* Colapsar para sacar la media (que equivale al %)
+collapse (mean) q5_1_1 q5_1_2 q5_1_3 q5_1_4 q5_2_1 q5_2_2 q5_2_3 q5_2_4
+
+* Reshape para poder graficar "Awareness" (q5_1_) y "Usage" (q5_2_) lado a lado
+gen id = 1
+reshape long q5_1_ q5_2_, i(id) j(rail)
+
+* Etiquetas de los rieles (Ajusta según tu choices.csv)
+label define rail_lab 1 "Bre-B" 2 "ACH" 3 "Redeban" 4 "Visionamos"
+label values rail rail_lab
+
+* Gráfico de barras agrupadas
+graph bar q5_1_ q5_2_, over(rail, label(labsize(small))) ///
+    bar(1, color("167 169 172%90")) /// Gris para Awareness
+    bar(2, color("58 103 177%90"))  /// Azul para Usage
+    blabel(bar, format(%2.1f) size(vsmall) pos(outside)) ///
+    legend(label(1 "Awareness (Heard of)") label(2 "Usage (Last 60 days)") ///
+           pos(6) rows(1) size(small) region(lcolor(none))) ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(0(20)100, labsize(small) nogrid) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig21_awareness_usage_rails.png", replace
+
+restore
+
+
+
+* FIGURE: OQI (IFO) MEAN BY IAFF CATEGORIES (WITH CONFIDENCE INTERVALS)
+preserve
+
+statsby mean=r(mean) ub=r(ub) lb=r(lb), by(iaff_cat) clear: ci mean oqi_score_01
+gen mean_lab = "  " + string(mean, "%4.2f")
+
+twoway (bar mean iaff_cat, horizontal barwidth(0.6) color("58 103 177%85")) /// Capa 1: Barras
+       (rcap lb ub iaff_cat, horizontal lcolor(black) lwidth(medium)) ///       Capa 2: Intervalo de confianza
+       (scatter iaff_cat ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), /// Capa 3: Etiquetas
+    xtitle("Onboarding Quality Index (IFO) (0-1)", size(small)) /// 
+    ytitle("Formal financial access level (IAFF)", size(small)) /// <--- TÍTULO DEL EJE Y EN INGLÉS
+    xlabel(0(0.2)1, labsize(vsmall)) ///
+    ylabel(1 "Low financial access" 2 "Medium financial access" 3 "High financial access", labsize(vsmall) angle(0)) ///
+    graphregion(color(white)) ///
+    yscale(reverse) ///
+    legend(off) ///
+    scheme(plotplain) 
+
+graph export "${output_dir}/fig22_oqi_by_iaff.png", replace
+
+restore
+
+
+
+
+* FIGURE: OQI (IFO) MEAN BY ICDP CATEGORIES (WITH CONFIDENCE INTERVALS)
+preserve
+statsby mean=r(mean) ub=r(ub) lb=r(lb), by(icdp_cat) clear: ci mean oqi_score_01
+gen mean_lab = "  " + string(mean, "%4.2f")
+
+* 3. Generar el gráfico
+twoway (bar mean icdp_cat, horizontal barwidth(0.6) color("58 103 177%85")) /// Capa 1: Barras
+       (rcap lb ub icdp_cat, horizontal lcolor(black) lwidth(medium)) ///       Capa 2: Intervalo de confianza
+       (scatter icdp_cat ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), /// Capa 3: Etiquetas
+    xtitle("Onboarding Quality Index (IFO) (0-1)", size(small)) ///
+    ytitle("Digital skills level (ICDP)", size(small)) /// <--- TÍTULO DEL EJE Y EN INGLÉS
+    xlabel(0(0.2)1, labsize(vsmall)) ///
+    ylabel(1 "Low digital skills" 2 "Medium digital skills" 3 "High digital skills", labsize(vsmall) angle(0)) /// Ajusta las etiquetas según tu base
+    graphregion(color(white)) ///
+    yscale(reverse) ///
+    legend(off) ///
+    scheme(plotplain) 
+
+graph export "${output_dir}/fig23_oqi_by_icdp.png", replace
+restore
 
 
 
