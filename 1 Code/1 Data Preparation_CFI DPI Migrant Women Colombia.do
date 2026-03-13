@@ -1600,9 +1600,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización del Índice
 	gen oqi_cat = .
-	replace oqi_cat = 1 if oqi_score < 40
-	replace oqi_cat = 2 if oqi_score >= 40 & oqi_score < 70
-	replace oqi_cat = 3 if oqi_score >= 70
+	replace oqi_cat = 1 if oqi_score < 45
+	replace oqi_cat = 2 if oqi_score >= 45 & oqi_score < 85
+	replace oqi_cat = 3 if oqi_score >= 85
 
 	label define oqi_cat_lbl 1 "Bajo desempeño / Alta fricción" ///
 							 2 "Desempeño medio" ///
@@ -1670,9 +1670,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización IURD
 	gen iurd_cat = .
-	replace iurd_cat = 1 if iurd_score < 40
-	replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70
-	replace iurd_cat = 3 if iurd_score >= 70
+	replace iurd_cat = 1 if iurd_score < 45
+	replace iurd_cat = 2 if iurd_score >= 45 & iurd_score < 85
+	replace iurd_cat = 3 if iurd_score >= 85
 	label define iurd_cat_lbl 1 "Baja intensidad" 2 "Intensidad media" 3 "Alta intensidad"
 	label values iurd_cat iurd_cat_lbl
 	label var iurd_cat "Categoría IURD"
@@ -1777,9 +1777,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización IETR
 	gen ietr_cat = .
-	replace ietr_cat = 1 if ietr_score < 40
-	replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70
-	replace ietr_cat = 3 if ietr_score >= 70
+	replace ietr_cat = 1 if ietr_score < 45
+	replace ietr_cat = 2 if ietr_score >= 45 & ietr_score < 85
+	replace ietr_cat = 3 if ietr_score >= 85
 	label define ietr_cat_lbl 1 "Mala experiencia" 2 "Experiencia regular" 3 "Buena experiencia"
 	label values ietr_cat ietr_cat_lbl
 	label var ietr_cat "Categoría IETR"
@@ -1840,9 +1840,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización IPCS
 	gen IPCS_cat = .
-	replace IPCS_cat = 1 if IPCS < 40
-	replace IPCS_cat = 2 if IPCS >= 40 & IPCS < 70
-	replace IPCS_cat = 3 if IPCS >= 70
+	replace IPCS_cat = 1 if IPCS < 45
+	replace IPCS_cat = 2 if IPCS >= 45 & IPCS < 85
+	replace IPCS_cat = 3 if IPCS >= 85
 
 	label define IPCS_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IPCS_cat IPCS_cat_lbl
@@ -1900,9 +1900,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización IEDF
 	gen IEDF_cat = .
-	replace IEDF_cat = 1 if IEDF < 40
-	replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70
-	replace IEDF_cat = 3 if IEDF >= 70
+	replace IEDF_cat = 1 if IEDF < 45
+	replace IEDF_cat = 2 if IEDF >= 45 & IEDF < 80
+	replace IEDF_cat = 3 if IEDF >= 80
 
 	label define IEDF_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IEDF_cat IEDF_cat_lbl
@@ -1911,25 +1911,13 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-
-
-
-
-
-
 /******************************************************************************
 3.9 CONFIANZA, AUTONOMÍA Y NORMAS SOCIALES  
     (IAER & ICPF) - Section F           
 *******************************************************************************/
-*Agregar
-*q9_8
-*q9_16
-*q9_17*
-*q9_21
-
 
 * ==========================================================================
-* 3.9 Índice de Autonomía Económica en Remesas (IAER) - Section F 
+* 3.9.1 Índice de Autonomía Económica en Remesas (IAER) - Section F 
 * ==========================================================================
 
 	* Decide uso de remesas (q9_4)
@@ -1937,7 +1925,6 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace f1_decide_remesa = 1 if inlist(q9_4,4,5)
 	replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)
 	label var f1_decide_remesa "Decide uso de remesas"
-
 
 	* Quién administra la remesa (q9_5)
 	gen f1_administra = .
@@ -1993,30 +1980,41 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace f1_no_evito = 0 if q9_20==1 |q9_20==98
 	label var f1_no_evito "No evitó pagos digitales por conflictos"
 
-	* IAER: promedio y normalización
+	* --- NUEVAS VARIABLES AGREGADAS ---
+	
+	* Ausencia de Coerción directa (q9_8) - Asumiendo 1=Sí sufre coerción, 2=No
+	gen f1_sin_coercion1 = .
+	replace f1_sin_coercion1 = 0 if q9_8 == 1
+	replace f1_sin_coercion1 = 1 if inlist(q9_8, 2, 98)
+	label var f1_sin_coercion1 "Ausencia de coerción al usar cuenta"
+
+	* Ausencia de presión sobre remesas (q9_16) - Asumiendo 1=Sí sufre presión, 2=No
+	gen f1_sin_coercion2 = .
+	replace f1_sin_coercion2 = 0 if q9_16 == 1
+	replace f1_sin_coercion2 = 1 if inlist(q9_16, 2, 98)
+	label var f1_sin_coercion2 "Ausencia de presión de terceros sobre la remesa"
+
+	* IAER: promedio y normalización (Actualizado)
 	egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio ///
-							f1_control f1_cuenta_propia ///
-							f1_salud f1_gastos f1_opinion f1_cambiar_cuenta ///
-							f1_no_evito)
-	gen IAER = IAER_raw*100
+							f1_control f1_cuenta_propia f1_salud f1_gastos ///
+							f1_opinion f1_cambiar_cuenta f1_no_evito ///
+							f1_sin_coercion1 f1_sin_coercion2)
+	gen IAER = IAER_raw * 100
 	label var IAER "Índice de Autonomía Económica en Remesas (0–100)"
 
 	* Categorización IAER
 	gen IAER_cat = .
 	replace IAER_cat = 1 if IAER < 40
-	replace IAER_cat = 2 if IAER >= 40 & IAER < 70
-	replace IAER_cat = 3 if IAER >= 70
+	replace IAER_cat = 2 if IAER >= 40 & IAER < 85
+	replace IAER_cat = 3 if IAER >= 85
 
 	label define IAER_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IAER_cat IAER_cat_lbl
-	label var IAER_cat "Categoría IAER"
-
-
-
+	label var IAER_cat "Categoría IAER (Autonomía)"
 
 
 * ==============================================================================
-* 3.9 Índice de Confianza en Proveedores Financieros (ICPF) - Sectio F continued
+* 3.9.2 Índice de Confianza y Normas Comunitarias (ICPF) - Section F continued
 * ==============================================================================
 
 	* Confianza en proveedor (q9_1)
@@ -2037,10 +2035,30 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace f2_comunidad = 0 if inlist(q9_22,2,3,4,98)
 	label var f2_comunidad "Confianza comunitaria en autonomía femenina"
 
-	* ICPF: promedio y normalización
-	egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad)
-	gen ICPF = ICPF_raw*100
-	label var ICPF "Índice de Confianza en Proveedores Financieros (0–100)"
+	* --- NUEVAS VARIABLES AGREGADAS ---
+	
+	* Ausencia de Consecuencias Negativas por Privacidad (q9_17_*)
+	* Asumimos que si marcó alguna opción de conflicto/violencia penaliza.
+	* Ajusta los nombres de q9_17_1, q9_17_2 según cuáles sean las respuestas negativas en tu base.
+	egen sum_consecuencias = rowtotal(q9_17_1 q9_17_2 q9_17_3) 
+	gen f2_sin_consecuencias = .
+	replace f2_sin_consecuencias = 1 if sum_consecuencias == 0
+	replace f2_sin_consecuencias = 0 if sum_consecuencias > 0
+	label var f2_sin_consecuencias "Sin consecuencias negativas por privacidad digital"
+
+	* Ausencia de necesidad de Mitigaciones de conflicto (q9_21_*)
+	* Tener que esconder dinero penaliza el índice de confianza/normas sanas.
+	egen sum_mitigaciones = rowtotal(q9_21_1 q9_21_2 q9_21_3)
+	gen f2_sin_mitigaciones = .
+	replace f2_sin_mitigaciones = 1 if sum_mitigaciones == 0
+	replace f2_sin_mitigaciones = 0 if sum_mitigaciones > 0
+	label var f2_sin_mitigaciones "No necesita estrategias de mitigación en el hogar"
+
+	* ICPF: promedio y normalización (Actualizado)
+	egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad ///
+	                        f2_sin_consecuencias f2_sin_mitigaciones)
+	gen ICPF = ICPF_raw * 100
+	label var ICPF "Índice de Clima y Confianza (0–100)"
 
 	* Categorización ICPF
 	gen ICPF_cat = .
@@ -2050,7 +2068,11 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	label define ICPF_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values ICPF_cat ICPF_cat_lbl
-	label var ICPF_cat "Categoría ICPF"
+	label var ICPF_cat "Categoría ICPF (Clima / Normas)"
+
+
+
+
 
 
 

@@ -753,17 +753,125 @@ restore
 
 
 
-
-
-
-
-
 *3.9 Trust, autonomy, and social norms — IAER & ICPF
+
+* ====================================================================
+* OUTPUT 3.9A: Figure - IAER Distribution
+* ====================================================================
+
+preserve
+drop if IAER == .
+gen iaer_01 = IAER / 100
+
+twoway (hist iaer_01, width(0.05) start(0) color("120 120 120%60") lcolor(white)) ///
+       (kdensity iaer_01, lcolor("58 103 177") lwidth(medium)), ///
+    title("Distribution of Economic Autonomy in Remittances (IAER)", size(medium) color(black)) ///
+    xtitle("Autonomy Index Score (0-1)", size(small)) ///
+    ytitle("Density", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    legend(off) ///
+    graphregion(color(white)) scheme(plotplain)
+
+graph export "${output_dir}/fig31_iaer_distribution.png", replace
+restore
+
+
+* ====================================================================
+* OUTPUT 3.9B: Figure - Mean IAER (0-1) by Digital Use (IURD) with CI
+* ====================================================================
+preserve
+drop if iurd_cat == . | IAER == .
+gen iaer_01 = IAER / 100
+
+collapse (mean) mean_val=iaer_01 (semean) se_val=iaer_01, by(iurd_cat)
+
+gen ci_top = mean_val + 1.96 * se_val
+gen ci_bot = mean_val - 1.96 * se_val
+gen mean_label = string(mean_val, "%9.2f")
+
+twoway (bar mean_val iurd_cat, horizontal barw(0.6) color("58 103 177%100")) ///
+       (rcap ci_top ci_bot iurd_cat, horizontal lcolor(black)) ///
+       (scatter iurd_cat ci_top, mcolor(none) mlabel(mean_label) mlabpos(3) mlabcolor(black) mlabsize(small)), ///
+       legend(off) ///
+       ylabel(1 "Low" 2 "Medium" 3 "High", labsize(small) angle(horizontal) nogrid) ///
+       xtitle("Mean Autonomy Index (IAER, 0-1 scale)", size(small) margin(top)) ///
+       ytitle("Digital Remittance Use Index (IURD)", size(small) margin(right)) ///
+       xlabel(0(0.2)1, labsize(small)) /// xscale(range(0 1.1)) por si los valores son altos
+       graphregion(color(white)) ///
+       scheme(plotplain)
+
+graph export "${output_dir}/fig_iaer_by_iurd.png", replace
+restore
+
+
+* ====================================================================
+* OUTPUT 3.9C: Figure - Mean Fraud Damage (IEDF) by Autonomy (IAER) with CI
+* ====================================================================
+preserve
+drop if IAER_cat == . | IEDF == .
+gen iedf_01 = IEDF / 100
+
+collapse (mean) mean_val=iedf_01 (semean) se_val=iedf_01, by(IAER_cat)
+
+gen ci_top = mean_val + 1.96 * se_val
+gen ci_bot = mean_val - 1.96 * se_val
+gen mean_label = string(mean_val, "%9.2f")
+
+twoway (bar mean_val IAER_cat, horizontal barw(0.6) color("58 103 177%100")) /// <-- Color rojo/alerta para fraude
+       (rcap ci_top ci_bot IAER_cat, horizontal lcolor(black)) ///
+       (scatter IAER_cat ci_top, mcolor(none) mlabel(mean_label) mlabpos(3) mlabcolor(black) mlabsize(small)), ///
+       legend(off) ///
+       ylabel(1 "Low" 2 "Medium" 3 "High", labsize(small) angle(horizontal) nogrid) ///
+       xtitle("Mean Fraud Damage (IEDF, 0-1 scale)", size(small) margin(top)) ///
+       ytitle("Economic Autonomy Index (IAER)", size(small) margin(right)) ///
+       xlabel(0(0.1)0.5, labsize(small)) /// <-- Cortado a 0.5 como el anterior de fraude
+       xscale(range(0 0.55)) ///
+       graphregion(color(white)) ///
+       scheme(plotplain)
+
+graph export "${output_dir}/fig_iedf_by_iaer.png", replace
+restore
+
+
+* ====================================================================
+* OUTPUT 3.9D: Figure - Mean Trust & Norms (ICPF) by Digital Use (IURD)
+* ====================================================================
+preserve
+drop if iurd_cat == . | ICPF == .
+gen icpf_01 = ICPF / 100
+
+collapse (mean) mean_val=icpf_01 (semean) se_val=icpf_01, by(iurd_cat)
+
+gen ci_top = mean_val + 1.96 * se_val
+gen ci_bot = mean_val - 1.96 * se_val
+gen mean_label = string(mean_val, "%9.2f")
+
+twoway (bar mean_val iurd_cat, horizontal barw(0.6) color("58 103 177%100")) ///
+       (rcap ci_top ci_bot iurd_cat, horizontal lcolor(black)) ///
+       (scatter iurd_cat ci_top, mcolor(none) mlabel(mean_label) mlabpos(3) mlabcolor(black) mlabsize(small)), ///
+       legend(off) ///
+       ylabel(1 "Low" 2 "Medium" 3 "High", labsize(small) angle(horizontal) nogrid) ///
+       xtitle("Mean Trust & Norms Index (ICPF, 0-1 scale)", size(small) margin(top)) ///
+       ytitle("Digital Remittance Use Index (IURD)", size(small) margin(right)) ///
+       xlabel(0(0.2)1, labsize(small)) ///
+       graphregion(color(white)) ///
+       scheme(plotplain)
+
+graph export "${output_dir}/fig_icpf_by_iurd.png", replace
+restore
 
 
 
 
 *3.10 Barriers, enabling environment, and program exposure — IEH & IBPD
+
+
+
+
+
+
+
+
 
 
 
