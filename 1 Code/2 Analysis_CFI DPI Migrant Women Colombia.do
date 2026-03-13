@@ -390,7 +390,7 @@ label define iaff_terc_lbl 1 "Low Access" 2 "Medium Access" 3 "High Access"
 label values iaff_tercile iaff_terc_lbl
 
 * --- Gráfico 1: Distribución del IUOF (Score) ---
-* Distribution of Financial Usage Score (IUOF)
+
 twoway (hist iuof_score_01, width(0.05) start(0) color("120 120 120%60") lcolor(white)) ///
        (kdensity iuof_score_01, lcolor("58 103 177") lwidth(medium)), ///
     title("", size(medium)) ///
@@ -680,7 +680,7 @@ restore
 
 
 * ====================================================================
-* OUTPUT 2B: Figure - Mean IEDF (0-1) by ICDP with CI (Horizontal)
+* Figure - Mean IEDF (0-1) by ICDP with CI (Horizontal)
 * ====================================================================
 preserve
 
@@ -800,7 +800,7 @@ twoway (bar mean_val iurd_cat, horizontal barw(0.6) color("58 103 177%100")) ///
        graphregion(color(white)) ///
        scheme(plotplain)
 
-graph export "${output_dir}/fig_iaer_by_iurd.png", replace
+graph export "${output_dir}/fig32_iaer_by_iurd.png", replace
 restore
 
 
@@ -829,7 +829,7 @@ twoway (bar mean_val IAER_cat, horizontal barw(0.6) color("58 103 177%100")) ///
        graphregion(color(white)) ///
        scheme(plotplain)
 
-graph export "${output_dir}/fig_iedf_by_iaer.png", replace
+graph export "${output_dir}/fig33_iedf_by_iaer.png", replace
 restore
 
 
@@ -857,13 +857,188 @@ twoway (bar mean_val iurd_cat, horizontal barw(0.6) color("58 103 177%100")) ///
        graphregion(color(white)) ///
        scheme(plotplain)
 
-graph export "${output_dir}/fig_icpf_by_iurd.png", replace
+graph export "${output_dir}/fig34_icpf_by_iurd.png", replace
 restore
 
 
 
 
+
+
+
+
+
 *3.10 Barriers, enabling environment, and program exposure — IEH & IBPD
+
+
+* ==============================================================================
+* D. SECTION 3.10 GRAPHS: BARRIERS, ENABLERS, AND TRAINING (APA STYLE & ENGLISH)
+* ==============================================================================
+
+
+* ------------------------------------------------------------------------------
+* 1. TOP 5 MAIN BARRIERS (q10_1) - AS PERCENTAGES
+* ------------------------------------------------------------------------------
+preserve
+
+* Drop missing and "Prefer not to answer" (98)
+drop if missing(q10_1) | q10_1 == 98 
+
+* 1. REETIQUETAR AL INGLÉS CON LOS CÓDIGOS EXACTOS DE LA BASE
+label define q10_1_eng ///
+    1 "Don't own a phone" ///
+    2 "No data / internet" ///
+    3 "Lack of trust in systems" ///
+    4 "Don't know how to use them" ///
+    5 "High costs or fees" ///
+    6 "Documents not accepted" ///
+    7 "Poor signal / unstable service" ///
+    8 "Agents/ATMs too far" ///
+    9 "Prefer cash / family reasons" ///
+    10 "Bad experiences / fraud" ///
+    11 "Language / terminology" ///
+    12 "Low literacy" ///
+    14 "Fear of making a mistake" ///
+    15 "Difficult customer support" ///
+    16 "None of the above", replace
+
+* Aplicamos las etiquetas en inglés a la variable
+label values q10_1 q10_1_eng
+
+* 2. CONTRAER LOS DATOS Y SACAR PORCENTAJES
+contract q10_1, freq(frequency)
+gsort -frequency
+keep in 1/5 
+
+* Calculate percentage based on N = 423
+gen percent = (frequency / 423) * 100
+
+* 3. GRAFICAR EN FORMATO APA
+graph hbar (asis) percent, over(q10_1, sort(1) descending label(labsize(small))) ///
+    ytitle("Percentage (%)") ///
+    blabel(bar, format(%9.1f)) bar(1, fcolor("58 103 177%100") lcolor("58 103 177%100")) ///
+    graphregion(color(white)) bgcolor(white) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig35_5barries.png", replace
+restore
+
+
+
+
+
+
+* ------------------------------------------------------------------------------
+* 2. TOP 5 ENABLERS (q10_3_*) - AS PERCENTAGES
+* ------------------------------------------------------------------------------
+preserve
+collapse (sum) enabler_*
+gen id = 1
+reshape long enabler_, i(id) j(enabler) string
+rename enabler_ frequency
+gsort -frequency
+keep in 1/5
+
+* Translate to English for the graph
+replace enabler = "Training" if enabler == "capacitacion"
+replace enabler = "Lower fees" if enabler == "comisiones_bajas"
+replace enabler = "Better exchange rate" if enabler == "mejor_tc"
+replace enabler = "Clear materials" if enabler == "material_claro"
+replace enabler = "More merchants" if enabler == "mas_comercios"
+replace enabler = "Account assistance" if enabler == "ayuda_cuenta"
+replace enabler = "Better internet" if enabler == "mejor_internet"
+
+* Calculate percentage based on N = 423
+gen percent = (frequency / 423) * 100
+
+graph hbar (asis) percent, over(enabler, sort(1) descending label(labsize(small))) ///
+    ytitle("Percentage (%)") ///
+    blabel(bar, format(%9.1f)) bar(1, fcolor("58 103 177%100") lcolor("58 103 177%100")) ///
+    graphregion(color(white)) bgcolor(white) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig36_top5_enablers.png", replace
+restore
+
+
+* ------------------------------------------------------------------------------
+* 3. TOP TRAINING TOPICS (q10_17_*) - AS PERCENTAGES
+* ------------------------------------------------------------------------------
+preserve
+collapse (sum) tema_*
+gen id = 1
+reshape long tema_, i(id) j(topic) string
+rename tema_ frequency
+gsort -frequency
+
+* Translate to English for the graph
+replace topic = "Fees and limits" if topic == "comisiones"
+replace topic = "Processing times" if topic == "tiempos"
+replace topic = "Fraud & risk prevention" if topic == "riesgos_fraude"
+replace topic = "Claims process" if topic == "reclamos"
+replace topic = "Agent locations" if topic == "agentes"
+replace topic = "Benefits vs. cash" if topic == "beneficios"
+
+* Calculate percentage based on N = 423
+gen percent = (frequency / 423) * 100
+
+graph hbar (asis) percent, over(topic, sort(1) descending label(labsize(small))) ///
+    ytitle("Percentage (%)") ///
+    blabel(bar, format(%9.1f)) bar(1, fcolor(58 103 177%100) lcolor(58 103 177%100)) ///
+    graphregion(color(white)) bgcolor(white) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig37_training_topics.png", replace
+restore
+
+
+
+
+* ==============================================================================
+* E. STRATEGIC CROSSTABS: IBPD BY VULNERABILITY (IVS) AND ADOPTION (IAT)
+* ==============================================================================
+
+* ------------------------------------------------------------------------------
+* 4. IBPD BY VULNERABILITY (IVS) - 100% STACKED BARS
+* ------------------------------------------------------------------------------
+preserve
+graph bar (percent), over(IBPD_cat) over(ivs_cat) asyvars stack ///
+    ytitle("Percentage (%)") ///
+    legend(title("IBPD Level", size(small)) position(6) rows(1) region(lcolor(none))) ///
+    bar(1, color("245 130 48%80")) /// Naranja para Low (Barrera)
+    bar(2, color("167 169 172%80")) /// Gris para Medium
+    bar(3, color("58 103 177%80")) /// Azul para High
+    blabel(bar, position(center) format(%9.0f) size(small)) ///
+    graphregion(color(white)) bgcolor(white) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig38_ibpd_ivs.png", replace
+
+restore
+
+
+* ------------------------------------------------------------------------------
+* 5. IBPD BY TECH ADOPTION (IAT) - 100% STACKED BARS
+* ------------------------------------------------------------------------------
+preserve
+graph bar (percent), over(IBPD_cat) over(iat_cat) asyvars stack ///
+    ytitle("Percentage (%)") ///
+    legend(title("IBPD Level", size(small)) position(6) rows(1) region(lcolor(none))) ///
+    bar(1, color("245 130 48%80")) /// Naranja para Low (Barrera)
+    bar(2, color("167 169 172%80")) /// Gris para Medium
+    bar(3, color("58 103 177%80")) /// Azul para High
+    blabel(bar, position(center) format(%9.0f) size(small)) ///
+    graphregion(color(white)) bgcolor(white) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig39_ibpd_vs_iat.png", replace
+restore
+
+
+
+
+
+
 
 
 

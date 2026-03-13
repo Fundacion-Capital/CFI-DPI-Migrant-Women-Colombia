@@ -1174,9 +1174,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ivs_cat = 3 if ivs_score > 0.66
 
 	label define ivs_cat_lab ///
-    1 "Low vulnerability (0-0.33)" ///
-    2 "Medium vulnerability (0.34-0.66)" ///
-    3 "High vulnerability (0.67-1)"
+    1 "Low vulnerability" ///
+    2 "Medium vulnerability" ///
+    3 "High vulnerability"
 
 	label values ivs_cat ivs_cat_lab
 	label var ivs_cat "Categoría IVS (solo descriptiva)"
@@ -1472,17 +1472,17 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 							  iuof_save iuof_notify iuof_risk)
 	label var iuof_score "Índice de Uso y Operatividad Financiera (0-100)"
 
-	replace iuof_score = iuof_score/100
-	*label var iuof_score_01 "IUOF normalizado (0-1)"
+	gen iuof_score_01 = iuof_score/100
+	label var iuof_score_01 "IUOF normalizado (0-1)"
 
 	egen iuof_score_std = std(iuof_score)
 	label var iuof_score_std "IUOF estandarizado"
 
 	* Categorización
 	gen iuof_cat = .
-	replace iuof_cat = 1 if iuof_score < 0.5
-	replace iuof_cat = 2 if iuof_score >= 0.5 & iuof_score < 0.8
-	replace iuof_cat = 3 if iuof_score >= 0.8
+	replace iuof_cat = 1 if iuof_score_01 < 0.5
+	replace iuof_cat = 2 if iuof_score_01 >= 0.5 & iuof_score < 0.8
+	replace iuof_cat = 3 if iuof_score_01 >= 0.8
 
 	label define iuof_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values iuof_cat iuof_cat_lbl
@@ -2075,129 +2075,135 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-
-
 /******************************************************************************
 3.10 BARRERAS, HABILITADORES Y PROGRAMAS
     (IEH & IBPD) - Section G           
 *******************************************************************************/
 
-*Agregar
-*q10_3*
-*q10_5
-*q10_11
-*q10_14
-*q10_17
-
 * ==============================================================================
-* 3.10 Índice de Entorno Habilitante (IEH) - Section G
+* A. PREPARACIÓN DE VARIABLES DESCRIPTIVAS (q10_3, q10_11, q10_14, q10_17)
+* (Necesarias para el gráfico de Top 5 y análisis de programas)
 * ==============================================================================
 
-	* Información sobre comisiones, tipo de cambio y reclamos (q10_4)
-	gen g1_info = .
-	replace g1_info = 1 if inlist(q10_4,3,4)
-	replace g1_info = 0 if inlist(q10_4,1,2)
-	label var g1_info "Información suficiente sobre pagos digitales"
+* 1. Habilitadores/Apoyos deseados (q10_3_*) - select_multiple
+* Nota: Ajusta los nombres exactos si varían en tu base
+gen enabler_capacitacion = (q10_3_1 == 1)
+gen enabler_comisiones_bajas = (q10_3_2 == 1)
+gen enabler_mejor_tc = (q10_3_3 == 1)
+gen enabler_material_claro = (q10_3_4 == 1)
+gen enabler_mas_comercios = (q10_3_5 == 1)
+gen enabler_ayuda_cuenta = (q10_3_6 == 1)
+gen enabler_mejor_internet = (q10_3_7 == 1)
 
-	* Facilidad de cash-out (q10_6)
-	gen g1_cashout = .
-	replace g1_cashout = 1 if inlist(q10_6,1,2)
-	replace g1_cashout = 0 if inlist(q10_6,3,4,5)
-	label var g1_cashout "Entorno favorable para retiro de efectivo"
+* 2. Proveedor de capacitación (q10_11) y acompañamiento (q10_14) - select_one
+* Agrupamos 1=Gobierno, 2=ONG, 3=Banco, 4=Fintech como "Formales"
+gen prov_cap_formal = inlist(q10_11, 1, 2, 3, 4) if !missing(q10_11)
+gen prov_cap_informal = inlist(q10_11, 5) if !missing(q10_11) // Otro
 
-	* Participó en capacitación (q10_10)
-	gen g1_capacitacion = .
-	replace g1_capacitacion = 1 if inlist(q10_10,1,2)
-	replace g1_capacitacion = 0 if inlist(q10_10,3,98)
-	label var g1_capacitacion "Participó en capacitación"
+* Agrupamos 1=Promotor, 2=Banco, 3=Fintech, 4=ONG como "Formales" y 5=Familiar como "Informal"
+gen prov_acomp_formal = inlist(q10_14, 1, 2, 3, 4) if !missing(q10_14)
+gen prov_acomp_informal = inlist(q10_14, 5) if !missing(q10_14)
 
-	* Cambio positivo tras capacitación (q10_12)
-	gen g1_impacto_cap = .
-	replace g1_impacto_cap = 1 if inlist(q10_12,3,4)
-	replace g1_impacto_cap = 0 if inlist(q10_12,1,2)
-	label var g1_impacto_cap "Capacitación aumentó disposición"
-
-	* Acompañamiento individual (q10_13)
-	gen g1_acompanamiento = .
-	replace g1_acompanamiento = 1 if q10_13==1
-	replace g1_acompanamiento = 0 if q10_13==0 | q10_13==98
-	label var g1_acompanamiento "Recibió acompañamiento individual"
-
-	* Exposición frecuente a materiales educativos (q10_16)
-	gen g1_materiales = .
-	replace g1_materiales = 1 if inlist(q10_16,1,2)
-	replace g1_materiales = 0 if inlist(q10_16,3,4,98)
-	label var g1_materiales "Exposición a materiales educativos"
-
-	* IEH: promedio y normalización
-	egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion ///
-						   g1_impacto_cap g1_acompanamiento g1_materiales)
-	gen IEH = IEH_raw*100
-	label var IEH "Índice de Entorno Habilitante (0–100)"
-
-	* Categorización IEH
-	gen IEH_cat = .
-	replace IEH_cat = 1 if IEH < 40
-	replace IEH_cat = 2 if IEH >= 40 & IEH < 70
-	replace IEH_cat = 3 if IEH >= 70
-
-	label define IEH_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
-	label values IEH_cat IEH_cat_lbl
-	label var IEH_cat "Categoría IEH"
-
+* 3. Temas de capacitación priorizados (q10_17_*) - select_multiple
+gen tema_comisiones = (q10_17_1 == 1)
+gen tema_tiempos = (q10_17_2 == 1)
+gen tema_riesgos_fraude = (q10_17_3 == 1)
+gen tema_reclamos = (q10_17_4 == 1)
+gen tema_agentes = (q10_17_5 == 1)
+gen tema_beneficios = (q10_17_6 == 1)
 
 
 * ==============================================================================
-* 3.10 Índice de Barreras Percibidas a la Digitalización (IBPD) - Section G continued
+* B. ÍNDICE DE ENTORNO HABILITANTE (IEH)
 * ==============================================================================
 
-	* Barrera principal declarada (q10_1)
-	gen g2_barrera_principal = .
-	replace g2_barrera_principal = 0 if q10_1==16 | q10_1==98
-	replace g2_barrera_principal = 1 if inrange(q10_1,1,15)
-	label var g2_barrera_principal "Tiene barrera principal"
+* Información sobre comisiones, tipo de cambio y reclamos (q10_4)
+gen g1_info = inlist(q10_4,3,4) if !missing(q10_4)
+label var g1_info "Información suficiente sobre pagos digitales"
 
-	* Barreras adicionales (select_multiple q10_2)
-	egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 ///
-									  q10_2_5 q10_2_6 q10_2_7 q10_2_8 ///
-									  q10_2_9 q10_2_10 q10_2_11 q10_2_12 ///
-									  q10_2_14 q10_2_15)
-	gen g2_barreras_extra_bin = g2_barreras_extra>0
-	label var g2_barreras_extra_bin "Barreras adicionales percibidas"
+* Facilidad de cash-out (q10_6)
+gen g1_cashout = inlist(q10_6,1,2) if !missing(q10_6)
+label var g1_cashout "Entorno favorable para retiro de efectivo"
 
-	* Bajo nivel de información (q10_4)
-	gen g2_poca_info = .
-	replace g2_poca_info = 1 if inlist(q10_4,1,2)
-	replace g2_poca_info = 0 if inlist(q10_4,3,4)
-	label var g2_poca_info "Poca información percibida"
+* Participó en capacitación (q10_10)
+gen g1_capacitacion = inlist(q10_10,1,2) if !missing(q10_10)
+label var g1_capacitacion "Participó en capacitación"
 
-	* Cash-out difícil o inexistente (q10_6)
-	gen g2_cashout_dificil = .
-	replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5,98)
-	replace g2_cashout_dificil = 0 if inlist(q10_6,1,2)
-	label var g2_cashout_dificil "Dificultad para retirar efectivo"
+* Cambio positivo tras capacitación (q10_12)
+gen g1_impacto_cap = inlist(q10_12,3,4) if !missing(q10_12)
+label var g1_impacto_cap "Capacitación aumentó disposición"
 
-	* Nunca vio materiales educativos (q10_16)
-	gen g2_sin_materiales = .
-	replace g2_sin_materiales = 1 if q10_16==4 | q10_16==98
-	replace g2_sin_materiales = 0 if inlist(q10_16,1,2,3)
-	label var g2_sin_materiales "Sin exposición educativa"
+* Acompañamiento individual (q10_13)
+gen g1_acompanamiento = (q10_13==1) if !missing(q10_13)
+label var g1_acompanamiento "Recibió acompañamiento individual"
 
-	* IBPD: promedio y normalización
-	egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin ///
-							g2_poca_info g2_cashout_dificil g2_sin_materiales)
-	gen IBPD = IBPD_raw*100
-	label var IBPD "Índice de Barreras Percibidas a la Digitalización (0–100)"
+* Exposición frecuente a materiales educativos (q10_16)
+gen g1_materiales = inlist(q10_16,1,2) if !missing(q10_16)
+label var g1_materiales "Exposición a materiales educativos"
 
-	* Categorización IBPD
-	gen IBPD_cat = .
-	replace IBPD_cat = 1 if IBPD < 40
-	replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70
-	replace IBPD_cat = 3 if IBPD >= 70
+* IEH: promedio y normalización
+egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion ///
+                       g1_impacto_cap g1_acompanamiento g1_materiales)
+gen IEH = IEH_raw * 100
+label var IEH "Índice de Entorno Habilitante (0-100)"
 
-	label define IBPD_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
-	label values IBPD_cat IBPD_cat_lbl
-	label var IBPD_cat "Categoría IBPD"
+* Categorización IEH
+gen IEH_cat = .
+replace IEH_cat = 1 if IEH < 40
+replace IEH_cat = 2 if IEH >= 40 & IEH < 70
+replace IEH_cat = 3 if IEH >= 70 & !missing(IEH)
+
+label define IEH_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
+label values IEH_cat IEH_cat_lbl
+label var IEH_cat "Categoría IEH"
+
+
+* ==============================================================================
+* C. ÍNDICE DE BARRERAS PERCIBIDAS A LA DIGITALIZACIÓN (IBPD)
+* ==============================================================================
+
+* Barrera principal declarada (q10_1)
+gen g2_barrera_principal = inrange(q10_1,1,15) if !missing(q10_1)
+label var g2_barrera_principal "Tiene barrera principal (excluye Ninguna)"
+
+* Barreras adicionales (select_multiple q10_2)
+egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 ///
+                                  q10_2_5 q10_2_6 q10_2_7 q10_2_8 ///
+                                  q10_2_9 q10_2_10 q10_2_11 q10_2_12 ///
+                                  q10_2_14 q10_2_15)
+gen g2_barreras_extra_bin = (g2_barreras_extra > 0) if !missing(g2_barreras_extra)
+label var g2_barreras_extra_bin "Barreras adicionales percibidas"
+
+* Bajo nivel de información (q10_4)
+gen g2_poca_info = inlist(q10_4,1,2) if !missing(q10_4)
+label var g2_poca_info "Poca información percibida"
+
+* Cash-out difícil o inexistente (q10_6)
+gen g2_cashout_dificil = inlist(q10_6,3,4,5,98) if !missing(q10_6)
+label var g2_cashout_dificil "Dificultad para retirar efectivo"
+
+* Nunca vio materiales educativos (q10_16)
+gen g2_sin_materiales = inlist(q10_16,4,98) if !missing(q10_16)
+label var g2_sin_materiales "Sin exposición educativa"
+
+* IBPD: promedio y normalización
+egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin ///
+                        g2_poca_info g2_cashout_dificil g2_sin_materiales)
+gen IBPD = IBPD_raw * 100
+label var IBPD "Índice de Barreras Percibidas a la Digitalización (0-100)"
+
+* Categorización IBPD
+gen IBPD_cat = .
+replace IBPD_cat = 1 if IBPD < 40
+replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70
+replace IBPD_cat = 3 if IBPD >= 70 & !missing(IBPD)
+
+label define IBPD_cat_lbl 1 "Low" 2 "Medium" 3 "High"
+label values IBPD_cat IBPD_cat_lbl
+label var IBPD_cat "Categoría IBPD"
+
+
+
 
 
 /*
