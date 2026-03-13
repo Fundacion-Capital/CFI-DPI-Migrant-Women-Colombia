@@ -478,7 +478,7 @@ gen mean_lab = "  " + string(mean, "%4.2f")
 twoway (bar mean iaff_cat, horizontal barwidth(0.6) color("58 103 177%85")) /// Capa 1: Barras
        (rcap lb ub iaff_cat, horizontal lcolor(black) lwidth(medium)) ///       Capa 2: Intervalo de confianza
        (scatter iaff_cat ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), /// Capa 3: Etiquetas
-    xtitle("Onboarding Quality Index (IFO) (0-1)", size(small)) /// 
+    xtitle("Onboarding Quality Index (OQI) (0-1)", size(small)) /// 
     ytitle("Formal financial access level (IAFF)", size(small)) /// <--- TÍTULO DEL EJE Y EN INGLÉS
     xlabel(0(0.2)1, labsize(vsmall)) ///
     ylabel(1 "Low financial access" 2 "Medium financial access" 3 "High financial access", labsize(vsmall) angle(0)) ///
@@ -503,7 +503,7 @@ gen mean_lab = "  " + string(mean, "%4.2f")
 twoway (bar mean icdp_cat, horizontal barwidth(0.6) color("58 103 177%85")) /// Capa 1: Barras
        (rcap lb ub icdp_cat, horizontal lcolor(black) lwidth(medium)) ///       Capa 2: Intervalo de confianza
        (scatter icdp_cat ub, mlabel(mean_lab) mlabpos(3) mlabsize(vsmall) mcolor(none)), /// Capa 3: Etiquetas
-    xtitle("Onboarding Quality Index (IFO) (0-1)", size(small)) ///
+    xtitle("Onboarding Quality Index (OQI) (0-1)", size(small)) ///
     ytitle("Digital skills level (ICDP)", size(small)) /// <--- TÍTULO DEL EJE Y EN INGLÉS
     xlabel(0(0.2)1, labsize(vsmall)) ///
     ylabel(1 "Low digital skills" 2 "Medium digital skills" 3 "High digital skills", labsize(vsmall) angle(0)) /// Ajusta las etiquetas según tu base
@@ -588,7 +588,7 @@ graph bar, over(iurd_cat) over(oqi_cat, label(labsize(vsmall))) asyvars stack //
     bar(3, color("58 103 177%80")) /// Azul para alta intensidad
     blabel(bar, pos(center) format(%4.0f) color(white) size(1.8)) ///
     ytitle("Percentage (%)", size(small)) ///
-    b1title("Onboarding Quality (IFO)", size(small)) ///
+    b1title("Onboarding Quality Index (OQI)", size(small)) ///
     legend(title("Remittance Intensity (IURD)", size(vsmall)) pos(3) cols(1) size(vsmall) region(lcolor(none))) ///
     graphregion(color(white)) plotregion(color(white)) ///
     scheme(plotplain)
@@ -603,8 +603,163 @@ graph export "${output_dir}/fig26_iurd_by_ifo.png", replace
 *3.8 Fraud, safety behaviors, and recourse — IPCS & IEDF
 
 
+* ====================================================================
+* OUTPUT 1: Figure - Exposure to suspicious messages vs Perceived safety
+* Muestra el % de mujeres que se sienten "Seguras/Muy seguras" (q7_9) 
+* dependiendo de si estuvieron expuestas a fraude (q7_1)
+* ====================================================================
+preserve
+
+* 1. Dejar solo respuestas válidas
+drop if q7_1 == 3 | q7_1 == 98 | q7_1 == . 
+drop if q7_9 == 98 | q7_9 == .
+
+* 2. Crear variable de exposición
+gen exposed_fraud = 0
+replace exposed_fraud = 1 if inlist(q7_1, 1, 2)
+label define exp_lab 0 "Not exposed" 1 "Exposed to fraud"
+label values exposed_fraud exp_lab
+
+* 3. Asegurar etiquetas de seguridad (Ajusta según tus choices)
+label define safe_lab 1 "Very safe" 2 "Somewhat safe" 3 "Somewhat unsafe" 4 "Very unsafe"
+capture label values q7_9 safe_lab
+
+* 4. Gráfico de barras apiladas al 100%
+graph bar, over(q7_9) over(exposed_fraud) asyvars percentages stack ///
+    bar(1, color("58 103 177%100")) /// Azul fuerte (Very safe)
+    bar(2, color("133 171 224%100")) /// Azul claro (Somewhat safe)
+    bar(3, color("244 177 131%100")) /// Naranja claro (Somewhat unsafe)
+    bar(4, color("237 125 49%100"))  /// Naranja oscuro (Very unsafe)
+    blabel(bar, position(center) format(%2.0f) color(white) size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(0(20)100, labsize(small) nogrid) ///
+    legend(position(6) rows(1) size(small) region(lcolor(none))) ///
+    graphregion(color(white)) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig27_safety_vs_exposure.png", replace
+restore
+
+
+
+
+* ====================================================================
+* OUTPUT 2A: Figure - Mean IEDF (0-1) by OQI with CI (Horizontal)
+* ====================================================================
+preserve
+
+* 1. Clean missing values and scale IEDF to 0-1
+drop if oqi_cat == . | IEDF == .
+gen iedf_01 = IEDF / 100
+
+* 2. Calculate means and standard errors
+collapse (mean) mean_iedf=iedf_01 (semean) se_iedf=iedf_01, by(oqi_cat)
+
+* 3. Calculate 95% Confidence Interval
+gen ci_top = mean_iedf + 1.96 * se_iedf
+gen ci_bot = mean_iedf - 1.96 * se_iedf
+
+* 4. Text label for the mean (using 2 decimals for 0-1 scale)
+gen mean_label = string(mean_iedf, "%9.2f")
+
+* 5. Generate plot (Horizontal Bar + CI + Label on the right)
+twoway (bar mean_iedf oqi_cat, horizontal barw(0.6) color("58 103 177%100")) ///
+       (rcap ci_top ci_bot oqi_cat, horizontal lcolor(black)) ///
+       (scatter oqi_cat ci_top, mcolor(none) mlabel(mean_label) mlabpos(3) mlabcolor(black) mlabsize(small)), ///
+       legend(off) ///
+       ylabel(1 "Low" 2 "Medium" 3 "High", labsize(small) angle(horizontal) nogrid) ///
+       xtitle("Mean Fraud Damage (IEDF, 0-1 scale)", size(small) margin(top)) ///
+       ytitle("Onboarding Quality Index (OQI)", size(small) margin(right)) ///
+       xlabel(0(0.2)0.4, labsize(small)) /// <-- Eje cortado hasta 0.5
+       xscale(range(0 0.55)) /// <-- Margen para que el número no choque con el borde
+       graphregion(color(white)) ///
+       scheme(plotplain)
+
+graph export "${output_dir}/fig28_iedf_by_oqi.png", replace
+restore
+
+
+* ====================================================================
+* OUTPUT 2B: Figure - Mean IEDF (0-1) by ICDP with CI (Horizontal)
+* ====================================================================
+preserve
+
+* 1. Clean missing values and scale IEDF to 0-1
+drop if icdp_cat == . | IEDF == .
+gen iedf_01 = IEDF / 100
+
+* 2. Calculate means and standard errors
+collapse (mean) mean_iedf=iedf_01 (semean) se_iedf=iedf_01, by(icdp_cat)
+
+* 3. Calculate 95% Confidence Interval
+gen ci_top = mean_iedf + 1.96 * se_iedf
+gen ci_bot = mean_iedf - 1.96 * se_iedf
+
+* 4. Text label for the mean (using 2 decimals)
+gen mean_label = string(mean_iedf, "%9.2f")
+
+* 5. Generate plot (Horizontal Bar + CI + Label on the right)
+twoway (bar mean_iedf icdp_cat, horizontal barw(0.6) color("58 103 177%100")) ///
+       (rcap ci_top ci_bot icdp_cat, horizontal lcolor(black)) ///
+       (scatter icdp_cat ci_top, mcolor(none) mlabel(mean_label) mlabpos(3) mlabcolor(black) mlabsize(small)), ///
+       legend(off) ///
+       ylabel(1 "Low" 2 "Medium" 3 "High", labsize(small) angle(horizontal) nogrid) ///
+       xtitle("Mean Fraud Damage (IEDF, 0-1 scale)", size(small) margin(top)) ///
+       ytitle("Practical Digital Competence (ICDP)", size(small) margin(right)) ///
+       xlabel(0(0.2)0.4, labsize(small)) /// <-- Eje cortado hasta 0.5
+       xscale(range(0 0.55)) /// <-- Margen para que el número no choque con el borde
+       graphregion(color(white)) ///
+       scheme(plotplain)
+
+graph export "${output_dir}/fig29_iedf_by_icdp.png", replace
+restore
+
+
+
+
+* ====================================================================
+* OUTPUT 3 (Sugerido): Figure - Satisfaction with resolution (q7_15)
+* Cierra la historia mostrando la insatisfacción de quienes sí reclamaron
+* ====================================================================
+preserve
+
+drop if q7_15 == . | q7_15 == 98
+
+contract q7_15
+egen total_resp = total(_freq)
+gen pct = (_freq / total_resp) * 100
+gen pct_lab = string(pct, "%2.1f") + "%"
+
+* Asegurar etiquetas (Ajustadas a los 5 niveles reales de tus datos)
+label define sat_lab 1 "Very unsatisfied" 2 "Unsatisfied" 3 "Neutral" 4 "Satisfied" 5 "Very satisfied", replace
+capture label values q7_15 sat_lab
+
+twoway (bar pct q7_15, barwidth(0.6) color("58 103 177%100")) /// Azul tipo la imagen
+       (scatter pct q7_15, mlabel(pct_lab) mlabpos(12) mlabsize(small) mcolor(none) mlabcolor(black)), ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(0(10)60, labsize(small) nogrid) /// Ajustado a 60 porque el max es 55.7%
+    yscale(range(0 65)) ///
+    xlabel(1 "Very Unsatisf." 2 "Unsatisf." 3 "Neutral" 4 "Satisfied" 5 "Very Satisf.", labsize(small)) ///
+    xtitle("", size(small)) ///
+    legend(off) ///
+    graphregion(color(white)) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig30_resolution_satisfaction.png", replace
+restore
+
+
+
+
+
+
+
+
+
+
 
 *3.9 Trust, autonomy, and social norms — IAER & ICPF
+
 
 
 

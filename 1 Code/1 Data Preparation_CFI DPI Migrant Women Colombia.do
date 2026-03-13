@@ -1787,32 +1787,19 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-
-
 /******************************************************************************
 3.8 Fraude, conductas de seguridad y recurso   
     (IPCS & IEDF) - Section E           
 *******************************************************************************/
 
-*Agregar
-*q7_12
-*q7_15
-*q7_16
-*q7_17
-*q7_18
-*q7_19
-*q7_20
-*q7_21
-
 * ==========================================================================
-* 3.8 Índice de Prevención y Conducta Segura (IPCS) - Section E
+* 3.8.1 Índice de Prevención y Conducta Segura (IPCS) - Section E
 * ==========================================================================
-
 
 	* Reacción ante mensaje sospechoso (q7_2)
 	gen e1_reaccion_segura = .
 	replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)
-	replace e1_reaccion_segura = 0 if q7_2==4 | q7_2==5
+	replace e1_reaccion_segura = 0 if inlist(q7_2,4,5)
 	label var e1_reaccion_segura "Reacción segura ante mensaje sospechoso"
 
 	* Uso de autenticación segura (q7_6)
@@ -1842,13 +1829,13 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* Valora medidas preventivas (q7_10)
 	gen e1_valora_prevencion = .
 	replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)
-	replace e1_valora_prevencion = 0 if q7_10==6 |q7_10==7
+	replace e1_valora_prevencion = 0 if inlist(q7_10,6,7)
 	label var e1_valora_prevencion "Valora medidas de prevención del fraude"
 
 	* IPCS: promedio y normalización 0–100
 	egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves ///
 							e1_educacion e1_seguridad_percibida e1_valora_prevencion)
-	gen IPCS = IPCS_raw*100
+	gen IPCS = IPCS_raw * 100
 	label var IPCS "Índice de Prevención y Conducta Segura (0–100)"
 
 	* Categorización IPCS
@@ -1859,14 +1846,12 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	label define IPCS_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IPCS_cat IPCS_cat_lbl
-	label var IPCS_cat "Categoría IPCS"
-
+	label var IPCS_cat "Categoría IPCS (Prevención)"
 
 
 * ==========================================================================
-* 3.8 Índice de Exposición y Daño por Fraude (IEDF) - Section E continued
+* 3.8.2 Índice de Exposición y Daño por Fraude (IEDF) - Section E continued
 * ==========================================================================
-
 
 	* Exposición a mensajes sospechosos (q7_1)
 	gen e2_exposicion = .
@@ -1883,7 +1868,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* Problemas con pagos o remesas (q7_11)
 	gen e2_problema = .
 	replace e2_problema = 1 if q7_11==1
-	replace e2_problema = 0 if q7_11==2 | q7_11==98
+	replace e2_problema = 0 if inlist(q7_11,2,98)
 	label var e2_problema "Tuvo problemas con pagos/remesas digitales"
 
 	* Demora en respuesta (q7_13)
@@ -1898,12 +1883,19 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace e2_no_resuelto = 0 if q7_14==1
 	label var e2_no_resuelto "Problema no resuelto completamente"
 
-
+	* NUEVO: Insatisfacción con la resolución (q7_15) -> Recourse Failure
+	gen e2_insatisfaccion = .
+	replace e2_insatisfaccion = 1 if inlist(q7_15,1,2) // Muy o algo insatisfecho
+	replace e2_insatisfaccion = 0 if inlist(q7_15,3,4) // Algo o muy satisfecho
+	label var e2_insatisfaccion "Insatisfacción con la resolución del problema"
 
 	* IEDF: promedio y normalización 0–100
+	* Nota: Stata maneja los missing values en rowmean automáticamente. 
+	* Quien no tuvo problemas (q7_11=2) tendrá missing en demora, no_resuelto e insatisfaccion, 
+	* por lo que su promedio bajará gracias al "0" en e2_problema, lo cual es matemáticamente correcto.
 	egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema ///
-							e2_no_resuelto e2_demora)
-	gen IEDF = IEDF_raw*100
+							e2_demora e2_no_resuelto e2_insatisfaccion)
+	gen IEDF = IEDF_raw * 100
 	label var IEDF "Índice de Exposición y Daño por Fraude (0–100)"
 
 	* Categorización IEDF
@@ -1914,7 +1906,13 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	label define IEDF_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values IEDF_cat IEDF_cat_lbl
-	label var IEDF_cat "Categoría IEDF"
+	label var IEDF_cat "Categoría IEDF (Daño y Falla de Recurso)"
+
+
+
+
+
+
 
 
 
