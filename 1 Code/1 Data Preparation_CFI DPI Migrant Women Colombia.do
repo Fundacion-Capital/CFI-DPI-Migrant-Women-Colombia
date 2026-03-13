@@ -1614,39 +1614,30 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 
 
-
-
 /******************************************************************************
-3.7 Remesas: canales, formalización, intensidad y experiencia del usuario 
-    (IURD & IETR) - Section D           
+3.7 REMESAS: CANALES, INTENSIDAD Y EXPERIENCIA DEL USUARIO 
+    (IURD & IETR) - Section D            
 *******************************************************************************/
 
-*Agregar
-*q6_4
-*q6_5
-*q6_7
-*q6_12
-*q6_22
-*q6_23
+	* ==========================================================================
+	* BLOQUE A: VARIABLES DESCRIPTIVAS (No entran en índices)
+	* (q6_4, q6_5, q6_7, q6_12)
+	* ==========================================================================
 
 
+	* ==========================================================================
+	* BLOQUE B: ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD)
+	* ==========================================================================
 
-* ==========================================================================
-* 3.7 ÍNDICE DE INTENSIDAD DE USO DE REMESAS DIGITALES (IURD) - Section D
-* ==========================================================================
-
-
-
-
-	* Frecuencia de remesas del exterior – q6_2
+	* 1. Frecuencia de remesas del exterior – q6_2
 	gen iurd_freq = .
 	replace iurd_freq = 100 if q6_2==1
 	replace iurd_freq = 75  if q6_2==2
 	replace iurd_freq = 25  if q6_2==3
-	replace iurd_freq = 0   if q6_2==99
+	replace iurd_freq = 0   if q6_2==4
 	label var iurd_freq "Frecuencia de recepción de remesas (0-100)"
 
-	* Proporción digital de la remesa – q6_13
+	* 2. Proporción digital de la remesa – q6_13
 	gen iurd_digital = .
 	replace iurd_digital = 0   if q6_13==1
 	replace iurd_digital = 25  if q6_13==2
@@ -1655,52 +1646,41 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace iurd_digital = 100 if q6_13==5
 	label var iurd_digital "Proporción de remesa usada digitalmente (0-100)"
 
-	* Uso reciente de pagos/remesas digitales – q6_14
+	* 3. Uso reciente de pagos/remesas digitales – q6_14
 	gen iurd_recent = .
 	replace iurd_recent = 100 if q6_14==1
-	replace iurd_recent = 0   if q6_14==0 | q6_14==98
+	replace iurd_recent = 0   if q6_14==0
 	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
 
-	* Número de operaciones digitales – q6_15
+	* 4. Número de operaciones digitales – q6_15
 	gen iurd_ops = .
-	replace iurd_ops = 20  if q6_15==1 | q6_15==98
+	replace iurd_ops = 20  if q6_15==1
 	replace iurd_ops = 40  if q6_15==2
 	replace iurd_ops = 60  if q6_15==3
 	replace iurd_ops = 80  if q6_15==4
 	replace iurd_ops = 100 if q6_15==5
 	label var iurd_ops "Volumen de operaciones digitales (0-100)"
 
-
-	* Índice final IURD
+	* --> CÁLCULO FINAL IURD
 	egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital)
 	label var iurd_score "Índice de Intensidad de Uso de Remesas Digitales (0-100)"
 
 	gen iurd_score_01 = iurd_score/100
 	label var iurd_score_01 "IURD normalizado (0-1)"
 
-	egen iurd_score_std = std(iurd_score)
-	label var iurd_score_std "IURD estandarizado"
-
-	* Categorización
+	* Categorización IURD
 	gen iurd_cat = .
 	replace iurd_cat = 1 if iurd_score < 40
 	replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70
 	replace iurd_cat = 3 if iurd_score >= 70
-
-	label define iurd_cat_lbl 1 "Baja intensidad" ///
-							  2 "Intensidad media" ///
-							  3 "Alta intensidad"
+	label define iurd_cat_lbl 1 "Baja intensidad" 2 "Intensidad media" 3 "Alta intensidad"
 	label values iurd_cat iurd_cat_lbl
 	label var iurd_cat "Categoría IURD"
 
 
-
-* ===============================================================================
-* 3.7 ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS (IETR) - Section D continued
-* ===============================================================================
-
-
-
+	* ===============================================================================
+	* BLOQUE C: ÍNDICE DE EXPERIENCIA TRANSACCIONAL EN REMESAS Y PAGOS (IETR)
+	* ===============================================================================
 
 	* (A) Tiempo para usar la remesa – q6_6
 	gen ietr_time = .
@@ -1708,37 +1688,49 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ietr_time = 80  if q6_6==2
 	replace ietr_time = 60  if q6_6==3
 	replace ietr_time = 30  if q6_6==4
-	replace ietr_time = 0   if q6_6==5 | q6_6==98
+	replace ietr_time = 0   if q6_6==5
 	label var ietr_time "Rapidez de acreditación de remesa (0-100)"
 
+	* (B) Claridad de comisiones (q6_9) y tipo de cambio (q6_18)
+	gen ietr_cost_fee = .
+	replace ietr_cost_fee = 100 if q6_9==1 | q6_9==99 // Muy claros o NO cobraron
+	replace ietr_cost_fee = 50  if q6_9==2
+	replace ietr_cost_fee = 0   if q6_9==3 | q6_9==4
 
-	* (B) Claridad de comisiones y tipo de cambio – q6_9 y q6_18
-	gen ietr_cost = .
-	replace ietr_cost = 100 if q6_9==1 & q6_18==1
-	replace ietr_cost = 75  if inlist(q6_9,1,2) & inlist(q6_18,1,2)
-	replace ietr_cost = 25   if q6_9>=3 | q6_18==3
-	replace ietr_cost = 0   if q6_9>=3 | q6_18==3 | q6_9==99 | q6_18==98
+	gen ietr_cost_fx = .
+	replace ietr_cost_fx = 100 if q6_18==1
+	replace ietr_cost_fx = 50  if q6_18==2
+	replace ietr_cost_fx = 0   if q6_18==3 | q6_18==4
+
+	egen ietr_cost = rowmean(ietr_cost_fee ietr_cost_fx)
 	label var ietr_cost "Claridad de costos y tipo de cambio (0-100)"
+	drop ietr_cost_fee ietr_cost_fx // Limpiamos variables temporales
 
+	* (C) Confirmaciones recibidas (Remesas q6_11 y Pagos q6_20)
+	gen ietr_conf_rem = .
+	replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<=5 // Recibió por algún canal
+	replace ietr_conf_rem = 0   if q6_11==6            // No recibió confirmación
 
-	* (C) Confirmaciones recibidas – q6_11 y q6_20
-	gen ietr_confirm = .
-	replace ietr_confirm = 100 if q6_11<=5 & q6_20==1
-	replace ietr_confirm = 50  if q6_11<=5 & q6_20==2
-	replace ietr_confirm = 0   if q6_11==5 | q6_20==3 | q6_11==98 | q6_20==98
+	gen ietr_conf_pay = .
+	replace ietr_conf_pay = 100 if q6_20==1
+	replace ietr_conf_pay = 50  if q6_20==2
+	replace ietr_conf_pay = 0   if q6_20==3
+
+	egen ietr_confirm = rowmean(ietr_conf_rem ietr_conf_pay)
 	label var ietr_confirm "Confirmaciones oportunas de la operación (0-100)"
+	drop ietr_conf_rem ietr_conf_pay // Limpiamos variables temporales
 
 	* (D) Ausencia de problemas o fallas – q6_16
 	gen ietr_problem = .
 	replace ietr_problem = 100 if q6_16==4
 	replace ietr_problem = 75  if q6_16==1
 	replace ietr_problem = 25  if q6_16==2
-	replace ietr_problem = 0   if q6_16==98
+	replace ietr_problem = 0   if q6_16==3
 	label var ietr_problem "Ausencia de problemas transaccionales (0-100)"
 
 	* (E) Sin límites restrictivos – q6_17
 	gen ietr_limits = .
-	replace ietr_limits = 100 if q6_17==4
+	replace ietr_limits = 100 if q6_17==4 // Nunca le impidió operar
 	replace ietr_limits = 0   if inlist(q6_17,1,2,3)
 	label var ietr_limits "Ausencia de límites operativos (0-100)"
 
@@ -1748,10 +1740,24 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ietr_speed = 80  if q6_21==2
 	replace ietr_speed = 60  if q6_21==3
 	replace ietr_speed = 30  if q6_21==4
-	replace ietr_speed = 0   if q6_21>=5
+	replace ietr_speed = 0   if q6_21==5
 	label var ietr_speed "Rapidez percibida de pagos digitales (0-100)"
 
-	* (G) Evaluación global – q6_24
+	* (G) Ausencia de cobros adicionales/sobrecargos (Surcharges) – q6_22
+	gen ietr_surcharge = .
+	replace ietr_surcharge = 0   if q6_22==1 // Sí le cobran extra
+	replace ietr_surcharge = 100 if q6_22==2 | q6_22==3 // Igual o descuento
+	* Nota: 98 y 99 quedan missing (.) para que no afecten el promedio.
+	label var ietr_surcharge "Ausencia de sobrecargos al pagar digital (0-100)"
+
+	* (H) Claridad en comunicación del proveedor – q6_23
+	gen ietr_clarity = .
+	replace ietr_clarity = 100 if q6_23==1
+	replace ietr_clarity = 50  if q6_23==2
+	replace ietr_clarity = 0   if q6_23==3 | q6_23==4
+	label var ietr_clarity "Claridad del proveedor sobre el servicio (0-100)"
+
+	* (I) Evaluación global – q6_24
 	gen ietr_eval = .
 	replace ietr_eval = 0   if q6_24==1
 	replace ietr_eval = 25  if q6_24==2
@@ -1760,29 +1766,27 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace ietr_eval = 100 if q6_24==5
 	label var ietr_eval "Evaluación global de experiencia digital (0-100)"
 
-	* (H) Índice final IETR
+	* --> CÁLCULO FINAL IETR
 	egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ///
 							  ietr_problem ietr_limits ietr_speed ///
-							  ietr_eval)
-	label var ietr_score "Índice de Experiencia Transaccional en Remesas (0-100)"
+							  ietr_surcharge ietr_clarity ietr_eval)
+	label var ietr_score "Índice de Experiencia Transaccional en Remesas/Pagos (0-100)"
 
 	gen ietr_score_01 = ietr_score/100
 	label var ietr_score_01 "IETR normalizado (0-1)"
 
-	egen ietr_score_std = std(ietr_score)
-	label var ietr_score_std "IETR estandarizado"
-
-	* Categorización
+	* Categorización IETR
 	gen ietr_cat = .
 	replace ietr_cat = 1 if ietr_score < 40
 	replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70
 	replace ietr_cat = 3 if ietr_score >= 70
-
-	label define ietr_cat_lbl 1 "Mala experiencia" ///
-							  2 "Experiencia regular" ///
-							  3 "Buena experiencia"
+	label define ietr_cat_lbl 1 "Mala experiencia" 2 "Experiencia regular" 3 "Buena experiencia"
 	label values ietr_cat ietr_cat_lbl
 	label var ietr_cat "Categoría IETR"
+
+
+
+
 
 
 /******************************************************************************

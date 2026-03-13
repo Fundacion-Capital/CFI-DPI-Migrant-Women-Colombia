@@ -520,6 +520,85 @@ restore
 *3.7 Remittances: channels, formalization, intensity, and user experience — IURD & IETR
 
 
+* FIGURE: REMITTANCE CHANNEL SPLIT (q6_4)
+preserve
+
+* Etiquetas asumiendo las opciones de tu jefe (ajusta según tu choices)
+label define channel_lab 1 "Bank account" 2 "Digital Wallet" 3 "Cash (Remittance house)" 4 "Traveler/Friend" 5 "Other"
+capture label values q6_4 channel_lab
+
+* Calcular porcentajes
+tempvar count total pct
+gen `count' = 1
+egen `total' = total(`count') if q6_4 != .
+egen `pct' = total(`count' / `total' * 100), by(q6_4)
+
+* Colapsar para graficar
+collapse (mean) `pct', by(q6_4)
+drop if q6_4 == .
+
+* Formato de etiquetas
+gen pct_lab = string(`pct', "%2.1f") + "%"
+
+* Gráfico
+twoway (bar `pct' q6_4, barwidth(0.6) color("58 103 177%90")) ///
+       (scatter `pct' q6_4, mlabel(pct_lab) mlabpos(12) mlabsize(vsmall) mcolor(none) mlabcolor(black)), ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(0(10)40, labsize(small) nogrid) ///  <-- Tope ajustado a 40
+    yscale(range(0 45)) ///                     <-- Margen superior ajustado a 45
+    xlabel(1 "Bank" 2 "Wallet" 3 "Cash" 4 "Traveler" 5 "Other", labsize(small)) ///
+    xtitle("Latest remittance channel used", size(small)) ///
+    legend(off) ///
+    graphregion(color(white)) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig24_remittance_channels.png", replace
+restore
+
+
+* FIGURE: IETR DISTRIBUTION (Histogram + KDensity)
+
+twoway (hist ietr_score_01, width(0.05) start(0) color("120 120 120%60") lcolor(white)) ///
+       (kdensity ietr_score_01, lcolor("58 103 177") lwidth(medium)), ///
+    title("", size(medium)) ///
+    xtitle("Transactional Experience Index (IETR)", size(small)) ///
+    ytitle("Density", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    legend(off) ///
+    graphregion(color(white)) scheme(plotplain)
+
+graph export "${output_dir}/fig25_ietr_distrib.png", replace
+
+
+
+* FIGURE: IURD x IFO/OQI CROSS-TAB (Stacked Bars)
+
+* 1. Definir etiquetas en inglés para que se vea bien en el gráfico
+label define oqi_eng 1 "High friction" 2 "Mid friction" 3 "Low friction", replace
+label values oqi_cat oqi_eng
+
+label define iurd_eng 1 "Low Intensity" 2 "Mid Intensity" 3 "High Intensity", replace
+label values iurd_cat iurd_eng
+
+* 2. Gráfico de barras apiladas al 100%
+graph bar, over(iurd_cat) over(oqi_cat, label(labsize(vsmall))) asyvars stack ///
+    percent ///
+    bar(1, color("245 130 48%80")) /// Naranja para baja intensidad
+    bar(2, color("167 169 172%80")) /// Gris para media intensidad
+    bar(3, color("58 103 177%80")) /// Azul para alta intensidad
+    blabel(bar, pos(center) format(%4.0f) color(white) size(1.8)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    b1title("Onboarding Quality (IFO)", size(small)) ///
+    legend(title("Remittance Intensity (IURD)", size(vsmall)) pos(3) cols(1) size(vsmall) region(lcolor(none))) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    scheme(plotplain)
+
+graph export "${output_dir}/fig26_iurd_by_ifo.png", replace
+
+
+
+
+
 
 *3.8 Fraud, safety behaviors, and recourse — IPCS & IEDF
 
