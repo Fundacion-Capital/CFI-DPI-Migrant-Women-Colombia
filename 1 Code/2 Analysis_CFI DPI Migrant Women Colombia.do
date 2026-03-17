@@ -609,14 +609,14 @@ graph export "${output_dir}/fig26_iurd_by_ifo.png", replace
 * dependiendo de si estuvieron expuestas a fraude (q7_1)
 * ====================================================================
 preserve
-
+*drop if inlist(q5_2, "6", "98")
 * 1. Dejar solo respuestas válidas
-drop if q7_1 == 3 | q7_1 == 98 | q7_1 == . 
-drop if q7_9 == 98 | q7_9 == .
+*drop if q7_1 == 3 | q7_1 == 98 | q7_1 == . 
+*drop if q7_9 == 98 | q7_9 == .
 
 * 2. Crear variable de exposición
 gen exposed_fraud = 0
-replace exposed_fraud = 1 if inlist(q7_1, 1, 2)
+replace exposed_fraud = 1 if inlist(q7_5, 1, 2,3)
 label define exp_lab 0 "Not exposed" 1 "Exposed to fraud"
 label values exposed_fraud exp_lab
 
@@ -716,6 +716,7 @@ restore
 
 
 
+* Satisfacción - experiencia de fraude
 
 * ====================================================================
 * OUTPUT 3 (Sugerido): Figure - Satisfaction with resolution (q7_15)

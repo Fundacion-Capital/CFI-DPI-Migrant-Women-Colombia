@@ -1618,10 +1618,12 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 3.7 REMESAS: CANALES, INTENSIDAD Y EXPERIENCIA DEL USUARIO 
     (IURD & IETR) - Section D            
 *******************************************************************************/
+* q6_13 cambiar a 0 a 100  
+* high intensity verificar umbrales de categorías
 
 	* ==========================================================================
 	* BLOQUE A: VARIABLES DESCRIPTIVAS (No entran en índices)
-	* (q6_4, q6_5, q6_7, q6_12)
+	* (q6_4,  -> entrega 
 	* ==========================================================================
 
 
@@ -1653,6 +1655,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var iurd_recent "Uso reciente de pagos/remesas digitales (0-100)"
 
 	* 4. Número de operaciones digitales – q6_15
+
 	gen iurd_ops = .
 	replace iurd_ops = 20  if q6_15==1
 	replace iurd_ops = 40  if q6_15==2
