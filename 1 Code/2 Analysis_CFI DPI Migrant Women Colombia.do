@@ -87,6 +87,14 @@ kdensity years_in_col, ///
 	scheme(plotplain)
 graph export "${output_dir}/fig3_density_years_in_col.png", replace
 
+twoway (histogram years_in_col, percent discrete width(1) color("58 103 177") lcolor(white)), ///
+    title("") ///
+    xtitle("Years in Colombia", size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(, labsize(small) nogrid) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    legend(off) scheme(plotplain)
+graph export "${output_dir}/fig3_porcentage_years_in_col.png", replace
 
 	*Education
 graph hbar (percent), over(q2_2) ///
@@ -123,7 +131,15 @@ twoway (hist ivs_score, width(0.05) color(gray%50) lcolor(white)) ///
 	scheme(plotplain)
 graph export "${output_dir}/fig6_ivs_distribution_apa.png", replace
 
+twoway (histogram ivs_score, percent width(0.05) start(0) color("58 103 177%90") lcolor(white)), ///
+    xtitle("Socioeconomic Vulnerability Index (0-1)", size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    ylabel(, labsize(small) nogrid) ///
+    legend(off) ///
+    graphregion(color(white)) plotregion(color(white)) ///
+    scheme(plotplain)
 
+graph export "${output_dir}/fig6_ivs_distribution_porcentage.png", replace
 
 *IVS x City
 graph bar, over(ivs_cat) over(q3) stack asyvars percent ///
@@ -523,7 +539,7 @@ restore
 * FIGURE: REMITTANCE CHANNEL SPLIT (q6_4)
 preserve
 
-* Etiquetas asumiendo las opciones de tu jefe (ajusta según tu choices)
+* Etiquetas 
 label define channel_lab 1 "Bank account" 2 "Digital Wallet" 3 "Cash (Remittance house)" 4 "Traveler/Friend" 5 "Other"
 capture label values q6_4 channel_lab
 

@@ -1498,7 +1498,6 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* PARTE A: "Rails" awareness/usage (Insumo para la Figura solicitada)
 	* -------------------------------------------------------------------------
 
-
 	* Uso de QR en los últimos 30 días – q5_4
 	gen qr_usage = .
 	replace qr_usage = 1 if q5_4 == 1
@@ -1513,7 +1512,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* -------------------------------------------------------------------------
 	* PARTE C: Onboarding Quality Index (OQI - Antes IFO)
-	* (Nota del jefe: "higher = better onboarding performance")
+	* (Nota: "higher = better onboarding performance")
 	* -------------------------------------------------------------------------
 
 	* 1. Requisitos KYC (menos = mejor) – q5_13_*
@@ -1618,13 +1617,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 3.7 REMESAS: CANALES, INTENSIDAD Y EXPERIENCIA DEL USUARIO 
     (IURD & IETR) - Section D            
 *******************************************************************************/
-* q6_13 cambiar a 0 a 100  
-* high intensity verificar umbrales de categorías
 
-	* ==========================================================================
-	* BLOQUE A: VARIABLES DESCRIPTIVAS (No entran en índices)
-	* (q6_4,  -> entrega 
-	* ==========================================================================
 
 
 	* ==========================================================================
@@ -1642,10 +1635,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* 2. Proporción digital de la remesa – q6_13
 	gen iurd_digital = .
 	replace iurd_digital = 0   if q6_13==1
-	replace iurd_digital = 25  if q6_13==2
-	replace iurd_digital = 50  if q6_13==3
-	replace iurd_digital = 75  if q6_13==4
-	replace iurd_digital = 100 if q6_13==5
+	replace iurd_digital = 100  if inlist(q6_13,2,3,4,5)
 	label var iurd_digital "Proporción de remesa usada digitalmente (0-100)"
 
 	* 3. Uso reciente de pagos/remesas digitales – q6_14
@@ -1664,8 +1654,14 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	replace iurd_ops = 100 if q6_15==5
 	label var iurd_ops "Volumen de operaciones digitales (0-100)"
 
-	* --> CÁLCULO FINAL IURD
-	egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital)
+	* 5. Canal de recepción de la remesa más reciente – q6_4
+	gen iurd_canal = .
+	replace iurd_canal = 100 if inlist(q6_4, 1, 2)   // Digital: Cuenta bancaria o Billetera/App
+	replace iurd_canal = 0   if inlist(q6_4, 3, 4, 5) // Físico/Efectivo: Ventanilla, viajero, otro
+	label var iurd_canal "Canal digital de recepción de remesa (0-100)"
+
+	* --> CÁLCULO FINAL IURD (Actualizado con iurd_canal)
+	egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital iurd_canal)
 	label var iurd_score "Índice de Intensidad de Uso de Remesas Digitales (0-100)"
 
 	gen iurd_score_01 = iurd_score/100
@@ -1673,9 +1669,9 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Categorización IURD
 	gen iurd_cat = .
-	replace iurd_cat = 1 if iurd_score < 45
-	replace iurd_cat = 2 if iurd_score >= 45 & iurd_score < 85
-	replace iurd_cat = 3 if iurd_score >= 85
+	replace iurd_cat = 1 if iurd_score < 30
+	replace iurd_cat = 2 if iurd_score >= 30 & iurd_score < 55
+	replace iurd_cat = 3 if iurd_score >= 55
 	label define iurd_cat_lbl 1 "Baja intensidad" 2 "Intensidad media" 3 "Alta intensidad"
 	label values iurd_cat iurd_cat_lbl
 	label var iurd_cat "Categoría IURD"
@@ -1893,7 +1889,6 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	label var e2_insatisfaccion "Insatisfacción con la resolución del problema"
 
 	* IEDF: promedio y normalización 0–100
-	* Nota: Stata maneja los missing values en rowmean automáticamente. 
 	* Quien no tuvo problemas (q7_11=2) tendrá missing en demora, no_resuelto e insatisfaccion, 
 	* por lo que su promedio bajará gracias al "0" en e2_problema, lo cual es matemáticamente correcto.
 	egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema ///
