@@ -417,6 +417,16 @@ twoway (hist iuof_score_01, width(0.05) start(0) color("120 120 120%60") lcolor(
     graphregion(color(white)) scheme(plotplain)
 graph export "${output_dir}/fig19_iuof_distrib.png", replace
 
+twoway (histogram iuof_score_01, percent width(0.05) start(0) color("58 103 177%90") lcolor(white)), ///
+    title("") ///
+    xtitle("Financial Usage and Operability Index Score (0-1)", size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    ylabel(, labsize(small) nogrid) ///
+    legend(off) ///
+    graphregion(color(white)) 
+
+graph export "${output_dir}/fig19_iuof_distrib_porcentage.png", replace
 
 
 * --- Gráfico 2: IUOF por Terciles de IAFF (Cruce solicitado) ---
@@ -586,6 +596,16 @@ twoway (hist ietr_score_01, width(0.05) start(0) color("120 120 120%60") lcolor(
 graph export "${output_dir}/fig25_ietr_distrib.png", replace
 
 
+twoway (histogram ietr_score_01, percent width(0.05) start(0) color("58 103 177%90") lcolor(white)), ///
+    title("") ///
+    xtitle("Transactional Experience Index (IETR)", size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    ylabel(, labsize(small) nogrid) ///
+    legend(off) ///
+    graphregion(color(white)) scheme(plotplain)
+
+graph export "${output_dir}/fig25_ietr_distrib_porcentage.png", replace
 
 * FIGURE: IURD x IFO/OQI CROSS-TAB (Stacked Bars)
 
@@ -792,6 +812,22 @@ twoway (hist iaer_01, width(0.05) start(0) color("120 120 120%60") lcolor(white)
 graph export "${output_dir}/fig31_iaer_distribution.png", replace
 restore
 
+* Figura 30/31: Distribution of Economic Autonomy in Remittances (IAER)
+preserve
+drop if IAER == .
+gen iaer_01 = IAER / 100
+
+twoway (histogram iaer_01, percent width(0.05) start(0) color("58 103 177%90") lcolor(white)), ///
+    title("Distribution of Economic Autonomy in Remittances (IAER)", size(medium) color(black)) ///
+    xtitle("Autonomy Index Score (0-1)", size(small)) ///
+    ytitle("Percentage (%)", size(small)) ///
+    xlabel(0(0.2)1, labsize(small)) ///
+    ylabel(, labsize(small) nogrid) ///
+    legend(off) ///
+    graphregion(color(white))
+
+graph export "${output_dir}/fig31_iaer_porcentage.png", replace
+restore
 
 * ====================================================================
 * OUTPUT 3.9B: Figure - Mean IAER (0-1) by Digital Use (IURD) with CI
