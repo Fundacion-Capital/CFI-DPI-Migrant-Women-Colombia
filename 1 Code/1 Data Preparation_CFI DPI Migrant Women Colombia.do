@@ -2219,7 +2219,7 @@ screeplot
 
 
 
-save "${output_dir}/CFI_DPI Data for analysis.dta", replace	
+save "${input_dir}/3 Coded/CFI_DPI Data for analysis.dta", replace	
 
-save "${output_dir}/CFI_DPI Data for analysis_NoPII.dta", replace
+save "${input_dir}/3 Coded/CFI_DPI Data for analysis_NoPII.dta", replace
 
