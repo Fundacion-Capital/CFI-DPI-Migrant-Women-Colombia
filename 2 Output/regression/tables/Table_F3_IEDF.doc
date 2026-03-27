@@ -1,0 +1,44 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3312\clbrdrt\brdrs\cellx4896\clbrdrt\brdrs\cellx6480\clbrdrt\brdrs\cellx8064
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4896\cellx6480\cellx8064
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx6480\clbrdrb\brdrs\cellx8064
+\ql VARIABLES\cell\qc Model A\cell\qc Model B\cell\qc Model C\cell\qc Model D\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4896\cellx6480\cellx8064
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql 2.age_cat\cell\qc -1.791\cell\qc -1.446\cell\qc -1.485\cell\qc -2.001\cell\row
+\ql \cell\qc (3.278)\cell\qc (3.130)\cell\qc (3.140)\cell\qc (3.060)\cell\row
+\ql 3.age_cat\cell\qc -4.621\cell\qc -5.967*\cell\qc -6.078*\cell\qc -7.980**\cell\row
+\ql \cell\qc (3.599)\cell\qc (3.461)\cell\qc (3.506)\cell\qc (3.477)\cell\row
+\ql 4.age_cat\cell\qc -8.098\cell\qc -7.715\cell\qc -8.032\cell\qc -12.309\cell\row
+\ql \cell\qc (7.212)\cell\qc (7.583)\cell\qc (7.605)\cell\qc (7.562)\cell\row
+\ql 2.q3\cell\qc 1.387\cell\qc 2.340\cell\qc 2.314\cell\qc 1.402\cell\row
+\ql \cell\qc (4.465)\cell\qc (4.674)\cell\qc (4.680)\cell\qc (4.446)\cell\row
+\ql 3.q3\cell\qc -0.160\cell\qc 4.472\cell\qc 4.590\cell\qc 6.810**\cell\row
+\ql \cell\qc (2.786)\cell\qc (2.924)\cell\qc (2.904)\cell\qc (2.940)\cell\row
+\ql 4.q3\cell\qc -7.449**\cell\qc -2.776\cell\qc -2.534\cell\qc -1.923\cell\row
+\ql \cell\qc (3.445)\cell\qc (3.582)\cell\qc (3.611)\cell\qc (3.630)\cell\row
+\ql ivs_score\cell\qc \cell\qc -10.066\cell\qc -9.969\cell\qc -7.655\cell\row
+\ql \cell\qc \cell\qc (8.253)\cell\qc (8.227)\cell\qc (8.167)\cell\row
+\ql iat_score\cell\qc \cell\qc -26.647***\cell\qc -26.941***\cell\qc -26.147***\cell\row
+\ql \cell\qc \cell\qc (9.778)\cell\qc (9.806)\cell\qc (9.673)\cell\row
+\ql iadt_score\cell\qc \cell\qc -28.586***\cell\qc -29.037***\cell\qc -30.519***\cell\row
+\ql \cell\qc \cell\qc (7.369)\cell\qc (7.475)\cell\qc (7.533)\cell\row
+\ql icdp_score\cell\qc \cell\qc 31.966***\cell\qc 31.203***\cell\qc 28.859***\cell\row
+\ql \cell\qc \cell\qc (6.237)\cell\qc (6.555)\cell\qc (6.433)\cell\row
+\ql oqi_score_01\cell\qc \cell\qc \cell\qc 2.818\cell\qc -2.999\cell\row
+\ql \cell\qc \cell\qc \cell\qc (6.865)\cell\qc (6.953)\cell\row
+\ql IEH\cell\qc \cell\qc \cell\qc \cell\qc 0.195***\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.049)\cell\row
+\ql Constant\cell\qc 31.241***\cell\qc 53.011***\cell\qc 52.066***\cell\qc 48.844***\cell\row
+\ql \cell\qc (3.001)\cell\qc (10.512)\cell\qc (10.604)\cell\qc (10.575)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 423\cell\qc 423\cell\qc 423\cell\qc 423\cell\row
+\ql R-squared\cell\qc 0.018\cell\qc 0.109\cell\qc 0.109\cell\qc 0.142\cell\row
+\ql City FE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4896\clbrdrb\brdrs\cellx6480\clbrdrb\brdrs\cellx8064
+\ql Robust SE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

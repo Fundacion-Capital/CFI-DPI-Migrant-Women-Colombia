@@ -1,0 +1,66 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2880\clbrdrt\brdrs\cellx5616\clbrdrt\brdrs\cellx8928\clbrdrt\brdrs\cellx11952\clbrdrt\brdrs\cellx14832\clbrdrt\brdrs\cellx16704\clbrdrt\brdrs\cellx19584\clbrdrt\brdrs\cellx22896
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\qc (7)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2880\cellx5616\cellx8928\cellx11952\cellx14832\cellx16704\cellx19584\cellx22896
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2880\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx8928\clbrdrb\brdrs\cellx11952\clbrdrb\brdrs\cellx14832\clbrdrb\brdrs\cellx16704\clbrdrb\brdrs\cellx19584\clbrdrb\brdrs\cellx22896
+\ql VARIABLES\cell\qc Recent digital use\cell\qc Recent digital problem\cell\qc Fees clearly visible\cell\qc Provider info clear\cell\qc Feels secure\cell\qc Any payment problem\cell\qc High autonomy (binary)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2880\cellx5616\cellx8928\cellx11952\cellx14832\cellx16704\cellx19584\cellx22896
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql recent_digital_use\cell\qc .\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql \cell\qc (.)\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql 2.age_cat\cell\qc 0.548\cell\qc 1.073\cell\qc 1.138\cell\qc 2.634**\cell\qc 0.920\cell\qc 1.179\cell\qc 0.988\cell\row
+\ql \cell\qc (0.273)\cell\qc (0.466)\cell\qc (0.394)\cell\qc (1.049)\cell\qc (0.468)\cell\qc (0.368)\cell\qc (0.324)\cell\row
+\ql 3.age_cat\cell\qc 0.646\cell\qc 1.204\cell\qc 2.203*\cell\qc 4.345***\cell\qc 2.391\cell\qc 0.835\cell\qc 1.696\cell\row
+\ql \cell\qc (0.372)\cell\qc (0.568)\cell\qc (0.997)\cell\qc (2.403)\cell\qc (1.456)\cell\qc (0.299)\cell\qc (0.695)\cell\row
+\ql 4.age_cat\cell\qc 1.217\cell\qc 1.261\cell\qc 0.776\cell\qc 1.014\cell\qc 2.626\cell\qc \cell\qc 2.719\cell\row
+\ql \cell\qc (1.281)\cell\qc (1.710)\cell\qc (0.671)\cell\qc (1.385)\cell\qc (4.484)\cell\qc \cell\qc (1.892)\cell\row
+\ql 2.q3\cell\qc 0.246***\cell\qc 1.841\cell\qc 0.689\cell\qc 0.893\cell\qc 0.728\cell\qc 0.820\cell\qc 0.222***\cell\row
+\ql \cell\qc (0.126)\cell\qc (0.886)\cell\qc (0.321)\cell\qc (0.484)\cell\qc (0.550)\cell\qc (0.341)\cell\qc (0.083)\cell\row
+\ql 3.q3\cell\qc 0.396*\cell\qc 0.643\cell\qc 0.868\cell\qc 2.911\cell\qc 0.850\cell\qc 0.605\cell\qc 0.385**\cell\row
+\ql \cell\qc (0.188)\cell\qc (0.312)\cell\qc (0.446)\cell\qc (1.998)\cell\qc (0.541)\cell\qc (0.257)\cell\qc (0.152)\cell\row
+\ql 4.q3\cell\qc 0.612\cell\qc 3.362*\cell\qc 0.236***\cell\qc 0.495\cell\qc 0.449\cell\qc 1.153\cell\qc 0.906\cell\row
+\ql \cell\qc (0.355)\cell\qc (2.298)\cell\qc (0.122)\cell\qc (0.290)\cell\qc (0.249)\cell\qc (0.531)\cell\qc (0.412)\cell\row
+\ql ivs_score\cell\qc 1.557\cell\qc 0.458\cell\qc 0.182\cell\qc 2.434\cell\qc 0.180\cell\qc 1.063\cell\qc 0.200\cell\row
+\ql \cell\qc (2.311)\cell\qc (0.687)\cell\qc (0.225)\cell\qc (3.212)\cell\qc (0.248)\cell\qc (0.953)\cell\qc (0.228)\cell\row
+\ql iat_score\cell\qc 5.513\cell\qc 0.239\cell\qc 1.565\cell\qc 1.641\cell\qc 387.441***\cell\qc 0.036***\cell\qc \cell\row
+\ql \cell\qc (7.875)\cell\qc (0.344)\cell\qc (1.994)\cell\qc (2.740)\cell\qc (682.127)\cell\qc (0.038)\cell\qc \cell\row
+\ql icdp_score\cell\qc 1.411\cell\qc 78.785***\cell\qc 0.167*\cell\qc 0.081**\cell\qc 2.261\cell\qc 80.741***\cell\qc \cell\row
+\ql \cell\qc (1.241)\cell\qc (120.007)\cell\qc (0.171)\cell\qc (0.097)\cell\qc (2.290)\cell\qc (86.677)\cell\qc \cell\row
+\ql iaff_score\cell\qc 1.428\cell\qc 0.058***\cell\qc 0.267**\cell\qc 0.203*\cell\qc \cell\qc \cell\qc 1.416\cell\row
+\ql \cell\qc (1.202)\cell\qc (0.048)\cell\qc (0.179)\cell\qc (0.184)\cell\qc \cell\qc \cell\qc (0.927)\cell\row
+\ql oqi_score_01\cell\qc 75.035***\cell\qc 0.024***\cell\qc 68.950***\cell\qc 39.815***\cell\qc 121.854***\cell\qc 0.040***\cell\qc \cell\row
+\ql \cell\qc (83.055)\cell\qc (0.034)\cell\qc (80.663)\cell\qc (51.814)\cell\qc (130.735)\cell\qc (0.036)\cell\qc \cell\row
+\ql IEDF\cell\qc 0.994\cell\qc 1.093***\cell\qc \cell\qc \cell\qc 1.008\cell\qc \cell\qc 0.989*\cell\row
+\ql \cell\qc (0.009)\cell\qc (0.014)\cell\qc \cell\qc \cell\qc (0.009)\cell\qc \cell\qc (0.006)\cell\row
+\ql IEH\cell\qc 1.012\cell\qc 1.014*\cell\qc 1.039***\cell\qc 1.050***\cell\qc 1.011\cell\qc 1.015***\cell\qc 0.995\cell\row
+\ql \cell\qc (0.009)\cell\qc (0.008)\cell\qc (0.008)\cell\qc (0.011)\cell\qc (0.010)\cell\qc (0.005)\cell\qc (0.007)\cell\row
+\ql digital_problem\cell\qc \cell\qc .\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc (.)\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql fee_visible\cell\qc \cell\qc \cell\qc .\cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc (.)\cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql provider_info_clear\cell\qc \cell\qc \cell\qc \cell\qc .\cell\qc \cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc (.)\cell\qc \cell\qc \cell\qc \cell\row
+\ql feels_secure\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc .\cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc (.)\cell\qc \cell\qc \cell\row
+\ql any_payment_problem\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc .\cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc (.)\cell\qc \cell\row
+\ql 4o.age_cat\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc -\cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql high_autonomy\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc .\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc (.)\cell\row
+\ql iurd_score_01\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc 0.889\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc (0.693)\cell\row
+\ql ICPF\cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc 1.061***\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc (0.009)\cell\row
+\ql Constant\cell\qc 0.090\cell\qc 0.143\cell\qc 0.327\cell\qc 0.234\cell\qc 0.005***\cell\qc 0.630\cell\qc 0.496\cell\row
+\ql \cell\qc (0.173)\cell\qc (0.270)\cell\qc (0.605)\cell\qc (0.402)\cell\qc (0.009)\cell\qc (0.767)\cell\qc (0.591)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 413\cell\qc 360\cell\qc 336\cell\qc 368\cell\qc 423\cell\qc 391\cell\qc 423\cell\row
+\ql City FE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\ql Robust SE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2880\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx8928\clbrdrb\brdrs\cellx11952\clbrdrb\brdrs\cellx14832\clbrdrb\brdrs\cellx16704\clbrdrb\brdrs\cellx19584\clbrdrb\brdrs\cellx22896
+\ql Estimator\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\row
+\pard\qc
+Robust seeform in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

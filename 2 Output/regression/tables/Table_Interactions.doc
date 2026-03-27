@@ -1,55 +1,61 @@
 {\rtf1\fs24
-\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx9072\clbrdrt\brdrs\cellx14112\clbrdrt\brdrs\cellx19152\clbrdrt\brdrs\cellx22464\clbrdrt\brdrs\cellx25776
-\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
-\trowd\trgaph75\trleft-75\trqc\cellx4032\cellx9072\cellx14112\cellx19152\cellx22464\cellx25776
-\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx9072\clbrdrb\brdrs\cellx14112\clbrdrb\brdrs\cellx19152\clbrdrb\brdrs\cellx22464\clbrdrb\brdrs\cellx25776
-\ql VARIABLES\cell\qc I2: Years x IAFF -> Formal channel\cell\qc I2: Years x IAFF -> Formal channel\cell\qc I2: Years x IAFF -> Formal channel\cell\qc I3: ICDP x OQI -> IETR\cell\qc I3: ICDP x OQI -> IETR\cell\row
-\trowd\trgaph75\trleft-75\trqc\cellx4032\cellx9072\cellx14112\cellx19152\cellx22464\cellx25776
-\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
-\ql formal_remittance\cell\qc .\cell\qc .\cell\qc .\cell\qc \cell\qc \cell\row
-\ql \cell\qc (.)\cell\qc (.)\cell\qc (.)\cell\qc \cell\qc \cell\row
-\ql 2.age_cat\cell\qc 0.704\cell\qc 0.704\cell\qc 0.704\cell\qc 0.010\cell\qc 0.010\cell\row
-\ql \cell\qc (0.204)\cell\qc (0.204)\cell\qc (0.204)\cell\qc (0.015)\cell\qc (0.015)\cell\row
-\ql 3.age_cat\cell\qc 0.744\cell\qc 0.744\cell\qc 0.744\cell\qc 0.018\cell\qc 0.018\cell\row
-\ql \cell\qc (0.242)\cell\qc (0.242)\cell\qc (0.242)\cell\qc (0.017)\cell\qc (0.017)\cell\row
-\ql 4.age_cat\cell\qc 0.499\cell\qc 0.499\cell\qc 0.499\cell\qc -0.015\cell\qc -0.015\cell\row
-\ql \cell\qc (0.353)\cell\qc (0.353)\cell\qc (0.353)\cell\qc (0.033)\cell\qc (0.033)\cell\row
-\ql 2.q3\cell\qc 0.489**\cell\qc 0.489**\cell\qc 0.489**\cell\qc 0.060***\cell\qc 0.060***\cell\row
-\ql \cell\qc (0.178)\cell\qc (0.178)\cell\qc (0.178)\cell\qc (0.021)\cell\qc (0.021)\cell\row
-\ql 3.q3\cell\qc 0.799\cell\qc 0.799\cell\qc 0.799\cell\qc 0.050**\cell\qc 0.050**\cell\row
-\ql \cell\qc (0.263)\cell\qc (0.263)\cell\qc (0.263)\cell\qc (0.022)\cell\qc (0.022)\cell\row
-\ql 4.q3\cell\qc 0.544\cell\qc 0.544\cell\qc 0.544\cell\qc 0.018\cell\qc 0.018\cell\row
-\ql \cell\qc (0.203)\cell\qc (0.203)\cell\qc (0.203)\cell\qc (0.026)\cell\qc (0.026)\cell\row
-\ql years_in_col\cell\qc 1.338*\cell\qc 1.338*\cell\qc 1.338*\cell\qc \cell\qc \cell\row
-\ql \cell\qc (0.208)\cell\qc (0.208)\cell\qc (0.208)\cell\qc \cell\qc \cell\row
-\ql iaff_score\cell\qc 22.790**\cell\qc 22.790**\cell\qc 22.790**\cell\qc 0.034\cell\qc 0.034\cell\row
-\ql \cell\qc (32.154)\cell\qc (32.154)\cell\qc (32.154)\cell\qc (0.032)\cell\qc (0.032)\cell\row
-\ql c.years_in_col#c.iaff_score\cell\qc 0.662*\cell\qc 0.662*\cell\qc 0.662*\cell\qc \cell\qc \cell\row
-\ql \cell\qc (0.140)\cell\qc (0.140)\cell\qc (0.140)\cell\qc \cell\qc \cell\row
-\ql iat_score\cell\qc 3.268\cell\qc 3.268\cell\qc 3.268\cell\qc \cell\qc \cell\row
-\ql \cell\qc (3.112)\cell\qc (3.112)\cell\qc (3.112)\cell\qc \cell\qc \cell\row
-\ql icdp_score\cell\qc 4.368**\cell\qc 4.368**\cell\qc 4.368**\cell\qc -0.094\cell\qc -0.094\cell\row
-\ql \cell\qc (3.180)\cell\qc (3.180)\cell\qc (3.180)\cell\qc (0.145)\cell\qc (0.145)\cell\row
-\ql oqi_score_01\cell\qc 0.736\cell\qc 0.736\cell\qc 0.736\cell\qc 0.287**\cell\qc 0.287**\cell\row
-\ql \cell\qc (0.556)\cell\qc (0.556)\cell\qc (0.556)\cell\qc (0.145)\cell\qc (0.145)\cell\row
-\ql IEH\cell\qc 1.007\cell\qc 1.007\cell\qc 1.007\cell\qc 0.001***\cell\qc 0.001***\cell\row
-\ql \cell\qc (0.005)\cell\qc (0.005)\cell\qc (0.005)\cell\qc (0.000)\cell\qc (0.000)\cell\row
-\ql c.icdp_score#c.oqi_score_01\cell\qc \cell\qc \cell\qc \cell\qc 0.045\cell\qc 0.045\cell\row
-\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.191)\cell\qc (0.191)\cell\row
-\ql ivs_score\cell\qc \cell\qc \cell\qc \cell\qc -0.022\cell\qc -0.022\cell\row
-\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.048)\cell\qc (0.048)\cell\row
-\ql IEDF\cell\qc \cell\qc \cell\qc \cell\qc -0.001*\cell\qc -0.001*\cell\row
-\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.000)\cell\qc (0.000)\cell\row
-\ql Constant\cell\qc 0.033***\cell\qc 0.033***\cell\qc 0.033***\cell\qc 0.493***\cell\qc 0.493***\cell\row
-\ql \cell\qc (0.040)\cell\qc (0.040)\cell\qc (0.040)\cell\qc (0.112)\cell\qc (0.112)\cell\row
-\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
-\ql Observations\cell\qc 402\cell\qc 402\cell\qc 402\cell\qc 423\cell\qc 423\cell\row
-\ql R-squared\cell\qc \cell\qc \cell\qc \cell\qc 0.238\cell\qc 0.238\cell\row
-\ql City FE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
-\ql Robust SE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
-\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx9072\clbrdrb\brdrs\cellx14112\clbrdrb\brdrs\cellx19152\clbrdrb\brdrs\cellx22464\clbrdrb\brdrs\cellx25776
-\ql Estimator\cell\qc Logit OR\cell\qc Logit OR\cell\qc Logit OR\cell\qc \cell\qc \cell\row
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx7200\clbrdrt\brdrs\cellx12240\clbrdrt\brdrs\cellx15552\clbrdrt\brdrs\cellx19008
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx4032\cellx7200\cellx12240\cellx15552\cellx19008
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx7200\clbrdrb\brdrs\cellx12240\clbrdrb\brdrs\cellx15552\clbrdrb\brdrs\cellx19008
+\ql VARIABLES\cell\qc I1: IVS x IAT -> IURD\cell\qc I2: Years x IAFF -> Formal channel\cell\qc I3: ICDP x OQI -> IETR\cell\qc I4: IEDF x ICPF -> IURD\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx4032\cellx7200\cellx12240\cellx15552\cellx19008
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql 2.age_cat\cell\qc -0.067***\cell\qc 0.704\cell\qc 0.010\cell\qc -0.066***\cell\row
+\ql \cell\qc (0.022)\cell\qc (0.204)\cell\qc (0.015)\cell\qc (0.022)\cell\row
+\ql 3.age_cat\cell\qc -0.057**\cell\qc 0.744\cell\qc 0.018\cell\qc -0.056**\cell\row
+\ql \cell\qc (0.025)\cell\qc (0.242)\cell\qc (0.017)\cell\qc (0.025)\cell\row
+\ql 4.age_cat\cell\qc -0.032\cell\qc 0.499\cell\qc -0.015\cell\qc -0.026\cell\row
+\ql \cell\qc (0.052)\cell\qc (0.353)\cell\qc (0.033)\cell\qc (0.054)\cell\row
+\ql 2.q3\cell\qc -0.077**\cell\qc 0.489**\cell\qc 0.060***\cell\qc -0.076**\cell\row
+\ql \cell\qc (0.030)\cell\qc (0.178)\cell\qc (0.021)\cell\qc (0.030)\cell\row
+\ql 3.q3\cell\qc -0.095***\cell\qc 0.799\cell\qc 0.050**\cell\qc -0.095***\cell\row
+\ql \cell\qc (0.033)\cell\qc (0.263)\cell\qc (0.022)\cell\qc (0.034)\cell\row
+\ql 4.q3\cell\qc -0.108***\cell\qc 0.544\cell\qc 0.018\cell\qc -0.105***\cell\row
+\ql \cell\qc (0.035)\cell\qc (0.203)\cell\qc (0.026)\cell\qc (0.035)\cell\row
+\ql ivs_score\cell\qc -0.302\cell\qc \cell\qc -0.022\cell\qc -0.228***\cell\row
+\ql \cell\qc (0.259)\cell\qc \cell\qc (0.048)\cell\qc (0.067)\cell\row
+\ql iat_score\cell\qc 0.025\cell\qc 3.268\cell\qc \cell\qc 0.085\cell\row
+\ql \cell\qc (0.224)\cell\qc (3.112)\cell\qc \cell\qc (0.080)\cell\row
+\ql c.ivs_score#c.iat_score\cell\qc 0.100\cell\qc \cell\qc \cell\qc \cell\row
+\ql \cell\qc (0.335)\cell\qc \cell\qc \cell\qc \cell\row
+\ql icdp_score\cell\qc 0.163***\cell\qc 4.368**\cell\qc -0.094\cell\qc 0.163***\cell\row
+\ql \cell\qc (0.059)\cell\qc (3.180)\cell\qc (0.145)\cell\qc (0.059)\cell\row
+\ql iaff_score\cell\qc 0.107**\cell\qc 22.790**\cell\qc 0.034\cell\qc 0.113**\cell\row
+\ql \cell\qc (0.045)\cell\qc (32.154)\cell\qc (0.032)\cell\qc (0.046)\cell\row
+\ql oqi_score_01\cell\qc 0.150*\cell\qc 0.736\cell\qc 0.287**\cell\qc 0.149*\cell\row
+\ql \cell\qc (0.077)\cell\qc (0.556)\cell\qc (0.145)\cell\qc (0.077)\cell\row
+\ql IEDF\cell\qc 0.000\cell\qc \cell\qc -0.001*\cell\qc 0.001\cell\row
+\ql \cell\qc (0.000)\cell\qc \cell\qc (0.000)\cell\qc (0.001)\cell\row
+\ql IEH\cell\qc 0.001*\cell\qc 1.007\cell\qc 0.001***\cell\qc 0.001*\cell\row
+\ql \cell\qc (0.000)\cell\qc (0.005)\cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql formal_remittance\cell\qc \cell\qc .\cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc (.)\cell\qc \cell\qc \cell\row
+\ql years_in_col\cell\qc \cell\qc 1.338*\cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc (0.208)\cell\qc \cell\qc \cell\row
+\ql c.years_in_col#c.iaff_score\cell\qc \cell\qc 0.662*\cell\qc \cell\qc \cell\row
+\ql \cell\qc \cell\qc (0.140)\cell\qc \cell\qc \cell\row
+\ql c.icdp_score#c.oqi_score_01\cell\qc \cell\qc \cell\qc 0.045\cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.191)\cell\qc \cell\row
+\ql ICPF\cell\qc \cell\qc \cell\qc \cell\qc 0.000\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.001)\cell\row
+\ql c.IEDF#c.ICPF\cell\qc \cell\qc \cell\qc \cell\qc -0.000\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.000)\cell\row
+\ql Constant\cell\qc 0.430**\cell\qc 0.033***\cell\qc 0.493***\cell\qc 0.354***\cell\row
+\ql \cell\qc (0.180)\cell\qc (0.040)\cell\qc (0.112)\cell\qc (0.112)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 423\cell\qc 402\cell\qc 423\cell\qc 423\cell\row
+\ql R-squared\cell\qc 0.274\cell\qc \cell\qc 0.238\cell\qc 0.276\cell\row
+\ql City FE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\ql Robust SE\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\qc Yes\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx7200\clbrdrb\brdrs\cellx12240\clbrdrb\brdrs\cellx15552\clbrdrb\brdrs\cellx19008
+\ql Estimator\cell\qc \cell\qc Logit OR\cell\qc \cell\qc \cell\row
 \pard\qc
-Robust seeform in parentheses\par
+Robust standard errors in parentheses\par
 *** p<0.01, ** p<0.05, * p<0.1\par
 }

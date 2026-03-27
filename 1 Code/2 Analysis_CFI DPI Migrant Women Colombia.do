@@ -1092,10 +1092,8 @@
 *---------------------------------------*
 *		II. Regression Analysis  		*
 *---------------------------------------*
+{
 	/*--------------------------*
-	*           INDEX           *
-	*---------------------------*
-		II.  Regression analysis
 			 1. Setup and helper variables
 			 2. Family 1: Adoption and digital intensity
 			 3. Family 2: Transaction quality and onboarding
@@ -1103,12 +1101,15 @@
 			 5. Family 4: Autonomy and financial agency
 			 6. Interaction / heterogeneity analysis
 			 7. Supplementary item-level models
-
 	*---------------------------*/
 
 	use "${input_dir}/3 Coded/CFI_DPI Data for analysis.dta", ///
 		clear
 		
+	*-----------------------*
+	*		1. Setup		*
+	*-----------------------*
+	{
 	replace q3 = 1 if q3 == 5
 
 	* 1. Setup, user-written packages, dirs *
@@ -1235,8 +1236,12 @@
 	global block_C_z "c.z_iaff c.z_oqi"
 	global block_D_z "c.z_iedf c.z_ieh"
 
-	* 2. FAMILY 1: ADOPTION, DIGITAL INTENSITY, AND FORMALIZATION              |
-
+	}
+	
+	*-----------------------------------------------------------------------*
+	*		2. FAMILY 1: ADOPTION, DIGITAL INTENSITY, AND FORMALIZATION		*
+	*-----------------------------------------------------------------------*
+	{
 	*========================================*
 	* 2.1 Outcome: IURD (digital intensity)  *
 	*========================================*/
@@ -1387,600 +1392,510 @@
 		scheme(plotplain)
 
 	graph export "${output_dir}/regression/figures/fig42_coef_iuof.png", replace
-
-
-
-/*==========================================================================*
- | 3. FAMILY 2: TRANSACTION QUALITY AND ONBOARDING                          |
- *==========================================================================*/
-
-*==========================================================*
-* 3.1 Outcome: IETR (transactional experience, OLS)        *
-*==========================================================*/
-
-eststo clear
-
-reg ietr_score_01 $demo_controls, vce(robust)
-eststo ietr_A
-outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ietr_score_01 $demo_controls $block_B, vce(robust)
-eststo ietr_B
-outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01, vce(robust)
-eststo ietr_C
-outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
-eststo ietr_D
-outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_ietr $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)
-eststo ietr_D_z
-
-coefplot (ietr_D_z, ///
-    keep(z_iat z_icdp z_iaff z_oqi z_ivs z_iedf z_ieh) ///
-    coeflabels( ///
-        z_iat  = "Digital access (IAT)" ///
-        z_icdp = "Practical digital competence (ICDP)" ///
-        z_iaff = "Formal financial access (IAFF)" ///
-        z_oqi  = "Onboarding quality (OQI)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_iedf = "Fraud exposure / recourse failure (IEDF)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`blue'") ///
-    ciopts(recast(rcap) lcolor("`blue'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig43_coef_ietr.png", replace
-
-
-*=======================================================*
-* 3.2 Outcome: OQI (onboarding quality, OLS)            *
-*=======================================================*/
-
-eststo clear
-
-reg oqi_score_01 $demo_controls, vce(robust)
-eststo oqi_A
-outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg oqi_score_01 $demo_controls $block_B, vce(robust)
-eststo oqi_B
-outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg oqi_score_01 $demo_controls $block_B c.iaff_score, vce(robust)
-eststo oqi_C
-outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg oqi_score_01 $demo_controls $block_B c.iaff_score c.IEH, vce(robust)
-eststo oqi_D
-outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_oqi $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_iaff c.z_ieh, vce(robust)
-eststo oqi_D_z
-
-coefplot (oqi_D_z, ///
-    keep(z_iat z_iadt z_icdp z_iaff z_ivs z_ieh) ///
-    coeflabels( ///
-        z_iat  = "Digital access (IAT)" ///
-        z_iadt = "Digital self-efficacy (IADT)" ///
-        z_icdp = "Practical digital competence (ICDP)" ///
-        z_iaff = "Formal financial access (IAFF)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`blue'") ///
-    ciopts(recast(rcap) lcolor("`blue'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig44_coef_oqi.png", replace
-
-
-
-/*==========================================================================*
- | 4. FAMILY 3: SAFETY, FRAUD, AND RECOURSE                                 |
- *==========================================================================*/
-
-*===============================================*
-* 4.1 Outcome: IPCS (safe conduct, OLS)         *
-*===============================================*/
-
-eststo clear
-
-reg IPCS $demo_controls, vce(robust)
-eststo ipcs_A
-outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IPCS $demo_controls $block_B, vce(robust)
-eststo ipcs_B
-outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)
-eststo ipcs_C
-outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
-eststo ipcs_D
-outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_ipcs $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)
-eststo ipcs_D_z
-
-coefplot (ipcs_D_z, ///
-    keep(z_iat z_iadt z_icdp z_oqi z_ivs z_ieh) ///
-    coeflabels( ///
-        z_iat  = "Digital access (IAT)" ///
-        z_iadt = "Digital self-efficacy (IADT)" ///
-        z_icdp = "Practical digital competence (ICDP)" ///
-        z_oqi  = "Onboarding quality (OQI)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`blue'") ///
-    ciopts(recast(rcap) lcolor("`blue'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig45_coef_ipcs.png", replace
-
-
-*=============================================================*
-* 4.2 Outcome: IEDF (fraud exposure / recourse failure, OLS)  *
-*=============================================================*/
-
-eststo clear
-
-reg IEDF $demo_controls, vce(robust)
-eststo iedf_A
-outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IEDF $demo_controls $block_B, vce(robust)
-eststo iedf_B
-outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)
-eststo iedf_C
-outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
-eststo iedf_D
-outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_iedf $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)
-eststo iedf_D_z
-
-coefplot (iedf_D_z, ///
-    keep(z_iat z_iadt z_icdp z_oqi z_ivs z_ieh) ///
-    coeflabels( ///
-        z_iat  = "Digital access (IAT)" ///
-        z_iadt = "Digital self-efficacy (IADT)" ///
-        z_icdp = "Practical digital competence (ICDP)" ///
-        z_oqi  = "Onboarding quality (OQI)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`orange'") ///
-    ciopts(recast(rcap) lcolor("`orange'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig46_coef_iedf.png", replace
-
-
-
-/*==========================================================================*
- | 5. FAMILY 4: AUTONOMY, AGENCY, AND TRUST                                 |
- *==========================================================================*/
-
-*===================================================*
-* 5.1 Outcome: IAER (autonomy, OLS)                 *
-*===================================================*/
-
-eststo clear
-
-reg IAER $demo_controls, vce(robust)
-eststo iaer_A
-outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IAER $demo_controls c.ivs_score c.iurd_score_01, vce(robust)
-eststo iaer_B
-outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF, vce(robust)
-eststo iaer_C
-outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)
-eststo iaer_D
-outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_iaer $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_icpf c.z_iedf c.z_ieh, vce(robust)
-eststo iaer_D_z
-
-coefplot (iaer_D_z, ///
-    keep(z_iurd z_icpf z_iaff z_ivs z_iedf z_ieh) ///
-    coeflabels( ///
-        z_iurd = "Digital use intensity (IURD)" ///
-        z_icpf = "Trust / relational climate (ICPF)" ///
-        z_iaff = "Formal financial access (IAFF)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_iedf = "Fraud exposure / recourse failure (IEDF)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`blue'") ///
-    ciopts(recast(rcap) lcolor("`blue'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig47_coef_iaer.png", replace
-
-
-*===================================================*
-* 5.2 Outcome: ICPF (trust / climate, OLS)          *
-*===================================================*/
-
-eststo clear
-
-reg ICPF $demo_controls, vce(robust)
-eststo icpf_A
-outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", replace ///
-    word dec(3) ctitle("Model A") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ICPF $demo_controls c.ivs_score c.iurd_score_01, vce(robust)
-eststo icpf_B
-outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
-    word dec(3) ctitle("Model B") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score, vce(robust)
-eststo icpf_C
-outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
-    word dec(3) ctitle("Model C") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.IEDF c.IEH, vce(robust)
-eststo icpf_D
-outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
-    word dec(3) ctitle("Model D") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-* Standardized model for coefficient plot
-reg z_icpf $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_iedf c.z_ieh, vce(robust)
-eststo icpf_D_z
-
-coefplot (icpf_D_z, ///
-    keep(z_iurd z_iaff z_ivs z_iedf z_ieh) ///
-    coeflabels( ///
-        z_iurd = "Digital use intensity (IURD)" ///
-        z_iaff = "Formal financial access (IAFF)" ///
-        z_ivs  = "Socioeconomic vulnerability (IVS)" ///
-        z_iedf = "Fraud exposure / recourse failure (IEDF)" ///
-        z_ieh  = "Enabling environment (IEH)") ///
-    msymbol(D) msize(medsmall) mcolor("`blue'") ///
-    ciopts(recast(rcap) lcolor("`blue'"))), ///
-    xline(0, lcolor(gs8) lpattern(dash)) ///
-    xlabel(, labsize(small)) ///
-    ylabel(, labsize(small) angle(0)) ///
-    xtitle("Standardized coefficient", size(small)) ///
-    ytitle("") ///
-    legend(off) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig48_coef_icpf.png", replace
-
-
-
-/*==========================================================================*
- | 6. INTERACTION / HETEROGENEITY ANALYSIS                                  |
- *==========================================================================*/
-
-* We use a small set of theory-driven interactions to keep the analysis focused
-* and interpretable given the available sample size.
-
-
-*=============================================================*
-* 6.1 Interaction 1: Vulnerability × Digital access -> IURD  *
-*=============================================================*/
-
-summ ivs_score, detail
-local ivs_p25 = r(p25)
-local ivs_p50 = r(p50)
-local ivs_p75 = r(p75)
-
-reg iurd_score_01 $demo_controls ///
-    c.ivs_score##c.iat_score ///
-    c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", replace ///
-    word dec(3) ctitle("I1: IVS x IAT -> IURD") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-margins, at(iat_score=(0(.1)1) ivs_score=(`ivs_p25' `ivs_p50' `ivs_p75'))
-marginsplot, ///
-    recast(line) ciopts(recast(rline)) ///
-    plot1opts(lcolor("`blue'") lwidth(medthick)) ///
-    plot2opts(lcolor("`gray'") lwidth(medthick)) ///
-    plot3opts(lcolor("`orange'") lwidth(medthick)) ///
-    title("") ///
-    xtitle("Digital access (IAT)", size(small)) ///
-    ytitle("Predicted digital use intensity (IURD)", size(small)) ///
-    legend(order(1 "Low vulnerability (p25)" 2 "Median vulnerability (p50)" 3 "High vulnerability (p75)") ///
-           rows(1) pos(6) size(small) region(lcolor(none))) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig49_interaction_iurd_ivs_iat.png", replace
-
-
-*======================================================================*
-* 6.2 Interaction 2: Years in Colombia × IAFF -> Formal remittance     *
-*======================================================================*/
-
-summ years_in_col, detail
-local years_p25 = r(p25)
-local years_p50 = r(p50)
-local years_p75 = r(p75)
-
-logit formal_remittance $demo_controls ///
-    c.years_in_col##c.iaff_score ///
-    c.iat_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
-    word dec(3) eform ctitle("I2: Years x IAFF -> Formal channel") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-margins, at(iaff_score=(.25(.25)1) years_in_col=(`years_p25' `years_p50' `years_p75')) predict(pr)
-marginsplot, ///
-    recast(line) ciopts(recast(rline)) ///
-    plot1opts(lcolor("`blue'") lwidth(medthick)) ///
-    plot2opts(lcolor("`gray'") lwidth(medthick)) ///
-    plot3opts(lcolor("`orange'") lwidth(medthick)) ///
-    title("") ///
-    xtitle("Formal financial access (IAFF)", size(small)) ///
-    ytitle("Predicted probability of formal digital remittance channel", size(small)) ///
-    legend(order(1 "Shorter tenure (p25)" 2 "Median tenure (p50)" 3 "Longer tenure (p75)") ///
-           rows(1) pos(6) size(small) region(lcolor(none))) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig50_interaction_formal_years_iaff.png", replace
-
-
-*==================================================================*
-* 6.3 Interaction 3: ICDP × OQI -> Transactional experience        *
-*==================================================================*/
-
-summ icdp_score, detail
-local icdp_p25 = r(p25)
-local icdp_p75 = r(p75)
-
-reg ietr_score_01 $demo_controls ///
-    c.icdp_score##c.oqi_score_01 ///
-    c.ivs_score c.iaff_score c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
-    word dec(3) ctitle("I3: ICDP x OQI -> IETR") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-margins, at(oqi_score_01=(0(.1)1) icdp_score=(`icdp_p25'  `icdp_p75'))
-marginsplot, ///
-    recast(line) ciopts(recast(rline)) ///
-    plot1opts(lcolor("`blue'") lwidth(medthick)) ///
-    plot2opts(lcolor("`gray'") lwidth(medthick)) ///
-    title("") ///
-    xtitle("Onboarding quality (OQI)", size(small)) ///
-    ytitle("Predicted transactional experience (IETR)", size(small)) ///
-    legend(order(1 "Low competence (p25)" 2 "High competence (p75)") ///
-           rows(1) pos(6) size(small) region(lcolor(none))) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig51_interaction_ietr_icdp_oqi.png", replace
-
-
-*==================================================================*
-* 6.4 Interaction 4: IEDF × ICPF -> IURD                           *
-*==================================================================*/
-
-summ IEDF, detail
-local iedf_p25 = r(p25)
-local iedf_p50 = r(p50)
-local iedf_p75 = r(p75)
-
-reg iurd_score_01 $demo_controls ///
-    c.IEDF##c.ICPF ///
-    c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
-    word dec(3) ctitle("I4: IEDF x ICPF -> IURD") ///
-    addtext(City FE, Yes, Robust SE, Yes)
-
-margins, at(IEDF=(0(10)100) ICPF=(25 50 75))
-marginsplot, ///
-    recast(line) ciopts(recast(rline)) ///
-    plot1opts(lcolor("`blue'") lwidth(medthick)) ///
-    plot2opts(lcolor("`gray'") lwidth(medthick)) ///
-    plot3opts(lcolor("`orange'") lwidth(medthick)) ///
-    title("") ///
-    xtitle("Fraud exposure and recourse failure (IEDF)", size(small)) ///
-    ytitle("Predicted digital use intensity (IURD)", size(small)) ///
-    legend(order(1 "Low trust climate (25)" 2 "Mid trust climate (50)" 3 "High trust climate (75)") ///
-           rows(1) pos(6) size(small) region(lcolor(none))) ///
-    graphregion(color(white)) plotregion(color(white)) ///
-    scheme(plotplain)
-
-graph export "${output_dir}/regression/figures/fig52_interaction_iurd_iedf_icpf.png", replace
-
-
-
-/*==========================================================================*
- | 7. SUPPLEMENTARY ITEM-LEVEL MODELS                                       |
- *==========================================================================*/
-
-* These models are not intended for the main body of the report tables/figures,
-* but they are useful for appendices and for interpreting the main index results.
-
-*-------------------------------------------------------------*
-* 7.1 Supplementary adoption model: recent digital use        *
-*-------------------------------------------------------------*/
-logit recent_digital_use $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", replace ///
-    word dec(3) eform ctitle("Recent digital use") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-*-------------------------------------------------------------*
-* 7.2 Supplementary quality models                            *
-*-------------------------------------------------------------*/
-logit digital_problem $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("Recent digital problem") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-logit fee_visible $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("Fees clearly visible") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-logit provider_info_clear $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("Provider info clear") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-*-------------------------------------------------------------*
-* 7.3 Supplementary safety / trust models                     *
-*-------------------------------------------------------------*/
-logit feels_secure $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("Feels secure") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-logit any_payment_problem $demo_controls ///
-    c.ivs_score c.iat_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("Any payment problem") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-*-------------------------------------------------------------*
-* 7.4 Supplementary autonomy robustness                       *
-*-------------------------------------------------------------*/
-logit high_autonomy $demo_controls ///
-    c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)
-
-outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
-    word dec(3) eform ctitle("High autonomy (binary)") ///
-    addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
-
-
-*-------------------------------------*
-* 8. Save cleaned analysis workspace  *
-*-------------------------------------*/
-save "${output_dir}/regression/CFI_DPI_Data_with_regression_helpers.dta", replace
-
-log close
-display "Regression analysis script finished successfully."
-
-
-
-
-*4.1 Empirical strategy (descriptive-causal boundary)
-
-*4.2 Outcomes (dependent variables) — recommended core set
-
-*4.3 Predictors (key independent variables)
-
-*4.4 Core regression specifications (report-ready templates)
-
-*4.5 Heterogeneity and interactions (policy-relevant cuts)
-
-*4.6 Presentation of regression results
+	}
+	
+	*-----------------------------------------------------------*
+	*		3. FAMILY 2: TRANSACTION QUALITY AND ONBOARDING		*
+	*-----------------------------------------------------------*
+	{
+	* 3.1 Outcome: IETR (transactional experience, OLS)        *
+
+	eststo clear
+
+	reg ietr_score_01 $demo_controls, vce(robust)
+	eststo ietr_A
+	outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ietr_score_01 $demo_controls $block_B, vce(robust)
+	eststo ietr_B
+	outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01, vce(robust)
+	eststo ietr_C
+	outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
+	eststo ietr_D
+	outreg2 using "${output_dir}/regression/tables/Table_F2_IETR.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_ietr $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)
+	eststo ietr_D_z
+
+	coefplot (ietr_D_z, ///
+		keep(z_iat z_icdp z_iaff z_oqi z_ivs z_iedf z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`blue'") ///
+		ciopts(recast(rcap) lcolor("`blue'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig43_coef_ietr.png", replace
+
+
+	* 3.2 Outcome: OQI (onboarding quality, OLS)            *
+
+	eststo clear
+
+	reg oqi_score_01 $demo_controls, vce(robust)
+	eststo oqi_A
+	outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg oqi_score_01 $demo_controls $block_B, vce(robust)
+	eststo oqi_B
+	outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg oqi_score_01 $demo_controls $block_B c.iaff_score, vce(robust)
+	eststo oqi_C
+	outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg oqi_score_01 $demo_controls $block_B c.iaff_score c.IEH, vce(robust)
+	eststo oqi_D
+	outreg2 using "${output_dir}/regression/tables/Table_F2_OQI.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_oqi $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_iaff c.z_ieh, vce(robust)
+	eststo oqi_D_z
+
+	coefplot (oqi_D_z, ///
+		keep(z_iat z_iadt z_icdp z_iaff z_ivs z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`blue'") ///
+		ciopts(recast(rcap) lcolor("`blue'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig44_coef_oqi.png", replace
+	}
+
+	*-------------------------------------------------------*
+	*		4. FAMILY 3: SAFETY, FRAUD, AND RECOURSE		*
+	*-------------------------------------------------------*
+	{	
+	* 4.1 Outcome: IPCS (safe conduct, OLS)         *
+
+	eststo clear
+
+	reg IPCS $demo_controls, vce(robust)
+	eststo ipcs_A
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IPCS $demo_controls $block_B, vce(robust)
+	eststo ipcs_B
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)
+	eststo ipcs_C
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
+	eststo ipcs_D
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IPCS.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_ipcs $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)
+	eststo ipcs_D_z
+
+	coefplot (ipcs_D_z, ///
+		keep(z_iat z_iadt z_icdp z_oqi z_ivs z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`blue'") ///
+		ciopts(recast(rcap) lcolor("`blue'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig45_coef_ipcs.png", replace
+
+
+	* 4.2 Outcome: IEDF (fraud exposure / recourse failure, OLS)  *
+
+	eststo clear
+
+	reg IEDF $demo_controls, vce(robust)
+	eststo iedf_A
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IEDF $demo_controls $block_B, vce(robust)
+	eststo iedf_B
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)
+	eststo iedf_C
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
+	eststo iedf_D
+	outreg2 using "${output_dir}/regression/tables/Table_F3_IEDF.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_iedf $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)
+	eststo iedf_D_z
+
+	coefplot (iedf_D_z, ///
+		keep(z_iat z_iadt z_icdp z_oqi z_ivs z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`orange'") ///
+		ciopts(recast(rcap) lcolor("`orange'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig46_coef_iedf.png", replace
+	}
+
+	*-------------------------------------------------------*
+	*		5. FAMILY 4: AUTONOMY, AGENCY, AND TRUST		*
+	*-------------------------------------------------------*
+	{	
+	* 5.1 Outcome: IAER (autonomy, OLS)
+
+	eststo clear
+
+	reg IAER $demo_controls, vce(robust)
+	eststo iaer_A
+	outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IAER $demo_controls c.ivs_score c.iurd_score_01, vce(robust)
+	eststo iaer_B
+	outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF, vce(robust)
+	eststo iaer_C
+	outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)
+	eststo iaer_D
+	outreg2 using "${output_dir}/regression/tables/Table_F4_IAER.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_iaer $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_icpf c.z_iedf c.z_ieh, vce(robust)
+	eststo iaer_D_z
+
+	coefplot (iaer_D_z, ///
+		keep(z_iurd z_icpf z_iaff z_ivs z_iedf z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`blue'") ///
+		ciopts(recast(rcap) lcolor("`blue'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig47_coef_iaer.png", replace
+
+
+	* 5.2 Outcome: ICPF (trust / climate, OLS)          *
+
+	eststo clear
+
+	reg ICPF $demo_controls, vce(robust)
+	eststo icpf_A
+	outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", replace ///
+		word dec(3) ctitle("Model A") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ICPF $demo_controls c.ivs_score c.iurd_score_01, vce(robust)
+	eststo icpf_B
+	outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
+		word dec(3) ctitle("Model B") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score, vce(robust)
+	eststo icpf_C
+	outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
+		word dec(3) ctitle("Model C") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.IEDF c.IEH, vce(robust)
+	eststo icpf_D
+	outreg2 using "${output_dir}/regression/tables/Table_F4_ICPF.doc", append ///
+		word dec(3) ctitle("Model D") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	* Standardized model for coefficient plot
+	reg z_icpf $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_iedf c.z_ieh, vce(robust)
+	eststo icpf_D_z
+
+	coefplot (icpf_D_z, ///
+		keep(z_iurd z_iaff z_ivs z_iedf z_ieh) ///
+		msymbol(D) msize(medsmall) mcolor("`blue'") ///
+		ciopts(recast(rcap) lcolor("`blue'"))), ///
+		xline(0, lcolor(gs8) lpattern(dash)) ///
+		xlabel(, labsize(small)) ///
+		ylabel(, labsize(small) angle(0)) ///
+		xtitle("Standardized coefficient", size(small)) ///
+		ytitle("") ///
+		legend(off) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig48_coef_icpf.png", replace
+	}
+
+	*---------------------------------------------------*
+	*		6. INTERACTION / HETEROGENEITY ANALYSIS		*
+	*---------------------------------------------------*
+	{
+	* We use a small set of theory-driven interactions to keep the analysis focused
+	* and interpretable given the available sample size.
+
+	* 6.1 Interaction 1: Vulnerability × Digital access -> IURD  *
+
+	summ ivs_score, detail
+	local ivs_p25 = r(p25)
+	local ivs_p50 = r(p50)
+	local ivs_p75 = r(p75)
+
+	reg iurd_score_01 $demo_controls ///
+		c.ivs_score##c.iat_score ///
+		c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", replace ///
+		word dec(3) ctitle("I1: IVS x IAT -> IURD") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	margins, at(iat_score=(0(.1)1) ivs_score=(`ivs_p25' `ivs_p50' `ivs_p75'))
+	marginsplot, ///
+		recast(line) noci ///
+		plot1opts(lcolor("`blue'") lwidth(medthick)) ///
+		plot2opts(lcolor("`gray'") lwidth(medthick)) ///
+		plot3opts(lcolor("`orange'") lwidth(medthick)) ///
+		title("") ///
+		xtitle("Digital access (IAT)", size(small)) ///
+		ytitle("Predicted digital use intensity (IURD)", size(small)) ///
+		legend(order(1 "Low vulnerability (p25)" 2 "Median vulnerability (p50)" 3 "High vulnerability (p75)") ///
+			   rows(1) pos(6) size(small) region(lcolor(none))) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig49_interaction_iurd_ivs_iat.png", replace
+
+
+	* 6.2 Interaction 2: Years in Colombia × IAFF -> Formal remittance     *
+
+	summ years_in_col, detail
+	local years_p25 = r(p25)
+	local years_p50 = r(p50)
+	local years_p75 = r(p75)
+
+	logit formal_remittance $demo_controls ///
+		c.years_in_col##c.iaff_score ///
+		c.iat_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
+		word dec(3) eform ctitle("I2: Years x IAFF -> Formal channel") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	margins, at(iaff_score=(.25(.25)1) years_in_col=(`years_p25' `years_p50' `years_p75')) predict(pr)
+	marginsplot, ///
+		recast(line) noci ///
+		plot1opts(lcolor("`blue'") lwidth(medthick)) ///
+		plot2opts(lcolor("`gray'") lwidth(medthick)) ///
+		plot3opts(lcolor("`orange'") lwidth(medthick)) ///
+		title("") ///
+		xtitle("Formal financial access (IAFF)", size(small)) ///
+		ytitle("Predicted probability of formal digital remittance channel", size(small)) ///
+		legend(order(1 "Shorter tenure (p25)" 2 "Median tenure (p50)" 3 "Longer tenure (p75)") ///
+			   rows(1) pos(6) size(small) region(lcolor(none))) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig50_interaction_formal_years_iaff.png", replace
+
+
+	* 6.3 Interaction 3: ICDP × OQI -> Transactional experience        *
+
+	summ icdp_score, detail
+	local icdp_p25 = r(p25)
+	local icdp_p75 = r(p75)
+
+	reg ietr_score_01 $demo_controls ///
+		c.icdp_score##c.oqi_score_01 ///
+		c.ivs_score c.iaff_score c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
+		word dec(3) ctitle("I3: ICDP x OQI -> IETR") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	margins, at(oqi_score_01=(0(.1)1) icdp_score=(`icdp_p25'  `icdp_p75'))
+	marginsplot, ///
+		recast(line) noci ///
+		plot1opts(lcolor("`blue'") lwidth(medthick)) ///
+		plot2opts(lcolor("`gray'") lwidth(medthick)) ///
+		title("") ///
+		xtitle("Onboarding quality (OQI)", size(small)) ///
+		ytitle("Predicted transactional experience (IETR)", size(small)) ///
+		legend(order(1 "Low competence (p25)" 2 "High competence (p75)") ///
+			   rows(1) pos(6) size(small) region(lcolor(none))) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig51_interaction_ietr_icdp_oqi.png", replace
+
+
+	* 6.4 Interaction 4: IEDF × ICPF -> IURD                           *
+
+	summ IEDF, detail
+	local iedf_p25 = r(p25)
+	local iedf_p50 = r(p50)
+	local iedf_p75 = r(p75)
+
+	reg iurd_score_01 $demo_controls ///
+		c.IEDF##c.ICPF ///
+		c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Interactions.doc", append ///
+		word dec(3) ctitle("I4: IEDF x ICPF -> IURD") ///
+		addtext(City FE, Yes, Robust SE, Yes)
+
+	margins, at(IEDF=(0(10)100) ICPF=(25 50 75))
+	marginsplot, ///
+		recast(line) noci ///
+		plot1opts(lcolor("`blue'") lwidth(medthick)) ///
+		plot2opts(lcolor("`gray'") lwidth(medthick)) ///
+		plot3opts(lcolor("`orange'") lwidth(medthick)) ///
+		title("") ///
+		xtitle("Fraud exposure and recourse failure (IEDF)", size(small)) ///
+		ytitle("Predicted digital use intensity (IURD)", size(small)) ///
+		legend(order(1 "Low trust climate (25)" 2 "Mid trust climate (50)" 3 "High trust climate (75)") ///
+			   rows(1) pos(6) size(small) region(lcolor(none))) ///
+		graphregion(color(white)) plotregion(color(white)) ///
+		scheme(plotplain)
+
+	graph export "${output_dir}/regression/figures/fig52_interaction_iurd_iedf_icpf.png", replace
+	}
+
+	*-----------------------------------------------*
+	*		7. SUPPLEMENTARY ITEM-LEVEL MODELS		*
+	*-----------------------------------------------*
+	{
+	* These models are not intended for the main body of the report tables/figures,
+	* but they are useful for appendices and for interpreting the main index results.
+
+	*-------------------------------------------------------------*
+	* 7.1 Supplementary adoption model: recent digital use        *
+	*-------------------------------------------------------------*/
+	logit recent_digital_use $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", replace ///
+		word dec(3) eform ctitle("Recent digital use") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	*-------------------------------------------------------------*
+	* 7.2 Supplementary quality models                            *
+	*-------------------------------------------------------------*/
+	logit digital_problem $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("Recent digital problem") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	logit fee_visible $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("Fees clearly visible") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	logit provider_info_clear $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("Provider info clear") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	*-------------------------------------------------------------*
+	* 7.3 Supplementary safety / trust models                     *
+	*-------------------------------------------------------------*/
+	logit feels_secure $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("Feels secure") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	logit any_payment_problem $demo_controls ///
+		c.ivs_score c.iat_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("Any payment problem") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+
+	*-------------------------------------------------------------*
+	* 7.4 Supplementary autonomy robustness                       *
+	*-------------------------------------------------------------*/
+	logit high_autonomy $demo_controls ///
+		c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)
+
+	outreg2 using "${output_dir}/regression/tables/Table_Supplementary_Items.doc", append ///
+		word dec(3) eform ctitle("High autonomy (binary)") ///
+		addtext(City FE, Yes, Robust SE, Yes, Estimator, Logit OR)
+	}
+}
 
 *---------------------------------------*
 *		III. Análisis de cluster   		*
