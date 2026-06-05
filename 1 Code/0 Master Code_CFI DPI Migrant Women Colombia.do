@@ -58,7 +58,7 @@ else if "`c(username)'" == "USUARIO" { // Sarita's personal laptop
 
 
 * Install packages 
-	local user_commands	coefplot keeporder colrspace palettes heatplot reclink repkit ietoolkit iefieldkit winsor sumstats estout keeporder grc1leg2 outreg2 //Add required user-written commands
+	local user_commands	coefplot keeporder colrspace palettes heatplot reclink repkit ietoolkit iefieldkit winsor sumstats estout keeporder grc1leg2 outreg2  //Add required user-written commands
 
 	foreach command of local user_commands {
 	   capture which `command'

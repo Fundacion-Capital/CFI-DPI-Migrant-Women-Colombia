@@ -1481,13 +1481,12 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* Categorización
 	gen iuof_cat = .
 	replace iuof_cat = 1 if iuof_score_01 < 0.5
-	replace iuof_cat = 2 if iuof_score_01 >= 0.5 & iuof_score < 0.8
+	replace iuof_cat = 2 if iuof_score_01 >= 0.5 & iuof_score_01 < 0.8
 	replace iuof_cat = 3 if iuof_score_01 >= 0.8
 
 	label define iuof_cat_lbl 1 "Bajo" 2 "Medio" 3 "Alto"
 	label values iuof_cat iuof_cat_lbl
 	label var iuof_cat "Categoría IUOF"
-
 
 
 * =========================================================================
@@ -1500,7 +1499,7 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* Uso de QR en los últimos 30 días – q5_4
 	gen qr_usage = .
-	replace qr_usage = 1 if q5_4 == 1
+	replace qr_usage = 1 if q5_4 == 1 | q5_4 == 2 | q5_5 == 3
 	replace qr_usage = 0 if q5_4 == 0
 	label var qr_usage "Usó código QR en los últimos 30 días"
 
@@ -1707,8 +1706,8 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 
 	* (C) Confirmaciones recibidas (Remesas q6_11 y Pagos q6_20)
 	gen ietr_conf_rem = .
-	replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<=5 // Recibió por algún canal
-	replace ietr_conf_rem = 0   if q6_11==6            // No recibió confirmación
+	replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<5 // Recibió por algún canal
+	replace ietr_conf_rem = 0   if q6_11==6 | q6_11 == 5            // No recibió confirmación
 
 	gen ietr_conf_pay = .
 	replace ietr_conf_pay = 100 if q6_20==1
@@ -1983,13 +1982,13 @@ use "${output_dir}/CFI_DPI Data for audit.dta", clear
 	* Ausencia de Coerción directa (q9_8) - Asumiendo 1=Sí sufre coerción, 2=No
 	gen f1_sin_coercion1 = .
 	replace f1_sin_coercion1 = 0 if q9_8 == 1
-	replace f1_sin_coercion1 = 1 if inlist(q9_8, 2, 98)
+	replace f1_sin_coercion1 = 1 if inlist(q9_8, 0, 98)
 	label var f1_sin_coercion1 "Ausencia de coerción al usar cuenta"
 
 	* Ausencia de presión sobre remesas (q9_16) - Asumiendo 1=Sí sufre presión, 2=No
 	gen f1_sin_coercion2 = .
 	replace f1_sin_coercion2 = 0 if q9_16 == 1
-	replace f1_sin_coercion2 = 1 if inlist(q9_16, 2, 98)
+	replace f1_sin_coercion2 = 1 if inlist(q9_16, 0, 98)
 	label var f1_sin_coercion2 "Ausencia de presión de terceros sobre la remesa"
 
 	* IAER: promedio y normalización (Actualizado)
