@@ -13,7 +13,7 @@
 
 
 /*--------------------------*
-*           INDEX           *
+**#         INDEX           *
 *---------------------------*
 
 	I.   Análisis descriptivo
@@ -22,12 +22,12 @@
 
 
 *---------------------------*
-*		0. Data intake		*
+**#		0. Data intake		*
 *---------------------------*/
 	use "${output_dir}/CFI_DPI Data for analysis.dta", clear
 
 *-------------------------------*
-*		I. Descriptive  		*
+**#		I. Descriptive  		*
 *-------------------------------*
 {
 		*2.1 Demographic profile
@@ -1088,9 +1088,8 @@
 	restore
 }
 
-
 *---------------------------------------*
-*		II. Regression Analysis  		*
+**#		II. Regression Analysis  		*
 *---------------------------------------*
 {
 	/*--------------------------*
@@ -1898,12 +1897,12 @@
 }
 
 *-----------------------------------*
-*		III. Cluster Analysis		*
+**#		III. Cluster Analysis		*
 *-----------------------------------*
 {
 
 *-----------------------*
-*		0. Preamble		*
+**##	0. Preamble		*
 *-----------------------*
 {	
 *-------------------------------------------------------------------------------*
@@ -1935,7 +1934,7 @@ if _rc {
 }
 }
 *---------------------------------------------------------------*
-*		1. DATA INTAKE AND ANALYTICAL SAMPLE VERIFICATION		*
+**##	1. DATA INTAKE AND ANALYTICAL SAMPLE VERIFICATION		*
 *---------------------------------------------------------------*
 {
 * Preferred source: coded data used in the existing analysis pipeline.
@@ -2415,7 +2414,7 @@ noisily display as text "Date/time: $S_DATE $S_TIME"
 noisily display as text "------------------------------------------------------------"
 }
 *-------------------------------------------------------------------*
-*		2. VARIABLE INVENTORY AND MEASUREMENT-MAP DOCUMENTATION		*
+**##	2. VARIABLE INVENTORY AND MEASUREMENT-MAP DOCUMENTATION		*
 *-------------------------------------------------------------------*
 {
 /*
@@ -3276,7 +3275,7 @@ restore
 
 }
 *-------------------------------------------------------------------*
-*		3. DIAGNOSTIC ANALYSIS OF CANDIDATE CLUSTERING INPUTS		*
+**##	3. DIAGNOSTIC ANALYSIS OF CANDIDATE CLUSTERING INPUTS		*
 *-------------------------------------------------------------------*
 {
 /*
@@ -4215,7 +4214,7 @@ noisily display as text "-------------------------------------------------------
 
 }
 *-----------------------------------------------*
-*		4. CONSTRUCT LCA-READY VARIABLES		*
+**##	4. CONSTRUCT LCA-READY VARIABLES		*
 *-----------------------------------------------*
 {
 /*
@@ -5168,7 +5167,7 @@ noisily display as text "-------------------------------------------------------
 
 }
 *-------------------------------------------------------------------------------*
-*		5. DEFINE COMPETING FEATURE SETS FOR LCA AND BENCHMARK CLUSTERING		*
+**##	5. DEFINE COMPETING FEATURE SETS FOR LCA AND BENCHMARK CLUSTERING		*
 *-------------------------------------------------------------------------------*
 {
 
@@ -6170,7 +6169,7 @@ noisily display as text "-------------------------------------------------------
 	
 }
 *---------------------------------------------------------------------------*
-*		6. LCA AND BENCHMARK CLUSTERING: STABLE SEGMENTATION WORKFLOW		*
+**##	6. LCA AND BENCHMARK CLUSTERING: STABLE SEGMENTATION WORKFLOW		*
 *---------------------------------------------------------------------------*
 {
 /*
@@ -7454,7 +7453,7 @@ display as text "------------------------------------------------------------"
 
 }
 *-----------------------------------------------------------*
-*		7. HYBRID DISTRIBUTION-INFORMED CATEGORICAL LCA		*
+**##	7. HYBRID DISTRIBUTION-INFORMED CATEGORICAL LCA		*
 *-----------------------------------------------------------*
 {
 /*
@@ -8721,10 +8720,9 @@ display as text "6. CFI_DPI_hybrid_LCA_assignments.dta"
 display as text "------------------------------------------------------------"
 
 }
-
-*-------------------------------------------------------------------------------*
-* 9. ESTIMATE FINAL PREFERRED LCA MODEL
-*-------------------------------------------------------------------------------*
+*---------------------------------------------------*
+**##	9. ESTIMATE FINAL PREFERRED LCA MODEL		*
+*---------------------------------------------------*
 {
 /*
     Preferred specification:
@@ -9149,6 +9147,10156 @@ display as text "3. ${cluster_tables}/Table_C7_final_lca_fit.xlsx"
 display as text "4. ${cluster_tables}/Table_C8_posterior_certainty.xlsx"
 display as text "5. ${cluster_models}/lca_final_hybrid_H1_k4.ster"
 display as text "------------------------------------------------------------"
+
+
+*-------------------------------------------------------------------------------*
+* 9.10 FINAL SUBSTANTIVE CLASS MAPPING AND POSTERIOR-PROBABILITY MANAGEMENT
+*-------------------------------------------------------------------------------*
+
+/*
+    Purpose:
+    Convert the arbitrary raw LCA class numbers into substantively interpreted
+    and consistently ordered report-ready segments.
+
+    Final raw-class mapping:
+        Raw Class 1 -> Segment 1: Structurally constrained low-intensity users
+        Raw Class 4 -> Segment 2: Operationally active but high-risk remittance users
+        Raw Class 3 -> Segment 3: Mainstream formal-digital users with incomplete protection
+        Raw Class 2 -> Segment 4: Integrated and protected digital remittance users
+
+    Important:
+    - lca_class and classpost1-classpost4 preserve the raw model output.
+    - segment and segment_post1-segment_post4 use the substantive reporting order.
+    - Posterior probabilities are permuted only; their values are not altered.
+*/
+
+*-------------------------------------------------------------------------------*
+* 9.10.1 Load finalized raw-class dataset
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_LCA_classes.dta", clear
+
+isid KEY
+
+foreach v in ///
+    final_lca_sample ///
+    lca_class ///
+    classpost1 classpost2 classpost3 classpost4 ///
+    maxpost posterior_secondmax posterior_margin ///
+    uncertain_class medium_certainty_class high_certainty_class {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required final-LCA variable missing: `v'"
+        exit 111
+    }
+}
+
+quietly count if final_lca_sample == 1
+local final_N = r(N)
+
+assert `final_N' == 423
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.2 Preserve raw model class explicitly
+*-------------------------------------------------------------------------------*
+
+capture drop raw_lca_class
+
+gen byte raw_lca_class = lca_class
+
+label define raw_lca_class_lbl ///
+    1 "Raw LCA class 1" ///
+    2 "Raw LCA class 2" ///
+    3 "Raw LCA class 3" ///
+    4 "Raw LCA class 4", replace
+
+label values raw_lca_class raw_lca_class_lbl
+label var raw_lca_class "Raw latent class number from final H1_k4 model"
+
+assert raw_lca_class == lca_class if final_lca_sample == 1
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.3 Create final substantively ordered segment variable
+*-------------------------------------------------------------------------------*
+
+capture drop segment segment_short
+
+gen byte segment = .
+
+replace segment = 1 if raw_lca_class == 1 & final_lca_sample == 1
+replace segment = 2 if raw_lca_class == 4 & final_lca_sample == 1
+replace segment = 3 if raw_lca_class == 3 & final_lca_sample == 1
+replace segment = 4 if raw_lca_class == 2 & final_lca_sample == 1
+
+label define segment_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment_lbl
+label var segment "Final substantively ordered migrant-women segment"
+
+assert !missing(segment) if final_lca_sample == 1
+assert missing(segment) if final_lca_sample != 1
+
+* Short labels for graphs and compact tables
+clonevar segment_short = segment
+
+label define segment_short_lbl ///
+    1 "Constrained low-intensity" ///
+    2 "Operationally active, high-risk" ///
+    3 "Mainstream partial inclusion" ///
+    4 "Integrated and protected", replace
+
+label values segment_short segment_short_lbl
+label var segment_short "Short segment label for figures"
+
+* Store mapping as dataset metadata
+char segment[mapping] ///
+    "Raw C1->Segment 1; Raw C4->Segment 2; Raw C3->Segment 3; Raw C2->Segment 4"
+
+char segment[note] ///
+    "Substantive labels assigned after reviewing conditional response probabilities and continuous profiles"
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.4 Reorder posterior probabilities into substantive segment order
+*-------------------------------------------------------------------------------*
+
+capture drop segment_post1 segment_post2 segment_post3 segment_post4
+capture drop segment_post_sum segment_maxpost segment_assigned_post
+capture drop segment_secondpost segment_posterior_margin
+capture drop segment_uncertain segment_medium_certainty segment_high_certainty
+capture drop segment_from_post
+
+/*
+    Raw-to-substantive posterior mapping:
+
+        Segment 1 = Raw Class 1
+        Segment 2 = Raw Class 4
+        Segment 3 = Raw Class 3
+        Segment 4 = Raw Class 2
+*/
+
+gen double segment_post1 = classpost1
+gen double segment_post2 = classpost4
+gen double segment_post3 = classpost3
+gen double segment_post4 = classpost2
+
+label var segment_post1 ///
+    "Posterior probability: structurally constrained low-intensity users"
+
+label var segment_post2 ///
+    "Posterior probability: operationally active but high-risk users"
+
+label var segment_post3 ///
+    "Posterior probability: mainstream formal-digital users"
+
+label var segment_post4 ///
+    "Posterior probability: integrated and protected users"
+
+* Confirm that reordered probabilities still sum to one
+egen double segment_post_sum = ///
+    rowtotal(segment_post1 segment_post2 segment_post3 segment_post4) ///
+    if final_lca_sample == 1
+
+assert abs(segment_post_sum - 1) < 1e-8 if final_lca_sample == 1
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.5 Reconstruct segment assignment from reordered probabilities
+*-------------------------------------------------------------------------------*
+
+egen double segment_maxpost = ///
+    rowmax(segment_post1 segment_post2 segment_post3 segment_post4) ///
+    if final_lca_sample == 1
+
+gen byte segment_from_post = .
+
+replace segment_from_post = 1 if ///
+    final_lca_sample == 1 & ///
+    segment_maxpost == segment_post1
+
+replace segment_from_post = 2 if ///
+    final_lca_sample == 1 & ///
+    segment_maxpost == segment_post2 & ///
+    missing(segment_from_post)
+
+replace segment_from_post = 3 if ///
+    final_lca_sample == 1 & ///
+    segment_maxpost == segment_post3 & ///
+    missing(segment_from_post)
+
+replace segment_from_post = 4 if ///
+    final_lca_sample == 1 & ///
+    segment_maxpost == segment_post4 & ///
+    missing(segment_from_post)
+
+assert segment_from_post == segment if final_lca_sample == 1
+drop segment_from_post
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.6 Create assigned-segment and second-best posterior diagnostics
+*-------------------------------------------------------------------------------*
+
+gen double segment_assigned_post = .
+
+replace segment_assigned_post = segment_post1 if segment == 1
+replace segment_assigned_post = segment_post2 if segment == 2
+replace segment_assigned_post = segment_post3 if segment == 3
+replace segment_assigned_post = segment_post4 if segment == 4
+
+label var segment_assigned_post ///
+    "Posterior probability of assigned substantive segment"
+
+assert abs(segment_assigned_post - maxpost) < 1e-8 ///
+    if final_lca_sample == 1
+
+gen double segment_secondpost = .
+
+forvalues s = 1/4 {
+
+    replace segment_secondpost = segment_post`s' if ///
+        final_lca_sample == 1 & ///
+        segment_post`s' < segment_assigned_post & ///
+        (missing(segment_secondpost) | segment_post`s' > segment_secondpost)
+}
+
+label var segment_secondpost ///
+    "Posterior probability of second-most-likely substantive segment"
+
+assert !missing(segment_secondpost) if final_lca_sample == 1
+
+gen double segment_posterior_margin = ///
+    segment_assigned_post - segment_secondpost ///
+    if final_lca_sample == 1
+
+label var segment_posterior_margin ///
+    "Posterior-probability margin between assigned and second-best segment"
+
+assert abs(segment_posterior_margin - posterior_margin) < 1e-8 ///
+    if final_lca_sample == 1
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.7 Recreate certainty indicators in substantive segment framework
+*-------------------------------------------------------------------------------*
+
+gen byte segment_uncertain = ///
+    segment_assigned_post < 0.60 ///
+    if final_lca_sample == 1
+
+gen byte segment_medium_certainty = ///
+    segment_assigned_post >= 0.60 & segment_assigned_post < 0.80 ///
+    if final_lca_sample == 1
+
+gen byte segment_high_certainty = ///
+    segment_assigned_post >= 0.80 ///
+    if final_lca_sample == 1
+
+label var segment_uncertain ///
+    "Uncertain substantive-segment classification: posterior < 0.60"
+
+label var segment_medium_certainty ///
+    "Medium-certainty substantive-segment classification: posterior 0.60-0.79"
+
+label var segment_high_certainty ///
+    "High-certainty substantive-segment classification: posterior >= 0.80"
+
+assert segment_uncertain == uncertain_class if final_lca_sample == 1
+assert segment_medium_certainty == medium_certainty_class if final_lca_sample == 1
+assert segment_high_certainty == high_certainty_class if final_lca_sample == 1
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.8 Audit raw-to-substantive class mapping
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "RAW LCA CLASS TO FINAL SUBSTANTIVE SEGMENT CROSSWALK"
+display as text "------------------------------------------------------------"
+
+tab raw_lca_class segment, missing
+
+assert segment == 1 if raw_lca_class == 1 & final_lca_sample == 1
+assert segment == 2 if raw_lca_class == 4 & final_lca_sample == 1
+assert segment == 3 if raw_lca_class == 3 & final_lca_sample == 1
+assert segment == 4 if raw_lca_class == 2 & final_lca_sample == 1
+
+display as text "------------------------------------------------------------"
+display as text "FINAL SUBSTANTIVE SEGMENT DISTRIBUTION"
+display as text "------------------------------------------------------------"
+
+tab segment if final_lca_sample == 1, missing
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.9 Calculate model probabilities and modal-assignment statistics
+*-------------------------------------------------------------------------------*
+
+quietly summarize segment_post1 if final_lca_sample == 1, meanonly
+scalar segment1_model_probability = r(mean)
+
+quietly summarize segment_post2 if final_lca_sample == 1, meanonly
+scalar segment2_model_probability = r(mean)
+
+quietly summarize segment_post3 if final_lca_sample == 1, meanonly
+scalar segment3_model_probability = r(mean)
+
+quietly summarize segment_post4 if final_lca_sample == 1, meanonly
+scalar segment4_model_probability = r(mean)
+
+
+forvalues s = 1/4 {
+
+    quietly count if segment == `s' & final_lca_sample == 1
+    scalar segment`s'_assigned_N = r(N)
+
+    quietly summarize segment_assigned_post ///
+        if segment == `s' & final_lca_sample == 1, meanonly
+    scalar segment`s'_mean_assigned_post = r(mean)
+
+    quietly summarize segment_posterior_margin ///
+        if segment == `s' & final_lca_sample == 1, meanonly
+    scalar segment`s'_mean_margin = r(mean)
+
+    quietly summarize segment_uncertain ///
+        if segment == `s' & final_lca_sample == 1, meanonly
+    scalar segment`s'_uncertain_share = r(mean)
+
+    quietly summarize segment_high_certainty ///
+        if segment == `s' & final_lca_sample == 1, meanonly
+    scalar segment`s'_high_certainty_share = r(mean)
+}
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.10 Export final class-mapping table
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    clear
+    set obs 4
+
+    gen byte segment = _n
+
+    gen byte raw_lca_class = .
+    replace raw_lca_class = 1 if segment == 1
+    replace raw_lca_class = 4 if segment == 2
+    replace raw_lca_class = 3 if segment == 3
+    replace raw_lca_class = 2 if segment == 4
+
+label define segment_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace	
+	
+label define raw_lca_class_lbl ///
+    1 "Raw LCA class 1" ///
+    2 "Raw LCA class 2" ///
+    3 "Raw LCA class 3" ///
+    4 "Raw LCA class 4", replace	
+
+    label values segment segment_lbl
+    label values raw_lca_class raw_lca_class_lbl
+
+    decode segment, gen(segment_name)
+    decode raw_lca_class, gen(raw_class_name)
+
+    gen double model_marginal_probability = .
+    replace model_marginal_probability = scalar(segment1_model_probability) if segment == 1
+    replace model_marginal_probability = scalar(segment2_model_probability) if segment == 2
+    replace model_marginal_probability = scalar(segment3_model_probability) if segment == 3
+    replace model_marginal_probability = scalar(segment4_model_probability) if segment == 4
+
+    gen int assigned_N = .
+    replace assigned_N = scalar(segment1_assigned_N) if segment == 1
+    replace assigned_N = scalar(segment2_assigned_N) if segment == 2
+    replace assigned_N = scalar(segment3_assigned_N) if segment == 3
+    replace assigned_N = scalar(segment4_assigned_N) if segment == 4
+
+    gen double assigned_pct = 100 * assigned_N / `final_N'
+
+    gen double mean_assigned_posterior = .
+    replace mean_assigned_posterior = scalar(segment1_mean_assigned_post) if segment == 1
+    replace mean_assigned_posterior = scalar(segment2_mean_assigned_post) if segment == 2
+    replace mean_assigned_posterior = scalar(segment3_mean_assigned_post) if segment == 3
+    replace mean_assigned_posterior = scalar(segment4_mean_assigned_post) if segment == 4
+
+    gen double mean_posterior_margin = .
+    replace mean_posterior_margin = scalar(segment1_mean_margin) if segment == 1
+    replace mean_posterior_margin = scalar(segment2_mean_margin) if segment == 2
+    replace mean_posterior_margin = scalar(segment3_mean_margin) if segment == 3
+    replace mean_posterior_margin = scalar(segment4_mean_margin) if segment == 4
+
+    gen double uncertain_share = .
+    replace uncertain_share = scalar(segment1_uncertain_share) if segment == 1
+    replace uncertain_share = scalar(segment2_uncertain_share) if segment == 2
+    replace uncertain_share = scalar(segment3_uncertain_share) if segment == 3
+    replace uncertain_share = scalar(segment4_uncertain_share) if segment == 4
+
+    gen double high_certainty_share = .
+    replace high_certainty_share = scalar(segment1_high_certainty_share) if segment == 1
+    replace high_certainty_share = scalar(segment2_high_certainty_share) if segment == 2
+    replace high_certainty_share = scalar(segment3_high_certainty_share) if segment == 3
+    replace high_certainty_share = scalar(segment4_high_certainty_share) if segment == 4
+
+    gen double model_marginal_pct = 100 * model_marginal_probability
+
+    format model_marginal_probability mean_assigned_posterior ///
+           mean_posterior_margin uncertain_share high_certainty_share %9.3f
+
+    format model_marginal_pct assigned_pct %9.2f
+
+    order segment segment_name raw_lca_class raw_class_name ///
+          model_marginal_probability model_marginal_pct ///
+          assigned_N assigned_pct mean_assigned_posterior ///
+          mean_posterior_margin uncertain_share high_certainty_share
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_final_class_mapping_and_labels.xlsx", ///
+        sheet("raw_to_segment_mapping", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.11 Export profile audit supporting substantive labels
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    keep if final_lca_sample == 1
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) ///
+            segment_assigned_post ///
+            segment_posterior_margin ///
+            segment_uncertain ///
+            segment_high_certainty ///
+            h_ivs3 ///
+            h_icdp3 ///
+            h_iaff3 ///
+            h_iuof3 ///
+            h_oqi3 ///
+            h_iurd3 ///
+            h_iedf2 ///
+            ivs_score ///
+            icdp_score ///
+            iaff_score ///
+            iuof_score_01 ///
+            oqi_score_01 ///
+            iurd_score_01 ///
+            IEDF ///
+            iat_score ///
+            iadt_score ///
+            ietr_score_01 ///
+            IPCS ///
+            IAER ///
+            ICPF ///
+            IEH ///
+            IBPD ///
+            formal_remittance, ///
+        by(segment raw_lca_class)
+
+    gen pct = 100 * N / `final_N'
+
+    label values segment segment_lbl
+    label values raw_lca_class raw_lca_class_lbl
+
+    decode segment, gen(segment_name)
+    decode raw_lca_class, gen(raw_class_name)
+
+    format pct %9.2f
+    format segment_assigned_post segment_posterior_margin ///
+           segment_uncertain segment_high_certainty %9.3f
+
+    order segment segment_name raw_lca_class raw_class_name N pct ///
+          segment_assigned_post segment_posterior_margin ///
+          segment_uncertain segment_high_certainty ///
+          h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_final_class_mapping_and_labels.xlsx", ///
+        sheet("profile_audit", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.12 Add posterior-certainty summary by substantive segment
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    keep if final_lca_sample == 1
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) mean_assigned_post = segment_assigned_post ///
+        (mean) mean_posterior_margin = segment_posterior_margin ///
+        (mean) share_uncertain = segment_uncertain ///
+        (mean) share_medium_certainty = segment_medium_certainty ///
+        (mean) share_high_certainty = segment_high_certainty ///
+        (min) min_assigned_post = segment_assigned_post ///
+        (p25) p25_assigned_post = segment_assigned_post ///
+        (p50) median_assigned_post = segment_assigned_post ///
+        (p75) p75_assigned_post = segment_assigned_post ///
+        (max) max_assigned_post = segment_assigned_post, ///
+        by(segment)
+
+    gen class_pct = 100 * N / `final_N'
+
+    label values segment segment_lbl
+    decode segment, gen(segment_name)
+
+    format class_pct %9.2f
+
+    format mean_assigned_post mean_posterior_margin ///
+           share_uncertain share_medium_certainty share_high_certainty ///
+           min_assigned_post p25_assigned_post median_assigned_post ///
+           p75_assigned_post max_assigned_post %9.3f
+
+    order segment segment_name N class_pct ///
+          mean_assigned_post mean_posterior_margin ///
+          share_uncertain share_medium_certainty share_high_certainty ///
+          min_assigned_post p25_assigned_post median_assigned_post ///
+          p75_assigned_post max_assigned_post
+
+    export excel using ///
+        "${cluster_tables}/Table_C8_posterior_certainty.xlsx", ///
+        sheet("by_segment", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.13 Save final report-ready segmentation dataset
+*-------------------------------------------------------------------------------*
+
+order ///
+    KEY ///
+    final_lca_sample ///
+    raw_lca_class ///
+    lca_class ///
+    segment ///
+    segment_short ///
+    classpost1 classpost2 classpost3 classpost4 ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    maxpost segment_maxpost segment_assigned_post ///
+    posterior_secondmax segment_secondpost ///
+    posterior_margin segment_posterior_margin ///
+    uncertain_class medium_certainty_class high_certainty_class ///
+    segment_uncertain segment_medium_certainty segment_high_certainty, ///
+    first
+
+compress
+
+save "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", replace
+
+export excel using ///
+    "${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx", ///
+    sheet("final_segments", replace) ///
+    firstrow(variables)
+
+
+*-------------------------------------------------------------------------------*
+* 9.10.14 Final console audit
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "FINAL SUBSTANTIVE SEGMENT MAPPING COMPLETED"
+display as text "------------------------------------------------------------"
+
+tab segment if final_lca_sample == 1, missing
+
+summarize ///
+    segment_assigned_post ///
+    segment_posterior_margin ///
+    segment_uncertain ///
+    segment_high_certainty ///
+    if final_lca_sample == 1
+
+display as text "Outputs created:"
+display as text "1. ${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta"
+display as text "2. ${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx"
+display as text "3. ${cluster_tables}/Table_C9_final_class_mapping_and_labels.xlsx"
+display as text "4. Updated ${cluster_tables}/Table_C8_posterior_certainty.xlsx"
+display as text "------------------------------------------------------------"
+
+}
+*---------------------------------------------------*
+**##	10. CLASS-PROFILE INTERPRETATION TABLES		*
+*---------------------------------------------------*
+{
+/*
+    Purpose:
+    Translate the final preferred hybrid LCA solution into report-ready
+    typology tables.
+
+    This section creates:
+        1. Conditional response probability table for final LCA inputs
+        2. Continuous index centroid table using original index values
+        3. Signature behavior table using selected raw/profile survey variables
+
+    Key methodological choices:
+        - Segment is the final substantively ordered class variable.
+        - Posterior-weighted probabilities use segment_post1-segment_post4.
+        - Modal-assignment profiles use the assigned segment variable.
+        - Original continuous indices are used for interpretation, even though
+          the LCA itself used categorical hybrid indicators.
+*/
+
+*-------------------------------------------------------------------------------*
+* 10.0 Load final segmentation dataset and verify structure
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+isid KEY
+
+quietly count if final_lca_sample == 1
+local final_N = r(N)
+
+assert `final_N' == 423
+
+foreach v in ///
+    segment segment_short raw_lca_class final_lca_sample ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    segment_assigned_post segment_posterior_margin ///
+    segment_uncertain segment_medium_certainty segment_high_certainty {
+    
+    capture confirm variable `v'
+    if _rc {
+        display as error "Required segment variable missing: `v'"
+        exit 111
+    }
+}
+
+label define segment_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment_lbl
+
+label define segment_short_lbl ///
+    1 "Constrained low-intensity" ///
+    2 "Operationally active, high-risk" ///
+    3 "Mainstream partial inclusion" ///
+    4 "Integrated and protected", replace
+
+label values segment_short segment_short_lbl
+
+local segname1 "Structurally constrained low-intensity users"
+local segname2 "Operationally active but high-risk remittance users"
+local segname3 "Mainstream formal-digital users with incomplete protection"
+local segname4 "Integrated and protected digital remittance users"
+
+local segshort1 "Constrained low-intensity"
+local segshort2 "Operationally active, high-risk"
+local segshort3 "Mainstream partial inclusion"
+local segshort4 "Integrated and protected"
+
+
+*-------------------------------------------------------------------------------*
+* 10.1 Segment size and posterior-certainty summary
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    keep if final_lca_sample == 1
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) mean_assigned_posterior = segment_assigned_post ///
+        (mean) mean_posterior_margin = segment_posterior_margin ///
+        (mean) share_uncertain = segment_uncertain ///
+        (mean) share_medium_certainty = segment_medium_certainty ///
+        (mean) share_high_certainty = segment_high_certainty ///
+        (min) min_assigned_posterior = segment_assigned_post ///
+        (p25) p25_assigned_posterior = segment_assigned_post ///
+        (p50) median_assigned_posterior = segment_assigned_post ///
+        (p75) p75_assigned_posterior = segment_assigned_post ///
+        (max) max_assigned_posterior = segment_assigned_post, ///
+        by(segment)
+
+    gen class_pct = 100 * N / `final_N'
+
+    gen str90 segment_name = ""
+    replace segment_name = "`segname1'" if segment == 1
+    replace segment_name = "`segname2'" if segment == 2
+    replace segment_name = "`segname3'" if segment == 3
+    replace segment_name = "`segname4'" if segment == 4
+
+    gen str45 segment_short_name = ""
+    replace segment_short_name = "`segshort1'" if segment == 1
+    replace segment_short_name = "`segshort2'" if segment == 2
+    replace segment_short_name = "`segshort3'" if segment == 3
+    replace segment_short_name = "`segshort4'" if segment == 4
+
+    format class_pct %9.2f
+    format mean_assigned_posterior mean_posterior_margin ///
+           share_uncertain share_medium_certainty share_high_certainty ///
+           min_assigned_posterior p25_assigned_posterior ///
+           median_assigned_posterior p75_assigned_posterior ///
+           max_assigned_posterior %9.3f
+
+    order segment segment_name segment_short_name N class_pct ///
+          mean_assigned_posterior mean_posterior_margin ///
+          share_uncertain share_medium_certainty share_high_certainty ///
+          min_assigned_posterior p25_assigned_posterior ///
+          median_assigned_posterior p75_assigned_posterior ///
+          max_assigned_posterior
+
+    capture erase "${cluster_tables}/Table_C10_segment_size_and_certainty.xlsx"
+
+    export excel using ///
+        "${cluster_tables}/Table_C10_segment_size_and_certainty.xlsx", ///
+        sheet("segment_size_certainty", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.2 Conditional response probabilities for LCA inputs
+*-------------------------------------------------------------------------------*
+
+/*
+    This table is the main class-interpretation table.
+
+    It reports two complementary statistics:
+
+        posterior_weighted_probability:
+            Probability of each response category within each latent segment,
+            weighted by posterior probability of segment membership.
+
+        modal_assigned_share:
+            Empirical share among respondents assigned to each segment by
+            maximum posterior probability.
+
+    The posterior-weighted version is the preferred interpretation table.
+*/
+
+tempfile crp_long
+tempname crppost
+
+postfile `crppost' ///
+    int input_order ///
+    str32 input_variable ///
+    str90 construct ///
+    str40 mechanism ///
+    str20 measurement_type ///
+    double category_value ///
+    str120 category_label ///
+    byte segment ///
+    str90 segment_name ///
+    double posterior_weighted_N ///
+    double posterior_weighted_probability ///
+    int modal_assigned_N ///
+    double modal_assigned_share ///
+    using "`crp_long'", replace
+
+foreach v in h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 {
+
+    capture confirm variable `v'
+    if _rc {
+        display as error "LCA input variable missing from final dataset: `v'"
+        exit 111
+    }
+}
+
+local input_order = 0
+
+foreach v in h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 {
+
+    local ++input_order
+
+    local construct ""
+    local mechanism ""
+    local mtype ""
+
+    if "`v'" == "h_ivs3" {
+        local construct "Socioeconomic vulnerability"
+        local mechanism "Structural constraint"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_icdp3" {
+        local construct "Practical digital competence"
+        local mechanism "Cost-convenience / usability"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_iaff3" {
+        local construct "Formal financial access"
+        local mechanism "Formalization and participation"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_iuof3" {
+        local construct "Financial operability"
+        local mechanism "Operational use of formal rails"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_oqi3" {
+        local construct "Onboarding quality"
+        local mechanism "DPI governance and usability"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_iurd3" {
+        local construct "Digital remittance intensity"
+        local mechanism "Remittance formalization"
+        local mtype "Ordinal, 3 levels"
+    }
+
+    if "`v'" == "h_iedf2" {
+        local construct "Fraud exposure and recourse harm"
+        local mechanism "Trust-safety / recourse"
+        local mtype "Binary"
+    }
+
+    levelsof `v' if final_lca_sample == 1 & !missing(`v'), local(levels)
+
+    foreach c of local levels {
+
+        local category_label "`c'"
+        local value_label : value label `v'
+
+        if "`value_label'" != "" {
+            capture local category_label : label `value_label' `c'
+            if _rc {
+                local category_label "`c'"
+            }
+        }
+
+        foreach s in 1 2 3 4 {
+
+            quietly summarize segment_post`s' ///
+                if final_lca_sample == 1 & !missing(`v'), meanonly
+            local denom = r(sum)
+
+            tempvar __w
+            quietly gen double `__w' = ///
+                segment_post`s' * (`v' == `c') ///
+                if final_lca_sample == 1 & !missing(`v')
+
+            quietly summarize `__w', meanonly
+            local numerator = r(sum)
+
+            local posterior_prob = .
+            if `denom' > 0 {
+                local posterior_prob = `numerator' / `denom'
+            }
+
+            quietly count if ///
+                final_lca_sample == 1 & ///
+                segment == `s' & ///
+                !missing(`v')
+            local modal_N = r(N)
+
+            quietly count if ///
+                final_lca_sample == 1 & ///
+                segment == `s' & ///
+                `v' == `c'
+            local modal_count = r(N)
+
+            local modal_share = .
+            if `modal_N' > 0 {
+                local modal_share = `modal_count' / `modal_N'
+            }
+
+            local segname "`segname`s''"
+
+            post `crppost' ///
+                (`input_order') ///
+                (`"`v'"') ///
+                (`"`construct'"') ///
+                (`"`mechanism'"') ///
+                (`"`mtype'"') ///
+                (`c') ///
+                (`"`category_label'"') ///
+                (`s') ///
+                (`"`segname'"') ///
+                (`denom') ///
+                (`posterior_prob') ///
+                (`modal_N') ///
+                (`modal_share')
+
+            drop `__w'
+        }
+    }
+}
+
+postclose `crppost'
+
+
+*-------------------------------------------------------------------------------*
+* 10.2.1 Export conditional response probabilities: long and wide formats
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`crp_long'", clear
+
+    format posterior_weighted_N %12.2f
+    format posterior_weighted_probability modal_assigned_share %9.3f
+
+    sort input_order category_value segment
+
+    capture erase "${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx"
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx", ///
+        sheet("long", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`crp_long'", clear
+
+    keep input_order input_variable construct mechanism measurement_type ///
+         category_value category_label segment posterior_weighted_probability
+
+    reshape wide posterior_weighted_probability, ///
+        i(input_order input_variable construct mechanism measurement_type ///
+          category_value category_label) ///
+        j(segment)
+
+	rename posterior_weighted_probability1 pwp_s1_constrained
+	rename posterior_weighted_probability2 pwp_s2_active_risk
+	rename posterior_weighted_probability3 pwp_s3_mainstream
+	rename posterior_weighted_probability4 pwp_s4_integrated
+
+	label var pwp_s1_constrained "Posterior probability: constrained low-intensity"
+	label var pwp_s2_active_risk "Posterior probability: operationally active, high-risk"
+	label var pwp_s3_mainstream "Posterior probability: mainstream partial inclusion"
+	label var pwp_s4_integrated "Posterior probability: integrated and protected"
+
+format pwp_s* %9.3f
+
+    sort input_order category_value
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx", ///
+        sheet("posterior_weighted_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`crp_long'", clear
+
+    keep input_order input_variable construct mechanism measurement_type ///
+         category_value category_label segment modal_assigned_share
+
+    reshape wide modal_assigned_share, ///
+        i(input_order input_variable construct mechanism measurement_type ///
+          category_value category_label) ///
+        j(segment)
+
+rename modal_assigned_share1 mod_s1_constrained
+rename modal_assigned_share2 mod_s2_active_risk
+rename modal_assigned_share3 mod_s3_mainstream
+rename modal_assigned_share4 mod_s4_integrated
+
+label var mod_s1_constrained "Modal share: constrained low-intensity"
+label var mod_s2_active_risk "Modal share: operationally active, high-risk"
+label var mod_s3_mainstream "Modal share: mainstream partial inclusion"
+label var mod_s4_integrated "Modal share: integrated and protected"
+
+format mod_s* %9.3f
+
+    sort input_order category_value
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx", ///
+        sheet("modal_assignment_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.2.2 Export high / adverse category summary for report interpretation
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`crp_long'", clear
+
+    gen byte target_profile_category = 0
+
+    replace target_profile_category = 1 if ///
+        inlist(input_variable, ///
+            "h_ivs3", "h_icdp3", "h_iaff3", "h_iuof3", ///
+            "h_oqi3", "h_iurd3") & ///
+        category_value == 3
+
+    replace target_profile_category = 1 if ///
+        input_variable == "h_iedf2" & ///
+        category_value == 1
+
+    keep if target_profile_category == 1
+
+    gen str120 profile_probability_label = ""
+
+    replace profile_probability_label = "Pr(high socioeconomic vulnerability)" ///
+        if input_variable == "h_ivs3"
+
+    replace profile_probability_label = "Pr(high practical digital competence)" ///
+        if input_variable == "h_icdp3"
+
+    replace profile_probability_label = "Pr(high formal financial access)" ///
+        if input_variable == "h_iaff3"
+
+    replace profile_probability_label = "Pr(high financial operability)" ///
+        if input_variable == "h_iuof3"
+
+    replace profile_probability_label = "Pr(high onboarding quality)" ///
+        if input_variable == "h_oqi3"
+
+    replace profile_probability_label = "Pr(high digital remittance intensity)" ///
+        if input_variable == "h_iurd3"
+
+    replace profile_probability_label = "Pr(above-median fraud / recourse harm)" ///
+        if input_variable == "h_iedf2"
+
+    keep input_order input_variable construct mechanism ///
+         profile_probability_label segment posterior_weighted_probability ///
+         modal_assigned_share
+
+    reshape wide posterior_weighted_probability modal_assigned_share, ///
+        i(input_order input_variable construct mechanism profile_probability_label) ///
+        j(segment)
+
+* Short Stata-compatible names; full descriptions retained as variable labels
+rename posterior_weighted_probability1 pwp_s1_constrained
+rename posterior_weighted_probability2 pwp_s2_active_risk
+rename posterior_weighted_probability3 pwp_s3_mainstream
+rename posterior_weighted_probability4 pwp_s4_integrated
+
+rename modal_assigned_share1 mod_s1_constrained
+rename modal_assigned_share2 mod_s2_active_risk
+rename modal_assigned_share3 mod_s3_mainstream
+rename modal_assigned_share4 mod_s4_integrated
+
+label var pwp_s1_constrained ///
+    "Posterior probability: constrained low-intensity"
+label var pwp_s2_active_risk ///
+    "Posterior probability: operationally active, high-risk"
+label var pwp_s3_mainstream ///
+    "Posterior probability: mainstream partial inclusion"
+label var pwp_s4_integrated ///
+    "Posterior probability: integrated and protected"
+
+label var mod_s1_constrained ///
+    "Modal share: constrained low-intensity"
+label var mod_s2_active_risk ///
+    "Modal share: operationally active, high-risk"
+label var mod_s3_mainstream ///
+    "Modal share: mainstream partial inclusion"
+label var mod_s4_integrated ///
+    "Modal share: integrated and protected"
+
+format pwp_s* mod_s* %9.3f
+
+    sort input_order
+
+    export excel using ///
+        "${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx", ///
+        sheet("profile_summary", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.3 Continuous index centroid table
+*-------------------------------------------------------------------------------*
+
+/*
+    Even though the preferred LCA model uses categorical hybrid inputs,
+    class interpretation should also profile the original continuous indices.
+
+    Output includes:
+        - segment mean
+        - segment SD
+        - sample mean and SD
+        - standardized mean deviation from sample average
+        - posterior-weighted segment mean
+        - posterior-weighted standardized deviation
+*/
+
+tempfile centroid_long
+tempname centpost
+
+postfile `centpost' ///
+    int index_order ///
+    str32 index_variable ///
+    str100 construct ///
+    str35 direction ///
+    byte segment ///
+    str90 segment_name ///
+    int segment_N ///
+    double segment_mean ///
+    double segment_sd ///
+    double sample_mean ///
+    double sample_sd ///
+    double standardized_deviation ///
+    double posterior_weighted_N ///
+    double posterior_weighted_mean ///
+    double pw_z_deviation ///
+    using "`centroid_long'", replace
+
+local cont_index_order = 0
+
+foreach v in ///
+    ivs_score ///
+    iat_score ///
+    iadt_score ///
+    icdp_score ///
+    iaff_score ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    iurd_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD {
+
+    capture confirm variable `v'
+    if !_rc {
+
+        local ++cont_index_order
+
+        local construct : variable label `v'
+        if `"`construct'"' == "" {
+            local construct "`v'"
+        }
+
+        local direction "Higher = more / better"
+        if inlist("`v'", "ivs_score", "IEDF", "IBPD") {
+            local direction "Higher = greater constraint / risk"
+        }
+
+        quietly summarize `v' if final_lca_sample == 1 & !missing(`v')
+        local sample_mean = r(mean)
+        local sample_sd = r(sd)
+
+        foreach s in 1 2 3 4 {
+
+            quietly summarize `v' ///
+                if final_lca_sample == 1 & segment == `s' & !missing(`v')
+
+            local seg_N = r(N)
+            local seg_mean = r(mean)
+            local seg_sd = r(sd)
+
+            local std_dev = .
+            if `sample_sd' > 0 & `sample_sd' < . {
+                local std_dev = (`seg_mean' - `sample_mean') / `sample_sd'
+            }
+
+            quietly summarize segment_post`s' ///
+                if final_lca_sample == 1 & !missing(`v'), meanonly
+            local weighted_N = r(sum)
+
+            tempvar __wx
+            quietly gen double `__wx' = ///
+                segment_post`s' * `v' ///
+                if final_lca_sample == 1 & !missing(`v')
+
+            quietly summarize `__wx', meanonly
+            local weighted_num = r(sum)
+
+            local weighted_mean = .
+            if `weighted_N' > 0 {
+                local weighted_mean = `weighted_num' / `weighted_N'
+            }
+
+            local weighted_std_dev = .
+            if `sample_sd' > 0 & `sample_sd' < . {
+                local weighted_std_dev = (`weighted_mean' - `sample_mean') / `sample_sd'
+            }
+
+            local segname "`segname`s''"
+
+            post `centpost' ///
+                (`cont_index_order') ///
+                (`"`v'"') ///
+                (`"`construct'"') ///
+                (`"`direction'"') ///
+                (`s') ///
+                (`"`segname'"') ///
+                (`seg_N') ///
+                (`seg_mean') ///
+                (`seg_sd') ///
+                (`sample_mean') ///
+                (`sample_sd') ///
+                (`std_dev') ///
+                (`weighted_N') ///
+                (`weighted_mean') ///
+                (`weighted_std_dev')
+
+            drop `__wx'
+        }
+    }
+}
+
+postclose `centpost'
+
+
+*-------------------------------------------------------------------------------*
+* 10.3.1 Export continuous centroid tables
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`centroid_long'", clear
+
+    format segment_mean segment_sd sample_mean sample_sd ///
+           standardized_deviation posterior_weighted_N ///
+           posterior_weighted_mean ///
+           pw_z_deviation %9.3f
+
+    sort index_order segment
+
+    capture erase "${cluster_tables}/Table_C10_class_centroids_continuous_indices.xlsx"
+
+    export excel using ///
+        "${cluster_tables}/Table_C10_class_centroids_continuous_indices.xlsx", ///
+        sheet("long", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`centroid_long'", clear
+
+    keep index_order index_variable construct direction segment segment_mean ///
+         standardized_deviation posterior_weighted_mean ///
+         pw_z_deviation
+
+    reshape wide segment_mean standardized_deviation ///
+                 posterior_weighted_mean ///
+                 pw_z_deviation, ///
+        i(index_order index_variable construct direction) ///
+        j(segment)
+
+rename segment_mean1 mean_s1_constrained
+rename segment_mean2 mean_s2_active_risk
+rename segment_mean3 mean_s3_mainstream
+rename segment_mean4 mean_s4_integrated
+
+rename standardized_deviation1 zdev_s1_constrained
+rename standardized_deviation2 zdev_s2_active_risk
+rename standardized_deviation3 zdev_s3_mainstream
+rename standardized_deviation4 zdev_s4_integrated
+
+rename posterior_weighted_mean1 pwm_s1_constrained
+rename posterior_weighted_mean2 pwm_s2_active_risk
+rename posterior_weighted_mean3 pwm_s3_mainstream
+rename posterior_weighted_mean4 pwm_s4_integrated
+
+rename pw_z_deviation1 pwz_s1_constrained
+rename pw_z_deviation2 pwz_s2_active_risk
+rename pw_z_deviation3 pwz_s3_mainstream
+rename pw_z_deviation4 pwz_s4_integrated
+
+format mean_s* zdev_s* pwm_s* pwz_s* %9.3f
+
+    sort index_order
+
+    export excel using ///
+        "${cluster_tables}/Table_C10_class_centroids_continuous_indices.xlsx", ///
+        sheet("wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.4 Signature behavior variables
+*-------------------------------------------------------------------------------*
+
+/*
+    Create clean binary signature indicators for report interpretation.
+
+    These variables are NOT used to estimate the preferred LCA model.
+    They are used only to characterize the substantive meaning of each segment.
+*/
+
+capture drop sig_ranout_data
+capture drop sig_doc_accepted
+capture drop sig_antifraud_advice
+capture drop sig_bank_account
+capture drop sig_wallet_owner
+capture drop sig_pressure_money
+capture drop sig_problem_resolved
+capture drop sig_high_claim_satisfaction
+
+gen byte sig_ranout_data = .
+capture confirm variable q3_8
+if !_rc {
+    replace sig_ranout_data = inlist(q3_8, 1, 2) if inlist(q3_8, 1, 2, 3)
+}
+label var sig_ranout_data "Ran out of data/saldo in last month and this limited use"
+
+gen byte sig_doc_accepted = .
+capture confirm variable q5_25
+if !_rc {
+    replace sig_doc_accepted = (q5_25 == 1) if inlist(q5_25, 1, 2)
+}
+label var sig_doc_accepted "Document accepted without problems during most recent onboarding"
+
+gen byte sig_antifraud_advice = .
+capture confirm variable q5_27
+if !_rc {
+    replace sig_antifraud_advice = inlist(q5_27, 1, 2) if inlist(q5_27, 1, 2, 3)
+}
+label var sig_antifraud_advice "Received fraud advice or warnings during onboarding/first use"
+
+gen byte sig_bank_account = .
+capture confirm variable q4_12_1
+if !_rc {
+    replace sig_bank_account = (q4_12_1 == 1) if inlist(q4_12_1, 0, 1)
+}
+label var sig_bank_account "Owns bank account"
+
+gen byte sig_wallet_owner = .
+capture confirm variable q4_12_2
+if !_rc {
+    replace sig_wallet_owner = (q4_12_2 == 1) if inlist(q4_12_2, 0, 1)
+}
+label var sig_wallet_owner "Owns digital wallet"
+
+gen byte sig_pressure_money = .
+capture confirm variable q9_16
+if !_rc {
+    replace sig_pressure_money = (q9_16 == 1) if inlist(q9_16, 0, 1)
+}
+label var sig_pressure_money "Felt pressure to hand over all remittance money"
+
+gen byte sig_problem_resolved = .
+capture confirm variable q7_14
+if !_rc {
+	replace sig_problem_resolved = (q7_14 == 1) if inlist(q7_14, 1, 2, 3, 4)
+}
+label var sig_problem_resolved "Most recent payment/remittance problem was resolved"
+
+gen byte sig_high_claim_satisfaction = .
+capture confirm variable q7_15
+if !_rc {
+    replace sig_high_claim_satisfaction = (q7_15 >= 4) if inrange(q7_15, 1, 5)
+}
+label var sig_high_claim_satisfaction "High satisfaction with provider attention after problem"
+
+
+*-------------------------------------------------------------------------------*
+* 10.4.1 Binary signature behavior table
+*-------------------------------------------------------------------------------*
+
+tempfile sig_binary_long
+tempname sigbinpost
+
+postfile `sigbinpost' ///
+    int signature_order ///
+    str40 signature_variable ///
+    str120 signature_label ///
+    str45 signature_domain ///
+    byte segment ///
+    str90 segment_name ///
+    int segment_N ///
+    int nonmissing_N ///
+    double segment_share ///
+    double sample_share ///
+    double difference_from_sample ///
+    double posterior_weighted_N ///
+    double posterior_weighted_share ///
+    using "`sig_binary_long'", replace
+
+local sig_order = 0
+
+foreach v in ///
+    formal_remittance ///
+    sig_bank_account ///
+    sig_wallet_owner ///
+    recent_digital_txn ///
+    any_qr_use ///
+    aware_breb ///
+    used_breb ///
+    sig_ranout_data ///
+    lca_di_data_stable ///
+    lca_di_onboard_help ///
+    lca_di_fee_clear ///
+    sig_doc_accepted ///
+    sig_antifraud_advice ///
+    lca_di_fraud_attempt ///
+    any_problem ///
+    sig_problem_resolved ///
+    sig_high_claim_satisfaction ///
+    individual_support ///
+    any_training_3y ///
+    recent_training_12m ///
+    avoided_due_conflict ///
+    sig_pressure_money {
+
+    capture confirm variable `v'
+    if !_rc {
+
+        local ++sig_order
+
+        local siglabel : variable label `v'
+        if `"`siglabel'"' == "" {
+            local siglabel "`v'"
+        }
+
+        local domain "Other"
+        if inlist("`v'", "formal_remittance", "recent_digital_txn", "any_qr_use", "aware_breb", "used_breb") {
+            local domain "Use and remittance formalization"
+        }
+        if inlist("`v'", "sig_bank_account", "sig_wallet_owner") {
+            local domain "Formal financial access"
+        }
+        if inlist("`v'", "sig_ranout_data", "lca_di_data_stable") {
+            local domain "Telecom access"
+        }
+        if inlist("`v'", "lca_di_onboard_help", "lca_di_fee_clear", "sig_doc_accepted", "sig_antifraud_advice") {
+            local domain "Onboarding and usability"
+        }
+        if inlist("`v'", "lca_di_fraud_attempt", "any_problem", "sig_problem_resolved", "sig_high_claim_satisfaction") {
+            local domain "Safety and recourse"
+        }
+        if inlist("`v'", "individual_support", "any_training_3y", "recent_training_12m") {
+            local domain "Support and training"
+        }
+        if inlist("`v'", "avoided_due_conflict", "sig_pressure_money") {
+            local domain "Household dynamics and privacy"
+        }
+
+        quietly summarize `v' if final_lca_sample == 1 & !missing(`v')
+        local sample_share = r(mean)
+
+        foreach s in 1 2 3 4 {
+
+            quietly count if final_lca_sample == 1 & segment == `s'
+            local segment_N = r(N)
+
+            quietly count if final_lca_sample == 1 & segment == `s' & !missing(`v')
+            local nonmissing_N = r(N)
+
+            quietly summarize `v' if final_lca_sample == 1 & segment == `s' & !missing(`v')
+            local segment_share = r(mean)
+
+            local diff_sample = .
+            if `segment_share' < . & `sample_share' < . {
+                local diff_sample = `segment_share' - `sample_share'
+            }
+
+            quietly summarize segment_post`s' if final_lca_sample == 1 & !missing(`v'), meanonly
+            local weighted_N = r(sum)
+
+            tempvar __wxsig
+            quietly gen double `__wxsig' = ///
+                segment_post`s' * `v' ///
+                if final_lca_sample == 1 & !missing(`v')
+
+            quietly summarize `__wxsig', meanonly
+            local weighted_num = r(sum)
+
+            local weighted_share = .
+            if `weighted_N' > 0 {
+                local weighted_share = `weighted_num' / `weighted_N'
+            }
+
+            local segname "`segname`s''"
+
+            post `sigbinpost' ///
+                (`sig_order') ///
+                (`"`v'"') ///
+                (`"`siglabel'"') ///
+                (`"`domain'"') ///
+                (`s') ///
+                (`"`segname'"') ///
+                (`segment_N') ///
+                (`nonmissing_N') ///
+                (`segment_share') ///
+                (`sample_share') ///
+                (`diff_sample') ///
+                (`weighted_N') ///
+                (`weighted_share')
+
+            drop `__wxsig'
+        }
+    }
+}
+
+postclose `sigbinpost'
+
+
+*-------------------------------------------------------------------------------*
+* 10.4.2 Export binary signature behavior table
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`sig_binary_long'", clear
+
+    format segment_share sample_share difference_from_sample ///
+           posterior_weighted_N posterior_weighted_share %9.3f
+
+    sort signature_order segment
+
+    capture erase "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx"
+
+    export excel using ///
+        "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx", ///
+        sheet("binary_long", replace) ///
+        firstrow(variables) 
+
+restore
+
+
+preserve
+
+    use "`sig_binary_long'", clear
+
+    keep signature_order signature_variable signature_label signature_domain ///
+         segment segment_share posterior_weighted_share difference_from_sample
+
+    reshape wide segment_share posterior_weighted_share difference_from_sample, ///
+        i(signature_order signature_variable signature_label signature_domain) ///
+        j(segment)
+
+rename segment_share1 shr_s1_constrained
+rename segment_share2 shr_s2_active_risk
+rename segment_share3 shr_s3_mainstream
+rename segment_share4 shr_s4_integrated
+
+rename posterior_weighted_share1 pwshr_s1_constrained
+rename posterior_weighted_share2 pwshr_s2_active_risk
+rename posterior_weighted_share3 pwshr_s3_mainstream
+rename posterior_weighted_share4 pwshr_s4_integrated
+
+rename difference_from_sample1 dif_s1_constrained
+rename difference_from_sample2 dif_s2_active_risk
+rename difference_from_sample3 dif_s3_mainstream
+rename difference_from_sample4 dif_s4_integrated
+
+format shr_s* pwshr_s* dif_s* %9.3f
+
+    sort signature_order
+
+    export excel using ///
+        "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx", ///
+        sheet("binary_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.4.3 Categorical signature behavior table
+*-------------------------------------------------------------------------------*
+
+tempfile sig_cat_long
+tempname sigcatpost
+
+postfile `sigcatpost' ///
+    int signature_order ///
+    str40 signature_variable ///
+    str120 signature_label ///
+    str45 signature_domain ///
+    double category_value ///
+    str120 category_label ///
+    byte segment ///
+    str90 segment_name ///
+    int segment_N ///
+    int nonmissing_N ///
+    double segment_share ///
+    double sample_share ///
+    double difference_from_sample ///
+    double posterior_weighted_N ///
+    double posterior_weighted_share ///
+    using "`sig_cat_long'", replace
+
+local catsig_order = 0
+
+foreach v in ///
+    remit_channel_4cat ///
+    q6_4 ///
+    lca_di_account_freq3 ///
+    q3_8 ///
+    q7_1 ///
+    lca_di_recourse3 {
+
+    capture confirm variable `v'
+    if !_rc {
+
+        local ++catsig_order
+
+        local siglabel : variable label `v'
+        if `"`siglabel'"' == "" {
+            local siglabel "`v'"
+        }
+
+        local domain "Other"
+
+        if inlist("`v'", "remit_channel_4cat", "q6_4") {
+            local domain "Remittance channel"
+        }
+
+        if "`v'" == "lca_di_account_freq3" {
+            local domain "Account/wallet use frequency"
+        }
+
+        if "`v'" == "q3_8" {
+            local domain "Telecom access"
+        }
+
+        if inlist("`v'", "q7_1", "lca_di_recourse3") {
+            local domain "Safety and recourse"
+        }
+
+        levelsof `v' if final_lca_sample == 1 & !missing(`v'), local(catlevels)
+
+        foreach c of local catlevels {
+
+            local category_label "`c'"
+            local value_label : value label `v'
+
+            if "`value_label'" != "" {
+                capture local category_label : label `value_label' `c'
+                if _rc {
+                    local category_label "`c'"
+                }
+            }
+
+            quietly count if final_lca_sample == 1 & !missing(`v')
+            local sample_N = r(N)
+
+            quietly count if final_lca_sample == 1 & `v' == `c'
+            local sample_count = r(N)
+
+            local sample_share = .
+            if `sample_N' > 0 {
+                local sample_share = `sample_count' / `sample_N'
+            }
+
+            foreach s in 1 2 3 4 {
+
+                quietly count if final_lca_sample == 1 & segment == `s'
+                local segment_N = r(N)
+
+                quietly count if final_lca_sample == 1 & segment == `s' & !missing(`v')
+                local nonmissing_N = r(N)
+
+                quietly count if final_lca_sample == 1 & segment == `s' & `v' == `c'
+                local segment_count = r(N)
+
+                local segment_share = .
+                if `nonmissing_N' > 0 {
+                    local segment_share = `segment_count' / `nonmissing_N'
+                }
+
+                local diff_sample = .
+                if `segment_share' < . & `sample_share' < . {
+                    local diff_sample = `segment_share' - `sample_share'
+                }
+
+                quietly summarize segment_post`s' ///
+                    if final_lca_sample == 1 & !missing(`v'), meanonly
+                local weighted_N = r(sum)
+
+                tempvar __wcat
+                quietly gen double `__wcat' = ///
+                    segment_post`s' * (`v' == `c') ///
+                    if final_lca_sample == 1 & !missing(`v')
+
+                quietly summarize `__wcat', meanonly
+                local weighted_num = r(sum)
+
+                local weighted_share = .
+                if `weighted_N' > 0 {
+                    local weighted_share = `weighted_num' / `weighted_N'
+                }
+
+                local segname "`segname`s''"
+
+                post `sigcatpost' ///
+                    (`catsig_order') ///
+                    (`"`v'"') ///
+                    (`"`siglabel'"') ///
+                    (`"`domain'"') ///
+                    (`c') ///
+                    (`"`category_label'"') ///
+                    (`s') ///
+                    (`"`segname'"') ///
+                    (`segment_N') ///
+                    (`nonmissing_N') ///
+                    (`segment_share') ///
+                    (`sample_share') ///
+                    (`diff_sample') ///
+                    (`weighted_N') ///
+                    (`weighted_share')
+
+                drop `__wcat'
+            }
+        }
+    }
+}
+
+postclose `sigcatpost'
+
+
+*-------------------------------------------------------------------------------*
+* 10.4.4 Export categorical signature behavior table
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`sig_cat_long'", clear
+
+    format segment_share sample_share difference_from_sample ///
+           posterior_weighted_N posterior_weighted_share %9.3f
+
+    sort signature_order category_value segment
+
+    export excel using ///
+        "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx", ///
+        sheet("categorical_long", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`sig_cat_long'", clear
+
+    keep signature_order signature_variable signature_label signature_domain ///
+         category_value category_label segment segment_share ///
+         posterior_weighted_share difference_from_sample
+
+    reshape wide segment_share posterior_weighted_share difference_from_sample, ///
+        i(signature_order signature_variable signature_label signature_domain ///
+          category_value category_label) ///
+        j(segment)
+
+rename segment_share1 shr_s1_constrained
+rename segment_share2 shr_s2_active_risk
+rename segment_share3 shr_s3_mainstream
+rename segment_share4 shr_s4_integrated
+
+rename posterior_weighted_share1 pwshr_s1_constrained
+rename posterior_weighted_share2 pwshr_s2_active_risk
+rename posterior_weighted_share3 pwshr_s3_mainstream
+rename posterior_weighted_share4 pwshr_s4_integrated
+
+rename difference_from_sample1 dif_s1_constrained
+rename difference_from_sample2 dif_s2_active_risk
+rename difference_from_sample3 dif_s3_mainstream
+rename difference_from_sample4 dif_s4_integrated
+
+format shr_s* pwshr_s* dif_s* %9.3f
+
+    sort signature_order category_value
+
+    export excel using ///
+        "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx", ///
+        sheet("categorical_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.5 Compact report-ready profile table
+*-------------------------------------------------------------------------------*
+
+/*
+    This compact table combines the key quantities most likely to be used
+    directly in the report: segment size, posterior certainty, high/adverse
+    LCA profile probabilities, and selected continuous centroids.
+*/
+
+preserve
+
+    keep if final_lca_sample == 1
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) ///
+            segment_assigned_post ///
+            segment_posterior_margin ///
+            segment_high_certainty ///
+            h_ivs3 ///
+            h_icdp3 ///
+            h_iaff3 ///
+            h_iuof3 ///
+            h_oqi3 ///
+            h_iurd3 ///
+            h_iedf2 ///
+            ivs_score ///
+            icdp_score ///
+            iaff_score ///
+            iuof_score_01 ///
+            oqi_score_01 ///
+            iurd_score_01 ///
+            IEDF ///
+            ICPF ///
+            IEH ///
+            formal_remittance ///
+            any_qr_use ///
+            lca_di_fraud_attempt ///
+            any_problem ///
+            individual_support ///
+            any_training_3y ///
+            avoided_due_conflict, ///
+        by(segment)
+
+    gen class_pct = 100 * N / `final_N'
+
+    gen str90 segment_name = ""
+    replace segment_name = "`segname1'" if segment == 1
+    replace segment_name = "`segname2'" if segment == 2
+    replace segment_name = "`segname3'" if segment == 3
+    replace segment_name = "`segname4'" if segment == 4
+
+    format class_pct %9.2f
+    format segment_assigned_post segment_posterior_margin ///
+           segment_high_certainty ///
+           h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 ///
+           ivs_score icdp_score iaff_score iuof_score_01 ///
+           oqi_score_01 iurd_score_01 IEDF ICPF IEH ///
+           formal_remittance any_qr_use lca_di_fraud_attempt ///
+           any_problem individual_support any_training_3y ///
+           avoided_due_conflict %9.3f
+
+    order segment segment_name N class_pct ///
+          segment_assigned_post segment_posterior_margin ///
+          segment_high_certainty ///
+          h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 ///
+          ivs_score icdp_score iaff_score iuof_score_01 ///
+          oqi_score_01 iurd_score_01 IEDF ICPF IEH ///
+          formal_remittance any_qr_use lca_di_fraud_attempt ///
+          any_problem individual_support any_training_3y ///
+          avoided_due_conflict
+
+    export excel using ///
+        "${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx", ///
+        sheet("compact_report_profile", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 10.6 Final console audit
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 10 COMPLETED: CLASS-PROFILE INTERPRETATION TABLES"
+display as text "Final LCA analytical N = `final_N'"
+display as text "Outputs created:"
+display as text "1. ${cluster_tables}/Table_C9_conditional_response_probabilities.xlsx"
+display as text "2. ${cluster_tables}/Table_C10_class_centroids_continuous_indices.xlsx"
+display as text "3. ${cluster_tables}/Table_C11_signature_behaviors_by_class.xlsx"
+display as text "4. ${cluster_tables}/Table_C10_segment_size_and_certainty.xlsx"
+display as text "------------------------------------------------------------"
+
+}
+*-----------------------------------------------*
+**##	12. VISUALIZE FINAL CLASS PROFILES		*
+*-----------------------------------------------*
+{
+
+/*
+    Purpose:
+    Produce report-ready visualizations of the final preferred four-segment
+    hybrid LCA solution.
+
+    Main methodological choices:
+        - Use posterior-weighted probabilities for latent-class profiles.
+        - Use posterior-weighted standardized continuous centroids.
+        - Use modal assignment for segment sizes and certainty classifications.
+        - Maintain the substantive segment ordering established in Section 9.10.
+        - Reverse adverse continuous indices in the centroid figure so that
+          higher values consistently indicate stronger inclusion or protection.
+
+    Final substantive segment order:
+        1. Structurally constrained low-intensity users
+        2. Operationally active but high-risk remittance users
+        3. Mainstream formal-digital users with incomplete protection
+        4. Integrated and protected digital remittance users
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 12.0 Load final segmentation dataset and define graphical conventions
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+assert _N == 423
+isid KEY
+
+foreach v in ///
+    segment segment_short ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    segment_assigned_post segment_posterior_margin ///
+    segment_uncertain segment_medium_certainty segment_high_certainty {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required final-segmentation variable missing: `v'"
+        exit 111
+    }
+}
+
+graph set window fontface "Times New Roman"
+set scheme plotplain
+
+capture mkdir "${cluster_figures}"
+
+* Consistent segment colors across all cluster-analysis figures
+local color_s1 "maroon"
+local color_s2 "orange"
+local color_s3 "navy"
+local color_s4 "green"
+
+label define segment_graph_lbl ///
+    1 "Constrained low-intensity" ///
+    2 "Operationally active, high-risk" ///
+    3 "Mainstream partial inclusion" ///
+    4 "Integrated and protected", replace
+
+label values segment segment_graph_lbl
+
+
+*===============================================================================*
+* 12.1 MAIN CLASS-PROFILE LINE PLOT
+*     Inclusion- and protection-oriented probabilities
+*===============================================================================*/
+
+/*
+    All probabilities in the main figure are oriented so that higher values
+    indicate stronger inclusion, usability, or protection:
+
+        - Low vulnerability
+        - High practical digital competence
+        - High formal financial access
+        - High financial operability
+        - High onboarding quality
+        - High digital remittance intensity
+        - Low/no fraud and recourse harm
+*/
+
+tempfile figC6_main_data
+tempname figC6mainpost
+
+postfile `figC6mainpost' ///
+    byte domain_order ///
+    str32 domain_variable ///
+    double target_category ///
+    byte segment ///
+    double probability ///
+    using "`figC6_main_data'", replace
+
+local favorable_variables ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2
+
+local favorable_categories ///
+    1 ///
+    3 ///
+    3 ///
+    3 ///
+    3 ///
+    3 ///
+    0
+
+forvalues d = 1/7 {
+
+    local current_variable : word `d' of `favorable_variables'
+    local current_category : word `d' of `favorable_categories'
+
+    foreach s in 1 2 3 4 {
+
+        quietly summarize segment_post`s' ///
+            if !missing(`current_variable'), meanonly
+        local denominator = r(sum)
+
+        tempvar __weighted_target
+
+        quietly gen double `__weighted_target' = ///
+            segment_post`s' * (`current_variable' == `current_category') ///
+            if !missing(`current_variable')
+
+        quietly summarize `__weighted_target', meanonly
+        local numerator = r(sum)
+
+        local profile_probability = .
+        if `denominator' > 0 {
+            local profile_probability = `numerator' / `denominator'
+        }
+
+        post `figC6mainpost' ///
+            (`d') ///
+            (`"`current_variable'"') ///
+            (`current_category') ///
+            (`s') ///
+            (`profile_probability')
+
+        drop `__weighted_target'
+    }
+}
+
+postclose `figC6mainpost'
+
+
+preserve
+
+    use "`figC6_main_data'", clear
+
+    label define profile_domain_lbl ///
+        1 "Low vulnerability" ///
+        2 "High practical competence" ///
+        3 "High formal access" ///
+        4 "High financial operability" ///
+        5 "High onboarding quality" ///
+        6 "High remittance intensity" ///
+        7 "Low/no fraud harm", replace
+
+    label values domain_order profile_domain_lbl
+    label values segment segment_graph_lbl
+
+    format probability %9.3f
+
+    sort segment domain_order
+
+    save "${cluster_data}/plotdata_figC6_profile_probabilities.dta", replace
+
+    twoway ///
+        (connected probability domain_order if segment == 1, ///
+            sort ///
+            lcolor("`color_s1'") ///
+            mcolor("`color_s1'") ///
+            lwidth(medthick) ///
+            msymbol(O) ///
+            msize(small)) ///
+        (connected probability domain_order if segment == 2, ///
+            sort ///
+            lcolor("`color_s2'") ///
+            mcolor("`color_s2'") ///
+            lwidth(medthick) ///
+            msymbol(D) ///
+            msize(small)) ///
+        (connected probability domain_order if segment == 3, ///
+            sort ///
+            lcolor("`color_s3'") ///
+            mcolor("`color_s3'") ///
+            lwidth(medthick) ///
+            msymbol(T) ///
+            msize(small)) ///
+        (connected probability domain_order if segment == 4, ///
+            sort ///
+            lcolor("`color_s4'") ///
+            mcolor("`color_s4'") ///
+            lwidth(medthick) ///
+            msymbol(S) ///
+            msize(small)), ///
+        yscale(range(0 1)) ///
+        ylabel(0(.2)1, ///
+            format(%3.1f) ///
+            labsize(small) ///
+            grid glcolor(gs14)) ///
+        xscale(range(.75 7.25)) ///
+        xlabel( ///
+            1 "Low vulnerability" ///
+            2 "High practical competence" ///
+            3 "High formal access" ///
+            4 "High operability" ///
+            5 "High onboarding" ///
+            6 "High remittance intensity" ///
+            7 "Low/no fraud harm", ///
+            angle(35) ///
+            labsize(vsmall)) ///
+        yline(.50, lcolor(gs12) lpattern(dot)) ///
+        xtitle("") ///
+        ytitle("Posterior-weighted probability", size(small)) ///
+        legend( ///
+            order( ///
+                1 "Constrained low-intensity" ///
+                2 "Operationally active, high-risk" ///
+                3 "Mainstream partial inclusion" ///
+                4 "Integrated and protected") ///
+            rows(2) ///
+            position(6) ///
+            size(small) ///
+            region(lcolor(none))) ///
+        note( ///
+            "All dimensions are oriented so higher probabilities indicate stronger inclusion or protection.", ///
+            size(vsmall)) ///
+        graphregion(color(white)) ///
+        plotregion(color(white)) ///
+        scheme(plotplain) ///
+        name(figC6_main, replace)
+
+       graph save ///
+        "${cluster_figures}/figC6_final_class_profile_probabilities.gph", ///
+        replace
+
+    graph export ///
+        "${cluster_figures}/figC6_final_class_profile_probabilities.png", ///
+        width(3200) ///
+        replace
+
+restore
+
+
+*===============================================================================*
+* 12.2 STANDARDIZED CONTINUOUS CENTROID BAR CHART
+*===============================================================================*/
+
+/*
+    This figure profiles segments using the original continuous indices.
+
+    The figure reports posterior-weighted standardized deviations from the
+    full-sample mean.
+
+    To facilitate interpretation, adverse dimensions are reversed:
+        - Socioeconomic vulnerability
+        - Fraud exposure / recourse harm
+
+    Therefore, higher values consistently indicate stronger inclusion,
+    capability, experience, protection, or agency.
+
+    The figure excludes:
+        - IADT, because it overlaps substantially with practical competence.
+        - IBPD, because it overlaps conceptually with the enabling environment
+          and would require reversal.
+
+    These remain available in the complete centroid tables from Section 10.
+*/
+
+
+tempfile figC7_centroid_data
+tempname figC7post
+
+postfile `figC7post' ///
+    byte domain_order ///
+    str32 index_variable ///
+    byte direction ///
+    byte segment ///
+    double posterior_weighted_N ///
+    double posterior_weighted_mean ///
+    double sample_mean ///
+    double sample_sd ///
+    double standardized_deviation ///
+    double oriented_standardized_deviation ///
+    using "`figC7_centroid_data'", replace
+
+
+local centroid_variables ///
+    ivs_score ///
+    iat_score ///
+    icdp_score ///
+    iaff_score ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    iurd_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH
+
+/*
+    direction = -1 means the index is reversed so that larger plotted values
+    indicate stronger inclusion or protection.
+*/
+
+local centroid_directions ///
+    -1 ///
+     1 ///
+     1 ///
+     1 ///
+     1 ///
+     1 ///
+     1 ///
+     1 ///
+     1 ///
+    -1 ///
+     1 ///
+     1 ///
+     1
+
+
+forvalues d = 1/13 {
+
+    local current_variable : word `d' of `centroid_variables'
+    local current_direction : word `d' of `centroid_directions'
+
+    capture confirm variable `current_variable'
+
+    if _rc {
+        display as error ///
+            "Required continuous profiling index missing: `current_variable'"
+        exit 111
+    }
+
+    quietly summarize `current_variable' ///
+        if !missing(`current_variable')
+
+    local overall_mean = r(mean)
+    local overall_sd   = r(sd)
+
+    foreach s in 1 2 3 4 {
+
+        quietly summarize segment_post`s' ///
+            if !missing(`current_variable'), meanonly
+
+        local denominator = r(sum)
+
+        tempvar __weighted_value
+
+        quietly gen double `__weighted_value' = ///
+            segment_post`s' * `current_variable' ///
+            if !missing(`current_variable')
+
+        quietly summarize `__weighted_value', meanonly
+        local numerator = r(sum)
+
+        local weighted_mean = .
+
+        if `denominator' > 0 {
+            local weighted_mean = `numerator' / `denominator'
+        }
+
+        local standardized_value = .
+
+        if `overall_sd' > 0 & `overall_sd' < . {
+            local standardized_value = ///
+                (`weighted_mean' - `overall_mean') / `overall_sd'
+        }
+
+        local oriented_value = ///
+            `current_direction' * `standardized_value'
+
+        post `figC7post' ///
+            (`d') ///
+            (`"`current_variable'"') ///
+            (`current_direction') ///
+            (`s') ///
+            (`denominator') ///
+            (`weighted_mean') ///
+            (`overall_mean') ///
+            (`overall_sd') ///
+            (`standardized_value') ///
+            (`oriented_value')
+
+        drop `__weighted_value'
+    }
+}
+
+postclose `figC7post'
+
+
+preserve
+
+    use "`figC7_centroid_data'", clear
+
+    label define centroid_domain_lbl ///
+         1 "Low vulnerability" ///
+         2 "Telecommunications access" ///
+         3 "Practical digital competence" ///
+         4 "Formal financial access" ///
+         5 "Financial operability" ///
+         6 "Onboarding quality" ///
+         7 "Digital remittance intensity" ///
+         8 "Transactional experience" ///
+         9 "Safe conduct" ///
+        10 "Low fraud / recourse harm" ///
+        11 "Financial autonomy" ///
+        12 "Trust and norms climate" ///
+        13 "Enabling environment", replace
+
+    label values domain_order centroid_domain_lbl
+    label values segment segment_graph_lbl
+
+    format posterior_weighted_N posterior_weighted_mean ///
+           sample_mean sample_sd standardized_deviation ///
+           oriented_standardized_deviation %9.3f
+
+    sort domain_order segment
+
+    save ///
+        "${cluster_data}/plotdata_figC7_standardized_centroids_long.dta", ///
+        replace
+
+    keep domain_order index_variable segment ///
+         oriented_standardized_deviation
+
+    reshape wide oriented_standardized_deviation, ///
+        i(domain_order index_variable) ///
+        j(segment)
+
+    rename oriented_standardized_deviation1 z_s1
+    rename oriented_standardized_deviation2 z_s2
+    rename oriented_standardized_deviation3 z_s3
+    rename oriented_standardized_deviation4 z_s4
+
+    label var z_s1 "Constrained low-intensity"
+    label var z_s2 "Operationally active, high-risk"
+    label var z_s3 "Mainstream partial inclusion"
+    label var z_s4 "Integrated and protected"
+
+    format z_s1 z_s2 z_s3 z_s4 %9.3f
+
+    sort domain_order
+
+    save ///
+        "${cluster_data}/plotdata_figC7_standardized_centroids_wide.dta", ///
+        replace
+
+graph hbar ///
+    z_s1 z_s2 z_s3 z_s4, ///
+    over(domain_order, ///
+        label(labsize(vsmall))) ///
+    bar(1, ///
+        fcolor("`color_s1'") ///
+        lcolor("`color_s1'")) ///
+    bar(2, ///
+        fcolor("`color_s2'") ///
+        lcolor("`color_s2'")) ///
+    bar(3, ///
+        fcolor("`color_s3'") ///
+        lcolor("`color_s3'")) ///
+    bar(4, ///
+        fcolor("`color_s4'") ///
+        lcolor("`color_s4'")) ///
+    yline(0, ///
+        lcolor(gs8) ///
+        lpattern(dash)) ///
+    ylabel(, ///
+        labsize(vsmall) ///
+        grid ///
+        glcolor(gs14)) ///
+    ytitle( ///
+        "Posterior-weighted standardized deviation from sample mean", ///
+        size(small)) ///
+    legend( ///
+        order( ///
+            1 "Constrained low-intensity" ///
+            2 "Operationally active, high-risk" ///
+            3 "Mainstream partial inclusion" ///
+            4 "Integrated and protected") ///
+        rows(2) ///
+        position(6) ///
+        size(small) ///
+        region(lcolor(none))) ///
+    note( ///
+        "Vulnerability and fraud/recourse harm are reversed; higher values consistently indicate stronger inclusion or protection.", ///
+        size(vsmall)) ///
+    graphregion(color(white)) ///
+    plotregion(color(white)) ///
+    scheme(plotplain) ///
+    name(figC7_centroids, replace)
+
+graph save ///
+    "${cluster_figures}/figC7_final_class_centroids_standardized.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC7_final_class_centroids_standardized.png", ///
+    width(3400) ///
+    replace
+
+restore
+
+
+*===============================================================================*
+* 12.3 FINAL SEGMENT-SIZE PLOT
+*===============================================================================*/
+
+/*
+    Segment sizes use maximum-posterior-probability modal assignment.
+
+    The model-estimated marginal class probabilities remain available in the
+    model-fit tables, but modal assignment shares are more intuitive for the
+    report's description of the respondent typology.
+*/
+
+
+preserve
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) mean_assigned_posterior = segment_assigned_post, ///
+        by(segment)
+
+    gen double class_pct = 100 * N / 423
+
+    gen str30 bar_label = ///
+        string(class_pct, "%4.1f") + "% (N=" + ///
+        trim(string(N, "%4.0f")) + ")"
+
+    label values segment segment_graph_lbl
+
+    format class_pct %9.2f
+    format mean_assigned_posterior %9.3f
+
+    sort segment
+
+    save ///
+        "${cluster_data}/plotdata_figC8_final_class_sizes.dta", ///
+        replace
+
+    twoway ///
+        (bar class_pct segment if segment == 1, ///
+            barwidth(.68) ///
+            fcolor("`color_s1'") ///
+            lcolor("`color_s1'")) ///
+        (bar class_pct segment if segment == 2, ///
+            barwidth(.68) ///
+            fcolor("`color_s2'") ///
+            lcolor("`color_s2'")) ///
+        (bar class_pct segment if segment == 3, ///
+            barwidth(.68) ///
+            fcolor("`color_s3'") ///
+            lcolor("`color_s3'")) ///
+        (bar class_pct segment if segment == 4, ///
+            barwidth(.68) ///
+            fcolor("`color_s4'") ///
+            lcolor("`color_s4'")) ///
+        (scatter class_pct segment, ///
+            msymbol(none) ///
+            mlabel(bar_label) ///
+            mlabposition(12) ///
+            mlabsize(small) ///
+            mlabcolor(gs3)), ///
+        xlabel( ///
+            1 "Constrained low-intensity" ///
+            2 "Operationally active, high-risk" ///
+            3 "Mainstream partial inclusion" ///
+            4 "Integrated and protected", ///
+            angle(25) ///
+            labsize(small)) ///
+        xscale(range(.45 4.55)) ///
+        yscale(range(0 60)) ///
+		ylabel( ///
+			0  "0%" ///
+			10 "10%" ///
+			20 "20%" ///
+			30 "30%" ///
+			40 "40%" ///
+			50 "50%" ///
+			60 "60%", ///
+			labsize(small) ///
+			grid ///
+			glcolor(gs14)) ///
+        xtitle("") ///
+        ytitle("Share of analytical sample", size(small)) ///
+        legend(off) ///
+        note( ///
+            "Segment shares are based on respondents' most likely latent-class assignment.", ///
+            size(vsmall)) ///
+        graphregion(color(white)) ///
+        plotregion(color(white)) ///
+        scheme(plotplain) ///
+        name(figC8_sizes, replace)
+
+    graph save ///
+        "${cluster_figures}/figC8_final_class_sizes.gph", ///
+        replace
+
+    graph export ///
+        "${cluster_figures}/figC8_final_class_sizes.png", ///
+        width(3000) ///
+        replace
+
+restore
+
+
+*===============================================================================*
+* 12.4 POSTERIOR CLASSIFICATION CERTAINTY
+*===============================================================================*/
+
+/*
+    The final posterior-certainty figure combines:
+
+        Panel A:
+        Distribution of respondents' maximum posterior probabilities.
+
+        Panel B:
+        Share of uncertain, medium-certainty, and high-certainty assignments
+        within each substantive segment.
+
+    Certainty thresholds:
+        Uncertain:          maximum posterior probability < 0.60
+        Medium certainty:   maximum posterior probability 0.60–0.79
+        High certainty:     maximum posterior probability >= 0.80
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 12.4.1 Posterior-probability distribution
+*-------------------------------------------------------------------------------*
+
+twoway ///
+    (histogram segment_assigned_post, ///
+        start(.25) ///
+        width(.05) ///
+        percent ///
+        fcolor("`color_s3'") ///
+        fintensity(45) ///
+        lcolor("`color_s3'") ///
+        lwidth(vthin)), ///
+    xline(.60, ///
+        lcolor("`color_s1'") ///
+        lpattern(dash) ///
+        lwidth(medthin)) ///
+    xline(.80, ///
+        lcolor("`color_s4'") ///
+        lpattern(dash) ///
+        lwidth(medthin)) ///
+    xscale(range(.25 1)) ///
+    xlabel(.25(.10)1, ///
+        format(%3.2f) ///
+        labsize(small)) ///
+	ylabel( ///
+		 0 "0%" ///
+		 5 "5%" ///
+		10 "10%" ///
+		15 "15%" ///
+		20 "20%" ///
+		25 "25%" ///
+		30 "30%" ///
+		35 "35%" ///
+		40 "40%" ///
+		45 "45%" ///
+		50 "50%" ///
+		55 "55%" ///
+		60 "60%", ///
+		labsize(small) ///
+		grid ///
+		glcolor(gs14)) ///
+    xtitle("Maximum posterior probability", size(small)) ///
+    ytitle("Share of respondents", size(small)) ///
+    legend(off) ///
+    note( ///
+        "Dashed thresholds indicate uncertain (<0.60) and high-certainty (>=0.80) classifications.", ///
+        size(vsmall)) ///
+    graphregion(color(white)) ///
+    plotregion(color(white)) ///
+    scheme(plotplain) ///
+    name(figC9_histogram, replace)
+
+graph save ///
+    "${cluster_figures}/figC9a_posterior_probability_distribution.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC9a_posterior_probability_distribution.png", ///
+    width(2600) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 12.4.2 Posterior certainty composition by segment
+*-------------------------------------------------------------------------------*
+
+capture drop pct_uncertain pct_medium_certainty pct_high_certainty
+
+gen double pct_uncertain = 100 * segment_uncertain
+gen double pct_medium_certainty = 100 * segment_medium_certainty
+gen double pct_high_certainty = 100 * segment_high_certainty
+
+label var pct_uncertain "Uncertain: posterior < 0.60"
+label var pct_medium_certainty "Medium certainty: posterior 0.60-0.79"
+label var pct_high_certainty "High certainty: posterior >= 0.80"
+
+
+* Save auditable collapsed plot dataset
+preserve
+
+    gen byte __one = 1
+
+    collapse ///
+        (mean) ///
+            pct_uncertain ///
+            pct_medium_certainty ///
+            pct_high_certainty ///
+        (sum) N = __one, ///
+        by(segment)
+
+    label values segment segment_graph_lbl
+
+    format pct_uncertain pct_medium_certainty pct_high_certainty %9.2f
+    format N %12.0fc
+
+    sort segment
+
+    save ///
+        "${cluster_data}/plotdata_figC9_certainty_by_segment.dta", ///
+        replace
+
+restore
+
+
+* Produce stacked certainty-composition graph from respondent-level data
+graph bar ///
+    (mean) ///
+        pct_uncertain ///
+        pct_medium_certainty ///
+        pct_high_certainty, ///
+    over(segment, ///
+        label(labsize(vsmall) alt)) ///
+    stack ///
+    bar(1, ///
+        fcolor("`color_s1'") ///
+        lcolor("`color_s1'")) ///
+    bar(2, ///
+        fcolor("`color_s2'") ///
+        lcolor("`color_s2'")) ///
+    bar(3, ///
+        fcolor("`color_s4'") ///
+        lcolor("`color_s4'")) ///
+    ylabel( ///
+          0 "0%" ///
+         20 "20%" ///
+         40 "40%" ///
+         60 "60%" ///
+         80 "80%" ///
+        100 "100%", ///
+        labsize(small) ///
+        grid ///
+        glcolor(gs14)) ///
+    ytitle("Share of assigned segment", size(small)) ///
+    legend( ///
+        order( ///
+            1 "Uncertain: <0.60" ///
+            2 "Medium certainty: 0.60-0.79" ///
+            3 "High certainty: >=0.80") ///
+        rows(3) ///
+        position(6) ///
+        size(vsmall) ///
+        region(lcolor(none))) ///
+    graphregion(color(white)) ///
+    plotregion(color(white)) ///
+    scheme(plotplain) ///
+    name(figC9_by_segment, replace)
+
+graph save ///
+    "${cluster_figures}/figC9b_posterior_certainty_by_segment.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC9b_posterior_certainty_by_segment.png", ///
+    width(2600) ///
+    replace
+
+*-------------------------------------------------------------------------------*
+* 12.4.3 Combined report-ready posterior-certainty figure
+*-------------------------------------------------------------------------------*
+
+graph combine ///
+    figC9_histogram ///
+    figC9_by_segment, ///
+    cols(2) ///
+    imargin(tiny) ///
+    graphregion(color(white)) ///
+    name(figC9_combined, replace)
+
+graph save ///
+    "${cluster_figures}/figC9_posterior_certainty.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC9_posterior_certainty.png", ///
+    width(3600) ///
+    replace
+
+
+*===============================================================================*
+* 12.5 OPTIONAL PRESENTATION-READY PROFILE FIGURE
+*     Selected high-level domains only
+*===============================================================================*/
+
+/*
+    Radar charts are intentionally not generated automatically.
+
+    They can be visually attractive for presentations, but they:
+        - become difficult to read with four segments;
+        - imply distances and areas that are not straightforward to interpret;
+        - require additional user-written commands;
+        - are generally less transparent than the line and centroid figures.
+
+    Figure C6 is therefore the recommended slide-ready visualization, while
+    Figure C7 is the preferred main-report comparison figure.
+*/
+
+
+*===============================================================================*
+* 12.6 FINAL GRAPH AUDIT
+*===============================================================================*/
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 12 COMPLETED: FINAL CLASS-PROFILE VISUALIZATIONS"
+display as text "------------------------------------------------------------"
+
+display as text "Main report-ready figures created:"
+
+display as text ///
+    "1. ${cluster_figures}/figC6_final_class_profile_probabilities.png"
+
+display as text ///
+    "2. ${cluster_figures}/figC7_final_class_centroids_standardized.png"
+
+display as text ///
+    "3. ${cluster_figures}/figC8_final_class_sizes.png"
+
+display as text ///
+    "4. ${cluster_figures}/figC9_posterior_certainty.png"
+
+display as text "Supplementary posterior-certainty figures created:"
+
+display as text ///
+    "5. ${cluster_figures}/figC9a_posterior_probability_distribution.png"
+
+display as text ///
+    "6. ${cluster_figures}/figC9b_posterior_certainty_by_segment.png"
+
+display as text "Auditable figure-source datasets created:"
+
+display as text ///
+    "7. ${cluster_data}/plotdata_figC6_profile_probabilities.dta"
+
+display as text ///
+    "8. ${cluster_data}/plotdata_figC7_standardized_centroids_long.dta"
+
+display as text ///
+    "9. ${cluster_data}/plotdata_figC7_standardized_centroids_wide.dta"
+
+display as text ///
+    "10. ${cluster_data}/plotdata_figC8_final_class_sizes.dta"
+
+display as text ///
+    "11. ${cluster_data}/plotdata_figC9_certainty_by_segment.dta"
+
+display as text "------------------------------------------------------------"
+
+}
+*-----------------------------------------------*
+**##	13. POST-LCA DESCRIPTIVE PROFILING		*
+*-----------------------------------------------*
+{
+/*
+    Purpose:
+    Describe who belongs to each final substantive segment using variables that
+    were not directly used to construct the preferred latent classes.
+
+    Analytical principles:
+        - Modal segment assignment is used for conventional descriptive tables,
+          chi-square tests, ANOVA, and robust pairwise comparisons.
+        - Posterior-weighted means and shares are also reported to account
+          descriptively for remaining classification uncertainty.
+        - Valid denominators are reported variable by variable.
+        - Binary variables are treated both as categorical variables and as
+          proportions, allowing intuitive percentage comparisons.
+        - Pairwise p-values are adjusted within variable using Holm's method.
+
+    Outputs:
+        Table_C12_demographic_profile_by_segment.xlsx
+        Table_C13_financial_behavior_profile_by_segment.xlsx
+        Table_C14_risk_autonomy_profile_by_segment.xlsx
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 13.0 Load final segmentation dataset and verify analytical sample
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+
+assert _N == 423
+isid KEY
+
+foreach v in ///
+    segment ///
+    segment_short ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    segment_assigned_post ///
+    segment_posterior_margin {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required final-segmentation variable missing: `v'"
+        exit 111
+    }
+}
+
+label define segment_profile_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment_profile_lbl
+
+local final_N = _N
+
+*-------------------------------------------------------------------------------*
+* Reusable helper: restore substantive segment labels after use ..., clear
+*-------------------------------------------------------------------------------*
+
+capture program drop apply_segment_profile_labels
+
+program define apply_segment_profile_labels
+
+    capture confirm variable segment
+
+    if _rc {
+        display as error ///
+            "Variable segment is required but was not found in the loaded dataset."
+        exit 111
+    }
+
+    label define segment_profile_lbl ///
+        1 "Structurally constrained low-intensity users" ///
+        2 "Operationally active but high-risk remittance users" ///
+        3 "Mainstream formal-digital users with incomplete protection" ///
+        4 "Integrated and protected digital remittance users", replace
+
+    label values segment segment_profile_lbl
+
+    capture drop segment_name
+
+    decode segment, gen(segment_name)
+
+    label var segment_name "Final substantive segment name"
+
+end
+
+*-------------------------------------------------------------------------------*
+* 13.1 Construct clean external profiling variables
+*-------------------------------------------------------------------------------*/
+
+/*
+    Refusal, don't-know, invalid, and structurally inapplicable categories are
+    set to missing instead of being treated as substantive responses.
+*/
+
+label define prof_yesno_lbl ///
+    0 "No" ///
+    1 "Yes", replace
+
+
+*---------------------------*
+* Age in years
+*---------------------------*
+
+capture drop prof_age
+
+capture confirm numeric variable q4
+
+if !_rc {
+    clonevar prof_age = q4
+    label var prof_age "Age in years"
+}
+
+
+*---------------------------*
+* City
+*---------------------------*
+
+capture drop prof_city
+
+capture confirm numeric variable q3
+
+if !_rc {
+    clonevar prof_city = q3
+    label var prof_city "City"
+}
+else {
+    capture confirm string variable q3
+
+    if !_rc {
+        encode q3, gen(prof_city)
+        label var prof_city "City"
+    }
+}
+
+
+*---------------------------*
+* Education
+*---------------------------*
+
+capture drop prof_education
+
+capture confirm numeric variable q2_2
+
+if !_rc {
+    clonevar prof_education = q2_2
+    label var prof_education "Educational attainment"
+}
+else {
+    capture confirm string variable q2_2
+
+    if !_rc {
+        encode q2_2, gen(prof_education)
+        label var prof_education "Educational attainment"
+    }
+}
+
+
+*---------------------------*
+* Occupation
+*---------------------------*
+
+capture drop prof_occupation
+
+capture confirm numeric variable q2_3
+
+if !_rc {
+    clonevar prof_occupation = q2_3
+    label var prof_occupation "Main occupation"
+}
+else {
+    capture confirm string variable q2_3
+
+    if !_rc {
+        encode q2_3, gen(prof_occupation)
+        label var prof_occupation "Main occupation"
+    }
+}
+
+
+*---------------------------*
+* Principal remittance manager
+*---------------------------*
+
+capture drop prof_principal_manager
+
+capture confirm numeric variable q6
+
+if !_rc {
+    gen byte prof_principal_manager = .
+
+    replace prof_principal_manager = 0 if q6 == 0
+    replace prof_principal_manager = 1 if q6 == 1
+
+    label values prof_principal_manager prof_yesno_lbl
+
+    label var prof_principal_manager ///
+        "Principal recipient or manager of household remittances"
+}
+
+
+*---------------------------*
+* Remittance receipt frequency
+*---------------------------*
+
+capture drop prof_remit_frequency
+
+capture confirm numeric variable q6_2
+
+if !_rc {
+    gen byte prof_remit_frequency = .
+
+    replace prof_remit_frequency = q6_2 ///
+        if inlist(q6_2, 1, 2, 3)
+
+    label define prof_remit_frequency_lbl ///
+        1 "Monthly or more frequently" ///
+        2 "Every 2–3 months" ///
+        3 "Once or twice per year", replace
+
+    label values prof_remit_frequency prof_remit_frequency_lbl
+
+    label var prof_remit_frequency ///
+        "Frequency of remittance receipt"
+}
+
+
+*---------------------------*
+* Bank-account ownership
+*---------------------------*
+
+capture drop prof_bank_owner
+
+capture confirm numeric variable q4_12_1
+
+if !_rc {
+    gen byte prof_bank_owner = .
+
+    replace prof_bank_owner = q4_12_1 ///
+        if inlist(q4_12_1, 0, 1)
+
+    label values prof_bank_owner prof_yesno_lbl
+    label var prof_bank_owner "Owns a bank account"
+}
+
+
+*---------------------------*
+* Digital-wallet ownership
+*---------------------------*
+
+capture drop prof_wallet_owner
+
+capture confirm numeric variable q4_12_2
+
+if !_rc {
+    gen byte prof_wallet_owner = .
+
+    replace prof_wallet_owner = q4_12_2 ///
+        if inlist(q4_12_2, 0, 1)
+
+    label values prof_wallet_owner prof_yesno_lbl
+    label var prof_wallet_owner "Owns a digital wallet"
+}
+
+
+*---------------------------*
+* Awareness of named payment rails
+*---------------------------*
+
+capture drop prof_any_rail_awareness
+
+capture confirm numeric variable q5_1_6
+
+if !_rc {
+    gen byte prof_any_rail_awareness = .
+
+    replace prof_any_rail_awareness = 1 - q5_1_6 ///
+        if inlist(q5_1_6, 0, 1)
+
+    label values prof_any_rail_awareness prof_yesno_lbl
+
+    label var prof_any_rail_awareness ///
+        "Aware of at least one named payment rail"
+}
+
+
+*---------------------------*
+* Household pressure over remittance money
+*---------------------------*
+
+capture drop prof_pressure_all_money
+
+capture confirm numeric variable q9_16
+
+if !_rc {
+    gen byte prof_pressure_all_money = .
+
+    replace prof_pressure_all_money = 0 if q9_16 == 0
+    replace prof_pressure_all_money = 1 if q9_16 == 1
+
+    label values prof_pressure_all_money prof_yesno_lbl
+
+    label var prof_pressure_all_money ///
+        "Experienced pressure to hand over all remittance money"
+}
+
+
+*---------------------------*
+* Most recent problem completely resolved
+*---------------------------*
+
+capture drop prof_problem_resolved
+
+capture confirm numeric variable q7_14
+
+if !_rc {
+    gen byte prof_problem_resolved = .
+
+    replace prof_problem_resolved = (q7_14 == 1) ///
+        if inlist(q7_14, 1, 2, 3, 4)
+
+    label values prof_problem_resolved prof_yesno_lbl
+
+    label var prof_problem_resolved ///
+        "Most recent payment/remittance problem completely resolved"
+}
+
+
+*---------------------------*
+* High satisfaction with complaint attention
+*---------------------------*
+
+capture drop prof_high_claim_satisfaction
+
+capture confirm numeric variable q7_15
+
+if !_rc {
+    gen byte prof_high_claim_satisfaction = .
+
+    replace prof_high_claim_satisfaction = (q7_15 >= 4) ///
+        if inrange(q7_15, 1, 5)
+
+    label values prof_high_claim_satisfaction prof_yesno_lbl
+
+    label var prof_high_claim_satisfaction ///
+        "Satisfied or very satisfied with complaint attention"
+}
+
+
+*-------------------------------------------------------------------------------*
+* 13.2 Define profiling-variable families
+*-------------------------------------------------------------------------------*/
+
+local prof_demo_cont ///
+    prof_age ///
+    years_in_col
+
+local prof_demo_cat ///
+    age_cat ///
+    prof_city ///
+    years_cat ///
+    prof_education ///
+    prof_occupation
+
+
+local prof_fin_cont ///
+    rails_used_count
+
+local prof_fin_binary ///
+    prof_principal_manager ///
+    prof_bank_owner ///
+    prof_wallet_owner ///
+    any_qr_use ///
+    recent_digital_txn ///
+    prof_any_rail_awareness ///
+    any_rail_use ///
+    aware_breb ///
+    used_breb ///
+    any_training_3y ///
+    recent_training_12m ///
+    individual_support
+
+local prof_fin_cat ///
+    prof_remit_frequency ///
+    remit_channel_4cat ///
+    rails_used_count_3plus
+
+
+local prof_risk_cont ///
+    q7_15
+
+local prof_risk_binary ///
+    lca_di_onboard_help ///
+    lca_di_fee_clear ///
+    lca_di_fraud_attempt ///
+    any_problem ///
+    prof_problem_resolved ///
+    prof_high_claim_satisfaction ///
+    avoided_due_conflict ///
+    prof_pressure_all_money
+
+local prof_risk_cat ///
+    lca_di_recourse3
+
+
+*-------------------------------------------------------------------------------*
+* 13.3 Create reusable segment-size table
+*-------------------------------------------------------------------------------*/
+
+tempfile profile_segment_sizes
+
+preserve
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) mean_assigned_posterior = segment_assigned_post ///
+        (mean) mean_posterior_margin = segment_posterior_margin, ///
+        by(segment)
+
+    gen double segment_pct = 100 * N / `final_N'
+
+apply_segment_profile_labels
+
+    format segment_pct %9.2f
+    format mean_assigned_posterior mean_posterior_margin %9.3f
+
+    order ///
+        segment ///
+        segment_name ///
+        N ///
+        segment_pct ///
+        mean_assigned_posterior ///
+        mean_posterior_margin
+
+    save "`profile_segment_sizes'", replace
+
+restore
+
+
+*===============================================================================*
+* 13.4 CATEGORICAL DISTRIBUTIONS, CHI-SQUARE TESTS, AND CRAMER'S V
+*===============================================================================*/
+
+tempfile profile_cat_long
+tempfile profile_cat_tests
+
+tempname profcatpost
+tempname profcattestpost
+
+postfile `profcatpost' ///
+    str24 domain ///
+    int variable_order ///
+    str32 variable ///
+    str120 variable_label ///
+    double category_value ///
+    str120 category_label ///
+    byte segment ///
+    int segment_total_N ///
+    int segment_valid_N ///
+    int segment_category_N ///
+    double segment_share ///
+    int sample_valid_N ///
+    int sample_category_N ///
+    double sample_share ///
+    double posterior_weighted_N ///
+    double posterior_weighted_share ///
+    using "`profile_cat_long'", replace
+
+postfile `profcattestpost' ///
+    str24 domain ///
+    int variable_order ///
+    str32 variable ///
+    str120 variable_label ///
+    int N_test ///
+    int n_categories ///
+    double chi2 ///
+    double chi2_p ///
+    double cramers_v ///
+    str80 test_note ///
+    using "`profile_cat_tests'", replace
+
+
+foreach domain_code in demo financial risk {
+
+    local domain_name ""
+    local domain_vars ""
+
+    if "`domain_code'" == "demo" {
+        local domain_name "Demographic"
+        local domain_vars "`prof_demo_cat'"
+    }
+
+    if "`domain_code'" == "financial" {
+        local domain_name "Financial behavior"
+        local domain_vars "`prof_fin_cat' `prof_fin_binary'"
+    }
+
+    if "`domain_code'" == "risk" {
+        local domain_name "Risk and autonomy"
+        local domain_vars "`prof_risk_cat' `prof_risk_binary'"
+    }
+
+    local variable_order = 0
+
+    foreach v of local domain_vars {
+
+        capture confirm numeric variable `v'
+
+        if !_rc {
+
+            local ++variable_order
+
+            local variable_label : variable label `v'
+
+            if `"`variable_label'"' == "" {
+                local variable_label "`v'"
+            }
+
+            * Overall chi-square and Cramer's V
+            local chi2 = .
+            local chi2_p = .
+            local N_test = .
+            local n_categories = .
+            local cramers_v = .
+            local test_note "Test unavailable"
+
+            capture quietly tabulate `v' segment ///
+                if !missing(`v') & !missing(segment), chi2
+
+            local tab_rc = _rc
+
+            if `tab_rc' == 0 {
+
+                local chi2 = r(chi2)
+                local chi2_p = r(p)
+                local N_test = r(N)
+                local n_categories = r(r)
+
+                local min_dimension = ///
+                    min(r(r) - 1, r(c) - 1)
+
+                if `min_dimension' > 0 & r(N) > 0 {
+                    local cramers_v = ///
+                        sqrt(r(chi2) / (r(N) * `min_dimension'))
+                }
+
+                local test_note "Pearson chi-square"
+            }
+
+            post `profcattestpost' ///
+                (`"`domain_name'"') ///
+                (`variable_order') ///
+                (`"`v'"') ///
+                (`"`variable_label'"') ///
+                (`N_test') ///
+                (`n_categories') ///
+                (`chi2') ///
+                (`chi2_p') ///
+                (`cramers_v') ///
+                (`"`test_note'"')
+
+
+            * Category distributions
+            quietly count if !missing(`v')
+            local sample_valid_N = r(N)
+
+            levelsof `v' if !missing(`v'), local(category_levels)
+
+            foreach c of local category_levels {
+
+                local category_label "`c'"
+
+                local value_label : value label `v'
+
+                if "`value_label'" != "" {
+                    local category_label : label `value_label' `c'
+                }
+
+                quietly count if `v' == `c'
+                local sample_category_N = r(N)
+
+                local sample_share = .
+
+                if `sample_valid_N' > 0 {
+                    local sample_share = ///
+                        `sample_category_N' / `sample_valid_N'
+                }
+
+                foreach s in 1 2 3 4 {
+
+                    quietly count if segment == `s'
+                    local segment_total_N = r(N)
+
+                    quietly count if segment == `s' & !missing(`v')
+                    local segment_valid_N = r(N)
+
+                    quietly count if segment == `s' & `v' == `c'
+                    local segment_category_N = r(N)
+
+                    local segment_share = .
+
+                    if `segment_valid_N' > 0 {
+                        local segment_share = ///
+                            `segment_category_N' / `segment_valid_N'
+                    }
+
+                    quietly summarize segment_post`s' ///
+                        if !missing(`v'), meanonly
+
+                    local posterior_weighted_N = r(sum)
+
+                    tempvar __weighted_category
+
+                    quietly gen double `__weighted_category' = ///
+                        segment_post`s' * (`v' == `c') ///
+                        if !missing(`v')
+
+                    quietly summarize `__weighted_category', meanonly
+                    local posterior_numerator = r(sum)
+
+                    local posterior_weighted_share = .
+
+                    if `posterior_weighted_N' > 0 {
+                        local posterior_weighted_share = ///
+                            `posterior_numerator' / `posterior_weighted_N'
+                    }
+
+                    post `profcatpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`c') ///
+                        (`"`category_label'"') ///
+                        (`s') ///
+                        (`segment_total_N') ///
+                        (`segment_valid_N') ///
+                        (`segment_category_N') ///
+                        (`segment_share') ///
+                        (`sample_valid_N') ///
+                        (`sample_category_N') ///
+                        (`sample_share') ///
+                        (`posterior_weighted_N') ///
+                        (`posterior_weighted_share')
+
+                    drop `__weighted_category'
+                }
+            }
+        }
+    }
+}
+
+postclose `profcatpost'
+postclose `profcattestpost'
+
+
+*===============================================================================*
+* 13.5 CONTINUOUS/BINARY PROFILES, OVERALL TESTS, AND PAIRWISE DIFFERENCES
+*===============================================================================*/
+
+tempfile profile_cont_long
+tempfile profile_cont_tests
+tempfile profile_pairwise_raw
+tempfile profile_pairwise_final
+
+tempname profcontpost
+tempname profconttestpost
+tempname profpairpost
+
+postfile `profcontpost' ///
+    str24 domain ///
+    int variable_order ///
+    str32 variable ///
+    str120 variable_label ///
+    str24 variable_type ///
+    byte segment ///
+    int segment_total_N ///
+    int segment_valid_N ///
+    double segment_mean ///
+    double segment_sd ///
+    int sample_valid_N ///
+    double sample_mean ///
+    double sample_sd ///
+    double difference_from_sample ///
+    double posterior_weighted_N ///
+    double posterior_weighted_mean ///
+    using "`profile_cont_long'", replace
+
+postfile `profconttestpost' ///
+    str24 domain ///
+    int variable_order ///
+    str32 variable ///
+    str120 variable_label ///
+    str24 variable_type ///
+    int N_test ///
+    double robust_F ///
+    double robust_p ///
+    double anova_F ///
+    double anova_p ///
+    using "`profile_cont_tests'", replace
+
+postfile `profpairpost' ///
+    str24 domain ///
+    int variable_order ///
+    str32 variable ///
+    str120 variable_label ///
+    str24 variable_type ///
+    byte segment_a ///
+    byte segment_b ///
+    str70 comparison ///
+    double difference_b_minus_a ///
+    double robust_se ///
+    double lower_95 ///
+    double upper_95 ///
+    double p_raw ///
+    using "`profile_pairwise_raw'", replace
+
+
+foreach domain_code in demo financial risk {
+
+    local domain_name ""
+    local domain_vars ""
+
+    if "`domain_code'" == "demo" {
+        local domain_name "Demographic"
+        local domain_vars "`prof_demo_cont'"
+    }
+
+    if "`domain_code'" == "financial" {
+        local domain_name "Financial behavior"
+        local domain_vars "`prof_fin_cont' `prof_fin_binary'"
+    }
+
+    if "`domain_code'" == "risk" {
+        local domain_name "Risk and autonomy"
+        local domain_vars "`prof_risk_cont' `prof_risk_binary'"
+    }
+
+    local variable_order = 0
+
+    foreach v of local domain_vars {
+
+        capture confirm numeric variable `v'
+
+        if !_rc {
+
+            local ++variable_order
+
+            local variable_label : variable label `v'
+
+            if `"`variable_label'"' == "" {
+                local variable_label "`v'"
+            }
+
+            quietly summarize `v' if !missing(`v')
+
+            local sample_valid_N = r(N)
+            local sample_mean = r(mean)
+            local sample_sd = r(sd)
+            local sample_min = r(min)
+            local sample_max = r(max)
+
+            local variable_type "Continuous"
+
+            quietly levelsof `v' if !missing(`v'), local(observed_levels)
+            local number_levels : word count `observed_levels'
+
+            if `number_levels' <= 2 & ///
+               `sample_min' >= 0 & ///
+               `sample_max' <= 1 {
+
+                local variable_type "Binary proportion"
+            }
+
+
+            * Robust overall test
+            local robust_F = .
+            local robust_p = .
+
+            capture quietly regress `v' ib1.segment ///
+                if !missing(`v'), vce(robust)
+
+            local regression_rc = _rc
+
+            if `regression_rc' == 0 {
+
+                capture quietly testparm 2.segment 3.segment 4.segment
+
+                if !_rc {
+                    local robust_F = r(F)
+                    local robust_p = r(p)
+                }
+
+
+                * Segment 2 minus Segment 1
+                capture quietly lincom 2.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (1) ///
+                        (2) ///
+                        ("Segment 2 minus Segment 1") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+
+
+                * Segment 3 minus Segment 1
+                capture quietly lincom 3.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (1) ///
+                        (3) ///
+                        ("Segment 3 minus Segment 1") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+
+
+                * Segment 4 minus Segment 1
+                capture quietly lincom 4.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (1) ///
+                        (4) ///
+                        ("Segment 4 minus Segment 1") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+
+
+                * Segment 3 minus Segment 2
+                capture quietly lincom 3.segment - 2.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (2) ///
+                        (3) ///
+                        ("Segment 3 minus Segment 2") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+
+
+                * Segment 4 minus Segment 2
+                capture quietly lincom 4.segment - 2.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (2) ///
+                        (4) ///
+                        ("Segment 4 minus Segment 2") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+
+
+                * Segment 4 minus Segment 3
+                capture quietly lincom 4.segment - 3.segment
+
+                if !_rc {
+                    post `profpairpost' ///
+                        (`"`domain_name'"') ///
+                        (`variable_order') ///
+                        (`"`v'"') ///
+                        (`"`variable_label'"') ///
+                        (`"`variable_type'"') ///
+                        (3) ///
+                        (4) ///
+                        ("Segment 4 minus Segment 3") ///
+                        (r(estimate)) ///
+                        (r(se)) ///
+                        (r(lb)) ///
+                        (r(ub)) ///
+                        (r(p))
+                }
+            }
+
+
+            * Conventional one-way ANOVA
+            local anova_F = .
+            local anova_p = .
+
+            capture quietly oneway `v' segment if !missing(`v')
+
+            if !_rc {
+                local anova_F = r(F)
+                local anova_p = r(p)
+            }
+
+
+            post `profconttestpost' ///
+                (`"`domain_name'"') ///
+                (`variable_order') ///
+                (`"`v'"') ///
+                (`"`variable_label'"') ///
+                (`"`variable_type'"') ///
+                (`sample_valid_N') ///
+                (`robust_F') ///
+                (`robust_p') ///
+                (`anova_F') ///
+                (`anova_p')
+
+
+            * Segment-level statistics
+            foreach s in 1 2 3 4 {
+
+                quietly count if segment == `s'
+                local segment_total_N = r(N)
+
+                quietly summarize `v' ///
+                    if segment == `s' & !missing(`v')
+
+                local segment_valid_N = r(N)
+                local segment_mean = r(mean)
+                local segment_sd = r(sd)
+
+                local difference_from_sample = .
+
+                if `segment_mean' < . & `sample_mean' < . {
+                    local difference_from_sample = ///
+                        `segment_mean' - `sample_mean'
+                }
+
+
+                * Posterior-weighted mean
+                quietly summarize segment_post`s' ///
+                    if !missing(`v'), meanonly
+
+                local posterior_weighted_N = r(sum)
+
+                tempvar __weighted_value
+
+                quietly gen double `__weighted_value' = ///
+                    segment_post`s' * `v' ///
+                    if !missing(`v')
+
+                quietly summarize `__weighted_value', meanonly
+                local posterior_numerator = r(sum)
+
+                local posterior_weighted_mean = .
+
+                if `posterior_weighted_N' > 0 {
+                    local posterior_weighted_mean = ///
+                        `posterior_numerator' / `posterior_weighted_N'
+                }
+
+
+                post `profcontpost' ///
+                    (`"`domain_name'"') ///
+                    (`variable_order') ///
+                    (`"`v'"') ///
+                    (`"`variable_label'"') ///
+                    (`"`variable_type'"') ///
+                    (`s') ///
+                    (`segment_total_N') ///
+                    (`segment_valid_N') ///
+                    (`segment_mean') ///
+                    (`segment_sd') ///
+                    (`sample_valid_N') ///
+                    (`sample_mean') ///
+                    (`sample_sd') ///
+                    (`difference_from_sample') ///
+                    (`posterior_weighted_N') ///
+                    (`posterior_weighted_mean')
+
+                drop `__weighted_value'
+            }
+        }
+    }
+}
+
+postclose `profcontpost'
+postclose `profconttestpost'
+postclose `profpairpost'
+
+
+*-------------------------------------------------------------------------------*
+* 13.6 Holm-adjust pairwise p-values within each profiling variable
+*-------------------------------------------------------------------------------*/
+
+/*
+    Holm adjustment is applied separately within each profiling variable across
+    the six pairwise segment comparisons.
+
+    This controls the family-wise error rate while retaining more power than a
+    conventional Bonferroni adjustment.
+*/
+
+preserve
+
+    use "`profile_pairwise_raw'", clear
+
+    gen byte valid_p = !missing(p_raw)
+
+    sort domain variable p_raw
+
+    by domain variable: gen int holm_rank = sum(valid_p)
+
+    by domain variable: egen int holm_tests = total(valid_p)
+
+    gen double p_holm_initial = ///
+        p_raw * (holm_tests - holm_rank + 1) ///
+        if valid_p == 1
+
+    replace p_holm_initial = min(p_holm_initial, 1) ///
+        if valid_p == 1
+
+    sort domain variable holm_rank
+
+    by domain variable: gen double p_holm = p_holm_initial
+
+    by domain variable: replace p_holm = ///
+        max(p_holm, p_holm[_n - 1]) ///
+        if _n > 1 & valid_p == 1
+
+    replace p_holm = min(p_holm, 1) if valid_p == 1
+
+    gen str3 significance = ""
+
+    replace significance = "*" ///
+        if p_holm < 0.10 & !missing(p_holm)
+
+    replace significance = "**" ///
+        if p_holm < 0.05 & !missing(p_holm)
+
+    replace significance = "***" ///
+        if p_holm < 0.01 & !missing(p_holm)
+
+    label define pair_segment_lbl ///
+        1 "Structurally constrained low-intensity users" ///
+        2 "Operationally active but high-risk remittance users" ///
+        3 "Mainstream formal-digital users with incomplete protection" ///
+        4 "Integrated and protected digital remittance users", replace
+
+    label values segment_a pair_segment_lbl
+    label values segment_b pair_segment_lbl
+
+    decode segment_a, gen(segment_a_name)
+    decode segment_b, gen(segment_b_name)
+
+    format difference_b_minus_a robust_se lower_95 upper_95 %10.3f
+    format p_raw p_holm_initial p_holm %9.4f
+
+    sort domain variable_order variable segment_a segment_b
+
+    order ///
+        domain ///
+        variable_order ///
+        variable ///
+        variable_label ///
+        variable_type ///
+        segment_a ///
+        segment_a_name ///
+        segment_b ///
+        segment_b_name ///
+        comparison ///
+        difference_b_minus_a ///
+        robust_se ///
+        lower_95 ///
+        upper_95 ///
+        p_raw ///
+        p_holm ///
+        significance
+
+    save "`profile_pairwise_final'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 13.7 Prepare final overall-test datasets
+*-------------------------------------------------------------------------------*/
+
+
+*===============================================================================*
+* 13.7.1 Categorical tests: significance and effect-size interpretation
+*===============================================================================*/
+
+tempfile profile_cat_tests_final
+
+preserve
+
+    use "`profile_cat_tests'", clear
+
+    gen str3 significance = ""
+
+    replace significance = "*" ///
+        if chi2_p < 0.10 & !missing(chi2_p)
+
+    replace significance = "**" ///
+        if chi2_p < 0.05 & !missing(chi2_p)
+
+    replace significance = "***" ///
+        if chi2_p < 0.01 & !missing(chi2_p)
+
+    gen str30 effect_size_interpretation = ""
+
+    replace effect_size_interpretation = "Negligible association" ///
+        if cramers_v < 0.10 & !missing(cramers_v)
+
+    replace effect_size_interpretation = "Small association" ///
+        if cramers_v >= 0.10 & cramers_v < 0.30
+
+    replace effect_size_interpretation = "Moderate association" ///
+        if cramers_v >= 0.30 & cramers_v < 0.50
+
+    replace effect_size_interpretation = "Large association" ///
+        if cramers_v >= 0.50 & !missing(cramers_v)
+
+    format chi2 %10.3f
+    format chi2_p cramers_v %9.4f
+
+    sort domain variable_order variable
+
+    order ///
+        domain ///
+        variable_order ///
+        variable ///
+        variable_label ///
+        N_test ///
+        n_categories ///
+        chi2 ///
+        chi2_p ///
+        significance ///
+        cramers_v ///
+        effect_size_interpretation ///
+        test_note
+
+    save "`profile_cat_tests_final'", replace
+
+restore
+
+
+*===============================================================================*
+* 13.7.2 Continuous/binary tests: significance indicators
+*===============================================================================*/
+
+tempfile profile_cont_tests_final
+
+preserve
+
+    use "`profile_cont_tests'", clear
+
+    gen str3 robust_significance = ""
+
+    replace robust_significance = "*" ///
+        if robust_p < 0.10 & !missing(robust_p)
+
+    replace robust_significance = "**" ///
+        if robust_p < 0.05 & !missing(robust_p)
+
+    replace robust_significance = "***" ///
+        if robust_p < 0.01 & !missing(robust_p)
+
+    gen str3 anova_significance = ""
+
+    replace anova_significance = "*" ///
+        if anova_p < 0.10 & !missing(anova_p)
+
+    replace anova_significance = "**" ///
+        if anova_p < 0.05 & !missing(anova_p)
+
+    replace anova_significance = "***" ///
+        if anova_p < 0.01 & !missing(anova_p)
+
+    format robust_F anova_F %10.3f
+    format robust_p anova_p %9.4f
+
+    sort domain variable_order variable
+
+    order ///
+        domain ///
+        variable_order ///
+        variable ///
+        variable_label ///
+        variable_type ///
+        N_test ///
+        robust_F ///
+        robust_p ///
+        robust_significance ///
+        anova_F ///
+        anova_p ///
+        anova_significance
+
+    save "`profile_cont_tests_final'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 13.8 Save complete auditable Section 13 datasets
+*-------------------------------------------------------------------------------*/
+
+preserve
+
+use "`profile_cat_long'", clear
+
+apply_segment_profile_labels
+
+    format segment_share sample_share posterior_weighted_share %9.3f
+    format posterior_weighted_N %10.2f
+
+    sort domain variable_order variable category_value segment
+
+    save ///
+        "${cluster_data}/postLCA_profile_categorical_long.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+use "`profile_cont_long'", clear
+
+apply_segment_profile_labels
+
+    format segment_mean segment_sd sample_mean sample_sd ///
+           difference_from_sample posterior_weighted_mean %10.3f
+
+    format posterior_weighted_N %10.2f
+
+    sort domain variable_order variable segment
+
+    save ///
+        "${cluster_data}/postLCA_profile_continuous_long.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`profile_cat_tests_final'", clear
+
+    save ///
+        "${cluster_data}/postLCA_profile_categorical_tests.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`profile_cont_tests_final'", clear
+
+    save ///
+        "${cluster_data}/postLCA_profile_continuous_tests.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`profile_pairwise_final'", clear
+
+    save ///
+        "${cluster_data}/postLCA_profile_pairwise_Holm.dta", ///
+        replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 13.9 Export domain-specific profiling workbooks
+*-------------------------------------------------------------------------------*/
+
+/*
+    Each workbook contains:
+
+        segment_sizes:
+            Segment sample sizes and classification quality.
+
+        cat_long:
+            Full categorical distributions by segment.
+
+        cat_report:
+            Wide report-ready categorical distributions, merged with
+            chi-square tests and Cramer's V.
+
+        cat_tests:
+            Variable-level chi-square tests and Cramer's V.
+
+        cont_long:
+            Full continuous and binary-proportion profiles by segment.
+
+        cont_report:
+            Wide report-ready segment means and posterior-weighted means,
+            merged with robust overall tests.
+
+        cont_tests:
+            Variable-level robust and conventional ANOVA tests.
+
+        pairwise_holm:
+            Six pairwise segment comparisons with Holm-adjusted p-values.
+*/
+
+
+foreach domain_code in demo financial risk {
+
+    local domain_name ""
+    local output_file ""
+
+    if "`domain_code'" == "demo" {
+
+        local domain_name "Demographic"
+
+        local output_file ///
+            "${cluster_tables}/Table_C12_demographic_profile_by_segment.xlsx"
+    }
+
+    if "`domain_code'" == "financial" {
+
+        local domain_name "Financial behavior"
+
+        local output_file ///
+            "${cluster_tables}/Table_C13_financial_behavior_profile_by_segment.xlsx"
+    }
+
+    if "`domain_code'" == "risk" {
+
+        local domain_name "Risk and autonomy"
+
+        local output_file ///
+            "${cluster_tables}/Table_C14_risk_autonomy_profile_by_segment.xlsx"
+    }
+
+
+    capture erase "`output_file'"
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 1: Segment sizes and posterior certainty
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_segment_sizes'", clear
+
+        export excel using "`output_file'", ///
+            sheet("segment_sizes") ///
+            firstrow(variables) ///
+            replace
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 2: Full categorical distributions in long format
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cat_long'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+			apply_segment_profile_labels
+
+            format segment_share sample_share ///
+                   posterior_weighted_share %9.3f
+
+            format posterior_weighted_N %10.2f
+
+            sort variable_order variable category_value segment
+
+            order ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                category_value ///
+                category_label ///
+                segment ///
+                segment_name ///
+                segment_total_N ///
+                segment_valid_N ///
+                segment_category_N ///
+                segment_share ///
+                posterior_weighted_N ///
+                posterior_weighted_share ///
+                sample_valid_N ///
+                sample_category_N ///
+                sample_share
+
+            export excel using "`output_file'", ///
+                sheet("cat_long", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 3: Report-ready categorical distributions and overall tests
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cat_long'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+            keep ///
+                domain ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                category_value ///
+                category_label ///
+                sample_valid_N ///
+                sample_category_N ///
+                sample_share ///
+                segment ///
+                segment_valid_N ///
+                segment_category_N ///
+                segment_share ///
+                posterior_weighted_N ///
+                posterior_weighted_share
+
+            reshape wide ///
+                segment_valid_N ///
+                segment_category_N ///
+                segment_share ///
+                posterior_weighted_N ///
+                posterior_weighted_share, ///
+                i( ///
+                    domain ///
+                    variable_order ///
+                    variable ///
+                    variable_label ///
+                    category_value ///
+                    category_label ///
+                    sample_valid_N ///
+                    sample_category_N ///
+                    sample_share ///
+                ) ///
+                j(segment)
+
+
+            forvalues s = 1/4 {
+
+                rename segment_valid_N`s' validN_s`s'
+                rename segment_category_N`s' categoryN_s`s'
+                rename segment_share`s' share_s`s'
+                rename posterior_weighted_N`s' pwN_s`s'
+                rename posterior_weighted_share`s' pwshare_s`s'
+            }
+
+
+            merge m:1 domain variable_order variable ///
+                using "`profile_cat_tests_final'", ///
+                keep(master match) ///
+                nogen
+
+
+            format sample_share share_s* pwshare_s* %9.3f
+            format pwN_s* %10.2f
+            format chi2 chi2_p cramers_v %9.4f
+
+            sort variable_order variable category_value
+
+            order ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                category_value ///
+                category_label ///
+                sample_valid_N ///
+                sample_category_N ///
+                sample_share ///
+                validN_s1 categoryN_s1 share_s1 pwN_s1 pwshare_s1 ///
+                validN_s2 categoryN_s2 share_s2 pwN_s2 pwshare_s2 ///
+                validN_s3 categoryN_s3 share_s3 pwN_s3 pwshare_s3 ///
+                validN_s4 categoryN_s4 share_s4 pwN_s4 pwshare_s4 ///
+                chi2 ///
+                chi2_p ///
+                significance ///
+                cramers_v ///
+                effect_size_interpretation
+
+            export excel using "`output_file'", ///
+                sheet("cat_report", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 4: Categorical variable-level tests
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cat_tests_final'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+            export excel using "`output_file'", ///
+                sheet("cat_tests", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 5: Full continuous and binary profiles in long format
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cont_long'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+apply_segment_profile_labels
+
+            format segment_mean segment_sd sample_mean sample_sd ///
+                   difference_from_sample posterior_weighted_mean %10.3f
+
+            format posterior_weighted_N %10.2f
+
+            sort variable_order variable segment
+
+            order ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                variable_type ///
+                segment ///
+                segment_name ///
+                segment_total_N ///
+                segment_valid_N ///
+                segment_mean ///
+                segment_sd ///
+                posterior_weighted_N ///
+                posterior_weighted_mean ///
+                sample_valid_N ///
+                sample_mean ///
+                sample_sd ///
+                difference_from_sample
+
+            export excel using "`output_file'", ///
+                sheet("cont_long", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 6: Report-ready continuous and binary profiles
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cont_long'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+            keep ///
+                domain ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                variable_type ///
+                sample_valid_N ///
+                sample_mean ///
+                sample_sd ///
+                segment ///
+                segment_total_N ///
+                segment_valid_N ///
+                segment_mean ///
+                segment_sd ///
+                difference_from_sample ///
+                posterior_weighted_N ///
+                posterior_weighted_mean
+
+            reshape wide ///
+                segment_total_N ///
+                segment_valid_N ///
+                segment_mean ///
+                segment_sd ///
+                difference_from_sample ///
+                posterior_weighted_N ///
+                posterior_weighted_mean, ///
+                i( ///
+                    domain ///
+                    variable_order ///
+                    variable ///
+                    variable_label ///
+                    variable_type ///
+                    sample_valid_N ///
+                    sample_mean ///
+                    sample_sd ///
+                ) ///
+                j(segment)
+
+
+            forvalues s = 1/4 {
+
+                rename segment_total_N`s' totalN_s`s'
+                rename segment_valid_N`s' validN_s`s'
+                rename segment_mean`s' mean_s`s'
+                rename segment_sd`s' sd_s`s'
+                rename difference_from_sample`s' diff_s`s'
+                rename posterior_weighted_N`s' pwN_s`s'
+                rename posterior_weighted_mean`s' pwmean_s`s'
+            }
+
+
+            merge 1:1 domain variable_order variable ///
+                using "`profile_cont_tests_final'", ///
+                keep(master match) ///
+                nogen
+
+
+            format sample_mean sample_sd ///
+                   mean_s* sd_s* diff_s* pwmean_s* %10.3f
+
+            format pwN_s* %10.2f
+            format robust_F robust_p anova_F anova_p %9.4f
+
+            sort variable_order variable
+
+            order ///
+                variable_order ///
+                variable ///
+                variable_label ///
+                variable_type ///
+                sample_valid_N ///
+                sample_mean ///
+                sample_sd ///
+                totalN_s1 validN_s1 mean_s1 sd_s1 diff_s1 pwN_s1 pwmean_s1 ///
+                totalN_s2 validN_s2 mean_s2 sd_s2 diff_s2 pwN_s2 pwmean_s2 ///
+                totalN_s3 validN_s3 mean_s3 sd_s3 diff_s3 pwN_s3 pwmean_s3 ///
+                totalN_s4 validN_s4 mean_s4 sd_s4 diff_s4 pwN_s4 pwmean_s4 ///
+                robust_F ///
+                robust_p ///
+                robust_significance ///
+                anova_F ///
+                anova_p ///
+                anova_significance
+
+            export excel using "`output_file'", ///
+                sheet("cont_report", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 7: Continuous and binary variable-level tests
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_cont_tests_final'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+            export excel using "`output_file'", ///
+                sheet("cont_tests", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+
+
+    *-------------------------------------------------------------------------*
+    * Sheet 8: Pairwise segment differences with Holm-adjusted p-values
+    *-------------------------------------------------------------------------*
+
+    preserve
+
+        use "`profile_pairwise_final'", clear
+
+        keep if domain == "`domain_name'"
+
+        quietly count
+
+        if r(N) > 0 {
+
+            sort variable_order variable segment_a segment_b
+
+            export excel using "`output_file'", ///
+                sheet("pairwise_holm", replace) ///
+                firstrow(variables)
+        }
+
+    restore
+}
+
+
+*-------------------------------------------------------------------------------*
+* 13.10 Final console audit
+*-------------------------------------------------------------------------------*/
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 13 COMPLETED: POST-LCA DESCRIPTIVE PROFILING"
+display as text "------------------------------------------------------------"
+
+display as text "Analytical sample N = `final_N'"
+
+display as text "Excel outputs created:"
+
+display as text ///
+    "1. ${cluster_tables}/Table_C12_demographic_profile_by_segment.xlsx"
+
+display as text ///
+    "2. ${cluster_tables}/Table_C13_financial_behavior_profile_by_segment.xlsx"
+
+display as text ///
+    "3. ${cluster_tables}/Table_C14_risk_autonomy_profile_by_segment.xlsx"
+
+display as text "Auditable Stata datasets created:"
+
+display as text ///
+    "4. ${cluster_data}/postLCA_profile_categorical_long.dta"
+
+display as text ///
+    "5. ${cluster_data}/postLCA_profile_continuous_long.dta"
+
+display as text ///
+    "6. ${cluster_data}/postLCA_profile_categorical_tests.dta"
+
+display as text ///
+    "7. ${cluster_data}/postLCA_profile_continuous_tests.dta"
+
+display as text ///
+    "8. ${cluster_data}/postLCA_profile_pairwise_Holm.dta"
+
+display as text "------------------------------------------------------------"
+
+
+}
+*-------------------------------------------------------------------*
+**##	14. COMPARE SEGMENTS ON CORE OUTCOMES AND MECHANISMS		*
+*-------------------------------------------------------------------*
+{
+
+/*
+    Purpose:
+    Assess whether the final LCA typology maps onto substantively meaningful
+    differences in the paper's core outcomes and theoretical mechanisms.
+
+    Important interpretive distinction:
+
+    Class-defining outcomes:
+        Categorical transformations of these outcomes entered the preferred LCA.
+        Differences across segments are therefore descriptive and partly
+        mechanical; they are used to characterize the substantive profiles.
+
+        - Digital remittance intensity (IURD)
+        - Financial operability (IUOF)
+        - Onboarding quality (OQI)
+        - Fraud exposure / recourse harm (IEDF)
+
+    External outcomes and mechanisms:
+        These variables did not define the preferred H1_k4 solution and therefore
+        provide stronger external evidence of the typology's substantive meaning.
+
+        - Formal remittance channel
+        - Transactional experience
+        - Safe conduct
+        - Financial autonomy
+        - Trust and norms climate
+        - Enabling environment
+        - Perceived barriers
+
+    Tests:
+        - Robust omnibus regressions comparing modal-assignment segments
+        - Conventional ANOVA and eta-squared
+        - Robust pairwise differences
+        - Holm-adjusted pairwise p-values
+
+    Figure:
+        Posterior-weighted standardized deviations from the full-sample mean.
+        IEDF and IBPD are reversed so higher plotted values consistently indicate
+        stronger inclusion, protection, or enabling conditions.
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 14.0 Load final segmentation dataset and verify analytical sample
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+
+assert _N == 423
+isid KEY
+
+local final_N = _N
+
+foreach v in ///
+    segment ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    segment_assigned_post ///
+    iurd_score_01 ///
+    formal_remittance ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required Section 14 variable missing: `v'"
+        exit 111
+    }
+}
+
+
+label define segment14_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment14_lbl
+
+
+graph set window fontface "Times New Roman"
+set scheme plotplain
+
+capture mkdir "${cluster_figures}"
+
+local color_s1 "maroon"
+local color_s2 "orange"
+local color_s3 "navy"
+local color_s4 "green"
+
+
+*-------------------------------------------------------------------------------*
+* 14.1 Create outcome-definition and interpretation map
+*-------------------------------------------------------------------------------*
+
+tempfile outcome_definitions
+
+preserve
+
+    clear
+    set obs 11
+
+    gen byte outcome_order = _n
+
+    gen str32 outcome_variable = ""
+    gen str90 outcome_label = ""
+    gen str50 mechanism_group = ""
+    gen str55 outcome_role = ""
+    gen str24 measurement_type = ""
+    gen str35 favorable_direction = ""
+    gen byte reverse_for_figure = 0
+    gen byte figure_panel = .
+
+
+    replace outcome_variable = "iurd_score_01" in 1
+    replace outcome_label = "Digital remittance intensity (IURD)" in 1
+    replace mechanism_group = "Digital inclusion depth" in 1
+    replace outcome_role = "Class-defining outcome" in 1
+    replace measurement_type = "Continuous index" in 1
+    replace favorable_direction = "Higher = stronger inclusion" in 1
+    replace figure_panel = 1 in 1
+
+
+    replace outcome_variable = "formal_remittance" in 2
+    replace outcome_label = "Formal digital remittance channel" in 2
+    replace mechanism_group = "Remittance formalization" in 2
+    replace outcome_role = "External behavioral outcome" in 2
+    replace measurement_type = "Binary proportion" in 2
+    replace favorable_direction = "Higher = stronger inclusion" in 2
+    replace figure_panel = 2 in 2
+
+
+    replace outcome_variable = "iuof_score_01" in 3
+    replace outcome_label = "Financial operability (IUOF)" in 3
+    replace mechanism_group = "Digital inclusion depth" in 3
+    replace outcome_role = "Class-defining outcome" in 3
+    replace measurement_type = "Continuous index" in 3
+    replace favorable_direction = "Higher = stronger inclusion" in 3
+    replace figure_panel = 1 in 3
+
+
+    replace outcome_variable = "oqi_score_01" in 4
+    replace outcome_label = "Onboarding quality (OQI)" in 4
+    replace mechanism_group = "Onboarding and usability" in 4
+    replace outcome_role = "Class-defining outcome" in 4
+    replace measurement_type = "Continuous index" in 4
+    replace favorable_direction = "Higher = stronger inclusion" in 4
+    replace figure_panel = 1 in 4
+
+
+    replace outcome_variable = "ietr_score_01" in 5
+    replace outcome_label = "Transactional experience (IETR)" in 5
+    replace mechanism_group = "Transactional quality" in 5
+    replace outcome_role = "External mechanism/outcome" in 5
+    replace measurement_type = "Continuous index" in 5
+    replace favorable_direction = "Higher = better experience" in 5
+    replace figure_panel = 2 in 5
+
+
+    replace outcome_variable = "IPCS" in 6
+    replace outcome_label = "Prevention and safe conduct (IPCS)" in 6
+    replace mechanism_group = "Safety and recourse" in 6
+    replace outcome_role = "External mechanism/outcome" in 6
+    replace measurement_type = "Continuous index" in 6
+    replace favorable_direction = "Higher = safer conduct" in 6
+    replace figure_panel = 2 in 6
+
+
+    replace outcome_variable = "IEDF" in 7
+    replace outcome_label = "Fraud exposure and recourse harm (IEDF)" in 7
+    replace mechanism_group = "Safety and recourse" in 7
+    replace outcome_role = "Class-defining outcome" in 7
+    replace measurement_type = "Continuous index" in 7
+    replace favorable_direction = "Lower = stronger protection" in 7
+    replace reverse_for_figure = 1 in 7
+    replace figure_panel = 1 in 7
+
+
+    replace outcome_variable = "IAER" in 8
+    replace outcome_label = "Financial autonomy over remittances (IAER)" in 8
+    replace mechanism_group = "Agency and control" in 8
+    replace outcome_role = "External mechanism/outcome" in 8
+    replace measurement_type = "Continuous index" in 8
+    replace favorable_direction = "Higher = greater autonomy" in 8
+    replace figure_panel = 2 in 8
+
+
+    replace outcome_variable = "ICPF" in 9
+    replace outcome_label = "Trust and norms climate (ICPF)" in 9
+    replace mechanism_group = "Trust and relational climate" in 9
+    replace outcome_role = "External mechanism/outcome" in 9
+    replace measurement_type = "Continuous index" in 9
+    replace favorable_direction = "Higher = stronger trust climate" in 9
+    replace figure_panel = 2 in 9
+
+
+    replace outcome_variable = "IEH" in 10
+    replace outcome_label = "Enabling environment (IEH)" in 10
+    replace mechanism_group = "External support environment" in 10
+    replace outcome_role = "External mechanism/outcome" in 10
+    replace measurement_type = "Continuous index" in 10
+    replace favorable_direction = "Higher = stronger support" in 10
+    replace figure_panel = 2 in 10
+
+
+    replace outcome_variable = "IBPD" in 11
+    replace outcome_label = "Perceived barriers to digitalization (IBPD)" in 11
+    replace mechanism_group = "External barriers" in 11
+    replace outcome_role = "External mechanism/outcome" in 11
+    replace measurement_type = "Continuous index" in 11
+    replace favorable_direction = "Lower = fewer barriers" in 11
+    replace reverse_for_figure = 1 in 11
+    replace figure_panel = 2 in 11
+
+
+    save "`outcome_definitions'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.2 Segment-size and classification-quality summary
+*-------------------------------------------------------------------------------*
+
+tempfile outcome_segment_sizes
+
+preserve
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) mean_assigned_posterior = segment_assigned_post ///
+        (mean) mean_posterior_margin = segment_posterior_margin ///
+        (mean) share_uncertain = segment_uncertain ///
+        (mean) share_high_certainty = segment_high_certainty, ///
+        by(segment)
+
+    gen double segment_pct = 100 * N / `final_N'
+
+    label values segment segment14_lbl
+    decode segment, gen(segment_name)
+
+    format segment_pct %9.2f
+    format mean_assigned_posterior mean_posterior_margin ///
+           share_uncertain share_high_certainty %9.3f
+
+    order segment segment_name N segment_pct ///
+          mean_assigned_posterior mean_posterior_margin ///
+          share_uncertain share_high_certainty
+
+    save "`outcome_segment_sizes'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.3 Estimate segment means, standardized deviations, and overall tests
+*-------------------------------------------------------------------------------*
+
+tempfile outcome_long
+tempfile outcome_tests_raw
+tempfile outcome_pairwise_raw
+
+tempname outcomepost
+tempname outcometestpost
+tempname outcomepairpost
+
+
+postfile `outcomepost' ///
+    byte outcome_order ///
+    str32 outcome_variable ///
+    str90 outcome_label ///
+    str50 mechanism_group ///
+    str55 outcome_role ///
+    str24 measurement_type ///
+    str35 favorable_direction ///
+    byte reverse_for_figure ///
+    byte figure_panel ///
+    byte segment ///
+    str90 segment_name ///
+    int segment_total_N ///
+    int segment_valid_N ///
+    double segment_mean ///
+    double segment_sd ///
+    int sample_valid_N ///
+    double sample_mean ///
+    double sample_sd ///
+    double difference_from_sample ///
+    double standardized_deviation ///
+    double oriented_z_deviation ///
+    double pw_N ///
+    double pw_mean ///
+    double pw_z_deviation ///
+    double pw_oriented_z_deviation ///
+    using "`outcome_long'", replace
+
+
+postfile `outcometestpost' ///
+    byte outcome_order ///
+    str32 outcome_variable ///
+    str90 outcome_label ///
+    str50 mechanism_group ///
+    str55 outcome_role ///
+    str24 measurement_type ///
+    int N_test ///
+    double robust_F ///
+    double robust_p ///
+    double conventional_F ///
+    double conventional_p ///
+    double eta_squared ///
+    using "`outcome_tests_raw'", replace
+
+
+postfile `outcomepairpost' ///
+    byte outcome_order ///
+    str32 outcome_variable ///
+    str90 outcome_label ///
+    str50 mechanism_group ///
+    str55 outcome_role ///
+    str24 measurement_type ///
+    byte segment_a ///
+    byte segment_b ///
+    str30 comparison ///
+    double difference_b_minus_a ///
+    double robust_se ///
+    double lower_95 ///
+    double upper_95 ///
+    double p_raw ///
+    using "`outcome_pairwise_raw'", replace
+
+
+local outcome_list ///
+    iurd_score_01 ///
+    formal_remittance ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD
+
+
+local outcome_order = 0
+
+
+foreach v of local outcome_list {
+
+    local ++outcome_order
+
+    local outcome_label ""
+    local mechanism_group ""
+    local outcome_role ""
+    local measurement_type "Continuous index"
+    local favorable_direction "Higher = stronger inclusion"
+    local reverse_for_figure = 0
+    local figure_panel = 2
+
+
+    if "`v'" == "iurd_score_01" {
+        local outcome_label "Digital remittance intensity (IURD)"
+        local mechanism_group "Digital inclusion depth"
+        local outcome_role "Class-defining outcome"
+        local figure_panel = 1
+    }
+
+    if "`v'" == "formal_remittance" {
+        local outcome_label "Formal digital remittance channel"
+        local mechanism_group "Remittance formalization"
+        local outcome_role "External behavioral outcome"
+        local measurement_type "Binary proportion"
+    }
+
+    if "`v'" == "iuof_score_01" {
+        local outcome_label "Financial operability (IUOF)"
+        local mechanism_group "Digital inclusion depth"
+        local outcome_role "Class-defining outcome"
+        local figure_panel = 1
+    }
+
+    if "`v'" == "oqi_score_01" {
+        local outcome_label "Onboarding quality (OQI)"
+        local mechanism_group "Onboarding and usability"
+        local outcome_role "Class-defining outcome"
+        local figure_panel = 1
+    }
+
+ if "`v'" == "ietr_score_01" {
+        local outcome_label "Transactional experience (IETR)"
+        local mechanism_group "Transactional quality"
+        local outcome_role "External mechanism/outcome"
+    }
+
+    if "`v'" == "IPCS" {
+        local outcome_label "Prevention and safe conduct (IPCS)"
+        local mechanism_group "Safety and recourse"
+        local outcome_role "External mechanism/outcome"
+        local favorable_direction "Higher = safer conduct"
+    }
+
+    if "`v'" == "IEDF" {
+        local outcome_label "Fraud exposure and recourse harm (IEDF)"
+        local mechanism_group "Safety and recourse"
+        local outcome_role "Class-defining outcome"
+        local favorable_direction "Lower = stronger protection"
+        local reverse_for_figure = 1
+        local figure_panel = 1
+    }
+
+    if "`v'" == "IAER" {
+        local outcome_label "Financial autonomy over remittances (IAER)"
+        local mechanism_group "Agency and control"
+        local outcome_role "External mechanism/outcome"
+        local favorable_direction "Higher = greater autonomy"
+    }
+
+    if "`v'" == "ICPF" {
+        local outcome_label "Trust and norms climate (ICPF)"
+        local mechanism_group "Trust and relational climate"
+        local outcome_role "External mechanism/outcome"
+        local favorable_direction "Higher = stronger trust climate"
+    }
+
+    if "`v'" == "IEH" {
+        local outcome_label "Enabling environment (IEH)"
+        local mechanism_group "External support environment"
+        local outcome_role "External mechanism/outcome"
+        local favorable_direction "Higher = stronger support"
+    }
+
+    if "`v'" == "IBPD" {
+        local outcome_label "Perceived barriers to digitalization (IBPD)"
+        local mechanism_group "External barriers"
+        local outcome_role "External mechanism/outcome"
+        local favorable_direction "Lower = fewer barriers"
+        local reverse_for_figure = 1
+    }
+
+
+    *-------------------------------------------------------------------------*
+    * Full-sample descriptive statistics
+    *-------------------------------------------------------------------------*
+
+    quietly summarize `v' if !missing(`v')
+
+    local sample_valid_N = r(N)
+    local sample_mean = r(mean)
+    local sample_sd = r(sd)
+
+
+    *-------------------------------------------------------------------------*
+    * Robust omnibus test and pairwise segment comparisons
+    *-------------------------------------------------------------------------*
+
+    local robust_F = .
+    local robust_p = .
+
+    capture quietly regress `v' ib1.segment ///
+        if !missing(`v'), vce(robust)
+
+    local regression_rc = _rc
+
+    if `regression_rc' == 0 {
+
+        capture quietly testparm 2.segment 3.segment 4.segment
+
+        if !_rc {
+            local robust_F = r(F)
+            local robust_p = r(p)
+        }
+
+
+        * Segment 2 minus Segment 1
+        capture quietly lincom 2.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (1) ///
+                (2) ///
+                ("Segment 2 minus Segment 1") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+
+
+        * Segment 3 minus Segment 1
+        capture quietly lincom 3.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (1) ///
+                (3) ///
+                ("Segment 3 minus Segment 1") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+
+
+        * Segment 4 minus Segment 1
+        capture quietly lincom 4.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (1) ///
+                (4) ///
+                ("Segment 4 minus Segment 1") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+
+
+        * Segment 3 minus Segment 2
+        capture quietly lincom 3.segment - 2.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (2) ///
+                (3) ///
+                ("Segment 3 minus Segment 2") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+
+
+        * Segment 4 minus Segment 2
+        capture quietly lincom 4.segment - 2.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (2) ///
+                (4) ///
+                ("Segment 4 minus Segment 2") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+
+
+        * Segment 4 minus Segment 3
+        capture quietly lincom 4.segment - 3.segment
+
+        if !_rc {
+            post `outcomepairpost' ///
+                (`outcome_order') ///
+                (`"`v'"') ///
+                (`"`outcome_label'"') ///
+                (`"`mechanism_group'"') ///
+                (`"`outcome_role'"') ///
+                (`"`measurement_type'"') ///
+                (3) ///
+                (4) ///
+                ("Segment 4 minus Segment 3") ///
+                (r(estimate)) ///
+                (r(se)) ///
+                (r(lb)) ///
+                (r(ub)) ///
+                (r(p))
+        }
+    }
+
+
+    *-------------------------------------------------------------------------*
+    * Conventional ANOVA and eta-squared
+    *-------------------------------------------------------------------------*
+
+    local conventional_F = .
+    local conventional_p = .
+    local eta_squared = .
+
+    capture quietly oneway `v' segment if !missing(`v')
+
+    if !_rc {
+
+        local conventional_F = r(F)
+
+        local conventional_p = ///
+            Ftail(r(df_m), r(df_r), r(F))
+
+        if r(F) < . & r(df_m) > 0 & r(df_r) > 0 {
+
+            local eta_squared = ///
+                (r(F) * r(df_m)) / ///
+                ((r(F) * r(df_m)) + r(df_r))
+        }
+    }
+
+
+    post `outcometestpost' ///
+        (`outcome_order') ///
+        (`"`v'"') ///
+        (`"`outcome_label'"') ///
+        (`"`mechanism_group'"') ///
+        (`"`outcome_role'"') ///
+        (`"`measurement_type'"') ///
+        (`sample_valid_N') ///
+        (`robust_F') ///
+        (`robust_p') ///
+        (`conventional_F') ///
+        (`conventional_p') ///
+        (`eta_squared')
+
+
+    *-------------------------------------------------------------------------*
+    * Modal-assignment and posterior-weighted segment statistics
+    *-------------------------------------------------------------------------*
+
+    foreach s in 1 2 3 4 {
+
+        local segment_name ""
+
+        if `s' == 1 {
+            local segment_name ///
+                "Structurally constrained low-intensity users"
+        }
+
+        if `s' == 2 {
+            local segment_name ///
+                "Operationally active but high-risk remittance users"
+        }
+
+        if `s' == 3 {
+            local segment_name ///
+                "Mainstream formal-digital users with incomplete protection"
+        }
+
+        if `s' == 4 {
+            local segment_name ///
+                "Integrated and protected digital remittance users"
+        }
+
+
+        quietly count if segment == `s'
+        local segment_total_N = r(N)
+
+        quietly summarize `v' ///
+            if segment == `s' & !missing(`v')
+
+        local segment_valid_N = r(N)
+        local segment_mean = r(mean)
+        local segment_sd = r(sd)
+
+
+        local difference_from_sample = .
+        local standardized_deviation = .
+        local oriented_z_deviation = .
+
+        if `segment_mean' < . & `sample_mean' < . {
+
+            local difference_from_sample = ///
+                `segment_mean' - `sample_mean'
+        }
+
+        if `sample_sd' > 0 & `sample_sd' < . {
+
+            local standardized_deviation = ///
+                (`segment_mean' - `sample_mean') / `sample_sd'
+
+            local oriented_z_deviation = ///
+                cond( ///
+                    `reverse_for_figure' == 1, ///
+                    -1 * `standardized_deviation', ///
+                    `standardized_deviation' ///
+                )
+        }
+
+
+        quietly summarize segment_post`s' ///
+            if !missing(`v'), meanonly
+
+        local pw_N = r(sum)
+
+        tempvar __pw_value
+
+        quietly gen double `__pw_value' = ///
+            segment_post`s' * `v' ///
+            if !missing(`v')
+
+        quietly summarize `__pw_value', meanonly
+        local pw_numerator = r(sum)
+
+        local pw_mean = .
+        local pw_z_deviation = .
+        local pw_oriented_z_deviation = .
+
+        if `pw_N' > 0 {
+
+            local pw_mean = ///
+                `pw_numerator' / `pw_N'
+        }
+
+        if `sample_sd' > 0 & `sample_sd' < . {
+
+            local pw_z_deviation = ///
+                (`pw_mean' - `sample_mean') / `sample_sd'
+
+            local pw_oriented_z_deviation = ///
+                cond( ///
+                    `reverse_for_figure' == 1, ///
+                    -1 * `pw_z_deviation', ///
+                    `pw_z_deviation' ///
+                )
+        }
+
+
+        post `outcomepost' ///
+            (`outcome_order') ///
+            (`"`v'"') ///
+            (`"`outcome_label'"') ///
+            (`"`mechanism_group'"') ///
+            (`"`outcome_role'"') ///
+            (`"`measurement_type'"') ///
+            (`"`favorable_direction'"') ///
+            (`reverse_for_figure') ///
+            (`figure_panel') ///
+            (`s') ///
+            (`"`segment_name'"') ///
+            (`segment_total_N') ///
+            (`segment_valid_N') ///
+            (`segment_mean') ///
+            (`segment_sd') ///
+            (`sample_valid_N') ///
+            (`sample_mean') ///
+            (`sample_sd') ///
+            (`difference_from_sample') ///
+            (`standardized_deviation') ///
+            (`oriented_z_deviation') ///
+            (`pw_N') ///
+            (`pw_mean') ///
+            (`pw_z_deviation') ///
+            (`pw_oriented_z_deviation')
+
+        drop `__pw_value'
+    }
+}
+
+
+postclose `outcomepost'
+postclose `outcometestpost'
+postclose `outcomepairpost'
+
+
+*-------------------------------------------------------------------------------*
+* 14.4 Apply Holm*adjustment to pairwise outcome comparisons
+*-------------------------------------------------------------------------------*
+
+tempfile outcome_pairwise_final
+
+preserve
+
+    use "`outcome_pairwise_raw'", clear
+
+    gen byte valid_p = !missing(p_raw)
+
+    sort outcome_order outcome_variable p_raw
+
+    by outcome_order outcome_variable: ///
+        gen int holm_rank = sum(valid_p)
+
+    by outcome_order outcome_variable: ///
+        egen int holm_tests = total(valid_p)
+
+    gen double p_holm_initial = ///
+        p_raw * (holm_tests - holm_rank + 1) ///
+        if valid_p == 1
+
+    replace p_holm_initial = min(p_holm_initial, 1) ///
+        if valid_p == 1
+
+    sort outcome_order outcome_variable holm_rank
+
+    by outcome_order outcome_variable: ///
+        gen double p_holm = p_holm_initial
+
+    by outcome_order outcome_variable: ///
+        replace p_holm = max(p_holm, p_holm[_n - 1]) ///
+        if _n > 1 & valid_p == 1
+
+    replace p_holm = min(p_holm, 1) ///
+        if valid_p == 1
+
+
+    * Significance indicators based on Holm-adjusted p-values
+    gen str3 significance = ""
+
+    replace significance = "*" ///
+        if p_holm < 0.10 & !missing(p_holm)
+
+    replace significance = "**" ///
+        if p_holm < 0.05 & !missing(p_holm)
+
+    replace significance = "***" ///
+        if p_holm < 0.01 & !missing(p_holm)
+
+
+    * Correct typo inherited from the outcome loop
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+
+    * Create substantive segment names without relying on value-label memory
+    gen str90 segment_a_name = ""
+    gen str90 segment_b_name = ""
+
+    replace segment_a_name = ///
+        "Structurally constrained low-intensity users" ///
+        if segment_a == 1
+
+    replace segment_a_name = ///
+        "Operationally active but high-risk remittance users" ///
+        if segment_a == 2
+
+    replace segment_a_name = ///
+        "Mainstream formal-digital users with incomplete protection" ///
+        if segment_a == 3
+
+    replace segment_a_name = ///
+        "Integrated and protected digital remittance users" ///
+        if segment_a == 4
+
+
+    replace segment_b_name = ///
+        "Structurally constrained low-intensity users" ///
+        if segment_b == 1
+
+    replace segment_b_name = ///
+        "Operationally active but high-risk remittance users" ///
+        if segment_b == 2
+
+    replace segment_b_name = ///
+        "Mainstream formal-digital users with incomplete protection" ///
+        if segment_b == 3
+
+    replace segment_b_name = ///
+        "Integrated and protected digital remittance users" ///
+        if segment_b == 4
+
+
+    format difference_b_minus_a robust_se lower_95 upper_95 %10.3f
+    format p_raw p_holm_initial p_holm %9.4f
+
+    sort outcome_order segment_a segment_b
+
+    order ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        measurement_type ///
+        segment_a ///
+        segment_a_name ///
+        segment_b ///
+        segment_b_name ///
+        comparison ///
+        difference_b_minus_a ///
+        robust_se ///
+        lower_95 ///
+        upper_95 ///
+        p_raw ///
+        p_holm ///
+        significance
+
+    save "`outcome_pairwise_final'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.5 Prepare final overall-test dataset
+*-------------------------------------------------------------------------------*
+
+tempfile outcome_tests_final
+
+preserve
+
+    use "`outcome_tests_raw'", clear
+
+    * Correct typo inherited from the outcome loop
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+
+    * Robust-test significance
+    gen str3 robust_significance = ""
+
+    replace robust_significance = "*" ///
+        if robust_p < 0.10 & !missing(robust_p)
+
+    replace robust_significance = "**" ///
+        if robust_p < 0.05 & !missing(robust_p)
+
+    replace robust_significance = "***" ///
+        if robust_p < 0.01 & !missing(robust_p)
+
+
+    * Conventional ANOVA significance
+    gen str3 conventional_significance = ""
+
+    replace conventional_significance = "*" ///
+        if conventional_p < 0.10 & !missing(conventional_p)
+
+    replace conventional_significance = "**" ///
+        if conventional_p < 0.05 & !missing(conventional_p)
+
+    replace conventional_significance = "***" ///
+        if conventional_p < 0.01 & !missing(conventional_p)
+
+
+    * Conventional descriptive interpretation of eta-squared
+    gen str32 eta_interpretation = ""
+
+    replace eta_interpretation = "Negligible segment differences" ///
+        if eta_squared < 0.01 & !missing(eta_squared)
+
+    replace eta_interpretation = "Small segment differences" ///
+        if eta_squared >= 0.01 & eta_squared < 0.06
+
+    replace eta_interpretation = "Moderate segment differences" ///
+        if eta_squared >= 0.06 & eta_squared < 0.14
+
+    replace eta_interpretation = "Large segment differences" ///
+        if eta_squared >= 0.14 & !missing(eta_squared)
+
+
+    * Flag outcomes not directly used to define the preferred latent classes
+    gen byte external_validation_outcome = ///
+        outcome_role != "Class-defining outcome"
+
+    label define external_validation_lbl ///
+        0 "Class-defining outcome" ///
+        1 "External outcome or mechanism", replace
+
+    label values external_validation_outcome external_validation_lbl
+
+    format robust_F conventional_F %10.3f
+    format robust_p conventional_p eta_squared %9.4f
+
+    sort outcome_order
+
+    order ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        external_validation_outcome ///
+        measurement_type ///
+        N_test ///
+        robust_F ///
+        robust_p ///
+        robust_significance ///
+        conventional_F ///
+        conventional_p ///
+        conventional_significance ///
+        eta_squared ///
+        eta_interpretation
+
+    save "`outcome_tests_final'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.6 Save complete auditable Section 14 datasets
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    format segment_mean segment_sd sample_mean sample_sd ///
+           difference_from_sample standardized_deviation ///
+           oriented_z_deviation pw_mean pw_z_deviation ///
+           pw_oriented_z_deviation %10.3f
+
+    format pw_N %10.2f
+
+    sort outcome_order segment
+
+    save ///
+        "${cluster_data}/postLCA_core_outcomes_long.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`outcome_tests_final'", clear
+
+    save ///
+        "${cluster_data}/postLCA_core_outcome_tests.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`outcome_pairwise_final'", clear
+
+    save ///
+        "${cluster_data}/postLCA_core_outcome_pairwise_Holm.dta", ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`outcome_definitions'", clear
+
+    save ///
+        "${cluster_data}/postLCA_core_outcome_definitions.dta", ///
+        replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.7 Export Table C15: core outcomes by segment
+*-------------------------------------------------------------------------------*
+
+local outcome_workbook ///
+    "${cluster_tables}/Table_C15_core_outcomes_by_segment.xlsx"
+
+capture erase "`outcome_workbook'"
+
+
+*===============================================================================*
+* 14.7.1 Sheet: outcome definitions
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_definitions'", clear
+
+    sort outcome_order
+
+    export excel using "`outcome_workbook'", ///
+        sheet("outcome_definitions") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+*===============================================================================*
+* 14.7.2 Sheet: segment sizes and classification quality
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_segment_sizes'", clear
+
+    export excel using "`outcome_workbook'", ///
+        sheet("segment_sizes", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.3 Sheet: complete long-format outcome profiles
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    format segment_mean segment_sd sample_mean sample_sd ///
+           difference_from_sample standardized_deviation ///
+           oriented_z_deviation pw_mean pw_z_deviation ///
+           pw_oriented_z_deviation %10.3f
+
+    format pw_N %10.2f
+
+    sort outcome_order segment
+
+    export excel using "`outcome_workbook'", ///
+        sheet("outcome_long", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.4 Sheet: report-ready wide outcome table
+*===============================================================================*/
+
+tempfile outcome_report_wide
+tempfile outcome_metadata
+
+
+*-------------------------------------------------------------------------------*
+* Save one-row-per-outcome metadata separately
+*-------------------------------------------------------------------------------*/
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    keep ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        measurement_type ///
+        favorable_direction ///
+        reverse_for_figure ///
+        figure_panel ///
+        sample_valid_N ///
+        sample_mean ///
+        sample_sd
+
+    sort outcome_order
+
+    by outcome_order: keep if _n == 1
+
+    isid outcome_order
+
+    save "`outcome_metadata'", replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* Reshape segment-specific statistics using only the numeric outcome identifier
+*-------------------------------------------------------------------------------*/
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    keep ///
+        outcome_order ///
+        segment ///
+        segment_total_N ///
+        segment_valid_N ///
+        segment_mean ///
+        segment_sd ///
+        difference_from_sample ///
+        standardized_deviation ///
+        oriented_z_deviation ///
+        pw_N ///
+        pw_mean ///
+        pw_z_deviation ///
+        pw_oriented_z_deviation
+
+    isid outcome_order segment
+
+    reshape wide ///
+        segment_total_N ///
+        segment_valid_N ///
+        segment_mean ///
+        segment_sd ///
+        difference_from_sample ///
+        standardized_deviation ///
+        oriented_z_deviation ///
+        pw_N ///
+        pw_mean ///
+        pw_z_deviation ///
+        pw_oriented_z_deviation, ///
+        i(outcome_order) ///
+        j(segment)
+
+
+    * Rename wide segment-specific variables
+    forvalues s = 1/4 {
+
+        rename segment_total_N`s' totalN_s`s'
+        rename segment_valid_N`s' validN_s`s'
+        rename segment_mean`s' mean_s`s'
+        rename segment_sd`s' sd_s`s'
+        rename difference_from_sample`s' diff_s`s'
+        rename standardized_deviation`s' zdev_s`s'
+        rename oriented_z_deviation`s' ozdev_s`s'
+        rename pw_N`s' pwN_s`s'
+        rename pw_mean`s' pwmean_s`s'
+        rename pw_z_deviation`s' pwz_s`s'
+        rename pw_oriented_z_deviation`s' pwoz_s`s'
+    }
+
+
+    * Merge descriptive metadata back into the reshaped dataset
+    merge 1:1 outcome_order ///
+        using "`outcome_metadata'", ///
+        assert(match) ///
+        nogen
+
+
+    * Merge overall statistical tests
+    merge 1:1 outcome_order ///
+        using "`outcome_tests_final'", ///
+        keep(master match) ///
+        keepusing( ///
+            external_validation_outcome ///
+            N_test ///
+            robust_F ///
+            robust_p ///
+            robust_significance ///
+            conventional_F ///
+            conventional_p ///
+            conventional_significance ///
+            eta_squared ///
+            eta_interpretation ///
+        ) ///
+        assert(match) ///
+        nogen
+
+
+    format sample_mean sample_sd ///
+           mean_s* sd_s* diff_s* zdev_s* ozdev_s* ///
+           pwmean_s* pwz_s* pwoz_s* %10.3f
+
+    format pwN_s* %10.2f
+    format robust_F conventional_F %10.3f
+    format robust_p conventional_p eta_squared %9.4f
+
+    sort outcome_order
+
+    order ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        external_validation_outcome ///
+        measurement_type ///
+        favorable_direction ///
+        reverse_for_figure ///
+        figure_panel ///
+        sample_valid_N ///
+        sample_mean ///
+        sample_sd ///
+        totalN_s1 validN_s1 mean_s1 sd_s1 diff_s1 zdev_s1 ///
+        ozdev_s1 pwN_s1 pwmean_s1 pwz_s1 pwoz_s1 ///
+        totalN_s2 validN_s2 mean_s2 sd_s2 diff_s2 zdev_s2 ///
+        ozdev_s2 pwN_s2 pwmean_s2 pwz_s2 pwoz_s2 ///
+        totalN_s3 validN_s3 mean_s3 sd_s3 diff_s3 zdev_s3 ///
+        ozdev_s3 pwN_s3 pwmean_s3 pwz_s3 pwoz_s3 ///
+        totalN_s4 validN_s4 mean_s4 sd_s4 diff_s4 zdev_s4 ///
+        ozdev_s4 pwN_s4 pwmean_s4 pwz_s4 pwoz_s4 ///
+        N_test ///
+        robust_F ///
+        robust_p ///
+        robust_significance ///
+        conventional_F ///
+        conventional_p ///
+        conventional_significance ///
+        eta_squared ///
+        eta_interpretation
+
+    isid outcome_order
+
+    save "`outcome_report_wide'", replace
+
+    export excel using "`outcome_workbook'", ///
+        sheet("outcome_report", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.5 Sheet: overall tests
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_tests_final'", clear
+
+    export excel using "`outcome_workbook'", ///
+        sheet("outcome_tests", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.6 Sheet: pairwise differences with Holm adjustment
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_pairwise_final'", clear
+
+    export excel using "`outcome_workbook'", ///
+        sheet("pairwise_holm", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.7 Sheet: external validation outcomes only
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_report_wide'", clear
+
+    keep if external_validation_outcome == 1
+
+    export excel using "`outcome_workbook'", ///
+        sheet("external_validation", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 14.7.8 Sheet: class-defining outcomes only
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_report_wide'", clear
+
+    keep if external_validation_outcome == 0
+
+    export excel using "`outcome_workbook'", ///
+        sheet("class_defining", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.8 Figure C10: core outcomes and mechanisms by segment
+*-------------------------------------------------------------------------------*/
+
+/*
+    The figure reports posterior-weighted standardized deviations from the
+    full-sample mean.
+
+    All measures are oriented so that larger values represent more favorable
+    inclusion, protection, autonomy, trust, or enabling conditions.
+
+    Accordingly:
+        - IEDF is reversed so higher values mean lower fraud/recourse harm.
+        - IBPD is reversed so higher values mean fewer perceived barriers.
+
+    Panel A contains outcomes directly represented in the preferred LCA.
+    Panel B contains external outcomes and mechanisms not used to construct the
+    final latent classes.
+*/
+
+tempfile figC10_plotdata
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    keep ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        measurement_type ///
+        favorable_direction ///
+        reverse_for_figure ///
+        figure_panel ///
+        segment ///
+        segment_name ///
+        pw_N ///
+        pw_mean ///
+        pw_z_deviation ///
+        pw_oriented_z_deviation
+
+
+    *-------------------------------------------------------------------------*
+    * Create concise figure labels and panel-specific ordering
+    *-------------------------------------------------------------------------*
+
+    gen str60 figure_outcome_label = ""
+
+    replace figure_outcome_label = ///
+        "Digital remittance intensity" ///
+        if outcome_variable == "iurd_score_01"
+
+    replace figure_outcome_label = ///
+        "Formal digital remittance channel" ///
+        if outcome_variable == "formal_remittance"
+
+    replace figure_outcome_label = ///
+        "Financial operability" ///
+        if outcome_variable == "iuof_score_01"
+
+    replace figure_outcome_label = ///
+        "Onboarding quality" ///
+        if outcome_variable == "oqi_score_01"
+
+    replace figure_outcome_label = ///
+        "Transactional experience" ///
+        if outcome_variable == "ietr_score_01"
+
+    replace figure_outcome_label = ///
+        "Prevention and safe conduct" ///
+        if outcome_variable == "IPCS"
+
+    replace figure_outcome_label = ///
+        "Low fraud / recourse harm" ///
+        if outcome_variable == "IEDF"
+
+    replace figure_outcome_label = ///
+        "Financial autonomy" ///
+        if outcome_variable == "IAER"
+
+    replace figure_outcome_label = ///
+        "Trust and norms climate" ///
+        if outcome_variable == "ICPF"
+
+    replace figure_outcome_label = ///
+        "Enabling environment" ///
+        if outcome_variable == "IEH"
+
+    replace figure_outcome_label = ///
+        "Few perceived barriers" ///
+        if outcome_variable == "IBPD"
+
+
+    /*
+        Panel A contains the four outcomes represented directly in the final
+        latent-class model.
+
+        Panel B contains external behaviors, outcomes, and mechanisms.
+    */
+
+    gen byte plot_order = .
+
+    * Panel A: class-defining outcomes
+    replace plot_order = 1 if outcome_variable == "iurd_score_01"
+    replace plot_order = 2 if outcome_variable == "iuof_score_01"
+    replace plot_order = 3 if outcome_variable == "oqi_score_01"
+    replace plot_order = 4 if outcome_variable == "IEDF"
+
+    * Panel B: external outcomes and mechanisms
+    replace plot_order = 1 if outcome_variable == "formal_remittance"
+    replace plot_order = 2 if outcome_variable == "ietr_score_01"
+    replace plot_order = 3 if outcome_variable == "IPCS"
+    replace plot_order = 4 if outcome_variable == "IAER"
+    replace plot_order = 5 if outcome_variable == "ICPF"
+    replace plot_order = 6 if outcome_variable == "IEH"
+    replace plot_order = 7 if outcome_variable == "IBPD"
+
+    assert !missing(plot_order)
+    assert inlist(figure_panel, 1, 2)
+
+
+    *-------------------------------------------------------------------------*
+    * Offset segment markers around each outcome row
+    *-------------------------------------------------------------------------*
+
+    gen double plot_y = plot_order
+
+    replace plot_y = plot_order - 0.18 if segment == 1
+    replace plot_y = plot_order - 0.06 if segment == 2
+    replace plot_y = plot_order + 0.06 if segment == 3
+    replace plot_y = plot_order + 0.18 if segment == 4
+
+
+    *-------------------------------------------------------------------------*
+    * Create concise segment labels for graph data
+    *-------------------------------------------------------------------------*
+
+    gen str50 segment_short_name = ""
+
+    replace segment_short_name = ///
+        "Constrained low-intensity" ///
+        if segment == 1
+
+    replace segment_short_name = ///
+        "Operationally active, high-risk" ///
+        if segment == 2
+
+    replace segment_short_name = ///
+        "Mainstream partial inclusion" ///
+        if segment == 3
+
+    replace segment_short_name = ///
+        "Integrated and protected" ///
+        if segment == 4
+
+
+    format pw_N %10.2f
+    format pw_mean pw_z_deviation pw_oriented_z_deviation plot_y %9.3f
+
+    sort figure_panel plot_order segment
+
+    save "`figC10_plotdata'", replace
+
+    save ///
+        "${cluster_data}/plotdata_figC10_core_outcomes_by_segment.dta", ///
+        replace
+
+
+    *-------------------------------------------------------------------------*
+    * Define a common symmetric horizontal scale across both panels
+    *-------------------------------------------------------------------------*
+
+    quietly summarize pw_oriented_z_deviation, meanonly
+
+    local maximum_absolute_z = ///
+        max(abs(r(min)), abs(r(max)))
+
+    local x_limit = ///
+        ceil(`maximum_absolute_z' * 2) / 2
+
+    if `x_limit' < 1 {
+        local x_limit = 1
+    }
+
+    local x_minimum = -1 * `x_limit'
+    local x_maximum = `x_limit'
+
+
+    *-------------------------------------------------------------------------*
+    * Panel A: class-defining outcomes
+    *-------------------------------------------------------------------------*
+
+    twoway ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 1 & segment == 1, ///
+            msymbol(O) ///
+            msize(medium) ///
+            mcolor("`color_s1'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 1 & segment == 2, ///
+            msymbol(D) ///
+            msize(medium) ///
+            mcolor("`color_s2'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 1 & segment == 3, ///
+            msymbol(T) ///
+            msize(medium) ///
+            mcolor("`color_s3'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 1 & segment == 4, ///
+            msymbol(S) ///
+            msize(medium) ///
+            mcolor("`color_s4'")), ///
+        xline(0, ///
+            lcolor(gs8) ///
+            lpattern(dash) ///
+            lwidth(medthin)) ///
+        xscale(range(`x_minimum' `x_maximum')) ///
+        xlabel(`x_minimum'(.5)`x_maximum', ///
+            labsize(vsmall) ///
+            grid ///
+            glcolor(gs14)) ///
+        yscale(range(.50 4.50) reverse) ///
+        ylabel( ///
+            1 "Digital remittance intensity" ///
+            2 "Financial operability" ///
+            3 "Onboarding quality" ///
+            4 "Low fraud / recourse harm", ///
+            angle(0) ///
+            labsize(vsmall) ///
+            noticks) ///
+        xtitle( ///
+            "Posterior-weighted standardized deviation from sample mean", ///
+            size(vsmall)) ///
+        ytitle("") ///
+        title( ///
+            "A. Class-defining outcomes", ///
+            size(small)) ///
+        legend(off) ///
+        graphregion(color(white)) ///
+        plotregion(color(white)) ///
+        scheme(plotplain) ///
+        name(figC10_panelA, replace)
+
+    graph save ///
+        "${cluster_figures}/figC10a_class_defining_outcomes.gph", ///
+        replace
+
+    graph export ///
+        "${cluster_figures}/figC10a_class_defining_outcomes.png", ///
+        width(2800) ///
+        replace
+
+
+    *-------------------------------------------------------------------------*
+    * Panel B: external outcomes and mechanisms
+    *-------------------------------------------------------------------------*
+
+    twoway ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 2 & segment == 1, ///
+            msymbol(O) ///
+            msize(medium) ///
+            mcolor("`color_s1'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 2 & segment == 2, ///
+            msymbol(D) ///
+            msize(medium) ///
+            mcolor("`color_s2'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 2 & segment == 3, ///
+            msymbol(T) ///
+            msize(medium) ///
+            mcolor("`color_s3'")) ///
+        (scatter plot_y pw_oriented_z_deviation ///
+            if figure_panel == 2 & segment == 4, ///
+            msymbol(S) ///
+            msize(medium) ///
+            mcolor("`color_s4'")), ///
+        xline(0, ///
+            lcolor(gs8) ///
+            lpattern(dash) ///
+            lwidth(medthin)) ///
+        xscale(range(`x_minimum' `x_maximum')) ///
+        xlabel(`x_minimum'(.5)`x_maximum', ///
+            labsize(vsmall) ///
+            grid ///
+            glcolor(gs14)) ///
+        yscale(range(.50 7.50) reverse) ///
+        ylabel( ///
+            1 "Formal digital remittance channel" ///
+            2 "Transactional experience" ///
+            3 "Prevention and safe conduct" ///
+            4 "Financial autonomy" ///
+            5 "Trust and norms climate" ///
+            6 "Enabling environment" ///
+            7 "Few perceived barriers", ///
+            angle(0) ///
+            labsize(vsmall) ///
+            noticks) ///
+        xtitle( ///
+            "Posterior-weighted standardized deviation from sample mean", ///
+            size(vsmall)) ///
+        ytitle("") ///
+        title( ///
+            "B. External outcomes and mechanisms", ///
+            size(small)) ///
+        legend( ///
+            order( ///
+                1 "Constrained low-intensity" ///
+                2 "Operationally active, high-risk" ///
+                3 "Mainstream partial inclusion" ///
+                4 "Integrated and protected") ///
+            rows(4) ///
+            position(6) ///
+            size(vsmall) ///
+            region(lcolor(none))) ///
+        graphregion(color(white)) ///
+        plotregion(color(white)) ///
+        scheme(plotplain) ///
+        name(figC10_panelB, replace)
+
+    graph save ///
+        "${cluster_figures}/figC10b_external_outcomes_mechanisms.gph", ///
+        replace
+
+    graph export ///
+        "${cluster_figures}/figC10b_external_outcomes_mechanisms.png", ///
+        width(2800) ///
+        replace
+
+
+    *-------------------------------------------------------------------------*
+    * Combined report-ready Figure C10
+    *-------------------------------------------------------------------------*
+
+    graph combine ///
+        figC10_panelA ///
+        figC10_panelB, ///
+        cols(2) ///
+        imargin(tiny) ///
+        graphregion(color(white)) ///
+        note( ///
+            "IEDF and IBPD are reversed so that higher values indicate stronger protection or fewer barriers.", ///
+            size(vsmall)) ///
+        name(figC10_combined, replace)
+
+    graph save ///
+        "${cluster_figures}/figC10_outcome_means_by_segment.gph", ///
+        replace
+
+    graph export ///
+        "${cluster_figures}/figC10_outcome_means_by_segment.png", ///
+        width(4000) ///
+        replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.9 Export Figure C10 source data to Table C15 workbook
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`figC10_plotdata'", clear
+
+    sort figure_panel plot_order segment
+
+    order ///
+        figure_panel ///
+        plot_order ///
+        outcome_order ///
+        outcome_variable ///
+        outcome_label ///
+        figure_outcome_label ///
+        mechanism_group ///
+        outcome_role ///
+        measurement_type ///
+        favorable_direction ///
+        reverse_for_figure ///
+        segment ///
+        segment_name ///
+        segment_short_name ///
+        pw_N ///
+        pw_mean ///
+        pw_z_deviation ///
+        pw_oriented_z_deviation ///
+        plot_y
+
+    export excel using "`outcome_workbook'", ///
+        sheet("figure_C10_data", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.10 Internal consistency and completeness checks
+*-------------------------------------------------------------------------------*/
+
+/*
+    These checks ensure that:
+
+        - Every outcome has four segment-specific observations.
+        - Every outcome has an overall statistical test.
+        - Every outcome has six pairwise comparisons.
+        - All plotted outcomes have valid posterior-weighted standardized values.
+*/
+
+
+*===============================================================================*
+* 14.10.1 Verify long outcome-profile dataset
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_long'", clear
+
+    replace mechanism_group = "Safety and recourse" ///
+        if outcome_variable == "IEDF"
+
+    assert !missing(outcome_order)
+    assert !missing(outcome_variable)
+    assert !missing(segment)
+    assert inrange(segment, 1, 4)
+
+    bysort outcome_variable: assert _N == 4
+
+    assert !missing(pw_mean)
+    assert !missing(pw_z_deviation)
+    assert !missing(pw_oriented_z_deviation)
+
+    quietly count
+    assert r(N) == 44
+
+restore
+
+
+*===============================================================================*
+* 14.10.2 Verify overall tests
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_tests_final'", clear
+
+    assert !missing(outcome_order)
+    assert !missing(outcome_variable)
+    assert !missing(N_test)
+
+    isid outcome_variable
+
+    quietly count
+    assert r(N) == 11
+
+restore
+
+
+*===============================================================================*
+* 14.10.3 Verify pairwise comparisons
+*===============================================================================*/
+
+preserve
+
+    use "`outcome_pairwise_final'", clear
+
+    assert !missing(outcome_order)
+    assert !missing(outcome_variable)
+    assert !missing(segment_a)
+    assert !missing(segment_b)
+    assert segment_a < segment_b
+
+    bysort outcome_variable: assert _N == 6
+
+    quietly count
+    assert r(N) == 66
+
+restore
+
+
+*===============================================================================*
+* 14.10.4 Verify Figure C10 data
+*===============================================================================*/
+
+preserve
+
+    use "`figC10_plotdata'", clear
+
+    assert !missing(figure_panel)
+    assert !missing(plot_order)
+    assert !missing(segment)
+    assert !missing(pw_oriented_z_deviation)
+
+    bysort outcome_variable: assert _N == 4
+
+    quietly count
+    assert r(N) == 44
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R CORRECT AND REGENERATE FIGURE C10
+*-------------------------------------------------------------------------------*
+
+use ///
+    "${cluster_data}/plotdata_figC10_core_outcomes_by_segment.dta", ///
+    clear
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.1 Verify saved figure data
+*-------------------------------------------------------------------------------*
+
+assert _N == 44
+
+foreach v in ///
+    figure_panel ///
+    plot_order ///
+    plot_y ///
+    segment ///
+    pw_oriented_z_deviation {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required Figure C10 variable missing: `v'"
+        exit 111
+    }
+}
+
+assert inlist(figure_panel, 1, 2)
+assert inrange(segment, 1, 4)
+assert !missing(plot_y)
+assert !missing(pw_oriented_z_deviation)
+
+
+graph set window fontface "Times New Roman"
+set scheme plotplain
+
+local color_s1 "maroon"
+local color_s2 "orange"
+local color_s3 "navy"
+local color_s4 "green"
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.2 Define a common symmetric horizontal scale
+*-------------------------------------------------------------------------------*
+
+quietly summarize pw_oriented_z_deviation, meanonly
+
+local maximum_absolute_z = max(abs(r(min)), abs(r(max)))
+
+local x_limit = ceil(`maximum_absolute_z' * 2) / 2
+
+if `x_limit' < 1 {
+    local x_limit = 1
+}
+
+local x_minimum = -1 * `x_limit'
+local x_maximum = `x_limit'
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.3 Corrected Panel A: class-defining outcomes
+*-------------------------------------------------------------------------------*
+
+/*
+    IMPORTANT:
+    Stata scatter syntax is scatter y x.
+
+    Therefore:
+        y = plot_y
+        x = pw_oriented_z_deviation
+*/
+
+twoway ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 1 & segment == 1, ///
+        msymbol(O) ///
+        msize(medium) ///
+        mcolor("`color_s1'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 1 & segment == 2, ///
+        msymbol(D) ///
+        msize(medium) ///
+        mcolor("`color_s2'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 1 & segment == 3, ///
+        msymbol(T) ///
+        msize(medium) ///
+        mcolor("`color_s3'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 1 & segment == 4, ///
+        msymbol(S) ///
+        msize(medium) ///
+        mcolor("`color_s4'")), ///
+    xline(0, ///
+        lcolor(gs8) ///
+        lpattern(dash) ///
+        lwidth(medthin)) ///
+    xscale(range(`x_minimum' `x_maximum')) ///
+    xlabel(`x_minimum'(.5)`x_maximum', ///
+        format(%3.1f) ///
+        labsize(small) ///
+        grid ///
+        glcolor(gs14)) ///
+    yscale(range(.50 4.50) reverse) ///
+    ylabel( ///
+        1 "Digital remittance intensity" ///
+        2 "Financial operability" ///
+        3 "Onboarding quality" ///
+        4 "Low fraud / recourse harm", ///
+        angle(0) ///
+        labsize(small) ///
+        noticks) ///
+    xtitle( ///
+        "Posterior-weighted standardized deviation from sample mean", ///
+        size(small)) ///
+    ytitle("") ///
+    title( ///
+        "A. Class-defining outcomes", ///
+        size(medsmall)) ///
+    legend(off) ///
+    graphregion(color(white)) ///
+    plotregion(color(white)) ///
+    scheme(plotplain) ///
+    name(figC10_panelA_fixed, replace)
+
+graph save ///
+    "${cluster_figures}/figC10a_class_defining_outcomes.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC10a_class_defining_outcomes.png", ///
+    width(3200) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.4 Corrected Panel B: external outcomes and mechanisms
+*-------------------------------------------------------------------------------*
+
+twoway ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 2 & segment == 1, ///
+        msymbol(O) ///
+        msize(medium) ///
+        mcolor("`color_s1'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 2 & segment == 2, ///
+        msymbol(D) ///
+        msize(medium) ///
+        mcolor("`color_s2'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 2 & segment == 3, ///
+        msymbol(T) ///
+        msize(medium) ///
+        mcolor("`color_s3'")) ///
+    (scatter plot_y pw_oriented_z_deviation ///
+        if figure_panel == 2 & segment == 4, ///
+        msymbol(S) ///
+        msize(medium) ///
+        mcolor("`color_s4'")), ///
+    xline(0, ///
+        lcolor(gs8) ///
+        lpattern(dash) ///
+        lwidth(medthin)) ///
+    xscale(range(`x_minimum' `x_maximum')) ///
+    xlabel(`x_minimum'(.5)`x_maximum', ///
+        format(%3.1f) ///
+        labsize(small) ///
+        grid ///
+        glcolor(gs14)) ///
+    yscale(range(.50 7.50) reverse) ///
+    ylabel( ///
+        1 "Formal digital remittance channel" ///
+        2 "Transactional experience" ///
+        3 "Prevention and safe conduct" ///
+        4 "Financial autonomy" ///
+        5 "Trust and norms climate" ///
+        6 "Enabling environment" ///
+        7 "Few perceived barriers", ///
+        angle(0) ///
+        labsize(small) ///
+        noticks) ///
+    xtitle( ///
+        "Posterior-weighted standardized deviation from sample mean", ///
+        size(small)) ///
+    ytitle("") ///
+    title( ///
+        "B. External outcomes and mechanisms", ///
+        size(medsmall)) ///
+    legend( ///
+        order( ///
+            1 "Constrained low-intensity" ///
+            2 "Operationally active, high-risk" ///
+            3 "Mainstream partial inclusion" ///
+            4 "Integrated and protected") ///
+        rows(2) ///
+        position(6) ///
+        size(small) ///
+        region(lcolor(none))) ///
+    graphregion(color(white)) ///
+    plotregion(color(white)) ///
+    scheme(plotplain) ///
+    name(figC10_panelB_fixed, replace)
+
+graph save ///
+    "${cluster_figures}/figC10b_external_outcomes_mechanisms.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC10b_external_outcomes_mechanisms.png", ///
+    width(3200) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.5 Main report figure: vertically stacked panels
+*-------------------------------------------------------------------------------*
+
+/*
+    The vertical layout is recommended for a Word document because:
+        - labels remain legible;
+        - Panel B has more outcome rows than Panel A;
+        - the common horizontal scale remains directly comparable.
+*/
+
+graph combine ///
+    figC10_panelA_fixed ///
+    figC10_panelB_fixed, ///
+    cols(1) ///
+    xcommon ///
+    imargin(tiny) ///
+    graphregion(color(white)) ///
+    note( ///
+        "IEDF and IBPD are reversed so that higher values indicate stronger protection or fewer barriers.", ///
+        size(vsmall)) ///
+    xsize(8) ///
+    ysize(10) ///
+    name(figC10_combined_fixed, replace)
+
+graph save ///
+    "${cluster_figures}/figC10_outcome_means_by_segment.gph", ///
+    replace
+
+graph export ///
+    "${cluster_figures}/figC10_outcome_means_by_segment.png", ///
+    width(3600) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.6 Optional presentation figure: side-by-side panels
+*-------------------------------------------------------------------------------*
+
+graph combine ///
+    figC10_panelA_fixed ///
+    figC10_panelB_fixed, ///
+    cols(2) ///
+    xcommon ///
+    imargin(tiny) ///
+    graphregion(color(white)) ///
+    note( ///
+        "IEDF and IBPD are reversed so that higher values indicate stronger protection or fewer barriers.", ///
+        size(vsmall)) ///
+    xsize(12) ///
+    ysize(7) ///
+    name(figC10_combined_slides, replace)
+
+graph export ///
+    "${cluster_figures}/figC10_outcome_means_by_segment_slides.png", ///
+    width(4200) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 14.8R.7 Final graph audit
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "FIGURE C10 CORRECTED AND REGENERATED"
+display as text "------------------------------------------------------------"
+
+display as text ///
+    "1. ${cluster_figures}/figC10a_class_defining_outcomes.png"
+
+display as text ///
+    "2. ${cluster_figures}/figC10b_external_outcomes_mechanisms.png"
+
+display as text ///
+    "3. ${cluster_figures}/figC10_outcome_means_by_segment.png"
+
+display as text ///
+    "4. ${cluster_figures}/figC10_outcome_means_by_segment_slides.png"
+
+display as text "------------------------------------------------------------"
+
+
+
+*-------------------------------------------------------------------------------*
+* 14.11 Final console audit
+*-------------------------------------------------------------------------------*/
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 14 COMPLETED: CORE OUTCOMES AND MECHANISMS"
+display as text "------------------------------------------------------------"
+
+display as text "Analytical sample N = `final_N'"
+
+display as text "Primary table created:"
+
+display as text ///
+    "1. ${cluster_tables}/Table_C15_core_outcomes_by_segment.xlsx"
+
+display as text "Primary figure created:"
+
+display as text ///
+    "2. ${cluster_figures}/figC10_outcome_means_by_segment.png"
+
+display as text "Supplementary figure panels created:"
+
+display as text ///
+    "3. ${cluster_figures}/figC10a_class_defining_outcomes.png"
+
+display as text ///
+    "4. ${cluster_figures}/figC10b_external_outcomes_mechanisms.png"
+
+display as text "Auditable Stata datasets created:"
+
+display as text ///
+    "5. ${cluster_data}/postLCA_core_outcomes_long.dta"
+
+display as text ///
+    "6. ${cluster_data}/postLCA_core_outcome_tests.dta"
+
+display as text ///
+    "7. ${cluster_data}/postLCA_core_outcome_pairwise_Holm.dta"
+
+display as text ///
+    "8. ${cluster_data}/postLCA_core_outcome_definitions.dta"
+
+display as text ///
+    "9. ${cluster_data}/plotdata_figC10_core_outcomes_by_segment.dta"
+
+display as text "------------------------------------------------------------"
+
+}
+*---------------------------------------------------------------*
+**##	15. REGRESSION OVERLAYS USING SEGMENT MEMBERSHIP		*
+*---------------------------------------------------------------*
+{
+
+/*
+    Purpose:
+    Assess whether final segment membership:
+
+        1. Is systematically associated with baseline demographic, migration,
+           educational, occupational, and geographic characteristics.
+
+        2. Remains substantively associated with the study's core outcomes after
+           adjusting for those baseline characteristics.
+
+    Important interpretation:
+
+        - These models are descriptive and associational, not causal.
+        - Segment membership is derived from the observed survey indicators.
+        - Regressions involving class-defining outcomes partly reflect the
+          construction of the latent classes.
+        - External outcomes and mechanisms provide the stronger validation of
+          whether the segmentation has broader substantive meaning.
+
+    Reference categories:
+
+        Outcome reference in multinomial logit:
+            Segment 3: Mainstream formal-digital users with incomplete protection
+
+        Segment reference in outcome regressions:
+            Segment 3: Mainstream formal-digital users with incomplete protection
+
+        Baseline-control reference categories:
+            Age: 30-44
+            Education: Secondary or lower
+            Occupation: Self-employed or employer
+            Geography: Bogotá/Soacha corridor
+
+    Main outputs:
+
+        Table_C16_multinomial_predictors_segment_membership.doc
+        Table_C16_multinomial_average_marginal_effects.doc
+        Table_C16_multinomial_joint_tests.xlsx
+
+        Table_C17_segment_outcome_regressions.doc
+        Table_C17_segment_outcome_joint_tests.xlsx
+
+        CFI_DPI_S15_regression_overlay_data.dta
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 15.0 Load final segmentation dataset and verify analytical sample
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+
+assert _N == 423
+isid KEY
+
+local final_N = _N
+
+
+foreach v in ///
+    segment ///
+    age_cat ///
+    years_in_col ///
+    q2_2 ///
+    q2_3 ///
+    q3 ///
+    iurd_score_01 ///
+    formal_remittance ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required Section 15 variable missing: `v'"
+        exit 111
+    }
+}
+
+
+label define segment15_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment15_lbl
+
+
+*-------------------------------------------------------------------------------*
+* 15.1 Construct parsimonious regression-control variables
+*-------------------------------------------------------------------------------*/
+
+/*
+    The raw education, occupation, and city variables contain sparse categories
+    and several small segment-by-category cells.
+
+    For the multinomial model, they are collapsed into substantively meaningful
+    groups to reduce separation risk and avoid unstable coefficients.
+*/
+
+
+*===============================================================================*
+* 15.1.1 Age category: 18-29, 30-44, and 45+
+*===============================================================================*/
+
+capture drop s15_age3
+
+gen byte s15_age3 = .
+
+replace s15_age3 = 1 if age_cat == 1
+replace s15_age3 = 2 if age_cat == 2
+replace s15_age3 = 3 if inlist(age_cat, 3, 4)
+
+label define s15_age3_lbl ///
+    1 "18-29" ///
+    2 "30-44" ///
+    3 "45 or older", replace
+
+label values s15_age3 s15_age3_lbl
+label var s15_age3 "Age category used in segment regression overlays"
+
+
+*===============================================================================*
+* 15.1.2 Education: secondary/lower versus post-secondary
+*===============================================================================*/
+
+capture drop s15_educ2
+
+gen byte s15_educ2 = .
+
+replace s15_educ2 = 0 if inrange(q2_2, 1, 5)
+replace s15_educ2 = 1 if inrange(q2_2, 6, 10)
+
+label define s15_educ2_lbl ///
+    0 "Secondary education or lower" ///
+    1 "Technical or university education", replace
+
+label values s15_educ2 s15_educ2_lbl
+label var s15_educ2 "Post-secondary education"
+
+
+*===============================================================================*
+* 15.1.3 Occupation: self-employed, wage-employed, or outside paid employment
+*===============================================================================*/
+
+capture drop s15_occ3
+
+gen byte s15_occ3 = .
+
+replace s15_occ3 = 1 if inlist(q2_3, 1, 2)
+replace s15_occ3 = 2 if inlist(q2_3, 3, 4)
+replace s15_occ3 = 3 if inlist(q2_3, 5, 6, 7, 8, 9)
+
+label define s15_occ3_lbl ///
+    1 "Self-employed or employer" ///
+    2 "Employee or paid domestic worker" ///
+    3 "Outside paid employment or other", replace
+
+label values s15_occ3 s15_occ3_lbl
+label var s15_occ3 "Employment-position category"
+
+
+*===============================================================================*
+* 15.1.4 Geography: Bogotá/Soacha corridor versus other study locations
+*===============================================================================*/
+
+capture drop s15_city2
+
+gen byte s15_city2 = .
+
+replace s15_city2 = 0 if inlist(q3, 1, 4)
+replace s15_city2 = 1 if inlist(q3, 2, 3, 5)
+
+label define s15_city2_lbl ///
+    0 "Bogotá/Soacha corridor" ///
+    1 "Other study locations", replace
+
+label values s15_city2 s15_city2_lbl
+label var s15_city2 "Geographic group used in regression overlays"
+
+
+*===============================================================================*
+* 15.1.5 Regression-control complete-case indicator
+*===============================================================================*/
+
+capture drop s15_ctrl_sample
+
+gen byte s15_ctrl_sample = ///
+    !missing( ///
+        segment, ///
+        s15_age3, ///
+        years_in_col, ///
+        s15_educ2, ///
+        s15_occ3, ///
+        s15_city2 ///
+    )
+
+label var s15_ctrl_sample ///
+    "Complete baseline-control sample for regression overlays"
+
+quietly count if s15_ctrl_sample == 1
+local control_N = r(N)
+
+assert `control_N' == `final_N'
+
+
+*-------------------------------------------------------------------------------*
+* 15.1.6 Covariate and cell-size audit
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 15 BASELINE-COVARIATE AUDIT"
+display as text "------------------------------------------------------------"
+
+tab segment, missing
+
+tab s15_age3 segment, row column missing
+tab s15_educ2 segment, row column missing
+tab s15_occ3 segment, row column missing
+tab s15_city2 segment, row column missing
+
+summarize years_in_col, detail
+
+
+* Save analysis dataset containing regression-overlay covariates
+compress
+
+save ///
+    "${cluster_data}/CFI_DPI_S15_regression_overlay_data.dta", ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 15.2 Multinomial logit: predictors of segment membership
+*-------------------------------------------------------------------------------*/
+
+/*
+    The largest and most intermediate segment—Segment 3—is used as the base
+    outcome. Relative-risk ratios therefore describe the association between
+    each baseline characteristic and membership in Segments 1, 2, or 4 relative
+    to membership in Segment 3.
+*/
+
+capture erase ///
+    "${cluster_tables}/Table_C16_multinomial_predictors_segment_membership.doc"
+
+capture erase ///
+    "${cluster_tables}/Table_C16_multinomial_average_marginal_effects.doc"
+
+
+mlogit segment ///
+    ib2.s15_age3 ///
+    c.years_in_col ///
+    ib0.s15_educ2 ///
+    ib1.s15_occ3 ///
+    ib0.s15_city2 ///
+    if s15_ctrl_sample == 1, ///
+    baseoutcome(3) ///
+    vce(robust) ///
+    difficult ///
+    iterate(1000) ///
+    nolog
+
+
+estimates store m15_segment_membership
+
+estimates save ///
+    "${cluster_models}/m15_multinomial_segment_membership.ster", ///
+    replace
+
+
+* Export relative-risk ratios
+outreg2 using ///
+    "${cluster_tables}/Table_C16_multinomial_predictors_segment_membership.doc", ///
+    replace ///
+    word ///
+    eform ///
+    label ///
+    dec(3) ///
+    drop(_cons) ///
+    ctitle("Multinomial logit: relative-risk ratios") ///
+    addtext( ///
+        Base outcome, Mainstream partial inclusion, ///
+        Robust standard errors, Yes, ///
+        Collapsed baseline covariates, Yes ///
+    )
+
+
+*-------------------------------------------------------------------------------*
+* 15.2.1 Joint tests of multinomial predictor families
+*-------------------------------------------------------------------------------*
+
+tempfile m15_membership_joint
+tempname m15jointpost
+
+postfile `m15jointpost' ///
+    byte predictor_order ///
+    str40 predictor_group ///
+    str70 predictor_description ///
+    double chi2 ///
+    double df ///
+    double p_value ///
+    using "`m15_membership_joint'", replace
+
+
+estimates restore m15_segment_membership
+
+
+capture quietly testparm i.s15_age3
+
+if !_rc {
+    post `m15jointpost' ///
+        (1) ///
+        ("Age category") ///
+        ("Joint association of age category with segment membership") ///
+        (r(chi2)) ///
+        (r(df)) ///
+        (r(p))
+}
+
+
+capture quietly test years_in_col
+
+if !_rc {
+    post `m15jointpost' ///
+        (2) ///
+        ("Years in Colombia") ///
+        ("Association of migration tenure with segment membership") ///
+        (r(chi2)) ///
+        (r(df)) ///
+        (r(p))
+}
+
+
+capture quietly testparm i.s15_educ2
+
+if !_rc {
+    post `m15jointpost' ///
+        (3) ///
+        ("Education") ///
+        ("Joint association of education with segment membership") ///
+        (r(chi2)) ///
+        (r(df)) ///
+        (r(p))
+}
+
+
+capture quietly testparm i.s15_occ3
+
+if !_rc {
+    post `m15jointpost' ///
+        (4) ///
+        ("Occupation") ///
+        ("Joint association of occupational position with segment membership") ///
+        (r(chi2)) ///
+        (r(df)) ///
+        (r(p))
+}
+
+
+capture quietly testparm i.s15_city2
+
+if !_rc {
+    post `m15jointpost' ///
+        (5) ///
+        ("Geography") ///
+        ("Joint association of geographic location with segment membership") ///
+        (r(chi2)) ///
+        (r(df)) ///
+        (r(p))
+}
+
+
+postclose `m15jointpost'
+
+
+preserve
+
+    use "`m15_membership_joint'", clear
+
+    gen str3 significance = ""
+
+    replace significance = "*" ///
+        if p_value < 0.10 & !missing(p_value)
+
+    replace significance = "**" ///
+        if p_value < 0.05 & !missing(p_value)
+
+    replace significance = "***" ///
+        if p_value < 0.01 & !missing(p_value)
+
+    format chi2 %10.3f
+    format df %9.0f
+    format p_value %9.4f
+
+    sort predictor_order
+
+    export excel using ///
+        "${cluster_tables}/Table_C16_multinomial_joint_tests.xlsx", ///
+        sheet("joint_tests") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 15.2.2 Average marginal effects for membership in each segment
+*-------------------------------------------------------------------------------*/
+
+/*
+    Average marginal effects are easier to interpret than relative-risk ratios.
+
+    Each column reports the average change in the predicted probability of
+    membership in a given segment associated with each predictor.
+*/
+
+local ame_action "replace"
+
+forvalues s = 1/4 {
+
+    local segment_title ""
+
+    if `s' == 1 {
+        local segment_title "Pr: constrained low-intensity"
+    }
+
+    if `s' == 2 {
+        local segment_title "Pr: operationally active high-risk"
+    }
+
+    if `s' == 3 {
+        local segment_title "Pr: mainstream partial inclusion"
+    }
+
+    if `s' == 4 {
+        local segment_title "Pr: integrated and protected"
+    }
+
+
+    estimates restore m15_segment_membership
+
+    quietly margins, ///
+        dydx(*) ///
+        predict(outcome(`s')) ///
+        post
+
+
+    outreg2 using ///
+        "${cluster_tables}/Table_C16_multinomial_average_marginal_effects.doc", ///
+        `ame_action' ///
+        word ///
+        label ///
+        dec(3) ///
+        ctitle("`segment_title'") ///
+        addtext( ///
+            Model, Multinomial-logit AMEs, ///
+            Robust standard errors, Yes ///
+        )
+
+
+    local ame_action "append"
+}
+
+
+* Restore underlying multinomial model
+estimates restore m15_segment_membership
+
+
+*-------------------------------------------------------------------------------*
+* 15.3 Controlled outcome regressions with segment fixed effects
+*-------------------------------------------------------------------------------*/
+
+/*
+    Continuous outcomes:
+        OLS with heteroskedasticity-robust standard errors.
+
+    Formal remittance:
+        Logit model; average marginal effects of segment membership are exported.
+
+    All segment effects are interpreted relative to Segment 3:
+        Mainstream formal-digital users with incomplete protection.
+*/
+
+
+capture erase ///
+    "${cluster_tables}/Table_C17_segment_outcome_regressions.doc"
+
+
+tempfile m15_outcome_tests
+tempname m15outpost
+
+postfile `m15outpost' ///
+    byte model_order ///
+    str32 outcome_variable ///
+    str70 outcome_title ///
+    str28 model_type ///
+    str35 outcome_role ///
+    int N ///
+    double joint_statistic ///
+    str12 joint_test_type ///
+    double joint_p_value ///
+    double fit_statistic ///
+    str18 fit_statistic_type ///
+    using "`m15_outcome_tests'", replace
+
+
+local overlay_outcomes ///
+    iurd_score_01 ///
+    formal_remittance ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD
+
+
+local model_order = 0
+local table17_action "replace"
+
+
+foreach y of local overlay_outcomes {
+
+    local ++model_order
+
+    local outcome_title ""
+    local outcome_role "External mechanism/outcome"
+    local class_defining "No"
+
+
+    if "`y'" == "iurd_score_01" {
+        local outcome_title "Digital remittance intensity"
+        local outcome_role "Class-defining outcome"
+        local class_defining "Yes"
+    }
+
+    if "`y'" == "formal_remittance" {
+        local outcome_title "Formal digital remittance channel"
+        local outcome_role "External behavioral outcome"
+    }
+
+    if "`y'" == "iuof_score_01" {
+        local outcome_title "Financial operability"
+        local outcome_role "Class-defining outcome"
+        local class_defining "Yes"
+    }
+
+    if "`y'" == "oqi_score_01" {
+        local outcome_title "Onboarding quality"
+        local outcome_role "Class-defining outcome"
+        local class_defining "Yes"
+    }
+
+    if "`y'" == "ietr_score_01" {
+        local outcome_title "Transactional experience"
+    }
+
+    if "`y'" == "IPCS" {
+        local outcome_title "Prevention and safe conduct"
+    }
+
+    if "`y'" == "IEDF" {
+        local outcome_title "Fraud exposure and recourse harm"
+        local outcome_role "Class-defining outcome"
+        local class_defining "Yes"
+    }
+
+    if "`y'" == "IAER" {
+        local outcome_title "Financial autonomy"
+    }
+
+    if "`y'" == "ICPF" {
+        local outcome_title "Trust and norms climate"
+    }
+
+    if "`y'" == "IEH" {
+        local outcome_title "Enabling environment"
+    }
+
+    if "`y'" == "IBPD" {
+        local outcome_title "Perceived barriers"
+    }
+
+
+    *-------------------------------------------------------------------------*
+    * Binary formal-remittance outcome: logit plus segment AMEs
+    *-------------------------------------------------------------------------*
+
+    if "`y'" == "formal_remittance" {
+
+        quietly logit formal_remittance ///
+            ib3.segment ///
+            ib2.s15_age3 ///
+            c.years_in_col ///
+            ib0.s15_educ2 ///
+            ib1.s15_occ3 ///
+            ib0.s15_city2 ///
+            if s15_ctrl_sample == 1, ///
+            vce(robust) ///
+            iterate(1000) ///
+            nolog
+
+
+        estimates store m15_formal_remittance_logit
+
+        estimates save ///
+            "${cluster_models}/m15_formal_remittance_logit.ster", ///
+            replace
+
+
+        local model_N = e(N)
+        local fit_statistic = e(r2_p)
+        local fit_statistic_type "Pseudo R-squared"
+
+
+        quietly testparm 1.segment 2.segment 4.segment
+
+        local joint_statistic = r(chi2)
+        local joint_test_type "Chi-square"
+        local joint_p_value = r(p)
+
+
+        * Export average marginal effects rather than log-odds coefficients
+        quietly margins, dydx(segment) post
+
+
+        outreg2 using ///
+            "${cluster_tables}/Table_C17_segment_outcome_regressions.doc", ///
+            `table17_action' ///
+            word ///
+            label ///
+            dec(3) ///
+            keep(1.segment 2.segment 4.segment) ///
+            ctitle("Formal remittance: AMEs") ///
+            addtext( ///
+                Model, Logit average marginal effects, ///
+                Base segment, Mainstream partial inclusion, ///
+                Baseline controls, Yes, ///
+                Robust standard errors, Yes, ///
+                Class-defining outcome, No ///
+            ) ///
+            addstat( ///
+                Joint segment p-value, `joint_p_value' ///
+            )
+
+
+        post `m15outpost' ///
+            (`model_order') ///
+            (`"`y'"') ///
+            (`"`outcome_title'"') ///
+            ("Logit average marginal effects") ///
+            (`"`outcome_role'"') ///
+            (`model_N') ///
+            (`joint_statistic') ///
+            (`"`joint_test_type'"') ///
+            (`joint_p_value') ///
+            (`fit_statistic') ///
+            (`"`fit_statistic_type'"')
+
+
+        local table17_action "append"
+    }
+
+
+    *-------------------------------------------------------------------------*
+    * Continuous outcomes: OLS adjusted segment differences
+    *-------------------------------------------------------------------------*
+
+    if "`y'" != "formal_remittance" {
+
+        quietly regress `y' ///
+            ib3.segment ///
+            ib2.s15_age3 ///
+            c.years_in_col ///
+            ib0.s15_educ2 ///
+            ib1.s15_occ3 ///
+            ib0.s15_city2 ///
+            if s15_ctrl_sample == 1, ///
+            vce(robust)
+
+
+        estimates store m15_`y'
+
+        estimates save ///
+            "${cluster_models}/m15_`y'_ols.ster", ///
+            replace
+
+
+        local model_N = e(N)
+        local fit_statistic = e(r2)
+        local fit_statistic_type "R-squared"
+
+
+        quietly testparm 1.segment 2.segment 4.segment
+
+        local joint_statistic = r(F)
+        local joint_test_type "F"
+        local joint_p_value = r(p)
+
+
+        outreg2 using ///
+            "${cluster_tables}/Table_C17_segment_outcome_regressions.doc", ///
+            `table17_action' ///
+            word ///
+            label ///
+            dec(3) ///
+            keep(1.segment 2.segment 4.segment) ///
+            ctitle("`outcome_title'") ///
+            addtext( ///
+                Model, OLS, ///
+                Base segment, Mainstream partial inclusion, ///
+                Baseline controls, Yes, ///
+                Robust standard errors, Yes, ///
+                Class-defining outcome, `class_defining' ///
+            ) ///
+            addstat( ///
+                Joint segment p-value, `joint_p_value' ///
+            )
+
+
+        post `m15outpost' ///
+            (`model_order') ///
+            (`"`y'"') ///
+            (`"`outcome_title'"') ///
+            ("OLS") ///
+            (`"`outcome_role'"') ///
+            (`model_N') ///
+            (`joint_statistic') ///
+            (`"`joint_test_type'"') ///
+            (`joint_p_value') ///
+            (`fit_statistic') ///
+            (`"`fit_statistic_type'"')
+
+
+        local table17_action "append"
+    }
+}
+
+
+postclose `m15outpost'
+
+
+*-------------------------------------------------------------------------------*
+* 15.4 Export outcome-regression joint-test and fit summary
+*-------------------------------------------------------------------------------*
+
+preserve
+
+    use "`m15_outcome_tests'", clear
+
+    gen str3 significance = ""
+
+    replace significance = "*" ///
+        if joint_p_value < 0.10 & !missing(joint_p_value)
+
+    replace significance = "**" ///
+        if joint_p_value < 0.05 & !missing(joint_p_value)
+
+    replace significance = "***" ///
+        if joint_p_value < 0.01 & !missing(joint_p_value)
+
+
+    gen byte external_validation_outcome = ///
+        outcome_role != "Class-defining outcome"
+
+    label define s15_external_lbl ///
+        0 "Class-defining outcome" ///
+        1 "External outcome or mechanism", replace
+
+    label values external_validation_outcome s15_external_lbl
+
+
+    format joint_statistic fit_statistic %10.3f
+    format joint_p_value %9.4f
+
+    sort model_order
+
+    order ///
+        model_order ///
+        outcome_variable ///
+        outcome_title ///
+        outcome_role ///
+        external_validation_outcome ///
+        model_type ///
+        N ///
+        joint_test_type ///
+        joint_statistic ///
+        joint_p_value ///
+        significance ///
+        fit_statistic_type ///
+        fit_statistic
+
+
+    export excel using ///
+        "${cluster_tables}/Table_C17_segment_outcome_joint_tests.xlsx", ///
+        sheet("joint_tests") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 15.5 Final reproducibility and output audit
+*-------------------------------------------------------------------------------*
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 15 COMPLETED: REGRESSION OVERLAYS"
+display as text "------------------------------------------------------------"
+
+display as text "Final analytical sample N = `final_N'"
+display as text "Complete baseline-control sample N = `control_N'"
+
+display as text "Outputs created:"
+
+display as text ///
+    "1. ${cluster_tables}/Table_C16_multinomial_predictors_segment_membership.doc"
+
+display as text ///
+    "2. ${cluster_tables}/Table_C16_multinomial_average_marginal_effects.doc"
+
+display as text ///
+    "3. ${cluster_tables}/Table_C16_multinomial_joint_tests.xlsx"
+
+display as text ///
+    "4. ${cluster_tables}/Table_C17_segment_outcome_regressions.doc"
+
+display as text ///
+    "5. ${cluster_tables}/Table_C17_segment_outcome_joint_tests.xlsx"
+
+display as text ///
+    "6. ${cluster_data}/CFI_DPI_S15_regression_overlay_data.dta"
+
+display as text "Stored models created in:"
+display as text "${cluster_models}"
+
+display as text "------------------------------------------------------------"
+
+}
+*-------------------------------------------------------------------------------*
+**##	17. FINAL REPORT-READY EXPORTS
+*-------------------------------------------------------------------------------*
+{
+
+/*
+    Purpose:
+    Consolidate the final segmentation results into the exact tables, figures,
+    and datasets required for the quantitative-analysis chapter.
+
+    Final outputs:
+
+        Table_Cluster_1_Model_Selection.xlsx
+        Table_Cluster_2_Class_Profiles.xlsx
+        Table_Cluster_3_Segment_Centroids.xlsx
+        Table_Cluster_4_Policy_Typology.xlsx
+
+        CFI_DPI_Data_with_Final_Segments.dta
+        CFI_DPI_Data_with_Final_Segments.xlsx
+
+    Main methodological notes:
+
+        - Model-fit statistics should only be compared mechanically across
+          models estimated using the same manifest indicators and coding scheme.
+        - The preferred model is the reproducibility-locked hybrid H1_k4 model.
+        - Class-profile probabilities and centroids use posterior weights.
+        - Policy labels and intervention levers are researcher interpretations
+          informed by LCA profiles, descriptive profiling, and regression overlays.
+*/
+
+
+*-------------------------------------------------------------------------------*
+* 17.0 Load and verify final segmentation dataset
+*-------------------------------------------------------------------------------*
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+
+assert _N == 423
+isid KEY
+
+local final_N = _N
+
+
+foreach v in ///
+    segment ///
+    segment_short ///
+    raw_lca_class ///
+    lca_class ///
+    segment_post1 segment_post2 segment_post3 segment_post4 ///
+    segment_assigned_post ///
+    segment_posterior_margin ///
+    segment_uncertain ///
+    segment_medium_certainty ///
+    segment_high_certainty {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required final-segmentation variable missing: `v'"
+        exit 111
+    }
+}
+
+
+label define segment17_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment17_lbl
+
+
+local segname1 "Structurally constrained low-intensity users"
+local segname2 "Operationally active but high-risk remittance users"
+local segname3 "Mainstream formal-digital users with incomplete protection"
+local segname4 "Integrated and protected digital remittance users"
+
+local segshort1 "Constrained low-intensity"
+local segshort2 "Operationally active, high-risk"
+local segshort3 "Mainstream partial inclusion"
+local segshort4 "Integrated and protected"
+
+
+* Store model-estimated marginal segment probabilities
+forvalues s = 1/4 {
+
+    quietly summarize segment_post`s', meanonly
+
+    scalar model_prob_s`s' = r(mean)
+}
+
+*-------------------------------------------------------------------------------*
+* 17.0.1 Restore exact hybrid manifest indicators used by final H1_k4 model
+*-------------------------------------------------------------------------------*/
+
+/*
+    The report-ready final segmentation dataset may not yet contain the hybrid
+    categorical manifest indicators used to estimate the final LCA.
+
+    To guarantee that the final profile tables use exactly the same indicators
+    as the preferred model, merge them from the saved hybrid LCA-ready dataset.
+
+    This block is rerun-safe:
+        - If all seven indicators already exist, no merge is performed.
+        - If any indicator is missing, the complete exact set is re-merged.
+*/
+
+local s17_manifest_inputs ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2
+
+
+local s17_manifest_merge_required = 0
+
+foreach v of local s17_manifest_inputs {
+
+    capture confirm variable `v'
+
+    if _rc {
+        local s17_manifest_merge_required = 1
+    }
+}
+
+
+if `s17_manifest_merge_required' == 1 {
+
+    display as text ///
+        "Hybrid manifest indicators missing from final segmentation dataset."
+
+    display as text ///
+        "Merging exact indicators from CFI_DPI_hybrid_LCA_ready_variables.dta."
+
+
+    capture confirm file ///
+        "${cluster_data}/CFI_DPI_hybrid_LCA_ready_variables.dta"
+
+    if _rc {
+
+        display as error ///
+            "Required hybrid LCA-ready dataset was not found."
+
+        exit 601
+    }
+
+
+    tempfile s17_exact_manifest_inputs
+
+
+    preserve
+
+        use ///
+            "${cluster_data}/CFI_DPI_hybrid_LCA_ready_variables.dta", ///
+            clear
+
+
+        keep ///
+            KEY ///
+            h_ivs3 ///
+            h_icdp3 ///
+            h_iaff3 ///
+            h_iuof3 ///
+            h_oqi3 ///
+            h_iurd3 ///
+            h_iedf2
+
+
+        isid KEY
+
+
+        foreach v of local s17_manifest_inputs {
+
+            capture confirm variable `v'
+
+            if _rc {
+
+                display as error ///
+                    "Required final LCA indicator missing from hybrid source dataset: `v'"
+
+                exit 111
+            }
+
+
+            assert !missing(`v')
+        }
+
+
+        sort KEY
+
+
+        save "`s17_exact_manifest_inputs'", replace
+
+    restore
+
+
+    /*
+        Remove any partially retained hybrid variables before merging the exact
+        complete set. This ensures the block remains safe across repeated runs.
+    */
+
+    foreach v of local s17_manifest_inputs {
+        capture drop `v'
+    }
+
+
+    merge 1:1 KEY ///
+        using "`s17_exact_manifest_inputs'", ///
+        assert(match) ///
+        keep(match) ///
+        nogen
+}
+
+
+* Reapply transparent category labels
+label define hyb3 ///
+    1 "Low" ///
+    2 "Medium" ///
+    3 "High", replace
+
+label define hyb2 ///
+    0 "Low / No" ///
+    1 "High / Yes", replace
+
+
+label values ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    hyb3
+
+label values h_iedf2 hyb2
+
+
+* Verify exact final model inputs are now available and complete
+assert _N == `final_N'
+isid KEY
+
+foreach v of local s17_manifest_inputs {
+
+    confirm variable `v'
+
+    assert !missing(`v')
+}
+
+
+display as text "------------------------------------------------------------"
+display as text "FINAL H1_K4 MANIFEST INPUTS VERIFIED"
+display as text "------------------------------------------------------------"
+
+tab1 ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2, ///
+    missing
+
+display as text "------------------------------------------------------------"
+
+*-------------------------------------------------------------------------------*
+* 17.1 Final model-selection table
+*-------------------------------------------------------------------------------*/
+
+/*
+    The model-selection table includes:
+
+        - Minimal/binary categorical candidate models
+        - Hybrid categorical candidate models
+        - Reproducibility-locked final hybrid H1_k4 model
+
+    BIC and AIC should be interpreted primarily within feature sets and coding
+    families, because models based on different manifest indicators are not
+    directly comparable through fit statistics alone.
+*/
+
+
+*===============================================================================*
+* 17.1.1 Helper program to standardize candidate-fit datasets
+*===============================================================================*/
+
+capture program drop s17_standardize_fit
+
+program define s17_standardize_fit
+
+    syntax using/, FAMILY(string) OUTFILE(string)
+
+    preserve
+
+    use `"`using'"', clear
+
+
+    capture confirm variable N_complete
+
+    if !_rc {
+        rename N_complete N
+    }
+
+
+    capture confirm variable N
+
+    if _rc {
+        gen int N = .
+    }
+
+
+    foreach v in ///
+        rc ///
+        converged ///
+        ll ///
+        df ///
+        aic ///
+        bic ///
+        entropy ///
+        avg_max_posterior ///
+        min_class_n ///
+        min_class_pct ///
+        small_class_flag ///
+        report_candidate {
+
+        capture confirm variable `v'
+
+        if _rc {
+            gen double `v' = .
+        }
+    }
+
+
+    capture confirm variable selected_model
+
+    if _rc {
+        gen byte selected_model = 0
+    }
+
+
+    capture confirm variable avg_posterior_margin
+
+    if _rc {
+        gen double avg_posterior_margin = .
+    }
+
+
+    capture confirm variable pct_uncertain
+
+    if _rc {
+        gen double pct_uncertain = .
+    }
+
+
+    capture confirm variable pct_high_certainty
+
+    if _rc {
+        gen double pct_high_certainty = .
+    }
+
+
+    capture confirm variable seed
+
+    if _rc {
+        gen double seed = .
+    }
+
+
+    capture confirm variable max_iterations
+
+    if _rc {
+        gen double max_iterations = .
+    }
+
+
+    capture confirm variable feature_set
+
+    if _rc {
+        gen str60 feature_set = ""
+    }
+
+
+    capture confirm variable model_type
+
+    if _rc {
+        gen str100 model_type = ""
+    }
+
+
+    capture confirm variable start_method
+
+    if _rc {
+        gen str100 start_method = ""
+    }
+
+
+    capture confirm variable note
+
+    if _rc {
+        gen str244 note = ""
+    }
+
+
+    capture confirm variable lca_inputs
+
+    if _rc {
+        gen str244 lca_inputs = ""
+    }
+
+
+    capture confirm variable measurement
+
+    if _rc {
+        gen str244 measurement = ""
+    }
+
+
+    gen str50 model_family = "`family'"
+
+
+    recast str40 model_id
+    recast str50 model_family
+    recast str60 feature_set
+    recast str100 model_type start_method
+    recast str244 note lca_inputs measurement
+
+
+    keep ///
+        model_id ///
+        model_family ///
+        feature_set ///
+        model_type ///
+        k ///
+        n_indicators ///
+        N ///
+        rc ///
+        converged ///
+        ll ///
+        df ///
+        aic ///
+        bic ///
+        entropy ///
+        avg_max_posterior ///
+        avg_posterior_margin ///
+        min_class_n ///
+        min_class_pct ///
+        pct_uncertain ///
+        pct_high_certainty ///
+        small_class_flag ///
+        report_candidate ///
+        selected_model ///
+        seed ///
+        start_method ///
+        max_iterations ///
+        lca_inputs ///
+        measurement ///
+        note
+
+
+    save `"`outfile'"', replace
+
+    restore
+
+end
+
+
+*===============================================================================*
+* 17.1.2 Standardize earlier binary and hybrid model grids
+*===============================================================================*/
+
+tempfile binary_fit_std
+tempfile hybrid_fit_std
+tempfile final_fit_std
+tempfile model_selection_all
+
+
+capture confirm file ///
+    "${cluster_data}/CFI_DPI_minimal_LCA_fit_summary.dta"
+
+if _rc {
+    display as error ///
+        "Binary candidate-fit dataset not found: CFI_DPI_minimal_LCA_fit_summary.dta"
+    exit 601
+}
+
+
+s17_standardize_fit using ///
+    "${cluster_data}/CFI_DPI_minimal_LCA_fit_summary.dta", ///
+    family("Binary categorical candidates") ///
+    outfile("`binary_fit_std'")
+
+
+capture confirm file ///
+    "${cluster_data}/CFI_DPI_hybrid_LCA_fit_summary.dta"
+
+if _rc {
+    display as error ///
+        "Hybrid candidate-fit dataset not found: CFI_DPI_hybrid_LCA_fit_summary.dta"
+    exit 601
+}
+
+
+s17_standardize_fit using ///
+    "${cluster_data}/CFI_DPI_hybrid_LCA_fit_summary.dta", ///
+    family("Hybrid categorical candidates") ///
+    outfile("`hybrid_fit_std'")
+
+
+*===============================================================================*
+* 17.1.3 Standardize reproducibility-locked final model
+*===============================================================================*/
+
+capture confirm file ///
+    "${cluster_data}/CFI_DPI_final_lca_fit_summary.dta"
+
+if _rc {
+    display as error ///
+        "Final locked-fit dataset not found: CFI_DPI_final_lca_fit_summary.dta"
+    exit 601
+}
+
+
+preserve
+
+    use ///
+        "${cluster_data}/CFI_DPI_final_lca_fit_summary.dta", ///
+        clear
+
+
+    capture confirm variable k_classes
+
+    if !_rc {
+        rename k_classes k
+    }
+
+
+    capture confirm variable log_likelihood
+
+    if !_rc {
+        rename log_likelihood ll
+    }
+
+
+    capture confirm variable AIC
+
+    if !_rc {
+        rename AIC aic
+    }
+
+
+    capture confirm variable BIC
+
+    if !_rc {
+        rename BIC bic
+    }
+
+
+    capture confirm variable model_description
+
+    if !_rc {
+        rename model_description model_type
+    }
+
+
+    replace model_id = "H1_k4_final_locked"
+
+
+    gen str50 model_family = "Selected reproducibility-locked model"
+    gen str60 feature_set = "H1_mixed_core"
+
+    gen int rc = 0
+    gen byte report_candidate = 1
+    gen byte small_class_flag = min_class_pct < 5
+
+    replace selected_model = 1
+
+    gen str244 note = ///
+        "Selected final four-class hybrid core model; reproducibility locked with fixed observation order, seed, and random-start seed."
+
+
+    recast str40 model_id
+    recast str50 model_family
+    recast str60 feature_set
+    recast str100 model_type start_method
+    recast str244 note lca_inputs measurement
+
+
+    keep ///
+        model_id ///
+        model_family ///
+        feature_set ///
+        model_type ///
+        k ///
+        n_indicators ///
+        N ///
+        rc ///
+        converged ///
+        ll ///
+        df ///
+        aic ///
+        bic ///
+        entropy ///
+        avg_max_posterior ///
+        avg_posterior_margin ///
+        min_class_n ///
+        min_class_pct ///
+        pct_uncertain ///
+        pct_high_certainty ///
+        small_class_flag ///
+        report_candidate ///
+        selected_model ///
+        seed ///
+        start_method ///
+        max_iterations ///
+        lca_inputs ///
+        measurement ///
+        note
+
+
+    save "`final_fit_std'", replace
+
+restore
+
+
+*===============================================================================*
+* 17.1.4 Combine model grids and final selected model
+*===============================================================================*/
+
+preserve
+
+    use "`binary_fit_std'", clear
+
+    append using "`hybrid_fit_std'"
+    append using "`final_fit_std'"
+
+
+    replace model_id = "H1_k4_initial_grid" ///
+        if model_id == "H1_k4" & ///
+        model_family == "Hybrid categorical candidates"
+
+
+    bysort model_family feature_set: egen double minimum_bic = ///
+        min(cond(converged == 1, bic, .))
+
+
+    gen double delta_bic_within_set = ///
+        bic - minimum_bic ///
+        if converged == 1 & !missing(bic)
+
+
+    gen str40 selection_status = ""
+
+    replace selection_status = "Selected final model" ///
+        if selected_model == 1
+
+    replace selection_status = "Converged report candidate" ///
+        if selected_model != 1 & report_candidate == 1
+
+    replace selection_status = "Converged comparison model" ///
+        if selected_model != 1 & converged == 1 & report_candidate != 1
+
+    replace selection_status = "Excluded: did not converge" ///
+        if converged != 1
+
+
+    gen str244 selection_rationale = ""
+
+    replace selection_rationale = ///
+        "Preferred four-class hybrid model: strong entropy and posterior certainty, no critically small class, coherent and policy-relevant profiles." ///
+        if selected_model == 1
+
+    replace selection_rationale = ///
+        "Viable converged candidate retained for model-selection comparison." ///
+        if selected_model != 1 & report_candidate == 1
+
+    replace selection_rationale = ///
+        "Converged, but not preferred because it provides less useful segmentation or does not meet the report-candidate rule." ///
+        if selected_model != 1 & converged == 1 & report_candidate != 1
+
+    replace selection_rationale = ///
+        "Excluded because maximum-likelihood estimation did not converge." ///
+        if converged != 1
+
+
+    gen str244 comparison_note = ///
+        "AIC/BIC should be compared mechanically only within the same feature set and coding family."
+
+
+    format ll aic bic minimum_bic delta_bic_within_set %12.3f
+
+    format entropy avg_max_posterior avg_posterior_margin ///
+           min_class_pct pct_uncertain pct_high_certainty %9.3f
+
+
+    gsort -selected_model model_family feature_set k
+
+
+    order ///
+        selected_model ///
+        selection_status ///
+        model_id ///
+        model_family ///
+        feature_set ///
+        model_type ///
+        k ///
+        n_indicators ///
+        N ///
+        converged ///
+        report_candidate ///
+        ll ///
+        df ///
+        aic ///
+        bic ///
+        minimum_bic ///
+        delta_bic_within_set ///
+        entropy ///
+        avg_max_posterior ///
+        avg_posterior_margin ///
+        min_class_n ///
+        min_class_pct ///
+        pct_uncertain ///
+        pct_high_certainty ///
+        small_class_flag ///
+        seed ///
+        start_method ///
+        max_iterations ///
+        selection_rationale ///
+        comparison_note ///
+        note
+
+
+    save "`model_selection_all'", replace
+
+    save ///
+        "${cluster_data}/CFI_DPI_final_model_selection.dta", ///
+        replace
+
+restore
+
+
+capture erase ///
+    "${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx"
+
+
+preserve
+
+    use "`model_selection_all'", clear
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx", ///
+        sheet("all_models") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`model_selection_all'", clear
+
+    keep if converged == 1
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx", ///
+        sheet("converged_models", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`model_selection_all'", clear
+
+    keep if report_candidate == 1 | selected_model == 1
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx", ///
+        sheet("report_candidates", replace) ///
+        firstrow(variables)
+
+restore
+
+
+preserve
+
+    use "`model_selection_all'", clear
+
+    keep if selected_model == 1
+
+    assert _N == 1
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx", ///
+        sheet("selected_model", replace) ///
+        firstrow(variables)
+
+restore
+
+*-------------------------------------------------------------------------------*
+* 17.1.5 Reload respondent-level final dataset before profile exports
+*-------------------------------------------------------------------------------*/
+
+/*
+    Section 17.1 works with several model-fit summary datasets. This defensive
+    reload ensures that all subsequent class-profile and centroid exports begin
+    from the respondent-level final segmentation dataset.
+
+    The exact hybrid manifest indicators are merged from the saved LCA-ready
+    dataset to guarantee consistency with the preferred H1_k4 estimation.
+*/
+
+use "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+keep if final_lca_sample == 1
+
+assert _N == `final_N'
+isid KEY
+
+
+local s17_manifest_inputs ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2
+
+
+* Remove any partially retained versions before merging the exact variables
+foreach v of local s17_manifest_inputs {
+    capture drop `v'
+}
+
+
+capture confirm file ///
+    "${cluster_data}/CFI_DPI_hybrid_LCA_ready_variables.dta"
+
+if _rc {
+
+    display as error ///
+        "Required hybrid LCA-ready dataset not found: CFI_DPI_hybrid_LCA_ready_variables.dta"
+
+    exit 601
+}
+
+
+tempfile s17_exact_manifest_inputs
+
+
+preserve
+
+    use ///
+        "${cluster_data}/CFI_DPI_hybrid_LCA_ready_variables.dta", ///
+        clear
+
+
+    keep ///
+        KEY ///
+        h_ivs3 ///
+        h_icdp3 ///
+        h_iaff3 ///
+        h_iuof3 ///
+        h_oqi3 ///
+        h_iurd3 ///
+        h_iedf2
+
+
+    isid KEY
+
+
+    foreach v of local s17_manifest_inputs {
+
+        confirm variable `v'
+
+        assert !missing(`v')
+    }
+
+
+    save "`s17_exact_manifest_inputs'", replace
+
+restore
+
+
+merge 1:1 KEY using "`s17_exact_manifest_inputs'"
+
+assert _merge == 3
+
+drop _merge
+
+
+* Reapply final substantive segment label
+label define segment17_lbl ///
+    1 "Structurally constrained low-intensity users" ///
+    2 "Operationally active but high-risk remittance users" ///
+    3 "Mainstream formal-digital users with incomplete protection" ///
+    4 "Integrated and protected digital remittance users", replace
+
+label values segment segment17_lbl
+
+
+* Reapply manifest-indicator value labels
+label define s17_hyb3 ///
+    1 "Low" ///
+    2 "Medium" ///
+    3 "High", replace
+
+label define s17_hyb2 ///
+    0 "Low / No" ///
+    1 "High / Yes", replace
+
+
+label values ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    s17_hyb3
+
+label values h_iedf2 s17_hyb2
+
+
+* Final verification before creating profile probabilities
+assert _N == `final_N'
+isid KEY
+
+foreach v of local s17_manifest_inputs {
+
+    confirm variable `v'
+
+    assert !missing(`v')
+}
+
+
+display as text "------------------------------------------------------------"
+display as text "RESPONDENT-LEVEL DATA AND FINAL H1_K4 INPUTS RELOADED"
+display as text "------------------------------------------------------------"
+
+describe ///
+    segment ///
+    segment_post1 ///
+    segment_post2 ///
+    segment_post3 ///
+    segment_post4 ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2
+
+display as text "------------------------------------------------------------"
+
+*-------------------------------------------------------------------------------*
+* 17.2 Final class-profile probability table
+*-------------------------------------------------------------------------------*/
+
+tempfile final_profile_long
+tempname finalprofilepost
+
+
+postfile `finalprofilepost' ///
+    byte input_order ///
+    str20 input_variable ///
+    str80 construct ///
+    str60 mechanism ///
+    str20 measurement_type ///
+    double category_value ///
+    str100 category_label ///
+    byte segment ///
+    str80 segment_name ///
+    double posterior_weighted_N ///
+    double posterior_probability ///
+    int modal_valid_N ///
+    double modal_share ///
+    using "`final_profile_long'", replace
+
+
+local final_lca_inputs ///
+    h_ivs3 ///
+    h_icdp3 ///
+    h_iaff3 ///
+    h_iuof3 ///
+    h_oqi3 ///
+    h_iurd3 ///
+    h_iedf2
+
+
+local input_order = 0
+
+
+foreach v of local final_lca_inputs {
+
+    local ++input_order
+
+
+    local construct ""
+    local mechanism ""
+    local measurement_type "Ordinal"
+
+
+    if "`v'" == "h_ivs3" {
+        local construct "Socioeconomic vulnerability"
+        local mechanism "Structural constraint"
+    }
+
+    if "`v'" == "h_icdp3" {
+        local construct "Practical digital competence"
+        local mechanism "Cost-convenience and usability"
+    }
+
+    if "`v'" == "h_iaff3" {
+        local construct "Formal financial access"
+        local mechanism "Formalization and participation"
+    }
+
+    if "`v'" == "h_iuof3" {
+        local construct "Financial operability"
+        local mechanism "Operational participation"
+    }
+
+    if "`v'" == "h_oqi3" {
+        local construct "Onboarding quality"
+        local mechanism "DPI governance and usability"
+    }
+
+    if "`v'" == "h_iurd3" {
+        local construct "Digital remittance intensity"
+        local mechanism "Remittance formalization"
+    }
+
+    if "`v'" == "h_iedf2" {
+        local construct "Fraud exposure and recourse harm"
+        local mechanism "Trust-safety and recourse"
+        local measurement_type "Binary"
+    }
+
+
+    levelsof `v' if !missing(`v'), local(levels)
+
+
+    foreach c of local levels {
+
+        local category_label "`c'"
+
+        local value_label : value label `v'
+
+        if "`value_label'" != "" {
+            local category_label : label `value_label' `c'
+        }
+
+
+        foreach s in 1 2 3 4 {
+
+            quietly summarize segment_post`s' ///
+                if !missing(`v'), meanonly
+
+            local weighted_N = r(sum)
+
+
+            tempvar __profile_weight
+
+            quietly gen double `__profile_weight' = ///
+                segment_post`s' * (`v' == `c') ///
+                if !missing(`v')
+
+
+            quietly summarize `__profile_weight', meanonly
+
+            local weighted_numerator = r(sum)
+
+            local posterior_probability = .
+
+            if `weighted_N' > 0 {
+                local posterior_probability = ///
+                    `weighted_numerator' / `weighted_N'
+            }
+
+
+            quietly count if segment == `s' & !missing(`v')
+
+            local modal_valid_N = r(N)
+
+
+            quietly count if segment == `s' & `v' == `c'
+
+            local modal_category_N = r(N)
+
+            local modal_share = .
+
+            if `modal_valid_N' > 0 {
+                local modal_share = ///
+                    `modal_category_N' / `modal_valid_N'
+            }
+
+
+            local segment_name "`segname`s''"
+
+
+            post `finalprofilepost' ///
+                (`input_order') ///
+                (`"`v'"') ///
+                (`"`construct'"') ///
+                (`"`mechanism'"') ///
+                (`"`measurement_type'"') ///
+                (`c') ///
+                (`"`category_label'"') ///
+                (`s') ///
+                (`"`segment_name'"') ///
+                (`weighted_N') ///
+                (`posterior_probability') ///
+                (`modal_valid_N') ///
+                (`modal_share')
+
+
+            drop `__profile_weight'
+        }
+    }
+}
+
+
+postclose `finalprofilepost'
+
+
+capture erase ///
+    "${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx"
+
+
+* Segment sizes and classification certainty
+preserve
+
+    gen byte __one = 1
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) ///
+            mean_assigned_posterior = segment_assigned_post ///
+            mean_posterior_margin = segment_posterior_margin ///
+            share_uncertain = segment_uncertain ///
+            share_high_certainty = segment_high_certainty, ///
+        by(segment)
+
+    gen class_pct = 100 * N / `final_N'
+
+    gen double model_marginal_probability = .
+
+    replace model_marginal_probability = scalar(model_prob_s1) if segment == 1
+    replace model_marginal_probability = scalar(model_prob_s2) if segment == 2
+    replace model_marginal_probability = scalar(model_prob_s3) if segment == 3
+    replace model_marginal_probability = scalar(model_prob_s4) if segment == 4
+
+    decode segment, gen(segment_name)
+
+    format class_pct %9.2f
+    format model_marginal_probability mean_assigned_posterior ///
+           mean_posterior_margin share_uncertain ///
+           share_high_certainty %9.3f
+
+    order ///
+        segment ///
+        segment_name ///
+        N ///
+        class_pct ///
+        model_marginal_probability ///
+        mean_assigned_posterior ///
+        mean_posterior_margin ///
+        share_uncertain ///
+        share_high_certainty
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx", ///
+        sheet("segment_summary") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+* Complete long-format probabilities
+preserve
+
+    use "`final_profile_long'", clear
+
+    format posterior_weighted_N %10.2f
+    format posterior_probability modal_share %9.3f
+
+    sort input_order category_value segment
+
+    save ///
+        "${cluster_data}/CFI_DPI_final_class_profiles_long.dta", ///
+        replace
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx", ///
+        sheet("full_categories_long", replace) ///
+        firstrow(variables)
+
+restore
+
+
+* Complete wide-format probabilities
+preserve
+
+    use "`final_profile_long'", clear
+
+    keep ///
+        input_order ///
+        input_variable ///
+        construct ///
+        mechanism ///
+        measurement_type ///
+        category_value ///
+        category_label ///
+        segment ///
+        posterior_probability ///
+        modal_share
+
+
+    reshape wide ///
+        posterior_probability ///
+        modal_share, ///
+        i( ///
+            input_order ///
+            input_variable ///
+            construct ///
+            mechanism ///
+            measurement_type ///
+            category_value ///
+            category_label ///
+        ) ///
+        j(segment)
+
+
+    rename posterior_probability1 pwp_s1_constrained
+    rename posterior_probability2 pwp_s2_active_risk
+    rename posterior_probability3 pwp_s3_mainstream
+    rename posterior_probability4 pwp_s4_integrated
+
+    rename modal_share1 modal_s1_constrained
+    rename modal_share2 modal_s2_active_risk
+    rename modal_share3 modal_s3_mainstream
+    rename modal_share4 modal_s4_integrated
+
+
+    format pwp_* modal_* %9.3f
+
+    sort input_order category_value
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx", ///
+        sheet("full_categories_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+* Concise report-ready favorable/protective profile
+preserve
+
+    use "`final_profile_long'", clear
+
+
+    gen byte target_category = 0
+
+    replace target_category = 1 if ///
+        inlist( ///
+            input_variable, ///
+            "h_icdp3", ///
+            "h_iaff3", ///
+            "h_iuof3", ///
+            "h_oqi3", ///
+            "h_iurd3" ///
+        ) & category_value == 3
+
+    replace target_category = 1 if ///
+        input_variable == "h_ivs3" & category_value == 1
+
+    replace target_category = 1 if ///
+        input_variable == "h_iedf2" & category_value == 0
+
+
+    keep if target_category == 1
+
+
+    gen str100 profile_label = ""
+
+    replace profile_label = "Pr(low socioeconomic vulnerability)" ///
+        if input_variable == "h_ivs3"
+
+    replace profile_label = "Pr(high practical digital competence)" ///
+        if input_variable == "h_icdp3"
+
+    replace profile_label = "Pr(high formal financial access)" ///
+        if input_variable == "h_iaff3"
+
+    replace profile_label = "Pr(high financial operability)" ///
+        if input_variable == "h_iuof3"
+
+    replace profile_label = "Pr(high onboarding quality)" ///
+        if input_variable == "h_oqi3"
+
+    replace profile_label = "Pr(high digital remittance intensity)" ///
+        if input_variable == "h_iurd3"
+
+    replace profile_label = "Pr(low or no fraud / recourse harm)" ///
+        if input_variable == "h_iedf2"
+
+
+   keep ///
+        input_order ///
+        input_variable ///
+        construct ///
+        mechanism ///
+        profile_label ///
+        segment ///
+        posterior_probability ///
+        modal_share
+
+
+    reshape wide ///
+        posterior_probability ///
+        modal_share, ///
+        i( ///
+            input_order ///
+            input_variable ///
+            construct ///
+            mechanism ///
+            profile_label ///
+        ) ///
+        j(segment)
+
+
+    rename posterior_probability1 pwp_s1_constrained
+    rename posterior_probability2 pwp_s2_active_risk
+    rename posterior_probability3 pwp_s3_mainstream
+    rename posterior_probability4 pwp_s4_integrated
+
+    rename modal_share1 modal_s1_constrained
+    rename modal_share2 modal_s2_active_risk
+    rename modal_share3 modal_s3_mainstream
+    rename modal_share4 modal_s4_integrated
+
+
+    format pwp_* modal_* %9.3f
+
+    sort input_order
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx", ///
+        sheet("profile_summary", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 17.3 Final segment-centroid table
+*-------------------------------------------------------------------------------*/
+
+/*
+    The final centroid table profiles the segments using the original continuous
+    indices rather than the categorical indicators used to estimate the LCA.
+
+    It reports:
+
+        - Modal-assignment means and SDs
+        - Posterior-weighted means
+        - Standardized deviations from the full-sample mean
+        - Inclusion-oriented standardized deviations
+
+    For inclusion-oriented deviations, the following adverse indices are
+    reversed:
+
+        - IVS: socioeconomic vulnerability
+        - IEDF: fraud exposure and recourse harm
+        - IBPD: perceived barriers
+*/
+
+
+tempfile final_centroid_long
+tempfile final_centroid_metadata
+tempfile final_centroid_wide
+
+tempname finalcentroidpost
+
+
+postfile `finalcentroidpost' ///
+    byte index_order ///
+    str32 index_variable ///
+    str100 construct ///
+    str35 direction ///
+    byte reverse_for_report ///
+    byte segment ///
+    str80 segment_name ///
+    int modal_N ///
+    double modal_mean ///
+    double modal_sd ///
+    double sample_mean ///
+    double sample_sd ///
+    double modal_z_deviation ///
+    double modal_oriented_z_deviation ///
+    double posterior_weighted_N ///
+    double posterior_weighted_mean ///
+    double posterior_weighted_z_deviation ///
+    double posterior_weighted_oriented_z ///
+    using "`final_centroid_long'", replace
+
+
+local centroid_indices ///
+    ivs_score ///
+    iat_score ///
+    iadt_score ///
+    icdp_score ///
+    iaff_score ///
+    iuof_score_01 ///
+    oqi_score_01 ///
+    iurd_score_01 ///
+    ietr_score_01 ///
+    IPCS ///
+    IEDF ///
+    IAER ///
+    ICPF ///
+    IEH ///
+    IBPD
+
+
+local index_order = 0
+
+
+foreach v of local centroid_indices {
+
+    capture confirm variable `v'
+
+    if _rc {
+        display as error "Required centroid variable missing: `v'"
+        exit 111
+    }
+
+
+    local ++index_order
+
+    local construct : variable label `v'
+
+    if `"`construct'"' == "" {
+        local construct "`v'"
+    }
+
+
+    local direction "Higher values indicate stronger inclusion or capacity"
+    local reverse_for_report = 0
+
+
+    if inlist("`v'", "ivs_score", "IEDF", "IBPD") {
+
+        local direction "Higher values indicate greater constraint or risk"
+        local reverse_for_report = 1
+    }
+
+
+    quietly summarize `v' if !missing(`v')
+
+    local sample_mean = r(mean)
+    local sample_sd = r(sd)
+
+
+    foreach s in 1 2 3 4 {
+
+        quietly summarize `v' ///
+            if segment == `s' & !missing(`v')
+
+        local modal_N = r(N)
+        local modal_mean = r(mean)
+        local modal_sd = r(sd)
+
+
+        local modal_z = .
+
+        if `sample_sd' > 0 & `sample_sd' < . {
+            local modal_z = ///
+                (`modal_mean' - `sample_mean') / `sample_sd'
+        }
+
+
+        local modal_oriented_z = `modal_z'
+
+        if `reverse_for_report' == 1 {
+            local modal_oriented_z = -1 * `modal_z'
+        }
+
+
+        quietly summarize segment_post`s' ///
+            if !missing(`v'), meanonly
+
+        local posterior_N = r(sum)
+
+
+        tempvar __centroid_weight
+
+        quietly gen double `__centroid_weight' = ///
+            segment_post`s' * `v' ///
+            if !missing(`v')
+
+
+        quietly summarize `__centroid_weight', meanonly
+
+        local posterior_numerator = r(sum)
+
+        local posterior_mean = .
+
+        if `posterior_N' > 0 {
+            local posterior_mean = ///
+                `posterior_numerator' / `posterior_N'
+        }
+
+
+        local posterior_z = .
+
+        if `sample_sd' > 0 & `sample_sd' < . {
+            local posterior_z = ///
+                (`posterior_mean' - `sample_mean') / `sample_sd'
+        }
+
+
+        local posterior_oriented_z = `posterior_z'
+
+        if `reverse_for_report' == 1 {
+            local posterior_oriented_z = -1 * `posterior_z'
+        }
+
+
+        local segment_name "`segname`s''"
+
+
+        post `finalcentroidpost' ///
+            (`index_order') ///
+            (`"`v'"') ///
+            (`"`construct'"') ///
+            (`"`direction'"') ///
+            (`reverse_for_report') ///
+            (`s') ///
+            (`"`segment_name'"') ///
+            (`modal_N') ///
+            (`modal_mean') ///
+            (`modal_sd') ///
+            (`sample_mean') ///
+            (`sample_sd') ///
+            (`modal_z') ///
+            (`modal_oriented_z') ///
+            (`posterior_N') ///
+            (`posterior_mean') ///
+            (`posterior_z') ///
+            (`posterior_oriented_z')
+
+
+        drop `__centroid_weight'
+    }
+}
+
+
+postclose `finalcentroidpost'
+
+
+capture erase ///
+    "${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx"
+
+
+*===============================================================================*
+* 17.3.1 Export complete long-format centroid table
+*===============================================================================*/
+
+preserve
+
+    use "`final_centroid_long'", clear
+
+
+    format modal_mean modal_sd sample_mean sample_sd ///
+           modal_z_deviation modal_oriented_z_deviation ///
+           posterior_weighted_mean ///
+           posterior_weighted_z_deviation ///
+           posterior_weighted_oriented_z %10.3f
+
+    format posterior_weighted_N %10.2f
+
+
+    sort index_order segment
+
+
+    save ///
+        "${cluster_data}/CFI_DPI_final_segment_centroids_long.dta", ///
+        replace
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx", ///
+        sheet("centroids_long") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+*===============================================================================*
+* 17.3.2 Create one-row-per-index metadata dataset
+*===============================================================================*/
+
+preserve
+
+    use "`final_centroid_long'", clear
+
+
+    keep ///
+        index_order ///
+        index_variable ///
+        construct ///
+        direction ///
+        reverse_for_report ///
+        sample_mean ///
+        sample_sd
+
+
+    sort index_order
+
+    by index_order: keep if _n == 1
+
+    isid index_order
+
+
+    save "`final_centroid_metadata'", replace
+
+restore
+
+
+*===============================================================================*
+* 17.3.3 Create report-ready wide centroid table
+*===============================================================================*/
+
+preserve
+
+    use "`final_centroid_long'", clear
+
+
+    keep ///
+        index_order ///
+        segment ///
+        modal_N ///
+        modal_mean ///
+        modal_sd ///
+        modal_z_deviation ///
+        modal_oriented_z_deviation ///
+        posterior_weighted_N ///
+        posterior_weighted_mean ///
+        posterior_weighted_z_deviation ///
+        posterior_weighted_oriented_z
+
+
+    isid index_order segment
+
+
+    reshape wide ///
+        modal_N ///
+        modal_mean ///
+        modal_sd ///
+        modal_z_deviation ///
+        modal_oriented_z_deviation ///
+        posterior_weighted_N ///
+        posterior_weighted_mean ///
+        posterior_weighted_z_deviation ///
+        posterior_weighted_oriented_z, ///
+        i(index_order) ///
+        j(segment)
+
+
+    forvalues s = 1/4 {
+
+        rename modal_N`s' modalN_s`s'
+        rename modal_mean`s' mean_s`s'
+        rename modal_sd`s' sd_s`s'
+        rename modal_z_deviation`s' zdev_s`s'
+        rename modal_oriented_z_deviation`s' ozdev_s`s'
+
+        rename posterior_weighted_N`s' pwN_s`s'
+        rename posterior_weighted_mean`s' pwmean_s`s'
+        rename posterior_weighted_z_deviation`s' pwz_s`s'
+        rename posterior_weighted_oriented_z`s' pwoz_s`s'
+    }
+
+
+    merge 1:1 index_order ///
+        using "`final_centroid_metadata'", ///
+        assert(match) ///
+        nogen
+
+
+    format sample_mean sample_sd ///
+           mean_s* sd_s* zdev_s* ozdev_s* ///
+           pwmean_s* pwz_s* pwoz_s* %10.3f
+
+    format pwN_s* %10.2f
+
+
+    sort index_order
+
+
+    order ///
+        index_order ///
+        index_variable ///
+        construct ///
+        direction ///
+        reverse_for_report ///
+        sample_mean ///
+        sample_sd ///
+        modalN_s1 mean_s1 sd_s1 zdev_s1 ozdev_s1 ///
+        pwN_s1 pwmean_s1 pwz_s1 pwoz_s1 ///
+        modalN_s2 mean_s2 sd_s2 zdev_s2 ozdev_s2 ///
+        pwN_s2 pwmean_s2 pwz_s2 pwoz_s2 ///
+        modalN_s3 mean_s3 sd_s3 zdev_s3 ozdev_s3 ///
+        pwN_s3 pwmean_s3 pwz_s3 pwoz_s3 ///
+        modalN_s4 mean_s4 sd_s4 zdev_s4 ozdev_s4 ///
+        pwN_s4 pwmean_s4 pwz_s4 pwoz_s4
+
+
+    save "`final_centroid_wide'", replace
+
+    save ///
+        "${cluster_data}/CFI_DPI_final_segment_centroids_wide.dta", ///
+        replace
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx", ///
+        sheet("centroids_wide", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 17.3.4 Concise report-ready centroid table
+*===============================================================================*/
+
+preserve
+
+    use "`final_centroid_wide'", clear
+
+
+    keep ///
+        index_order ///
+        index_variable ///
+        construct ///
+        direction ///
+        sample_mean ///
+        sample_sd ///
+        pwmean_s1 pwoz_s1 ///
+        pwmean_s2 pwoz_s2 ///
+        pwmean_s3 pwoz_s3 ///
+        pwmean_s4 pwoz_s4
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx", ///
+        sheet("report_centroids", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 17.4 Final policy-interpretation typology
+*-------------------------------------------------------------------------------*/
+
+tempfile final_segment_summary
+tempfile final_policy_typology
+tempfile final_policy_merge
+
+
+*===============================================================================*
+* 17.4.1 Construct segment-size and classification summary
+*===============================================================================*/
+
+preserve
+
+    gen byte __one = 1
+
+
+    collapse ///
+        (sum) N = __one ///
+        (mean) ///
+            mean_assigned_posterior = segment_assigned_post ///
+            mean_posterior_margin = segment_posterior_margin ///
+            share_uncertain = segment_uncertain ///
+            share_medium_certainty = segment_medium_certainty ///
+            share_high_certainty = segment_high_certainty, ///
+        by(segment)
+
+
+    gen double class_pct = 100 * N / `final_N'
+
+    gen double model_marginal_probability = .
+
+    replace model_marginal_probability = scalar(model_prob_s1) if segment == 1
+    replace model_marginal_probability = scalar(model_prob_s2) if segment == 2
+    replace model_marginal_probability = scalar(model_prob_s3) if segment == 3
+    replace model_marginal_probability = scalar(model_prob_s4) if segment == 4
+
+
+    format class_pct %9.2f
+
+    format model_marginal_probability mean_assigned_posterior ///
+           mean_posterior_margin share_uncertain ///
+           share_medium_certainty share_high_certainty %9.3f
+
+
+    sort segment
+
+    save "`final_segment_summary'", replace
+
+restore
+
+
+*===============================================================================*
+* 17.4.2 Construct policy typology and intervention logic
+*===============================================================================*/
+
+preserve
+
+    use "`final_segment_summary'", clear
+
+
+    gen str80 policy_segment_name = ""
+    gen str40 policy_segment_short = ""
+
+    gen str244 defining_traits = ""
+    gen str244 core_constraint = ""
+    gen str244 main_intervention_lever = ""
+    gen str244 baseline_profile_evidence = ""
+    gen str244 adjusted_outcome_evidence = ""
+    gen str244 interpretive_caution = ""
+
+
+    replace policy_segment_name = ///
+        "`segname1'" ///
+        if segment == 1
+
+    replace policy_segment_name = ///
+        "`segname2'" ///
+        if segment == 2
+
+    replace policy_segment_name = ///
+        "`segname3'" ///
+        if segment == 3
+
+    replace policy_segment_name = ///
+        "`segname4'" ///
+        if segment == 4
+
+
+    replace policy_segment_short = "`segshort1'" if segment == 1
+    replace policy_segment_short = "`segshort2'" if segment == 2
+    replace policy_segment_short = "`segshort3'" if segment == 3
+    replace policy_segment_short = "`segshort4'" if segment == 4
+
+
+    * Segment 1
+    replace defining_traits = ///
+        "High vulnerability; weakest competence, access, operability, onboarding, and digital-remittance intensity; limited support and trust; frequently outside paid employment." ///
+        if segment == 1
+
+    replace core_constraint = ///
+        "Cumulative structural and capability constraints prevent nominal digital access from becoming usable and sustained financial participation." ///
+        if segment == 1
+
+    replace main_intervention_lever = ///
+        "Provide assisted and documentation-sensitive onboarding, foundational digital-financial coaching, connectivity support, and accessible complaint and recourse channels." ///
+        if segment == 1
+
+    replace baseline_profile_evidence = ///
+        "Outside paid employment raises predicted membership by 31.8 percentage points; each additional year in Colombia lowers membership by 2.7 points." ///
+        if segment == 1
+
+    replace adjusted_outcome_evidence = ///
+        "Versus Segment 3: IURD -0.193, formal remittance -23.6 pp, IUOF -0.278, OQI -0.251, and enabling environment -15.3 points after controls." ///
+        if segment == 1
+
+    replace interpretive_caution = ///
+        "Relatively low fraud harm partly reflects lower ecosystem exposure and should not be interpreted as evidence of stronger institutional protection." ///
+        if segment == 1
+
+
+    * Segment 2
+    replace defining_traits = ///
+        "High operability, formal remittance use, safe conduct, and autonomy, but weaker onboarding and trust alongside the greatest fraud and recourse harm." ///
+        if segment == 2
+
+    replace core_constraint = ///
+        "Active engagement with digital-remittance rails is not matched by reliable institutional protection, transparent onboarding, or effective recourse." ///
+        if segment == 2
+
+    replace main_intervention_lever = ///
+        "Strengthen fraud prevention, real-time alerts, fee clarity, rapid complaint resolution, and provider accountability for active remittance users." ///
+        if segment == 2
+
+    replace baseline_profile_evidence = ///
+        "Post-secondary education lowers predicted membership by 14.5 pp; being outside paid employment lowers it by 15.0 pp; other locations lower it by 9.3 pp." ///
+        if segment == 2
+
+    replace adjusted_outcome_evidence = ///
+        "Versus Segment 3: formal remittance +22.4 pp, IUOF +0.065, safe conduct +11.3 points, fraud/recourse harm +16.2, and trust climate -8.8 points." ///
+        if segment == 2
+
+    replace interpretive_caution = ///
+        "Strong safe conduct does not eliminate fraud exposure and cannot substitute for effective provider-level protection and recourse." ///
+        if segment == 2
+
+
+    * Segment 3
+    replace defining_traits = ///
+        "Largest segment with intermediate formal-digital engagement, relatively favorable onboarding and transactional experience, but incomplete protection and limited depth." ///
+        if segment == 3
+
+    replace core_constraint = ///
+        "Users have entered formal-digital systems but have not consistently progressed toward deeper, safer, and more strongly supported participation." ///
+        if segment == 3
+
+    replace main_intervention_lever = ///
+        "Use targeted product education, interoperability, behavioral nudges, and stronger recourse to move mainstream users from partial to durable inclusion." ///
+        if segment == 3
+
+    replace baseline_profile_evidence = ///
+        "More common outside Bogotá and Soacha by 12.9 pp; each additional year in Colombia raises predicted membership by 2.4 pp; no strong age gradient." ///
+        if segment == 3
+
+    replace adjusted_outcome_evidence = ///
+        "Reference segment in adjusted models; its broadly intermediate profile provides the benchmark against which the other three segments diverge." ///
+        if segment == 3
+
+    replace interpretive_caution = ///
+        "Near-average values should not be interpreted as full inclusion; this segment continues to face incomplete protection and uneven depth of use." ///
+        if segment == 3
+
+
+    * Segment 4
+    replace defining_traits = ///
+        "Highest competence, formal access, operability, onboarding quality, remittance intensity, enabling support, and protection; low harm and barriers." ///
+        if segment == 4
+
+    replace core_constraint = ///
+        "The principal challenge is sustaining these gains and making the successful pathway attainable for women without similar education or support." ///
+        if segment == 4
+
+    replace main_intervention_lever = ///
+        "Maintain interoperable low-friction services, portable identity and onboarding, advanced digital tools, and peer-learning pathways that diffuse successful practices." ///
+        if segment == 4
+
+    replace baseline_profile_evidence = ///
+        "Post-secondary education raises predicted membership by 15.5 pp; residence outside Bogotá and Soacha lowers it by 9.3 pp." ///
+        if segment == 4
+
+    replace adjusted_outcome_evidence = ///
+        "Versus Segment 3: IURD +0.167, formal remittance +26.1 pp, IUOF +0.178, OQI +0.121, enabling environment +18.9, and fraud harm -26.1 points." ///
+        if segment == 4
+
+    replace interpretive_caution = ///
+        "This is the smallest segment; its successful pathway should not be assumed to be automatically attainable or generalizable across migrant women." ///
+        if segment == 4
+
+
+    order ///
+        segment ///
+        policy_segment_name ///
+        policy_segment_short ///
+        N ///
+        class_pct ///
+        model_marginal_probability ///
+        mean_assigned_posterior ///
+        mean_posterior_margin ///
+        share_uncertain ///
+        share_medium_certainty ///
+        share_high_certainty ///
+        defining_traits ///
+        core_constraint ///
+        main_intervention_lever ///
+        baseline_profile_evidence ///
+        adjusted_outcome_evidence ///
+        interpretive_caution
+
+
+    sort segment
+
+    save "`final_policy_typology'", replace
+
+    save ///
+        "${cluster_data}/CFI_DPI_final_policy_typology.dta", ///
+        replace
+
+restore
+
+
+capture erase ///
+    "${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx"
+
+
+preserve
+
+    use "`final_policy_typology'", clear
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx", ///
+        sheet("policy_typology") ///
+        firstrow(variables) ///
+        replace
+
+restore
+
+
+preserve
+
+    use "`final_segment_summary'", clear
+
+
+    gen str80 segment_name = ""
+
+    replace segment_name = "`segname1'" if segment == 1
+    replace segment_name = "`segname2'" if segment == 2
+    replace segment_name = "`segname3'" if segment == 3
+    replace segment_name = "`segname4'" if segment == 4
+
+
+    order ///
+        segment ///
+        segment_name ///
+        N ///
+        class_pct ///
+        model_marginal_probability ///
+        mean_assigned_posterior ///
+        mean_posterior_margin ///
+        share_uncertain ///
+        share_medium_certainty ///
+        share_high_certainty
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx", ///
+        sheet("segment_summary", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*===============================================================================*
+* 17.4.3 Add final figure manifest
+*===============================================================================*/
+
+preserve
+
+    clear
+
+    set obs 5
+
+
+    gen str10 figure_id = ""
+    gen str100 figure_title = ""
+    gen str244 figure_file = ""
+    gen str244 recommended_use = ""
+
+
+    replace figure_id = "Figure C6" in 1
+    replace figure_title = ///
+        "Final class-profile probabilities" in 1
+    replace figure_file = ///
+        "${cluster_figures}/figC6_final_class_profile_probabilities.png" in 1
+    replace recommended_use = ///
+        "Primary visualization of the seven LCA class-defining probabilities." in 1
+
+
+    replace figure_id = "Figure C7" in 2
+    replace figure_title = ///
+        "Standardized continuous centroids" in 2
+    replace figure_file = ///
+        "${cluster_figures}/figC7_final_class_centroids_standardized.png" in 2
+    replace recommended_use = ///
+        "Broad comparison of segment profiles across the original continuous indices." in 2
+
+
+    replace figure_id = "Figure C8" in 3
+    replace figure_title = ///
+        "Final segment sizes" in 3
+    replace figure_file = ///
+        "${cluster_figures}/figC8_final_class_sizes.png" in 3
+    replace recommended_use = ///
+        "Introduction of the four-segment typology and each segment's sample share." in 3
+
+
+    replace figure_id = "Figure C9" in 4
+    replace figure_title = ///
+        "Posterior classification certainty" in 4
+    replace figure_file = ///
+        "${cluster_figures}/figC9_posterior_certainty.png" in 4
+    replace recommended_use = ///
+        "Methodological appendix or discussion of classification quality." in 4
+
+
+    replace figure_id = "Figure C10" in 5
+    replace figure_title = ///
+        "Core outcomes and mechanisms by segment" in 5
+    replace figure_file = ///
+        "${cluster_figures}/figC10_outcome_means_by_segment.png" in 5
+    replace recommended_use = ///
+        "Validation of segment differences across class-defining and external outcomes." in 5
+
+
+    export excel using ///
+        "${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx", ///
+        sheet("figure_manifest", replace) ///
+        firstrow(variables)
+
+restore
+
+
+*-------------------------------------------------------------------------------*
+* 17.5 Create enriched final analytical dataset
+*-------------------------------------------------------------------------------*/
+
+/*
+    Merge the policy typology onto the respondent-level dataset so every
+    respondent record contains:
+
+        - Raw LCA class
+        - Substantively ordered segment
+        - Posterior probabilities
+        - Assignment certainty
+        - Segment label
+        - Defining traits
+        - Core constraint
+        - Main intervention lever
+*/
+
+
+preserve
+
+    use "`final_policy_typology'", clear
+
+
+    keep ///
+        segment ///
+        policy_segment_name ///
+        policy_segment_short ///
+        defining_traits ///
+        core_constraint ///
+        main_intervention_lever ///
+        baseline_profile_evidence ///
+        adjusted_outcome_evidence ///
+        interpretive_caution
+
+
+    isid segment
+
+    save "`final_policy_merge'", replace
+
+restore
+
+
+capture drop ///
+    segment_name_export ///
+    policy_segment_name ///
+    policy_segment_short ///
+    defining_traits ///
+    core_constraint ///
+    main_intervention_lever ///
+    baseline_profile_evidence ///
+    adjusted_outcome_evidence ///
+    interpretive_caution
+
+
+merge m:1 segment ///
+    using "`final_policy_merge'", ///
+    assert(match) ///
+    nogen
+
+
+decode segment, gen(segment_name_export)
+
+
+label var segment_name_export ///
+    "Final substantive segment name"
+
+label var policy_segment_short ///
+    "Concise substantive segment name"
+
+label var segment_post1 ///
+    "Posterior probability: constrained low-intensity segment"
+
+label var segment_post2 ///
+    "Posterior probability: operationally active high-risk segment"
+
+label var segment_post3 ///
+    "Posterior probability: mainstream partial-inclusion segment"
+
+label var segment_post4 ///
+    "Posterior probability: integrated and protected segment"
+
+label var segment_assigned_post ///
+    "Posterior probability of assigned segment"
+
+label var segment_posterior_margin ///
+    "Posterior-probability margin between first and second choices"
+
+label var defining_traits ///
+    "Researcher-interpreted defining segment traits"
+
+label var core_constraint ///
+    "Primary constraint associated with segment"
+
+label var main_intervention_lever ///
+    "Primary policy or program intervention lever"
+
+
+order ///
+    KEY ///
+    segment ///
+    segment_name_export ///
+    policy_segment_short ///
+    raw_lca_class ///
+    lca_class ///
+    segment_post1 ///
+    segment_post2 ///
+    segment_post3 ///
+    segment_post4 ///
+    segment_assigned_post ///
+    segment_posterior_margin ///
+    segment_uncertain ///
+    segment_medium_certainty ///
+    segment_high_certainty ///
+    defining_traits ///
+    core_constraint ///
+    main_intervention_lever ///
+    baseline_profile_evidence ///
+    adjusted_outcome_evidence ///
+    interpretive_caution
+
+
+compress
+
+
+save ///
+    "${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta", ///
+    replace
+
+
+capture erase ///
+    "${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx"
+
+
+export excel using ///
+    "${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx", ///
+    sheet("final_segments") ///
+    firstrow(variables) ///
+    replace
+
+
+*-------------------------------------------------------------------------------*
+* 17.6 Final reproducibility validation
+*-------------------------------------------------------------------------------*/
+
+/*
+    Validate:
+
+        - Four final substantive segments exist
+        - Segment posterior probabilities sum to one
+        - Assigned posterior probability is the maximum posterior probability
+        - Final segment assignments contain no missing values
+*/
+
+
+assert inrange(segment, 1, 4)
+assert !missing(segment)
+assert !missing(segment_name_export)
+
+
+capture drop __posterior_sum
+capture drop __posterior_max
+
+
+egen double __posterior_sum = rowtotal( ///
+    segment_post1 ///
+    segment_post2 ///
+    segment_post3 ///
+    segment_post4 ///
+)
+
+
+egen double __posterior_max = rowmax( ///
+    segment_post1 ///
+    segment_post2 ///
+    segment_post3 ///
+    segment_post4 ///
+)
+
+
+assert abs(__posterior_sum - 1) < 0.00001
+
+assert abs(segment_assigned_post - __posterior_max) < 0.00001
+
+
+drop __posterior_sum __posterior_max
+
+
+quietly levelsof segment, local(final_segments)
+
+local number_final_segments : word count `final_segments'
+
+assert `number_final_segments' == 4
+
+
+tab segment, missing
+
+
+*-------------------------------------------------------------------------------*
+* 17.7 Confirm final report-ready files
+*-------------------------------------------------------------------------------*/
+
+capture program drop s17_confirm_output
+
+program define s17_confirm_output
+
+    syntax, PATH(string)
+
+    capture confirm file `"`path'"'
+
+    if _rc {
+
+        display as error ///
+            "Required final output was not created: `path'"
+
+        exit 601
+    }
+
+    display as result ///
+        "Confirmed final output: `path'"
+
+end
+
+
+s17_confirm_output, ///
+    path("${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx")
+
+s17_confirm_output, ///
+    path("${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx")
+
+s17_confirm_output, ///
+    path("${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx")
+
+s17_confirm_output, ///
+    path("${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx")
+
+s17_confirm_output, ///
+    path("${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta")
+
+s17_confirm_output, ///
+    path("${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx")
+
+
+*-------------------------------------------------------------------------------*
+* 17.8 Final console audit
+*-------------------------------------------------------------------------------*/
+
+display as text "------------------------------------------------------------"
+display as text "SECTION 17 COMPLETED: FINAL REPORT-READY EXPORTS"
+display as text "------------------------------------------------------------"
+
+display as text "Final analytical sample N = `final_N'"
+
+display as text "Final substantive segments = `number_final_segments'"
+
+display as text "Final tables created:"
+
+display as text ///
+    "1. ${cluster_tables}/Table_Cluster_1_Model_Selection.xlsx"
+
+display as text ///
+    "2. ${cluster_tables}/Table_Cluster_2_Class_Profiles.xlsx"
+
+display as text ///
+    "3. ${cluster_tables}/Table_Cluster_3_Segment_Centroids.xlsx"
+
+display as text ///
+    "4. ${cluster_tables}/Table_Cluster_4_Policy_Typology.xlsx"
+
+display as text "Final datasets created:"
+
+display as text ///
+    "5. ${cluster_data}/CFI_DPI_Data_with_Final_Segments.dta"
+
+display as text ///
+    "6. ${cluster_data}/CFI_DPI_Data_with_Final_Segments.xlsx"
+
+display as text "Supporting auditable datasets created:"
+
+display as text ///
+    "7. ${cluster_data}/CFI_DPI_final_model_selection.dta"
+
+display as text ///
+    "8. ${cluster_data}/CFI_DPI_final_class_profiles_long.dta"
+
+display as text ///
+    "9. ${cluster_data}/CFI_DPI_final_segment_centroids_long.dta"
+
+display as text ///
+    "10. ${cluster_data}/CFI_DPI_final_segment_centroids_wide.dta"
+
+display as text ///
+    "11. ${cluster_data}/CFI_DPI_final_policy_typology.dta"
+
+display as text "------------------------------------------------------------"
+display as text "FULL LCA SEGMENTATION WORKFLOW COMPLETED SUCCESSFULLY"
+display as text "------------------------------------------------------------"
+
+
+
+
 }
 
 
@@ -9159,4 +19307,14 @@ display as text "------------------------------------------------------------"
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
