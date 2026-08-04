@@ -696,7 +696,7 @@ def assemble(source: Path, output: Path) -> None:
     document.save(output)
 
 
-def write_manifest(output_docx: Path) -> None:
+def write_manifest() -> None:
     manifest_path = APPENDIX_ROOT / "appendix_manifest.csv"
     rows = []
     for path in sorted(APPENDIX_ROOT.rglob("*")):
@@ -706,9 +706,6 @@ def write_manifest(output_docx: Path) -> None:
         appendix = relative.parts[0][0] if relative.parts and re.match(r"^[A-G] ", relative.parts[0]) else "Root"
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         rows.append([appendix, path.suffix.lower().lstrip("."), str(relative).replace("\\", "/"), path.stem, path.stat().st_size, digest])
-    if output_docx.exists():
-        digest = hashlib.sha256(output_docx.read_bytes()).hexdigest()
-        rows.append(["Integrated manuscript", "docx", output_docx.name, output_docx.stem, output_docx.stat().st_size, digest])
     with manifest_path.open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.writer(stream)
         writer.writerow(["appendix", "file_type", "file", "title", "bytes", "sha256"])
@@ -718,7 +715,7 @@ def write_manifest(output_docx: Path) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path)
-    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--output", type=Path)
     parser.add_argument("--manifest-only", action="store_true")
     return parser.parse_args()
 
@@ -726,8 +723,8 @@ def parse_args() -> argparse.Namespace:
 if __name__ == "__main__":
     arguments = parse_args()
     if not arguments.manifest_only:
-        if arguments.source is None:
-            raise SystemExit("--source is required unless --manifest-only is used")
+        if arguments.source is None or arguments.output is None:
+            raise SystemExit("--source and --output are required unless --manifest-only is used")
         assemble(arguments.source, arguments.output)
-    write_manifest(arguments.output)
-    print(arguments.output)
+    write_manifest()
+    print(arguments.output if arguments.output is not None else APPENDIX_ROOT / "appendix_manifest.csv")

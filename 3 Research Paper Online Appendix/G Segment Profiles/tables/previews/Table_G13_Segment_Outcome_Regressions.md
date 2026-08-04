@@ -1,0 +1,28 @@
+# Segment-outcome regressions
+
+This is a display-only rendering of [the authoritative Stata table export](../Table_G13_Segment_Outcome_Regressions.txt).
+
+```text
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)
+VARIABLES	LABELS	Digital remittance intensity	Formal remittance: AMEs	Financial operability	Onboarding quality	Transactional experience	Prevention and safe conduct	Fraud exposure and recourse harm	Financial autonomy	Trust and norms climate	Enabling environment	Perceived barriers
+												
+1.segment	Final substantively ordered migrant-women segment = 1, Structurally constrained low-intensity users	-0.193***	-0.236***	-0.278***	-0.251***	-0.124***	-23.845***	-10.606***	-4.360**	-9.841***	-15.299***	12.762***
+		(0.026)	(0.064)	(0.016)	(0.021)	(0.021)	(2.865)	(2.899)	(2.020)	(2.328)	(2.678)	(2.416)
+2.segment	Final substantively ordered migrant-women segment = 2, Operationally active but high-risk remittance users	0.028	0.224***	0.065***	-0.068***	-0.094***	11.347***	16.174***	1.797	-8.830***	1.333	4.129
+		(0.020)	(0.062)	(0.012)	(0.014)	(0.016)	(2.200)	(2.866)	(1.866)	(2.545)	(2.729)	(2.584)
+4.segment	Final substantively ordered migrant-women segment = 4, Integrated and protected digital remittance users	0.167***	0.261***	0.178***	0.121***	0.060***	11.361***	-26.140***	2.816*	1.224	18.925***	-11.925***
+		(0.026)	(0.070)	(0.012)	(0.014)	(0.017)	(2.079)	(2.829)	(1.567)	(2.556)	(4.351)	(4.497)
+Constant	Constant	0.572***		0.729***	0.765***	0.716***	79.467***	21.795***	95.035***	65.361***	43.756***	59.426***
+		(0.030)		(0.017)	(0.025)	(0.020)	(3.016)	(3.639)	(2.918)	(3.061)	(3.076)	(2.952)
+												
+Observations		423	402	423	423	423	423	423	423	423	423	423
+R-squared		0.323		0.688	0.430	0.202	0.400	0.256	0.094	0.160	0.203	0.183
+Model		OLS	Logit average marginal effects	OLS	OLS	OLS	OLS	OLS	OLS	OLS	OLS	OLS
+Base segment		Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion
+Baseline controls		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Robust standard errors		Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes
+Class-defining outcome		Yes	No	Yes	Yes	No	No	Yes	No	No	No	No
+Joint segment p-value		0	1.86e-07	0	0	0	0	0	0.0318	8.71e-06	0	1.28e-08
+Robust standard errors in parentheses												
+*** p<0.01, ** p<0.05, * p<0.1
+```

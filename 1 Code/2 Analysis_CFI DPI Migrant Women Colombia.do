@@ -2286,7 +2286,7 @@ post `post_integrity' ///
     (`N_total') ///
     (`pct_total') ///
     ("OK") ///
-    ("`loaded_path'")
+    ("Configured coded analytical dataset; see the project setup and data availability documentation.")
 
 post `post_integrity' ///
     ("Sample size") ///
@@ -18947,7 +18947,7 @@ preserve
     replace figure_title = ///
         "Final class-profile probabilities" in 1
     replace figure_file = ///
-        "${cluster_figures}/figC6_final_class_profile_probabilities.png" in 1
+        "3 Research Paper Online Appendix/G Segment Profiles/figures/Figure_G1_Class_Profile_Probabilities.png" in 1
     replace recommended_use = ///
         "Primary visualization of the seven LCA class-defining probabilities." in 1
 
@@ -18956,7 +18956,7 @@ preserve
     replace figure_title = ///
         "Standardized continuous centroids" in 2
     replace figure_file = ///
-        "${cluster_figures}/figC7_final_class_centroids_standardized.png" in 2
+        "3 Research Paper Online Appendix/G Segment Profiles/figures/Figure_G2_Standardized_Centroids.png" in 2
     replace recommended_use = ///
         "Broad comparison of segment profiles across the original continuous indices." in 2
 
@@ -18965,7 +18965,7 @@ preserve
     replace figure_title = ///
         "Final segment sizes" in 3
     replace figure_file = ///
-        "${cluster_figures}/figC8_final_class_sizes.png" in 3
+        "3 Research Paper Online Appendix/G Segment Profiles/figures/Figure_G3_Segment_Sizes.png" in 3
     replace recommended_use = ///
         "Introduction of the four-segment typology and each segment's sample share." in 3
 
@@ -18974,7 +18974,7 @@ preserve
     replace figure_title = ///
         "Posterior classification certainty" in 4
     replace figure_file = ///
-        "${cluster_figures}/figC9_posterior_certainty.png" in 4
+        "3 Research Paper Online Appendix/G Segment Profiles/figures/Figure_G5_Posterior_Certainty_by_Segment.png" in 4
     replace recommended_use = ///
         "Methodological appendix or discussion of classification quality." in 4
 
@@ -18983,7 +18983,7 @@ preserve
     replace figure_title = ///
         "Core outcomes and mechanisms by segment" in 5
     replace figure_file = ///
-        "${cluster_figures}/figC10_outcome_means_by_segment.png" in 5
+        "3 Research Paper Online Appendix/G Segment Profiles/figures/Figure_G6_Class_Defining_Outcomes.png" in 5
     replace recommended_use = ///
         "Validation of segment differences across class-defining and external outcomes." in 5
 
@@ -19394,10 +19394,8 @@ program define appendix_copy
     }
 end
 
-* Research instrument.
-appendix_copy, ///
-    source("${appendix_root}/cfi_dpi_encuesta_cuantitativa_printable.html") ///
-    destination("${appendix_a}/Appendix_A1_Quantitative_Survey_Questionnaire.html")
+* The quantitative survey instrument is a static documentation artifact stored
+* directly in Appendix A; it is not generated or copied by the analysis code.
 
 * Combined index diagnostics used in Appendix C.
 appendix_copy, ///

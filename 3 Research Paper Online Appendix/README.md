@@ -1,40 +1,33 @@
-# Quantitative Online Appendix
+# Quantitative online appendix
 
-This directory is the public, aggregate-output appendix for the quantitative component of *Digital bridges for financial inclusion: DPI in migrant women empowerment in Colombia*.
+This directory is the public quantitative supplement to *Digital bridges for financial inclusion: DPI in migrant women empowerment in Colombia*. The manuscript retains only a short appendix roadmap; the complete quantitative exhibits are stored here.
 
-The package documents the analysis exactly as it is currently implemented. It does not revise any index, regression, interaction, latent class model, posterior assignment, class label, or substantive estimate.
+The package documents the analysis exactly as implemented. It does not revise any index, regression, interaction, latent class model, posterior assignment, class label, or substantive estimate.
 
-## Contents
+## Browse the appendix
 
-| Appendix | Directory | Contents |
+| Appendix | Online materials | Contents |
 |---|---|---|
-| A | `A Research Instrument/` | Printable quantitative survey instrument |
-| C | `C Variable Construction/` | Current index architecture and item mapping; index summary statistics, correlation matrix, distribution plots, and correlation heatmap |
-| D | `D Descriptive Evidence/` | Extended categorical and multiple-response tables plus all established descriptive figures |
-| E | `E Multivariate Regressions/` | Existing regression, interaction, and supplementary-item tables and figures |
-| F | `F LCA Diagnostics/` | Existing sample, indicator, recoding, model-selection, fit, classification-certainty, robustness, response-pattern, and class-profile diagnostics |
-| G | `G Segment Profiles/` | Existing class mapping, segment size/certainty, conditional-response, centroid, demographic, financial-behavior, risk/autonomy, outcome, multinomial, and policy-typology outputs |
+| Appendix A.1 | [Quantitative research instrument](A%20Research%20Instrument/README.md) | The complete quantitative survey questionnaire administered through SurveyCTO/CATI, retained as a printable HTML instrument. |
+| Appendix C | [Quantitative variable construction and index architecture](C%20Variable%20Construction/README.md) | Index definitions, item-to-index mapping, summary statistics, correlations, and distribution diagnostics. |
+| Appendix D | [Quantitative descriptive evidence](D%20Descriptive%20Evidence/README.md) | Extended descriptive tables and the full set of established descriptive figures. |
+| Appendix E | [Multivariate regression analysis](E%20Multivariate%20Regressions/README.md) | Complete regression tables, average marginal effects, coefficient plots, and interaction figures. |
+| Appendix F | [Latent class analysis diagnostics and model selection](F%20LCA%20Diagnostics/README.md) | Sample checks, recoding rules, feature sets, model selection, fit statistics, response patterns, and classification diagnostics. |
+| Appendix G | [Final LCA segment profiles and post-LCA validation](G%20Segment%20Profiles/README.md) | Class labels, segment profiles, posterior certainty, multinomial models, outcome validation, and policy typology outputs. |
 
-Each analytical appendix separates `tables/` and `figures/`. File names begin with the appendix letter where a stable publication label is required. The original descriptive and diagnostic file names are retained where they already encode the analytical workflow.
+Each analytical directory contains a formatted table index, GitHub-readable table previews, a complete figure gallery, and the original downloadable source files.
 
-## Reproduction workflow
+## Reproduction boundary
 
-1. Configure the repository globals and run the established data-preparation and analysis workflow in Stata.
-2. Run Section 18, `ONLINE APPENDIX EXPORTS`, in `1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do`.
-3. Build the integrated manuscript with:
-
-   ```text
-   python "3 Research Paper Online Appendix/code/build_quantitative_appendices.py" --source "PATH/TO/manuscript.docx" --output "PATH/TO/manuscript - Quantitative Appendices Integrated.docx"
-   ```
-
-Section 18 copies the frozen publication outputs and creates only the aggregate Appendix C and D tables that require Stata. `Table_C0_Current_Index_Architecture.xlsx` is an editorial documentation table assembled from the current data-preparation code; it is intentionally not a new statistical estimation step.
-
-The Word builder inserts Appendices C-G before the existing qualitative appendices, embeds the appendix tables and figures, applies consistent captions and table formatting, and writes `appendix_manifest.csv` with SHA-256 checksums for the public appendix files.
+- Tables and figures that report quantitative data, models, marginal effects, interactions, LCA diagnostics, or segment validation are produced by [the Stata analysis do-file](../1%20Code/2%20Analysis_CFI%20DPI%20Migrant%20Women%20Colombia.do). Section 18 packages the aggregate outputs into these stable appendix directories.
+- The quantitative questionnaire and the current index-architecture workbook are static documentation artifacts. They are maintained manually because they describe the instrument and implemented scoring rules rather than report newly estimated results.
+- Markdown previews and directory READMEs are presentation mirrors for GitHub. The original CSV, TXT, XLSX, HTML, and PNG files remain authoritative.
 
 ## Public-release boundary
 
-The appendix contains aggregate tables, figures, model summaries, and the research instrument only. It intentionally excludes respondent-level datasets, record-level predictions, direct identifiers, temporary files, and analysis logs.
+The online appendix contains only aggregate tables, figures, model summaries, and the research instrument. It excludes respondent-level datasets, record-level predictions, direct identifiers, temporary files, and analysis logs.
 
-## Files that should not be edited manually
+## File verification
 
-Stata-generated CSV files, copied regression/LCA outputs, figures, and `appendix_manifest.csv` should be regenerated from the code. The integrated Word manuscript should be rebuilt with `code/build_quantitative_appendices.py` after any appendix-output change.
+- [Artifact manifest with file sizes and SHA-256 checksums](appendix_manifest.csv)
+- [Artifact-level provenance and reproduction map](appendix_provenance.csv)

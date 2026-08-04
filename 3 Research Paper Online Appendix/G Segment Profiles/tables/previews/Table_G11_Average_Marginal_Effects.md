@@ -1,0 +1,29 @@
+# Average marginal effects
+
+This is a display-only rendering of [the authoritative Stata table export](../Table_G11_Average_Marginal_Effects.txt).
+
+```text
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	Pr: constrained low-intensity	Pr: operationally active high-risk	Pr: mainstream partial inclusion	Pr: integrated and protected
+					
+1.s15_age3	Age category used in segment regression overlays = 1, 18-29	-0.072	0.032	0.025	0.015
+		(0.052)	(0.039)	(0.063)	(0.035)
+3.s15_age3	Age category used in segment regression overlays = 3, 45 or older	0.032	0.016	-0.063	0.015
+		(0.047)	(0.039)	(0.055)	(0.032)
+years_in_col	Años viviendo en el país	-0.027**	-0.002	0.024**	0.005
+		(0.013)	(0.004)	(0.010)	(0.003)
+1.s15_educ2	Post-secondary education = 1, Technical or university education	-0.065	-0.145***	0.056	0.155***
+		(0.042)	(0.027)	(0.053)	(0.036)
+2.s15_occ3	Employment-position category = 2, Employee or paid domestic worker	0.013	-0.009	-0.059	0.055
+		(0.045)	(0.044)	(0.058)	(0.036)
+3.s15_occ3	Employment-position category = 3, Outside paid employment or other	0.318***	-0.150***	-0.104*	-0.065**
+		(0.059)	(0.029)	(0.062)	(0.028)
+1.s15_city2	Geographic group used in regression overlays = 1, Other study locations	0.058	-0.093***	0.129**	-0.093***
+		(0.047)	(0.030)	(0.054)	(0.024)
+					
+Observations		423	423	423	423
+Model		Multinomial-logit AMEs	Multinomial-logit AMEs	Multinomial-logit AMEs	Multinomial-logit AMEs
+Robust standard errors		Yes	Yes	Yes	Yes
+Standard errors in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1
+```

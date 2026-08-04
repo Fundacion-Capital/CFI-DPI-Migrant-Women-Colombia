@@ -1,0 +1,46 @@
+# Transactional experience in remittances and payments (IETR)
+
+This is a display-only rendering of [the authoritative Stata table export](../Table_E4_IETR.txt).
+
+```text
+	(1)	(2)	(3)	(4)
+VARIABLES	Model A	Model B	Model C	Model D
+				
+2.age_cat	0.017	0.018	0.013	0.010
+	(0.018)	(0.019)	(0.016)	(0.016)
+3.age_cat	0.037*	0.048**	0.034*	0.021
+	(0.020)	(0.020)	(0.019)	(0.018)
+4.age_cat	0.024	0.056*	0.016	-0.009
+	(0.034)	(0.034)	(0.035)	(0.034)
+2.q3	0.065***	0.068***	0.064***	0.060***
+	(0.022)	(0.023)	(0.022)	(0.022)
+3.q3	0.028	0.017	0.030	0.043*
+	(0.022)	(0.023)	(0.022)	(0.023)
+4.q3	-0.034	-0.017	0.013	0.015
+	(0.028)	(0.029)	(0.026)	(0.025)
+ivs_score		-0.030	-0.016	-0.008
+		(0.050)	(0.047)	(0.047)
+iat_score		0.098	0.058	0.049
+		(0.060)	(0.058)	(0.057)
+iadt_score		0.117**	0.062	0.041
+		(0.045)	(0.041)	(0.043)
+icdp_score		0.003	-0.091**	-0.089*
+		(0.055)	(0.046)	(0.046)
+iaff_score			0.025	0.030
+			(0.032)	(0.032)
+oqi_score_01			0.337***	0.309***
+			(0.055)	(0.055)
+IEDF				-0.000
+				(0.000)
+IEH				0.001***
+				(0.000)
+Constant	0.699***	0.542***	0.418***	0.424***
+	(0.015)	(0.067)	(0.071)	(0.073)
+				
+Observations	423	423	423	423
+R-squared	0.037	0.087	0.221	0.243
+City FE	Yes	Yes	Yes	Yes
+Robust SE	Yes	Yes	Yes	Yes
+Robust standard errors in parentheses				
+*** p<0.01, ** p<0.05, * p<0.1
+```
