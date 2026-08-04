@@ -36,7 +36,7 @@
 **#		1. Define paths				*
 *-----------------------------------*
 * check what your username is in Stata by typing "di c(username)"
-else if "`c(username)'" == "jzava" { // Jorge's personal laptop
+if "`c(username)'" == "jzava" { // Jorge's personal laptop
     global dropbox 	"C:\Users\jzava\Dropbox (Personal)\Research & Consulting\1 Research\DPI Inclusion Migrant Women Colombia"
 	global git 		"C:\Users\jzava\Documents\GitHub\CFI-DPI-Migrant-Women-Colombia"
 	local os        "windows"

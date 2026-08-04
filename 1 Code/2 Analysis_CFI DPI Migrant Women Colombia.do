@@ -19318,3 +19318,333 @@ display as text "------------------------------------------------------------"
 
 
 
+/*===============================================================================
+18. ONLINE APPENDIX EXPORTS
+
+Purpose:
+    Organize the already-estimated quantitative results into the public online
+    appendix and create aggregate descriptive/index tables. This section does
+    not reconstruct or modify any index, regression, interaction, LCA model,
+    posterior assignment, or segment definition.
+
+Data disclosure rule:
+    Only aggregate tables and publication figures are exported. No respondent-
+    level dataset is copied into the online appendix.
+===============================================================================*/
+
+*-------------------------------------------------------------------------------*
+* 18.1 Portable output paths and appendix directories
+*-------------------------------------------------------------------------------*
+
+if `"${git}"' == "" {
+    if `"`c(username)'"' == "jzava" {
+        global git "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia"
+    }
+    else {
+        display as error "Define global git before running Section 18."
+        exit 198
+    }
+}
+
+if `"${output_dir}"' == "" {
+    global output_dir "${git}/2 Output"
+}
+
+global appendix_root       "${git}/3 Research Paper Online Appendix"
+global appendix_a          "${appendix_root}/A Research Instrument"
+global appendix_c          "${appendix_root}/C Variable Construction"
+global appendix_c_tables   "${appendix_c}/tables"
+global appendix_c_figures  "${appendix_c}/figures"
+global appendix_d          "${appendix_root}/D Descriptive Evidence"
+global appendix_d_tables   "${appendix_d}/tables"
+global appendix_d_figures  "${appendix_d}/figures"
+global appendix_e          "${appendix_root}/E Multivariate Regressions"
+global appendix_e_tables   "${appendix_e}/tables"
+global appendix_e_figures  "${appendix_e}/figures"
+global appendix_f          "${appendix_root}/F LCA Diagnostics"
+global appendix_f_tables   "${appendix_f}/tables"
+global appendix_f_figures  "${appendix_f}/figures"
+global appendix_g          "${appendix_root}/G Segment Profiles"
+global appendix_g_tables   "${appendix_g}/tables"
+global appendix_g_figures  "${appendix_g}/figures"
+
+foreach folder in ///
+    "${appendix_a}" ///
+    "${appendix_c}" "${appendix_c_tables}" "${appendix_c_figures}" ///
+    "${appendix_d}" "${appendix_d_tables}" "${appendix_d_figures}" ///
+    "${appendix_e}" "${appendix_e_tables}" "${appendix_e_figures}" ///
+    "${appendix_f}" "${appendix_f_tables}" "${appendix_f_figures}" ///
+    "${appendix_g}" "${appendix_g_tables}" "${appendix_g_figures}" {
+    capture mkdir `"`folder'"'
+}
+
+*-------------------------------------------------------------------------------*
+* 18.2 Copy existing publication outputs into stable appendix locations
+*-------------------------------------------------------------------------------*
+
+capture program drop appendix_copy
+program define appendix_copy
+    syntax, Source(string) Destination(string)
+    capture confirm file `"`source'"'
+    if !_rc {
+        copy `"`source'"' `"`destination'"', replace
+    }
+    else {
+        display as error "Appendix source not found: `source'"
+    }
+end
+
+* Research instrument.
+appendix_copy, ///
+    source("${appendix_root}/cfi_dpi_encuesta_cuantitativa_printable.html") ///
+    destination("${appendix_a}/Appendix_A1_Quantitative_Survey_Questionnaire.html")
+
+* Combined index diagnostics used in Appendix C.
+appendix_copy, ///
+    source("${output_dir}/cluster/figures/figC1_index_distributions.png") ///
+    destination("${appendix_c_figures}/Figure_C1_Index_Distributions.png")
+appendix_copy, ///
+    source("${output_dir}/cluster/figures/figC2_correlation_heatmap.png") ///
+    destination("${appendix_c_figures}/Figure_C2_Index_Correlation_Heatmap.png")
+
+* Descriptive figures: preserve the established figure names and numbering.
+local descriptive_figures : dir "${output_dir}" files "fig*.png"
+foreach file of local descriptive_figures {
+    appendix_copy, ///
+        source("${output_dir}/`file'") ///
+        destination("${appendix_d_figures}/`file'")
+}
+
+* Regression figures.
+local regression_figures : dir "${output_dir}/regression/figures" files "*.png"
+foreach file of local regression_figures {
+    appendix_copy, ///
+        source("${output_dir}/regression/figures/`file'") ///
+        destination("${appendix_e_figures}/`file'")
+}
+
+* Regression tables with appendix-specific labels.
+local reg_source "${output_dir}/regression/tables"
+appendix_copy, source("`reg_source'/Table_F1_IURD.txt")             destination("${appendix_e_tables}/Table_E1_IURD.txt")
+appendix_copy, source("`reg_source'/Table_F1_FormalRemittance.txt") destination("${appendix_e_tables}/Table_E2_Formal_Remittance.txt")
+appendix_copy, source("`reg_source'/Table_F1_IUOF.txt")             destination("${appendix_e_tables}/Table_E3_IUOF.txt")
+appendix_copy, source("`reg_source'/Table_F2_IETR.txt")             destination("${appendix_e_tables}/Table_E4_IETR.txt")
+appendix_copy, source("`reg_source'/Table_F2_OQI.txt")              destination("${appendix_e_tables}/Table_E5_OQI.txt")
+appendix_copy, source("`reg_source'/Table_F3_IPCS.txt")             destination("${appendix_e_tables}/Table_E6_IPCS.txt")
+appendix_copy, source("`reg_source'/Table_F3_IEDF.txt")             destination("${appendix_e_tables}/Table_E7_IEDF.txt")
+appendix_copy, source("`reg_source'/Table_F4_IAER.txt")             destination("${appendix_e_tables}/Table_E8_IAER.txt")
+appendix_copy, source("`reg_source'/Table_F4_ICPF.txt")             destination("${appendix_e_tables}/Table_E9_ICPF.txt")
+appendix_copy, source("`reg_source'/Table_Interactions.txt")        destination("${appendix_e_tables}/Table_E10_Interactions.txt")
+appendix_copy, source("`reg_source'/Table_Supplementary_Items.txt") destination("${appendix_e_tables}/Table_E11_Supplementary_Items.txt")
+
+* LCA diagnostics and model-selection tables.
+local cluster_tables "${output_dir}/cluster/tables"
+appendix_copy, source("`cluster_tables'/Table_C0_sample_integrity.xlsx")                    destination("${appendix_f_tables}/Table_F1_Sample_Integrity.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C1_variable_inventory.xlsx")                  destination("${appendix_f_tables}/Table_F2_Indicator_Inventory.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C2_missingness_unique_values.xlsx")           destination("${appendix_f_tables}/Table_F3_Missingness_and_Unique_Values.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C3_category_distributions.xlsx")              destination("${appendix_f_tables}/Table_F4_Category_Distributions.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C4_pairwise_associations.xlsx")               destination("${appendix_f_tables}/Table_F5_Pairwise_Associations.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C5_LCA_variable_recoding.xlsx")               destination("${appendix_f_tables}/Table_F6_LCA_Recoding.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C6_LCA_feature_sets.xlsx")                    destination("${appendix_f_tables}/Table_F7_Feature_Sets.xlsx")
+appendix_copy, source("`cluster_tables'/Table_Cluster_1_Model_Selection.xlsx")              destination("${appendix_f_tables}/Table_F8_Model_Selection.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C7_final_lca_fit.xlsx")                       destination("${appendix_f_tables}/Table_F9_Final_LCA_Fit.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C8_posterior_certainty.xlsx")                 destination("${appendix_f_tables}/Table_F10_Posterior_Certainty.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C10_minimal_LCA_response_patterns.xlsx")      destination("${appendix_f_tables}/Table_F11_Minimal_Response_Patterns.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C11_minimal_LCA_fit_summary.xlsx")            destination("${appendix_f_tables}/Table_F12_Minimal_Fit_Summary.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C12_LCA_class_profiles.xlsx")                 destination("${appendix_f_tables}/Table_F13_Minimal_Class_Profiles.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C14_hybrid_variable_distribution_diagnostics.xlsx") destination("${appendix_f_tables}/Table_F14_Hybrid_Distribution_Diagnostics.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C15_hybrid_category_distributions.xlsx")      destination("${appendix_f_tables}/Table_F15_Hybrid_Category_Distributions.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C16_hybrid_LCA_response_patterns.xlsx")       destination("${appendix_f_tables}/Table_F16_Hybrid_Response_Patterns.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C17_hybrid_LCA_fit_summary.xlsx")             destination("${appendix_f_tables}/Table_F17_Hybrid_Fit_Summary.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C18_hybrid_LCA_class_profiles.xlsx")          destination("${appendix_f_tables}/Table_F18_Hybrid_Class_Profiles.xlsx")
+
+* All LCA diagnostic figures are retained online; final profile figures are
+* additionally copied into Appendix G under publication-specific labels.
+local cluster_figures : dir "${output_dir}/cluster/figures" files "*.png"
+foreach file of local cluster_figures {
+    appendix_copy, ///
+        source("${output_dir}/cluster/figures/`file'") ///
+        destination("${appendix_f_figures}/`file'")
+}
+
+* Final segment profile and post-LCA tables.
+appendix_copy, source("`cluster_tables'/Table_C9_final_class_mapping_and_labels.xlsx")       destination("${appendix_g_tables}/Table_G1_Class_Mapping_and_Labels.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C9_conditional_response_probabilities.xlsx") destination("${appendix_g_tables}/Table_G2_Conditional_Response_Probabilities.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C10_segment_size_and_certainty.xlsx")         destination("${appendix_g_tables}/Table_G3_Segment_Size_and_Certainty.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C10_class_centroids_continuous_indices.xlsx") destination("${appendix_g_tables}/Table_G4_Continuous_Index_Centroids.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C11_signature_behaviors_by_class.xlsx")       destination("${appendix_g_tables}/Table_G5_Signature_Behaviors.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C12_demographic_profile_by_segment.xlsx")     destination("${appendix_g_tables}/Table_G6_Demographic_Profile.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C13_financial_behavior_profile_by_segment.xlsx") destination("${appendix_g_tables}/Table_G7_Financial_Behavior_Profile.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C14_risk_autonomy_profile_by_segment.xlsx")   destination("${appendix_g_tables}/Table_G8_Risk_Autonomy_and_Support.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C15_core_outcomes_by_segment.xlsx")           destination("${appendix_g_tables}/Table_G9_Core_Outcomes.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C16_multinomial_predictors_segment_membership.txt") destination("${appendix_g_tables}/Table_G10_Multinomial_Predictors.txt")
+appendix_copy, source("`cluster_tables'/Table_C16_multinomial_average_marginal_effects.txt") destination("${appendix_g_tables}/Table_G11_Average_Marginal_Effects.txt")
+appendix_copy, source("`cluster_tables'/Table_C16_multinomial_joint_tests.xlsx")            destination("${appendix_g_tables}/Table_G12_Multinomial_Joint_Tests.xlsx")
+appendix_copy, source("`cluster_tables'/Table_C17_segment_outcome_regressions.txt")         destination("${appendix_g_tables}/Table_G13_Segment_Outcome_Regressions.txt")
+appendix_copy, source("`cluster_tables'/Table_C17_segment_outcome_joint_tests.xlsx")        destination("${appendix_g_tables}/Table_G14_Segment_Outcome_Joint_Tests.xlsx")
+appendix_copy, source("`cluster_tables'/Table_Cluster_2_Class_Profiles.xlsx")               destination("${appendix_g_tables}/Table_G15_Full_Class_Profiles.xlsx")
+appendix_copy, source("`cluster_tables'/Table_Cluster_3_Segment_Centroids.xlsx")            destination("${appendix_g_tables}/Table_G16_Segment_Centroids.xlsx")
+appendix_copy, source("`cluster_tables'/Table_Cluster_4_Policy_Typology.xlsx")              destination("${appendix_g_tables}/Table_G17_Policy_Typology.xlsx")
+
+appendix_copy, source("${output_dir}/cluster/figures/figC6_final_class_profile_probabilities.png") destination("${appendix_g_figures}/Figure_G1_Class_Profile_Probabilities.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC7_final_class_centroids_standardized.png") destination("${appendix_g_figures}/Figure_G2_Standardized_Centroids.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC8_final_class_sizes.png") destination("${appendix_g_figures}/Figure_G3_Segment_Sizes.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC9a_posterior_probability_distribution.png") destination("${appendix_g_figures}/Figure_G4_Posterior_Probability_Distribution.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC9b_posterior_certainty_by_segment.png") destination("${appendix_g_figures}/Figure_G5_Posterior_Certainty_by_Segment.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC10a_class_defining_outcomes.png") destination("${appendix_g_figures}/Figure_G6_Class_Defining_Outcomes.png")
+appendix_copy, source("${output_dir}/cluster/figures/figC10b_external_outcomes_mechanisms.png") destination("${appendix_g_figures}/Figure_G7_Auxiliary_Outcomes_and_Mechanisms.png")
+
+*-------------------------------------------------------------------------------*
+* 18.3 Aggregate index and descriptive tables
+*-------------------------------------------------------------------------------*
+
+use "${output_dir}/cluster/data/CFI_DPI_Data_with_Final_Segments.dta", clear
+
+local appendix_indices ///
+    ivs_score iat_score iadt_score icdp_score iaff_score ///
+    iuof_score_01 oqi_score_01 iurd_score_01 ietr_score_01 ///
+    IPCS IEDF IAER ICPF IEH IBPD
+
+tempname summary_handle
+tempfile appendix_summary
+postfile `summary_handle' ///
+    str8 index str100 index_label ///
+    double n mean sd min p25 median p75 max ///
+    using `appendix_summary', replace
+
+foreach variable of local appendix_indices {
+    quietly summarize `variable', detail
+    local variable_label : variable label `variable'
+    post `summary_handle' ///
+        ("`variable'") (`"`variable_label'"') ///
+        (r(N)) (r(mean)) (r(sd)) (r(min)) ///
+        (r(p25)) (r(p50)) (r(p75)) (r(max))
+}
+postclose `summary_handle'
+
+preserve
+use `appendix_summary', clear
+format mean sd min p25 median p75 max %9.3f
+export delimited using ///
+    "${appendix_c_tables}/Table_C1_Index_Summary_Statistics.csv", replace
+restore
+
+quietly correlate `appendix_indices'
+matrix appendix_correlation = r(C)
+
+preserve
+clear
+svmat double appendix_correlation, names(col)
+gen str16 index = ""
+local row = 0
+foreach variable of local appendix_indices {
+    local ++row
+    replace index = "`variable'" in `row'
+}
+order index
+format `appendix_indices' %9.3f
+export delimited using ///
+    "${appendix_c_tables}/Table_C2_Index_Correlation_Matrix.csv", replace
+restore
+
+* Long-form categorical distributions for the descriptive appendix.
+tempname frequency_handle
+tempfile appendix_frequencies
+postfile `frequency_handle' ///
+    str40 panel str20 variable str120 variable_label ///
+    double category_code str120 category count percent ///
+    using `appendix_frequencies', replace
+
+local demographic_variables age_cat q3 q2_2 q2_3 years_cat
+local access_variables q3_1 q3_5 q4_5 q4_6 q6_4
+local experience_variables q7_1 q7_11 q10_10 q10_13
+
+foreach variable of local demographic_variables {
+    local panel "Demographics and migration"
+    quietly count if !missing(`variable')
+    local denominator = r(N)
+    local variable_label : variable label `variable'
+    local value_label : value label `variable'
+    quietly levelsof `variable' if !missing(`variable'), local(levels)
+    foreach level of local levels {
+        quietly count if `variable' == `level'
+        local category_label : label `value_label' `level'
+        if `"`category_label'"' == "" local category_label "`level'"
+        post `frequency_handle' (`"`panel'"') ("`variable'") ///
+            (`"`variable_label'"') (`level') (`"`category_label'"') ///
+            (r(N)) (100 * r(N) / `denominator')
+    }
+}
+
+foreach variable of local access_variables {
+    local panel "Digital, financial, and remittance access"
+    quietly count if !missing(`variable')
+    local denominator = r(N)
+    local variable_label : variable label `variable'
+    local value_label : value label `variable'
+    quietly levelsof `variable' if !missing(`variable'), local(levels)
+    foreach level of local levels {
+        quietly count if `variable' == `level'
+        local category_label : label `value_label' `level'
+        if `"`category_label'"' == "" local category_label "`level'"
+        post `frequency_handle' (`"`panel'"') ("`variable'") ///
+            (`"`variable_label'"') (`level') (`"`category_label'"') ///
+            (r(N)) (100 * r(N) / `denominator')
+    }
+}
+
+foreach variable of local experience_variables {
+    local panel "Fraud, recourse, and enabling support"
+    quietly count if !missing(`variable')
+    local denominator = r(N)
+    local variable_label : variable label `variable'
+    local value_label : value label `variable'
+    quietly levelsof `variable' if !missing(`variable'), local(levels)
+    foreach level of local levels {
+        quietly count if `variable' == `level'
+        local category_label : label `value_label' `level'
+        if `"`category_label'"' == "" local category_label "`level'"
+        post `frequency_handle' (`"`panel'"') ("`variable'") ///
+            (`"`variable_label'"') (`level') (`"`category_label'"') ///
+            (r(N)) (100 * r(N) / `denominator')
+    }
+}
+postclose `frequency_handle'
+
+preserve
+use `appendix_frequencies', clear
+format percent %9.1f
+export delimited using ///
+    "${appendix_d_tables}/Table_D1_Extended_Categorical_Distributions.csv", replace
+restore
+
+* Prevalence of multi-response financial-access indicators.
+local binary_indicators ///
+    q4_12_1 q4_12_2 q4_12_3 q4_12_4 ///
+    q10_3_1 q10_3_2 q10_3_3 q10_3_4 q10_3_5 ///
+    q10_3_6 q10_3_7 q10_3_8 q10_3_9 q10_3_10
+
+tempname prevalence_handle
+tempfile appendix_prevalence
+postfile `prevalence_handle' ///
+    str20 variable str120 indicator double n count percent ///
+    using `appendix_prevalence', replace
+
+foreach variable of local binary_indicators {
+    quietly count if !missing(`variable')
+    local denominator = r(N)
+    quietly count if `variable' == 1
+    local indicator_label : variable label `variable'
+    post `prevalence_handle' ///
+        ("`variable'") (`"`indicator_label'"') ///
+        (`denominator') (r(N)) (100 * r(N) / `denominator')
+}
+postclose `prevalence_handle'
+
+use `appendix_prevalence', clear
+format percent %9.1f
+export delimited using ///
+    "${appendix_d_tables}/Table_D2_Multiple_Response_Prevalence.csv", replace
+
+display as result "Online appendix export completed: ${appendix_root}"
+

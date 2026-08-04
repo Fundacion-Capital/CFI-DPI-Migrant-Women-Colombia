@@ -1,0 +1,15 @@
+variable,indicator,n,count,percent
+q4_12_1,Posee cuenta: en Banco,423,203,47.990543
+q4_12_2,Posee cuenta: en Billetera digital,423,337,79.669029
+q4_12_3,Posee cuenta: en Cooperativa/financiera solidaria,423,22,5.2009459
+q4_12_4,Posee cuenta: en fintech/EMI,423,2,.47281325
+q10_3_1,Cambio: Capacitación breve y práctica,423,80,18.912529
+q10_3_2,Cambio: Acompañamiento de alguien de confianza,423,38,8.9834518
+q10_3_3,Comisiones más bajas/claras,423,76,17.966904
+q10_3_4,Cambio: Mensajes claros y en español sencillo,423,44,10.401892
+q10_3_5,Cambio: Biometría/PIN fácil de usar,423,121,28.605202
+q10_3_6,Cambio: Agentes más cercanos,423,59,13.94799
+q10_3_7,Cambio: Aceptación de QR en comercios,423,38,8.9834518
+q10_3_8,Cambio: Protección o seguridad ante fraudes,423,94,22.222221
+q10_3_9,Cambio: Aceptación de documentos (PPT/CE),423,135,31.914894
+q10_3_10,Cambio: Ninguna de las anteriores,423,12,2.8368795

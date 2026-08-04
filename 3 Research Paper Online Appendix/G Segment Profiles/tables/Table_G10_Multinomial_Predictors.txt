@@ -1,0 +1,50 @@
+		(1)	(2)	(3)	(4)
+VARIABLES	LABELS	Multinomial logit: relative-risk ratios	Multinomial logit: relative-risk ratios	Multinomial logit: relative-risk ratios	Multinomial logit: relative-risk ratios
+					
+Structurally_constrained_low_int		.			
+		(.)			
+1.s15_age3	Age category used in segment regression overlays = 1, 18-29	0.645	1.246		1.168
+		(0.251)	(0.470)		(0.531)
+3.s15_age3	Age category used in segment regression overlays = 3, 45 or older	1.303	1.293		1.328
+		(0.375)	(0.506)		(0.572)
+years_in_col	Años viviendo en el país	0.837**	0.944		1.025
+		(0.071)	(0.037)		(0.042)
+1.s15_educ2	Post-secondary education = 1, Technical or university education	0.647	0.164***		3.889***
+		(0.191)	(0.091)		(1.474)
+2.s15_occ3	Employment-position category = 2, Employee or paid domestic worker	1.195	1.047		1.864
+		(0.400)	(0.370)		(0.716)
+3.s15_occ3	Employment-position category = 3, Outside paid employment or other	3.772***	0.185***		0.381
+		(1.103)	(0.117)		(0.265)
+1.s15_city2	Geographic group used in regression overlays = 1, Other study locations	1.069	0.311**		0.190***
+		(0.305)	(0.141)		(0.108)
+Operationally_active_but_high_ri			.		
+			(.)		
+Mainstream_formal_digital_users				.	
+				(.)	
+1o.s15_age3	Age category used in segment regression overlays = 1, omitted			-	
+					
+3o.s15_age3	Age category used in segment regression overlays = 3, omitted			-	
+					
+o.years_in_col	Años viviendo en el país = o,			-	
+					
+1o.s15_educ2	Post-secondary education = 1, omitted			-	
+					
+2o.s15_occ3	Employment-position category = 2, omitted			-	
+					
+3o.s15_occ3	Employment-position category = 3, omitted			-	
+					
+1o.s15_city2	Geographic group used in regression overlays = 1, omitted			-	
+					
+o._cons				1.000	
+				(0.000)	
+Integrated_and_protected_digital					.
+					(.)
+Constant	Constant	1.065	0.727		0.093***
+		(0.652)	(0.244)		(0.042)
+					
+Observations		423	423	423	423
+Base outcome		Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion	Mainstream partial inclusion
+Robust standard errors		Yes	Yes	Yes	Yes
+Collapsed baseline covariates		Yes	Yes	Yes	Yes
+Robust seeform in parentheses					
+*** p<0.01, ** p<0.05, * p<0.1					
