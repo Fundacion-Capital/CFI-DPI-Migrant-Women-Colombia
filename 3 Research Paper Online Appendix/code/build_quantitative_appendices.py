@@ -15,12 +15,14 @@ from pathlib import Path
 from typing import Iterable, Sequence
 
 from docx import Document
+from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 from openpyxl import load_workbook
+from openpyxl.utils.cell import range_boundaries
 from PIL import Image
 
 
@@ -33,6 +35,9 @@ LIGHT_TEAL = "EAF3F5"
 PALE_GRAY = "F4F6F7"
 GRID = "B7CDD2"
 TEXT = RGBColor(31, 41, 51)
+
+APPENDIX_TITLE_STYLE = "Appendix Title"
+APPENDIX_SECTION_STYLE = "Appendix Section"
 
 
 DESCRIPTIVE_TITLES = {
@@ -185,8 +190,14 @@ def read_workbook(path: Path) -> list[tuple[str, list[list[str]]]]:
     for sheet in workbook.worksheets:
         if sheet.sheet_state != "visible":
             continue
-        max_row = min(sheet.max_row or 1, 5000)
-        max_col = min(sheet.max_column or 1, 40)
+        # Artifact-tool workbooks can omit the cached worksheet dimensions.
+        # In read-only mode openpyxl then reports max_row/max_column as None,
+        # even though the worksheet contains data. Force a dimension scan so
+        # every populated cell is embedded in the native Word table.
+        dimensions = sheet.calculate_dimension(force=True)
+        _, _, dimension_max_col, dimension_max_row = range_boundaries(dimensions)
+        max_row = min(dimension_max_row, 5000)
+        max_col = min(dimension_max_col, 40)
         rows = trim_rows(sheet.iter_rows(min_row=1, max_row=max_row, max_col=max_col, values_only=True))
         if rows:
             output.append((sheet.title, rows))
@@ -272,6 +283,36 @@ def set_alt_text(shape, description: str) -> None:
     doc_properties = shape._inline.docPr
     doc_properties.set("descr", description)
     doc_properties.set("title", description)
+
+
+def ensure_appendix_styles(document: Document) -> None:
+    """Create appendix display styles that are intentionally excluded from the TOC."""
+    specifications = {
+        APPENDIX_TITLE_STYLE: {"size": 12, "bold": True, "underline": True, "before": 12, "after": 6},
+        APPENDIX_SECTION_STYLE: {"size": 11, "bold": True, "underline": True, "before": 10, "after": 4},
+    }
+    for name, specification in specifications.items():
+        try:
+            style = document.styles[name]
+        except KeyError:
+            style = document.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
+        style.base_style = document.styles["Normal"]
+        style.font.name = "Times New Roman"
+        style.font.size = Pt(specification["size"])
+        style.font.bold = specification["bold"]
+        style.font.underline = specification["underline"]
+        style.paragraph_format.space_before = Pt(specification["before"])
+        style.paragraph_format.space_after = Pt(specification["after"])
+        style.paragraph_format.keep_with_next = True
+        paragraph_properties = style.element.get_or_add_pPr()
+        outline = paragraph_properties.find(qn("w:outlineLvl"))
+        if outline is None:
+            outline = OxmlElement("w:outlineLvl")
+            paragraph_properties.append(outline)
+        # Word uses 9 for Body Text. The manuscript TOC field includes outline
+        # levels, so this explicit value prevents appendix internals from being
+        # pulled into the TOC during a field refresh.
+        outline.set(qn("w:val"), "9")
 
 
 def add_caption(document: Document, text: str) -> None:
@@ -438,12 +479,12 @@ def add_xlsx(document: Document, path: Path, label: str, title: str) -> None:
 
 def add_major_heading(document: Document, text: str) -> None:
     page_break(document)
-    paragraph = document.add_paragraph(text, style="Heading 2")
+    paragraph = document.add_paragraph(text, style=APPENDIX_TITLE_STYLE)
     paragraph.paragraph_format.keep_with_next = True
 
 
 def add_subheading(document: Document, text: str) -> None:
-    paragraph = document.add_paragraph(text, style="Heading 3")
+    paragraph = document.add_paragraph(text, style=APPENDIX_SECTION_STYLE)
     paragraph.paragraph_format.keep_with_next = True
 
 
@@ -631,6 +672,7 @@ def enable_field_updates(document: Document) -> None:
 
 def assemble(source: Path, output: Path) -> None:
     document = Document(source)
+    ensure_appendix_styles(document)
     anchor = remove_placeholder_block(document)
     body = document._element.body
     before_children = list(body)
