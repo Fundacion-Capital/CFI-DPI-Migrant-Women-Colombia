@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-05: clean main@c4be81ad1d5f1ff7be8aa0feffc42fd43e28c63e entry; historical-input checks through Stata MCP. Original-position diagnostic corrected: all 490 raw/audit positions agree. Five used spreadsheets matched; 42 sheet imports and version-sensitive coding ledger complete. Owner confirms clock reports/settings no longer exist; preserve audit/coded clocks and disclose raw-to-audit limit. 765 overlapping source pins unchanged; no estimator or external mutation.",
+    "last_recovery_probe": "2026-10-05: clean main@ce69fd96c959c9cf9a0391801eb22986692d121e entry. Scoped version/dependency audit through Stata MCP: 120 domains, 170 availability rows, eight token controls and receipt assertions pass; 13 changed lists/12 linked questions, four geography states and 17 text dependencies reviewed. Protected replay specified, not executed; semantic/scientific/disclosure gates remain open. Original bytes retained; no estimator or external mutation.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -99,7 +99,7 @@
   },
   "empirical_audit": {
     "status": "pending",
-    "sample_audit": "",
+    "sample_audit": "VERSION_MEASUREMENT_REGISTER.md#1-evidence-and-acceptance-boundary",
     "estimand_alignment": "pending",
     "missingness_balance": "pending",
     "construct_validity": "pending",
@@ -110,10 +110,10 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 all five used spreadsheet definitions matched; geography meaning, 17 later-added text fields and changed early choices require M4/M5 version-aware reconciliation",
+      "README.md: MEAS-01 bounded version domains and text availability pass; geography meanings, full relevance/dummy/scoring and downstream result parity remain pending; see VERSION_MEASUREMENT_REGISTER.md",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
     ],
-    "last_audit": "2026-10-05 historical-input source, clock, corrected-order and seven-definition/six-sheet Stata-MCP audit; not completed M4/M5/M6 scientific validation."
+    "last_audit": "2026-10-05 bounded version-aware domains, structural text availability and scoped source dependency review; not completed full sample/measurement or historical estimator replication."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -177,7 +177,7 @@
     "blocking_findings": [
       "Full numerical, citation, consent/ethics, rights and construct reconciliation remain pending.",
       "Genuine contact data in Git/history remain on release hold; exact 35-version preservation is not anonymous release or history remediation.",
-      "New raw recovers cohort/non-time cells and original ordering; original export clock is unverified and reports/settings unavailable. Five used spreadsheet definitions now matched, but version-sensitive coding must be reconciled without automatic recoding.",
+      "New raw recovers cohort/non-time cells and original ordering; export-clock reports/settings unavailable. Five used definitions matched and bounded domains/text availability pass; full version meanings, relevance, scoring and estimator parity still require scientific review without automatic recoding.",
       "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification."
     ],
     "last_audit": ""
@@ -231,7 +231,7 @@
     "environment_record": "README.md#pipeline-status-and-execution-contract",
     "frozen_at_stage": null,
     "data_availability_statement": "",
-    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup. Superseding input contract: original raw/audit sequence agrees after correcting sorted-link-index misuse; all five used spreadsheets matched. Export-clock reports/settings no longer exist per owner; frozen audit/coded clocks are stored historical references, not exact raw-to-audit reconstruction. Version-aware meaning and transitive dependencies remain pending M4/M5.",
+    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup. Superseding input contract: original raw/audit sequence agrees after correcting sorted-link-index misuse; all five used spreadsheets matched. Export-clock reports/settings no longer exist per owner; frozen audit/coded clocks are stored historical references, not exact raw-to-audit reconstruction. Version-aware meaning and transitive dependencies remain pending M4/M5. Scoped version/dependency register and protected replay contract delivered at ce69fd9; 120 domains and 170 text-availability checks pass. A private semantic overlay annotates 38 of 679 prior proposal rows, zero release-approved fields. Full-source joint disclosure, exact scoring/estimator parity and actual isolated replay remain pending.",
     "runtime_minutes": null,
     "last_rebuild_check": ""
   },
@@ -296,7 +296,24 @@
     "historical_input_instrument_cells": "audit-local/intake/input-contract-c4be81a/instrument_cells.csv",
     "historical_input_choice_lists": "audit-local/intake/input-contract-c4be81a/instrument_choice_lists.csv",
     "historical_input_clock_disposition": "audit-local/intake/input-contract-c4be81a/owner_clock_disposition.json",
-    "historical_input_code_locators": "audit-local/intake/input-contract-c4be81a/historical_input_locators.csv"
+    "historical_input_code_locators": "audit-local/intake/input-contract-c4be81a/historical_input_locators.csv",
+    "version_measurement_register": "VERSION_MEASUREMENT_REGISTER.md",
+    "measurement_diagnostic_driver": "audit-local/intake/measurement-ce69fd9/measurement_audit.do",
+    "measurement_question_specs": "audit-local/intake/measurement-ce69fd9/questions.csv",
+    "measurement_choice_specs": "audit-local/intake/measurement-ce69fd9/choices.csv",
+    "measurement_choice_deltas": "audit-local/intake/measurement-ce69fd9/choice_deltas.csv",
+    "measurement_availability": "audit-local/intake/measurement-ce69fd9/availability.csv",
+    "measurement_domains": "audit-local/intake/measurement-ce69fd9/domains.csv",
+    "measurement_schemas": "audit-local/intake/measurement-ce69fd9/schemas.csv",
+    "measurement_versions": "audit-local/intake/measurement-ce69fd9/versions.csv",
+    "measurement_source_locators": "audit-local/intake/measurement-ce69fd9/field_dependency_locators.csv",
+    "measurement_independent_review": "audit-local/intake/measurement-ce69fd9/independent_source_review.md",
+    "measurement_release_proposal_refresh": "audit-local/intake/measurement-ce69fd9/release_field_specification_refresh.csv",
+    "measurement_source_dependency_receipt": "audit-local/intake/measurement-ce69fd9/source_dependency_receipt.json",
+    "measurement_metadata_helper": "audit-local/intake/measurement-ce69fd9/source_dependency_metadata.py",
+    "measurement_query_receipts": "audit-local/intake/measurement-ce69fd9/workflow_query_receipts.json",
+    "measurement_source_retention": "audit-local/intake/measurement-ce69fd9/source_retention_checks.json",
+    "measurement_validation": "audit-local/intake/measurement-ce69fd9/measurement_validation.json"
   },
   "decisions": [
     {
@@ -410,7 +427,19 @@
     {
       "date": "2026-10-05",
       "decision": "Existing main.tex preparation checkpoint updated in place in the same editor. Built-in compiler recheck fails during initialization: Unable to find standard directories for platform. Compilation/layout remains unverified; no alternative PDF, compiler installation, different tab or Overleaf synchronization."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Scoped version-aware measurement/dependency register delivered without any historical scientific change. All 120 domain checks and 170 later-text availability checks pass, with eight synthetic token controls; full group relevance, option-dummy concordance, semantic equivalence and score/model parity remain pending. Early Other must not silently become Soacha; regression, reload/profile and overlay geography remain distinct. All 13 changed early lists are mapped, including unreferenced q100."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Private anonymous-field proposal refreshed by annotating 38 of the prior 679-name snapshot rows. Zero public fields approved; no anonymized data created, no restricted-original edit/copy/delete, Git cleanup, stage/commit/push or live Overleaf sync. Protected historical replay contract specified but unrun; preserve original audit/coded clocks and owner-confirmed unavailable export context. Next: M4.03.3/M5.02.1 exact historical IAT component/relevance/missingness/scoring verification, no estimator or scientific correction."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Existing main.tex preparation record updated in the same editor; built-in compilation still fails at platform initialization with Unable to find standard directories for platform. Rendered layout is unverified; no replacement PDF or compiler installation. Bounded audit completion does not pass M0 or any scientific/release gate."
     }
   ],
-  "last_updated_beijing": "2026-10-06T00:42:03+08:00"
+  "last_updated_beijing": "2026-10-06T02:11:34+08:00"
 }
