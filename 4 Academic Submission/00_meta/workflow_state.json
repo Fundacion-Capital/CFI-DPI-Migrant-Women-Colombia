@@ -10,7 +10,7 @@
     "language": "English"
   },
   "orchestration": {
-    "status": "in-progress",
+    "status": "active",
     "entry_routing": "README.md#entry-routing",
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-05T12:18:45Z: main@151b0e8; existing untracked preparation files, no staged changes; owner keeps GitHub public; policy update only, release/synchronization still held",
+    "last_recovery_probe": "2026-10-05T13:28:15Z: main@9137985; clean entry checkout after owner's prior preparation commit. M0.06 metadata/storage proposal complete; originals and historical code unchanged. Preservation, restricted access, raw-input lineage, disclosure/parity and release/synchronization remain held; no new commit/push or cloud change.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -68,7 +68,9 @@
       "historical-package-not-fully-certified",
       "historical-estimates-not-reproduced",
       "native-compiler-platform-failure",
-      "confirmed-sensitive-data-release-hold"
+      "confirmed-sensitive-data-release-hold",
+      "restricted-archive-access-and-preservation-unverified",
+      "current-raw-input-not-full-coded-cohort"
     ],
     "last_assembly": ""
   },
@@ -103,12 +105,15 @@
       "README.md: SCOPE-01",
       "README.md: NUM-01",
       "README.md: PRIV-01 confirmed historical NoPII contact retention",
-      "README.md: PRIV-02 confirmed sensitive-data exposure; proposal only, remediation not performed"
+      "README.md: PRIV-02 confirmed sensitive-data exposure; proposal only, remediation not performed",
+      "README.md: PRIV-03 restricted archive access-control certification unresolved",
+      "README.md: PRIV-04 selected sensitive Git versions lack verified permanent preservation",
+      "README.md: DATA-01 raw/audit/coded input versions require reconciliation"
     ],
     "last_audit": ""
   },
   "stages": {
-    "0_intake_setup": "in-progress",
+    "0_intake_setup": "in_progress",
     "1_topic_design": "pending",
     "1L_literature_base": "pending",
     "2_data": "pending",
@@ -151,6 +156,9 @@
       "REPL-01",
       "PRIV-01",
       "PRIV-02",
+      "PRIV-03",
+      "PRIV-04",
+      "DATA-01",
       "LIT-01"
     ],
     "last_claim_audit": ""
@@ -165,7 +173,8 @@
     "unverified_citations": 0,
     "blocking_findings": [
       "Full numerical and citation reconciliation has not been completed.",
-      "Author-confirmed genuine contact data in current and historical Git material; release/synchronization held pending separately authorized remediation."
+      "Author-confirmed genuine contact data in current and historical Git material; release/synchronization held pending separately authorized remediation.",
+      "Restricted archive access/preservation is not certified and the current raw workbook omits most coded keys; storage and input provenance decisions remain open."
     ],
     "last_audit": ""
   },
@@ -218,7 +227,7 @@
     "environment_record": "README.md#pipeline-status-and-execution-contract",
     "frozen_at_stage": null,
     "data_availability_statement": "",
-    "archive_plan": "Owner-designated permanent restricted original/PII storage in Dropbox; public GitHub reproducibility package may contain only an owner-approved, disclosure-reviewed anonymized derivative and safe code/exhibits. Verify complete restricted preservation and access controls before cleanup; reconcile existing Git/history exposure separately. No data transfer, anonymization or cleanup has been performed. Keep the immutable historical baseline distinct from later revised outputs; no restricted data in Overleaf.",
+    "archive_plan": "Owner-designated permanent restricted original/PII storage in Dropbox; public GitHub may contain only an owner-approved, disclosure-reviewed anonymous derivative and safe code/exhibits. Read-only M0.06 verification/specification complete as a proposal, not archive certification: access-control review unresolved and 0 of 33 selected sensitive path/version targets has a byte-identical local Dropbox counterpart. Resolve access and approve exact preservation scope before any copying/cleanup; reconcile historical raw-input versions, semantic dependencies and existing Git/history exposure separately. No transfer, anonymous dataset or cleanup performed; no restricted data in Overleaf. If exact reproduction conflicts with anonymity, escalate rather than alter science silently.",
     "runtime_minutes": null,
     "last_rebuild_check": ""
   },
@@ -248,7 +257,20 @@
     "privacy_contact_counts": "audit-local/intake/stata_privacy_contact_counts.csv",
     "privacy_excel_inventory": "audit-local/intake/stata_privacy_excel_inventory.csv",
     "privacy_linkage_counts": "audit-local/intake/stata_privacy_linkage_counts.csv",
-    "privacy_historical_contact_counts": "audit-local/intake/stata_privacy_historical_contact_counts.csv"
+    "privacy_historical_contact_counts": "audit-local/intake/stata_privacy_historical_contact_counts.csv",
+    "restricted_baseline_receipt": "audit-local/intake/release-spec-9137985/baseline_receipt.json",
+    "restricted_baseline_manifest": "audit-local/intake/release-spec-9137985/restricted_baseline_manifest.csv",
+    "restricted_preservation_matches": "audit-local/intake/release-spec-9137985/restricted_preservation_matches.csv",
+    "release_source_catalogue": "audit-local/intake/release-spec-9137985/release_source_catalogue.csv",
+    "release_field_metadata": "audit-local/intake/release-spec-9137985/stata_release_fields.csv",
+    "release_field_specification": "audit-local/intake/release-spec-9137985/release_field_specification.csv",
+    "release_field_code_references": "audit-local/intake/release-spec-9137985/field_code_references.csv",
+    "release_boundary_specification": "audit-local/intake/release-spec-9137985/release_specification.md",
+    "release_boundary_validation": "audit-local/intake/release-spec-9137985/release_boundary_validation.json",
+    "release_cloud_access_receipts": "audit-local/intake/release-spec-9137985/cloud_access_receipts.json",
+    "release_query_receipts": "audit-local/intake/release-spec-9137985/stata_query_receipts.json",
+    "release_key_counts": "audit-local/intake/release-spec-9137985/stata_baseline_key_counts.csv",
+    "release_key_containment": "audit-local/intake/release-spec-9137985/stata_baseline_key_containment.csv"
   },
   "decisions": [
     {
@@ -298,7 +320,19 @@
     {
       "date": "2026-10-05",
       "decision": "Immediate next workflow: verify the complete restricted Dropbox baseline and prepare a field-level public-release specification tied to existing analytical uses, before an approved Stata-MCP anonymization/export-routing implementation. Preserve historical analytical content during privacy work; current/historical cleanup and release authorization remain separate decisions."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "M0.06 read-only verification and field specification delivered as a bounded proposal. All 124 milestone work items have stable IDs; M0.06 has 17 child checks/actions. Stata MCP profiled 36 sources, 8,964 field occurrences and 679 unique names; metadata invariants/source hashes pass. There are 5,654 lexical/wildcard code-reference candidates, not full dependency proof. Zero public fields approved, anonymous dataset/backup/cleanup not implemented; M0 and scientific gates remain open."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Restricted Dropbox access-control and selected-version preservation gaps require owner action. Review the private cloud and 33-target hash receipts; do not infer confidentiality from absent direct child links. No sharing/visibility change or restricted-source copying authorized by the proposal. Current raw has 120 unique keys, all contained in 490-row audit; only 89 occur in 423-row coded data, leaving 334 coded keys absent from current raw. Resolve historical export/form/preparation lineage before replication; do not infer exclusion/attrition reasons or change science."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Edited existing main.tex preparation record in place; built-in compile recheck still fails with Unable to find standard directories for platform. Source preserved in the same editor; no replacement PDF, compiler installation, tab or live Overleaf synchronization."
     }
   ],
-  "last_updated_beijing": "2026-10-05T20:20:00+08:00"
+  "last_updated_beijing": "2026-10-05T21:28:15+08:00"
 }

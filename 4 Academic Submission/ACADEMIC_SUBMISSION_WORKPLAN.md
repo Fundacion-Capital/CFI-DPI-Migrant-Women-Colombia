@@ -28,7 +28,7 @@ This plan uses the empirical-research workflow's evidence, method, drafting, and
 
 ## 2. Verified starting snapshot and remaining access limitations
 
-These are access/orientation observations, not a completed project audit.
+These are the original planning access/orientation observations, not a completed project audit. The current checkpoint is [00_meta/workflow_state.json](00_meta/workflow_state.json), with the latest evidence and open items in [README.md](README.md). Do not mistake an older snapshot below for current status.
 
 | Resource | Verified on 5 October 2026 | What has NOT yet been verified |
 |---|---|---|
@@ -43,7 +43,7 @@ These are access/orientation observations, not a completed project audit.
 
 The Zotero item types currently stored are 27 journalArticle, 5 report, 3 newspaperArticle, 2 webpage, 1 dataset, and 1 bookSection. These are catalogue labels, not a peer-review or source-quality assessment. Some labels may need correction; metadata edits would be proposed separately before modifying the live library.
 
-The NotebookLM limitation is session-specific. It does not establish that the notebook is unavailable to every viewer or that it is incorrectly shared. Reauthentication or a permitted source export is needed before we can claim NotebookLM evidence coverage. Work on GitHub, the archive, and Zotero need not wait.
+The original NotebookLM limitation was session-specific. The author's later instruction supersedes the reauthentication route: use the supplied public notebook link only, without account authentication. The correct notebook subsequently became readable in the existing browser session with 38 listed sources. Source inventory access is not full-text verification; reconcile it with Zotero at M3.
 
 ### Archive roots
 
@@ -65,7 +65,7 @@ Both files below occur in Dropbox and OneDrive. Each corresponding pair is byte-
 
 The copies have approximately 82,580 and 83,050 whitespace-delimited words in document XML, respectively, including material outside the main body. Those are orientation counts, not journal-compliant word counts. Word's cached page properties are inconsistent, so the exact rendered page total has not been certified. Do not select the baseline using a “300 pages” description, filename, cloud-upload date, or cached page count alone.
 
-The canonical baseline will be established by content comparison and author confirmation in M1. The other full draft will remain a recoverable companion, with every unique substantive passage, exhibit, reference, and annotation assigned a disposition.
+The author subsequently selected LEGACY-A, the original full draft internally labelled 31 July 2026, by its hash above. Its main body, references and all 38 table-cell arrays match the companion; three appendix images unique to A are retained. This resolves manuscript selection, not the wider computational Baseline Gate. The companion remains preserved; independent disposition/visual review and code/data/output reconciliation remain open in M1.
 
 ## 3. Publication architecture and the four-journal strategy
 
@@ -155,18 +155,48 @@ Critical and major findings affecting the retained argument cannot remain unreso
 
 M3 and M4 can progress in parallel after the baseline is established. Measurement and source-positioning issues can be identified during historical replication, but revised estimates must not be run before the revision plan is recorded. M8 and M9 may have independent diagnostic tasks; they must not compete for a shared Stata session or artifact path.
 
+### Granular execution and completion discipline
+
+The fourteen milestones remain the governing sequence. Each of the 124 work items below now has a stable identifier, including separate M8D descriptive/correlation and M8R regression items. Identifiers are not completion claims. A work item inherits its milestone's inputs, deliverable and exit gate; tasks without a current evidence-backed disposition remain pending.
+
+Before executing any work item, split it into source-specific child checks until each check answers one evidence question. Record: parent/task ID, pinned inputs, permitted action, method/tool, actual output, acceptance test, result, residual limitation and next approval/dependency. Never mark a parent complete while a required child is unresolved. Preserve historical receipts and distinguish `PLAN_COMPLETE`, `CHECK_PASS`, `CHECK_FAIL`, `REVIEW_REQUIRED` and `OWNER_APPROVAL_PENDING`; none is interchangeable with public-release approval. Future variable/model-specific children are instantiated after M2/M4 inventory rather than guessed in advance.
+
+M0 is **not complete**. Read-only M1/M2 intake overlaps with M0, but no Baseline, Data, Measurement, Replication or revision gate has passed. The latest preparation commit is `913798591f08bcd8267fad8ace3aa0c4fba02f6b`; its working tree was clean at this workflow's entry. The present M0.06 workflow verifies storage and specifies a release boundary only: it must not change historical samples, measurements, regressions, LCA or substantive results.
+
+| Child of M0.06 | Single check or action | Current disposition / acceptance test |
+|---|---|---|
+| M0.06a | Refresh Git identity and editing boundary | CHECK_PASS: main and entry commit recorded; no pre-existing edits overwritten. Repeat at every workflow. |
+| M0.06b | Hash the actual local restricted-source candidates | CHECK_PASS for 347 Dropbox and 315 OneDrive file occurrences; no unreadable rows. Readability is not confidentiality. |
+| M0.06c | Match each selected sensitive Git path/version to a protected copy | CHECK_FAIL for preservation: 0 of 33 selected targets has a byte-identical local Dropbox counterpart. A raw/coded workbook is not a versioned-output backup. |
+| M0.06d | Check relevant cloud listings and accessible sharing metadata | REVIEW_REQUIRED: scoped listing and link receipts captured; archive access control is not certified. Owner action required; no sharing settings changed. |
+| M0.06e | Pin the metadata-query source catalogue | CHECK_PASS: 36 sources, comprising 33 sensitive target versions and three actual Dropbox input files. Not all historical blobs or remote copies. |
+| M0.06f | Inventory every field in the selected sources using Stata MCP | CHECK_PASS: 8,964 field occurrences and 679 distinct names; each source's field count reconciles to K; only metadata and aggregate counts exported. |
+| M0.06g | Assign a proposed release treatment to every inventoried field | PLAN_COMPLETE: 679 proposal rows; contacts, keys, personnel/device/audit information, text, coded responses, quasi-identifiers, analytical fields and posterior vectors distinguished. Zero fields release approved. |
+| M0.06h | Locate existing Stata code references for each field | REVIEW_REQUIRED: 5,654 exact/wildcard lexical candidate locators. Dynamic macros and transitive dependencies still require semantic review. No explicit hit does not prove unused. |
+| M0.06i | Reconcile current input versions before declaring a replication baseline | CHECK_FAIL for baseline certification: the named raw workbook imports 120 rows; the audit dataset has 490 and coded datasets 423. Trace the historical export and preparation run in M1/M4. Do not alter counts or infer attrition. |
+| M0.06j | Specify disclosure and exact scientific-parity tests | PLAN_COMPLETE: protocol written; joint disclosure, cell-by-cell parity and clean replication are not yet executed. |
+| M0.06k | Verify originals unchanged and private receipts excluded from Git | CHECK_PASS only after fresh source/code hashes, ignore/staging checks and MCP frame cleanup; record evidence in the local validation receipt. |
+| M0.06l | Review this bounded proposal and its unresolved risks | Proposal review only; no anonymity certificate, scientific gate or publication approval. Keep known gaps explicit in the handoff. |
+| M0.06m | Obtain the owner's exact preservation and cleanup scope | OWNER_APPROVAL_PENDING: review target/version manifest and verified restricted destination before any copying, untracking, deletion or history rewrite. |
+| M0.06n | Preserve selected originals in approved restricted Dropbox storage | PENDING separate workflow: access controls verified first, then approved copies, SHA-256/size reconciliation and restore check. Never remove the sole copy. |
+| M0.06o | Implement the approved anonymous derivative and isolated export routing | PENDING separate workflow: Stata MCP only; private crosswalk; exact variable allowlist; no unrestricted whole-record export; no scientific changes. |
+| M0.06p | Validate disclosure, scientific parity and historical-exposure remediation | PENDING: adversarial linkage review, exact retained-cell/sample/index parity, protected historical replication and separately approved Git/history treatment. Stop if privacy and exact reproduction conflict. |
+| M0.06q | Obtain explicit public-release/Overleaf synchronization approval | OWNER_APPROVAL_PENDING after all required checks. A safe local artifact is not automatically authorized for publication. |
+
+The private source catalogue, field specification, code locators, sharing receipts and test protocol are in ignored `audit-local/intake/release-spec-9137985/`. The latest handoff points to the owner decisions required next. Safe read-only authority, ethics, rights and literature work may continue while releases remain held; revised estimation may not bypass M7.
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**
 
-1. Record the instruction change: quantitative redevelopment is allowed; qualitative content is protected; CFI approvals are historical, not scientific constraints.
-2. Refresh repository branch, commit, status, worktrees, and remote evidence before any editing. Do not overwrite pre-existing changes.
-3. Confirm Dropbox/OneDrive project scope and identify local placeholders or connector gaps. Record that read access is not authority to restructure or publish.
-4. Resolve Zotero collection descendants and explicit IDs; keep all calls scoped. Build an attachment-access receipt without changing the collection.
-5. Reauthenticate NotebookLM through the appropriate existing account/session, or use an author-permitted export of its source list and sources. Never query an unrelated active notebook as a fallback.
-6. Establish the approved private location for restricted audit materials and scratch outputs. Public Git receives code, safe aggregate evidence, and non-sensitive provenance only.
-7. Inventory existing public reports, Canva outputs, preprints, repository manuscripts, policy briefs, technical supplements, permissions, funding conditions, and author agreements. Distinguish “sent privately to CFI” from “publicly published.”
-8. Identify author-owned choices to obtain at later gates: canonical draft, major analytical changes, qualitative integration approval, corresponding author, affiliations, open-access mandate/budget, and final publication authority.
+1. **M0.01** — Record the instruction change: quantitative redevelopment is allowed; qualitative content is protected; CFI approvals are historical, not scientific constraints.
+2. **M0.02** — Refresh repository branch, commit, status, worktrees, and remote evidence before any editing. Do not overwrite pre-existing changes.
+3. **M0.03** — Confirm Dropbox/OneDrive project scope and identify local placeholders or connector gaps. Record that read access is not authority to restructure or publish.
+4. **M0.04** — Resolve Zotero collection descendants and explicit IDs; keep all calls scoped. Build an attachment-access receipt without changing the collection.
+5. **M0.05** — Use only the author-supplied public NotebookLM link, without account authentication. Reconcile its source list with Zotero and verify retained claims against original sources. Never query an unrelated active notebook as a fallback.
+6. **M0.06** — Verify permanent restricted Dropbox storage for originals/PII and the ignored local audit boundary; prepare an owner-reviewable public field specification. Public Git may receive safe code, aggregate evidence, non-sensitive provenance and an owner-approved anonymous replication derivative only after disclosure and reproducibility checks. Do not change GitHub visibility, transfer data, clean history or publish without the appropriate separate authority. Execute the child checks above.
+7. **M0.07** — Inventory existing public reports, Canva outputs, preprints, repository manuscripts, policy briefs, technical supplements, permissions, funding conditions, and author agreements. Distinguish “sent privately to CFI” from “publicly published.”
+8. **M0.08** — Identify author-owned choices to obtain at later gates: canonical draft, major analytical changes, qualitative integration approval, corresponding author, affiliations, open-access mandate/budget, and final publication authority.
 
 **Deliverable:** intake and access register, publication-history/rights summary, and known-gap list.
 
@@ -176,14 +206,14 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Compare the two full drafts section-by-section, including tables, embedded images, footnotes/endnotes, bibliography fields, tracked changes, comments, text boxes, and appendices.
-2. Check whether each draft's media and tables actually display and whether apparently repeated headings reflect duplicates, annexes, or distinct versions.
-3. Give every unique substantive difference a disposition: baseline, companion addition, later correction, duplicate, or unresolved author choice. Do not merge uncritically.
-4. Reconcile archive contents across admin, literature, data, code, output, deliverables/presentations, and working-paper folders. Hash duplicates and identify unique files before deciding any priority.
-5. Build the code/data/output dependency map from actual paths and calls. In the current Git master, the two commented analysis calls use older IFC filenames; establish the real historical execution route rather than assume the master presently invokes the CFI preparation and analysis files.
-6. Inspect Git history, relevant diffs, archived logs, versioned data and instruments, manuscript revisions, and feedback documents. Date substantive events from evidence. Distinguish code creation dates, fieldwork dates, file modification dates, and Dropbox upload dates.
-7. Establish which code/data snapshot generated each manuscript result. Where unrecoverable, state the uncertainty.
-8. Freeze originals by hashes and references; do not relocate or rename live Dropbox/OneDrive files.
+1. **M1.01** — Compare the two full drafts section-by-section, including tables, embedded images, footnotes/endnotes, bibliography fields, tracked changes, comments, text boxes, and appendices.
+2. **M1.02** — Check whether each draft's media and tables actually display and whether apparently repeated headings reflect duplicates, annexes, or distinct versions.
+3. **M1.03** — Give every unique substantive difference a disposition: baseline, companion addition, later correction, duplicate, or unresolved author choice. Do not merge uncritically.
+4. **M1.04** — Reconcile archive contents across admin, literature, data, code, output, deliverables/presentations, and working-paper folders. Hash duplicates and identify unique files before deciding any priority.
+5. **M1.05** — Build the code/data/output dependency map from actual paths and calls. In the current Git master, the two commented analysis calls use older IFC filenames; establish the real historical execution route rather than assume the master presently invokes the CFI preparation and analysis files.
+6. **M1.06** — Inspect Git history, relevant diffs, archived logs, versioned data and instruments, manuscript revisions, and feedback documents. Date substantive events from evidence. Distinguish code creation dates, fieldwork dates, file modification dates, and Dropbox upload dates.
+7. **M1.07** — Establish which code/data snapshot generated each manuscript result. Where unrecoverable, state the uncertainty.
+8. **M1.08** — Freeze originals by hashes and references; do not relocate or rename live Dropbox/OneDrive files.
 
 **Deliverable:** author-confirmable baseline recommendation, source manifest, dependency map, and evidence-based project chronology.
 
@@ -193,13 +223,13 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Read the canonical full draft completely, using stable section/paragraph identifiers and a rendered page map when available.
-2. Identify the research questions, contribution claims, theoretical mechanisms, institutional chronology, quantitative stages, existing qualitative findings, policy discussion, and regional comparison.
-3. Enumerate every quantitative outcome, index, explanatory variable, control family, sample restriction, regression, interaction, correlation, class solution, and post-LCA comparison.
-4. Register every table/figure and number, including values appearing only in captions, narrative, or appendices.
-5. Separate claims about what was actually conducted from proposed work, aspirations, or unimplemented methods.
-6. Map each legacy element to article, supplement, research record, duplicate, unsupported/needs verification, or author-owned qualitative material. Assigning a destination does not authorize deleting it.
-7. Crosswalk CFI comments and subsequent revisions as useful diagnostic history. No historical reviewer suggestion substitutes for a new scientific assessment.
+1. **M2.01** — Read the canonical full draft completely, using stable section/paragraph identifiers and a rendered page map when available.
+2. **M2.02** — Identify the research questions, contribution claims, theoretical mechanisms, institutional chronology, quantitative stages, existing qualitative findings, policy discussion, and regional comparison.
+3. **M2.03** — Enumerate every quantitative outcome, index, explanatory variable, control family, sample restriction, regression, interaction, correlation, class solution, and post-LCA comparison.
+4. **M2.04** — Register every table/figure and number, including values appearing only in captions, narrative, or appendices.
+5. **M2.05** — Separate claims about what was actually conducted from proposed work, aspirations, or unimplemented methods.
+6. **M2.06** — Map each legacy element to article, supplement, research record, duplicate, unsupported/needs verification, or author-owned qualitative material. Assigning a destination does not authorize deleting it.
+7. **M2.07** — Crosswalk CFI comments and subsequent revisions as useful diagnostic history. No historical reviewer suggestion substitutes for a new scientific assessment.
 
 **Deliverable:** complete claim/exhibit ledger and a “legacy element → evidence → new destination” map.
 
@@ -209,16 +239,16 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Enumerate all items in the named Zotero collection and descendants with pagination and coverage receipts. Reconcile them against both full drafts, Dropbox/OneDrive references, and the NotebookLM source list once accessible.
-2. Verify metadata, source type, DOI/URL, authors, year, journal/publisher, publication status, duplicates, and any correction/retraction. Propose library corrections separately; do not mutate Zotero during an audit.
-3. Fully read accessible project literature. Record inaccessible or image-only texts separately and obtain legal primary-source alternatives where needed. An abstract or AI summary does not count as full-text review.
-4. Build a critical evidence matrix: question, theory, country/population, data, sampling, design, measure, effect or association, uncertainty, limitations, contrary evidence, and relevance to this paper.
-5. Cover the original conceptual territory: DPI versus provider applications; digital financial inclusion versus account ownership; usage quality and welfare; gender, agency, and household relations; migration/legal identity/KYC; remittances; skills, trust, privacy, fraud and redress; and institutional interoperability. Refine themes from the actual source corpus rather than presume all are equally central.
-6. Identify the closest competing work and perform bounded updated searches through official journal/publisher pages, scholarly discovery services, and forward/backward citations. Record dates, query families, inclusion criteria, and stopping rationale.
-7. Use NotebookLM for bounded discovery and cross-source interrogation once access is verified. Cache grounded responses with their source references, and check all substantive passages against the original sources before citing them.
-8. Build a separate institutional-source matrix for Colombian laws, implementation dates, regulators, payment infrastructure, migration/documentation rules, inclusion statistics, and benchmarking sources. Verify against primary official sources and distinguish fieldwork-era conditions from later developments.
-9. Separate enabling institutional conditions from impacts measured by this study. Later payment-system changes cannot become exposure or causal mechanisms in an earlier cross-sectional survey by narrative implication.
-10. Produce a contribution assessment that names what this study adds, what it does not establish, and the closest literature it changes or qualifies. Do not mistake an underdocumented population, a long report, or an LCA typology by itself for a theoretical contribution.
+1. **M3.01** — Enumerate all items in the named Zotero collection and descendants with pagination and coverage receipts. Reconcile them against both full drafts, Dropbox/OneDrive references, and the NotebookLM source list once accessible.
+2. **M3.02** — Verify metadata, source type, DOI/URL, authors, year, journal/publisher, publication status, duplicates, and any correction/retraction. Propose library corrections separately; do not mutate Zotero during an audit.
+3. **M3.03** — Fully read accessible project literature. Record inaccessible or image-only texts separately and obtain legal primary-source alternatives where needed. An abstract or AI summary does not count as full-text review.
+4. **M3.04** — Build a critical evidence matrix: question, theory, country/population, data, sampling, design, measure, effect or association, uncertainty, limitations, contrary evidence, and relevance to this paper.
+5. **M3.05** — Cover the original conceptual territory: DPI versus provider applications; digital financial inclusion versus account ownership; usage quality and welfare; gender, agency, and household relations; migration/legal identity/KYC; remittances; skills, trust, privacy, fraud and redress; and institutional interoperability. Refine themes from the actual source corpus rather than presume all are equally central.
+6. **M3.06** — Identify the closest competing work and perform bounded updated searches through official journal/publisher pages, scholarly discovery services, and forward/backward citations. Record dates, query families, inclusion criteria, and stopping rationale.
+7. **M3.07** — Use NotebookLM for bounded discovery and cross-source interrogation once access is verified. Cache grounded responses with their source references, and check all substantive passages against the original sources before citing them.
+8. **M3.08** — Build a separate institutional-source matrix for Colombian laws, implementation dates, regulators, payment infrastructure, migration/documentation rules, inclusion statistics, and benchmarking sources. Verify against primary official sources and distinguish fieldwork-era conditions from later developments.
+9. **M3.09** — Separate enabling institutional conditions from impacts measured by this study. Later payment-system changes cannot become exposure or causal mechanisms in an earlier cross-sectional survey by narrative implication.
+10. **M3.10** — Produce a contribution assessment that names what this study adds, what it does not establish, and the closest literature it changes or qualifies. Do not mistake an underdocumented population, a long report, or an LCA typology by itself for a theoretical contribution.
 
 **Deliverable:** scoped corpus/coverage receipt, critical literature matrix, institutional chronology, verified bibliography, and a contribution memo shared by methods and writing.
 
@@ -228,15 +258,15 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Trace fielded survey instruments, form/export versions, raw deliveries, participant keys, cleaning inputs, merge paths, and final analytical datasets.
-2. Audit duplicated/replaced records, consent and eligibility, timing, geography, language, recruitment channels, interview mode, and substantive-response rules. Keep identifiers and record-level crosswalks restricted.
-3. Compare instrument skip logic to missing values. Distinguish structural non-applicability, refusals, “don't know,” accidental missingness, and data-entry errors.
-4. Reconstruct sample flow and model-specific denominators. Explain every change between raw, eligible, cleaned, complete-case, regression, and LCA samples.
-5. Determine the actual sampling design. Do not label referral recruitment as respondent-driven probability sampling or apply survey/RDS weights unless recruitment and available design information support it.
-6. Evaluate coverage, selection, nonresponse, digital/phone access, geographic concentration, recruitment-network dependence, and external-validity limits.
-7. Assess missingness by variable and subgroup. Choose transparent model-specific handling; consider imputation only if substantively and statistically justified, with sensitivity evidence.
-8. Confirm unit-of-analysis, independence assumptions, weight definitions, household/site/network identifiers where available, and appropriate inference units.
-9. Validate disclosure, consent, data rights, and access arrangements. Missing ethics documentation remains a factual gap; do not invent an approval number or retrospectively describe an exemption as granted.
+1. **M4.01** — Trace fielded survey instruments, form/export versions, raw deliveries, participant keys, cleaning inputs, merge paths, and final analytical datasets.
+2. **M4.02** — Audit duplicated/replaced records, consent and eligibility, timing, geography, language, recruitment channels, interview mode, and substantive-response rules. Keep identifiers and record-level crosswalks restricted.
+3. **M4.03** — Compare instrument skip logic to missing values. Distinguish structural non-applicability, refusals, “don't know,” accidental missingness, and data-entry errors.
+4. **M4.04** — Reconstruct sample flow and model-specific denominators. Explain every change between raw, eligible, cleaned, complete-case, regression, and LCA samples.
+5. **M4.05** — Determine the actual sampling design. Do not label referral recruitment as respondent-driven probability sampling or apply survey/RDS weights unless recruitment and available design information support it.
+6. **M4.06** — Evaluate coverage, selection, nonresponse, digital/phone access, geographic concentration, recruitment-network dependence, and external-validity limits.
+7. **M4.07** — Assess missingness by variable and subgroup. Choose transparent model-specific handling; consider imputation only if substantively and statistically justified, with sensitivity evidence.
+8. **M4.08** — Confirm unit-of-analysis, independence assumptions, weight definitions, household/site/network identifiers where available, and appropriate inference units.
+9. **M4.09** — Validate disclosure, consent, data rights, and access arrangements. Missing ethics documentation remains a factual gap; do not invent an approval number or retrospectively describe an exemption as granted.
 
 **Deliverable:** data provenance and restricted crosswalk, public-safe sample-flow/missingness report, codebook, and sampling/inference boundary.
 
@@ -246,15 +276,15 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Build a field-item → coded variable → component → index → model/LCA indicator map.
-2. Check labels, ranges, coding direction, reversals, category collapses, special missing codes, transforms, weights, denominators, normalization sample, and constant/degenerate variables.
-3. Trace any use of returned Stata statistics and shared helper state. Establish whether normalization or other transformations use the intended statistics, not values overwritten by an intervening command.
-4. Reconstruct formulas directly from the code and compare them with manuscript/appendix descriptions and the questionnaire.
-5. Assess construct validity: what the measure actually captures, what it omits, and whether the name overclaims capability, vulnerability, empowerment, or DPI exposure.
-6. Distinguish formative composites from reflective scales. Reliability/factor methods are conditional tools, not automatic requirements for every index.
-7. Examine predictor/outcome and index-component overlap. Identify mechanical correlations, circular regressions, and post-LCA comparisons that reuse the class-defining information.
-8. Inspect binary/category recoding for LCA, sparse categories, thresholds, sample restrictions, and whether indicators represent a coherent construct space.
-9. Propose alternatives only for documented threats: preserve historical measures, justify any revision, and plan comparison before examining the revised finding.
+1. **M5.01** — Build a field-item → coded variable → component → index → model/LCA indicator map.
+2. **M5.02** — Check labels, ranges, coding direction, reversals, category collapses, special missing codes, transforms, weights, denominators, normalization sample, and constant/degenerate variables.
+3. **M5.03** — Trace any use of returned Stata statistics and shared helper state. Establish whether normalization or other transformations use the intended statistics, not values overwritten by an intervening command.
+4. **M5.04** — Reconstruct formulas directly from the code and compare them with manuscript/appendix descriptions and the questionnaire.
+5. **M5.05** — Assess construct validity: what the measure actually captures, what it omits, and whether the name overclaims capability, vulnerability, empowerment, or DPI exposure.
+6. **M5.06** — Distinguish formative composites from reflective scales. Reliability/factor methods are conditional tools, not automatic requirements for every index.
+7. **M5.07** — Examine predictor/outcome and index-component overlap. Identify mechanical correlations, circular regressions, and post-LCA comparisons that reuse the class-defining information.
+8. **M5.08** — Inspect binary/category recoding for LCA, sparse categories, thresholds, sample restrictions, and whether indicators represent a coherent construct space.
+9. **M5.09** — Propose alternatives only for documented threats: preserve historical measures, justify any revision, and plan comparison before examining the revised finding.
 
 **Deliverable:** measurement audit, item/index dictionary, overlap matrix, and recommended changes with consequences.
 
@@ -264,15 +294,15 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Inspect Stata MCP session state before execution. Preserve any unrelated loaded work and establish one executor.
-2. Record Stata version/edition, dependencies and ado resolution, input hashes, seeds, stochastic settings, and the true preparation/analysis entry points.
-3. Run into an isolated private scratch/output location, not the legacy output tree or public appendix folder. Preflight every path and writing side effect.
-4. Reproduce the archived preparation and all four quantitative stages: descriptive statistics, correlations, regressions/interactions, and LCA/profiling.
-5. If an execution defect prevents replication, preserve the original, record the minimal operational repair separately, and assess whether it is statistically inert. A substantive correction belongs in the revision track.
-6. Compare sample membership and model-specific N, variable values, descriptive denominators, coefficients, standard errors, confidence intervals, fit measures, class probabilities, posterior diagnostics, and displayed rounding.
-7. Align LCA solutions allowing for arbitrary class-label permutation. Distinguish numerical tolerance, optimizer variation, different local maxima, and substantive changes.
-8. Reconcile code-generated values with manuscript tables, narrative, graphics, and appendix manifests. Inspect missing/empty tables, stale figures, uncited results, and mixed-version outputs.
-9. If a tool times out, inspect durable logs/markers before rerunning. A client timeout is neither proof of failure nor permission to launch duplicate estimation.
+1. **M6.01** — Inspect Stata MCP session state before execution. Preserve any unrelated loaded work and establish one executor.
+2. **M6.02** — Record Stata version/edition, dependencies and ado resolution, input hashes, seeds, stochastic settings, and the true preparation/analysis entry points.
+3. **M6.03** — Run into an isolated private scratch/output location, not the legacy output tree or public appendix folder. Preflight every path and writing side effect.
+4. **M6.04** — Reproduce the archived preparation and all four quantitative stages: descriptive statistics, correlations, regressions/interactions, and LCA/profiling.
+5. **M6.05** — If an execution defect prevents replication, preserve the original, record the minimal operational repair separately, and assess whether it is statistically inert. A substantive correction belongs in the revision track.
+6. **M6.06** — Compare sample membership and model-specific N, variable values, descriptive denominators, coefficients, standard errors, confidence intervals, fit measures, class probabilities, posterior diagnostics, and displayed rounding.
+7. **M6.07** — Align LCA solutions allowing for arbitrary class-label permutation. Distinguish numerical tolerance, optimizer variation, different local maxima, and substantive changes.
+8. **M6.08** — Reconcile code-generated values with manuscript tables, narrative, graphics, and appendix manifests. Inspect missing/empty tables, stale figures, uncited results, and mixed-version outputs.
+9. **M6.09** — If a tool times out, inspect durable logs/markers before rerunning. A client timeout is neither proof of failure nor permission to launch duplicate estimation.
 
 **Deliverable:** historical replication report, environment receipt, result/exhibit crosswalk, and discrepancy register.
 
@@ -282,14 +312,14 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Disclose what results have already been seen and the known analysis/search history. This is a retrospective audit of an existing study, not a preregistered new experiment.
-2. Separate exact reproduction, deterministic error correction, justified methodological revision, and genuinely new exploratory analysis.
-3. Specify research questions, target quantities, outcome hierarchy, populations/samples, measurements, control sets, inference, missingness, multiplicity families, interaction interpretation, and LCA selection/validation criteria.
-4. Create a threat-driven diagnostic/robustness matrix. Each proposed test must have a scientific purpose and a decision consequence.
-5. Determine permissible claim strength. If the survey cannot identify causal effects, retain association/descriptive claims; do not manufacture an instrument, panel, natural experiment, or “mechanism test” from inadequate data.
-6. Record the proposed revision before estimating it. Timestamping now can constrain new work, but cannot make already observed hypotheses confirmatory.
-7. Take material choices to the author: changed index definition, substantially changed sample or primary question, new main estimator, changed LCA feature set/class-selection rule, or removal of a central legacy claim.
-8. Use ordinary scientific diagnostics and documented bug fixes without demanding approval for every harmless operation. Escalate choices that change the study's substantive meaning.
+1. **M7.01** — Disclose what results have already been seen and the known analysis/search history. This is a retrospective audit of an existing study, not a preregistered new experiment.
+2. **M7.02** — Separate exact reproduction, deterministic error correction, justified methodological revision, and genuinely new exploratory analysis.
+3. **M7.03** — Specify research questions, target quantities, outcome hierarchy, populations/samples, measurements, control sets, inference, missingness, multiplicity families, interaction interpretation, and LCA selection/validation criteria.
+4. **M7.04** — Create a threat-driven diagnostic/robustness matrix. Each proposed test must have a scientific purpose and a decision consequence.
+5. **M7.05** — Determine permissible claim strength. If the survey cannot identify causal effects, retain association/descriptive claims; do not manufacture an instrument, panel, natural experiment, or “mechanism test” from inadequate data.
+6. **M7.06** — Record the proposed revision before estimating it. Timestamping now can constrain new work, but cannot make already observed hypotheses confirmatory.
+7. **M7.07** — Take material choices to the author: changed index definition, substantially changed sample or primary question, new main estimator, changed LCA feature set/class-selection rule, or removal of a central legacy claim.
+8. **M7.08** — Use ordinary scientific diagnostics and documented bug fixes without demanding approval for every harmless operation. Escalate choices that change the study's substantive meaning.
 
 **Deliverable:** retrospective analysis history, revision/design register, inference plan, approved material decisions, and a method-gate report.
 
@@ -299,21 +329,21 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Descriptive/correlation work**
 
-- Rebuild complete distributions, sample characteristics, denominators, and substantively important subgroup comparisons.
-- Check binary/proportional data, extreme values, ceiling/floor effects, multiple-response questions, and meaningful units.
-- Distinguish raw correlations from associations mechanically induced by shared items; report uncertainty appropriately.
-- Choose correlation methods and missingness conventions based on the actual measures. Do not present an indiscriminate significance heatmap as proof of a mechanism.
+- **M8D.01** — Rebuild complete distributions, sample characteristics, denominators, and substantively important subgroup comparisons.
+- **M8D.02** — Check binary/proportional data, extreme values, ceiling/floor effects, multiple-response questions, and meaningful units.
+- **M8D.03** — Distinguish raw correlations from associations mechanically induced by shared items; report uncertainty appropriately.
+- **M8D.04** — Choose correlation methods and missingness conventions based on the actual measures. Do not present an indiscriminate significance heatmap as proof of a mechanism.
 
 **Regression work**
 
-- Audit every historical model family and decide which answers the academic research questions.
-- Check outcome-model compatibility, functional form, collinearity, influential observations, overfitting/limited information, missingness, and support for comparisons.
-- Justify controls using temporal and conceptual roles; flag mediators, colliders, and contemporaneous proxies rather than treating “more controls” as universally better.
-- Assess heteroskedasticity/dependence and suitable uncertainty estimates. Do not mechanically cluster at a level with very few independent groups without addressing the resulting inference limits.
-- Define multiplicity families from the scientific questions and report both raw and appropriate adjusted evidence where justified.
-- Present meaningful effect sizes/associations and intervals, not only significance stars. Interpret imprecise/null estimates honestly.
-- Evaluate interactions using coherent predicted quantities/marginal effects, common support, uncertainty, and clear scales; do not infer subgroup differences from different significance levels alone.
-- Run only the recorded, threat-relevant sensitivity analyses. Preserve every specification tried and its status, including unfavorable results.
+- **M8R.01** — Audit every historical model family and decide which answers the academic research questions.
+- **M8R.02** — Check outcome-model compatibility, functional form, collinearity, influential observations, overfitting/limited information, missingness, and support for comparisons.
+- **M8R.03** — Justify controls using temporal and conceptual roles; flag mediators, colliders, and contemporaneous proxies rather than treating “more controls” as universally better.
+- **M8R.04** — Assess heteroskedasticity/dependence and suitable uncertainty estimates. Do not mechanically cluster at a level with very few independent groups without addressing the resulting inference limits.
+- **M8R.05** — Define multiplicity families from the scientific questions and report both raw and appropriate adjusted evidence where justified.
+- **M8R.06** — Present meaningful effect sizes/associations and intervals, not only significance stars. Interpret imprecise/null estimates honestly.
+- **M8R.07** — Evaluate interactions using coherent predicted quantities/marginal effects, common support, uncertainty, and clear scales; do not infer subgroup differences from different significance levels alone.
+- **M8R.08** — Run only the recorded, threat-relevant sensitivity analyses. Preserve every specification tried and its status, including unfavorable results.
 
 **Deliverable:** reproducible revised descriptive/correlation/regression tables and figures, diagnostics, inference report, and historical-versus-academic result comparison.
 
@@ -323,16 +353,16 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. First distinguish the historical solution from any proposed academic revision. Do not assume four classes or existing segment names must survive.
-2. Audit indicators, coding, estimation sample, missingness treatment, identifiability, convergence, parameter estimates, boundary behavior, and sparse response patterns.
-3. Assess sensitivity to starts/seeds and competing local optima. Record the best solutions and comparable likelihoods; a single successful run is not stability evidence.
-4. Compare feasible class counts using fit, parsimony, classification uncertainty, substantive interpretability, minimum information/class size, and reproducibility. Do not choose a count solely to fit a pre-existing narrative.
-5. Examine conditional/local-independence assumptions and indicator overlap. Diagnose sensitivity to justified feature/threshold alternatives.
-6. Report posterior probabilities, assignment uncertainty, class sizes, profiles and their uncertainty as appropriate. Class labels are interpretive summaries, not discovered natural identities.
-7. Audit downstream multinomial associations, distal-outcome comparisons, and validation claims. Classifying participants and treating that classification as error-free may distort inference.
-8. Consider an appropriate uncertainty-aware downstream method only where feasible and justified in Stata. Do not automatically introduce a complex method or install packages merely because it is available elsewhere.
-9. Distinguish internal characterization using class-defining items from validation with information not used to create the classes. Avoid circular “validation.”
-10. Preserve the coauthor's qualitative grouping/interpretation. If it does not map neatly onto statistically estimated classes, state the different analytical purposes rather than force equivalence or relabel qualitative groups.
+1. **M9.01** — First distinguish the historical solution from any proposed academic revision. Do not assume four classes or existing segment names must survive.
+2. **M9.02** — Audit indicators, coding, estimation sample, missingness treatment, identifiability, convergence, parameter estimates, boundary behavior, and sparse response patterns.
+3. **M9.03** — Assess sensitivity to starts/seeds and competing local optima. Record the best solutions and comparable likelihoods; a single successful run is not stability evidence.
+4. **M9.04** — Compare feasible class counts using fit, parsimony, classification uncertainty, substantive interpretability, minimum information/class size, and reproducibility. Do not choose a count solely to fit a pre-existing narrative.
+5. **M9.05** — Examine conditional/local-independence assumptions and indicator overlap. Diagnose sensitivity to justified feature/threshold alternatives.
+6. **M9.06** — Report posterior probabilities, assignment uncertainty, class sizes, profiles and their uncertainty as appropriate. Class labels are interpretive summaries, not discovered natural identities.
+7. **M9.07** — Audit downstream multinomial associations, distal-outcome comparisons, and validation claims. Classifying participants and treating that classification as error-free may distort inference.
+8. **M9.08** — Consider an appropriate uncertainty-aware downstream method only where feasible and justified in Stata. Do not automatically introduce a complex method or install packages merely because it is available elsewhere.
+9. **M9.09** — Distinguish internal characterization using class-defining items from validation with information not used to create the classes. Avoid circular “validation.”
+10. **M9.10** — Preserve the coauthor's qualitative grouping/interpretation. If it does not map neatly onto statistically estimated classes, state the different analytical purposes rather than force equivalence or relabel qualitative groups.
 
 **Deliverable:** LCA selection/convergence/stability and classification report, complete profiles, downstream analysis, limitations, and historical-versus-revised comparison.
 
@@ -342,13 +372,13 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Read the approved migrant and expert qualitative material as existing evidence, preserving source, wording, interpretation, and attribution.
-2. Map each academic quantitative finding to relevant literature and existing qualitative evidence: convergence, complementarity, divergence, or no direct comparison.
-3. Keep units and analytical purposes distinct. Interviews can contextualize an association; they do not automatically causally validate it.
-4. Check whether updated quantitative results affect joint conclusions or policy recommendations. Flag conflicts for author/coauthor resolution; do not alter qualitative findings to make the paper appear coherent.
-5. Validate institutional/contextual sources and dates without recoding expert interviews or changing coauthor-owned regional assessments.
-6. Clearly identify what Colombian evidence can suggest elsewhere and what regional benchmarking can and cannot establish.
-7. Build a claim-safe discussion and policy mapping: observation → interpretation → qualified implication → implementation uncertainty.
+1. **M10.01** — Read the approved migrant and expert qualitative material as existing evidence, preserving source, wording, interpretation, and attribution.
+2. **M10.02** — Map each academic quantitative finding to relevant literature and existing qualitative evidence: convergence, complementarity, divergence, or no direct comparison.
+3. **M10.03** — Keep units and analytical purposes distinct. Interviews can contextualize an association; they do not automatically causally validate it.
+4. **M10.04** — Check whether updated quantitative results affect joint conclusions or policy recommendations. Flag conflicts for author/coauthor resolution; do not alter qualitative findings to make the paper appear coherent.
+5. **M10.05** — Validate institutional/contextual sources and dates without recoding expert interviews or changing coauthor-owned regional assessments.
+6. **M10.06** — Clearly identify what Colombian evidence can suggest elsewhere and what regional benchmarking can and cannot establish.
+7. **M10.07** — Build a claim-safe discussion and policy mapping: observation → interpretation → qualified implication → implementation uncertainty.
 
 **Deliverable:** integration matrix, protected qualitative-content map, divergence/issues list, and evidence-bounded discussion outline.
 
@@ -358,17 +388,17 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Draft from the audited evidence ledger and full legacy content map, not from the condensed CFI manuscript.
-2. Build a sharp opening with research questions, actual methods, main findings, contribution, and limitations. Restore essential Colombia context that earlier condensation lost.
-3. Create a critical, connected literature argument, not a catalogue of everything read. Bring relevant scholarship into results interpretation and discussion as well as the literature section.
-4. Describe all four quantitative stages clearly and provide enough sample, measurement, regression, and LCA information to judge the study.
-5. Use the approved qualitative component within its protected boundary. Obtain coauthor approval for any journal-length excerpting/reformatting that changes its presentation.
-6. Allocate full instruments, variable/index architecture, sample diagnostics, model specifications, complete regression output, LCA diagnostics, class profiles, and justified sensitivity work to a navigable technical supplement.
-7. Keep legacy CFI public appendices separate from academic versions. Every revised exhibit identifies its input/code/version and superseded historical counterpart.
-8. Generate all statistical results, graphs, methodological diagnostics, and analytical tables from the Stata pipeline. Manually authored conceptual diagrams and variable-description tables are acceptable when source-mapped and checked; do not manually type statistical estimates into them.
-9. Embed actual tables/figures in Word, not empty placeholders or external file links. Provide editable tables and appropriate high-resolution/vector figures, clear units, denominators, notes, and source attribution.
-10. Verify every retained in-text citation and bibliographic entry, with APA consistency where required. Keep institutional/news/legal sources identifiable by type and date; retain legacy bibliographies in the research record rather than silently overwrite history.
-11. Record AI-assisted research, analysis, drafting, translation, editing, and document assembly for accurate journal-specific disclosure. Human authors remain responsible; tools are not authors.
+1. **M11.01** — Draft from the audited evidence ledger and full legacy content map, not from the condensed CFI manuscript.
+2. **M11.02** — Build a sharp opening with research questions, actual methods, main findings, contribution, and limitations. Restore essential Colombia context that earlier condensation lost.
+3. **M11.03** — Create a critical, connected literature argument, not a catalogue of everything read. Bring relevant scholarship into results interpretation and discussion as well as the literature section.
+4. **M11.04** — Describe all four quantitative stages clearly and provide enough sample, measurement, regression, and LCA information to judge the study.
+5. **M11.05** — Use the approved qualitative component within its protected boundary. Obtain coauthor approval for any journal-length excerpting/reformatting that changes its presentation.
+6. **M11.06** — Allocate full instruments, variable/index architecture, sample diagnostics, model specifications, complete regression output, LCA diagnostics, class profiles, and justified sensitivity work to a navigable technical supplement.
+7. **M11.07** — Keep legacy CFI public appendices separate from academic versions. Every revised exhibit identifies its input/code/version and superseded historical counterpart.
+8. **M11.08** — Generate all statistical results, graphs, methodological diagnostics, and analytical tables from the Stata pipeline. Manually authored conceptual diagrams and variable-description tables are acceptable when source-mapped and checked; do not manually type statistical estimates into them.
+9. **M11.09** — Embed actual tables/figures in Word, not empty placeholders or external file links. Provide editable tables and appropriate high-resolution/vector figures, clear units, denominators, notes, and source attribution.
+10. **M11.10** — Verify every retained in-text citation and bibliographic entry, with APA consistency where required. Keep institutional/news/legal sources identifiable by type and date; retain legacy bibliographies in the research record rather than silently overwrite history.
+11. **M11.11** — Record AI-assisted research, analysis, drafting, translation, editing, and document assembly for accurate journal-specific disclosure. Human authors remain responsible; tools are not authors.
 
 **Deliverable:** audited scientific master, ITD-first Word article, technical supplement, complete bibliography, exhibit index, and journal adaptation checklist.
 
@@ -378,14 +408,14 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Re-run the academic pipeline in a clean, isolated environment/output directory through the actual supported Stata entry point. Preserve legacy files; do not delete the historical output tree to simulate a clean run.
-2. Compare inputs, sample definitions, results, exported tables/figures, and final displayed numbers within declared tolerances.
-3. Audit every numerical claim, model label, confidence interval, class share, caption, and denominator against the final frozen results.
-4. Check all citations bidirectionally, including author/year consistency, publication versions, page-located support, institutional dates, and unresolved references.
-5. Render and visually inspect Word/PDF deliverables for missing or cropped graphics, empty tables, unreadable tables, bad page breaks, incorrect captions, font/style inconsistency, and unresolved fields.
-6. Apply actual journal heading and appendix requirements. Do not import the long report's table-of-contents behavior into a journal article by default.
-7. Verify blind review: author identifiers in filenames, properties, tracked changes/comments, headers, funding details, Git links, supplementary metadata, and self-references. Public replication links can reveal identity; determine the journal-compliant review route without compromising provenance.
-8. Inspect public-safe package contents for participant-level data, disclosure-prone logs, hidden spreadsheet sheets, IDs, audio, consent forms, protected literature PDFs, and credentials.
+1. **M12.01** — Re-run the academic pipeline in a clean, isolated environment/output directory through the actual supported Stata entry point. Preserve legacy files; do not delete the historical output tree to simulate a clean run.
+2. **M12.02** — Compare inputs, sample definitions, results, exported tables/figures, and final displayed numbers within declared tolerances.
+3. **M12.03** — Audit every numerical claim, model label, confidence interval, class share, caption, and denominator against the final frozen results.
+4. **M12.04** — Check all citations bidirectionally, including author/year consistency, publication versions, page-located support, institutional dates, and unresolved references.
+5. **M12.05** — Render and visually inspect Word/PDF deliverables for missing or cropped graphics, empty tables, unreadable tables, bad page breaks, incorrect captions, font/style inconsistency, and unresolved fields.
+6. **M12.06** — Apply actual journal heading and appendix requirements. Do not import the long report's table-of-contents behavior into a journal article by default.
+7. **M12.07** — Verify blind review: author identifiers in filenames, properties, tracked changes/comments, headers, funding details, Git links, supplementary metadata, and self-references. Public replication links can reveal identity; determine the journal-compliant review route without compromising provenance.
+8. **M12.08** — Inspect public-safe package contents for participant-level data, disclosure-prone logs, hidden spreadsheet sheets, IDs, audio, consent forms, protected literature PDFs, and credentials.
 
 **Deliverable:** reproducibility receipt, final claim/citation/numeric audit, layout report, privacy/blinding report, and frozen artifact manifest.
 
@@ -395,14 +425,14 @@ M3 and M4 can progress in parallel after the baseline is established. Measuremen
 
 **Work**
 
-1. Perform distinct substantive, measurement/inference, LCA, and mixed-evidence reviews. Seek genuine author or independent methodological review where available; an AI simulation is not external peer review.
-2. Stress-test contribution against the closest literature and ask what skeptical ITD reviewers could reject: DPI construct ambiguity, selection, measurement overlap, causal overclaiming, under-validated classes, or an insufficiently general argument.
-3. Resolve review findings with evidence. Limit unsupported claims instead of repeatedly searching specifications for a favorable answer.
-4. Refresh ITD rules and verify outstanding word/supplement, fees, open-access, license, prior-publication, data, ethics, AI-disclosure, and anonymity requirements.
-5. Confirm authorship/order, affiliations, funding/CFI relationship, contributions, conflicts, ethics/consent, permitted quotation/reproduction, and restricted data availability with the authors.
-6. Assemble main manuscript, separate title page, abstract/keywords, cover letter, declarations, technical supplement, figures/tables, and replication access instructions as actually required.
-7. Prepare a fallback adaptation memo for DPR, International Migration, and Migration and Development. Do not create three diverging scientific manuscripts before the first submission is settled.
-8. Obtain explicit author approval of the final scientific version and separate explicit authority for submission/public release.
+1. **M13.01** — Perform distinct substantive, measurement/inference, LCA, and mixed-evidence reviews. Seek genuine author or independent methodological review where available; an AI simulation is not external peer review.
+2. **M13.02** — Stress-test contribution against the closest literature and ask what skeptical ITD reviewers could reject: DPI construct ambiguity, selection, measurement overlap, causal overclaiming, under-validated classes, or an insufficiently general argument.
+3. **M13.03** — Resolve review findings with evidence. Limit unsupported claims instead of repeatedly searching specifications for a favorable answer.
+4. **M13.04** — Refresh ITD rules and verify outstanding word/supplement, fees, open-access, license, prior-publication, data, ethics, AI-disclosure, and anonymity requirements.
+5. **M13.05** — Confirm authorship/order, affiliations, funding/CFI relationship, contributions, conflicts, ethics/consent, permitted quotation/reproduction, and restricted data availability with the authors.
+6. **M13.06** — Assemble main manuscript, separate title page, abstract/keywords, cover letter, declarations, technical supplement, figures/tables, and replication access instructions as actually required.
+7. **M13.07** — Prepare a fallback adaptation memo for DPR, International Migration, and Migration and Development. Do not create three diverging scientific manuscripts before the first submission is settled.
+8. **M13.08** — Obtain explicit author approval of the final scientific version and separate explicit authority for submission/public release.
 
 **Deliverable:** review reports, response/decision log, final ITD packet, submission-readiness checklist, and fallback adaptation memo.
 
