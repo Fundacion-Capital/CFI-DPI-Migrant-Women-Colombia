@@ -16,13 +16,14 @@ if strpos("`cfi_out'", "`cfi_repo'/4 Academic Submission/audit-local/") != 1 | s
 confirm file "`cfi_out'/baseline_receipt.json"
 frame change default
 assert _N == 0 & c(k) == 0
-tempfile cfi_counts cfi_fields cfi_diff cfi_links cfi_flow cfi_versions
-tempname cfi_cp cfi_fp cfi_dp cfi_lp cfi_sp
+tempfile cfi_counts cfi_fields cfi_diff cfi_links cfi_flow cfi_versions cfi_orders
+tempname cfi_cp cfi_fp cfi_dp cfi_lp cfi_sp cfi_op
 postfile `cfi_cp' str20 source_id long N K missing_keys byte unique_keys using "`cfi_counts'", replace
 postfile `cfi_fp' str20 source_id str32 variable str12 storage_type using "`cfi_fields'", replace
 postfile `cfi_dp' str32 comparison str32 variable str12 master_type str12 reference_type long compared strict_differences equivalent_differences invalid_numeric_text using "`cfi_diff'", replace
 postfile `cfi_lp' str32 comparison long master_N reference_N matched master_only reference_only shared_variables master_only_variables reference_only_variables using "`cfi_links'", replace
 postfile `cfi_sp' str50 check_name long before_N excluded_N retained_N using "`cfi_flow'", replace
+postfile `cfi_op' str32 comparison long matched absolute_position_differences relative_order_differences using "`cfi_orders'", replace
 
 capture program drop cfi_source_compare
 program define cfi_source_compare, rclass
@@ -83,6 +84,37 @@ program define cfi_source_compare, rclass
     return scalar equivalent = `cfi_total_equiv'
 end
 
+/* frlink indices refer to a sorted reference, not its original physical rows.
+   Capture positions before linking in disposable copies, never from link indices.
+   Relative order is meaningful for a subset; absolute positions need not agree. */
+capture program drop cfi_order_compare
+program define cfi_order_compare, rclass
+    syntax, MASTER(name) REFERENCE(name)
+    frame copy `master' cfi_order_m
+    frame copy `reference' cfi_order_r
+    frame cfi_order_m: generate long __cfi_master_pos = _n
+    frame cfi_order_r: generate long __cfi_reference_pos = _n
+    frame change cfi_order_m
+    quietly frlink 1:1 KEY, frame(cfi_order_r) generate(__cfi_order_link)
+    quietly frget __cfi_refpos = __cfi_reference_pos, from(__cfi_order_link)
+    assert __cfi_master_pos == _n
+    quietly count if !missing(__cfi_order_link)
+    local cfi_matched = r(N)
+    quietly count if !missing(__cfi_order_link) & __cfi_master_pos != __cfi_refpos
+    local cfi_absolute = r(N)
+    quietly keep if !missing(__cfi_order_link)
+    generate long __cfi_relative_master = _n
+    sort __cfi_refpos
+    quietly count if __cfi_relative_master != _n
+    local cfi_relative = r(N)
+    frame change default
+    frame drop cfi_order_m cfi_order_r
+    frame change `master'
+    return scalar matched = `cfi_matched'
+    return scalar absolute = `cfi_absolute'
+    return scalar relative = `cfi_relative'
+end
+
 /* Runnable regression check: shuffled keys, true change, numeric/text equivalence,
    invalid text, and an extended missing must not be hidden. Synthetic values only. */
 frame create cfi_test_m
@@ -107,6 +139,24 @@ assert r(equivalent)==2
 frame change default
 frame drop cfi_test_m cfi_test_r
 display "PASS: key-aligned cell comparison self-check"
+
+/* Synthetic regression check: identical reverse-key files must agree despite
+   reordered reference-link indices; a subset differs only in absolute position. */
+frame create cfi_order_test_r
+frame cfi_order_test_r: quietly set obs 3
+frame cfi_order_test_r: generate str1 KEY = string(4-_n)
+frame copy cfi_order_test_r cfi_order_test_m
+cfi_order_compare, master(cfi_order_test_m) reference(cfi_order_test_r)
+assert r(matched)==3 & r(absolute)==0 & r(relative)==0
+frame cfi_order_test_m: quietly drop if KEY=="2"
+cfi_order_compare, master(cfi_order_test_m) reference(cfi_order_test_r)
+assert r(matched)==2 & r(absolute)==1 & r(relative)==0
+frame cfi_order_test_m: gsort KEY
+cfi_order_compare, master(cfi_order_test_m) reference(cfi_order_test_r)
+assert r(matched)==2 & r(relative)==2
+frame change default
+frame drop cfi_order_test_m cfi_order_test_r
+display "PASS: original-position and subset-order self-check"
 
 /* Loading creates temporary frames only. Do not run the historical master here. */
 foreach cfi_source in NEW_RAW OLD_RAW AUDIT CODED NO_PII {
@@ -140,6 +190,13 @@ foreach cfi_source in NEW_RAW OLD_RAW AUDIT CODED NO_PII {
         post `cfi_fp' ("`cfi_source'") ("`cfi_v'") ("`cfi_t'")
     }
 }
+/* Before any source comparison can sort an original reference frame. */
+cfi_order_compare, master(NEW_RAW) reference(AUDIT)
+post `cfi_op' ("NEW_AUDIT") (r(matched)) (r(absolute)) (r(relative))
+cfi_order_compare, master(OLD_RAW) reference(AUDIT)
+post `cfi_op' ("OLD_AUDIT") (r(matched)) (r(absolute)) (r(relative))
+cfi_order_compare, master(AUDIT) reference(CODED)
+post `cfi_op' ("AUDIT_CODED") (r(matched)) (r(absolute)) (r(relative))
 cfi_source_compare, master(NEW_RAW) reference(OLD_RAW) tag("NEW_OLD") diff(`cfi_dp') links(`cfi_lp')
 cfi_source_compare, master(NEW_RAW) reference(AUDIT) tag("NEW_AUDIT") diff(`cfi_dp') links(`cfi_lp')
 cfi_source_compare, master(NEW_RAW) reference(CODED) tag("NEW_CODED") diff(`cfi_dp') links(`cfi_lp')
@@ -186,6 +243,7 @@ postclose `cfi_fp'
 postclose `cfi_dp'
 postclose `cfi_lp'
 postclose `cfi_sp'
+postclose `cfi_op'
 frame create cfi_receipt
 frame change cfi_receipt
 quietly use "`cfi_counts'", clear
@@ -198,6 +256,8 @@ quietly use "`cfi_links'", clear
 quietly export delimited using "`cfi_out'/stata_key_schema_containment.csv", replace quote
 quietly use "`cfi_flow'", clear
 quietly export delimited using "`cfi_out'/stata_historical_filter_flow.csv", replace quote
+quietly use "`cfi_orders'", clear
+quietly export delimited using "`cfi_out'/stata_original_order_comparisons.csv", replace quote
 frame change default
 frame drop NEW_RAW OLD_RAW AUDIT CODED NO_PII cfi_filter cfi_version cfi_receipt
 assert _N==0 & c(k)==0

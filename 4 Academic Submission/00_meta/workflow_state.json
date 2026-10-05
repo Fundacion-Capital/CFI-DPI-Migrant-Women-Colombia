@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-05: clean main@fb031129013e2b042a95eed066fbd5c0dad086a3 entry; 664 original archive occurrences and seven code/manuscript pins unchanged. Owner-confirmed restricted access; exact 35-copy authority implemented with local byte/read-back checks. Source cohort recovered; time/order/form authority unresolved. Temporary read-back cleanup blocked; remote payload hashes unavailable.",
+    "last_recovery_probe": "2026-10-05: clean main@c4be81ad1d5f1ff7be8aa0feffc42fd43e28c63e entry; historical-input checks through Stata MCP. Original-position diagnostic corrected: all 490 raw/audit positions agree. Five used spreadsheets matched; 42 sheet imports and version-sensitive coding ledger complete. Owner confirms clock reports/settings no longer exist; preserve audit/coded clocks and disclose raw-to-audit limit. 765 overlapping source pins unchanged; no estimator or external mutation.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -69,10 +69,10 @@
       "historical-estimates-not-reproduced",
       "native-compiler-platform-failure",
       "confirmed-sensitive-data-release-hold",
-      "historical-clock-and-row-order-authority-unresolved",
-      "four-submitted-form-definitions-not-yet-matched",
       "remote-preserved-payload-checksums-unavailable",
-      "protected-temporary-readback-copies-await-owner-cleanup"
+      "protected-temporary-readback-copies-await-owner-cleanup",
+      "historical-clock-provenance-unavailable-no-raw-to-audit-certification",
+      "version-aware-measurement-geography-and-structural-missingness-review-pending"
     ],
     "last_assembly": ""
   },
@@ -109,11 +109,11 @@
       "README.md: PRIV-01 confirmed historical NoPII contact retention",
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
-      "README.md: DATA-02 recovered raw differs in timestamps and order; historical-input authority unresolved",
-      "README.md: MEAS-01 exact definitions for four submitted versions not matched",
+      "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
+      "README.md: MEAS-01 all five used spreadsheet definitions matched; geography meaning, 17 later-added text fields and changed early choices require M4/M5 version-aware reconciliation",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
     ],
-    "last_audit": "2026-10-05 bounded Stata-MCP source/form comparison and historical filter replay; not a completed M4/M5/M6 scientific audit."
+    "last_audit": "2026-10-05 historical-input source, clock, corrected-order and seven-definition/six-sheet Stata-MCP audit; not completed M4/M5/M6 scientific validation."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -177,7 +177,7 @@
     "blocking_findings": [
       "Full numerical, citation, consent/ethics, rights and construct reconciliation remain pending.",
       "Genuine contact data in Git/history remain on release hold; exact 35-version preservation is not anonymous release or history remediation.",
-      "New raw recovers all audit/coded submission keys and non-time cells; historical timestamps, deterministic ordering and four instrument definitions still require authority.",
+      "New raw recovers cohort/non-time cells and original ordering; original export clock is unverified and reports/settings unavailable. Five used spreadsheet definitions now matched, but version-sensitive coding must be reconciled without automatic recoding.",
       "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification."
     ],
     "last_audit": ""
@@ -231,7 +231,7 @@
     "environment_record": "README.md#pipeline-status-and-execution-contract",
     "frozen_at_stage": null,
     "data_availability_statement": "",
-    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup.",
+    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup. Superseding input contract: original raw/audit sequence agrees after correcting sorted-link-index misuse; all five used spreadsheets matched. Export-clock reports/settings no longer exist per owner; frozen audit/coded clocks are stored historical references, not exact raw-to-audit reconstruction. Version-aware meaning and transitive dependencies remain pending M4/M5.",
     "runtime_minutes": null,
     "last_rebuild_check": ""
   },
@@ -285,7 +285,18 @@
     "restricted_preservation_allowlist": "audit-local/intake/source-refresh-fb03112/restricted_preservation_allowlist.csv",
     "restricted_preservation_copy_receipt": "audit-local/intake/source-refresh-fb03112/restricted_preservation_copy_receipt.csv",
     "restricted_preservation_restore_counts": "audit-local/intake/source-refresh-fb03112/stata_preserved_restore_counts.csv",
-    "restricted_preservation_final_source_checks": "audit-local/intake/source-refresh-fb03112/final_source_preservation_checks.json"
+    "restricted_preservation_final_source_checks": "audit-local/intake/source-refresh-fb03112/final_source_preservation_checks.json",
+    "historical_input_contract": "HISTORICAL_INPUT_CONTRACT.md",
+    "historical_input_private_review": "audit-local/intake/input-contract-c4be81a/historical_input_contract_review.md",
+    "historical_input_query_receipts": "audit-local/intake/input-contract-c4be81a/workflow_query_receipts.json",
+    "historical_input_validation": "audit-local/intake/input-contract-c4be81a/input_contract_validation.json",
+    "historical_input_source_retention": "audit-local/intake/input-contract-c4be81a/source_retention_checks.json",
+    "historical_input_order_receipt": "audit-local/intake/input-contract-c4be81a/stata_original_order_comparisons.csv",
+    "historical_input_instrument_versions": "audit-local/intake/input-contract-c4be81a/instrument_versions.csv",
+    "historical_input_instrument_cells": "audit-local/intake/input-contract-c4be81a/instrument_cells.csv",
+    "historical_input_choice_lists": "audit-local/intake/input-contract-c4be81a/instrument_choice_lists.csv",
+    "historical_input_clock_disposition": "audit-local/intake/input-contract-c4be81a/owner_clock_disposition.json",
+    "historical_input_code_locators": "audit-local/intake/input-contract-c4be81a/historical_input_locators.csv"
   },
   "decisions": [
     {
@@ -375,7 +386,31 @@
     {
       "date": "2026-10-05",
       "decision": "Existing main.tex updated in place and left open. Post-edit built-in compilation still fails during platform initialization: Unable to find standard directories for platform. No replacement PDF, TeX installation, tab or live Overleaf settings change. M0 and scientific gates remain pending/in progress."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Owner supplied four legacy quantitative spreadsheet definitions. Hashes/metadata and Stata-MCP settings match all four previously missing submitted labels; all five used versions now have spreadsheets. All six sheets of seven supplied definitions compared; independent compiled XML/device deployment not certified."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Superseding ordering evidence: prior 489/490 diagnostic compared sorted frlink indices with original positions. Corrected helper captures original positions before linking and has reversed/full/subset/shuffled assertions. New raw and audit have zero original-position differences; coded subset preserves relative order. Historical estimators unchanged/unrun."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Owner confirms SurveyCTO export reports/settings no longer exist. Record unavailable causal evidence; preserve audit/coded clocks unchanged, retain refreshed raw separately, and do not invent a timezone/seconds conversion or claim exact raw-to-audit clock reconstruction. Evidence recovery closed as unavailable, not verified."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Version-aware measurement risk established: earliest used geography code 4 means Other, later Soacha; retained coded sample contains an affected combination. Seventeen text definitions were added after the earliest versions, and additional early choice lists differ. Queue M4/M5 reconciliation and transitive analytical mapping; no recoding, exclusion, index, regression, LCA or qualitative change."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Historical-input bounded workflow verifies 765 overlapping byte checks: 698 entry archive occurrences, seven authored/manuscript pins, 20 project downloads, four new definitions and 36 selected restricted sources. All retained. Named Stata/asset paths resolve without installations; source version 16 with runtime Stata 19 IC is not exact historical replication. Next: version-aware measurement/dependency register before protected replay and refreshed anonymous proposal; M0 and scientific gates remain open."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Existing main.tex preparation checkpoint updated in place in the same editor. Built-in compiler recheck fails during initialization: Unable to find standard directories for platform. Compilation/layout remains unverified; no alternative PDF, compiler installation, different tab or Overleaf synchronization."
     }
   ],
-  "last_updated_beijing": "2026-10-05T23:05:35+08:00"
+  "last_updated_beijing": "2026-10-06T00:42:03+08:00"
 }
