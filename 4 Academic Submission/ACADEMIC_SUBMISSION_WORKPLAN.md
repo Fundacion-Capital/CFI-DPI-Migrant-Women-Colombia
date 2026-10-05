@@ -2,7 +2,7 @@
 
 Project: Digital public infrastructure and migrant women's financial inclusion in Colombia  
 Plan date: 5 October 2026, Europe/Berlin  
-Status: planning complete; access and orientation checks performed; substantive scientific audit and re-estimation NOT yet performed  
+Status: implementation in progress; bounded source reconciliation and selected-version preservation verified with explicit limits; historical estimator replication, revised estimation and scientific milestone gates remain pending
 Submission sequence agreed by the author: Information Technology for Development → Development Policy Review → International Migration → Migration and Development
 
 ## 1. Purpose and operating decisions
@@ -161,29 +161,50 @@ The fourteen milestones remain the governing sequence. Each of the 124 work item
 
 Before executing any work item, split it into source-specific child checks until each check answers one evidence question. Record: parent/task ID, pinned inputs, permitted action, method/tool, actual output, acceptance test, result, residual limitation and next approval/dependency. Never mark a parent complete while a required child is unresolved. Preserve historical receipts and distinguish `PLAN_COMPLETE`, `CHECK_PASS`, `CHECK_FAIL`, `REVIEW_REQUIRED` and `OWNER_APPROVAL_PENDING`; none is interchangeable with public-release approval. Future variable/model-specific children are instantiated after M2/M4 inventory rather than guessed in advance.
 
-M0 is **not complete**. Read-only M1/M2 intake overlaps with M0, but no Baseline, Data, Measurement, Replication or revision gate has passed. The latest preparation commit is `913798591f08bcd8267fad8ace3aa0c4fba02f6b`; its working tree was clean at this workflow's entry. The present M0.06 workflow verifies storage and specifies a release boundary only: it must not change historical samples, measurements, regressions, LCA or substantive results.
+M0 is **not complete**. Read-only M1/M2 intake overlaps with M0, but no Baseline, Data, Measurement, Replication or revision gate has passed. The current workflow entered a clean tree at `main@fb031129013e2b042a95eed066fbd5c0dad086a3`. The owner confirmed restricted Dropbox membership/inherited access and approved 35 preservation copies. Source reconciliation and those selected-version checks are delivered with explicit limits; historical samples, measurements, regressions, LCA and substantive results remain unchanged.
 
 | Child of M0.06 | Single check or action | Current disposition / acceptance test |
 |---|---|---|
 | M0.06a | Refresh Git identity and editing boundary | CHECK_PASS: main and entry commit recorded; no pre-existing edits overwritten. Repeat at every workflow. |
-| M0.06b | Hash the actual local restricted-source candidates | CHECK_PASS for 347 Dropbox and 315 OneDrive file occurrences; no unreadable rows. Readability is not confidentiality. |
-| M0.06c | Match each selected sensitive Git path/version to a protected copy | CHECK_FAIL for preservation: 0 of 33 selected targets has a byte-identical local Dropbox counterpart. A raw/coded workbook is not a versioned-output backup. |
-| M0.06d | Check relevant cloud listings and accessible sharing metadata | REVIEW_REQUIRED: scoped listing and link receipts captured; archive access control is not certified. Owner action required; no sharing settings changed. |
+| M0.06b | Hash actual local restricted-source candidates | CHECK_PASS: all 664 entry occurrences (349 Dropbox/315 OneDrive) retain their hashes. Final inventory: 389/315, including 35 approved copies and five newly available Dropbox files matching prior OneDrive bytes. Readability is not confidentiality. |
+| M0.06c | Match selected sensitive Git versions to protected copies | CHECK_PASS for all 33 selected targets; two older input versions are also preserved. All 35 source/destination SHA-256 and sizes agree. Not account-wide/all-historical-blob completeness. |
+| M0.06d | Check scoped listings and access evidence | OWNER_CONFIRMED restricted members/inherited parent access; ten scoped owned-link lists and the new archive list have no owned links, pagination complete. Independent membership/inheritance enumeration unavailable. No sharing controls changed. |
 | M0.06e | Pin the metadata-query source catalogue | CHECK_PASS: 36 sources, comprising 33 sensitive target versions and three actual Dropbox input files. Not all historical blobs or remote copies. |
-| M0.06f | Inventory every field in the selected sources using Stata MCP | CHECK_PASS: 8,964 field occurrences and 679 distinct names; each source's field count reconciles to K; only metadata and aggregate counts exported. |
+| M0.06f | Inventory fields using Stata MCP | Prior CHECK_PASS snapshot: 8,964 field occurrences/679 names across 36 selected sources. Fresh source reconciliation checks all shared fields for five datasets. Refresh disclosure metadata for the recovered raw cohort before an anonymous-field approval; snapshot counts are not current certification. |
 | M0.06g | Assign a proposed release treatment to every inventoried field | PLAN_COMPLETE: 679 proposal rows; contacts, keys, personnel/device/audit information, text, coded responses, quasi-identifiers, analytical fields and posterior vectors distinguished. Zero fields release approved. |
 | M0.06h | Locate existing Stata code references for each field | REVIEW_REQUIRED: 5,654 exact/wildcard lexical candidate locators. Dynamic macros and transitive dependencies still require semantic review. No explicit hit does not prove unused. |
-| M0.06i | Reconcile current input versions before declaring a replication baseline | CHECK_FAIL for baseline certification: the named raw workbook imports 120 rows; the audit dataset has 490 and coded datasets 423. Trace the historical export and preparation run in M1/M4. Do not alter counts or infer attrition. |
-| M0.06j | Specify disclosure and exact scientific-parity tests | PLAN_COMPLETE: protocol written; joint disclosure, cell-by-cell parity and clean replication are not yet executed. |
+| M0.06i | Reconcile input versions before certifying replication baseline | COHORT_CHECK_PASS: refreshed raw 490 keys; all audit/coded keys and non-time cells match; unchanged filters reproduce exactly 423 coded keys. REVIEW_REQUIRED: timestamp shifts, 489 changed row positions and unmatched definitions for four submitted form versions. |
+| M0.06j | Specify disclosure and scientific-parity tests | PLAN_COMPLETE; bounded raw/audit/coded cell and exclusion replay now pass. Joint disclosure, full construct/index parity and clean estimator replication remain pending. |
 | M0.06k | Verify originals unchanged and private receipts excluded from Git | CHECK_PASS only after fresh source/code hashes, ignore/staging checks and MCP frame cleanup; record evidence in the local validation receipt. |
 | M0.06l | Review this bounded proposal and its unresolved risks | Proposal review only; no anonymity certificate, scientific gate or publication approval. Keep known gaps explicit in the handoff. |
-| M0.06m | Obtain the owner's exact preservation and cleanup scope | OWNER_APPROVAL_PENDING: review target/version manifest and verified restricted destination before any copying, untracking, deletion or history rewrite. |
-| M0.06n | Preserve selected originals in approved restricted Dropbox storage | PENDING separate workflow: access controls verified first, then approved copies, SHA-256/size reconciliation and restore check. Never remove the sole copy. |
+| M0.06m | Obtain exact preservation and cleanup authority | OWNER_APPROVED creation and copying of the exact 35 versions; implemented. No original deletion, Git cleanup/history rewrite, commit, push or Overleaf synchronization included. Separate anonymous-field and cleanup authority remains pending. |
+| M0.06n | Preserve approved restricted originals and verify restoration | SELECTED_COPY_CHECK_PASS: 35 SHA-256/size matches, 35 remote paths/sizes, 35 Stata dimension/readability passes. Remote payload checksum unavailable. Protected temporary read-back copies remain after policy-blocked cleanup; owner housekeeping required. All originals retained. |
 | M0.06o | Implement the approved anonymous derivative and isolated export routing | PENDING separate workflow: Stata MCP only; private crosswalk; exact variable allowlist; no unrestricted whole-record export; no scientific changes. |
 | M0.06p | Validate disclosure, scientific parity and historical-exposure remediation | PENDING: adversarial linkage review, exact retained-cell/sample/index parity, protected historical replication and separately approved Git/history treatment. Stop if privacy and exact reproduction conflict. |
 | M0.06q | Obtain explicit public-release/Overleaf synchronization approval | OWNER_APPROVAL_PENDING after all required checks. A safe local artifact is not automatically authorized for publication. |
 
-The private source catalogue, field specification, code locators, sharing receipts and test protocol are in ignored `audit-local/intake/release-spec-9137985/`. The latest handoff points to the owner decisions required next. Safe read-only authority, ethics, rights and literature work may continue while releases remain held; revised estimation may not bypass M7.
+The earlier source catalogue, field proposal and test protocol remain preserved in ignored `audit-local/intake/release-spec-9137985/`. Current source reconciliation, 35-version preservation and housekeeping limits are recorded in ignored `audit-local/intake/source-refresh-fb03112/`. The next dependency is the historical clock/order/form input contract, followed by a refreshed semantic/disclosure proposal; the approved copies do not require approval again. Safe authority, ethics, rights and literature work may continue while release is held; revised estimation may not bypass M7.
+
+#### Current source-refresh/preservation child evidence
+
+These children refine M0.06i/n; they do not replace or renumber the 124 primary work items. A successful bounded check does not pass the parent historical-baseline gate.
+
+| Child | Exact check and evidence | Disposition / remaining dependency |
+|---|---|---|
+| M0.06i.1 | Downloads/archive hashes and source pins | CHECK_PASS: raw and form pairs match; historical code/manuscript pins unchanged. |
+| M0.06i.2 | Five dataset key/schema checks | CHECK_PASS: unique nonmissing keys; all 490 audit and 423 coded keys contained in refreshed raw. |
+| M0.06i.3 | Every shared field, key-aligned | CHECK_PASS for non-time cells; three timestamp fields differ. No automatic conversion or recoding. |
+| M0.06i.4 | Exact historical sequential exclusions in temporary frames | CHECK_PASS: 490 → 486 → 478 → 423; final keys equal stored coded keys. Not a sample/construct gate. |
+| M0.06i.5 | Clock offsets and calendar-day dependency | REVIEW_REQUIRED: approximately +6h36s versus audit; original code derives fecha. Establish export-clock authority. |
+| M0.06i.6 | Raw row order | REVIEW_REQUIRED: 489 of 490 positions change. Lock deterministic ordering/RNG before historical replay. |
+| M0.06i.7 | Six definition sheets and exact duplicate-preserving choices | CHECK_PASS: survey/help unchanged; 771 old choices retained plus one new departamento option. Existing ws duplicate retained; semantic relevance requires M5 review. |
+| M0.06i.8 | Submitted form versions against archived definition labels | REVIEW_REQUIRED: five used versions; current definition matches one, older label matches none. Recover/reconcile four missing exact definitions. |
+| M0.06n.1 | Owner-approved normalized 35-path allowlist and destination preflight | CHECK_PASS: explicit authority; no target overwritten and every source retained. |
+| M0.06n.2 | Copy byte identity and sizes | CHECK_PASS: 35/35, 20,505,205 bytes. Restricted originals, no anonymous dataset created. |
+| M0.06n.3 | Original/archive and code/manuscript byte retention | CHECK_PASS: 664 entry occurrences and seven code/manuscript pins unchanged; five new local counterparts reconciled separately. |
+| M0.06n.4 | Complete remote archive listing and sharing evidence | CHECK_PASS for 35 paths/sizes, no owned archive link; remote SHA-256/member enumeration unavailable, not claimed. |
+| M0.06n.5 | Restorable preserved files through Stata MCP | CHECK_PASS: 35/35 expected dimensions. Short hash-identical private copies bypassed Windows Excel path length; source frames empty. |
+| M0.06n.6 | Dispose of temporary verification duplicates | OWNER_ACTION_REQUIRED: removal blocked before execution. Exact protected temporary folder is recorded privately; all 35 duplicates remain, originals untouched. |
 
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
@@ -437,6 +458,7 @@ The private source catalogue, field specification, code locators, sharing receip
 **Deliverable:** review reports, response/decision log, final ITD packet, submission-readiness checklist, and fallback adaptation memo.
 
 **Completion:** packet is ready for author-controlled submission, with no outstanding critical/major issue affecting its argument or compliance. This status does NOT authorize clicking Submit, emailing an editor, posting a preprint, or pushing an academic release.
+
 
 ## 6. Quantitative change control
 

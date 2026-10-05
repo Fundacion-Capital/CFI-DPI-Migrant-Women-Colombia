@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-05T13:28:15Z: main@9137985; clean entry checkout after owner's prior preparation commit. M0.06 metadata/storage proposal complete; originals and historical code unchanged. Preservation, restricted access, raw-input lineage, disclosure/parity and release/synchronization remain held; no new commit/push or cloud change.",
+    "last_recovery_probe": "2026-10-05: clean main@fb031129013e2b042a95eed066fbd5c0dad086a3 entry; 664 original archive occurrences and seven code/manuscript pins unchanged. Owner-confirmed restricted access; exact 35-copy authority implemented with local byte/read-back checks. Source cohort recovered; time/order/form authority unresolved. Temporary read-back cleanup blocked; remote payload hashes unavailable.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -69,8 +69,10 @@
       "historical-estimates-not-reproduced",
       "native-compiler-platform-failure",
       "confirmed-sensitive-data-release-hold",
-      "restricted-archive-access-and-preservation-unverified",
-      "current-raw-input-not-full-coded-cohort"
+      "historical-clock-and-row-order-authority-unresolved",
+      "four-submitted-form-definitions-not-yet-matched",
+      "remote-preserved-payload-checksums-unavailable",
+      "protected-temporary-readback-copies-await-owner-cleanup"
     ],
     "last_assembly": ""
   },
@@ -105,12 +107,13 @@
       "README.md: SCOPE-01",
       "README.md: NUM-01",
       "README.md: PRIV-01 confirmed historical NoPII contact retention",
-      "README.md: PRIV-02 confirmed sensitive-data exposure; proposal only, remediation not performed",
-      "README.md: PRIV-03 restricted archive access-control certification unresolved",
-      "README.md: PRIV-04 selected sensitive Git versions lack verified permanent preservation",
-      "README.md: DATA-01 raw/audit/coded input versions require reconciliation"
+      "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
+      "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
+      "README.md: DATA-02 recovered raw differs in timestamps and order; historical-input authority unresolved",
+      "README.md: MEAS-01 exact definitions for four submitted versions not matched",
+      "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
     ],
-    "last_audit": ""
+    "last_audit": "2026-10-05 bounded Stata-MCP source/form comparison and historical filter replay; not a completed M4/M5/M6 scientific audit."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -156,10 +159,10 @@
       "REPL-01",
       "PRIV-01",
       "PRIV-02",
-      "PRIV-03",
       "PRIV-04",
-      "DATA-01",
-      "LIT-01"
+      "LIT-01",
+      "DATA-02",
+      "MEAS-01"
     ],
     "last_claim_audit": ""
   },
@@ -172,9 +175,10 @@
     "unsupported_claims": 0,
     "unverified_citations": 0,
     "blocking_findings": [
-      "Full numerical and citation reconciliation has not been completed.",
-      "Author-confirmed genuine contact data in current and historical Git material; release/synchronization held pending separately authorized remediation.",
-      "Restricted archive access/preservation is not certified and the current raw workbook omits most coded keys; storage and input provenance decisions remain open."
+      "Full numerical, citation, consent/ethics, rights and construct reconciliation remain pending.",
+      "Genuine contact data in Git/history remain on release hold; exact 35-version preservation is not anonymous release or history remediation.",
+      "New raw recovers all audit/coded submission keys and non-time cells; historical timestamps, deterministic ordering and four instrument definitions still require authority.",
+      "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification."
     ],
     "last_audit": ""
   },
@@ -227,7 +231,7 @@
     "environment_record": "README.md#pipeline-status-and-execution-contract",
     "frozen_at_stage": null,
     "data_availability_statement": "",
-    "archive_plan": "Owner-designated permanent restricted original/PII storage in Dropbox; public GitHub may contain only an owner-approved, disclosure-reviewed anonymous derivative and safe code/exhibits. Read-only M0.06 verification/specification complete as a proposal, not archive certification: access-control review unresolved and 0 of 33 selected sensitive path/version targets has a byte-identical local Dropbox counterpart. Resolve access and approve exact preservation scope before any copying/cleanup; reconcile historical raw-input versions, semantic dependencies and existing Git/history exposure separately. No transfer, anonymous dataset or cleanup performed; no restricted data in Overleaf. If exact reproduction conflicts with anonymity, escalate rather than alter science silently.",
+    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup.",
     "runtime_minutes": null,
     "last_rebuild_check": ""
   },
@@ -270,7 +274,18 @@
     "release_cloud_access_receipts": "audit-local/intake/release-spec-9137985/cloud_access_receipts.json",
     "release_query_receipts": "audit-local/intake/release-spec-9137985/stata_query_receipts.json",
     "release_key_counts": "audit-local/intake/release-spec-9137985/stata_baseline_key_counts.csv",
-    "release_key_containment": "audit-local/intake/release-spec-9137985/stata_baseline_key_containment.csv"
+    "release_key_containment": "audit-local/intake/release-spec-9137985/stata_baseline_key_containment.csv",
+    "source_refresh_baseline": "audit-local/intake/source-refresh-fb03112/baseline_receipt.json",
+    "source_refresh_review": "audit-local/intake/source-refresh-fb03112/source_refresh_and_preservation_review.md",
+    "source_refresh_validation": "audit-local/intake/source-refresh-fb03112/source_refresh_validation.json",
+    "source_refresh_query_receipts": "audit-local/intake/source-refresh-fb03112/workflow_query_receipts.json",
+    "source_refresh_key_comparison": "audit-local/intake/source-refresh-fb03112/stata_key_schema_containment.csv",
+    "source_refresh_field_comparison": "audit-local/intake/source-refresh-fb03112/stata_field_differences.csv",
+    "source_refresh_historical_filter_replay": "audit-local/intake/source-refresh-fb03112/stata_historical_filter_flow.csv",
+    "restricted_preservation_allowlist": "audit-local/intake/source-refresh-fb03112/restricted_preservation_allowlist.csv",
+    "restricted_preservation_copy_receipt": "audit-local/intake/source-refresh-fb03112/restricted_preservation_copy_receipt.csv",
+    "restricted_preservation_restore_counts": "audit-local/intake/source-refresh-fb03112/stata_preserved_restore_counts.csv",
+    "restricted_preservation_final_source_checks": "audit-local/intake/source-refresh-fb03112/final_source_preservation_checks.json"
   },
   "decisions": [
     {
@@ -332,7 +347,35 @@
     {
       "date": "2026-10-05",
       "decision": "Edited existing main.tex preparation record in place; built-in compile recheck still fails with Unable to find standard directories for platform. Source preserved in the same editor; no replacement PDF, compiler installation, tab or live Overleaf synchronization."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Owner confirms project-folder members and inherited parent access are restricted to the authorized research team. Ten scoped owned-link listings return none; independent member/inheritance enumeration is unavailable through connector. Sharing controls not changed."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Owner explicitly authorizes exact 35-version preservation only: 33 selected Git path/version targets plus older raw/form. Copies complete; 35 source/destination hash/size matches, 35 Stata read-backs and 35 complete remote path/size matches. Sources untouched. No original deletion, Git cleanup/history rewrite, stage/commit/push or Overleaf sync authorized or performed."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Superseding source evidence: downloaded/Dropbox raw and form bytes agree. New raw has all 490 audit and 423 coded keys; all shared non-time cells agree. Unchanged preparation restrictions reproduce exactly 423 coded keys. This resolves missing-cohort concern, not sample/measurement/replication certification. Three timestamp fields and 489 row positions differ; do not silently repin."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Definition sheets compare through Stata MCP: survey/help unchanged; all 771 old choice rows retained plus one departamento option. Older archived version 2602160713 is not a submitted version; current 2602120658 matches only one of five used versions. Recover/reconcile four remaining definitions; retain existing ws duplicate without automatic scientific recode."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Final archive recheck verifies 664 entry files and seven code/manuscript pins unchanged. Five newly locally available Dropbox files match prior OneDrive bytes, separate from the 35 authorized copies. No unverified cause or synchronization-control change inferred."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Windows Excel long-path failure required 35 protected hash-identical temporary read-back copies. All reopen and source frames are empty. Cleanup was rejected before execution by tool policy; exact protected directory is recorded privately for owner removal. Originals retained; remote payload SHA-256 unavailable."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Existing main.tex updated in place and left open. Post-edit built-in compilation still fails during platform initialization: Unable to find standard directories for platform. No replacement PDF, TeX installation, tab or live Overleaf settings change. M0 and scientific gates remain pending/in progress."
     }
   ],
-  "last_updated_beijing": "2026-10-05T21:28:15+08:00"
+  "last_updated_beijing": "2026-10-05T23:05:35+08:00"
 }
