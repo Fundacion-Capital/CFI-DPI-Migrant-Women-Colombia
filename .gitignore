@@ -1,0 +1,18 @@
+# Local-only academic audit material: never send source extracts or restricted data to GitHub/Overleaf.
+/4 Academic Submission/audit-local/
+/graphify-out/
+/1 Code/graphify-out/
+
+# Compilation intermediates, not publication exhibits.
+/4 Academic Submission/**/*.aux
+/4 Academic Submission/**/*.bbl
+/4 Academic Submission/**/*.bcf
+/4 Academic Submission/**/*.blg
+/4 Academic Submission/**/*.fdb_latexmk
+/4 Academic Submission/**/*.fls
+/4 Academic Submission/**/*.log
+/4 Academic Submission/**/*.out
+/4 Academic Submission/**/*.run.xml
+/4 Academic Submission/**/*.synctex.gz
+/4 Academic Submission/**/*.toc
+/4 Academic Submission/**/__pycache__/

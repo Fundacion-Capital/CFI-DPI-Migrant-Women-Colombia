@@ -1,0 +1,304 @@
+{
+  "schema_version": 14,
+  "project": {
+    "short_name": "CFI-DPI-Migrant-Women-Colombia",
+    "created_at_beijing": "2026-10-05T18:40:00+08:00",
+    "entry_stage": "0",
+    "mode": "retrospective-redevelopment",
+    "scope": "submission",
+    "target_journal": "Information Technology for Development",
+    "language": "English"
+  },
+  "orchestration": {
+    "status": "in-progress",
+    "entry_routing": "README.md#entry-routing",
+    "stage_passport": "README.md#stage-passport",
+    "pipeline_status": "README.md#pipeline-status-and-execution-contract",
+    "handoff_dir": "audit-local/intake",
+    "latest_handoff": "README.md#latest-handoff",
+    "checkpoint_policy": "full-at-hard-gates",
+    "reset_boundaries": [
+      "historical-baseline-lock",
+      "historical-replication-to-revised-estimation",
+      "scientific-readiness-to-owner-authorized-release"
+    ],
+    "fresh_evidence_required": true,
+    "last_recovery_probe": "2026-10-05T12:18:45Z: main@151b0e8; existing untracked preparation files, no staged changes; owner keeps GitHub public; policy update only, release/synchronization still held",
+    "self_review_gate": "pending",
+    "ethics_gate": "pending",
+    "revision_rounds_cap": 2,
+    "method_gate_rounds_cap": 2,
+    "method_gate_rounds": 0,
+    "budget_exhausted_action": "deliver-with-known-gaps"
+  },
+  "analysis_backend": {
+    "primary": "stata",
+    "secondary_validation": "none",
+    "script_extension": ".do",
+    "child_skill": "stata",
+    "environment_status": "probe-complete-not-replication-validated",
+    "version_report": "README.md#pipeline-status-and-execution-contract",
+    "capability_report": "",
+    "backend_parity_report": ""
+  },
+  "table_style": {
+    "format": "three-line",
+    "variant": "booktabs",
+    "header_rows": 1,
+    "panel_rules": true,
+    "typography_preset": "structure-only",
+    "decimal_places": 3,
+    "status": "pending",
+    "audit_report": "",
+    "last_check": ""
+  },
+  "manuscript": {
+    "format": "latex",
+    "body_file": "main.tex",
+    "deliverable": "tex",
+    "deliverable_docx": "",
+    "docx_status": "not-required-for-current-preparation-request",
+    "converter": "",
+    "reference_docx": "",
+    "csl": "",
+    "exhibits_embedded": 0,
+    "figures_embedded": 0,
+    "unresolved_markers": [
+      "preparation-record-not-journal-manuscript",
+      "historical-package-not-fully-certified",
+      "historical-estimates-not-reproduced",
+      "native-compiler-platform-failure",
+      "confirmed-sensitive-data-release-hold"
+    ],
+    "last_assembly": ""
+  },
+  "literature_base": {
+    "status": "catalogued-not-full-text-reviewed",
+    "corpus": "README.md#source-authority-and-scope",
+    "lit_matrix": "",
+    "screened_count": 0,
+    "core_count": 0,
+    "reused_by": [],
+    "last_build": ""
+  },
+  "design_lock": {
+    "status": "pending",
+    "preregistration": "",
+    "locked_before_estimation": false,
+    "lock_commit": "",
+    "primary_design": "Historical cross-sectional observational mixed-method study; revised analysis register pending",
+    "confirmatory_count": 0,
+    "deviations": [
+      "Existing estimates and manuscripts have already been seen; no prospective preregistration is claimed."
+    ],
+    "last_lock": ""
+  },
+  "empirical_audit": {
+    "status": "pending",
+    "sample_audit": "",
+    "estimand_alignment": "pending",
+    "missingness_balance": "pending",
+    "construct_validity": "pending",
+    "blocking_issues": [
+      "README.md: SCOPE-01",
+      "README.md: NUM-01",
+      "README.md: PRIV-01 confirmed historical NoPII contact retention",
+      "README.md: PRIV-02 confirmed sensitive-data exposure; proposal only, remediation not performed"
+    ],
+    "last_audit": ""
+  },
+  "stages": {
+    "0_intake_setup": "in-progress",
+    "1_topic_design": "pending",
+    "1L_literature_base": "pending",
+    "2_data": "pending",
+    "2_5_design_lock": "pending",
+    "3_identification_estimation": "pending",
+    "4_tables_figures": "pending",
+    "5_draft": "pending",
+    "6_polish": "pending",
+    "7_language_dehumanize": "pending",
+    "8_review_revision": "pending",
+    "9_submission": "pending"
+  },
+  "method_gate": {
+    "status": "pending",
+    "primary_design": "",
+    "primary_estimator": "",
+    "design_register": "",
+    "method_gate_report": "",
+    "required_artifacts": [],
+    "missing_artifacts": [
+      "certified-historical-package",
+      "historical-replication",
+      "sample-and-measurement-audit",
+      "retrospective-revision-register"
+    ],
+    "last_audit": ""
+  },
+  "evidence_governance": {
+    "status": "pending",
+    "evidence_ledger": "README.md#pipeline-status-and-execution-contract",
+    "design_gate_card": "",
+    "claim_strength": "pending",
+    "open_discrepancies": [
+      "AUTH-01",
+      "AUTH-02",
+      "ETHICS-01",
+      "SCOPE-01",
+      "NUM-01",
+      "EXHIBIT-01",
+      "REPL-01",
+      "PRIV-01",
+      "PRIV-02",
+      "LIT-01"
+    ],
+    "last_claim_audit": ""
+  },
+  "integrity_audit": {
+    "status": "pending",
+    "claim_integrity_audit": "README.md#pipeline-status-and-execution-contract",
+    "claim_locator_manifest": "",
+    "audit_mode": "historical-intake-not-final-claim-audit",
+    "checked_claims": 0,
+    "unsupported_claims": 0,
+    "unverified_citations": 0,
+    "blocking_findings": [
+      "Full numerical and citation reconciliation has not been completed.",
+      "Author-confirmed genuine contact data in current and historical Git material; release/synchronization held pending separately authorized remediation."
+    ],
+    "last_audit": ""
+  },
+  "design_risk": {
+    "status": "pending",
+    "risk_ledger": "README.md#pipeline-status-and-execution-contract",
+    "threats_reviewed": [],
+    "blocking_threats": [
+      "Historical data-generating process and analytical coverage not yet fully audited."
+    ],
+    "external_validity": "pending",
+    "specification_search": "pending",
+    "spillover_interference": "pending",
+    "selection_attrition": "pending",
+    "last_review": ""
+  },
+  "manuscript_numbers": {
+    "status": "pending",
+    "checked_manuscript": "",
+    "unanchored_claims": 0,
+    "waived_claims": 0,
+    "inert_boundary_drift": 0,
+    "last_check": ""
+  },
+  "ai_disclosure": {
+    "status": "pending",
+    "disclosure_file": "README.md#latest-handoff",
+    "policy_family": "target-specific-recheck-required",
+    "statement_placement": "pending journal requirements and author-approved account of actual use",
+    "ledger_rows": 0,
+    "disclosed_rows": 0,
+    "unverified_rows": 0,
+    "blocking_findings": [
+      "Intake used assisted document extraction and scoped delegated reviews; publication disclosure must reflect actual use and human verification."
+    ],
+    "last_audit": ""
+  },
+  "quality_gate": {
+    "draft_milestone": "not-a-submission-draft",
+    "status": "pending",
+    "rounds": 0,
+    "last_total_score": null,
+    "last_dimension_scores": {},
+    "scorecard": ""
+  },
+  "replication_pack": {
+    "status": "pending",
+    "readme": "README.md#pipeline-status-and-execution-contract",
+    "master_script": "../1 Code/0 Master Code_CFI DPI Migrant Women Colombia.do",
+    "environment_record": "README.md#pipeline-status-and-execution-contract",
+    "frozen_at_stage": null,
+    "data_availability_statement": "",
+    "archive_plan": "Owner-designated permanent restricted original/PII storage in Dropbox; public GitHub reproducibility package may contain only an owner-approved, disclosure-reviewed anonymized derivative and safe code/exhibits. Verify complete restricted preservation and access controls before cleanup; reconcile existing Git/history exposure separately. No data transfer, anonymization or cleanup has been performed. Keep the immutable historical baseline distinct from later revised outputs; no restricted data in Overleaf.",
+    "runtime_minutes": null,
+    "last_rebuild_check": ""
+  },
+  "artifacts": {
+    "workplan": "ACADEMIC_SUBMISSION_WORKPLAN.md",
+    "intake_summary": "audit-local/intake/intake_summary.json",
+    "source_manifest": "audit-local/intake/source_manifest.csv",
+    "legacy_comparison": "audit-local/intake/legacy_comparison.json",
+    "document_inventory": "audit-local/intake/document_inventory.json",
+    "git_history": "audit-local/intake/git_history.txt",
+    "connector_receipts": "audit-local/intake/connector_receipts.json",
+    "dropbox_cloud_listing": "audit-local/intake/dropbox_cloud_listing.json",
+    "stata_lineage_audit": "audit-local/intake/stata_lineage_audit.md",
+    "analysis_stage_map": "audit-local/intake/analysis_stage_map.csv",
+    "legacy_baseline_review": "audit-local/intake/legacy_baseline_review.md",
+    "legacy_difference_dispositions": "audit-local/intake/legacy_difference_dispositions.csv",
+    "manuscript_decomposition": "audit-local/intake/manuscript_decomposition.md",
+    "legacy_section_crosswalk": "audit-local/intake/legacy_section_crosswalk.csv",
+    "legacy_numeric_candidates": "audit-local/intake/legacy_numeric_candidates.csv",
+    "legacy_media_map": "audit-local/intake/legacy_media_map.csv",
+    "analysis_close_read_part1": "audit-local/intake/analysis_close_read_part1.md",
+    "analysis_close_read_part2": "audit-local/intake/analysis_close_read_part2.md",
+    "privacy_cleanup_proposal": "audit-local/intake/privacy_cleanup_proposal.md",
+    "privacy_cleanup_targets": "audit-local/intake/privacy_cleanup_targets.csv",
+    "privacy_audit_receipts": "audit-local/intake/privacy_audit_receipts.json",
+    "privacy_dta_inventory": "audit-local/intake/stata_privacy_inventory.csv",
+    "privacy_contact_counts": "audit-local/intake/stata_privacy_contact_counts.csv",
+    "privacy_excel_inventory": "audit-local/intake/stata_privacy_excel_inventory.csv",
+    "privacy_linkage_counts": "audit-local/intake/stata_privacy_linkage_counts.csv",
+    "privacy_historical_contact_counts": "audit-local/intake/stata_privacy_historical_contact_counts.csv"
+  },
+  "decisions": [
+    {
+      "date": "2026-10-05",
+      "decision": "User selected LEGACY-A, original full draft labelled 31 July 2026, SHA256 99919BBE239C5CE319B986B6B18C534DB02D6E3CB5469FF55EDFC1294CAFC76F, as academic foundation. This is manuscript authority, not analytical validation or prospective design lock."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "User requests academic TeX work in 4 Academic Submission and supplies the linked Overleaf project."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "User requires NotebookLM public-link access only; no account authentication."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Statistical execution is Stata MCP-only; statistical Python/R fallback is not authorized."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Literature and quantitative reassessment allowed after historical audit; substantive qualitative changes require author/coauthor review."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Private intake outputs ignored; commit, push, cloud sync, submission, and publication not performed or inferred."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Author confirms genuine respondent contact details; treat as sensitive and hold public release/synchronization. No actual identifiers were displayed in audit results."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Author authorizes targeted local privacy-cleanup proposal only and will make GitHub private personally. Removal/redaction, restricted off-repository preservation, history rewriting, commits/pushes, cloud synchronization and external contact have not been performed and require separate authority."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Privacy proposal identifies 33 exact paths: 13 current contact-bearing files, 18 current posterior files with all 423 keys matching contact data, and two historical-only contact-bearing analysis paths including NoPII. Header/aggregate checks are not general disclosure certification."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Superseding owner decision: skip making the repository private; keep GitHub public and do not change visibility. Original raw/PII data are to remain permanently restricted in Dropbox, while the public reproducibility package uses a disclosure-reviewed anonymized derivative. This policy does not resolve existing tracked/historical exposure or authorize data transfers, destructive cleanup, history rewriting, commits/pushes or cloud synchronization."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "After each completed workflow, provide a proposed commit title and full description with actual changes, affected files, validation and residual limits. Message preparation is not authority to stage, commit or push; exclude identifiers and private operational evidence from commit messages."
+    },
+    {
+      "date": "2026-10-05",
+      "decision": "Immediate next workflow: verify the complete restricted Dropbox baseline and prepare a field-level public-release specification tied to existing analytical uses, before an approved Stata-MCP anonymization/export-routing implementation. Preserve historical analytical content during privacy work; current/historical cleanup and release authorization remain separate decisions."
+    }
+  ],
+  "last_updated_beijing": "2026-10-05T20:20:00+08:00"
+}
