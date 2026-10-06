@@ -1,5 +1,5 @@
 {
-  "schema_version": 17,
+  "schema_version": 18,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -115,7 +115,7 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT/ICDP replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT/ICDP/IAFF replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
       "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
       "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
@@ -135,9 +135,15 @@
       "README.md: ICDP-02 point rankings, equal available-component weights and .45/.80 cutoffs are normative historical assumptions; criterion validity and any redesign remain unapproved",
       "README.md: ICDP-03 structural422 four-/1 two-component composition changes implicit content/weights; zero applicable-item nonresponse is not authority for automatic imputation/exclusion",
       "README.md: ICDP-04 latent missing-to-high/unmapped omission/degenerate standardization; observed code/score/category precision contamination is zero and nominal .45/.80 exact legal means unattainable",
-      "README.md: ICDP-05 fixed30/106/287 versus quantile162/182/79 differs314/423; upper group exactly score1. Actual M1/H1/clustering use fixed binary/quantile/standardized continuous ICDP; internal profile coherence is not independent external validation and no fitted consequence is re-estimated"
+      "README.md: ICDP-05 fixed30/106/287 versus quantile162/182/79 differs314/423; upper group exactly score1. Actual M1/H1/clustering use fixed binary/quantile/standardized continuous ICDP; internal profile coherence is not independent external validation and no fitted consequence is re-estimated",
+      "IAFF_MEASUREMENT_AUDIT.md: IAFF-01 reported possessions/conditions not verified legal KYC acceptance, successful onboarding, active use or financial-inclusion welfare; narrative/inference review pending.",
+      "IAFF_MEASUREMENT_AUDIT.md: IAFF-02 required positive-only account field across5forms; account100 constant423 and score floor.25. No negative ownership responses invented; scientific score/support decision pending.",
+      "IAFF_MEASUREMENT_AUDIT.md: IAFF-03 optional unconstrained document field; one semantic none/refusal-plus-other combination, no dummy mismatch; address refusal5 and phone unknown7 scored0; explicit refusal/default/ambiguity policy pending.",
+      "IAFF_MEASUREMENT_AUDIT.md: IAFF-04 default-zero dummies hide missing/malformed values, unmapped scalars change denominator, float/constant-SD guards latent. Full-source missing inputs yield0/low, not missing/high; nominal.8 is unattainable and observed precision contamination zero.",
+      "IAFF_MEASUREMENT_AUDIT.md: IAFF-05 fixed31/290/102 vs quantile169/152/102 differs138 at.5; high membership coincides only in this sample. Figure16 priority assignment is not ownership prevalence and Figure20 consumes fixed categories, not terciles. Actual M1/H1/clustering dependencies/internal profile validation need explicit later reconciliation without fitted-effect inference.",
+      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.8/M5.02.6 historical IUOF audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions."
     ],
-    "last_audit": "2026-10-06 bounded ICDP instrument/recipe/stored-state/operative-consumer audit:125 questionnaire/155 choice rows,90 domain/relevance,540 code counts,27 protected source checks,7 reference variables,119 complete-state comparisons/17 state summaries and23 exact aliases;4032 pattern controls plus boundary/malformed/degenerate checks. Exact arithmetic is not construct, causal, model, independent-profile-validation or release certification; ICDP-01-05 and prior findings remain open."
+    "last_audit": "2026-10-06 M4.03.7/M5.02.5 seven-child IAFF historical diagnostic accepted, with definitive Stata MCP read-back, independent source/receipt/report review and private closeout; not construct, estimator, method/quality/design gate or public release."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -513,7 +519,48 @@
     "icdp_source_retention_closeout_json": "audit-local/intake/icdp-8eb3405/source_retention_closeout.json",
     "icdp_icdp_validation_json": "audit-local/intake/icdp-8eb3405/icdp_validation.json",
     "icdp_measurement_audit": "ICDP_MEASUREMENT_AUDIT.md",
-    "icdp_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_141604_perfect__now_fully_implement_and_deeply_review_and.md"
+    "icdp_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_141604_perfect__now_fully_implement_and_deeply_review_and.md",
+    "iaff_boundary_checks_csv": "audit-local/intake/iaff-a9604d3/boundary_checks.csv",
+    "iaff_candidate_data_states_csv": "audit-local/intake/iaff-a9604d3/candidate_data_states.csv",
+    "iaff_choices_csv": "audit-local/intake/iaff-a9604d3/choices.csv",
+    "iaff_coded_domain_summary_csv": "audit-local/intake/iaff-a9604d3/coded_domain_summary.csv",
+    "iaff_component_parity_csv": "audit-local/intake/iaff-a9604d3/component_parity.csv",
+    "iaff_composition_summary_csv": "audit-local/intake/iaff-a9604d3/composition_summary.csv",
+    "iaff_consumer_locators_csv": "audit-local/intake/iaff-a9604d3/consumer_locators.csv",
+    "iaff_denominators_csv": "audit-local/intake/iaff-a9604d3/denominators.csv",
+    "iaff_fixed_vs_tercile_csv": "audit-local/intake/iaff-a9604d3/fixed_vs_tercile.csv",
+    "iaff_fixture_patterns_csv": "audit-local/intake/iaff-a9604d3/fixture_patterns.csv",
+    "iaff_full_document_masks_csv": "audit-local/intake/iaff-a9604d3/full_document_masks.csv",
+    "iaff_iaff_audit_do": "audit-local/intake/iaff-a9604d3/iaff_audit.do",
+    "iaff_iaff_boundary_check_py": "audit-local/intake/iaff-a9604d3/iaff_boundary_check.py",
+    "iaff_iaff_driver_log": "audit-local/intake/iaff-a9604d3/iaff_driver.log",
+    "iaff_iaff_readback_do": "audit-local/intake/iaff-a9604d3/iaff_readback.do",
+    "iaff_iaff_readback_log": "audit-local/intake/iaff-a9604d3/iaff_readback.log",
+    "iaff_independent_source_review_md": "audit-local/intake/iaff-a9604d3/independent_source_review.md",
+    "iaff_item_domains_csv": "audit-local/intake/iaff-a9604d3/item_domains.csv",
+    "iaff_legacy_iaff_blocks_json": "audit-local/intake/iaff-a9604d3/legacy_iaff_blocks.json",
+    "iaff_malformed_controls_csv": "audit-local/intake/iaff-a9604d3/malformed_controls.csv",
+    "iaff_multiselect_checks_csv": "audit-local/intake/iaff-a9604d3/multiselect_checks.csv",
+    "iaff_multiselect_summary_csv": "audit-local/intake/iaff-a9604d3/multiselect_summary.csv",
+    "iaff_ownership_priority_counts_csv": "audit-local/intake/iaff-a9604d3/ownership_priority_counts.csv",
+    "iaff_question_checks_csv": "audit-local/intake/iaff-a9604d3/question_checks.csv",
+    "iaff_questionnaire_csv": "audit-local/intake/iaff-a9604d3/questionnaire.csv",
+    "iaff_relevance_summary_csv": "audit-local/intake/iaff-a9604d3/relevance_summary.csv",
+    "iaff_score_summary_csv": "audit-local/intake/iaff-a9604d3/score_summary.csv",
+    "iaff_score_support_csv": "audit-local/intake/iaff-a9604d3/score_support.csv",
+    "iaff_source_checks_csv": "audit-local/intake/iaff-a9604d3/source_checks.csv",
+    "iaff_source_operation_checks_json": "audit-local/intake/iaff-a9604d3/source_operation_checks.json",
+    "iaff_source_retention_entry_json": "audit-local/intake/iaff-a9604d3/source_retention_entry.json",
+    "iaff_state_alias_parity_csv": "audit-local/intake/iaff-a9604d3/state_alias_parity.csv",
+    "iaff_state_component_parity_csv": "audit-local/intake/iaff-a9604d3/state_component_parity.csv",
+    "iaff_state_schema_checks_csv": "audit-local/intake/iaff-a9604d3/state_schema_checks.csv",
+    "iaff_state_score_summary_csv": "audit-local/intake/iaff-a9604d3/state_score_summary.csv",
+    "iaff_workflow_query_receipts_json": "audit-local/intake/iaff-a9604d3/workflow_query_receipts.json",
+    "iaff_latex_compile_receipt_json": "audit-local/intake/iaff-a9604d3/latex_compile_receipt.json",
+    "iaff_source_retention_closeout_json": "audit-local/intake/iaff-a9604d3/source_retention_closeout.json",
+    "iaff_iaff_validation_json": "audit-local/intake/iaff-a9604d3/iaff_validation.json",
+    "iaff_measurement_audit": "IAFF_MEASUREMENT_AUDIT.md",
+    "iaff_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_150402_fully_implement_the_next_immediate_task___the_next.md"
   },
   "decisions": [
     {
@@ -731,7 +778,11 @@
     {
       "date": "2026-10-06",
       "decision": "Accept M4.03.6/M5.02.4 only within seven bounded instrument/domain/recipe/replay/fixture/consumer/review children, subject to definitive independent and native receipts. Preserve historical scoring:24 operations,2961 reference cells,50337 preserved-state cells and9729 alias cells exact;4032 patterns and separate controls expose latent behavior, not observed contamination. Record ICDP-01-05 for explicit M7 scientific decisions after remaining measures and protected M6 replication. Distinguish fixed binary M1, quantile H1 and continuous benchmark dependencies; no fitted effect/class consequence certified. Retain768 original byte checks/131 prior fingerprints,124 primary tasks/14 milestones,pending gates/zero public-field approvals. Existing main.tex remains preparation record with fresh native platform compile failure. Next IAFF M4.03.7/M5.02.5. No production/data/qualitative/Git/cloud/Overleaf mutation or public derivative authorized by this checkpoint."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Accept M4.03.7/M5.02.5 seven historical IAFF children only within source/specification/domain/replay/fixture/consumer/review scope.19 logical operations,2961 reference/50337 state/9729 alias exact cells; required positive-only account content is constant100 in423, fixed/quantile differ138, Figure16 priority/Figure20 fixed narrative issues recorded. IAFF-01-05 remain open; no invented negative response, new score/model or causal/class-fit claim. Retain768 source-byte checks/167 prior fingerprints,124 primary IDs/14milestones, zero public approvals/pending gates. Next M4.03.8/M5.02.6 IUOF before remaining measure/exhibit/protected historical replication and explicit M7 revisions. Same-file main.tex updated with unchanged preamble; native compile fails platform initialization, layout unverified. No production/data/qualitative/source copy/deletion/Git/cloud/access/Overleaf mutation."
     }
   ],
-  "last_updated_beijing": "2026-10-06T22:17:02.000+08:00"
+  "last_updated_beijing": "2026-10-06T23:13:15.000+08:00"
 }
