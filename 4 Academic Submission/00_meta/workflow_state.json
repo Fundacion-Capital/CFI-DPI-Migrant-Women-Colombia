@@ -1,5 +1,5 @@
 {
-  "schema_version": 14,
+  "schema_version": 15,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-05: clean main@ce69fd96c959c9cf9a0391801eb22986692d121e entry. Scoped version/dependency audit through Stata MCP: 120 domains, 170 availability rows, eight token controls and receipt assertions pass; 13 changed lists/12 linked questions, four geography states and 17 text dependencies reviewed. Protected replay specified, not executed; semantic/scientific/disclosure gates remain open. Original bytes retained; no estimator or external mutation.",
+    "last_recovery_probe": "2026-10-06: clean main@24f23bdc56cced9529aa1fae9f4962c324a71b73 entry. Bounded IAT historical replay through Stata MCP: 29 unchanged scoring statements, 3384 exact stored cells, 90 domain/full-relevance, 27 source and 20 fixture checks pass. All eight float storage types asserted; independent source/receipt review delivered. IAT-01/02/03 precision, item-label and partial/N/A findings remain open. Prior bounded evidence rechecked, not promoted. Historical estimator replay unrun; M0 and scientific/disclosure gates pending. Next M4.03.4/M5.02.2 IVS audit, no correction or estimator.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -72,7 +72,8 @@
       "remote-preserved-payload-checksums-unavailable",
       "protected-temporary-readback-copies-await-owner-cleanup",
       "historical-clock-provenance-unavailable-no-raw-to-audit-certification",
-      "version-aware-measurement-geography-and-structural-missingness-review-pending"
+      "version-aware-measurement-geography-and-structural-missingness-review-pending",
+      "historical-iat-precision-item-label-and-missingness-findings-open"
     ],
     "last_assembly": ""
   },
@@ -110,10 +111,13 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains and text availability pass; geography meanings, full relevance/dummy/scoring and downstream result parity remain pending; see VERSION_MEASUREMENT_REGISTER.md",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT replay pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
+      "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
+      "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
     ],
-    "last_audit": "2026-10-05 bounded version-aware domains, structural text availability and scoped source dependency review; not completed full sample/measurement or historical estimator replication."
+    "last_audit": "2026-10-06 M4.03.3/M5.02.1 bounded IAT audit delivered with exact historical parity and IAT-01/02/03 open. Complete scoped IAT ancestry/relevance checked, not every field/construct. No full scientific or historical estimator gate passed; next M4.03.4/M5.02.2 IVS audit."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -162,7 +166,10 @@
       "PRIV-04",
       "LIT-01",
       "DATA-02",
-      "MEAS-01"
+      "MEAS-01",
+      "IAT-01",
+      "IAT-02",
+      "IAT-03"
     ],
     "last_claim_audit": ""
   },
@@ -313,7 +320,24 @@
     "measurement_metadata_helper": "audit-local/intake/measurement-ce69fd9/source_dependency_metadata.py",
     "measurement_query_receipts": "audit-local/intake/measurement-ce69fd9/workflow_query_receipts.json",
     "measurement_source_retention": "audit-local/intake/measurement-ce69fd9/source_retention_checks.json",
-    "measurement_validation": "audit-local/intake/measurement-ce69fd9/measurement_validation.json"
+    "measurement_validation": "audit-local/intake/measurement-ce69fd9/measurement_validation.json",
+    "iat_measurement_audit": "IAT_MEASUREMENT_AUDIT.md",
+    "iat_diagnostic_driver": "audit-local/intake/iat-24f23bd/iat_audit.do",
+    "iat_metadata_boundary_check": "audit-local/intake/iat-24f23bd/iat_boundary_check.py",
+    "iat_questionnaire": "audit-local/intake/iat-24f23bd/questionnaire.csv",
+    "iat_choices": "audit-local/intake/iat-24f23bd/choices.csv",
+    "iat_question_checks": "audit-local/intake/iat-24f23bd/question_checks.csv",
+    "iat_source_checks": "audit-local/intake/iat-24f23bd/source_checks.csv",
+    "iat_component_parity": "audit-local/intake/iat-24f23bd/component_parity.csv",
+    "iat_denominators": "audit-local/intake/iat-24f23bd/denominators.csv",
+    "iat_score_summary": "audit-local/intake/iat-24f23bd/score_summary.csv",
+    "iat_synthetic_fixtures": "audit-local/intake/iat-24f23bd/fixture_checks.csv",
+    "iat_driver_log": "audit-local/intake/iat-24f23bd/driver_final.log",
+    "iat_query_receipts": "audit-local/intake/iat-24f23bd/workflow_query_receipts.json",
+    "iat_source_retention_entry": "audit-local/intake/iat-24f23bd/source_retention_entry.json",
+    "iat_source_retention_closeout": "audit-local/intake/iat-24f23bd/source_retention_closeout.json",
+    "iat_independent_review": "audit-local/intake/iat-24f23bd/independent_source_review.md",
+    "iat_validation": "audit-local/intake/iat-24f23bd/iat_validation.json"
   },
   "decisions": [
     {
@@ -439,7 +463,19 @@
     {
       "date": "2026-10-05",
       "decision": "Existing main.tex preparation record updated in the same editor; built-in compilation still fails at platform initialization with Unable to find standard directories for platform. Rendered layout is unverified; no replacement PDF or compiler installation. Bounded audit completion does not pass M0 or any scientific/release gate."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "M4.03.3/M5.02.1 bounded historical IAT audit delivered from clean main@24f23bd. All 29 ordered scoring commands retain source identity; 3384 stored cells agree exactly, 90 full scoped relevance/domain, 27 source/eligibility and 20 fixture checks pass. Each of eight stored types asserted float through MCP. Independent source/receipt review and native boundary checks support bounded completion, not construct, estimator, ethics, disclosure or release certification. Original code/data/manuscripts and qualitative content remain unchanged."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "IAT-01/02/03 remain open: 71 nominal 0.80 scores historically high by float comparison, frequency-label/access-location comment mismatches, three partial-component means and ordered N/A rules; synthetic all-missing-to-high behavior has no actual coded case. No repair, category change, model fit or table replacement. Register any correction at M7 and compare historical/revised outputs. Next immediate bounded task M4.03.4/M5.02.2 IVS audit, because vulnerability conditions the legacy IAT interpretation."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Existing main.tex preparation checkpoint updated in place with its preamble/style unchanged. Fresh built-in compilation fails during platform initialization with Unable to find standard directories for platform; layout remains unverified. Same editor retained, no replacement PDF/tab, installation or live Overleaf synchronization. No stage/commit/push, source copy/delete, cloud/access/visibility change or anonymous derivative. Proposed commit title/description only."
     }
   ],
-  "last_updated_beijing": "2026-10-06T02:11:34+08:00"
+  "last_updated_beijing": "2026-10-06T17:28:00+08:00"
 }
