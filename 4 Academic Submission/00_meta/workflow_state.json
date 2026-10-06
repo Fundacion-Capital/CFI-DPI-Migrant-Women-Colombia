@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06: clean main@453510267ff2abde860e5357ff0b6b63c520e9d3 entry. Bounded IVS historical replay through Stata MCP: 26 unchanged tenure/scoring statements, 3384 exact cells in eight float variables, 45 domain/full-relevance, 21 source, 20 fixture and four return-state/constant-range checks pass. All 423 scores complete; four observed boundary-category discrepancies. Item properties/choices agree; enclosing-group appearance differs in earliest two versions, separately verified. Stale extrema hypothesis rejected on inspected runtime. Prior IAT artifacts/accepted markers rechecked, not promoted. No estimator or correction; parent scientific/disclosure gates pending. Next M2.04.1/M6.08.1 historical IAT-IVS exhibit-provenance audit.",
+    "last_recovery_probe": "2026-10-06: clean main@46edc8ca44e8579dfb60f1e8a51aa3258dfcfde7 entry. M2.04.1/M6.08.1 bounded historical IAT-IVS Table2/Figures6-10 audit delivered with open discrepancies. Fresh scoped OOXML, five exact historical PNG matches, six current copy pairs; Stata MCP aggregate-only 14-state/126-cell, 42-mean, 86-image-cell and 22-prose checks with independent read-back. Table arithmetic and unmatched old IVS states, labels, denominators and interpretation registered EXH-01-06. No estimator, correction, original overwrite or release. Parent gates pending. Final metadata check finds six additional old coded Git candidates outside preserved catalogue; three analysis-input blobs await separate copy/read-back authority. Next M6.08.1.e provenance follow-up, then queued IADT M4.03.5/M5.02.3; main.tex compiler platform failure persists.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -75,7 +75,9 @@
       "version-aware-measurement-geography-and-structural-missingness-review-pending",
       "historical-iat-precision-item-label-and-missingness-findings-open",
       "historical-ivs-precision-construct-and-latent-edge-findings-open",
-      "historical-iat-ivs-exhibit-provenance-and-interpretation-pending"
+      "historical-iat-ivs-exhibit-audit-delivered-old-ivs-generating-state-and-exh-findings-open",
+      "full-legacy-word-render-unavailable",
+      "additional-historical-analysis-input-blobs-await-exact-restricted-copy-readback-authority"
     ],
     "last_assembly": ""
   },
@@ -121,7 +123,8 @@
       "README.md: IVS-02 main occupation does not establish formality/stability; vulnerability mapping/weights/cutoffs lack completed construct validation",
       "README.md: IVS-03 legal arrival2026, constant-range and missing-score edges are latent; all 423 actual scores complete",
       "README.md: IVS-04 stale extrema rejected for inspected implementation; original runtime/portability and explicit extrema remain unverified",
-      "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
+      "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted",
+      "IAT_IVS_EXHIBIT_AUDIT.md: EXH-01-06; unmatched old IVS generating states/runtime/logs; internal table percentage/mean/caption issues; frequency semantics; graph/prose denominators and unsupported mechanisms. Bounded diagnostics are not historical exhibit or scientific certification."
     ],
     "last_audit": "2026-10-06 M4.03.4/M5.02.2 bounded IVS audit delivered with exact stored parity, 45 full scoped relevance/domain checks and IVS-01/02/03 open. Installed extrema-refresh behavior tested; original runtime and construct validity not certified. Enclosing-group appearance difference documented. Prior IAT evidence retained; no full scientific/estimator gate passed. Next M2.04.1/M6.08.1 historical IAT-IVS exhibit provenance. Owner agreement in principle supports later justified corrections, not a passed M7 gate."
   },
@@ -175,7 +178,16 @@
       "MEAS-01",
       "IAT-01",
       "IAT-02",
-      "IAT-03"
+      "IAT-03",
+      "IVS-01",
+      "IVS-02",
+      "IVS-03",
+      "EXH-01",
+      "EXH-02",
+      "EXH-03",
+      "EXH-04",
+      "EXH-05",
+      "EXH-06"
     ],
     "last_claim_audit": ""
   },
@@ -191,7 +203,8 @@
       "Full numerical, citation, consent/ethics, rights and construct reconciliation remain pending.",
       "Genuine contact data in Git/history remain on release hold; exact 35-version preservation is not anonymous release or history remediation.",
       "New raw recovers cohort/non-time cells and original ordering; export-clock reports/settings unavailable. Five used definitions matched and bounded domains/text availability pass; full version meanings, relevance, scoring and estimator parity still require scientific review without automatic recoding.",
-      "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification."
+      "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification.",
+      "Bounded Table2/Figures6-10 review delivered. All five embedded PNGs match old Git blobs, not current bytes; Word age/city placement correct. Old IVS-generating provenance, table means/counts/arithmetic, labels/denominators and causal interpretation remain open. Other claims/exhibits and full rendering not certified."
     ],
     "last_audit": ""
   },
@@ -361,7 +374,32 @@
     "ivs_source_retention_entry": "audit-local/intake/ivs-4535102/source_retention_entry.json",
     "ivs_source_retention_closeout": "audit-local/intake/ivs-4535102/source_retention_closeout.json",
     "ivs_independent_review": "audit-local/intake/ivs-4535102/independent_source_review.md",
-    "ivs_validation": "audit-local/intake/ivs-4535102/ivs_validation.json"
+    "ivs_validation": "audit-local/intake/ivs-4535102/ivs_validation.json",
+    "iat_ivs_exhibit_audit": "IAT_IVS_EXHIBIT_AUDIT.md",
+    "exhibit_scoped_blocks": "audit-local/intake/exhibits-46edc8c/legacy_scoped_blocks.json",
+    "exhibit_figure_bindings": "audit-local/intake/exhibits-46edc8c/embedded_figure_bindings.json",
+    "exhibit_current_candidate_pins": "audit-local/intake/exhibits-46edc8c/candidate_output_pins.json",
+    "exhibit_current_copy_checks": "audit-local/intake/exhibits-46edc8c/current_output_copy_checks.json",
+    "exhibit_git_figure_history": "audit-local/intake/exhibits-46edc8c/git_figure_history_pins.json",
+    "exhibit_state_catalogue": "audit-local/intake/exhibits-46edc8c/candidate_data_states.csv",
+    "exhibit_state_schema": "audit-local/intake/exhibits-46edc8c/state_schema_checks.csv",
+    "exhibit_legacy_table_cells": "audit-local/intake/exhibits-46edc8c/legacy_table2_cells.csv",
+    "exhibit_source_routes": "audit-local/intake/exhibits-46edc8c/source_route_pins.json",
+    "exhibit_image_transcription": "audit-local/intake/exhibits-46edc8c/image_label_transcription.csv",
+    "exhibit_diagnostic_driver": "audit-local/intake/exhibits-46edc8c/exhibit_audit.do",
+    "exhibit_native_boundary_check": "audit-local/intake/exhibits-46edc8c/exhibit_probe.py",
+    "exhibit_candidate_state_cells": "audit-local/intake/exhibits-46edc8c/candidate_state_table_checks.csv",
+    "exhibit_candidate_state_means": "audit-local/intake/exhibits-46edc8c/candidate_state_means.csv",
+    "exhibit_table_reconciliation": "audit-local/intake/exhibits-46edc8c/table2_reconciliation.csv",
+    "exhibit_figure_label_checks": "audit-local/intake/exhibits-46edc8c/figure_label_checks.csv",
+    "exhibit_prose_checks": "audit-local/intake/exhibits-46edc8c/prose_denominator_checks.csv",
+    "exhibit_driver_log": "audit-local/intake/exhibits-46edc8c/driver_complete.log",
+    "exhibit_independent_review": "audit-local/intake/exhibits-46edc8c/independent_exhibit_review.md",
+    "exhibit_validation": "audit-local/intake/exhibits-46edc8c/exhibit_validation.json",
+    "exhibit_workflow_receipts": "audit-local/intake/exhibits-46edc8c/workflow_query_receipts.json",
+    "exhibit_source_retention_entry": "audit-local/intake/exhibits-46edc8c/source_retention_entry.json",
+    "exhibit_source_retention_closeout": "audit-local/intake/exhibits-46edc8c/source_retention_closeout.json",
+    "exhibit_historical_data_candidates": "audit-local/intake/exhibits-46edc8c/historical_data_candidates.json"
   },
   "decisions": [
     {
@@ -519,7 +557,35 @@
     {
       "date": "2026-10-06",
       "decision": "Existing main.tex IVS preparation checkpoint updated in place with unchanged preamble/style. Fresh built-in compile fails during platform initialization with Unable to find standard directories for platform; rendered layout unverified. Same editor retained; no replacement PDF/tab, TeX installation or Overleaf sync. Ignored diagnostic-only fixes were rerun; rejected and superseded evidence is retained separately. No staging/commit/push, source copy/delete or access/visibility change. Full proposed commit message only."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "M2.04.1/M6.08.1 bounded exhibit audit: all five embedded legacy PNGs match exact earlier Git blobs; age/city images are correctly placed despite opposite source-file numbering. Twelve current candidates form six identical output/appendix pairs. Old IVS graphics and Table2 do not match the selected coded state; all 14 indexed preserved states give the same differing table (126 cells/42 means). No generating data/runtime/log cause invented."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "EXH-01-06 remain open: Table2 internal 47.96-versus-47.92 error, missing captioned means and version-sensitive old low-mean/sevenfold contrast; 22/27 old age/city cells differ; Figure9/10 numeric compatibility but frequency-label and denominator/meaning issues. 86 image cells/22 prose checks and independent aggregate receipt assertions support bounded audit only. No source/code/data/category/model/figure/qualitative correction or anonymous derivative."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Existing main.tex preparation checkpoint updated in the same open editor with its preamble unchanged. Fresh built-in compiler fails at platform initialization: Unable to find standard directories for platform. Full Word renderer unavailable; layouts unverified. No replacement PDF/tab, install, Git stage/commit/push, cloud/Overleaf synchronization, access change or original data copy/delete. Proposed full commit message only. Remaining measures/protected historical replay precede M7; next M4.03.5/M5.02.3 historical IADT audit with seven acceptance children. Parent authority/scientific/release gates pending."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Separate critic review confirms visual/source/aggregate findings and requests two inference-precision changes, implemented in documentation only: 70.3 matches rounded-slice sum but original calculation provenance is not established; home-access OR active-prepaid-plan is an explicit mixed-item predicate, not validated reliance. No new statistical result or source correction."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Final read-only opaque-byte/source history check identifies six additional old coded Git blobs at the three old-image presence commits, unmatched by pinned archive/catalogue paths; three match historical analysis-input filename. No new dataset copy, participant parsing or opening. Concrete candidates mean absence/irretrievability is not established. Next M6.08.1.e exact-authority targeted preservation/read-back of those three source-input states before queued IADT audit; existing 35-version scope is not expanded. Parent gates remain pending."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Separate critic addendum checks new historical dataset metadata/source-input scope; exact uninspected participant-data blob identifiers and copy allowlist are kept private rather than published in the public exhibit report. Three targeted additional source-input preservation/read-backs remain owner-approval pending. No dataset copy/opening or release."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Final bounded closeout passes 765 original-byte checks, 15 prior IAT/18 IVS fingerprints, 138 resolving pointers, all 124 primary task IDs/14 milestones, complete fingerprints, 32 ignored private files, six-file public documentation diff and empty staging. Three accepted MCP runs assert diagnostics, actual aggregate read-back, fresh 33-state schema and only empty default frame. Separate critic source/visual/aggregate and metadata addendum pass with wording/privacy findings resolved. No parent scientific/design/release gate pass. Additional three-source-input preservation/read-back remains unexecuted and requires exact owner authority."
     }
   ],
-  "last_updated_beijing": "2026-10-06T18:20:53+08:00"
+  "last_updated_beijing": "2026-10-06T19:19:36+08:00"
 }
