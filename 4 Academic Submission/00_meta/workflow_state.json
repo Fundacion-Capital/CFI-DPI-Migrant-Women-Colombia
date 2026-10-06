@@ -1,5 +1,5 @@
 {
-  "schema_version": 18,
+  "schema_version": 19,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06 clean main@8eb3405ea4b0a4efcd263c77a228e44018d1b349. M4.03.6/M5.02.4 historical ICDP audit: five used forms/full scoped ancestry,90 domain/relevance and27 protected source checks,24 exact operations/2961 baseline cells,36 unique states/612 schema records/17 complete replays/50337 cells,23 aliases/9729 cells,4032 synthetic patterns/11 nominal probes/7 malformed controls/2 degenerate samples. Observed422 four-/1 two-component scores and314 fixed-versus-quantile differences; upper H1 group exactly score1/N79. All seven standardized counterparts include ICDP; actual M1/H1/clustering roles traced. Definitive MCP driver/read-back/session and separate critic/native receipts govern bounded acceptance; no production or estimator change. Next M4.03.7/M5.02.5 IAFF. All parent/release gates pending; fresh same-editor native compile fails platform initialization, PDF layout not certified.",
+    "last_recovery_probe": "2026-10-06 clean main@8714646acecd1a62a8df6c5afafe54b272744b3f. M4.03.8/M5.02.6 IUOF bounded historical audit: five definitions/full ancestry,140spec/215choice rows,120relevance/645domain/180routing/60source checks,38operations/11fields/4653 exact reference cells,36identities/828schema/17complete states/79101cells checked and789 historical category discrepancies reconciled by authentic raw40/70 and mixed-scale recipes,24aliases/10152exactcells.108000domain/missing patterns,112dependency guards,35one-field/sixall-unmapped/11boundary/twoconstant controls. Definitive MCP driver/read-back and independent/native closeout govern acceptance; prior bytes/fingerprints/gates preserved. Current production already fixes old mixed-scale category bug; no estimator/production/source-copy/public-derivative change. IUOF-01–07 open; next M4.03.9/M5.02.7 OQI. Fresh same-editor compiler fails platform initialization; no PDF layout certification.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -77,7 +77,10 @@
       "historical-ivs-precision-construct-and-latent-edge-findings-open",
       "old-stored-ivs-exhibit-compatibility-recovered-ivs05-and-exh-findings-open",
       "full-legacy-word-render-unavailable",
-      "historical-two-component-ivs05-downstream-estimation-and-execution-cause-unverified"
+      "historical-two-component-ivs05-downstream-estimation-and-execution-cause-unverified",
+      "historical-iuof-construct-recall-account-routing-refusal-nonresponse-findings-open",
+      "historical-iuof-category-version-drift-and-producer-downstream-effects-unverified",
+      "historical-iuof-raw-standardized-specification-and-internal-validation-findings-open"
     ],
     "last_assembly": ""
   },
@@ -115,7 +118,7 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT/ICDP/IAFF replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT/ICDP/IAFF replays and IUOF version reconciliation pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
       "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
       "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
@@ -141,9 +144,16 @@
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-03 optional unconstrained document field; one semantic none/refusal-plus-other combination, no dummy mismatch; address refusal5 and phone unknown7 scored0; explicit refusal/default/ambiguity policy pending.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-04 default-zero dummies hide missing/malformed values, unmapped scalars change denominator, float/constant-SD guards latent. Full-source missing inputs yield0/low, not missing/high; nominal.8 is unattainable and observed precision contamination zero.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-05 fixed31/290/102 vs quantile169/152/102 differs138 at.5; high membership coincides only in this sample. Figure16 priority assignment is not ownership prevalence and Figure20 consumes fixed categories, not terciles. Actual M1/H1/clustering dependencies/internal profile validation need explicit later reconciliation without fitted-effect inference.",
-      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.8/M5.02.6 historical IUOF audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions."
+      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.9/M5.02.7 historical OQI audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-01 mixed activity/opportunity/provider notification/non-lending constructs, normative equal available-component points and fixed thresholds; criterion validity and causal/welfare interpretation pending.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-02 stable60day stem/90day non-use inconsistency; positive-only required ownership routing versus34 principal no-account and21 unselected products; legal source-consistent semantic concerns, not proven wrong answers.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-03 seven optional relevant items yield408seven-/15six-component means; applicable nonresponse changes weights. NA99 scored0 and six refusal98 non-lending answers100; explicit policy and sensitivity decisions pending, no imputation/exclusion.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-04 reference two-stage normalization86different/0categorychanges and raw-normalized standardization270different/max2.384185791015625e-7; own recipes match. Missing-as-high/unmapped omission/constantSD latent; observed exact.8 is correctly high.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-05 five stored category states diverge789cells: state37 matches raw40/70;32/33/38/39 mixed-scale middle predicate. Current d119b22 correction already present; exact producing run/downstream reload/estimator/exhibit effects not proven.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-06 fixed61/167/195 vs empirical143/142/138 differs139assignments; rawfullD includesIADT standardized plot omitsit. Figure20 fixedcategories notterciles/highlabel wrong. ActualM1 excludesIUOF; H1usesquantiles andclustering continuous scores; no fitted consequences.",
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-07 same-source class-defining continuous separation is internal characterization, not independent externalvalidation. Legacy dependency/graduation/welfare causal overclaims and source overlap need M6/M7 review without qualitative rewrite."
     ],
-    "last_audit": "2026-10-06 M4.03.7/M5.02.5 seven-child IAFF historical diagnostic accepted, with definitive Stata MCP read-back, independent source/receipt/report review and private closeout; not construct, estimator, method/quality/design gate or public release."
+    "last_audit": "2026-10-06 M4.03.8/M5.02.6 seven-child historical IUOF audit accepted only within source/specification/replay/fixture/consumer/independent-review/native-closeout boundary. Historical nonzero categories explicitly retained/reconciled; not construct, estimator, method/design/quality/replication/public-release approval."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -205,7 +215,14 @@
       "EXH-04",
       "EXH-05",
       "EXH-06",
-      "IVS-05"
+      "IVS-05",
+      "IUOF-01",
+      "IUOF-02",
+      "IUOF-03",
+      "IUOF-04",
+      "IUOF-05",
+      "IUOF-06",
+      "IUOF-07"
     ],
     "last_claim_audit": ""
   },
@@ -560,7 +577,56 @@
     "iaff_source_retention_closeout_json": "audit-local/intake/iaff-a9604d3/source_retention_closeout.json",
     "iaff_iaff_validation_json": "audit-local/intake/iaff-a9604d3/iaff_validation.json",
     "iaff_measurement_audit": "IAFF_MEASUREMENT_AUDIT.md",
-    "iaff_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_150402_fully_implement_the_next_immediate_task___the_next.md"
+    "iaff_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_150402_fully_implement_the_next_immediate_task___the_next.md",
+    "iuof_account_sharing_category_csv": "audit-local/intake/iuof-8714646/account_sharing_category.csv",
+    "iuof_all_unmapped_controls_csv": "audit-local/intake/iuof-8714646/all_unmapped_controls.csv",
+    "iuof_boundary_checks_csv": "audit-local/intake/iuof-8714646/boundary_checks.csv",
+    "iuof_candidate_data_states_csv": "audit-local/intake/iuof-8714646/candidate_data_states.csv",
+    "iuof_choices_csv": "audit-local/intake/iuof-8714646/choices.csv",
+    "iuof_coded_domain_summary_csv": "audit-local/intake/iuof-8714646/coded_domain_summary.csv",
+    "iuof_component_parity_csv": "audit-local/intake/iuof-8714646/component_parity.csv",
+    "iuof_composition_summary_csv": "audit-local/intake/iuof-8714646/composition_summary.csv",
+    "iuof_consumer_locators_csv": "audit-local/intake/iuof-8714646/consumer_locators.csv",
+    "iuof_denominators_csv": "audit-local/intake/iuof-8714646/denominators.csv",
+    "iuof_dependency_controls_csv": "audit-local/intake/iuof-8714646/dependency_controls.csv",
+    "iuof_fixed_vs_tercile_csv": "audit-local/intake/iuof-8714646/fixed_vs_tercile.csv",
+    "iuof_fixture_patterns_csv": "audit-local/intake/iuof-8714646/fixture_patterns.csv",
+    "iuof_fixture_summary_csv": "audit-local/intake/iuof-8714646/fixture_summary.csv",
+    "iuof_historical_category_cross_csv": "audit-local/intake/iuof-8714646/historical_category_cross.csv",
+    "iuof_historical_category_provenance_json": "audit-local/intake/iuof-8714646/historical_category_provenance.json",
+    "iuof_historical_category_recipes_csv": "audit-local/intake/iuof-8714646/historical_category_recipes.csv",
+    "iuof_independent_source_review_md": "audit-local/intake/iuof-8714646/independent_source_review.md",
+    "iuof_item_domains_csv": "audit-local/intake/iuof-8714646/item_domains.csv",
+    "iuof_iuof_audit_do": "audit-local/intake/iuof-8714646/iuof_audit.do",
+    "iuof_iuof_boundary_check_py": "audit-local/intake/iuof-8714646/iuof_boundary_check.py",
+    "iuof_iuof_driver_debug_log": "audit-local/intake/iuof-8714646/iuof_driver_debug.log",
+    "iuof_iuof_driver_log": "audit-local/intake/iuof-8714646/iuof_driver.log",
+    "iuof_iuof_readback_do": "audit-local/intake/iuof-8714646/iuof_readback.do",
+    "iuof_iuof_readback_log": "audit-local/intake/iuof-8714646/iuof_readback.log",
+    "iuof_latex_compile_receipt_json": "audit-local/intake/iuof-8714646/latex_compile_receipt.json",
+    "iuof_legacy_iuof_blocks_json": "audit-local/intake/iuof-8714646/legacy_iuof_blocks.json",
+    "iuof_malformed_controls_csv": "audit-local/intake/iuof-8714646/malformed_controls.csv",
+    "iuof_principal_route_summary_csv": "audit-local/intake/iuof-8714646/principal_route_summary.csv",
+    "iuof_question_checks_csv": "audit-local/intake/iuof-8714646/question_checks.csv",
+    "iuof_questionnaire_csv": "audit-local/intake/iuof-8714646/questionnaire.csv",
+    "iuof_relevance_summary_csv": "audit-local/intake/iuof-8714646/relevance_summary.csv",
+    "iuof_routing_checks_csv": "audit-local/intake/iuof-8714646/routing_checks.csv",
+    "iuof_routing_summary_csv": "audit-local/intake/iuof-8714646/routing_summary.csv",
+    "iuof_score_summary_csv": "audit-local/intake/iuof-8714646/score_summary.csv",
+    "iuof_score_support_csv": "audit-local/intake/iuof-8714646/score_support.csv",
+    "iuof_source_checks_csv": "audit-local/intake/iuof-8714646/source_checks.csv",
+    "iuof_source_operation_checks_json": "audit-local/intake/iuof-8714646/source_operation_checks.json",
+    "iuof_source_retention_entry_json": "audit-local/intake/iuof-8714646/source_retention_entry.json",
+    "iuof_state_alias_parity_csv": "audit-local/intake/iuof-8714646/state_alias_parity.csv",
+    "iuof_state_input_checks_csv": "audit-local/intake/iuof-8714646/state_input_checks.csv",
+    "iuof_state_component_parity_csv": "audit-local/intake/iuof-8714646/state_component_parity.csv",
+    "iuof_state_schema_checks_csv": "audit-local/intake/iuof-8714646/state_schema_checks.csv",
+    "iuof_state_score_summary_csv": "audit-local/intake/iuof-8714646/state_score_summary.csv",
+    "iuof_workflow_query_receipts_json": "audit-local/intake/iuof-8714646/workflow_query_receipts.json",
+    "iuof_source_retention_closeout_json": "audit-local/intake/iuof-8714646/source_retention_closeout.json",
+    "iuof_iuof_validation_json": "audit-local/intake/iuof-8714646/iuof_validation.json",
+    "iuof_measurement_audit": "IUOF_MEASUREMENT_AUDIT.md",
+    "iuof_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_160619_perfect__thoroguhly_implement_the_full_workflof_fo.md"
   },
   "decisions": [
     {
@@ -782,7 +848,11 @@
     {
       "date": "2026-10-06",
       "decision": "Accept M4.03.7/M5.02.5 seven historical IAFF children only within source/specification/domain/replay/fixture/consumer/review scope.19 logical operations,2961 reference/50337 state/9729 alias exact cells; required positive-only account content is constant100 in423, fixed/quantile differ138, Figure16 priority/Figure20 fixed narrative issues recorded. IAFF-01-05 remain open; no invented negative response, new score/model or causal/class-fit claim. Retain768 source-byte checks/167 prior fingerprints,124 primary IDs/14milestones, zero public approvals/pending gates. Next M4.03.8/M5.02.6 IUOF before remaining measure/exhibit/protected historical replication and explicit M7 revisions. Same-file main.tex updated with unchanged preamble; native compile fails platform initialization, layout unverified. No production/data/qualitative/source copy/deletion/Git/cloud/access/Overleaf mutation."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Accept M4.03.8/M5.02.6 seven bounded IUOF audit children only, subject to definitive independent/native receipts:38operations/11floatfields/4653referenceexactcells,17complete preservedstates/79101cells checked including789historicalcategory discrepancies reconciled to authentic sourcevariants,24actualaliases/10152exactcells. Five-form140spec/215choices,120item/645domain/180routing/60sourcechecks;108000patterns/112dependency/35invalid/sixunmapped/11boundary/twoconstant controls and independent read-back. Current source already fixes mixed-scale middle condition atd119b22; no production repair. IUOF-01–07 remain open. Preserve768source-byte checks/206prior private fingerprints,124primarytasks/14milestones,zeroapprovedfields/pendinggates and earlierreports. Existing main.tex edited in place/preamble/editorpreserved; fresh builtin compile fails Unable to find standard directories for platform, layoutunverified, no replacementPDF/compiler/tab. No participant export/derivative, estimator/exhibit/qualitative rewrite, sourcecopy/delete, staging/commit/push, cloud/access/visibility orOverleaf mutation. Nextseven-child M4.03.9/M5.02.7 OQI/adjacentQR before remainingmeasure/exhibit audits, protectedhistorical replication and explicitM7 decisions. Full proposedcommit title/body only."
     }
   ],
-  "last_updated_beijing": "2026-10-06T23:13:15.000+08:00"
+  "last_updated_beijing": "2026-10-07T00:16:25.000+08:00"
 }
