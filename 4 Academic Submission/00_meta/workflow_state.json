@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06: clean main@24f23bdc56cced9529aa1fae9f4962c324a71b73 entry. Bounded IAT historical replay through Stata MCP: 29 unchanged scoring statements, 3384 exact stored cells, 90 domain/full-relevance, 27 source and 20 fixture checks pass. All eight float storage types asserted; independent source/receipt review delivered. IAT-01/02/03 precision, item-label and partial/N/A findings remain open. Prior bounded evidence rechecked, not promoted. Historical estimator replay unrun; M0 and scientific/disclosure gates pending. Next M4.03.4/M5.02.2 IVS audit, no correction or estimator.",
+    "last_recovery_probe": "2026-10-06: clean main@453510267ff2abde860e5357ff0b6b63c520e9d3 entry. Bounded IVS historical replay through Stata MCP: 26 unchanged tenure/scoring statements, 3384 exact cells in eight float variables, 45 domain/full-relevance, 21 source, 20 fixture and four return-state/constant-range checks pass. All 423 scores complete; four observed boundary-category discrepancies. Item properties/choices agree; enclosing-group appearance differs in earliest two versions, separately verified. Stale extrema hypothesis rejected on inspected runtime. Prior IAT artifacts/accepted markers rechecked, not promoted. No estimator or correction; parent scientific/disclosure gates pending. Next M2.04.1/M6.08.1 historical IAT-IVS exhibit-provenance audit.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -73,7 +73,9 @@
       "protected-temporary-readback-copies-await-owner-cleanup",
       "historical-clock-provenance-unavailable-no-raw-to-audit-certification",
       "version-aware-measurement-geography-and-structural-missingness-review-pending",
-      "historical-iat-precision-item-label-and-missingness-findings-open"
+      "historical-iat-precision-item-label-and-missingness-findings-open",
+      "historical-ivs-precision-construct-and-latent-edge-findings-open",
+      "historical-iat-ivs-exhibit-provenance-and-interpretation-pending"
     ],
     "last_assembly": ""
   },
@@ -111,13 +113,17 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains/text availability and IAT replay pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS replay pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
       "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
       "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
+      "README.md: IVS-01 one nominal 0.33 medium and three nominal 0.66 high cases; no category repair or model/exhibit impact certified",
+      "README.md: IVS-02 main occupation does not establish formality/stability; vulnerability mapping/weights/cutoffs lack completed construct validation",
+      "README.md: IVS-03 legal arrival2026, constant-range and missing-score edges are latent; all 423 actual scores complete",
+      "README.md: IVS-04 stale extrema rejected for inspected implementation; original runtime/portability and explicit extrema remain unverified",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted"
     ],
-    "last_audit": "2026-10-06 M4.03.3/M5.02.1 bounded IAT audit delivered with exact historical parity and IAT-01/02/03 open. Complete scoped IAT ancestry/relevance checked, not every field/construct. No full scientific or historical estimator gate passed; next M4.03.4/M5.02.2 IVS audit."
+    "last_audit": "2026-10-06 M4.03.4/M5.02.2 bounded IVS audit delivered with exact stored parity, 45 full scoped relevance/domain checks and IVS-01/02/03 open. Installed extrema-refresh behavior tested; original runtime and construct validity not certified. Enclosing-group appearance difference documented. Prior IAT evidence retained; no full scientific/estimator gate passed. Next M2.04.1/M6.08.1 historical IAT-IVS exhibit provenance. Owner agreement in principle supports later justified corrections, not a passed M7 gate."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -337,7 +343,25 @@
     "iat_source_retention_entry": "audit-local/intake/iat-24f23bd/source_retention_entry.json",
     "iat_source_retention_closeout": "audit-local/intake/iat-24f23bd/source_retention_closeout.json",
     "iat_independent_review": "audit-local/intake/iat-24f23bd/independent_source_review.md",
-    "iat_validation": "audit-local/intake/iat-24f23bd/iat_validation.json"
+    "iat_validation": "audit-local/intake/iat-24f23bd/iat_validation.json",
+    "ivs_measurement_audit": "IVS_MEASUREMENT_AUDIT.md",
+    "ivs_diagnostic_driver": "audit-local/intake/ivs-4535102/ivs_audit.do",
+    "ivs_metadata_boundary_check": "audit-local/intake/ivs-4535102/ivs_boundary_check.py",
+    "ivs_questionnaire": "audit-local/intake/ivs-4535102/questionnaire.csv",
+    "ivs_choices": "audit-local/intake/ivs-4535102/choices.csv",
+    "ivs_question_checks": "audit-local/intake/ivs-4535102/question_checks.csv",
+    "ivs_source_checks": "audit-local/intake/ivs-4535102/source_checks.csv",
+    "ivs_component_parity": "audit-local/intake/ivs-4535102/component_parity.csv",
+    "ivs_denominators": "audit-local/intake/ivs-4535102/denominators.csv",
+    "ivs_score_summary": "audit-local/intake/ivs-4535102/score_summary.csv",
+    "ivs_synthetic_fixtures": "audit-local/intake/ivs-4535102/fixture_checks.csv",
+    "ivs_return_state_checks": "audit-local/intake/ivs-4535102/return_state_checks.csv",
+    "ivs_driver_log": "audit-local/intake/ivs-4535102/driver_complete.log",
+    "ivs_query_receipts": "audit-local/intake/ivs-4535102/workflow_query_receipts.json",
+    "ivs_source_retention_entry": "audit-local/intake/ivs-4535102/source_retention_entry.json",
+    "ivs_source_retention_closeout": "audit-local/intake/ivs-4535102/source_retention_closeout.json",
+    "ivs_independent_review": "audit-local/intake/ivs-4535102/independent_source_review.md",
+    "ivs_validation": "audit-local/intake/ivs-4535102/ivs_validation.json"
   },
   "decisions": [
     {
@@ -475,7 +499,27 @@
     {
       "date": "2026-10-06",
       "decision": "Existing main.tex preparation checkpoint updated in place with its preamble/style unchanged. Fresh built-in compilation fails during platform initialization with Unable to find standard directories for platform; layout remains unverified. Same editor retained, no replacement PDF/tab, installation or live Overleaf synchronization. No stage/commit/push, source copy/delete, cloud/access/visibility change or anonymous derivative. Proposed commit title/description only."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Owner expresses agreement in principle with justified Data Preparation/Analysis corrections and asks whether implementation should start. Preserve historical code/results during this audit; record evidence, correction type, tests and historical-versus-revised consequences before the M7 transition. This supports routine justified revisions without repeated harmless-operation questions, not acceptance of unknown new constructs/samples/estimators or a prospective lock. Qualitative protection and separate Git/cloud/release authority are unchanged."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "M4.03.4/M5.02.2 bounded IVS audit reproduces 26 ordered operational statements and all 3384 stored cells in eight float variables. All 45 domain/full-relevance, 21 source, 20 fixture and four return-state/constant-range checks pass. Five definitions cover 15 IVS item/version rows and 95 choices; item properties and choices agree, while earliest two enclosing groups use field-list appearance, separately verified after independent review. All 423 actual scores have three components. No original/code/output/scientific or qualitative change."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "IVS findings remain open: one nominal0.33 medium and three nominal0.66 high values by float comparison; occupation-to-formality/stability overinterpretation; latent legal-year2026, constant-range and missing-category behavior. Initial stale-return suspicion rejected on installed ungrouped _gmax: internal summarize refreshes correct extrema and exact replay passes. Explicit extrema are a portability candidate, not proven historical-score repair. Preferred h_ivs3 is a continuous-score tercile, not fixed ivs_cat. No model-result/exhibit impact certified."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Next immediate bounded task M2.04.1/M6.08.1: pin and audit existing legacy IAT-IVS Table2/Figures6-10 provenance, actual image/caption/table relationships, source rules, denominators and displayed values. Classify discrepancies and correction candidates from evidence; no replacement exhibit, estimator, production-code repair, geography harmonization or anonymous derivative. Remaining constructs/protected historical replay precede M7. Prior IAT fingerprints and accepted markers reverified without promoting scientific/release gates."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Existing main.tex IVS preparation checkpoint updated in place with unchanged preamble/style. Fresh built-in compile fails during platform initialization with Unable to find standard directories for platform; rendered layout unverified. Same editor retained; no replacement PDF/tab, TeX installation or Overleaf sync. Ignored diagnostic-only fixes were rerun; rejected and superseded evidence is retained separately. No staging/commit/push, source copy/delete or access/visibility change. Full proposed commit message only."
     }
   ],
-  "last_updated_beijing": "2026-10-06T17:28:00+08:00"
+  "last_updated_beijing": "2026-10-06T18:20:53+08:00"
 }
