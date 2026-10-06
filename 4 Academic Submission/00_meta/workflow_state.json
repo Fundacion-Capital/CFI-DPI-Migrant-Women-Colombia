@@ -1,5 +1,5 @@
 {
-  "schema_version": 15,
+  "schema_version": 16,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06 clean main@f2c99abae854ca2c01d441238ecb8bd06cb6f6ef entry. M6.08.1.e exact owner-authorized three-file preservation/read-back and aggregate reconciliation delivered within bounded scope. Original35 unchanged, archive38; local SHA/size and complete cloud path/size checks. Three423-row states match all27 legacy table counts and129 displayed cells; observed IVS-05 all-missing tenure yields two-component old IVS. Source value operations and protected26-field keyed comparisons checked; original runtime/cause/generation and model impact not certified. Next M4.03.5/M5.02.3 IADT. Parent gates pending; same-editor main.tex native platform compilation unavailable.",
+    "last_recovery_probe": "2026-10-06 effective clean main@b447ee5915a7f8ef4f9487253d6ffcdb705c84c5 after the owner committed the six pre-existing M6.08.1.e documentation edits during intake. M4.03.5/M5.02.3 historical IADT audit delivered within seven bounded children: five-version applicability/domain checks, ten ordered operations,2538 exact baseline cells,36 unique states/468 schema checks/17 complete state replays,23 exact aliases,729 patterns/11 nominal probes/7 malformed controls/2 degenerate samples. Structural323/99/1 components,276 fixed-versus-tercile differences and four raw/standardized omissions remain scientific findings. Definitive MCP driver/read-back and separate critic; no production/model change. Next M4.03.6/M5.02.4 ICDP. Parent gates pending; native same-editor compiler platform initialization fails.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -115,7 +115,7 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS replay pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
       "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
       "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
@@ -125,9 +125,14 @@
       "README.md: IVS-04 stale extrema rejected for inspected implementation; original runtime/portability and explicit extrema remain unverified",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted",
       "IAT_IVS_EXHIBIT_AUDIT.md: EXH-01-06 refined; old stored-state Table2/Figures7-10 compatibility recovered, exact histogram generation/original execution unresolved. Arithmetic, captions, semantics/denominators and inference issues remain; IVS-05 is observed old all-missing tenure/two-component index, not a proven runtime cause.",
-      "IAT_IVS_EXHIBIT_AUDIT.md: IVS-05 old two-component IVS and later complete three-component state require downstream consumer/reload/estimator reconciliation before revisions; no coefficient/class impact certified."
+      "IAT_IVS_EXHIBIT_AUDIT.md: IVS-05 old two-component IVS and later complete three-component state require downstream consumer/reload/estimator reconciliation before revisions; no coefficient/class impact certified.",
+      "README.md: IADT-01 structural phone applicability changes component content/weights for100 retained scores; no applicable-item nonresponse; cross-group construct/estimand decision pending",
+      "README.md: IADT-02 perceived confidence is not demonstrated skill, causal learning/protection or financial inclusion; legacy denominator/causal/mediation interpretations require review",
+      "README.md: IADT-03 latent missing-to-high, exact-domain/range and degenerate-standardization exposure; nominal float probes are not attainable legal-score boundaries; no observed boundary error demonstrated",
+      "README.md: IADT-04 four standardized/AME counterparts omit IADT relative to full raw models; fit/sample/output comparability and intentionality require protected M6/M7 reconciliation",
+      "README.md: IADT-05 fixed categories versus uneven empirical terciles differ276/423; preferredH1/actual benchmark inputs exclude IADT; within-sample profiles are not independent external validation"
     ],
-    "last_audit": "2026-10-06 M6.08.1.e bounded closeout pass: exact three preserved and MCP-readable;69 scoped schema checks;36 table cells,12 means,344 displayed cells,44 summaries,24 recipe checks,80 declared bins,48 prose and208 keyed comparisons. Old all-missing tenure and exact two-component IVS established. Selected26 fields identical across three old states; only four IVS-related fields differ against current. Four accepted MCP runs include independent aggregate read-back and empty-session probe; separate evidence review and final source retention pass. No scientific gate, estimator or production correction."
+    "last_audit": "2026-10-06 bounded IADT instrument/recipe/stored-value/source-consumer audit:60 domain/relevance,390 observed-code,23 protected source,6 baseline-variable and102 complete-state replay records pass;17 state summaries and23 alias comparisons pass; synthetic controls distinguish observed composition from latent policies. Exact reproduction is not construct/causal/estimator validation; IADT-01-05 and IVS-05 remain open."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -424,7 +429,48 @@
     "historical_exhibit_preserve_and_verify": "audit-local/intake/historical-exhibits-f2c99ab/preserve_and_verify.py",
     "historical_exhibit_latex_compile_receipt": "audit-local/intake/historical-exhibits-f2c99ab/latex_compile_receipt.json",
     "historical_exhibit_independent_historical_review": "audit-local/intake/historical-exhibits-f2c99ab/independent_historical_review.md",
-    "historical_exhibit_historical_validation": "audit-local/intake/historical-exhibits-f2c99ab/historical_validation.json"
+    "historical_exhibit_historical_validation": "audit-local/intake/historical-exhibits-f2c99ab/historical_validation.json",
+    "iadt_boundary_checks_csv": "audit-local/intake/iadt-f2c99ab/boundary_checks.csv",
+    "iadt_candidate_data_states_csv": "audit-local/intake/iadt-f2c99ab/candidate_data_states.csv",
+    "iadt_choices_csv": "audit-local/intake/iadt-f2c99ab/choices.csv",
+    "iadt_coded_domain_summary_csv": "audit-local/intake/iadt-f2c99ab/coded_domain_summary.csv",
+    "iadt_component_parity_csv": "audit-local/intake/iadt-f2c99ab/component_parity.csv",
+    "iadt_consumer_locators_csv": "audit-local/intake/iadt-f2c99ab/consumer_locators.csv",
+    "iadt_denominators_csv": "audit-local/intake/iadt-f2c99ab/denominators.csv",
+    "iadt_driver_accepted_final_log": "audit-local/intake/iadt-f2c99ab/driver_accepted_final.log",
+    "iadt_driver_accepted_rerun_log": "audit-local/intake/iadt-f2c99ab/driver_accepted_rerun.log",
+    "iadt_driver_accepted_log": "audit-local/intake/iadt-f2c99ab/driver_accepted.log",
+    "iadt_driver_final_accepted_log": "audit-local/intake/iadt-f2c99ab/driver_final_accepted.log",
+    "iadt_driver_unique_states_log": "audit-local/intake/iadt-f2c99ab/driver_unique_states.log",
+    "iadt_driver_verified_log": "audit-local/intake/iadt-f2c99ab/driver_verified.log",
+    "iadt_fixed_vs_tercile_csv": "audit-local/intake/iadt-f2c99ab/fixed_vs_tercile.csv",
+    "iadt_fixture_patterns_csv": "audit-local/intake/iadt-f2c99ab/fixture_patterns.csv",
+    "iadt_iadt_audit_do": "audit-local/intake/iadt-f2c99ab/iadt_audit.do",
+    "iadt_iadt_boundary_check_py": "audit-local/intake/iadt-f2c99ab/iadt_boundary_check.py",
+    "iadt_iadt_driver_log": "audit-local/intake/iadt-f2c99ab/iadt_driver.log",
+    "iadt_iadt_readback_do": "audit-local/intake/iadt-f2c99ab/iadt_readback.do",
+    "iadt_iadt_readback_log": "audit-local/intake/iadt-f2c99ab/iadt_readback.log",
+    "iadt_independent_source_review_md": "audit-local/intake/iadt-f2c99ab/independent_source_review.md",
+    "iadt_item_domains_csv": "audit-local/intake/iadt-f2c99ab/item_domains.csv",
+    "iadt_latex_compile_receipt_json": "audit-local/intake/iadt-f2c99ab/latex_compile_receipt.json",
+    "iadt_legacy_iadt_blocks_json": "audit-local/intake/iadt-f2c99ab/legacy_iadt_blocks.json",
+    "iadt_malformed_controls_csv": "audit-local/intake/iadt-f2c99ab/malformed_controls.csv",
+    "iadt_question_checks_csv": "audit-local/intake/iadt-f2c99ab/question_checks.csv",
+    "iadt_questionnaire_csv": "audit-local/intake/iadt-f2c99ab/questionnaire.csv",
+    "iadt_relevance_summary_csv": "audit-local/intake/iadt-f2c99ab/relevance_summary.csv",
+    "iadt_score_summary_csv": "audit-local/intake/iadt-f2c99ab/score_summary.csv",
+    "iadt_source_checks_csv": "audit-local/intake/iadt-f2c99ab/source_checks.csv",
+    "iadt_source_operation_checks_json": "audit-local/intake/iadt-f2c99ab/source_operation_checks.json",
+    "iadt_source_retention_entry_json": "audit-local/intake/iadt-f2c99ab/source_retention_entry.json",
+    "iadt_state_alias_parity_csv": "audit-local/intake/iadt-f2c99ab/state_alias_parity.csv",
+    "iadt_state_component_parity_csv": "audit-local/intake/iadt-f2c99ab/state_component_parity.csv",
+    "iadt_state_schema_checks_csv": "audit-local/intake/iadt-f2c99ab/state_schema_checks.csv",
+    "iadt_state_score_summary_csv": "audit-local/intake/iadt-f2c99ab/state_score_summary.csv",
+    "iadt_workflow_query_receipts_json": "audit-local/intake/iadt-f2c99ab/workflow_query_receipts.json",
+    "iadt_source_retention_closeout_json": "audit-local/intake/iadt-f2c99ab/source_retention_closeout.json",
+    "iadt_iadt_validation_json": "audit-local/intake/iadt-f2c99ab/iadt_validation.json",
+    "iadt_measurement_audit": "IADT_MEASUREMENT_AUDIT.md",
+    "iadt_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_131224_fully_implement_ad_audit_the_whoel_work_for_the_co.md"
   },
   "decisions": [
     {
@@ -634,7 +680,11 @@
     {
       "date": "2026-10-06",
       "decision": "Reviewer receipt-phase clarity corrected without recopying: pre-copy/proposal absence and post-copy existence named separately. Final complete remote listing is identical to the post-copy listing for all38 file metadata records. Windows extended-length traversal includes long workbook. Four accepted MCP runs with actual completion/read-back/empty-frame markers; failed/superseded attempts retained. Separate critic BOUNDED_REVIEW_PASS and native closeout pass: 765 original-source byte checks, all63 prior private fingerprints, 38 archive files, 161 resolving pointers, 29 ignored private files, six public documentation changes, 124 primary task IDs/14 milestones and empty staging. All five scientific gates remain pending; zero public fields approved."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "M4.03.5/M5.02.3 seven-child historical IADT audit accepted within its reproduction/source/specification boundary, subject to definitive private closeout. Ten operations/six float variables exact, structurally changing323/99/1 component coverage not nonresponse,17 complete states and23 available aliases exact. IADT-01-05 remain scientific candidates, including four standardized specification omissions; no estimator or correction. Retain768 overlapping original checks and92 prior private fingerprints; all parent gates and zero-public-field hold unchanged. Continue M4.03.6/M5.02.4 ICDP before remaining-index/reload/estimator audit and explicit M7 revisions."
     }
   ],
-  "last_updated_beijing": "2026-10-06T20:09:01+08:00"
+  "last_updated_beijing": "2026-10-06T21:14:08+08:00"
 }
