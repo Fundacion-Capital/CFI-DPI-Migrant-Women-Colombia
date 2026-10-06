@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06: clean main@46edc8ca44e8579dfb60f1e8a51aa3258dfcfde7 entry. M2.04.1/M6.08.1 bounded historical IAT-IVS Table2/Figures6-10 audit delivered with open discrepancies. Fresh scoped OOXML, five exact historical PNG matches, six current copy pairs; Stata MCP aggregate-only 14-state/126-cell, 42-mean, 86-image-cell and 22-prose checks with independent read-back. Table arithmetic and unmatched old IVS states, labels, denominators and interpretation registered EXH-01-06. No estimator, correction, original overwrite or release. Parent gates pending. Final metadata check finds six additional old coded Git candidates outside preserved catalogue; three analysis-input blobs await separate copy/read-back authority. Next M6.08.1.e provenance follow-up, then queued IADT M4.03.5/M5.02.3; main.tex compiler platform failure persists.",
+    "last_recovery_probe": "2026-10-06 clean main@f2c99abae854ca2c01d441238ecb8bd06cb6f6ef entry. M6.08.1.e exact owner-authorized three-file preservation/read-back and aggregate reconciliation delivered within bounded scope. Original35 unchanged, archive38; local SHA/size and complete cloud path/size checks. Three423-row states match all27 legacy table counts and129 displayed cells; observed IVS-05 all-missing tenure yields two-component old IVS. Source value operations and protected26-field keyed comparisons checked; original runtime/cause/generation and model impact not certified. Next M4.03.5/M5.02.3 IADT. Parent gates pending; same-editor main.tex native platform compilation unavailable.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -75,9 +75,9 @@
       "version-aware-measurement-geography-and-structural-missingness-review-pending",
       "historical-iat-precision-item-label-and-missingness-findings-open",
       "historical-ivs-precision-construct-and-latent-edge-findings-open",
-      "historical-iat-ivs-exhibit-audit-delivered-old-ivs-generating-state-and-exh-findings-open",
+      "old-stored-ivs-exhibit-compatibility-recovered-ivs05-and-exh-findings-open",
       "full-legacy-word-render-unavailable",
-      "additional-historical-analysis-input-blobs-await-exact-restricted-copy-readback-authority"
+      "historical-two-component-ivs05-downstream-estimation-and-execution-cause-unverified"
     ],
     "last_assembly": ""
   },
@@ -121,12 +121,13 @@
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
       "README.md: IVS-01 one nominal 0.33 medium and three nominal 0.66 high cases; no category repair or model/exhibit impact certified",
       "README.md: IVS-02 main occupation does not establish formality/stability; vulnerability mapping/weights/cutoffs lack completed construct validation",
-      "README.md: IVS-03 legal arrival2026, constant-range and missing-score edges are latent; all 423 actual scores complete",
+      "README.md: IVS-03 legal arrival2026, constant-range and missing-score edges are latent in the complete current reference; IVS-05 separately establishes all-missing tenure components in old states, not missing aggregate scores",
       "README.md: IVS-04 stale extrema rejected for inspected implementation; original runtime/portability and explicit extrema remain unverified",
       "README.md: restricted temporary verification duplicates await owner housekeeping; no original deleted",
-      "IAT_IVS_EXHIBIT_AUDIT.md: EXH-01-06; unmatched old IVS generating states/runtime/logs; internal table percentage/mean/caption issues; frequency semantics; graph/prose denominators and unsupported mechanisms. Bounded diagnostics are not historical exhibit or scientific certification."
+      "IAT_IVS_EXHIBIT_AUDIT.md: EXH-01-06 refined; old stored-state Table2/Figures7-10 compatibility recovered, exact histogram generation/original execution unresolved. Arithmetic, captions, semantics/denominators and inference issues remain; IVS-05 is observed old all-missing tenure/two-component index, not a proven runtime cause.",
+      "IAT_IVS_EXHIBIT_AUDIT.md: IVS-05 old two-component IVS and later complete three-component state require downstream consumer/reload/estimator reconciliation before revisions; no coefficient/class impact certified."
     ],
-    "last_audit": "2026-10-06 M4.03.4/M5.02.2 bounded IVS audit delivered with exact stored parity, 45 full scoped relevance/domain checks and IVS-01/02/03 open. Installed extrema-refresh behavior tested; original runtime and construct validity not certified. Enclosing-group appearance difference documented. Prior IAT evidence retained; no full scientific/estimator gate passed. Next M2.04.1/M6.08.1 historical IAT-IVS exhibit provenance. Owner agreement in principle supports later justified corrections, not a passed M7 gate."
+    "last_audit": "2026-10-06 M6.08.1.e bounded closeout pass: exact three preserved and MCP-readable;69 scoped schema checks;36 table cells,12 means,344 displayed cells,44 summaries,24 recipe checks,80 declared bins,48 prose and208 keyed comparisons. Old all-missing tenure and exact two-component IVS established. Selected26 fields identical across three old states; only four IVS-related fields differ against current. Four accepted MCP runs include independent aggregate read-back and empty-session probe; separate evidence review and final source retention pass. No scientific gate, estimator or production correction."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -187,7 +188,8 @@
       "EXH-03",
       "EXH-04",
       "EXH-05",
-      "EXH-06"
+      "EXH-06",
+      "IVS-05"
     ],
     "last_claim_audit": ""
   },
@@ -201,12 +203,12 @@
     "unverified_citations": 0,
     "blocking_findings": [
       "Full numerical, citation, consent/ethics, rights and construct reconciliation remain pending.",
-      "Genuine contact data in Git/history remain on release hold; exact 35-version preservation is not anonymous release or history remediation.",
+      "Genuine contact data in Git/history remain on release hold; exact first35 plus3 separately authorized preservation is not anonymous release or history remediation.",
       "New raw recovers cohort/non-time cells and original ordering; export-clock reports/settings unavailable. Five used definitions matched and bounded domains/text availability pass; full version meanings, relevance, scoring and estimator parity still require scientific review without automatic recoding.",
       "Source frames cleared; protected temporary read-back duplicates remain after tool-policy rejection of cleanup. Remote path/size evidence is not remote payload-hash verification.",
-      "Bounded Table2/Figures6-10 review delivered. All five embedded PNGs match old Git blobs, not current bytes; Word age/city placement correct. Old IVS-generating provenance, table means/counts/arithmetic, labels/denominators and causal interpretation remain open. Other claims/exhibits and full rendering not certified."
+      "M6.08.1.e recovers stored-state compatibility for legacy Table2/Figures7-10 and Figure6 distribution shape. IVS-05 identifies old all-missing tenure/two-component score; original runtime/cause, unique generating identity, exact histogram rendering and downstream estimates remain unverified. Arithmetic/caption/label/denominator and inference findings remain. Other claims/exhibits and full rendering not certified."
     ],
-    "last_audit": ""
+    "last_audit": "2026-10-06 bounded M6.08.1.e historical follow-up; not the full final manuscript claim/citation audit."
   },
   "design_risk": {
     "status": "pending",
@@ -257,7 +259,7 @@
     "environment_record": "README.md#pipeline-status-and-execution-contract",
     "frozen_at_stage": null,
     "data_availability_statement": "",
-    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. Exactly 35 selected versions are preserved: local source/destination SHA-256/size and Stata readability pass; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup. Superseding input contract: original raw/audit sequence agrees after correcting sorted-link-index misuse; all five used spreadsheets matched. Export-clock reports/settings no longer exist per owner; frozen audit/coded clocks are stored historical references, not exact raw-to-audit reconstruction. Version-aware meaning and transitive dependencies remain pending M4/M5. Scoped version/dependency register and protected replay contract delivered at ce69fd9; 120 domains and 170 text-availability checks pass. A private semantic overlay annotates 38 of 679 prior proposal rows, zero release-approved fields. Full-source joint disclosure, exact scoring/estimator parity and actual isolated replay remain pending.",
+    "archive_plan": "Owner requires GitHub public. Restricted originals remain in Dropbox. The original 35 selected versions and exactly three separately authorized M6.08.1.e historical analysis inputs are preserved, 38 in total: local source/destination SHA-256/size and Stata readability pass; all prior 35 bytes retained; complete remote archive listing matches paths/sizes, not payload hashes. Access is owner-confirmed for members/inherited parents plus scoped no-owned-link checks. Public anonymous derivative, export routing, Git/history cleanup and Overleaf release require separate approval and disclosure/scientific parity. Historical clock/order/form input contract remains open; protected temporary restore copies require owner cleanup. Superseding input contract: original raw/audit sequence agrees after correcting sorted-link-index misuse; all five used spreadsheets matched. Export-clock reports/settings no longer exist per owner; frozen audit/coded clocks are stored historical references, not exact raw-to-audit reconstruction. Version-aware meaning and transitive dependencies remain pending M4/M5. Scoped version/dependency register and protected replay contract delivered at ce69fd9; 120 domains and 170 text-availability checks pass. A private semantic overlay annotates 38 of 679 prior proposal rows, zero release-approved fields. Full-source joint disclosure, exact scoring/estimator parity and actual isolated replay remain pending.",
     "runtime_minutes": null,
     "last_rebuild_check": ""
   },
@@ -399,7 +401,30 @@
     "exhibit_workflow_receipts": "audit-local/intake/exhibits-46edc8c/workflow_query_receipts.json",
     "exhibit_source_retention_entry": "audit-local/intake/exhibits-46edc8c/source_retention_entry.json",
     "exhibit_source_retention_closeout": "audit-local/intake/exhibits-46edc8c/source_retention_closeout.json",
-    "exhibit_historical_data_candidates": "audit-local/intake/exhibits-46edc8c/historical_data_candidates.json"
+    "exhibit_historical_data_candidates": "audit-local/intake/exhibits-46edc8c/historical_data_candidates.json",
+    "historical_exhibit_preservation_preflight": "audit-local/intake/historical-exhibits-f2c99ab/preservation_preflight.json",
+    "historical_exhibit_preservation_receipt": "audit-local/intake/historical-exhibits-f2c99ab/preservation_receipt.json",
+    "historical_exhibit_preserved_state_paths": "audit-local/intake/historical-exhibits-f2c99ab/preserved_state_paths.csv",
+    "historical_exhibit_cloud_preflight": "audit-local/intake/historical-exhibits-f2c99ab/cloud_preflight.json",
+    "historical_exhibit_cloud_postcopy": "audit-local/intake/historical-exhibits-f2c99ab/cloud_postcopy.json",
+    "historical_exhibit_stata_schema_checks": "audit-local/intake/historical-exhibits-f2c99ab/stata_schema_checks.csv",
+    "historical_exhibit_cells": "audit-local/intake/historical-exhibits-f2c99ab/cells.csv",
+    "historical_exhibit_means": "audit-local/intake/historical-exhibits-f2c99ab/means.csv",
+    "historical_exhibit_labels": "audit-local/intake/historical-exhibits-f2c99ab/labels.csv",
+    "historical_exhibit_summaries": "audit-local/intake/historical-exhibits-f2c99ab/summaries.csv",
+    "historical_exhibit_recipes": "audit-local/intake/historical-exhibits-f2c99ab/recipes.csv",
+    "historical_exhibit_bins": "audit-local/intake/historical-exhibits-f2c99ab/bins.csv",
+    "historical_exhibit_prose": "audit-local/intake/historical-exhibits-f2c99ab/prose.csv",
+    "historical_exhibit_comparisons": "audit-local/intake/historical-exhibits-f2c99ab/comparisons.csv",
+    "historical_exhibit_source_operation_checks": "audit-local/intake/historical-exhibits-f2c99ab/source_operation_checks.json",
+    "historical_exhibit_source_retention_entry": "audit-local/intake/historical-exhibits-f2c99ab/source_retention_entry.json",
+    "historical_exhibit_source_retention_closeout": "audit-local/intake/historical-exhibits-f2c99ab/source_retention_closeout.json",
+    "historical_exhibit_workflow_query_receipts": "audit-local/intake/historical-exhibits-f2c99ab/workflow_query_receipts.json",
+    "historical_exhibit_historical_audit": "audit-local/intake/historical-exhibits-f2c99ab/historical_audit.do",
+    "historical_exhibit_preserve_and_verify": "audit-local/intake/historical-exhibits-f2c99ab/preserve_and_verify.py",
+    "historical_exhibit_latex_compile_receipt": "audit-local/intake/historical-exhibits-f2c99ab/latex_compile_receipt.json",
+    "historical_exhibit_independent_historical_review": "audit-local/intake/historical-exhibits-f2c99ab/independent_historical_review.md",
+    "historical_exhibit_historical_validation": "audit-local/intake/historical-exhibits-f2c99ab/historical_validation.json"
   },
   "decisions": [
     {
@@ -585,7 +610,31 @@
     {
       "date": "2026-10-06",
       "decision": "Final bounded closeout passes 765 original-byte checks, 15 prior IAT/18 IVS fingerprints, 138 resolving pointers, all 124 primary task IDs/14 milestones, complete fingerprints, 32 ignored private files, six-file public documentation diff and empty staging. Three accepted MCP runs assert diagnostics, actual aggregate read-back, fresh 33-state schema and only empty default frame. Separate critic source/visual/aggregate and metadata addendum pass with wording/privacy findings resolved. No parent scientific/design/release gate pass. Additional three-source-input preservation/read-back remains unexecuted and requires exact owner authority."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Direct owner message authorizes the exact three proposed historical analysis-input preservation/read-back versions. Six folders and three files copied into existing restricted Dropbox archive; all original35 retained. No NoPII alternatives or broad history copy, deletion/overwrite, participant export, anonymous derivative, estimator, production correction, Git stage/commit/push, access/visibility or Overleaf action authorized or performed."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "M6.08.1.e old states each423 rows and414/438/439 fields; exactSHA/size/source input pins and complete38-file cloud path/size verified, not remote payload checksums. All old27 table-count and129 display-cell comparisons match; .83/.73 means and6.6875 descriptive ratio recovered. Figure6 range/below.20/declared-bin shape compatible, not exact graph-generation certification."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "IVS-05 observed: tenure normalization missing in all423 old rows; IVS exactly two-component education/occupation mean. Protected26-field unique-key comparison proves old versions equal within whitelist; versus current only normalization(423), score(422), standardized score(423), fixed category(117) differ. All29 IAT and26 IVS value operations match sources; March9 tenure-category label language only. Installed runtime computes complete tenure. Original execution cause/runtime/logs unverified; stale-return hypothesis not established. Reconcile downstream consumers in historical replay; no estimator impact inferred."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Diagnostic-only Windows extended-length enumeration, static count/format assertions and explicit double numeric posting corrected and rerun; failed/superseded evidence excluded, original code/data untouched. Independent MCP read-back checks all scoped aggregate products. Exact participant-data pins remain private. EXH-01/02 refined, EXH-03-06 and IVS-05 open. Next immediate seven-child M4.03.5/M5.02.3 IADT; all124 primary tasks/14 milestones and five scientific gates remain unchanged/pending."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Existing main.tex preparation record updated in place, preamble/style unchanged, same editor retained. Fresh post-edit built-in compile fails during platform initialization: Unable to find standard directories for platform. Rendered layout remains unverified; no replacementPDF/tab, compiler install or Overleaf synchronization. Proposed full commit title/description only."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Reviewer receipt-phase clarity corrected without recopying: pre-copy/proposal absence and post-copy existence named separately. Final complete remote listing is identical to the post-copy listing for all38 file metadata records. Windows extended-length traversal includes long workbook. Four accepted MCP runs with actual completion/read-back/empty-frame markers; failed/superseded attempts retained. Separate critic BOUNDED_REVIEW_PASS and native closeout pass: 765 original-source byte checks, all63 prior private fingerprints, 38 archive files, 161 resolving pointers, 29 ignored private files, six public documentation changes, 124 primary task IDs/14 milestones and empty staging. All five scientific gates remain pending; zero public fields approved."
     }
   ],
-  "last_updated_beijing": "2026-10-06T19:19:36+08:00"
+  "last_updated_beijing": "2026-10-06T20:09:01+08:00"
 }

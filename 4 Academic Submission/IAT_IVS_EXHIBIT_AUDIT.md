@@ -2,6 +2,8 @@
 
 **Bounded task:** M2.04.1 / M6.08.1, 6 October 2026. Entry: clean `main@46edc8ca44e8579dfb60f1e8a51aa3258dfcfde7`. This reconciles LEGACY-A Table 2, Figures 6–10 and their immediate explanatory paragraphs. It is a historical audit, not a replacement manuscript, revised analysis or global Replication Gate pass.
 
+**Checkpoint distinction:** Sections 1–5 preserve that pre-authorization audit. The separately authorized **M6.08.1.e follow-up in Section 6** supersedes its statements that the three additional inputs were unopened, preservation was pending, and no inspected state matched the old table/age/city values. It does not supersede the original artifacts, the confirmed arithmetic/semantic findings, or the unresolved original execution history.
+
 ## 1. Sources, methods and acceptance boundary
 
 LEGACY-A is the author-selected full original draft labelled 31 July 2026, SHA-256 `99919BBE239C5CE319B986B6B18C534DB02D6E3CB5469FF55EDFC1294CAFC76F`. Fresh OOXML extraction of blocks B00477–B00502 agrees exactly with the earlier cached extraction. Table 2 is a native 4×4 Word table, not an empty linked object. All five figures are embedded inline images; exact media bytes, relationship IDs, captions and placements are pinned privately. Visual inspection covers their actual content and the six current candidate graph variants. This is not full-document rendered pagination/layout certification: the bundled Word renderer is unavailable.
@@ -86,3 +88,51 @@ Diagnostic failures are retained and excluded from acceptance: an unavailable hi
 **Next smallest task:** **M6.08.1.e, targeted historical dataset provenance follow-up**, before moving to IADT. Obtain the exact separate authority for additional restricted working copies; preflight/hash and Stata-read only the three old analysis-input blobs (not all Git history or NoPII-labelled alternatives), then compare their IVS/IAT/table/chart aggregates against the scoped exhibits. Retain originals and the approved archive unchanged, and do not certify generation from a commit coincidence alone. This new evidence-based child closes an actionable avenue that the original 33-state catalogue did not cover. Copying, archiving or releasing these extra versions has **not** been authorized or executed.
 
 The queued measurement task remains **M4.03.5 / M5.02.3, historical IADT item/component/scoring audit**: complete instrument ancestry/domains, component directions/weights, missingness/denominators, scale and exact stored-variable parity; aliases/consumers and scientific candidates, without an estimator or correction. Continue remaining IPCS/ICPF/IBPD/enabler audits and protected historical replication before M7. These children extend existing primary tasks; all 124 primary tasks and 14 milestones remain unchanged.
+
+## 6. Authorized historical-input follow-up — M6.08.1.e
+
+Entry was clean `main@f2c99abae854ca2c01d441238ecb8bd06cb6f6ef`. The owner explicitly authorized the proposed preservation. Only the **three analysis-input versions at the 9, 13 and 21 March 2026 commits** were copied from immutable Git objects into the existing restricted Dropbox archive. No NoPII-labelled alternatives were copied or opened, no original was moved, deleted or overwritten, and no production code, score, output, manuscript or qualitative substance was changed. Dataset object IDs, hashes, exact allowlist and destination paths stay private.
+
+Each copied file matches its previously pinned source SHA-256 and size. The archive now contains **38 files: the original 35 unchanged, plus exactly three files in six new subfolders**. Complete Dropbox connector listings independently confirm all 38 paths/sizes and the three new expected sizes. Local byte identity is verified; remote payload checksums are unavailable. Windows extended-length traversal prevents the longest archived workbook path from being silently omitted. The early enumeration failure occurred before copying and is retained as an excluded diagnostic assumption.
+
+### 6.1 Readability, stored values and exhibit compatibility
+
+Stata MCP opens all three preserved states: **423 observations** each, with **414, 438 and 439 variables**, respectively. All 69 checks of the 23-variable nonidentifier schema whitelist pass. Subsequent statistics select only the required index/item/group fields. Source keys are used transiently for protected 1:1 alignment, never displayed or exported. Exported receipts are aggregates only and remain ignored.
+
+| Scoped result | Three preserved old states | Current pinned coded reference | Meaning |
+|---|---|---|---|
+| Table 2 IVS group totals | 107 / 220 / 96 | 23 / 283 / 117 | All nine legacy counts match each old state; six differ in the current reference. IAT marginal totals remain 10 / 207 / 206. |
+| Mean IAT by low / medium / high IVS | .8304672854 / .7768636335 / .7295833320 | .8821739088 / .7902473468 / .7340170917 | The old .83 and .73 prose means are supported at two decimals; they must identify their old IVS state. |
+| Figures 7–10 displayed percentages | All 43 cells match each old state: 129/129 comparisons | All 43 current-image cells match; 22/43 legacy cells differ | Numerical compatibility is established for each declared displayed cell, not the unique original generating file/runtime. |
+| Figure 6 distribution | Score range 0–1; 35/423 below .20; declared .05-bin peak .50–.55 | Minimum .2366666794; none below .20; .60–.65 peak | Consistent with the respective visible distribution shapes. No exact old bin heights are inferred from pixels and no graph is regenerated. |
+| Unadjusted low-IAT prevalence ratio, high versus low IVS | (6/96)/(1/107) = 6.6875 | (6/117)/(1/23) = 1.1795 | The approximately sevenfold legacy arithmetic is recovered, but pertains to the old measurement state, not a causal effect or the current three-component IVS. |
+
+The diagnostic driver covers **36 table cells, 12 means, 344 old/current display-cell comparisons, 44 variable summaries, 24 component/runtime checks, 80 declared-bin cells, 48 prose diagnostics and 208 keyed field-comparison rows** across the three old states and one current reference. Independent Stata read-back checks identities, sample totals, display precision, denominators and the registered mismatches. Half-open .05 bins are declared descriptive diagnostics; floating-boundary conventions and unavailable generation logs prevent a claim of exact historical histogram-rendering parity.
+
+### 6.2 IVS-05 — observed historical component omission, not an inferred runtime cause
+
+In **all three old states**, `antig_norm` is missing in **all 423 observations**, while education and occupation components are complete. Stored `ivs_score` is **exactly the float row mean of education and occupation alone in all 423 rows**. Stata's row mean excludes the missing tenure component. Stored categories also agree exactly with the historical cutoffs. This identifies an observed two-component historical IVS; it is not the latent legal-arrival/constant-range edge case discussed for the complete current reference.
+
+Protected unique-key comparisons match all 423 observations. The three old states agree exactly across the **26 selected variables**. Against the current reference, only four of those variables differ: tenure normalization in 423 rows, IVS scores in 422, standardized IVS in 423 and fixed IVS categories in 117. The other 22 selected variables—including IAT components/scores/categories, tenure years, schooling, occupation, age/city and the scoped phone/Internet responses—match exactly. This is a whitelist-scoped identity result, not a claim that the complete datasets or every downstream output are identical.
+
+The three historical preparation sources contain the same **29 ordered IAT operations** as the unchanged current source. All **26 IVS value-defining operations** agree; the 9 March source differs only in Spanish versus English labels attached to the same tenure-category recode. The 13 and 21 March IVS operational statements agree literally after comment/whitespace normalization. All use reference year 2026; an alternative reference year is not the established explanation.
+
+The installed-runtime tenure recipe produces complete normalization with extrema **1 and 26**, matching the current reference and differing from the old missing component in all 423 rows. Therefore **stored historical state and declared preparation behavior are not equivalent on the inspected runtime**. Original command-return state, execution route, runtime/version and generation logs remain unverified. The earlier stale-return hypothesis remains rejected for the inspected implementation; this new evidence does not prove that hypothesis for the old run. Do not silently impute a cause, replace old scores, or declare a clean end-to-end replay.
+
+**IVS-05 correction candidate:** retain and label the old two-component descriptive state separately from the later three-component state; require explicit extrema/component-completeness assertions in a later reviewed revision; reconcile which state every correlation, regression, LCA and reload consumer actually used before any historical/revised comparison. No estimator or class solution was run here. The old descriptive contrast cannot simply be carried into a manuscript describing a three-component IVS.
+
+### 6.3 Findings and acceptance disposition
+
+**EXH-01 is refined, not globally closed:** the previously missing stored-state compatibility is now recovered for Table 2 and Figures 7–10, with Figure 6 distribution-shape compatibility. Exact historical PNG identity remains established; unique generating data identity, runtime/logs, exact histogram regeneration and scientific correctness remain unverified. **EXH-02 is refined:** the .83/.73 means and approximately sevenfold contrast are traceable to the two-component state; the table's 47.96% arithmetic error, absent promised means and IVS/SVI naming issue remain. **EXH-03–06 remain open**: mislabeled frequency, denominator/item-meaning issues, unsupported causal/formality/reliance claims and the age-prose contradiction are not cured by finding matching data.
+
+| Child | Bounded disposition |
+|---|---|
+| M6.08.1.e.1 | Exact separate owner authorization recorded; no broader data/history or release authority inferred. |
+| M6.08.1.e.2 | CHECK_PASS: three immutable object/size/SHA/load-source pins and restricted destinations; all original inputs retained. |
+| M6.08.1.e.3 | CHECK_PASS: exactly three copies, six folders, 38-file archive, local hash/size, complete cloud path/size listings and three MCP readability/schema checks. Remote checksums remain unavailable. |
+| M6.08.1.e.4 | AUDIT_DELIVERED_WITH_KNOWN_GAPS: stored legacy compatibility and observed IVS-05 component omission established; source value-operation identities checked. Original execution history, model impacts and exact rendering remain unresolved. |
+| M6.08.1.e.5 | CHECK_PASS: separate evidence review, four accepted MCP runs/read-back and final retention/privacy/empty-session closeout. All 765 original-byte checks, 63 prior fingerprints, 161 pointers, 29 ignored private files, six public documentation changes and empty staging are checked. The private final validation accepts this bounded child only; no parent gate is promoted. |
+
+Diagnostic-only count, formatting, Windows-path and explicit numeric-posting improvements were tested and rerun. Failed or superseded runs are retained and excluded from acceptance. All original sources and prior immutable evidence remain unchanged. No public fields are approved and no staging, commit, push, visibility/access change or Overleaf synchronization is included.
+
+**Next immediate task:** **M4.03.5 / M5.02.3 historical IADT measurement audit**, using its seven existing granular acceptance children. IVS-05 and the EXH findings remain on the historical-replay/revision register; remaining measure and downstream state/estimator audits precede M7 scientific changes. All 124 primary tasks and 14 milestones remain intact; M0 and all global scientific/release gates remain pending.
