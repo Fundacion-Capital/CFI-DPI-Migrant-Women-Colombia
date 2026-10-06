@@ -1,5 +1,5 @@
 {
-  "schema_version": 16,
+  "schema_version": 17,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06 effective clean main@b447ee5915a7f8ef4f9487253d6ffcdb705c84c5 after the owner committed the six pre-existing M6.08.1.e documentation edits during intake. M4.03.5/M5.02.3 historical IADT audit delivered within seven bounded children: five-version applicability/domain checks, ten ordered operations,2538 exact baseline cells,36 unique states/468 schema checks/17 complete state replays,23 exact aliases,729 patterns/11 nominal probes/7 malformed controls/2 degenerate samples. Structural323/99/1 components,276 fixed-versus-tercile differences and four raw/standardized omissions remain scientific findings. Definitive MCP driver/read-back and separate critic; no production/model change. Next M4.03.6/M5.02.4 ICDP. Parent gates pending; native same-editor compiler platform initialization fails.",
+    "last_recovery_probe": "2026-10-06 clean main@8eb3405ea4b0a4efcd263c77a228e44018d1b349. M4.03.6/M5.02.4 historical ICDP audit: five used forms/full scoped ancestry,90 domain/relevance and27 protected source checks,24 exact operations/2961 baseline cells,36 unique states/612 schema records/17 complete replays/50337 cells,23 aliases/9729 cells,4032 synthetic patterns/11 nominal probes/7 malformed controls/2 degenerate samples. Observed422 four-/1 two-component scores and314 fixed-versus-quantile differences; upper H1 group exactly score1/N79. All seven standardized counterparts include ICDP; actual M1/H1/clustering roles traced. Definitive MCP driver/read-back/session and separate critic/native receipts govern bounded acceptance; no production or estimator change. Next M4.03.7/M5.02.5 IAFF. All parent/release gates pending; fresh same-editor native compile fails platform initialization, PDF layout not certified.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -115,7 +115,7 @@
       "README.md: PRIV-02 sensitive Git/history exposure; selected preservation implemented, anonymous derivative and cleanup not authorized",
       "README.md: PRIV-04 local selected-version hash/restore checks pass; remote payload checksum and all-history scope unavailable",
       "README.md: DATA-02 historical clock cause/reconstruction unverified; reports/settings owner-confirmed unavailable, preserved audit/coded clocks unchanged; old order diagnostic superseded",
-      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
+      "README.md: MEAS-01 bounded version domains/text availability and IAT/IVS/IADT/ICDP replays pass; other constructs, geography meanings, dummy/scoring validity and downstream result parity remain pending",
       "README.md: IAT-01 71 nominal 0.80 values historically high by float comparison; repair and downstream impact not implemented",
       "README.md: IAT-02 instrument meaning versus active frequency labels/access-location scoring comments; exhibit/narrative impact unverified",
       "README.md: IAT-03 three partial-component means, ordered N/A rules and latent all-missing-to-high defect; no scientific correction",
@@ -130,9 +130,14 @@
       "README.md: IADT-02 perceived confidence is not demonstrated skill, causal learning/protection or financial inclusion; legacy denominator/causal/mediation interpretations require review",
       "README.md: IADT-03 latent missing-to-high, exact-domain/range and degenerate-standardization exposure; nominal float probes are not attainable legal-score boundaries; no observed boundary error demonstrated",
       "README.md: IADT-04 four standardized/AME counterparts omit IADT relative to full raw models; fit/sample/output comparability and intentionality require protected M6/M7 reconciliation",
-      "README.md: IADT-05 fixed categories versus uneven empirical terciles differ276/423; preferredH1/actual benchmark inputs exclude IADT; within-sample profiles are not independent external validation"
+      "README.md: IADT-05 fixed categories versus uneven empirical terciles differ276/423; preferredH1/actual benchmark inputs exclude IADT; within-sample profiles are not independent external validation",
+      "README.md: ICDP-01 reported QR use/OTP ability/PIN knowledge/hypothetical fraud response is not observed functional task performance; quantitative legacy overclaims require explicit revision",
+      "README.md: ICDP-02 point rankings, equal available-component weights and .45/.80 cutoffs are normative historical assumptions; criterion validity and any redesign remain unapproved",
+      "README.md: ICDP-03 structural422 four-/1 two-component composition changes implicit content/weights; zero applicable-item nonresponse is not authority for automatic imputation/exclusion",
+      "README.md: ICDP-04 latent missing-to-high/unmapped omission/degenerate standardization; observed code/score/category precision contamination is zero and nominal .45/.80 exact legal means unattainable",
+      "README.md: ICDP-05 fixed30/106/287 versus quantile162/182/79 differs314/423; upper group exactly score1. Actual M1/H1/clustering use fixed binary/quantile/standardized continuous ICDP; internal profile coherence is not independent external validation and no fitted consequence is re-estimated"
     ],
-    "last_audit": "2026-10-06 bounded IADT instrument/recipe/stored-value/source-consumer audit:60 domain/relevance,390 observed-code,23 protected source,6 baseline-variable and102 complete-state replay records pass;17 state summaries and23 alias comparisons pass; synthetic controls distinguish observed composition from latent policies. Exact reproduction is not construct/causal/estimator validation; IADT-01-05 and IVS-05 remain open."
+    "last_audit": "2026-10-06 bounded ICDP instrument/recipe/stored-state/operative-consumer audit:125 questionnaire/155 choice rows,90 domain/relevance,540 code counts,27 protected source checks,7 reference variables,119 complete-state comparisons/17 state summaries and23 exact aliases;4032 pattern controls plus boundary/malformed/degenerate checks. Exact arithmetic is not construct, causal, model, independent-profile-validation or release certification; ICDP-01-05 and prior findings remain open."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -470,7 +475,45 @@
     "iadt_source_retention_closeout_json": "audit-local/intake/iadt-f2c99ab/source_retention_closeout.json",
     "iadt_iadt_validation_json": "audit-local/intake/iadt-f2c99ab/iadt_validation.json",
     "iadt_measurement_audit": "IADT_MEASUREMENT_AUDIT.md",
-    "iadt_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_131224_fully_implement_ad_audit_the_whoel_work_for_the_co.md"
+    "iadt_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_131224_fully_implement_ad_audit_the_whoel_work_for_the_co.md",
+    "icdp_boundary_checks_csv": "audit-local/intake/icdp-8eb3405/boundary_checks.csv",
+    "icdp_candidate_data_states_csv": "audit-local/intake/icdp-8eb3405/candidate_data_states.csv",
+    "icdp_choices_csv": "audit-local/intake/icdp-8eb3405/choices.csv",
+    "icdp_coded_domain_summary_csv": "audit-local/intake/icdp-8eb3405/coded_domain_summary.csv",
+    "icdp_component_parity_csv": "audit-local/intake/icdp-8eb3405/component_parity.csv",
+    "icdp_composition_summary_csv": "audit-local/intake/icdp-8eb3405/composition_summary.csv",
+    "icdp_consumer_locators_csv": "audit-local/intake/icdp-8eb3405/consumer_locators.csv",
+    "icdp_denominators_csv": "audit-local/intake/icdp-8eb3405/denominators.csv",
+    "icdp_driver_initial_appearance_probe_log": "audit-local/intake/icdp-8eb3405/driver_initial_appearance_probe.log",
+    "icdp_fixed_vs_tercile_csv": "audit-local/intake/icdp-8eb3405/fixed_vs_tercile.csv",
+    "icdp_fixture_patterns_csv": "audit-local/intake/icdp-8eb3405/fixture_patterns.csv",
+    "icdp_icdp_audit_do": "audit-local/intake/icdp-8eb3405/icdp_audit.do",
+    "icdp_icdp_boundary_check_py": "audit-local/intake/icdp-8eb3405/icdp_boundary_check.py",
+    "icdp_icdp_driver_log": "audit-local/intake/icdp-8eb3405/icdp_driver.log",
+    "icdp_icdp_readback_do": "audit-local/intake/icdp-8eb3405/icdp_readback.do",
+    "icdp_icdp_readback_log": "audit-local/intake/icdp-8eb3405/icdp_readback.log",
+    "icdp_independent_source_review_md": "audit-local/intake/icdp-8eb3405/independent_source_review.md",
+    "icdp_item_domains_csv": "audit-local/intake/icdp-8eb3405/item_domains.csv",
+    "icdp_latex_compile_receipt_json": "audit-local/intake/icdp-8eb3405/latex_compile_receipt.json",
+    "icdp_legacy_icdp_blocks_json": "audit-local/intake/icdp-8eb3405/legacy_icdp_blocks.json",
+    "icdp_malformed_controls_csv": "audit-local/intake/icdp-8eb3405/malformed_controls.csv",
+    "icdp_question_checks_csv": "audit-local/intake/icdp-8eb3405/question_checks.csv",
+    "icdp_questionnaire_csv": "audit-local/intake/icdp-8eb3405/questionnaire.csv",
+    "icdp_relevance_summary_csv": "audit-local/intake/icdp-8eb3405/relevance_summary.csv",
+    "icdp_score_summary_csv": "audit-local/intake/icdp-8eb3405/score_summary.csv",
+    "icdp_score_support_csv": "audit-local/intake/icdp-8eb3405/score_support.csv",
+    "icdp_source_checks_csv": "audit-local/intake/icdp-8eb3405/source_checks.csv",
+    "icdp_source_operation_checks_json": "audit-local/intake/icdp-8eb3405/source_operation_checks.json",
+    "icdp_source_retention_entry_json": "audit-local/intake/icdp-8eb3405/source_retention_entry.json",
+    "icdp_state_alias_parity_csv": "audit-local/intake/icdp-8eb3405/state_alias_parity.csv",
+    "icdp_state_component_parity_csv": "audit-local/intake/icdp-8eb3405/state_component_parity.csv",
+    "icdp_state_schema_checks_csv": "audit-local/intake/icdp-8eb3405/state_schema_checks.csv",
+    "icdp_state_score_summary_csv": "audit-local/intake/icdp-8eb3405/state_score_summary.csv",
+    "icdp_workflow_query_receipts_json": "audit-local/intake/icdp-8eb3405/workflow_query_receipts.json",
+    "icdp_source_retention_closeout_json": "audit-local/intake/icdp-8eb3405/source_retention_closeout.json",
+    "icdp_icdp_validation_json": "audit-local/intake/icdp-8eb3405/icdp_validation.json",
+    "icdp_measurement_audit": "ICDP_MEASUREMENT_AUDIT.md",
+    "icdp_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_141604_perfect__now_fully_implement_and_deeply_review_and.md"
   },
   "decisions": [
     {
@@ -684,7 +727,11 @@
     {
       "date": "2026-10-06",
       "decision": "M4.03.5/M5.02.3 seven-child historical IADT audit accepted within its reproduction/source/specification boundary, subject to definitive private closeout. Ten operations/six float variables exact, structurally changing323/99/1 component coverage not nonresponse,17 complete states and23 available aliases exact. IADT-01-05 remain scientific candidates, including four standardized specification omissions; no estimator or correction. Retain768 overlapping original checks and92 prior private fingerprints; all parent gates and zero-public-field hold unchanged. Continue M4.03.6/M5.02.4 ICDP before remaining-index/reload/estimator audit and explicit M7 revisions."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Accept M4.03.6/M5.02.4 only within seven bounded instrument/domain/recipe/replay/fixture/consumer/review children, subject to definitive independent and native receipts. Preserve historical scoring:24 operations,2961 reference cells,50337 preserved-state cells and9729 alias cells exact;4032 patterns and separate controls expose latent behavior, not observed contamination. Record ICDP-01-05 for explicit M7 scientific decisions after remaining measures and protected M6 replication. Distinguish fixed binary M1, quantile H1 and continuous benchmark dependencies; no fitted effect/class consequence certified. Retain768 original byte checks/131 prior fingerprints,124 primary tasks/14 milestones,pending gates/zero public-field approvals. Existing main.tex remains preparation record with fresh native platform compile failure. Next IAFF M4.03.7/M5.02.5. No production/data/qualitative/Git/cloud/Overleaf mutation or public derivative authorized by this checkpoint."
     }
   ],
-  "last_updated_beijing": "2026-10-06T21:14:08+08:00"
+  "last_updated_beijing": "2026-10-06T22:17:02.000+08:00"
 }
