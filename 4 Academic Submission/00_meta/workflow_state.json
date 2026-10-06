@@ -1,5 +1,5 @@
 {
-  "schema_version": 19,
+  "schema_version": 20,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06 clean main@8714646acecd1a62a8df6c5afafe54b272744b3f. M4.03.8/M5.02.6 IUOF bounded historical audit: five definitions/full ancestry,140spec/215choice rows,120relevance/645domain/180routing/60source checks,38operations/11fields/4653 exact reference cells,36identities/828schema/17complete states/79101cells checked and789 historical category discrepancies reconciled by authentic raw40/70 and mixed-scale recipes,24aliases/10152exactcells.108000domain/missing patterns,112dependency guards,35one-field/sixall-unmapped/11boundary/twoconstant controls. Definitive MCP driver/read-back and independent/native closeout govern acceptance; prior bytes/fingerprints/gates preserved. Current production already fixes old mixed-scale category bug; no estimator/production/source-copy/public-derivative change. IUOF-01–07 open; next M4.03.9/M5.02.7 OQI. Fresh same-editor compiler fails platform initialization; no PDF layout certification.",
+    "last_recovery_probe": "2026-10-06 clean main@4b8a2c5a9c3d0324dc5af63ddef5e5c2a75e2fdd. M4.03.9/M5.02.7 bounded historical OQI audit: five definitions/full ancestry,245spec/702choices,195scalar/528domain/570routing/360multiselect/126source rows,50ordered operations/14fields/5922exact reference cells;36identities/2268schema/16complete states/672protected key/input checks/94752compared cells,87984OQI-only exact and660QR discrepancies reconciled with authentic prior QR-only source rule in32/33/38/39.50available alias records/21150exactcells.345600reduced component-support/missing controls,34560complete legal point supports and KYC/joint/QR/routing/missing/scalar/boundary/constant controls pass separate read-back. Seven OQI findings remain open. Definitive MCP/source/receipt/report/independent/native closeout governs acceptance;768original-byte/253prior fingerprints and124task/14milestone/pointer/zero-public-approval/pending-gate continuity. No production/data/estimator/exhibit/qualitative/Git/cloud/Overleaf changes. Fresh same-editor built-in compile failed platform initialization; PDF unverified. Next M4.03.10/M5.02.8 IURD.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -80,7 +80,10 @@
       "historical-two-component-ivs05-downstream-estimation-and-execution-cause-unverified",
       "historical-iuof-construct-recall-account-routing-refusal-nonresponse-findings-open",
       "historical-iuof-category-version-drift-and-producer-downstream-effects-unverified",
-      "historical-iuof-raw-standardized-specification-and-internal-validation-findings-open"
+      "historical-iuof-raw-standardized-specification-and-internal-validation-findings-open",
+      "historical-oqi-mixed-construct-joint-response-kyc-unknown-refusal-routing-findings-open",
+      "historical-oqi-adjacent-qr-domain-defect-and-source-version-lineage-reconciled-effects-unverified",
+      "historical-oqi-raw-float-guards-representation-internal-validation-and-exhibit-findings-open"
     ],
     "last_assembly": ""
   },
@@ -144,16 +147,23 @@
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-03 optional unconstrained document field; one semantic none/refusal-plus-other combination, no dummy mismatch; address refusal5 and phone unknown7 scored0; explicit refusal/default/ambiguity policy pending.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-04 default-zero dummies hide missing/malformed values, unmapped scalars change denominator, float/constant-SD guards latent. Full-source missing inputs yield0/low, not missing/high; nominal.8 is unattainable and observed precision contamination zero.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-05 fixed31/290/102 vs quantile169/152/102 differs138 at.5; high membership coincides only in this sample. Figure16 priority assignment is not ownership prevalence and Figure20 consumes fixed categories, not terciles. Actual M1/H1/clustering dependencies/internal profile validation need explicit later reconciliation without fitted-effect inference.",
-      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.9/M5.02.7 historical OQI audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions.",
+      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.10/M5.02.8 historical IURD audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-01 mixed activity/opportunity/provider notification/non-lending constructs, normative equal available-component points and fixed thresholds; criterion validity and causal/welfare interpretation pending.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-02 stable60day stem/90day non-use inconsistency; positive-only required ownership routing versus34 principal no-account and21 unselected products; legal source-consistent semantic concerns, not proven wrong answers.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-03 seven optional relevant items yield408seven-/15six-component means; applicable nonresponse changes weights. NA99 scored0 and six refusal98 non-lending answers100; explicit policy and sensitivity decisions pending, no imputation/exclusion.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-04 reference two-stage normalization86different/0categorychanges and raw-normalized standardization270different/max2.384185791015625e-7; own recipes match. Missing-as-high/unmapped omission/constantSD latent; observed exact.8 is correctly high.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-05 five stored category states diverge789cells: state37 matches raw40/70;32/33/38/39 mixed-scale middle predicate. Current d119b22 correction already present; exact producing run/downstream reload/estimator/exhibit effects not proven.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-06 fixed61/167/195 vs empirical143/142/138 differs139assignments; rawfullD includesIADT standardized plot omitsit. Figure20 fixedcategories notterciles/highlabel wrong. ActualM1 excludesIUOF; H1usesquantiles andclustering continuous scores; no fitted consequences.",
-      "IUOF_MEASUREMENT_AUDIT.md: IUOF-07 same-source class-defining continuous separation is internal characterization, not independent externalvalidation. Legacy dependency/graduation/welfare causal overclaims and source overlap need M6/M7 review without qualitative rewrite."
+      "IUOF_MEASUREMENT_AUDIT.md: IUOF-07 same-source class-defining continuous separation is internal characterization, not independent externalvalidation. Legacy dependency/graduation/welfare causal overclaims and source overlap need M6/M7 review without qualitative rewrite.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-01 Mixed registration/service/transaction self-reports and recall windows do not certify procedural skills, accepted documentation or causal governance/protection mechanisms.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-02 98 legal mixed terms/privacy pairs omit a component. Joint ranks, available-component weights and raw 45/85 thresholds require explicit review.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-03 Six-flag KYC excludes Other7/Unknown98; 18 unknown-only and three Other-only profiles get100. Requested requirements and missing defaults do not prove acceptance.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-04 Required positive-only ownership/nonempty-rail routing, principal-account contradictions, help refusals and offered-versus-received assistance require accurate meaning and explicit policy.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-05 Current adjacent QR flag has179 domain disagreements; four states match older QR recipe. OQI mean excludesflag and actual analysis QR aliases map q5_4 correctly. Producer/fitted/exhibit impact unverified.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-06 Latent default/missing-high/unmapped/constant-SD guards and float order remain open; observed category precision changes zero. No production guard or score redesign implemented.",
+      "OQI_MEASUREMENT_AUDIT.md: OQI-07 Fixed/binary/quantile/continuous representations, 105 category/tercile differences, own standardized IADT inclusion and internal-versus-independent validation require M6/M7 reconciliation."
     ],
-    "last_audit": "2026-10-06 M4.03.8/M5.02.6 seven-child historical IUOF audit accepted only within source/specification/replay/fixture/consumer/independent-review/native-closeout boundary. Historical nonzero categories explicitly retained/reconciled; not construct, estimator, method/design/quality/replication/public-release approval."
+    "last_audit": "2026-10-06 M4.03.9/M5.02.7 seven-child historical OQI source/specification/replay/fixture/consumer audit with separate read-back and final independent/native acceptance chain; not design/method/quality/replication/measurement validity or public release approval."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -222,7 +232,14 @@
       "IUOF-04",
       "IUOF-05",
       "IUOF-06",
-      "IUOF-07"
+      "IUOF-07",
+      "OQI-01",
+      "OQI-02",
+      "OQI-03",
+      "OQI-04",
+      "OQI-05",
+      "OQI-06",
+      "OQI-07"
     ],
     "last_claim_audit": ""
   },
@@ -626,7 +643,66 @@
     "iuof_source_retention_closeout_json": "audit-local/intake/iuof-8714646/source_retention_closeout.json",
     "iuof_iuof_validation_json": "audit-local/intake/iuof-8714646/iuof_validation.json",
     "iuof_measurement_audit": "IUOF_MEASUREMENT_AUDIT.md",
-    "iuof_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_160619_perfect__thoroguhly_implement_the_full_workflof_fo.md"
+    "iuof_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_160619_perfect__thoroguhly_implement_the_full_workflof_fo.md",
+    "oqi_alias_coverage_summary_csv": "audit-local/intake/oqi-4b8a2c5/alias_coverage_summary.csv",
+    "oqi_candidate_data_states_csv": "audit-local/intake/oqi-4b8a2c5/candidate_data_states.csv",
+    "oqi_choices_csv": "audit-local/intake/oqi-4b8a2c5/choices.csv",
+    "oqi_coded_domain_summary_csv": "audit-local/intake/oqi-4b8a2c5/coded_domain_summary.csv",
+    "oqi_component_parity_csv": "audit-local/intake/oqi-4b8a2c5/component_parity.csv",
+    "oqi_composition_summary_csv": "audit-local/intake/oqi-4b8a2c5/composition_summary.csv",
+    "oqi_consumer_locators_csv": "audit-local/intake/oqi-4b8a2c5/consumer_locators.csv",
+    "oqi_denominators_csv": "audit-local/intake/oqi-4b8a2c5/denominators.csv",
+    "oqi_fixed_vs_tercile_csv": "audit-local/intake/oqi-4b8a2c5/fixed_vs_tercile.csv",
+    "oqi_fixture_boundaries_csv": "audit-local/intake/oqi-4b8a2c5/fixture_boundaries.csv",
+    "oqi_fixture_checks_csv": "audit-local/intake/oqi-4b8a2c5/fixture_checks.csv",
+    "oqi_fixture_dependency_summary_csv": "audit-local/intake/oqi-4b8a2c5/fixture_dependency_summary.csv",
+    "oqi_fixture_kyc_masks_csv": "audit-local/intake/oqi-4b8a2c5/fixture_kyc_masks.csv",
+    "oqi_fixture_qr_truth_table_csv": "audit-local/intake/oqi-4b8a2c5/fixture_qr_truth_table.csv",
+    "oqi_fixture_support_summary_csv": "audit-local/intake/oqi-4b8a2c5/fixture_support_summary.csv",
+    "oqi_fixture_terms_privacy_csv": "audit-local/intake/oqi-4b8a2c5/fixture_terms_privacy.csv",
+    "oqi_historical_category_cross_csv": "audit-local/intake/oqi-4b8a2c5/historical_category_cross.csv",
+    "oqi_historical_qr_recipes_csv": "audit-local/intake/oqi-4b8a2c5/historical_qr_recipes.csv",
+    "oqi_historical_source_variant_checks_json": "audit-local/intake/oqi-4b8a2c5/historical_source_variant_checks.json",
+    "oqi_independent_source_review_md": "audit-local/intake/oqi-4b8a2c5/independent_source_review.md",
+    "oqi_item_domains_csv": "audit-local/intake/oqi-4b8a2c5/item_domains.csv",
+    "oqi_kyc_category_cross_csv": "audit-local/intake/oqi-4b8a2c5/kyc_category_cross.csv",
+    "oqi_legacy_oqi_blocks_json": "audit-local/intake/oqi-4b8a2c5/legacy_oqi_blocks.json",
+    "oqi_multiselect_checks_csv": "audit-local/intake/oqi-4b8a2c5/multiselect_checks.csv",
+    "oqi_multiselect_summary_csv": "audit-local/intake/oqi-4b8a2c5/multiselect_summary.csv",
+    "oqi_oqi_audit_do": "audit-local/intake/oqi-4b8a2c5/oqi_audit.do",
+    "oqi_oqi_boundary_check_py": "audit-local/intake/oqi-4b8a2c5/oqi_boundary_check.py",
+    "oqi_oqi_debug_source_log": "audit-local/intake/oqi-4b8a2c5/oqi_debug_source.log",
+    "oqi_oqi_driver_log": "audit-local/intake/oqi-4b8a2c5/oqi_driver.log",
+    "oqi_oqi_preflight_log": "audit-local/intake/oqi-4b8a2c5/oqi_preflight.log",
+    "oqi_oqi_readback_debug_log": "audit-local/intake/oqi-4b8a2c5/oqi_readback_debug.log",
+    "oqi_oqi_readback_preflight_log": "audit-local/intake/oqi-4b8a2c5/oqi_readback_preflight.log",
+    "oqi_oqi_readback_do": "audit-local/intake/oqi-4b8a2c5/oqi_readback.do",
+    "oqi_oqi_readback_log": "audit-local/intake/oqi-4b8a2c5/oqi_readback.log",
+    "oqi_principal_route_summary_csv": "audit-local/intake/oqi-4b8a2c5/principal_route_summary.csv",
+    "oqi_qr_usage_cross_csv": "audit-local/intake/oqi-4b8a2c5/qr_usage_cross.csv",
+    "oqi_question_checks_csv": "audit-local/intake/oqi-4b8a2c5/question_checks.csv",
+    "oqi_questionnaire_csv": "audit-local/intake/oqi-4b8a2c5/questionnaire.csv",
+    "oqi_readback_metrics_csv": "audit-local/intake/oqi-4b8a2c5/readback_metrics.csv",
+    "oqi_relevance_summary_csv": "audit-local/intake/oqi-4b8a2c5/relevance_summary.csv",
+    "oqi_routing_checks_csv": "audit-local/intake/oqi-4b8a2c5/routing_checks.csv",
+    "oqi_routing_summary_csv": "audit-local/intake/oqi-4b8a2c5/routing_summary.csv",
+    "oqi_score_summary_csv": "audit-local/intake/oqi-4b8a2c5/score_summary.csv",
+    "oqi_score_support_csv": "audit-local/intake/oqi-4b8a2c5/score_support.csv",
+    "oqi_source_checks_csv": "audit-local/intake/oqi-4b8a2c5/source_checks.csv",
+    "oqi_source_operation_checks_json": "audit-local/intake/oqi-4b8a2c5/source_operation_checks.json",
+    "oqi_source_retention_entry_json": "audit-local/intake/oqi-4b8a2c5/source_retention_entry.json",
+    "oqi_state_alias_parity_csv": "audit-local/intake/oqi-4b8a2c5/state_alias_parity.csv",
+    "oqi_state_component_parity_csv": "audit-local/intake/oqi-4b8a2c5/state_component_parity.csv",
+    "oqi_state_input_checks_csv": "audit-local/intake/oqi-4b8a2c5/state_input_checks.csv",
+    "oqi_state_schema_checks_csv": "audit-local/intake/oqi-4b8a2c5/state_schema_checks.csv",
+    "oqi_state_score_summary_csv": "audit-local/intake/oqi-4b8a2c5/state_score_summary.csv",
+    "oqi_terms_privacy_cross_csv": "audit-local/intake/oqi-4b8a2c5/terms_privacy_cross.csv",
+    "oqi_workflow_query_receipts_json": "audit-local/intake/oqi-4b8a2c5/workflow_query_receipts.json",
+    "oqi_latex_compile_receipt_json": "audit-local/intake/oqi-4b8a2c5/latex_compile_receipt.json",
+    "oqi_source_retention_closeout_json": "audit-local/intake/oqi-4b8a2c5/source_retention_closeout.json",
+    "oqi_oqi_validation_json": "audit-local/intake/oqi-4b8a2c5/oqi_validation.json",
+    "oqi_measurement_audit": "OQI_MEASUREMENT_AUDIT.md",
+    "oqi_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_165036_perfect__now_fully_implement_and_validate_all_the.md"
   },
   "decisions": [
     {
@@ -852,7 +928,23 @@
     {
       "date": "2026-10-06",
       "decision": "Accept M4.03.8/M5.02.6 seven bounded IUOF audit children only, subject to definitive independent/native receipts:38operations/11floatfields/4653referenceexactcells,17complete preservedstates/79101cells checked including789historicalcategory discrepancies reconciled to authentic sourcevariants,24actualaliases/10152exactcells. Five-form140spec/215choices,120item/645domain/180routing/60sourcechecks;108000patterns/112dependency/35invalid/sixunmapped/11boundary/twoconstant controls and independent read-back. Current source already fixes mixed-scale middle condition atd119b22; no production repair. IUOF-01–07 remain open. Preserve768source-byte checks/206prior private fingerprints,124primarytasks/14milestones,zeroapprovedfields/pendinggates and earlierreports. Existing main.tex edited in place/preamble/editorpreserved; fresh builtin compile fails Unable to find standard directories for platform, layoutunverified, no replacementPDF/compiler/tab. No participant export/derivative, estimator/exhibit/qualitative rewrite, sourcecopy/delete, staging/commit/push, cloud/access/visibility orOverleaf mutation. Nextseven-child M4.03.9/M5.02.7 OQI/adjacentQR before remainingmeasure/exhibit audits, protectedhistorical replication and explicitM7 decisions. Full proposedcommit title/body only."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "User requested M4.03.9/M5.02.7 historical OQI audit.50ordered operations/14fields exactly replay423reference rows;325nine-/98eight-component means,all98 omissions from legal mixed terms/privacy answers. KYC Other/Unknown/default/refusal and mixed-construct/recall issues require later explicit scientific policy. No production score, response, sample or estimate changed."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "36unique preserved identities yield16complete OQI states. All87984OQI-only cells agree;660QR discrepancies in32/33/38/39 exactly match authentic earlier QR recipe, not unexplained measurement drift. Current adjacent QR has179 actual-domain disagreements but is outsideOQI mean and not the independently correct analysis QR mapping. Exact producing execution/fitted/exhibit effects remain unverified."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Definitive Stata MCP driver, separate metadata/aggregate/synthetic read-back and fresh default-only empty session are retained.345600reduced support/missing controls include34560complete legal point supports; fullmissing source yieldsKYC100/high,component-onlymissing high is a distinct score-only diagnostic. Explicitdouble/scientific/float/string export repairs affect ignored diagnostics only. Independent critic/native closeout govern bounded task acceptance; parent scientific/release gates pending."
+    },
+    {
+      "date": "2026-10-06",
+      "decision": "Same saved main.tex/editor/preamble retained; fresh built-in compiler failed platform initialization with Unable to find standard directories for platform. Source preserved; no replacement PDF/tab/compiler or Overleaf write. Full proposed commit title/body only. Next M4.03.10/M5.02.8 is seven-child historical IURD audit before explicit M7 revisions."
     }
   ],
-  "last_updated_beijing": "2026-10-07T00:16:25.000+08:00"
+  "last_updated_beijing": "2026-10-07T01:36:04.000+08:00"
 }
