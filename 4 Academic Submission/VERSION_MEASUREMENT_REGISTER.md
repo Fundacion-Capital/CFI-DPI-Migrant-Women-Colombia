@@ -266,3 +266,23 @@ Separate specification/aggregate/weightedmeanSD/numeric/extendedmissing/stringre
 Definitive MCP/closedlogs/independent/native closeout retain768original-byte manifestrecords/378priorfingerprints/earlierreports/124primarytasks/14milestones/allpointers/zeroapprovedpublicfields/pendinggates. Same main.tex/preamble/editor; fresh nativecompile fails before TeX preparation with Windows sandbox helper setup-refresh errors, so compilation/layout remainunverified. Actual receipts retained. No alternativePDF/compiler/tab, production/model/sample/exhibit/qualitative orparticipant derivative, sourcecopy/delete, Git/cloud/access/Overleaf change. Full proposed commit only.
 
 Next **M4.03.12 / M5.02.10 historical IPCS audit**, seven bounded children. Remaining measurement/exhibit audits andprotected historicalreplication precede explicitM7 scientificcorrections; all parentgates remainpending.
+
+## IPCS follow-up — bounded historical acceptance
+
+**7 October2026; M4.03.12 / M5.02.10.** [Full audit](IPCS_MEASUREMENT_AUDIT.md). Five definitions/193specification/482choices metadata match;19 select-one fields,285question/700domain/450route/78keyed-source checks pass. Preference Other7 is legal only in2512090157. No multiselect bundle is used forIPCS. All24ordered operations reproduce9fields/3,807referencecells exactly.
+
+Reaction is structurally absent for185 respondents;238 have six terms and185 five. Current mean77.9117418835, SD22.5920281869; fixed48/220/155 differs259assignments from tied quantiles152/271/no third group. Thirty-six identities remain;17complete states,153field/64,719cell comparisons retain142category differences confined tostate37, reconciled to authentic40/70 source recipes. Four textual recipes contain three substantive regimes;24available aliases/10,152cells match. Original producer and downstream fits are not proven.
+
+| Finding | Explicit scientific/revision decision — still open |
+|---|---|
+| IPCS-01 | Mixed practice/education/perception/preference and item-specific referents do not demonstrate defensive agency, skills, education assimilation or protective efficacy. |
+| IPCS-02 | Structural five-/six-term weighting and q7_1 dependence shared withIEDF/H1 require an explicit estimand/sensitivity decision, not imputation of skips or labeling nonexposure nonresponse. |
+| IPCS-03 | Normative pooling and zero policies for unknown/unclear education, authentication, Other action and fast-service preference require justification; oldest source omits four sentinel/Other terms. |
+| IPCS-04 | Preserve40/70 versus45/85, fixed/quantile/continuous roles and state37 compatibility; ties do not create three equal terciles, and native compatibility is not execution/model proof. |
+| IPCS-05 | Finite/legal-domain/missing-high/constant-SD guards and float order remain explicit later corrections.154scaling/209std last-digit differences and zero observed category changes do not certify robustness. |
+| IPCS-06 | IPCS standardized full model retainsIADT; all33actualGSEM excludeIPCS, actual continuous clustering includesit. Candidate inventories and same-sample profiles do not establish fitted inclusion or independent validation. |
+| IPCS-07 | Keepearly-only preference Other7; reconcile Figure27 q7_5 blocking indicator versusq7_1 contact exposure (159disagreements) and LEGACY-A causal/skill/null-result/exhibit claims. No historical figure or qualitative result changed. |
+
+Definitive MCP/independent read-back verify103,168 legal version-routed,30,000raw/missing and729arithmetic cases plus malformed/sentinel/ULP/all-missing/constant controls and four-recipe policy contrasts. Separate native source/instrument proof, independent critic,768original records/448prior-private fingerprints, primary-ID/pointer/privacy/pending-gate checks and both empty sessions bound completion. Diagnostic serialization/import/assertion defects were corrected only in ignored artifacts. SameTeX/preamble/editor; native helper setup-refresh limitation leaves PDF layout unverified.
+
+Next **M4.03.13 / M5.02.11 historical IEDF audit**, seven children. All parent gates remainpending; no production/statistical/qualitative/exhibit correction, participant export, cloud/Git/Overleaf action or public-release approval.

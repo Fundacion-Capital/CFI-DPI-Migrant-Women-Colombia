@@ -227,7 +227,7 @@ Final independent/MCP/native checks retain 768 overlapping original-byte compari
 
 **Next immediate task: M4.03.10 / M5.02.8 — historical IURD measurement audit**, with seven children in the [workplan](ACADEMIC_SUBMISSION_WORKPLAN.md). Complete remaining measures/exhibits and protected historical replication before explicit M7 revisions. M0 remains in progress and all parent scientific/release gates remain pending.
 
-## Latest handoff
+## Historical IURD handoff
 **7 October 2026 — M4.03.10 / M5.02.8, historical IURD measurement audit.** Clean entry `main@da6c988`. [Full audit and explicit findings](IURD_MEASUREMENT_AUDIT.md) and the seven children in the [workplan](ACADEMIC_SUBMISSION_WORKPLAN.md) govern bounded acceptance, not scientific approval.
 
 Five form versions yield233 specification/615 choice rows and full consent/eligibility/Remesas ancestry. q6 principal-manager role is not an eligibility prerequisite, nor is account ownership. Stata-only raw/audit/coded domain and protected linkage checks produce120question/319domain/300route/54source rows; zero illegal codes, out-of-relevance answers or required applicable nonresponse. Four optional recent-use blanks, six refusals,27 frequencyunknown/N/A, seven operationsunknown and55 routed operations skips remain distinct.
@@ -261,3 +261,21 @@ Definitive MCP driver and separate independent read-back pass legal/raw/arithmet
 Native closeout checks768 original-byte manifest records/378 prior-private fingerprints, earlier reports,124 primary IDs/14 milestones, resolving pointers, zero approved publicfields andpending gates. Same main.tex/editor/preamble retained; fresh post-edit native compiler fails before TeX preparation with Windows sandbox helper setup-refresh errors, so compilation/layout remain unverified. Actual receipts retained. No alternative PDF/tab/compiler, participant derivative/export, production repair, sourcecopy/delete, stage/commit/push, cloud/access/visibility or Overleaf synchronization.
 
 **Next immediate task: M4.03.12 / M5.02.10 — historical IPCS measurement audit**, seven explicit children beginning Section3.8.1 in the workplan. M0 remains in progress; all parent scientific/design/method/empirical/quality/replication/release gates staypending.
+
+## Latest handoff
+
+### Historical IPCS checkpoint — latest bounded continuation
+
+**7 October 2026 — M4.03.12 / M5.02.10.** The [full IPCS audit](IPCS_MEASUREMENT_AUDIT.md) and seven completed children in the [workplan](ACADEMIC_SUBMISSION_WORKPLAN.md) record bounded historical acceptance, not construct, model or release approval. Entry was clean `main@bd46bba`; production, protected originals, historical exhibits and qualitative work are unchanged.
+
+Five instruments match native/Stata metadata:193 specification/482 choice rows. Nineteen select-one security/exposure/recourse fields pass285 question,700 domain,450 routing and78 keyed source checks. Early-only preference Other7 remains distinct. All24 value operations and9fields/3,807 reference cells reproduce exactly. Structural reaction applicability gives238six-term and185five-term means; the score mixes reported action/practice, education, perceived safety and preferences.
+
+Fixed categories48/220/155 differ from tied empirical quantiles152/271/no third group for259 women. All36 states remain;17complete states produce153comparisons/64,719cells with142 current category differences confined tostate37. Four authentic textual recipes reconcile these differences to40/70 versus45/85; two40/70 recipes are semantically equivalent. Available24aliases/10,152cells match. Source compatibility is not proof of original execution or fitted effects.
+
+Definitive Stata MCP, independent full-precision read-back, closed logs and both default-only empty sessions validate103,168 legal-routed cases,30,000 raw/missing combinations,729 arithmetic masks and bounded malformed/sentinel/ULP/full-missing/constant controls. Diagnostic-only import/serialization/assertion defects were repaired; superseded runs are excluded. Native proof and independent critic bound acceptance. All768 original manifest records and448 prior-private fingerprints remain unchanged, as do124 primary task IDs,14milestones and prior reports.
+
+**IPCS-01–07 remain open.** IPCS standardized regressions retainIADT. All33 actual GSEM bodies excludeIPCS, whereas actual continuous k-means/Ward includesit; q7_1 shared routing withIEDF/H1 prevents assuming independent validation. Figure27's source exposure indicator is actuallyq7_5 blocking/limitations, notq7_1 suspicious contact:159 indicator disagreements. No estimator, exhibit, coefficient, image or substantive interpretation is recertified.
+
+Same main.tex/editor/preamble retained; fresh native compiler receipt records the Windows helper setup-refresh limitation, leaving PDF layout unverified. M0 remainsinprogress and all parent scientific/design/method/quality/replication/release gates are pending, with no approved public participant fields.
+
+**Next immediate: M4.03.13 / M5.02.11 — historical IEDF measurement audit**, seven granular children in the workplan. Complete remaining measurement/exhibit audits and protected M6 replication before explicit M7 revisions. The [audit includes a full proposed commit title and body](IPCS_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft); no stage/commit/push/cloud/Overleaf action was performed.
