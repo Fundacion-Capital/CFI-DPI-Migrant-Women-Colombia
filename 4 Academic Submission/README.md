@@ -282,6 +282,20 @@ Same main.tex/editor/preamble retained; fresh native compiler receipt records th
 
 ## Latest handoff
 
+### Historical IAER checkpoint — latest bounded continuation
+
+**7 October 2026 — M4.03.14 / M5.02.12.** [Full IAER audit](IAER_MEASUREMENT_AUDIT.md). Entry clean main891549f. Five-version180specification/285choice rows match native/Stata metadata;15scalar/two contextualmultiselect fields,255question/540domain/555route-dummy/72keyed checks pass. Earliest q9_17 choice5 wording differs; no scored-item wording or legal No0 changes.
+
+All42operations/15fields/6,345referencecells reproduce exactly. All423 have12terms; fixed4/86/333,246score100, mean92.001576858773. Tied xtile produces only177/246 groups and419fixed discrepancies; strict above-median h_iaer2 is constantzero, exact/source median100 and zero serialization difference. Refusal98 scores positive no-coercion; hypothetical account preference is not ownership.
+
+36identities/1,692schema/17complete/408keyed checks:253current fields/107,019cells retain4,600differences. States32/33/38/39 match phantom-No2 twelve-term nativea00115e;37 ten-termb03b54d; remaining12 currentd119b22. Four native recipes/948variantfields/401,004cells and33available aliases/13,959cells checked, no original unique execution proven. IAER-01–07 remain open. All33actualGSEM excludeIAER; declared B2 sensitivity is not fitted inclusion, actual continuousclustering does includeIAER.
+
+Definitive actual MCP/closedlogs/both empty sessions and independent numeric/string/specification/native/critic validation bound completion.265legal one-itemversion/20,480representativelegalbinary/531,441representative rawmissing/531,441exhaustive arithmetic and malformed/ULP/fullmissing/policy/constant controls pass. Factorization is explicit, not full legal-response Cartesian coverage.137orderedscaling/385std differences(max2.98023223876953125e-7), zero observed categoryprecision changes.
+
+768original manifest records/611prior-private fingerprints, earlierreports/pointers/124primaryIDs/14milestones/pendinggates/zeroapprovedpublicfields retained. Same main.tex/editor/preamble; fresh built-in preview fails before TeX preparation with Windows helper setup-refresh errors, so compilation/layout remain unverified. No substitute PDF/compiler/tab, production/estimator/qualitative/exhibit or Git/cloud/Overleaf change.
+
+**Next immediate: M4.03.15 / M5.02.13 — historical ICPF measurement audit**, seven defined children beginning Preparation3.9.2. Remaining measurements/exhibits and protected M6 replication precede explicit M7 corrections. The [IAER audit contains the full proposed commit title and description](IAER_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft).
+
 ### Historical IEDF checkpoint — latest bounded continuation
 
 **7 October 2026 — M4.03.13 / M5.02.11.** The [full IEDF audit](IEDF_MEASUREMENT_AUDIT.md) and seven completed workplan children record bounded historical acceptance only. Entry was clean `main@4b7317e`; production, restricted originals, prior packets, qualitative work and historical exhibits are unchanged.
