@@ -1,8 +1,24 @@
 # Academic redevelopment workspace
 
-**Current checkpoint — 7 October2026:** bounded [IEH historical audit](IEH_MEASUREMENT_AUDIT.md) accepted; **next: M4.03.17 / M5.02.15 historical IBPD audit**. Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
+**Current checkpoint — 7 October 2026:** bounded [IBPD historical audit](IBPD_MEASUREMENT_AUDIT.md) accepted; **next: M5.01.1 / M5.07.1 consolidated historical measurement and overlap crosswalk**. Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
 
 This is the academic redevelopment of the full legacy research manuscript, not a republication of the condensed CFI deliverables. The governing milestones and scientific boundaries are in [ACADEMIC_SUBMISSION_WORKPLAN.md](ACADEMIC_SUBMISSION_WORKPLAN.md). This workspace was initialized against repository commit `151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6` on 5 October 2026. No historical analysis or manuscript was changed during intake.
+
+## IBPD checkpoint — 7 October 2026
+
+[Full historical IBPD audit, eight open findings and proposed commit](IBPD_MEASUREMENT_AUDIT.md). All seven M4.03.17/M5.02.15 children have bounded evidence; parent scientific, design, method, quality, replication and release gates remain pending.
+
+Five instrument versions independently match 155 specification and 449 choice rows. Scalar/multiselect domains, complete eligibility ancestry, requiredness, imported dummy availability and parent/dummy concordance, structural skips and version-dependent Other/None/refusal treatment are verified. Option 13 was never offered; additional16/98 are offered but unscored. All 423 analysed respondents retain five scored components. Twelve ordered operations/nine fields reproduce 3,807 reference cells exactly; historical mean 53.9007108701882, SD 21.9793008129233, fixed categories63/265/95. Empirical terciles 145/183/95 differ for 82 respondents and cannot replace fixed categories silently.
+
+All 36 preserved identities,17 complete states and 64,719 current state cells agree exactly. Three authentic Git recipes/194,157 comparisons and 24 actual alias fields/10,152 cells are reconciled; two compatible recipes do not prove a unique producing run. The earlier missing-sentinel recipe changes 25 scores and 4 categories per complete state. All-raw-missing synthetic inputs score 0/low because default rowtotal supplies an available zero term; this is latent behavior, not observed nonresponse.
+
+Separate Stata read-back validates 18,000 legal version/scalar factor cases,294,907 legal additional-choice subsets through 217 sufficient-statistic support rows,243 representative raw and 243 arithmetic cases,1,700 single-item/version cases,27 extended-missing,39 arbitrary-score boundary and constant/malformed controls. This factorization is not a full-questionnaire Cartesian or choice-order/malformed-parent-string audit. Every statistical/specification numeric-text cell is checked; source/path locator catalogues receive native structural/hash checks instead. Driver recreates participant aliases; aggregate read-back is not a second participant-alias recreation. Both definitive logs close normally and both sessions retain only an empty default frame. Superseded diagnostic attempts remain restricted and excluded.
+
+None of 33 actual GSEM bodies and no operative current clustering command includes IBPD, although declarations mention it. Actual outcome/profile/overlay uses and literal IEH overlap at q10_4/q10_6/q10_16 are documented; same-cohort profiles are not independent external or causal validation. Legacy exhibits, fitted models, coefficients and qualitative content are not recertified or changed.
+
+Final preservation retains 768 overlapping original byte/size occurrences,864 prior-private fingerprints,941 earlier artifact pointers,124 primary IDs,14 milestone headings and zero public-approved participant fields. The same LaTeX source/editor/preamble is retained; fresh built-in compilation fails before TeX at Windows helper setup refresh. Compilation and rendered layout remain unverified. No alternate compiler/PDF/tab, production, participant export, Git staging/commit/push, cloud/history/access or Overleaf action is included.
+
+**Next immediate: M5.01.1 / M5.07.1 — consolidated historical measurement and overlap crosswalk**, seven defined children across all fifteen audited constructs. This does not bypass remaining sample/design/exhibit work or protected M6 replication before explicit M7 revisions.
 
 ## Entry routing
 

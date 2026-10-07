@@ -1,5 +1,5 @@
 {
-  "schema_version": 27,
+  "schema_version": 28,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "README.md#latest-handoff",
+    "latest_handoff": "IBPD_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-07 IEH: exact12operations/3807referencecells,5formnative match,36identities/17complete/196oldstate37differences/3recipes/24957aliascells; independentMCP numeric-text/form/weighted/closedlogs/empty sessions/native/critic/preservation;768original/786priorfingerprints retained; fresh native Windows helper setup-refresh failure/layoutunverified;pendinggates,nextIBPD.",
+    "last_recovery_probe": "2026-10-07 IBPD: exact12operations/3807referencecells/64719statecells;5formnative match;36identities17complete3recipes194157variantcells24aliases10152cells;18000legalfactors294907subsets factorized; independentMCP numeric-text/readback/closedlogs/empty sessions/native/critic/preservation;768original864priorfingerprints941previouspointers; fresh native Windows helper setup-refresh failure/layoutunverified; allparentgatespending,next consolidated measurement-overlap crosswalk.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -212,9 +212,17 @@
       "IEH_MEASUREMENT_AUDIT.md: IEH-05 authentic3recipes/196state37differences/fixedvsquantile127/nativecompatibility not originalexecution/modelproof.",
       "IEH_MEASUREMENT_AUDIT.md: IEH-06 currentmissinghighguard retained; oldmissinghigh/domain/finite/constantSD edges open;precision no robustnessproof.",
       "IEH_MEASUREMENT_AUDIT.md: IEH-07 zeroIEHinputs in33actualGSEM/continuousclustering/sharedIBPDitems/samesurveyprofiles not externalcausalvalidation.",
-      "IEH_MEASUREMENT_AUDIT.md: IEH-08 adjacentenabler2/3/5/6/7label defects/versionOtherNone/provider groupings/legacy transparencyfrictionFX/exhibit claims pending."
+      "IEH_MEASUREMENT_AUDIT.md: IEH-08 adjacentenabler2/3/5/6/7label defects/versionOtherNone/provider groupings/legacy transparencyfrictionFX/exhibit claims pending.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-01 heterogeneous binary perception/exposure terms and two any-barrier terms require construct/weight justification.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-02 earliest main11/additional16 Other drift, earliest additional1 absent,13 never offered; no observed early-Other effect.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-03 asymmetric refusal/unknown scoring,2 contradictory multiselect and13 main-None/additional-barrier cases retained.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-04 latent default rowtotal zero creates available extra term and all-source-missing score0/low; observed423 five-term complete.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-05 three authentic recipes, earlier missing-sentinel policy25 scores/4 category changes; compatibility not unique producer.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-06 fixed63/265/95 versus empirical145/183/95 differs82; source-local aliases not interchangeable; float effects no category changes.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-07 noIBPD in33actualGSEM or operative clustering; actual outcome/profile uses and literal IEH overlap not external/causal validation.",
+      "IBPD_MEASUREMENT_AUDIT.md: IBPD-08 legacy prevention/mediation/institutional/exhibit/fitted-result provenance remains for protectedM6/M7; qualitative unchanged."
     ],
-    "last_audit": "2026-10-07 bounded M4.03.16/M5.02.14 historical IEH measurement audit accepted with scientific findings open; next M4.03.17/M5.02.15 historical IBPD; no parent gate passed."
+    "last_audit": "2026-10-07 bounded M4.03.17/M5.02.15 historical IBPD measurement audit accepted with eight scientific findings open; next M5.01.1/M5.07.1 consolidated historical measurement and overlap crosswalk; no parent gate passed."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -298,7 +306,15 @@
       "IEH-05",
       "IEH-06",
       "IEH-07",
-      "IEH-08"
+      "IEH-08",
+      "IBPD-01",
+      "IBPD-02",
+      "IBPD-03",
+      "IBPD-04",
+      "IBPD-05",
+      "IBPD-06",
+      "IBPD-07",
+      "IBPD-08"
     ],
     "last_claim_audit": ""
   },
@@ -1313,7 +1329,82 @@
     "historical_ieh_superseded_readback_attempt1_receipt_json": "audit-local/intake/ieh-c639bda/superseded_readback_attempt1_receipt.json",
     "historical_ieh_training_route_support_csv": "audit-local/intake/ieh-c639bda/training_route_support.csv",
     "historical_ieh_workflow_query_receipts_json": "audit-local/intake/ieh-c639bda/workflow_query_receipts.json",
-    "historical_ieh_measurement_audit": "IEH_MEASUREMENT_AUDIT.md"
+    "historical_ieh_measurement_audit": "IEH_MEASUREMENT_AUDIT.md",
+    "historical_ibpd_arithmetic_grid_csv": "audit-local/intake/ibpd-c1050eb/arithmetic_grid.csv",
+    "historical_ibpd_arithmetic_support_readback_csv": "audit-local/intake/ibpd-c1050eb/arithmetic_support_readback.csv",
+    "historical_ibpd_barrier_response_support_csv": "audit-local/intake/ibpd-c1050eb/barrier_response_support.csv",
+    "historical_ibpd_boundary_controls_csv": "audit-local/intake/ibpd-c1050eb/boundary_controls.csv",
+    "historical_ibpd_candidate_data_states_csv": "audit-local/intake/ibpd-c1050eb/candidate_data_states.csv",
+    "historical_ibpd_choices_csv": "audit-local/intake/ibpd-c1050eb/choices.csv",
+    "historical_ibpd_claims_readback_csv": "audit-local/intake/ibpd-c1050eb/claims_readback.csv",
+    "historical_ibpd_coded_domain_summary_csv": "audit-local/intake/ibpd-c1050eb/coded_domain_summary.csv",
+    "historical_ibpd_component_parity_csv": "audit-local/intake/ibpd-c1050eb/component_parity.csv",
+    "historical_ibpd_component_support_csv": "audit-local/intake/ibpd-c1050eb/component_support.csv",
+    "historical_ibpd_composition_summary_csv": "audit-local/intake/ibpd-c1050eb/composition_summary.csv",
+    "historical_ibpd_constant_controls_csv": "audit-local/intake/ibpd-c1050eb/constant_controls.csv",
+    "historical_ibpd_consumer_locators_csv": "audit-local/intake/ibpd-c1050eb/consumer_locators.csv",
+    "historical_ibpd_denominators_csv": "audit-local/intake/ibpd-c1050eb/denominators.csv",
+    "historical_ibpd_diagnostic_scope_checks_json": "audit-local/intake/ibpd-c1050eb/diagnostic_scope_checks.json",
+    "historical_ibpd_driver_superseded_macro_log": "audit-local/intake/ibpd-c1050eb/driver_superseded_macro.log",
+    "historical_ibpd_driver_superseded_macro_receipt_json": "audit-local/intake/ibpd-c1050eb/driver_superseded_macro_receipt.json",
+    "historical_ibpd_driver_superseded_macro_source_do": "audit-local/intake/ibpd-c1050eb/driver_superseded_macro_source.do",
+    "historical_ibpd_driver_tool_receipt_json": "audit-local/intake/ibpd-c1050eb/driver_tool_receipt.json",
+    "historical_ibpd_empirical_tercile_summary_csv": "audit-local/intake/ibpd-c1050eb/empirical_tercile_summary.csv",
+    "historical_ibpd_explicit_gsem_source_manifest_json": "audit-local/intake/ibpd-c1050eb/explicit_gsem_source_manifest.json",
+    "historical_ibpd_fixed_category_summary_csv": "audit-local/intake/ibpd-c1050eb/fixed_category_summary.csv",
+    "historical_ibpd_fixed_vs_tercile_csv": "audit-local/intake/ibpd-c1050eb/fixed_vs_tercile.csv",
+    "historical_ibpd_full_missing_controls_csv": "audit-local/intake/ibpd-c1050eb/full_missing_controls.csv",
+    "historical_ibpd_git_recipe_history_json": "audit-local/intake/ibpd-c1050eb/git_recipe_history.json",
+    "historical_ibpd_historical_category_cross_csv": "audit-local/intake/ibpd-c1050eb/historical_category_cross.csv",
+    "historical_ibpd_historical_code_recipes_json": "audit-local/intake/ibpd-c1050eb/historical_code_recipes.json",
+    "historical_ibpd_historical_hybrid_recipe_history_json": "audit-local/intake/ibpd-c1050eb/historical_hybrid_recipe_history.json",
+    "historical_ibpd_historical_recipe_native_proof_json": "audit-local/intake/ibpd-c1050eb/historical_recipe_native_proof.json",
+    "historical_ibpd_ibpd_boundary_check_py": "audit-local/intake/ibpd-c1050eb/ibpd_boundary_check.py",
+    "historical_ibpd_ibpd_driver_do": "audit-local/intake/ibpd-c1050eb/ibpd_driver.do",
+    "historical_ibpd_ibpd_driver_log": "audit-local/intake/ibpd-c1050eb/ibpd_driver.log",
+    "historical_ibpd_ibpd_readback_do": "audit-local/intake/ibpd-c1050eb/ibpd_readback.do",
+    "historical_ibpd_ibpd_readback_log": "audit-local/intake/ibpd-c1050eb/ibpd_readback.log",
+    "historical_ibpd_ibpd_recipe_inventory_py": "audit-local/intake/ibpd-c1050eb/ibpd_recipe_inventory.py",
+    "historical_ibpd_ibpd_validation_json": "audit-local/intake/ibpd-c1050eb/ibpd_validation.json",
+    "historical_ibpd_independent_source_review_md": "audit-local/intake/ibpd-c1050eb/independent_source_review.md",
+    "historical_ibpd_item_domains_csv": "audit-local/intake/ibpd-c1050eb/item_domains.csv",
+    "historical_ibpd_legacy_ibpd_blocks_json": "audit-local/intake/ibpd-c1050eb/legacy_ibpd_blocks.json",
+    "historical_ibpd_legal_factor_grid_csv": "audit-local/intake/ibpd-c1050eb/legal_factor_grid.csv",
+    "historical_ibpd_malformed_dummy_controls_csv": "audit-local/intake/ibpd-c1050eb/malformed_dummy_controls.csv",
+    "historical_ibpd_multiselect_checks_csv": "audit-local/intake/ibpd-c1050eb/multiselect_checks.csv",
+    "historical_ibpd_multiselect_powerset_support_csv": "audit-local/intake/ibpd-c1050eb/multiselect_powerset_support.csv",
+    "historical_ibpd_multiselect_summary_csv": "audit-local/intake/ibpd-c1050eb/multiselect_summary.csv",
+    "historical_ibpd_native_compile_receipt_json": "audit-local/intake/ibpd-c1050eb/native_compile_receipt.json",
+    "historical_ibpd_native_definition_readback_json": "audit-local/intake/ibpd-c1050eb/native_definition_readback.json",
+    "historical_ibpd_progress_md": "audit-local/intake/ibpd-c1050eb/progress.md",
+    "historical_ibpd_question_checks_csv": "audit-local/intake/ibpd-c1050eb/question_checks.csv",
+    "historical_ibpd_questionnaire_csv": "audit-local/intake/ibpd-c1050eb/questionnaire.csv",
+    "historical_ibpd_raw_rectangle_csv": "audit-local/intake/ibpd-c1050eb/raw_rectangle.csv",
+    "historical_ibpd_readback_superseded_alias_count_log": "audit-local/intake/ibpd-c1050eb/readback_superseded_alias_count.log",
+    "historical_ibpd_readback_superseded_alias_count_receipt_json": "audit-local/intake/ibpd-c1050eb/readback_superseded_alias_count_receipt.json",
+    "historical_ibpd_readback_superseded_alias_count_source_do": "audit-local/intake/ibpd-c1050eb/readback_superseded_alias_count_source.do",
+    "historical_ibpd_readback_tool_receipt_json": "audit-local/intake/ibpd-c1050eb/readback_tool_receipt.json",
+    "historical_ibpd_relevance_summary_csv": "audit-local/intake/ibpd-c1050eb/relevance_summary.csv",
+    "historical_ibpd_routing_checks_csv": "audit-local/intake/ibpd-c1050eb/routing_checks.csv",
+    "historical_ibpd_routing_summary_csv": "audit-local/intake/ibpd-c1050eb/routing_summary.csv",
+    "historical_ibpd_schema_probe_receipt_json": "audit-local/intake/ibpd-c1050eb/schema_probe_receipt.json",
+    "historical_ibpd_score_summary_csv": "audit-local/intake/ibpd-c1050eb/score_summary.csv",
+    "historical_ibpd_score_support_csv": "audit-local/intake/ibpd-c1050eb/score_support.csv",
+    "historical_ibpd_single_item_controls_csv": "audit-local/intake/ibpd-c1050eb/single_item_controls.csv",
+    "historical_ibpd_source_checks_csv": "audit-local/intake/ibpd-c1050eb/source_checks.csv",
+    "historical_ibpd_source_operation_checks_json": "audit-local/intake/ibpd-c1050eb/source_operation_checks.json",
+    "historical_ibpd_source_retention_closeout_json": "audit-local/intake/ibpd-c1050eb/source_retention_closeout.json",
+    "historical_ibpd_source_retention_entry_json": "audit-local/intake/ibpd-c1050eb/source_retention_entry.json",
+    "historical_ibpd_state_alias_parity_csv": "audit-local/intake/ibpd-c1050eb/state_alias_parity.csv",
+    "historical_ibpd_state_component_parity_csv": "audit-local/intake/ibpd-c1050eb/state_component_parity.csv",
+    "historical_ibpd_state_input_checks_csv": "audit-local/intake/ibpd-c1050eb/state_input_checks.csv",
+    "historical_ibpd_state_schema_checks_csv": "audit-local/intake/ibpd-c1050eb/state_schema_checks.csv",
+    "historical_ibpd_state_score_summary_csv": "audit-local/intake/ibpd-c1050eb/state_score_summary.csv",
+    "historical_ibpd_state_source_variant_fields_csv": "audit-local/intake/ibpd-c1050eb/state_source_variant_fields.csv",
+    "historical_ibpd_state_source_variant_summary_csv": "audit-local/intake/ibpd-c1050eb/state_source_variant_summary.csv",
+    "historical_ibpd_verified_score_statistics_csv": "audit-local/intake/ibpd-c1050eb/verified_score_statistics.csv",
+    "historical_ibpd_workflow_query_receipts_json": "audit-local/intake/ibpd-c1050eb/workflow_query_receipts.json",
+    "historical_ibpd_measurement_audit": "IBPD_MEASUREMENT_AUDIT.md"
   },
   "decisions": [
     {
@@ -1659,7 +1750,27 @@
     {
       "date": "2026-10-07",
       "decision": "Independent21600legalversionrouted729raw729arithmetic510singleitem27missing39boundary/sixrowconstant/fullprecisionreadback;167scaling291std/max2^-23,0categoryprecisioneffect. Supersededdiagnosticfailures excluded,closedlogs/bothdefault0x0.768original786priorfingerprints/all862priorpointers124primaryIDs14milestones retained. SameTeX/editor/preamble,freshbefore-TeXWindowshelpersetuprefreshfailure/renderingunverified. No participant/Git/cloud/Overleaf/production mutation. NextIBPD M4.03.17/M5.02.15 sevenchildrendefinedonly."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Twelve ordered IBPD operations/nine fields reproduce3807referencecells and64719complete-statecells exactly. Five form versions/155specifications449choices independently match;13 never offered, extra16/98 unscored. Five binary terms complete for423;mean53.9007108701882 SD21.9793008129233 fixed63/265/95 versus empirical145/183/95 differs82. Eight scientific findings remain open; no production or qualitative changes."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "36 preserved identities1548schema17complete476keyed;three authentic recipes459fields194157cells. Earlier missing-sentinel recipe changes25scores4categories;two compatible recipes do not identify a unique producer.24actually present aliases10152cells match native rules;aggregate readback does not independently recreate participant aliases. Actual33GSEM and operative clustering excludeIBPD;literalIEHoverlap and same-cohort outcomes/profiles are not external/causal validation."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Independent Stata readback verifies18000legal version/scalar factors and217sufficient-statistic rows representing294907unordered legal additional subsets,243raw243arithmetic1700singleitemversion27missing39boundary/malformed/constant controls. Explicit factorization ceiling excludes combined whole-questionnaire Cartesian, choice order and malformed parent strings. Every statistical/specification numeric-text cell checked; path/source catalogues checked natively.183scaling265standardization differences max2^-24,zero categoryeffects. Definitive receipts/logclosures/default0x0;diagnostic superseded failures preserved and excluded."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Final native proof/independent critic/preservation retains768original occurrences864prior-private fingerprints941previouspointers124primaryIDs14milestones;zero approved participantfields and all parent scientific/design/method/quality/replication/release gates pending. Same main.tex/editor/preamble;fresh built-in compile failed before TeX at Windows helper setup refresh, rendering unverified. No alternate compiler/PDF/tab, participant export, stage/commit/push/cloud/history/access/Overleaf action. Full commit draft only."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Next immediate M5.01.1/M5.07.1 consolidated historical measurement and overlap crosswalk across all15audited constructs;seven granular children defined only. Consolidate exact components/aliases/denominators/sentinels/literal-versus-route overlap/actual-versus-declared consumers/open findings and protectedM6 frontier. No new estimator or recode;sample/design/exhibit obligations and historical replication precede explicitM7 scientific revisions."
     }
   ],
-  "last_updated_beijing": "2026-10-07T22:13:00+08:00"
+  "last_updated_beijing": "2026-10-08T00:00:28+08:00"
 }

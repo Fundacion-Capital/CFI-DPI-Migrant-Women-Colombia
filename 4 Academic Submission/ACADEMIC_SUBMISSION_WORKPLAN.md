@@ -509,6 +509,32 @@ IBPD remains a subsequent separate audit. Remaining measurement/exhibit audits a
 Remaining measurement/exhibit audits and protected M6 replication precede explicit M7 scientific corrections. A bounded child never passes its parent.
 
 
+### Historical IBPD measurement checkpoint — seven bounded children accepted
+
+**7 October 2026; M4.03.17 / M5.02.15.** [Detailed audit, open findings and commit draft](IBPD_MEASUREMENT_AUDIT.md). Acceptance is bounded historical characterization, not construct, model or parent-milestone approval.
+
+| Child | Bounded acceptance evidence |
+|---|---|
+| M4.03.17.a | Five versions/155 specifications/449 choices exact; full ancestry/requiredness, earliest Other drift, main/additional distinctions;13 never offered,16/98 extra unscored. |
+| M4.03.17.b |75 question/213 scalar-domain/150 routing/240 multiselect/84 keyed checks;67 excluded structural skips; no illegal/applicable omission/keyed input discrepancy. Two contradictory selections and 13 main-None/extra-barrier cases retained as semantic issues. |
+| M5.02.15.a |12 ordered operations/nine fields/3,807 reference cells exact; five binary terms, rowtotal default then positive collapse, available-component rowmean→float100, fixed 40/70 and current missing guard. |
+| M5.02.15.b |36 identities/1,548 schema/17 complete/476 keyed input checks;153 fields/64,719 cells all exact;3 authenticated recipes/459 fields/194,157 cells;24 actual aliases/10,152 cells. Not unique-producing-run or model-fit proof. |
+| M5.02.15.c |18,000 legal factor cases;294,907 legal unordered additional-choice subsets represented by 217 checked sufficient-statistic rows;243 raw/243 arithmetic/1,700 single-item-version/27 missing/39 boundary/constant/malformed controls. Independent full-precision statistical/specification numeric-text read-back, final receipts/log closures/both default 0×0. Factorized ceiling explicit. |
+| M5.02.15.d |90 LEGACY-A block records/210 source locators; no IBPD in 33 actual GSEM or operative clustering, actual outcome/profile overlays retained; literal IEH overlap, sentinel/polarity, fixed/quantile distinctions and association/internal-validation limits. No qualitative, exhibit or fitted-result change. |
+| M5.02.15.e | Independent critic/native source/form proof;768 originals/864 prior-private fingerprints/941 previous pointers/124 IDs/14 milestones/privacy/pending gates retained; same TeX/editor/preamble/fresh built-in compile diagnostics. Commit draft only. |
+
+### Next immediate — M5.01.1 / M5.07.1 consolidated historical measurement and overlap crosswalk (defined only)
+
+All fifteen individual historical construct audits are bounded evidence, not closure of M4/M5/M6. Consolidate before choosing measurement corrections; do not introduce a sixteenth index or silently promote the parent gate.
+
+1. **M5.01.1.a** — Pin all fifteen accepted reports, protected packet identities, authentic source recipes and retained reference/state versions. Resolve aliases and report provenance without rerunning or rewriting sealed packets.
+2. **M5.01.1.b** — Build exact source-item → generated component → scored index → actually present alias crosswalk. Retain dropped/default terms, polarity, weights, code-version differences and declared-but-absent aliases distinctly.
+3. **M5.01.1.c** — Consolidate eligible/applicable/available-component denominators, structural/genuine missingness, sentinel policies, normalization, fixed-versus-quantile definitions and sample boundaries. Do not recode or impute.
+4. **M5.07.1.a** — Construct traceable overlap/dependency matrix: literal repeated scored items versus routing dependencies, common-method exposure, inverse/partial mappings and duplicated weight. Assess implications without presenting correlation as causal validation.
+5. **M5.07.1.b** — Crosswalk actual source model/cluster/profile/exhibit consumers against declarations; distinguish outcomes/predictors/indicators/overlays and internal versus independent validation. Static source presence is not fitted-result replication.
+6. **M5.07.1.c** — Consolidate all open measurement findings and unmet sample/design/M4/M5/M6 dependencies; specify the next protected replication frontier and author decisions required at M7. No estimator search, scientific revision or parent promotion.
+7. **M5.07.1.d** — Independent review, preservation of originals/sealed packets/pointers/124 IDs/14 milestones/privacy/pending gates, same-file LaTeX diagnostics, explicit residual limits and full proposed commit title/body. No staging, commit, push, cloud/history/access/Overleaf or release action.
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**
