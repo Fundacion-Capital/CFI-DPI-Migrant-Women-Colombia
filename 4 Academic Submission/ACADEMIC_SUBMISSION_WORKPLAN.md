@@ -384,6 +384,37 @@ Start Preparation Section3.7 block C and its own nine-term, nested-composite rec
 
 Remaining measurement/exhibit audits and protected M6 historical replication precede explicit M7 scientific revisions. A child audit never passes its parent scientific/release gate.
 
+## Historical IETR checkpoint — M4.03.11 / M5.02.9
+
+**7 October 2026.** The seven children are accepted only within the bounded historical contract in [IETR_MEASUREMENT_AUDIT.md](IETR_MEASUREMENT_AUDIT.md); IETR-01–07 remain open scientific/implementation decisions. This checkpoint supersedes the earlier immediate-task pointer, not the earlier audit evidence.
+
+| Child | Validated boundary |
+|---|---|
+| M4.03.11.a | Five definitions;233 specification/615 choice rows; exact separate native XLSX read-back, full consent/eligibility/Remesas/recent-use ancestry and scoped field/choice semantics. Actual fee/FX names, paper/no-confirm5/undeclared6 and90-versus60day wording retained. |
+| M4.03.11.b | Raw490×267/audit490×266/coded423×439;15 contextual questions,225 question/480 route/66 protected-source checks. Zero illegal codes, out-of-relevance answers or required applicable nonresponse; optional blanks4 and55 structural domestic skips distinct from unknown/refusal/N/A. |
+| M5.02.9.a |56 value operations/two drops, all58 interleaved source statements exact;12 fields/5,076 reference cells. Nested inner means and variable outer denominators:249 nine-term versus174 incomplete profiles, including55 non-Yes recent users with≤3terms. No equal eleven-item claim. |
+| M5.02.9.b |36 identities/1,476 schema rows/17 complete states/374 key-input checks.85,446 current shared cells retain1,813 differences:32/33/38/39 each83 and37=1,481. Five native recipes/948 variantfields/401,004 cells;85,869 canonical shared exactcells. All33 available aliases/13,959 exactcells; no unique producer or fitted consequence certified. |
+| M5.02.9.c |113 single-item,121/120 raw rectangle,40/42 legal pair projections,20 legal scored-input bundles,1,399,680 arithmetic,9 score-only boundary,3 current/15 historical full-missing,5 historical best andtwo constant samples. Separate metadata/weighted moments/numeric/extended-missing/string read-back. Driver string-storage and checker counts/CSV-column expectations corrected only in ignored diagnostics, then definitive reruns pass. |
+| M5.02.9.d | Fixed13/318/92 versus empirical142/142/139 differs176. Standardized IETR omitsIADT relative rawfullD; generated h_ietr3 is absent preferredH1 and all33 explicit GSEM bodies excludeIETR. Actual standardized clustering and same-sample profiles remain distinct; LEGACY-A causal/persistence/exhibit claims not recertified. |
+| M5.02.9.e | Actual MCP responses, normally closed logs, both default-only empty sessions, independent critic and fresh native closeout.768 original-byte manifest records/378 prior-private fingerprints, earlier reports,124 primary tasks/14 milestones, all pointers,zero approved publicfields/pending gates andsame main.tex/preamble/editor. Full proposed commit only. |
+
+Observed raw mean/SD71.8860930495/15.2534909417, normalized0.7188609262/0.1525349114. Exact45/85 eachonce classify correctly;117 ordered/direct normalization and347 raw/normalized standardization differences, maximum2.384185791015625e-7, producezero observed category precision changes. The current all-source-missing/high case and old seven-term false-zero/low controls are distinct latent policies. Exact replay is not measurement or causal validation.
+
+M0 remains in progress and all parent scientific/design/method/empirical/quality/replication/release gates remain pending. Fresh same-file native compilation fails before TeX preparation with Windows sandbox helper setup-refresh errors; actual receipts retained, compilation/rendered layout unverified. No participant derivative/export, production/sample/model/output/qualitative repair, restricted sourcecopy/delete, staging/commit/push, cloud/access/visibility change or Overleaf synchronization.
+
+**Next immediate task: M4.03.12 / M5.02.10 — historical IPCS measurement audit.** Begin Preparation Section3.8.1, six binary terms and actual fraud/recourse context. These are seven bounded children, not the whole parent milestone.
+
+1. **M4.03.12.a** — Pin allfive instruments for q7_2/q7_6/q7_7/q7_8/q7_9/q7_10 and actual consent/eligibility/module, suspicious-contact/authentication/security/prevention/recourse ancestry. Check select-one versus multiselect parent/dummy typing, requiredness, relevance, constraints/filter/appearance and declared unknown/refusal/N/A choices. Separate safe action, technology use, habits, education, perceived safety and prevention preferences.
+2. **M4.03.12.b** — Through Stata MCP check raw/audit/coded legal domains, scalars versus parent/dummy consistency where actually used, structural/applicable/optional missingness, sentinels/refusals and protected keyed source equality. Do not invent safe responses, fill routed skips or interpret nonexposure as nonresponse.
+3. **M5.02.10.a** — Recover exact IPCS operation order, six component binary policies, available-case IPCS_raw then×100 storage/scale, unknown-response defaults and actual fixed/standardized representations/guards. Do not borrow IETR nested weights or raw0–100-first normalization.
+4. **M5.02.10.b** — Keep36 unique identities; audit real schemas/complete inputs, authentic source variants and source-compatible stored/fixed/binary/quantile/standardized aliases. Retain observed discrepancies, incomplete states and absent fields; do not invent an original execution.
+5. **M5.02.10.c** — Bounded legal-routed versus raw/arithmetic, action/unknown/omission, malformed/missing, attainable threshold, float-order and constant-sample controls. Separate aggregate/specification/numeric/string read-back with actual MCP responses and normally closed-log completion.
+6. **M5.02.10.d** — Reconcile LEGACY-A prevention/security/exposure/causal claims and actual descriptive, correlation, regression/interaction, segmentation/clustering, profile and appendix consumers. Separate class inputs, preferences, perceived safety, reported behavior and independent validation; no estimator/image/qualitative certification.
+7. **M5.02.10.e** — Independent critic and actual empty task-session state; original/prior byte, report/task/pointer/privacy/pending-gate continuity. Same main.tex/editor/preamble and fresh post-edit native diagnostics. Full proposed commit title/body only, no Git/cloud/Overleaf action.
+
+Remaining measurement/exhibit audits and protected historical M6 replication precede explicit M7 scientific corrections. Completing a child never passes its parent.
+
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**

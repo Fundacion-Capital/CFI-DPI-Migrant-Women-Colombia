@@ -240,3 +240,29 @@ Actual fixed/binaryM1, quantilepreferredH1 and standardizedcontinuous clustering
 Definitive MCP driver/read-back/empty-session and independent/native closeout retain768original-byte checks/310priorfingerprints,earlier reports,124primary IDs/14milestones,all pointers,zero publicfieldapprovals/pendinggates. Same main.tex/preamble/editor; fresh native preview fails with Windows sandbox setup-refresh errors, layoutunverified. No alternative PDF/compiler/tab, public participant derivative/export, sourcecopy/delete, production/sample/model/output/qualitative repair, Git/cloud/access/Overleaf mutation. Full proposed commit only.
 
 Next: **M4.03.11 / M5.02.9 historical IETR audit**, seven explicit children in workplan. Remaining measures/exhibits and protected historical replication precede explicit M7 decisions.
+
+## 9. Historical IETR follow-up — M4.03.11 / M5.02.9
+
+**7 October2026.** The [IETR audit](IETR_MEASUREMENT_AUDIT.md) accepts seven historical children only. Five definitions/233specification/615choices match separate native reads;15 contextual questions/225question/480route/66source checks show no illegal/out-of-relevance/required-applicable missing responses. Optional recent-use blanks4 and55structural child skips are separate from unknown/refusal/N/A.
+
+All56 value operations plus2drops match58 interleaved source statements;12fields/5,076referencecells exact. Nine outer terms contain two nested means:249complete versus174incomplete profiles,55non-Yes recent users with≤3terms. Fee/FX temporary names reversed, q6_9FX N/A99→100 whereas q6_18no-fee4→0; q6_18literally90days, q6_11paper confirmation positive/no timing/no legal6, q6_21unpredictable6omitted. No response or scoring policy corrected.
+
+Fixed45/85 categories13/318/92 versus142/142/139terciles differ176; oneexact45/85 eachcorrect. Rawmean/SD71.8860930495/15.2534909417; normalized0.7188609262/0.1525349114.117ordered/direct and347raw/normalized std differences(max2.384185791015625e-7),zeroobserved categoryprecisioneffects. Current missing/high and older seven-term falsezero/low controls are distinct, no observed missing total.
+
+36identities/1,476schema/17complete states/374key-inputchecks;85,446 current sharedcells retain1,813differences. Four positive-no-confirm states32/33/38/39each83, oldseven-term37=1,481;12currentstates exact. Five native recipes/948variantfields/401,004cells;85,869source-compatible sharedcells exact including historicalrawstd.33available aliases/13,959exactcells. Original/unique producing execution, fitted consequences andexhibits notproven.
+
+Separate specification/aggregate/weightedmeanSD/numeric/extendedmissing/stringread-back accepts113single-item,121/120rawrectangles,40/42legal pairprojections,20legal scored-inputbundles,1,399,680component-arithmetic,9score-only boundary,3current/15historical missing,5historical best/twoconstantsamples. Actual failed expectations/CSVcolumn/stringlength diagnostics repairedonly ignoredfiles, definitive rerunspass; bothMCPsessions default0×0.
+
+| Open finding | Explicit later boundary |
+|---|---|
+| IETR-01 | Mixed international/domestic/latest/general/global/60–90day referents and paper confirmation; not audited timely digital performance, persistence or causal mechanisms. |
+| IETR-02 | Reversed fee/FX documentation and asymmetric no-fee/N/A polarity need explicit scientific policy; not an automatic recode. |
+| IETR-03 | Nested available-case weight/content differences and legal one-term100/nonuser profiles require target estimand/routing/missing/sensitivity decisions, no imputation/exclusion. |
+| IETR-04 | Preserve older no-confirm/default/overwrite/seven-/nine-term regimes and audit downstream actual source/reloads/fits before choosing academic recipe. |
+| IETR-05 | Legal variable6 and unknown/refusal/N/A treatment, normative ordinalpoints and60/90day wording need justification; cannot recover actual timing/cost or corrected responses. |
+| IETR-06 | Domain/finite/missinghigh/constantSD/float guards latent; zero category precision change does not validate construct or fitted robustness. |
+| IETR-07 | Fixed/quantile/continuous roles differ; standardizedIETR omitsIADT; h_ietr3notpreferredH1,all33explicitGSEMexcludeIETR, actualclusteringincludesit. Shared-route same-sample profiles not independent validation; inference/exhibits remainpending. |
+
+Definitive MCP/closedlogs/independent/native closeout retain768original-byte manifestrecords/378priorfingerprints/earlierreports/124primarytasks/14milestones/allpointers/zeroapprovedpublicfields/pendinggates. Same main.tex/preamble/editor; fresh nativecompile fails before TeX preparation with Windows sandbox helper setup-refresh errors, so compilation/layout remainunverified. Actual receipts retained. No alternativePDF/compiler/tab, production/model/sample/exhibit/qualitative orparticipant derivative, sourcecopy/delete, Git/cloud/access/Overleaf change. Full proposed commit only.
+
+Next **M4.03.12 / M5.02.10 historical IPCS audit**, seven bounded children. Remaining measurement/exhibit audits andprotected historicalreplication precede explicitM7 scientificcorrections; all parentgates remainpending.
