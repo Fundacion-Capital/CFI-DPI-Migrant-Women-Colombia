@@ -262,9 +262,9 @@ Native closeout checks768 original-byte manifest records/378 prior-private finge
 
 **Next immediate task: M4.03.12 / M5.02.10 — historical IPCS measurement audit**, seven explicit children beginning Section3.8.1 in the workplan. M0 remains in progress; all parent scientific/design/method/empirical/quality/replication/release gates staypending.
 
-## Latest handoff
+## Previous handoff — historical IPCS audit
 
-### Historical IPCS checkpoint — latest bounded continuation
+### Historical IPCS checkpoint — preserved continuation
 
 **7 October 2026 — M4.03.12 / M5.02.10.** The [full IPCS audit](IPCS_MEASUREMENT_AUDIT.md) and seven completed children in the [workplan](ACADEMIC_SUBMISSION_WORKPLAN.md) record bounded historical acceptance, not construct, model or release approval. Entry was clean `main@bd46bba`; production, protected originals, historical exhibits and qualitative work are unchanged.
 
@@ -279,3 +279,21 @@ Definitive Stata MCP, independent full-precision read-back, closed logs and both
 Same main.tex/editor/preamble retained; fresh native compiler receipt records the Windows helper setup-refresh limitation, leaving PDF layout unverified. M0 remainsinprogress and all parent scientific/design/method/quality/replication/release gates are pending, with no approved public participant fields.
 
 **Next immediate: M4.03.13 / M5.02.11 — historical IEDF measurement audit**, seven granular children in the workplan. Complete remaining measurement/exhibit audits and protected M6 replication before explicit M7 revisions. The [audit includes a full proposed commit title and body](IPCS_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft); no stage/commit/push/cloud/Overleaf action was performed.
+
+## Latest handoff
+
+### Historical IEDF checkpoint — latest bounded continuation
+
+**7 October 2026 — M4.03.13 / M5.02.11.** The [full IEDF audit](IEDF_MEASUREMENT_AUDIT.md) and seven completed workplan children record bounded historical acceptance only. Entry was clean `main@4b7317e`; production, restricted originals, prior packets, qualitative work and historical exhibits are unchanged.
+
+Five-form metadata193specification/482choice rows match independently.19select-one fields pass285question/700domain/450route/78keyed checks. The earliest form's complaint channel7 opens recourse and is retained. Current24operations/9fields/3,807referencecells reproduce exactly. Available2/3/5/6-term scores occur29/290/8/96times; fixed307/110/6 differs from empirical152/149/122 for265women. “Very satisfied”5, pending resolution4 and contact knowledge4 are omitted by production; neutral3 is zero harm.
+
+All36 identities remain;17complete states yield152sharedfields/64,296cells. State37 retains101raw+101score+17category differences,219cells, compatible with two equivalent five-term40/70recipes. Five authentic textual recipes yield712comparisons/301,176cells;41aliases/17,343cells match the actual source implementation. Native compatibility is not unique original execution or fitted-effect validation.
+
+Definitive Stata MCP and separate independent full-precision/specification read-back pass65,375legal cases(including2,500early-only complaint7),25,920raw/missing and729arithmetic combinations plus bounded single-item, malformed, unknown, ULP, full-missing and constant controls. Normally closed logs, both empty sessions, independent critic and native checks bound acceptance.196scaling/268standardization last-digit differences have zero observed fixed-category consequences.
+
+**IEDF-01–07 remain open.** Exact median-local source replay includes147ties at the exact median:269source positives versus122exact-median positives. Actual standardized IEDF retainsIADT;21of33explicitGSEM includeIEDF, and actualcontinuousclustering includesit. Contact exposure and Figure27 blocking disagree159times; shared-item/profile coherence is not independent validation. No model, coefficient, image or causal interpretation is recertified.
+
+All768original records/526prior-private fingerprints, earlier reports,124primaryIDs/14milestones and original artifact pointers remain unchanged. M0 and all parent gates remainpending; no public participant field is approved. The same main.tex/editor/preamble remains; fresh native helper setup-refresh failure leaves compilation/layout unverified.
+
+**Next immediate: M4.03.14 / M5.02.12 — historical IAER measurement audit**, seven granular children in the workplan, defined only. Remaining measurement/exhibit audits and protected M6 replication precede explicit M7 revisions. The [audit contains the full proposed commit title and body](IEDF_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft); no stage/commit/push/cloud/Overleaf action occurred.
