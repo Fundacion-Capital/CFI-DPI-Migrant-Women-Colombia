@@ -354,6 +354,36 @@ M0 remains in progress. All parent milestones and scientific/design/method/empir
 
 Remaining measurement/exhibit audits and protected M6 historical replication precede explicit M7 scoring/sample/model revisions. Completing a child never passes its parent scientific/release gate.
 
+## Historical IURD checkpoint — M4.03.10 / M5.02.8
+**7 October 2026.** The seven historical audit children are accepted only within the bounded source/instrument/domain/replay/control/consumer/review contract in [IURD_MEASUREMENT_AUDIT.md](IURD_MEASUREMENT_AUDIT.md). Scientific findings IURD-01–07 remain open.
+
+| Child | Validated boundary |
+|---|---|
+| M4.03.10.a | Five definitions,233 specification/615 choices, full consent/eligibility/Remesas and role-question ancestry; requiredness, filters, scoped lists, q6_14 optional and q6_15 recent-Yes-only route. Role q6 is not an eligibility prerequisite. |
+| M4.03.10.b | Raw490×267/audit490×266/coded423×439;120 question/319 domain/300 route/54 protected-source rows. Zero illegal codes, out-of-relevance answers or required applicable nonresponse; optional blanks4, legal unknown/refusal and55 structural operation skips remain distinct. |
+| M5.02.8.a | All26 current ordered operations/eight fields/3,384 reference cells exact;349 five-/51 four-/21 three-/2 two-term means. Legalfrequency99 omitted; phantom4 zero; binary retained-share and Other-channel0 recorded, not repaired. Actual raw30/55 categories and source-specific standardization retained. |
+| M5.02.8.b | 36 unique identities/1,368 schema rows/17 complete states,306 key/input checks. Current comparisons56,682cells retain2,518 differences in37/38; authentic matching recipes yield57,105 shared exact cells. Six native recipes/732field checks/309,636 cross-recipe cells;77 available aliases/32,571 exact cells. No unique producing execution or model consequence certified. |
+| M5.02.8.c | 5,040 raw rectangle/900 legal routed cases;810 arithmetic/omission/phantom-code points,80 one-item,24 routed-dependency,nine score-only ULP/missing,three full-missing andtwo constant-sample controls. Independent weighted mean/sampleSD, numerical/extended-missing/five-bit/string read-back. Explicitdouble diagnostics only. |
+| M5.02.8.d | LEGACY-A and actual fixed/binary/quantile/standardized descriptive/correlation/regression/interaction/clustering/profile/appendix routes. Fixed45/129/249 versusquantile145/144/134 differs215; own standardized IURD excludesIADT while raw block includesit. Shared-source profiles are not independent validation; no fit/image/qualitative revision. |
+| M5.02.8.e | Definitive MCP responses, normally closed driver/read-back logs, empty default-only session, independent critic and native closeout.768 original-byte comparisons/310 prior fingerprints, earlier reports,124 primary tasks/14 milestones, artifact pointers,zero approved public fields/pending gates/same main.tex preamble/editor. Full proposed commit only. |
+
+IURD-01–07 retain mixed referents/recall, legal99/phantom4, available-case weights, coarse retention/Other/binned volume, historical unknown-response regimes, precision/missing/constant guards and representation/internal-validation/causal/control/exhibit issues. Raw mean58.656028334976085, SD22.37719953636819; normalized0.5865602800820736, SD0.22377199473831747. Two/four exact raw30/55 scores classify correctly;13 ordered/direct and300 raw/normalized standardization differences (maximum1.78813934326171875e-7), zero observed category precision changes. No scientific scoring, sample, model or output correction is implemented.
+
+M0 remains in progress. All parent milestones and empirical/design/method/quality/replication/release gates remain pending. Fresh built-in preview fails before TeX preparation with Windows sandbox helper setup-refresh errors; rendered layout is unverified. The prior OQI platform-directory failure is not substituted for this fresh evidence. No alternative PDF/compiler/tab, participant export/derivative, production/qualitative rewrite, restricted source copy/delete, stage/commit/push, cloud/access/visibility change or Overleaf synchronization.
+
+**Next immediate task: M4.03.11 / M5.02.9 — historical IETR measurement audit.**
+Start Preparation Section3.7 block C and its own nine-term, nested-composite recipe; do not reuse IURD weights, cutoffs or field counts by assumption.
+
+1. **M4.03.11.a** — Pin all five instruments for q6_6/q6_9/q6_11/q6_16/q6_17/q6_18/q6_20/q6_21/q6_22/q6_23/q6_24 and full consent/eligibility/latest-receipt/recent-digital-use ancestry. Preserve requiredness, choice-version exceptions, constraints/filters/appearance; check actual fee/FX meanings against code comments and confirmation choices.
+2. **M4.03.11.b** — Stata-only raw/audit/coded legal/sentinel/refusal/structural/applicable missing and dependency review, protected-key linkage and unchanged-source comparisons. Do not fill routed skips, recode no-fee/not-applicable answers or substitute free text.
+3. **M5.02.9.a** — Exact ordered operations, point direction, inner fee/FX and confirmation means, outer available-case mean, temporary-component drops, initialization/storage/normalization and actual standardization/category guards. Distinguish inner/outer denominators and applicable/recent-use subsamples.
+4. **M5.02.9.b** — Unchanged36-state catalogue; actual schema and complete-input replay eligibility; authenticate source variants and source-specific stored/fixed/binary/quantile/standardized aliases. Retain nonzero differences and incomplete schemas; do not infer exact producing execution.
+5. **M5.02.9.c** — Bounded actual-domain/legal-routed versus arithmetic controls for nested means, unknown/N/A, confirmation, temporary terms, omitted components, full missing, malformed values, attainable versus nominal cutoffs, float order and constant samples. Separate independent metadata/aggregate/synthetic CSV numerical/string read-back; require actual MCP and normally closed-log markers.
+6. **M5.02.9.d** — Reconcile LEGACY-A quality/fee/FX/confirmation/time/recall claims and actual descriptive/correlation/regression/interaction/LCA/clustering/profile/appendix consumers. Keep class-defining and shared-item “validation” roles explicit; no model/image/qualitative recertification.
+7. **M5.02.9.e** — Independent critic; fresh default-only empty Stata session; original/prior byte/report/task/pointer/privacy/gate continuity; same main.tex/editor/preamble and post-edit native diagnostics with honest rendering limitation. Full proposed commit title/body; no Git/cloud/Overleaf action.
+
+Remaining measurement/exhibit audits and protected M6 historical replication precede explicit M7 scientific revisions. A child audit never passes its parent scientific/release gate.
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**

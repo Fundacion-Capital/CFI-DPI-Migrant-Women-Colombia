@@ -1,5 +1,5 @@
 {
-  "schema_version": 20,
+  "schema_version": 21,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-06 clean main@4b8a2c5a9c3d0324dc5af63ddef5e5c2a75e2fdd. M4.03.9/M5.02.7 bounded historical OQI audit: five definitions/full ancestry,245spec/702choices,195scalar/528domain/570routing/360multiselect/126source rows,50ordered operations/14fields/5922exact reference cells;36identities/2268schema/16complete states/672protected key/input checks/94752compared cells,87984OQI-only exact and660QR discrepancies reconciled with authentic prior QR-only source rule in32/33/38/39.50available alias records/21150exactcells.345600reduced component-support/missing controls,34560complete legal point supports and KYC/joint/QR/routing/missing/scalar/boundary/constant controls pass separate read-back. Seven OQI findings remain open. Definitive MCP/source/receipt/report/independent/native closeout governs acceptance;768original-byte/253prior fingerprints and124task/14milestone/pointer/zero-public-approval/pending-gate continuity. No production/data/estimator/exhibit/qualitative/Git/cloud/Overleaf changes. Fresh same-editor built-in compile failed platform initialization; PDF unverified. Next M4.03.10/M5.02.8 IURD.",
+    "last_recovery_probe": "2026-10-07: definitive historical IURD M4.03.10/M5.02.8 checkpoint. Stata MCP driver/separate read-back/default-only empty session and closed logs verify26operations/8referencefields,17preserved-state source compatibility,6native recipes and77actualaliases.768source-byte/310priorfingerprint entry checks and independent/native closeout bound acceptance only; IURD01-07 and all parent scientific/release gates remain pending. Same main.tex/preamble/editor, fresh native Windows sandbox preview setup failure/layout unverified. No source/production/model/qualitative/Git/cloud/Overleaf changes. Next seven-child M4.03.11/M5.02.9 IETR.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -83,7 +83,10 @@
       "historical-iuof-raw-standardized-specification-and-internal-validation-findings-open",
       "historical-oqi-mixed-construct-joint-response-kyc-unknown-refusal-routing-findings-open",
       "historical-oqi-adjacent-qr-domain-defect-and-source-version-lineage-reconciled-effects-unverified",
-      "historical-oqi-raw-float-guards-representation-internal-validation-and-exhibit-findings-open"
+      "historical-oqi-raw-float-guards-representation-internal-validation-and-exhibit-findings-open",
+      "historical-iurd-unknown-response-available-case-construct-and-source-regimes-open",
+      "historical-iurd-representations-control-omission-internal-validation-and-exhibits-pending",
+      "current-native-preview-windows-sandbox-helper-setup-refresh-failed-layout-unverified"
     ],
     "last_assembly": ""
   },
@@ -147,7 +150,7 @@
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-03 optional unconstrained document field; one semantic none/refusal-plus-other combination, no dummy mismatch; address refusal5 and phone unknown7 scored0; explicit refusal/default/ambiguity policy pending.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-04 default-zero dummies hide missing/malformed values, unmapped scalars change denominator, float/constant-SD guards latent. Full-source missing inputs yield0/low, not missing/high; nominal.8 is unattainable and observed precision contamination zero.",
       "IAFF_MEASUREMENT_AUDIT.md: IAFF-05 fixed31/290/102 vs quantile169/152/102 differs138 at.5; high membership coincides only in this sample. Figure16 priority assignment is not ownership prevalence and Figure20 consumes fixed categories, not terciles. Actual M1/H1/clustering dependencies/internal profile validation need explicit later reconciliation without fitted-effect inference.",
-      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.10/M5.02.8 historical IURD audit; remaining measure/exhibit audits and protected historical replication precede M7 decisions.",
+      "ACADEMIC_SUBMISSION_WORKPLAN.md: next immediate seven-child M4.03.11/M5.02.9 historical IETR audit before remaining measurement/exhibit audits, protected M6 historical replication and explicit M7 scientific revisions; IURD scientific findings remain open.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-01 mixed activity/opportunity/provider notification/non-lending constructs, normative equal available-component points and fixed thresholds; criterion validity and causal/welfare interpretation pending.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-02 stable60day stem/90day non-use inconsistency; positive-only required ownership routing versus34 principal no-account and21 unselected products; legal source-consistent semantic concerns, not proven wrong answers.",
       "IUOF_MEASUREMENT_AUDIT.md: IUOF-03 seven optional relevant items yield408seven-/15six-component means; applicable nonresponse changes weights. NA99 scored0 and six refusal98 non-lending answers100; explicit policy and sensitivity decisions pending, no imputation/exclusion.",
@@ -161,9 +164,13 @@
       "OQI_MEASUREMENT_AUDIT.md: OQI-04 Required positive-only ownership/nonempty-rail routing, principal-account contradictions, help refusals and offered-versus-received assistance require accurate meaning and explicit policy.",
       "OQI_MEASUREMENT_AUDIT.md: OQI-05 Current adjacent QR flag has179 domain disagreements; four states match older QR recipe. OQI mean excludesflag and actual analysis QR aliases map q5_4 correctly. Producer/fitted/exhibit impact unverified.",
       "OQI_MEASUREMENT_AUDIT.md: OQI-06 Latent default/missing-high/unmapped/constant-SD guards and float order remain open; observed category precision changes zero. No production guard or score redesign implemented.",
-      "OQI_MEASUREMENT_AUDIT.md: OQI-07 Fixed/binary/quantile/continuous representations, 105 category/tercile differences, own standardized IADT inclusion and internal-versus-independent validation require M6/M7 reconciliation."
+      "OQI_MEASUREMENT_AUDIT.md: OQI-07 Fixed/binary/quantile/continuous representations, 105 category/tercile differences, own standardized IADT inclusion and internal-versus-independent validation require M6/M7 reconciliation.",
+      "IURD_MEASUREMENT_AUDIT.md: IURD-01-04 mixed international/general/latest/domestic60-day referents, legalfrequency99 omission/phantom4zero, varying available-case weights, binary retention/Otherchannel/ordinalvolume semantics remain open.",
+      "IURD_MEASUREMENT_AUDIT.md: IURD-05 17 complete retained states reconcile2518 current discrepancies to authentic four-component historical recipes, including unknown-response defaults; source compatibility is not original execution or estimator proof.",
+      "IURD_MEASUREMENT_AUDIT.md: IURD-06 latent full-source-missing/high, constant-SD/ULP/domain guards; observed13 normalization/300standardization differences and0categoryprecisionchanges do not certify fitted robustness.",
+      "IURD_MEASUREMENT_AUDIT.md: IURD-07 fixed/binary/quantile/continuous representations differ215fixed/tercile assignments; standardized IURD omitsIADT despite rawblock inclusion, shared-source profile helpers are not independent validation, exhibits/causal claims pending."
     ],
-    "last_audit": "2026-10-06 M4.03.9/M5.02.7 seven-child historical OQI source/specification/replay/fixture/consumer audit with separate read-back and final independent/native acceptance chain; not design/method/quality/replication/measurement validity or public release approval."
+    "last_audit": "2026-10-07 bounded M4.03.10/M5.02.8 historical IURD audit; seven children accepted only through definitive MCP/readback/independent/native proof, not full scientific validation."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -702,7 +709,77 @@
     "oqi_source_retention_closeout_json": "audit-local/intake/oqi-4b8a2c5/source_retention_closeout.json",
     "oqi_oqi_validation_json": "audit-local/intake/oqi-4b8a2c5/oqi_validation.json",
     "oqi_measurement_audit": "OQI_MEASUREMENT_AUDIT.md",
-    "oqi_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_165036_perfect__now_fully_implement_and_validate_all_the.md"
+    "oqi_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261006_165036_perfect__now_fully_implement_and_validate_all_the.md",
+    "iurd_alias_coverage_summary_csv": "audit-local/intake/iurd-da6c988/alias_coverage_summary.csv",
+    "iurd_candidate_data_states_csv": "audit-local/intake/iurd-da6c988/candidate_data_states.csv",
+    "iurd_choices_csv": "audit-local/intake/iurd-da6c988/choices.csv",
+    "iurd_coded_domain_summary_csv": "audit-local/intake/iurd-da6c988/coded_domain_summary.csv",
+    "iurd_component_parity_csv": "audit-local/intake/iurd-da6c988/component_parity.csv",
+    "iurd_composition_summary_csv": "audit-local/intake/iurd-da6c988/composition_summary.csv",
+    "iurd_consumer_locators_csv": "audit-local/intake/iurd-da6c988/consumer_locators.csv",
+    "iurd_denominators_csv": "audit-local/intake/iurd-da6c988/denominators.csv",
+    "iurd_fixed_vs_tercile_csv": "audit-local/intake/iurd-da6c988/fixed_vs_tercile.csv",
+    "iurd_fixture_boundaries_csv": "audit-local/intake/iurd-da6c988/fixture_boundaries.csv",
+    "iurd_fixture_checks_csv": "audit-local/intake/iurd-da6c988/fixture_checks.csv",
+    "iurd_fixture_dependency_csv": "audit-local/intake/iurd-da6c988/fixture_dependency.csv",
+    "iurd_fixture_domain_support_csv": "audit-local/intake/iurd-da6c988/fixture_domain_support.csv",
+    "iurd_fixture_legal_raw_support_csv": "audit-local/intake/iurd-da6c988/fixture_legal_raw_support.csv",
+    "iurd_fixture_one_item_csv": "audit-local/intake/iurd-da6c988/fixture_one_item.csv",
+    "iurd_fixture_point_support_csv": "audit-local/intake/iurd-da6c988/fixture_point_support.csv",
+    "iurd_form_preflight_receipt_json": "audit-local/intake/iurd-da6c988/form_preflight_receipt.json",
+    "iurd_historical_category_cross_csv": "audit-local/intake/iurd-da6c988/historical_category_cross.csv",
+    "iurd_historical_code_recipes_json": "audit-local/intake/iurd-da6c988/historical_code_recipes.json",
+    "iurd_historical_recipe_checks_csv": "audit-local/intake/iurd-da6c988/historical_recipe_checks.csv",
+    "iurd_historical_recipe_native_proof_json": "audit-local/intake/iurd-da6c988/historical_recipe_native_proof.json",
+    "iurd_historical_source_variant_checks_json": "audit-local/intake/iurd-da6c988/historical_source_variant_checks.json",
+    "iurd_independent_source_review_md": "audit-local/intake/iurd-da6c988/independent_source_review.md",
+    "iurd_item_domains_csv": "audit-local/intake/iurd-da6c988/item_domains.csv",
+    "iurd_iurd_audit_do": "audit-local/intake/iurd-da6c988/iurd_audit.do",
+    "iurd_iurd_boundary_check_py": "audit-local/intake/iurd-da6c988/iurd_boundary_check.py",
+    "iurd_iurd_debug_source_log": "audit-local/intake/iurd-da6c988/iurd_debug_source.log",
+    "iurd_iurd_debug_trace_log": "audit-local/intake/iurd-da6c988/iurd_debug_trace.log",
+    "iurd_iurd_driver_log": "audit-local/intake/iurd-da6c988/iurd_driver.log",
+    "iurd_iurd_precision_preflight_log": "audit-local/intake/iurd-da6c988/iurd_precision_preflight.log",
+    "iurd_iurd_preflight_log": "audit-local/intake/iurd-da6c988/iurd_preflight.log",
+    "iurd_iurd_readback_debug_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug.log",
+    "iurd_iurd_readback_debug2_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug2.log",
+    "iurd_iurd_readback_debug3_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug3.log",
+    "iurd_iurd_readback_debug4_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug4.log",
+    "iurd_iurd_readback_debug5_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug5.log",
+    "iurd_iurd_readback_debug6_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug6.log",
+    "iurd_iurd_readback_debug7_log": "audit-local/intake/iurd-da6c988/iurd_readback_debug7.log",
+    "iurd_iurd_readback_preflight_log": "audit-local/intake/iurd-da6c988/iurd_readback_preflight.log",
+    "iurd_iurd_readback_do": "audit-local/intake/iurd-da6c988/iurd_readback.do",
+    "iurd_iurd_readback_log": "audit-local/intake/iurd-da6c988/iurd_readback.log",
+    "iurd_iurd_variants_preflight_log": "audit-local/intake/iurd-da6c988/iurd_variants_preflight.log",
+    "iurd_iurd_variants_second_preflight_log": "audit-local/intake/iurd-da6c988/iurd_variants_second_preflight.log",
+    "iurd_legacy_iurd_blocks_json": "audit-local/intake/iurd-da6c988/legacy_iurd_blocks.json",
+    "iurd_question_checks_csv": "audit-local/intake/iurd-da6c988/question_checks.csv",
+    "iurd_questionnaire_csv": "audit-local/intake/iurd-da6c988/questionnaire.csv",
+    "iurd_recipe_coverage_summary_csv": "audit-local/intake/iurd-da6c988/recipe_coverage_summary.csv",
+    "iurd_relevance_summary_csv": "audit-local/intake/iurd-da6c988/relevance_summary.csv",
+    "iurd_routing_checks_csv": "audit-local/intake/iurd-da6c988/routing_checks.csv",
+    "iurd_routing_summary_csv": "audit-local/intake/iurd-da6c988/routing_summary.csv",
+    "iurd_score_summary_csv": "audit-local/intake/iurd-da6c988/score_summary.csv",
+    "iurd_score_support_csv": "audit-local/intake/iurd-da6c988/score_support.csv",
+    "iurd_source_checks_csv": "audit-local/intake/iurd-da6c988/source_checks.csv",
+    "iurd_source_joint_summary_csv": "audit-local/intake/iurd-da6c988/source_joint_summary.csv",
+    "iurd_source_operation_checks_json": "audit-local/intake/iurd-da6c988/source_operation_checks.json",
+    "iurd_source_retention_entry_json": "audit-local/intake/iurd-da6c988/source_retention_entry.json",
+    "iurd_state_alias_parity_csv": "audit-local/intake/iurd-da6c988/state_alias_parity.csv",
+    "iurd_state_component_parity_csv": "audit-local/intake/iurd-da6c988/state_component_parity.csv",
+    "iurd_state_input_checks_csv": "audit-local/intake/iurd-da6c988/state_input_checks.csv",
+    "iurd_state_schema_checks_csv": "audit-local/intake/iurd-da6c988/state_schema_checks.csv",
+    "iurd_state_score_summary_csv": "audit-local/intake/iurd-da6c988/state_score_summary.csv",
+    "iurd_state_source_variant_fields_csv": "audit-local/intake/iurd-da6c988/state_source_variant_fields.csv",
+    "iurd_state_source_variant_summary_csv": "audit-local/intake/iurd-da6c988/state_source_variant_summary.csv",
+    "iurd_state_storage_summary_csv": "audit-local/intake/iurd-da6c988/state_storage_summary.csv",
+    "iurd_workflow_query_receipts_json": "audit-local/intake/iurd-da6c988/workflow_query_receipts.json",
+    "iurd_latex_compile_receipt_json": "audit-local/intake/iurd-da6c988/latex_compile_receipt.json",
+    "iurd_source_retention_closeout_json": "audit-local/intake/iurd-da6c988/source_retention_closeout.json",
+    "iurd_iurd_validation_json": "audit-local/intake/iurd-da6c988/iurd_validation.json",
+    "iurd_measurement_audit": "IURD_MEASUREMENT_AUDIT.md",
+    "iurd_navigation_query": "audit-local/navigation/graphify-out/memory/query_20261007_055513_implement_historical_iurd_audit_m4_03_10_m5_02_8.md"
   },
   "decisions": [
     {
@@ -944,7 +1021,27 @@
     {
       "date": "2026-10-06",
       "decision": "Same saved main.tex/editor/preamble retained; fresh built-in compiler failed platform initialization with Unable to find standard directories for platform. Source preserved; no replacement PDF/tab/compiler or Overleaf write. Full proposed commit title/body only. Next M4.03.10/M5.02.8 is seven-child historical IURD audit before explicit M7 revisions."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Accept seven bounded historical IURD children M4.03.10.a/.b and M5.02.8.a-e only after actual Stata MCP driver/separate readback/empty-session, independent critic and native source/retention proof.26orderedoperations/eightfields/3384referencecells exact.349five/51four/21three/2two-term means; legal99 omission, phantom4, refusal/unknown/routed semantics and coarse retention/Otherchannel remain IURD01-04 scientific decisions. No production scoring, sample or response correction."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "36unique retained identities/17complete IURD states.56682current shared cells preserve2518discrepancies in37/38; authentic native six-recipe reconciliation yields57105canonical shared exact cells including historicalrawstd in37.732variantfield rows/309636cells and77available aliases/32571exactcells. Unknown-response default/gradedfour-component40-70 and omission/gradedfour-component45-85 are preserved separately from currentbinaryfive-component30-55. No original/unique producing execution, fitted effects or image recertification."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "5040raw-domain/missing controls distinguish900legalrouted cases from810arithmetic/omission/phantom4support;80one-item/24dependency/9score-onlyULP/3fullmissing/2constantsamples pass independent weighted means/sampleSD/float/extendedmissing/string CSV readback.13normalization/300standardization differences (max1.78813934326171875e-7),0observed category precision errors. Individuallydouble diagnostic postfiles and parser/label/import/optional-variable checks repaired only locally; failed runs retained, excluded and protected frames cleared."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "IURD-01-07 remain open for explicitM7 after remaining measures/exhibits and protectedM6replication. Fixed45/129/249 vsquantile145/144/134 differs215; binaryM1, empiricalH1 and continuousclustering not interchangeable. Standardized IURD omitsIADT despite rawfullblock inclusion; channel/recentprofile helpers shareclassdefiningitems and are not independentexternalvalidation. Legacycausal/formality/maximumweight/spendingshare claims remain pending. Preserve768original-byte checks/310priorfingerprints/earlierreports/124primarytasks/14milestones/allpointers/zeroapprovedpublicfields/pendinggates."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Same main.tex/editor/preamble retained. Two fresh builtin preview calls fail beforeTeX with Windows sandbox helper_unknown_error/setuprefresherrors; renderedlayoutunverified, noalternatePDF/compiler/tab. No participant derivative/export, production/model/exhibit/qualitative rewrite, restrictedcopy/delete, Gitstage/commit/push, cloud/access/visibility orOverleafsync. Full proposedcommit only. Next M4.03.11/M5.02.9 seven-child historical IETR audit; M0 remainsinprogress and no parent scientific/releasegatepasses."
     }
   ],
-  "last_updated_beijing": "2026-10-07T01:36:04.000+08:00"
+  "last_updated_beijing": "2026-10-07T14:25:49+08:00"
 }
