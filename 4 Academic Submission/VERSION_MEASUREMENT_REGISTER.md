@@ -314,3 +314,19 @@ Independent full-precision/specification/weightednumeric/string read-back valida
 All33actualGSEM excludeIAER; candidate B2_expauto and median/fixed aliases are declarations/profile roles, not fittedpreferredH1 inclusion. Actualcontinuous k-means/Ward includesIAER; same-input profiles not independent validation. Fullraw/stdIAER models share corresponding predictor blocks, neither includesIADT. q9_20→q9_21 ICPF routeconditioning is not literal scoreditemoverlap. Legacy ownership/caption/only-when/mediation claims and fitted/exhibit parity pending; qualitative contribution unchanged.
 
 Definitive MCP/closedlogs/both default0×0sessions, native/critic/preservation checks retain768original/611priorfingerprints/earlierreports/allpointers/124primaryIDs/14milestones/pendinggates/zeroapprovedfields. SameTeX/editor/preamble and fresh nativecompile diagnostics, no substitutePDF/compiler/tab or cloud/Overleaf/Git/production/statistical/qualitative/exhibit mutation. Full proposed commit only. Next **M4.03.15 / M5.02.13 historical ICPF audit**, seven children, not executed here.
+
+## ICPF follow-up — bounded historical acceptance
+
+**7 October2026; M4.03.15 / M5.02.13.** [Full audit, findings and proposed commit](ICPF_MEASUREMENT_AUDIT.md). Five forms/180specification/285choices independently match;90question/147domain/390route-dummy/57keyed checks pass.48applicable q9_21/375structural skips. Earliest q9_17/code5 Other versuslater none retained.
+
+23operations/tenfields/4,230referencecells exact;423five-generated terms. Mean66.5248239215102,SD17.9778353920279, fixed18/191/214 versus empirical209/199/15 differs390.359Nada1selections penalized; restriction4/refusal98 withoutscoredselections positive(2/10cases); coercion-support4 without scored1/2/3 positive(2cases; one also selects Other5);375skipspositive. Current full-source-missing100/high, older missing/high; no missingreference score. ICPF-01–07 retain construct/polarity/route/preference/weight/history/guard/consumer/legacy decisions.
+
+36identities/1,332schema/17complete/323keyed;166fields70,218cells retain905state37differences(408raw/408score/89cat). Three authentic recipes/370variantfields156,510cells reconcile16current+oneb03b54dstate; compatibility not execution.46actualaliases19,458cells exact; source/exactmedian80/199ties/15strict positives/no serializationerror.
+
+Independent fullprecision/specification/weighted/arithmetic/numeric-text read-back validates75legalcode-version/102scalar/54dummy/160routedlegal/19,683raw/243arithmetic/12boundary/27fullmissing/42policy/twoconstants. Diagnostic-only default version formatting rejected/corrected; superseded attempts retained/excluded. Actual final receipts/normal log closures/both default0×0 pass.136scaling/353std/max2^-22/0categoryprecisioneffects. Complete40attainable/70unattainable.
+
+EightM1/M2actualGSEM usefixed-high, eightH2/H3usequantiles; preferredH1 excludesICPF, h_icpf2appears in noneof33bodies. ContinuousclusteringincludesICPF. IAER's q9_20conditions ICPFfollow-up, not literal scoredoverlap. Internalprofiles not externalvalidation; legacy quantitative inference/exhibits pending, qualitativeunchanged.
+
+Native/critic/preservation retain768originalrecords/688priorfingerprints/previous763pointers/124primaryIDs/14milestones/privacy/pendinggates/zeroapprovedfields. SameTeX/editor/preamble; freshnative helper setup-refresh failure leaves compilation/layoutunverified, no substitutePDF/compiler/tab. No participant/production/estimator/exhibit/qualitative/Git/cloud/history/access/Overleaf mutation or release approval.
+
+**Next immediate: M4.03.16 / M5.02.14 — historical IEH measurement audit**, seven children beginning Section3.10blockB. Adjacent descriptive/program dependencies traced only if real; IBPD remains separate. Remaining measurements/exhibits and protectedM6 before explicitM7 revisions.

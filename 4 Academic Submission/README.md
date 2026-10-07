@@ -1,5 +1,7 @@
 # Academic redevelopment workspace
 
+**Current checkpoint — 7 October2026:** bounded [ICPF historical audit](ICPF_MEASUREMENT_AUDIT.md) accepted; **next: M4.03.16 / M5.02.14 historical IEH audit**. Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
+
 This is the academic redevelopment of the full legacy research manuscript, not a republication of the condensed CFI deliverables. The governing milestones and scientific boundaries are in [ACADEMIC_SUBMISSION_WORKPLAN.md](ACADEMIC_SUBMISSION_WORKPLAN.md). This workspace was initialized against repository commit `151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6` on 5 October 2026. No historical analysis or manuscript was changed during intake.
 
 ## Entry routing
@@ -280,9 +282,9 @@ Same main.tex/editor/preamble retained; fresh native compiler receipt records th
 
 **Next immediate: M4.03.13 / M5.02.11 — historical IEDF measurement audit**, seven granular children in the workplan. Complete remaining measurement/exhibit audits and protected M6 replication before explicit M7 revisions. The [audit includes a full proposed commit title and body](IPCS_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft); no stage/commit/push/cloud/Overleaf action was performed.
 
-## Latest handoff
+## Previous bounded handoffs
 
-### Historical IAER checkpoint — latest bounded continuation
+### Historical IAER checkpoint — preserved previous continuation
 
 **7 October 2026 — M4.03.14 / M5.02.12.** [Full IAER audit](IAER_MEASUREMENT_AUDIT.md). Entry clean main891549f. Five-version180specification/285choice rows match native/Stata metadata;15scalar/two contextualmultiselect fields,255question/540domain/555route-dummy/72keyed checks pass. Earliest q9_17 choice5 wording differs; no scored-item wording or legal No0 changes.
 
@@ -296,7 +298,7 @@ Definitive actual MCP/closedlogs/both empty sessions and independent numeric/str
 
 **Next immediate: M4.03.15 / M5.02.13 — historical ICPF measurement audit**, seven defined children beginning Preparation3.9.2. Remaining measurements/exhibits and protected M6 replication precede explicit M7 corrections. The [IAER audit contains the full proposed commit title and description](IAER_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft).
 
-### Historical IEDF checkpoint — latest bounded continuation
+### Historical IEDF checkpoint — preserved previous continuation
 
 **7 October 2026 — M4.03.13 / M5.02.11.** The [full IEDF audit](IEDF_MEASUREMENT_AUDIT.md) and seven completed workplan children record bounded historical acceptance only. Entry was clean `main@4b7317e`; production, restricted originals, prior packets, qualitative work and historical exhibits are unchanged.
 
@@ -311,3 +313,21 @@ Definitive Stata MCP and separate independent full-precision/specification read-
 All768original records/526prior-private fingerprints, earlier reports,124primaryIDs/14milestones and original artifact pointers remain unchanged. M0 and all parent gates remainpending; no public participant field is approved. The same main.tex/editor/preamble remains; fresh native helper setup-refresh failure leaves compilation/layout unverified.
 
 **Next immediate: M4.03.14 / M5.02.12 — historical IAER measurement audit**, seven granular children in the workplan, defined only. Remaining measurement/exhibit audits and protected M6 replication precede explicit M7 revisions. The [audit contains the full proposed commit title and body](IEDF_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft); no stage/commit/push/cloud/Overleaf action occurred.
+
+## Latest handoff
+
+### ICPF follow-up — bounded historical acceptance
+
+**7 October2026; M4.03.15 / M5.02.13.** [Full audit, findings and proposed commit](ICPF_MEASUREMENT_AUDIT.md). Five forms/180specification/285choices independently match;90question/147domain/390route-dummy/57keyed checks pass.48applicable q9_21/375structural skips. Earliest q9_17/code5 Other versuslater none retained.
+
+23operations/tenfields/4,230referencecells exact;423five-generated terms. Mean66.5248239215102,SD17.9778353920279, fixed18/191/214 versus empirical209/199/15 differs390.359Nada1selections penalized; restriction4/refusal98 withoutscoredselections positive(2/10cases); coercion-support4 without scored1/2/3 positive(2cases; one also selects Other5);375skipspositive. Current full-source-missing100/high, older missing/high; no missingreference score. ICPF-01–07 retain construct/polarity/route/preference/weight/history/guard/consumer/legacy decisions.
+
+36identities/1,332schema/17complete/323keyed;166fields70,218cells retain905state37differences(408raw/408score/89cat). Three authentic recipes/370variantfields156,510cells reconcile16current+oneb03b54dstate; compatibility not execution.46actualaliases19,458cells exact; source/exactmedian80/199ties/15strict positives/no serializationerror.
+
+Independent fullprecision/specification/weighted/arithmetic/numeric-text read-back validates75legalcode-version/102scalar/54dummy/160routedlegal/19,683raw/243arithmetic/12boundary/27fullmissing/42policy/twoconstants. Diagnostic-only default version formatting rejected/corrected; superseded attempts retained/excluded. Actual final receipts/normal log closures/both default0×0 pass.136scaling/353std/max2^-22/0categoryprecisioneffects. Complete40attainable/70unattainable.
+
+EightM1/M2actualGSEM usefixed-high, eightH2/H3usequantiles; preferredH1 excludesICPF, h_icpf2appears in noneof33bodies. ContinuousclusteringincludesICPF. IAER's q9_20conditions ICPFfollow-up, not literal scoredoverlap. Internalprofiles not externalvalidation; legacy quantitative inference/exhibits pending, qualitativeunchanged.
+
+Native/critic/preservation retain768originalrecords/688priorfingerprints/previous763pointers/124primaryIDs/14milestones/privacy/pendinggates/zeroapprovedfields. SameTeX/editor/preamble; freshnative helper setup-refresh failure leaves compilation/layoutunverified, no substitutePDF/compiler/tab. No participant/production/estimator/exhibit/qualitative/Git/cloud/history/access/Overleaf mutation or release approval.
+
+**Next immediate: M4.03.16 / M5.02.14 — historical IEH measurement audit**, seven children beginning Section3.10blockB. Adjacent descriptive/program dependencies traced only if real; IBPD remains separate. Remaining measurements/exhibits and protectedM6 before explicitM7 revisions.

@@ -455,6 +455,33 @@ M0 remains in progress and all parent scientific/design/method/empirical/quality
 Remaining measurement/exhibit audits and protected historical M6 replication precede explicit M7 scientific corrections. Completing a child never passes its parent.
 
 
+
+### Historical ICPF measurement checkpoint — seven bounded children accepted
+
+**7 October2026; M4.03.15 / M5.02.13.** [Detailed evidence and commit draft](ICPF_MEASUREMENT_AUDIT.md). The seven contracts above are accepted on definitive MCP, independent numeric/text/specification read-back, native source/form proof, critic and preservation, not parent scientific approval.
+
+| Child | Accepted evidence |
+|---|---|
+| M4.03.15.a | Five forms/180specification/285choices exact; actual meanings, ancestry, requiredness, q9_20→q9_21 route and earliestOther/laternone. |
+| M4.03.15.b |90question/147domain/390route-dummy/57keyed checks;48applicable/375structural;no illegal/applicable omission/out-of-route/dummy/shared-input mismatch. |
+| M5.02.13.a |23orderedoperations/tenfields/4,230referencecells exact; fivebinary,floatrowmean→float100,fixed40/70; polarity/skip/missing100 issues open. |
+| M5.02.13.b |36identities/1,332schema/17complete/323keyed;166fields70,218cellsretain905oldstate37differences;three recipes/370variantfields156,510cells/46actualaliases19,458cells;not original execution. |
+| M5.02.13.c |75legal/102scalar/54dummy/160routedlegal/19,683raw/243arithmetic/12boundary/27missing/42policy/twoconstants,fullprecision weighted/numeric/text;actual closedlogs/default0×0sessions;diagnostic export defects retained/excluded;136scaling/353std/max2^-22/0categoryeffects. |
+| M5.02.13.d |EightM1/M2fixed-high/eightH2/H3quantile,preferredH1exclusion,continuousclustering;median80/199ties/15strict positives/no serializationerror;routeconditioning not literalIAER scoredoverlap;legacy/internalvalidation/exhibit risks open,qualitativeprotected. |
+| M5.02.13.e |Independentcritic/nativeproof/768original/688priorfingerprints/previous763pointers/124primaryIDs/14milestones/privacy/pendinggates;sameTeX/editor/preamble/nativecompile limitation;commitdraftonly. |
+
+**Next immediate task: M4.03.16 / M5.02.14 — historical IEH measurement audit.** Begin Preparation Section3.10blockB, lines2114–2155. Seven defined-only children:
+
+1. **M4.03.16.a** — Pin five definitions and six scored information/cash-out/training/perceived-change/accompaniment/material-exposure terms; verify codes/types/constraints/requiredness/full ancestry/routes and distinguish reported support/frequency/sufficiency/perceivedchange from demonstrated skills or causal effects.
+2. **M4.03.16.b** — Stata MCP raw/audit/coded version domains, applicable/structural missingness, genuine applicable omissions and keyed identity; trace adjacent descriptive/program helpers only as actualdependencies, no addedunscored terms or imputedskips.
+3. **M5.02.14.a** — Exactorderedoperations, binary/ordinal/default policies, availablecomponentweights, normalization, floatstorage and40/70; verify existing high-category missingguard rather than importingICPF finding.
+4. **M5.02.14.b** — Retain36identities; source/score/alias schemas and absentfields; authenticGitrecipes and actualstandardized/fixed/binary/quantile rules; preserve mismatch/compatibility without uniqueproducer/fit certification.
+5. **M5.02.14.c** — Independent boundedlegal/versionrouted/raw/arithmetic/sentinel/malformed/extendedmissing/ULP/constant controls, attainableboundaries and macroserialization; separatefullprecision specification/numeric/text read-back, actualreceipts, closedlogs, emptytasksessions.
+6. **M5.02.14.d** — LEGACY-A enablingenvironment/training/program interpretations versusactualdescriptive/correlation/outcome/predictor/interaction/GSEM/clustering/profile/appendix commands; declared versusfitted roles, reportedchange versuscausal effectiveness, internalversusexternal validation; qualitativeprotected.
+7. **M5.02.14.e** — Independentcritic/native source/form proof;original/priorfingerprints/reports/pointers/124primaryIDs/14milestones/privacy/pendinggates;same main.tex/editor/preamble/freshbuiltincompile diagnostics;fullproposedcommit title/body,no stage/commit/push/cloud/Overleaf action.
+
+IBPD remains a subsequent separate audit. Remaining measurement/exhibit audits andprotectedM6 precede explicitM7 scientific corrections; a childneverpassesitsparent.
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**

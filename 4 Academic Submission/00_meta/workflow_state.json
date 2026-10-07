@@ -1,5 +1,5 @@
 {
-  "schema_version": 25,
+  "schema_version": 26,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-07 bounded IAER M4.03.14/M5.02.12 accepted on definitive Stata MCP/closed logs/both empty sessions, independent read-back/native/critic/preservation only. Cleanmain891549f;42operations/6345referencecells exact;36identities/17complete/fourrecipes/33aliases retain4600current differences;h_iaer2constantzero, median100/no serialization difference, tied177/246quantiles.768original/611priorfingerprints retained. ParentStage2notpassed;scientific/privacy gatespending. SameTeX/preamble/editor;freshnative helper setup-refresh failure leaves renderingunverified. No production/model/participant/qualitative/Git/cloud/Overleaf change. Next M4.03.15/M5.02.13 ICPF sevenchildren defined only.",
+    "last_recovery_probe": "2026-10-07 ICPF: exact23operations/4230referencecells,5formnative match,36identities/17complete/905oldstate37differences/3recipes/19458aliascells; independentMCP numeric-text/form/weighted/closedlogs/empty sessions/native/critic/preservation;768original/688priorfingerprints retained; nativepreviewsetup-refreshfailure/layoutunverified;pendinggates,nextIEH.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -196,9 +196,17 @@
       "IAER_MEASUREMENT_AUDIT.md: IAER-04 preserve four native12/12/10/11-term recipes and4600retained current-source cell differences; compatibility does not prove original producer/runtime/fitted consequences.",
       "IAER_MEASUREMENT_AUDIT.md: IAER-05 ceiling246at100, h_iaer2constantzero/median100, tiedquantiles177/246/no third and419fixed-disagreements need explicit future profiling/representation policy.",
       "IAER_MEASUREMENT_AUDIT.md: IAER-06 finite/domain/missing-high/constant-SD safeguards remain latent scientific/revision decisions;137scaling/385std lastdigits and zeroobserved category effects do not certify robustness.",
-      "IAER_MEASUREMENT_AUDIT.md: IAER-07 legacy ownership/caption/only-when/mediation, conditioning/commonmethod and same-source cluster validation claims need source/fit/exhibit reconciliation; all33actualGSEM excludeIAER, qualitative evidence protected."
+      "IAER_MEASUREMENT_AUDIT.md: IAER-07 legacy ownership/caption/only-when/mediation, conditioning/commonmethod and same-source cluster validation claims need source/fit/exhibit reconciliation; all33actualGSEM excludeIAER, qualitative evidence protected.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-01 mixed confidence/approval/community perceptions/hypothetical consequences/conditional requested safeguards do not establish observed safety, harm or protection.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-02 Nada1 is penalized; restriction4/refusal98/version-dependent Other-none5 policies require scientific correction/sensitivity; historical recipe unchanged.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-03 conditional safeguards1/2/3 penalties, support4/Other5 omissions and375 structural skips awardedpositive require route/denominator/preference policy; no skip imputation.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-04 equal available-term weights, neutral/unknown pooling,3/5-term versions,40/70 and fixed/quantile/median/continuous definitions require justification; native compatibility not original execution.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-05 currentfullmissing100/high versusoldermissing/high, malformedrowtotals and finite/domain/range/constantSD guards remain open;136scaling/353std(max2^-22)/zero observedcategoryeffects not robustnessproof.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-06 eightM1/M2fixed-high/eightH2/H3quantileGSEM,preferredH1exclusion,continuousclustering; q9_20conditioning not literalIAER scoredoverlap/internalprofiles not externalvalidation.",
+      "ICPF_MEASUREMENT_AUDIT.md: ICPF-07 LEGACY-A realizedharm/forcedmitigation/significance/necessaryecosystem/mediation/null/provider claims and fitted/image parity remain protectedM6/M7 work; qualitativeunchanged.",
+      "ACADEMIC_SUBMISSION_WORKPLAN.md: current next M4.03.16/M5.02.14 historical IEH, seven children; prior dated task notices remain history."
     ],
-    "last_audit": "2026-10-07 bounded M4.03.14/M5.02.12 historical IAER audit; seven children accepted through definitive Stata MCP/separate read-back/native proof/critic/preservation only; scientific construct/model/release gates pending."
+    "last_audit": "2026-10-07 bounded M4.03.15/M5.02.13 historical ICPF measurement audit accepted with scientific findings open; next M4.03.16/M5.02.14 historical IEH; no parent gate passed."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -1111,7 +1119,106 @@
     "iaer_iaer_validation_json": "audit-local/intake/iaer-891549f/iaer_validation.json",
     "iaer_workflow_query_receipts_json": "audit-local/intake/iaer-891549f/workflow_query_receipts.json",
     "iaer_independent_source_review_md": "audit-local/intake/iaer-891549f/independent_source_review.md",
-    "iaer_measurement_audit": "IAER_MEASUREMENT_AUDIT.md"
+    "iaer_measurement_audit": "IAER_MEASUREMENT_AUDIT.md",
+    "icpf_measurement_audit": "ICPF_MEASUREMENT_AUDIT.md",
+    "icpf_alias_coverage_summary_csv": "audit-local/intake/icpf-1a1db95/alias_coverage_summary.csv",
+    "icpf_arithmetic_mask_support_csv": "audit-local/intake/icpf-1a1db95/arithmetic_mask_support.csv",
+    "icpf_attainable_threshold_summary_csv": "audit-local/intake/icpf-1a1db95/attainable_threshold_summary.csv",
+    "icpf_audit_ledger_md": "audit-local/intake/icpf-1a1db95/audit_ledger.md",
+    "icpf_boundary_controls_csv": "audit-local/intake/icpf-1a1db95/boundary_controls.csv",
+    "icpf_candidate_data_states_csv": "audit-local/intake/icpf-1a1db95/candidate_data_states.csv",
+    "icpf_choices_csv": "audit-local/intake/icpf-1a1db95/choices.csv",
+    "icpf_claims_readback_csv": "audit-local/intake/icpf-1a1db95/claims_readback.csv",
+    "icpf_coded_domain_summary_csv": "audit-local/intake/icpf-1a1db95/coded_domain_summary.csv",
+    "icpf_component_parity_csv": "audit-local/intake/icpf-1a1db95/component_parity.csv",
+    "icpf_component_support_csv": "audit-local/intake/icpf-1a1db95/component_support.csv",
+    "icpf_composition_summary_csv": "audit-local/intake/icpf-1a1db95/composition_summary.csv",
+    "icpf_consequence_answer_support_csv": "audit-local/intake/icpf-1a1db95/consequence_answer_support.csv",
+    "icpf_consumer_locators_csv": "audit-local/intake/icpf-1a1db95/consumer_locators.csv",
+    "icpf_denominators_csv": "audit-local/intake/icpf-1a1db95/denominators.csv",
+    "icpf_diagnostic_scope_checks_json": "audit-local/intake/icpf-1a1db95/diagnostic_scope_checks.json",
+    "icpf_driver_tool_receipt_json": "audit-local/intake/icpf-1a1db95/driver_tool_receipt.json",
+    "icpf_dummy_controls_csv": "audit-local/intake/icpf-1a1db95/dummy_controls.csv",
+    "icpf_empirical_tercile_summary_csv": "audit-local/intake/icpf-1a1db95/empirical_tercile_summary.csv",
+    "icpf_explicit_gsem_source_manifest_json": "audit-local/intake/icpf-1a1db95/explicit_gsem_source_manifest.json",
+    "icpf_fixed_category_summary_csv": "audit-local/intake/icpf-1a1db95/fixed_category_summary.csv",
+    "icpf_fixed_vs_tercile_csv": "audit-local/intake/icpf-1a1db95/fixed_vs_tercile.csv",
+    "icpf_fixture_checks_csv": "audit-local/intake/icpf-1a1db95/fixture_checks.csv",
+    "icpf_forms_receipt_json": "audit-local/intake/icpf-1a1db95/forms_receipt.json",
+    "icpf_full_missing_controls_csv": "audit-local/intake/icpf-1a1db95/full_missing_controls.csv",
+    "icpf_git_recipe_history_json": "audit-local/intake/icpf-1a1db95/git_recipe_history.json",
+    "icpf_graphify_query_receipt_json": "audit-local/intake/icpf-1a1db95/graphify_query_receipt.json",
+    "icpf_historical_category_cross_csv": "audit-local/intake/icpf-1a1db95/historical_category_cross.csv",
+    "icpf_historical_code_recipes_json": "audit-local/intake/icpf-1a1db95/historical_code_recipes.json",
+    "icpf_historical_hybrid_recipe_history_json": "audit-local/intake/icpf-1a1db95/historical_hybrid_recipe_history.json",
+    "icpf_historical_policy_controls_csv": "audit-local/intake/icpf-1a1db95/historical_policy_controls.csv",
+    "icpf_historical_recipe_native_proof_json": "audit-local/intake/icpf-1a1db95/historical_recipe_native_proof.json",
+    "icpf_hybrid_median_precision_readback_csv": "audit-local/intake/icpf-1a1db95/hybrid_median_precision_readback.csv",
+    "icpf_icpf_boundary_check_py": "audit-local/intake/icpf-1a1db95/icpf_boundary_check.py",
+    "icpf_icpf_driver_do": "audit-local/intake/icpf-1a1db95/icpf_driver.do",
+    "icpf_icpf_driver_log": "audit-local/intake/icpf-1a1db95/icpf_driver.log",
+    "icpf_icpf_forms_do": "audit-local/intake/icpf-1a1db95/icpf_forms.do",
+    "icpf_icpf_readback_do": "audit-local/intake/icpf-1a1db95/icpf_readback.do",
+    "icpf_icpf_readback_log": "audit-local/intake/icpf-1a1db95/icpf_readback.log",
+    "icpf_icpf_recipe_inventory_py": "audit-local/intake/icpf-1a1db95/icpf_recipe_inventory.py",
+    "icpf_icpf_validation_json": "audit-local/intake/icpf-1a1db95/icpf_validation.json",
+    "icpf_independent_source_review_md": "audit-local/intake/icpf-1a1db95/independent_source_review.md",
+    "icpf_item_domains_csv": "audit-local/intake/icpf-1a1db95/item_domains.csv",
+    "icpf_legacy_icpf_blocks_json": "audit-local/intake/icpf-1a1db95/legacy_icpf_blocks.json",
+    "icpf_legal_routed_support_csv": "audit-local/intake/icpf-1a1db95/legal_routed_support.csv",
+    "icpf_mitigation_answer_support_csv": "audit-local/intake/icpf-1a1db95/mitigation_answer_support.csv",
+    "icpf_mitigation_route_support_csv": "audit-local/intake/icpf-1a1db95/mitigation_route_support.csv",
+    "icpf_native_compile_receipt_json": "audit-local/intake/icpf-1a1db95/native_compile_receipt.json",
+    "icpf_native_definition_readback_json": "audit-local/intake/icpf-1a1db95/native_definition_readback.json",
+    "icpf_one_item_controls_csv": "audit-local/intake/icpf-1a1db95/one_item_controls.csv",
+    "icpf_question_checks_csv": "audit-local/intake/icpf-1a1db95/question_checks.csv",
+    "icpf_questionnaire_csv": "audit-local/intake/icpf-1a1db95/questionnaire.csv",
+    "icpf_raw_rectangle_support_csv": "audit-local/intake/icpf-1a1db95/raw_rectangle_support.csv",
+    "icpf_readback_failure_investigation_json": "audit-local/intake/icpf-1a1db95/readback_failure_investigation.json",
+    "icpf_readback_tool_receipt_json": "audit-local/intake/icpf-1a1db95/readback_tool_receipt.json",
+    "icpf_recipe_coverage_summary_csv": "audit-local/intake/icpf-1a1db95/recipe_coverage_summary.csv",
+    "icpf_relevance_summary_csv": "audit-local/intake/icpf-1a1db95/relevance_summary.csv",
+    "icpf_routing_checks_csv": "audit-local/intake/icpf-1a1db95/routing_checks.csv",
+    "icpf_routing_summary_csv": "audit-local/intake/icpf-1a1db95/routing_summary.csv",
+    "icpf_score_summary_csv": "audit-local/intake/icpf-1a1db95/score_summary.csv",
+    "icpf_score_support_csv": "audit-local/intake/icpf-1a1db95/score_support.csv",
+    "icpf_source_checks_csv": "audit-local/intake/icpf-1a1db95/source_checks.csv",
+    "icpf_source_operation_checks_json": "audit-local/intake/icpf-1a1db95/source_operation_checks.json",
+    "icpf_source_retention_closeout_json": "audit-local/intake/icpf-1a1db95/source_retention_closeout.json",
+    "icpf_source_retention_entry_json": "audit-local/intake/icpf-1a1db95/source_retention_entry.json",
+    "icpf_stage2_entry_receipt_json": "audit-local/intake/icpf-1a1db95/stage2_entry_receipt.json",
+    "icpf_state_alias_parity_csv": "audit-local/intake/icpf-1a1db95/state_alias_parity.csv",
+    "icpf_state_component_parity_csv": "audit-local/intake/icpf-1a1db95/state_component_parity.csv",
+    "icpf_state_hybrid_alias_controls_csv": "audit-local/intake/icpf-1a1db95/state_hybrid_alias_controls.csv",
+    "icpf_state_input_checks_csv": "audit-local/intake/icpf-1a1db95/state_input_checks.csv",
+    "icpf_state_schema_checks_csv": "audit-local/intake/icpf-1a1db95/state_schema_checks.csv",
+    "icpf_state_score_summary_csv": "audit-local/intake/icpf-1a1db95/state_score_summary.csv",
+    "icpf_state_source_variant_fields_csv": "audit-local/intake/icpf-1a1db95/state_source_variant_fields.csv",
+    "icpf_state_source_variant_summary_csv": "audit-local/intake/icpf-1a1db95/state_source_variant_summary.csv",
+    "icpf_state_storage_summary_csv": "audit-local/intake/icpf-1a1db95/state_storage_summary.csv",
+    "icpf_superseded_driver_v1_do": "audit-local/intake/icpf-1a1db95/superseded_driver_v1.do",
+    "icpf_superseded_driver_v1_log": "audit-local/intake/icpf-1a1db95/superseded_driver_v1.log",
+    "icpf_superseded_driver_v1_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_driver_v1_receipt.json",
+    "icpf_superseded_driver_v2_do": "audit-local/intake/icpf-1a1db95/superseded_driver_v2.do",
+    "icpf_superseded_driver_v2_log": "audit-local/intake/icpf-1a1db95/superseded_driver_v2.log",
+    "icpf_superseded_driver_v2_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_driver_v2_receipt.json",
+    "icpf_superseded_readback_v1_do": "audit-local/intake/icpf-1a1db95/superseded_readback_v1.do",
+    "icpf_superseded_readback_v1_log": "audit-local/intake/icpf-1a1db95/superseded_readback_v1.log",
+    "icpf_superseded_readback_v1_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_readback_v1_receipt.json",
+    "icpf_workflow_query_receipts_json": "audit-local/intake/icpf-1a1db95/workflow_query_receipts.json",
+    "icpf_added_policy_failure_cleanup_json": "audit-local/intake/icpf-1a1db95/added_policy_failure_cleanup.json",
+    "icpf_superseded_driver_v3_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_driver_v3_receipt.json",
+    "icpf_superseded_driver_v3_do": "audit-local/intake/icpf-1a1db95/superseded_driver_v3.do",
+    "icpf_superseded_driver_v3_log": "audit-local/intake/icpf-1a1db95/superseded_driver_v3.log",
+    "icpf_superseded_driver_v4_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_driver_v4_receipt.json",
+    "icpf_superseded_driver_v4_do": "audit-local/intake/icpf-1a1db95/superseded_driver_v4.do",
+    "icpf_superseded_driver_v4_log": "audit-local/intake/icpf-1a1db95/superseded_driver_v4.log",
+    "icpf_superseded_readback_v2_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_readback_v2_receipt.json",
+    "icpf_superseded_readback_v2_do": "audit-local/intake/icpf-1a1db95/superseded_readback_v2.do",
+    "icpf_superseded_readback_v2_log": "audit-local/intake/icpf-1a1db95/superseded_readback_v2.log",
+    "icpf_superseded_readback_v3_receipt_json": "audit-local/intake/icpf-1a1db95/superseded_readback_v3_receipt.json",
+    "icpf_superseded_readback_v3_do": "audit-local/intake/icpf-1a1db95/superseded_readback_v3.do",
+    "icpf_superseded_readback_v3_log": "audit-local/intake/icpf-1a1db95/superseded_readback_v3.log"
   },
   "decisions": [
     {
@@ -1398,17 +1505,50 @@
       "date": "2026-10-07",
       "decision": "Retain768overlapping original-byte manifestrecords/378prior-private fingerprints/earlierreports/124primarytasks/14milestones/allpointers/zeroapprovedpublicfields/pendinggates. Same saved main.tex/editor/preamble; fresh built-in compiler fails before TeX preparation with Windows sandbox helper setup-refresh errors, layoutunverified. No alternate PDF/compiler/tab, sourcecopy/delete, participantderivative, Git/cloud/access/Overleaf action. Full proposed commit title/body only. Next seven-child M4.03.12/M5.02.10 historical IPCS Section3.8.1 before explicitM7 scientific revisions."
     },
-
-    {"date":"2026-10-07","decision":"Accept seven bounded historical IEDF children M4.03.13.a/b and M5.02.11.a-e on definitive MCP/independent readback/closedlogs/both emptysessions/native proof/critic/preservation only. Five forms/193spec/482choices,19select-one fields,285question/700domain/450route/78keyed checks pass; earliest complaint7 opensrecourse. Exact24operations reproduce9fields/3807referencecells. No production/data/model/qualitative change."},
-
-    {"date":"2026-10-07","decision":"IEDF01–07 remain open: contacts/blocks/paymentproblems/first-response/conditionalrecourse are mixed proxies, not verified fraudfrequency/realizedloss/causalprotection. Neutral3zero; very-satisfied5/pending4/contactknowledge4 omitted. Available2/3/5/6terms29/290/8/96; fixed307/110/6 versus empirical152/149/122 differs265. Unknowndefault/missinghigh/constantSD/cutoff decisions require explicitlaterM7."},
-
-    {"date":"2026-10-07","decision":"36identities/17complete states:152fields/64296cells retain219differences in37(101raw/101score/17category), compatible withtwo equivalentfive-term40/70native recipes. Five recipes/712fields/301176cells and41aliases/17343cells checked. Exact source-local median reproductionpasses but147exactmedian tiesincluded(269vs122positives). Actual standardizedIEDF retainsIADT;21of33actualGSEM includeIEDF; actualcontinuousclustering includesit. Shareditem/profilecoherence not externalvalidation; Figure27blocking versuscontact159disagreements. No fitted/exhibit proof."},
-
-    {"date":"2026-10-07","decision":"65375legal cases includes2500early-onlycomplaint7;25920raw/729arithmetic/81singleitem/12scoreonly/45fullmissing/35policy/two4rowconstantsamples pass independentnumeric/string/metadata/weighted readback.196scaling/268std differences(max2^-22),zeroobserved categoryprecisioneffects. Only ignoreddiagnostic endpoint/source-local/routing/variable-range/missing-numerator/uniqueness-key defects repaired;superseded runs excluded. Preserve768original/526priorfingerprints,124primaryIDs/14milestones/pointers/pendinggates. SameTeX/editor/preamble;fresh nativehelperfailure leavesrenderingunverified. No participant/Git/cloud/Overleafaction. Next M4.03.14/M5.02.12 IAER sevenchildren defined only."},
-    {"date":"2026-10-07","decision":"Bounded IAER child completed without production/qualitative/result changes;42orderedoperations/15fields6345cells exact,5forms180spec285choices/versioned domains and keyed inputs checked. Refusal98 positive no-coercion, hypothetical ownership, sole/joint pooling, ceiling, missing-high and legacy-inference policies remain IAER-01–07 open scientific decisions."},
-    {"date":"2026-10-07","decision":"36preservedidentities/17complete/253sharedfields107019cells retain4600differences;fourauthenticrecipes reconcile4phantomNo2states/one10termstate/12currentstates.948variantfields401004cells and33aliases13959cells checked;compatibility not originalexecution or fittedproof. All33actualGSEM excludeIAER, continuousclusteringincludesit;source/exact median100 andh_iaer2allzero, tiedquantile177/246 differs419fixedassignments."},
-    {"date":"2026-10-07","decision":"Definitive independent MCP/read-back/numeric/string/source/form/critic/byte checks retain768original/611priorfingerprints/allpriorpointers/124primaryIDs/14milestones andallparentgatespending. Explicitfactored265legalcodeversion/20480binaryversion/531441representativerawmissing/531441arithmetic controls, no full originalresponseCartesian claim. Same main.tex/editor/preamble;freshnative helper setuprefresh failure leaves compilation/layout unverified; no substitutePDF/Git/cloud/Overleafaction. NextICPF M4.03.15/M5.02.13 defined only."}
+    {
+      "date": "2026-10-07",
+      "decision": "Accept seven bounded historical IEDF children M4.03.13.a/b and M5.02.11.a-e on definitive MCP/independent readback/closedlogs/both emptysessions/native proof/critic/preservation only. Five forms/193spec/482choices,19select-one fields,285question/700domain/450route/78keyed checks pass; earliest complaint7 opensrecourse. Exact24operations reproduce9fields/3807referencecells. No production/data/model/qualitative change."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "IEDF01–07 remain open: contacts/blocks/paymentproblems/first-response/conditionalrecourse are mixed proxies, not verified fraudfrequency/realizedloss/causalprotection. Neutral3zero; very-satisfied5/pending4/contactknowledge4 omitted. Available2/3/5/6terms29/290/8/96; fixed307/110/6 versus empirical152/149/122 differs265. Unknowndefault/missinghigh/constantSD/cutoff decisions require explicitlaterM7."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "36identities/17complete states:152fields/64296cells retain219differences in37(101raw/101score/17category), compatible withtwo equivalentfive-term40/70native recipes. Five recipes/712fields/301176cells and41aliases/17343cells checked. Exact source-local median reproductionpasses but147exactmedian tiesincluded(269vs122positives). Actual standardizedIEDF retainsIADT;21of33actualGSEM includeIEDF; actualcontinuousclustering includesit. Shareditem/profilecoherence not externalvalidation; Figure27blocking versuscontact159disagreements. No fitted/exhibit proof."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "65375legal cases includes2500early-onlycomplaint7;25920raw/729arithmetic/81singleitem/12scoreonly/45fullmissing/35policy/two4rowconstantsamples pass independentnumeric/string/metadata/weighted readback.196scaling/268std differences(max2^-22),zeroobserved categoryprecisioneffects. Only ignoreddiagnostic endpoint/source-local/routing/variable-range/missing-numerator/uniqueness-key defects repaired;superseded runs excluded. Preserve768original/526priorfingerprints,124primaryIDs/14milestones/pointers/pendinggates. SameTeX/editor/preamble;fresh nativehelperfailure leavesrenderingunverified. No participant/Git/cloud/Overleafaction. Next M4.03.14/M5.02.12 IAER sevenchildren defined only."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Bounded IAER child completed without production/qualitative/result changes;42orderedoperations/15fields6345cells exact,5forms180spec285choices/versioned domains and keyed inputs checked. Refusal98 positive no-coercion, hypothetical ownership, sole/joint pooling, ceiling, missing-high and legacy-inference policies remain IAER-01–07 open scientific decisions."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "36preservedidentities/17complete/253sharedfields107019cells retain4600differences;fourauthenticrecipes reconcile4phantomNo2states/one10termstate/12currentstates.948variantfields401004cells and33aliases13959cells checked;compatibility not originalexecution or fittedproof. All33actualGSEM excludeIAER, continuousclusteringincludesit;source/exact median100 andh_iaer2allzero, tiedquantile177/246 differs419fixedassignments."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Definitive independent MCP/read-back/numeric/string/source/form/critic/byte checks retain768original/611priorfingerprints/allpriorpointers/124primaryIDs/14milestones andallparentgatespending. Explicitfactored265legalcodeversion/20480binaryversion/531441representativerawmissing/531441arithmetic controls, no full originalresponseCartesian claim. Same main.tex/editor/preamble;freshnative helper setuprefresh failure leaves compilation/layout unverified; no substitutePDF/Git/cloud/Overleafaction. NextICPF M4.03.15/M5.02.13 defined only."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Accept bounded ICPF M4.03.15.a/b and M5.02.13.a-e only: definitive StataMCP/independent numeric-text/form/source/critic/preservation;23operations/10fields/4230referencecells exact. RetainICPF01–07; no production/result/qualitative revisions or release approval."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "ICPF semantic mismatch: Nada1penalty,unscoredrestriction4/refusal98positive ifno scored selection; safeguardrequests1/2/3penalty,support4omitted,375skipspositive. Currentallmissing100/high,oldermissing/high. Fixed18/191/214 vsquantile209/199/15 differ390; exact/localmedian80,199ties,15strict positives/no serializationerror."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "36identities/17complete/166fields70218cells/905state37differences;3native recipes/370fields156510cells/46actualaliases19458cells. EightM1/M2fixed-high/eightH2/H3quantileGSEM,preferredH1excludesICPF,continuousclusteringincludesit. Conditioning/internalprofiles not externalvalidation/fittedproof."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Independent fullprecision/weighted/numeric-text controls75legal/102scalar/54dummy/160legalrouted/19683raw/243arithmetic/12boundary/27fullmissing/42policy/twoconstants. Diagnostic-only versionformat defect preserved/repaired/excluded; closedlogs/bothdefault0x0.768original/688priorfingerprints/124primaryIDs/14milestones/alloldpointers retained. SameTeX/editor/preamble,freshnativebefore-TeXhelperfailure/layoutunverified. No participant/Git/cloud/Overleaf/production mutation. NextIEH sevenchildren."
+    }
   ],
-  "last_updated_beijing": "2026-10-07T19:55:52+08:00"
+  "last_updated_beijing": "2026-10-07T21:17:20+08:00"
 }
