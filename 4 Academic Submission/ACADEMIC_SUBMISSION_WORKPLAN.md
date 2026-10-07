@@ -482,6 +482,33 @@ Remaining measurement/exhibit audits and protected historical M6 replication pre
 
 IBPD remains a subsequent separate audit. Remaining measurement/exhibit audits andprotectedM6 precede explicitM7 scientific corrections; a childneverpassesitsparent.
 
+### Historical IEH measurement checkpoint — seven bounded children accepted
+
+**7 October 2026; M4.03.16 / M5.02.14.** [Detailed audit, open findings and commit draft](IEH_MEASUREMENT_AUDIT.md). The seven contracts above are historical child checks, accepted through definitive MCP, independent numeric-text/specification read-back, native source/form proof, critic and preservation—not parent scientific approval.
+
+| Child | Bounded acceptance evidence |
+|---|---|
+| M4.03.16.a | Five forms/155 specification/449 choices exact; six stable scored lists, full eligibility ancestry/requiredness, training/support routes, unscored version changes retained. |
+| M4.03.16.b |120 question/329 domain/120 routing/45 keyed checks;186 applicable change/237 structural skips,146 provider follow-ups; no illegal/applicable omission/out-of-route/shared-input discrepancy. |
+| M5.02.14.a |12 ordered operations/nine fields/3,807 reference cells exact; six binary terms, float rowmean→100, fixed40/70, current missing-high guard and conditional five-/six-term weighting. |
+| M5.02.14.b |36 identities/1,188 schemas/17 complete/255 keyed;153 current fields64,719 cells/196 oldstate37 differences;3 recipes/459 variant fields194,157 cells/59 actual aliases24,957 cells; not original execution. |
+| M5.02.14.c |21,600 legal version-routed/729 raw/729 arithmetic/510 single-item/27 missing/39 boundary/constant controls; independent weighted/specification/full-precision numeric-text checks, closed logs/both default0×0;167 scaling/291 std/max2^-23/0 category effects. |
+| M5.02.14.d |0 IEH inputs in33 actual GSEM; actual continuous clustering, direct aliases/overlays and shared IBPD source items distinguished; mapping/denominator/sentinel/enabler/legacy/internal-validation findings open, qualitative protected. |
+| M5.02.14.e |Independent critic/native proof/768 originals/786 prior fingerprints/all862 prior pointers/124 primary IDs/14 milestones/privacy/pending gates; same TeX/editor/preamble/fresh compiler diagnostics; commit draft only. |
+
+**Next immediate task: M4.03.17 / M5.02.15 — historical IBPD measurement audit.** Begin Preparation Section3.10 C, lines2159–2200. Seven defined-only children:
+
+1. **M4.03.17.a** — Pin five definitions for main/additional barriers and actual scored information/cash-out/material inputs. Verify scalar/multiselect types, code meanings, constraints, requiredness, full ancestry/routes and any version-dependent Other/none/refusal choices; distinguish perceived barriers from verified institutional constraints.
+2. **M4.03.17.b** — Stata MCP raw/audit/coded versioned legal domains, parent-token/dummy agreement, applicable versus structural/genuine missingness and keyed identity. Enumerate the actual q10_2 selected dummy set, including offered-but-unscored options, without inventing missing dummies or imputing skips.
+3. **M5.02.15.a** — Exact ordered value operations, rowtotal default/missing behavior, binary collapse, available-component weights, float normalization and40/70 guard; inspect unknown/refusal and malformed values. Do not import IEH's training route or another index's high-category defect.
+4. **M5.02.15.b** — All36 identities and complete/incomplete source/score/alias contracts; authentic Git recipes and every actually present standardized/fixed/binary/quantile alias against native rules. Retain discrepancies/compatibility without certifying unique producer or fitted models.
+5. **M5.02.15.c** — Separate bounded legal/version-routed, multiselect/dummy, raw/arithmetic, omitted-option/sentinel/malformed/extended-missing, ULP/boundary and constant controls. Explicitly bound any factorization; independent full-precision specification/numeric-text read-back, actual receipts, closed logs and empty sessions.
+6. **M5.02.15.d** — LEGACY-A perceived-barrier claims and actual descriptive/correlation/outcome/predictor/interaction/GSEM/clustering/profile/appendix consumers. Trace literal shared q10_4/q10_6/q10_16 with IEH and actual multiselect/route dependencies; distinguish declarations/fitted roles, internal/independent validation and association/causality; qualitative protected.
+7. **M5.02.15.e** — Independent critic/native source/form proof; original/prior fingerprints/reports/pointers/124 primary IDs/14 milestones/privacy/pending gates; same main.tex/editor/preamble and fresh built-in compile diagnostics; full proposed commit title/body only, no stage/commit/push/cloud/Overleaf action.
+
+Remaining measurement/exhibit audits and protected M6 replication precede explicit M7 scientific corrections. A bounded child never passes its parent.
+
+
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
 **Work**

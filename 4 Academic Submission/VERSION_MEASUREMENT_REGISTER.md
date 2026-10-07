@@ -330,3 +330,19 @@ EightM1/M2actualGSEM usefixed-high, eightH2/H3usequantiles; preferredH1 excludes
 Native/critic/preservation retain768originalrecords/688priorfingerprints/previous763pointers/124primaryIDs/14milestones/privacy/pendinggates/zeroapprovedfields. SameTeX/editor/preamble; freshnative helper setup-refresh failure leaves compilation/layoutunverified, no substitutePDF/compiler/tab. No participant/production/estimator/exhibit/qualitative/Git/cloud/history/access/Overleaf mutation or release approval.
 
 **Next immediate: M4.03.16 / M5.02.14 — historical IEH measurement audit**, seven children beginning Section3.10blockB. Adjacent descriptive/program dependencies traced only if real; IBPD remains separate. Remaining measurements/exhibits and protectedM6 before explicitM7 revisions.
+
+## IEH follow-up — bounded historical acceptance
+
+**7 October 2026; M4.03.16 / M5.02.14.** [Full IEH audit, findings and proposed commit](IEH_MEASUREMENT_AUDIT.md). Five forms/155 specification/449 choices independently match;120 question/329 domain/120 routing/45 keyed checks pass. Six scored lists are stable; unscored q116/10 and q125/6 wording changes are retained. Training-conditioned q10_12 applies to186 respondents, with237 structural skips; provider follow-ups remain unscored.
+
+Twelve ordered operations/nine fields/3,807 reference cells reproduce exactly. Historical IEH mean47.1788816249117, SD24.3736770823019; fixed131/230/62 versus empirical199/103/121 differs127 assignments. Five-/six-term denominators237/186 reflect the training route. Current high category is missing-guarded; old recipes classify missing high. **q10_12 credits14 “no change” and78 “somewhat more” but gives0 to56 “much more”: a verified mapping conflict, not a revised fitted result.** Unknown/refusal, cash-out speed/cost and mixed-window policies remain IEH-01–08 open.
+
+All36 identities/1,188 schemas/17 complete states/255 keyed checks retained. Current153 fields/64,719 cells preserve196 state37 discrepancies; three authentic recipes/459 variant fields/194,157 cells reconcile16 current states and the older6376fcf state.59 actual alias fields/24,957 cells match source-local standardized/fixed/binary/quantile/direct-profile rules; compatibility is not original execution.
+
+Independent full-precision/weighted/specification/numeric-text read-back passes21,600 complete six-scored-input legal version-routed cases,729 raw/729 arithmetic,510 single-item,27 missing,39 score-boundary and a six-row constant sample. Not a whole-questionnaire Cartesian audit.167 scaling/291 standardization last-digit differences(max2^-23), zero observed category precision effects. Actual final receipts/normal closures/both default0×0; diagnostic-only defects repaired and superseded attempts excluded.
+
+None of33 actual GSEM bodies uses IEH; declarations do not prove fitted inclusion. Continuous k-means/Ward does use standardized IEH. Same-survey profiles/overlays and shared q10_4/q10_6/q10_16 with IBPD are not independent external validation. Adjacent enabler2/3/5/6/7 source labels conflict with actual options; exact legacy exhibit/causal/FX interpretations remain pending. Qualitative contribution unchanged.
+
+Native/critic/preservation retain768 original manifest records/786 prior-private fingerprints/all previous862 pointers/124 primary IDs/14 milestones/privacy/pending gates/zero approved fields. Same main.tex/editor/preamble; fresh built-in compile fails in Windows helper setup refresh before TeX, leaving compilation/layout unverified. No alternative PDF/compiler/tab, production/estimator/exhibit/qualitative mutation, participant export, Git/cloud/access/history/Overleaf action or release approval.
+
+**Next immediate: M4.03.17 / M5.02.15 — historical IBPD measurement audit**, seven defined children beginning Section3.10 C. Remaining measurements/exhibits and protected M6 precede explicit M7 revisions; all parent gates remain pending.
