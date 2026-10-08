@@ -611,7 +611,7 @@ The31 retained scan/final/S15 resultsets are not substitutes for all45 core targ
 
 [Full core45 target/held-adapter report](CORE45_TARGET_INTAKE_AND_REGRESSION_ADAPTER.md) and [four metadata-only tables](core45-target-intake/) implement the seven children above. All45 exact source equations; nine RTF–TXT string-equal table pairs;1,360 retained tokens/850 displayed numeric cells; all18 legacy/repository figures inspected. Native core45 full-precision resultsets and nine standardized/AME numerical targets remain unavailable, not replaced with S15. Coded35 projected24 fields/literal setup/all45 observable Ns pass without fitting;423OLS/402formal are not fitted-sample proof. Five-model IURD adapter retains scientific body/path-only destinations and unconditional459 hold. Native guards and actual synthetic outreg2/coefplot/private-pref routes pass. New failed tooling attempts remain retained/excluded. Fresh independent review/rulings, same-file actual compile, cumulative preservation and restricted seal/read-only verification govern child acceptance.768 originals/1298 earlier-private pins/eight entry-public snapshots/all1182 earlier pointers/124IDs/14milestones/103 unchanged issues/all parent gates preserved. No original correction/participant export/package install/Git/cloud/history/access/Overleaf action or fit.
 
-### Next immediate — M6.04.2 / M6.08.3 first bounded protected IURD replay (explicit fit authority required)
+### Historical execution contract — M6.04.2 / M6.08.3 bounded IURD replay (owner authority received)
 
 Only IURD A/B/C/D/D_z, source1248–1292; no other40core models or LCA. Queued contract, not fit authority from this preparation:
 
@@ -985,3 +985,16 @@ The academic preparation is complete only when:
 10. Authors have reviewed and approved the scientific packet; any actual submission or public release still requires explicit authorization.
 
 The next action is the evidence-based baseline and inventory phase, not manuscript rewriting or searching for more favorable regressions.
+
+**8 October bounded IURD checkpoint:** [Full replay report](PROTECTED_IURD_REPLAY.md) and [six-child/five-model metadata tables](iurd-replay/) document the authorized execution. Source setup1112–1236/IURD1248–1292 stays literal except private paths. Coded35 projection24 fields; one MCP dispatch; five robust OLS models actual N423, two base terms each/no other omissions. All200 displayed strings/100 numeric cells and38 nonempty RTF rows agree; current saved native70b/1020V/65scalars/75macros and all1230 aggregate-record fields pass native/CSV17 disk proof. Stored-name bookkeeping serialization is separate from scientific metadata. Three images inspected, visual correspondence only; historical precision/member/producer and figure numeric targets unavailable. Failed new tooling retained/excluded, no refit. Fresh critic/rulings/current compiler/private seal/read-only proof govern acceptance. Preserve768 originals/1471 prior-private pins/ten entry-public snapshots/all1188 pointers/124IDs/14milestones/103 issues/all gates. No original or qualitative correction, participant export, other40models/LCA, package install or Git/cloud/access/history/Overleaf/release action.
+
+### Next immediate — M6.03.3 / M6.05.3 protected formal-remittance adapter and native capture preflight, before fitting
+
+Preparation only; IURD fit authority does not extend to logit, margins or later families. Preserve posted AME versus raw-logit/OR distinction and eight unavailable formal table placeholders.
+
+1. **M6.03.3.a — Entry/authority/source gate.** Reauthenticate IURD seal/cumulative originals; locate five formal equations plus margins/setup/reload and exact order. No fit authority in this preparation.
+2. **M6.05.3.a — Target/type gate.** Rebind four OR/transformed-SE columns, literal terms/stars/N402/unavailable entries; legacyFigure36/repositoryfig41 stays numeric-unavailable. Never equate raw-logit b with OR or AME.
+3. **M6.03.3.b — Eligibility/omission contract.** Retain literal categories1–4 mapping and21Other coding exclusion, not nonresponse. Define sample/convergence/perfect-prediction/base/omitted-term/full-cohort-standardization checks without fitting or row masks.
+4. **M6.03.3.c — Held adapter/destination graph.** Preserve scientific logit order/margins post/dydx list/graph options; private no-overwrite roots/dependencies/preferences and raw versus posted native capture. Deny production/coded/appendix/later-family or independent routes.
+5. **M6.03.3.d / M6.05.3.b — Synthetic/native preflight.** Check guard routes, binary-estimator aggregate/stripe/scalar capture, transformed displays/margins-post serialization using fixed synthetic fixtures only; actual disk read-back and success/error cleanup. Hold unconditional before real logit/margins.
+6. **M6.05.3.c — Audit and reviewed handoff.** Fresh critic/rulings, pins/pointers/issues/gates, same-file actual compiler, private seal/read-only check and full commit draft. Subsequent bounded formal execution needs separate owner fit authority; no other family/scientific repair.

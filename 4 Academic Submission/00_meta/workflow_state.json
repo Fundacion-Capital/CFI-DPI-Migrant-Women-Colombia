@@ -1,5 +1,5 @@
 {
-  "schema_version": 29,
+  "schema_version": 30,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "CORE45_TARGET_INTAKE_AND_REGRESSION_ADAPTER.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IURD_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-08 M6.03.2/M6.05.2 no-fit core45 target intake/held IURD adapter:45 source-exact models;9 matching RTF-TXT pairs;1360 original tokens/850 numeric cells/8 unavailable placeholders;18 bound figures inspected;0 authenticated native core45 targets. Coded35 projected24 fields/literal setup/45 observable counts423OLS402formal, not e(sample). Actual fixed-matrix synthetic outreg2/coefplot/private-pref routes and no-fit guards pass. Unconditional459 before any fit. Preserve768 originals1298 prior-private8 entry-public1182 pointers124IDs14milestones103 unchanged issues/all gates; actual compiler/fresh critic/seal govern bounded acceptance. No original/qualitative correction, participant export, package install, Git/cloud/access/history/Overleaf/release. NextM6.04.2/M6.08.3 five-model IURD replay only with explicit fit authority and fresh preflight. Final executor correction binds actual3DTA diskreadback03, rawq6_4 423nonmissing/21Other coding exclusion, one critic/two Important fixes/all8 declined rulings, eststo empty-bookkeeper preconditions/cleanup/freshguard02, final owned-only closure. Shared-default activity origin unassigned; globalimmutability not certified. Final seal/read-only verification governs acceptance; rendering held after beforeTeX helper failure.",
+    "last_recovery_probe": "2026-10-08 M6.04.2/M6.08.3 owner-authorized five-model IURD replay executed once after source/input/target/authority and synthetic capture/closure preflights. Source scientific setup1112-1236/body1248-1292 literal except private paths; coded35 projected24 fields only. All5 robustOLS N423/two base terms/no extra omission. All200 table strings/100 numeric display cells and38 RTF rows exact; current native70b1020V65scalars75macros/1230 aggregate-record fields exact saved-estimate/CSV17 readback,5 stored-name bookkeepers separate. Three images inspected visual-only; file/font/raster differ; historical native precision/member/producer/figure numeric targets unavailable. Preserve768 originals1471 prior-private10 entry-public1188 priorpointers124IDs14milestones103 issues/all gates. Retain excluded tooling failures/no refit; owned worker empty/restored,shared-default globalimmutability not certified. Fresh independent review/rulings, actual same-file compiler and private seal/read-only verification govern bounded acceptance; no original/scientific/qualitative repair, participant export, other40models/LCA, package install, Git/cloud/history/access/Overleaf/release. NextM6.03.3/M6.05.3 formal-remittance held adapter/capture preflight only, separate fit authority.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1576,7 +1576,14 @@
     "core45_legacy_figures": "core45-target-intake/legacy_figure_bindings.csv",
     "core45_selected_routes": "core45-target-intake/selected_stage_routes.csv",
     "core45_child_acceptance": "core45-target-intake/child_acceptance.csv",
-    "core45_validation": "audit-local/intake/core-target-adapter-c33dc62/core45_validation.json"
+    "core45_validation": "audit-local/intake/core-target-adapter-c33dc62/core45_validation.json",
+    "iurd_replay_report": "PROTECTED_IURD_REPLAY.md",
+    "iurd_replay_models": "iurd-replay/model_acceptance.csv",
+    "iurd_replay_children": "iurd-replay/child_acceptance.csv",
+    "iurd_replay_adapter": "audit-local/intake/iurd-replay-5ee83b0/iurd_fit_01.do",
+    "iurd_replay_comparison": "audit-local/intake/iurd-replay-5ee83b0/comparison_acceptance.json",
+    "iurd_replay_native": "audit-local/intake/iurd-replay-5ee83b0/fit-01/native_cells.dta",
+    "iurd_replay_validation": "audit-local/intake/iurd-replay-5ee83b0/iurd_replay_validation.json"
   },
   "decisions": [
     {
@@ -1976,6 +1983,7 @@
   "date": "2026-10-08",
   "decision": "2026-10-08 M6.03.2/M6.05.2 no-fit core45 target intake/held IURD adapter:45 source-exact models;9 matching RTF-TXT pairs;1360 original tokens/850 numeric cells/8 unavailable placeholders;18 bound figures inspected;0 authenticated native core45 targets. Coded35 projected24 fields/literal setup/45 observable counts423OLS402formal, not e(sample). Actual fixed-matrix synthetic outreg2/coefplot/private-pref routes and no-fit guards pass. Unconditional459 before any fit. Preserve768 originals1298 prior-private8 entry-public1182 pointers124IDs14milestones103 unchanged issues/all gates; actual compiler/fresh critic/seal govern bounded acceptance. No original/qualitative correction, participant export, package install, Git/cloud/access/history/Overleaf/release. NextM6.04.2/M6.08.3 five-model IURD replay only with explicit fit authority and fresh preflight."
 }
-],
-  "last_updated_beijing": "2026-10-08T20:21:47+08:00"
+  , { "date": "2026-10-08", "decision": "2026-10-08 M6.04.2/M6.08.3 owner-authorized five-model IURD replay executed once after source/input/target/authority and synthetic capture/closure preflights. Source scientific setup1112-1236/body1248-1292 literal except private paths; coded35 projected24 fields only. All5 robustOLS N423/two base terms/no extra omission. All200 table strings/100 numeric display cells and38 RTF rows exact; current native70b1020V65scalars75macros/1230 aggregate-record fields exact saved-estimate/CSV17 readback,5 stored-name bookkeepers separate. Three images inspected visual-only; file/font/raster differ; historical native precision/member/producer/figure numeric targets unavailable. Preserve768 originals1471 prior-private10 entry-public1188 priorpointers124IDs14milestones103 issues/all gates. Retain excluded tooling failures/no refit; owned worker empty/restored,shared-default globalimmutability not certified. Fresh independent review/rulings, actual same-file compiler and private seal/read-only verification govern bounded acceptance; no original/scientific/qualitative repair, participant export, other40models/LCA, package install, Git/cloud/history/access/Overleaf/release. NextM6.03.3/M6.05.3 formal-remittance held adapter/capture preflight only, separate fit authority." }
+  ],
+  "last_updated_beijing": "2026-10-08T20:47:02+08:00"
 }

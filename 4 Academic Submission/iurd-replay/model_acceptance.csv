@@ -1,0 +1,6 @@
+model,estimator,vce,current_N_checked,current_native_saved_readback,historical_table_comparison,historical_native_precision,historical_sample_membership,figure_comparison,scientific_release_status
+iurd_A,OLS,robust,423,exact,exact_displayed,unavailable,unverified,not_this_model,held
+iurd_B,OLS,robust,423,exact,exact_displayed,unavailable,unverified,not_this_model,held
+iurd_C,OLS,robust,423,exact,exact_displayed,unavailable,unverified,not_this_model,held
+iurd_D,OLS,robust,423,exact,exact_displayed,unavailable,unverified,not_this_model,held
+iurd_D_z,OLS,robust,423,exact,not_available,unavailable,unverified,visual_correspondence_only,held
