@@ -1,0 +1,466 @@
+construct,component,source_item,form_version,required,own_relevance,parent_path,parent_relevance,route_inputs,source_packet
+IAT,tel_score,q3_1,2602120658,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,tel_score,q3_1,2512090157,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,tel_score,q3_1,2512091719,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,tel_score,q3_1,2512111044,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,tel_score,q3_1,2512121811,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,internet_score,q3_5,2602120658,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,internet_score,q3_5,2512090157,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,internet_score,q3_5,2512091719,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,internet_score,q3_5,2512111044,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,internet_score,q3_5,2512121811,yes,,/Acceso/c0,[Acceso: ${eligible_flag} = 1],,iat-24f23bd/questionnaire.csv
+IAT,access_score,q3_6,2602120658,yes,${q3_5} != '5',/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_5,iat-24f23bd/questionnaire.csv
+IAT,access_score,q3_6,2512090157,yes,${q3_5} != '5',/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_5,iat-24f23bd/questionnaire.csv
+IAT,access_score,q3_6,2512091719,yes,${q3_5} != '5',/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_5,iat-24f23bd/questionnaire.csv
+IAT,access_score,q3_6,2512111044,yes,${q3_5} != '5',/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_5,iat-24f23bd/questionnaire.csv
+IAT,access_score,q3_6,2512121811,yes,${q3_5} != '5',/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_5,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_7,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_8,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_7,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_8,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_7,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_8,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_7,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_8,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_7,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,data_stability,q3_8,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,read_score,q3_12,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,read_score,q3_12,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,read_score,q3_12,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,read_score,q3_12,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IAT,read_score,q3_12,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c0,[Acceso: ${eligible_flag} = 1],q3_1,iat-24f23bd/questionnaire.csv
+IVS,antig_norm,q2_1,2602120658,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,antig_norm,q2_1,2512090157,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,antig_norm,q2_1,2512091719,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,antig_norm,q2_1,2512111044,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,antig_norm,q2_1,2512121811,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,educ_norm,q2_2,2602120658,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,educ_norm,q2_2,2512090157,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,educ_norm,q2_2,2512091719,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,educ_norm,q2_2,2512111044,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,educ_norm,q2_2,2512121811,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,ocup_norm,q2_3,2602120658,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,ocup_norm,q2_3,2512090157,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,ocup_norm,q2_3,2512091719,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,ocup_norm,q2_3,2512111044,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IVS,ocup_norm,q2_3,2512121811,yes,,/Caracterizacion,[Caracterizacion: ${eligible_flag} = 1],,ivs-4535102/questionnaire.csv
+IADT,iadt_appinstall,q3_15,2602120658,yes,${q3_1} = '1',/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_appinstall,q3_15,2512090157,yes,${q3_1} = '1',/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_appinstall,q3_15,2512091719,yes,${q3_1} = '1',/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_appinstall,q3_15,2512111044,yes,${q3_1} = '1',/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_appinstall,q3_15,2512121811,yes,${q3_1} = '1',/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_sendmoney,q3_16,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_sendmoney,q3_16,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_sendmoney,q3_16,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_sendmoney,q3_16,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_sendmoney,q3_16,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c1,[Acceso: ${eligible_flag} = 1],q3_1,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_fraudesafe,q3_17,2602120658,yes,,/Acceso/c1,[Acceso: ${eligible_flag} = 1],,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_fraudesafe,q3_17,2512090157,yes,,/Acceso/c1,[Acceso: ${eligible_flag} = 1],,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_fraudesafe,q3_17,2512091719,yes,,/Acceso/c1,[Acceso: ${eligible_flag} = 1],,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_fraudesafe,q3_17,2512111044,yes,,/Acceso/c1,[Acceso: ${eligible_flag} = 1],,iadt-f2c99ab/questionnaire.csv
+IADT,iadt_fraudesafe,q3_17,2512121811,yes,,/Acceso/c1,[Acceso: ${eligible_flag} = 1],,iadt-f2c99ab/questionnaire.csv
+ICDP,icdp_qr,q3_20,2602120658,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_qr,q3_20,2512090157,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_qr,q3_20,2512091719,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_qr,q3_20,2512111044,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_qr,q3_20,2512121811,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_sms,q3_21,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_sms,q3_21,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_sms,q3_21,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_sms,q3_21,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_sms,q3_21,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_pin,q3_22,2602120658,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_pin,q3_22,2512090157,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_pin,q3_22,2512091719,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_pin,q3_22,2512111044,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_pin,q3_22,2512121811,yes,(${q3_1} = '1' or ${q3_1} = '2'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_fraud,q3_23,2602120658,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_fraud,q3_23,2512090157,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_fraud,q3_23,2512091719,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_fraud,q3_23,2512111044,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+ICDP,icdp_fraud,q3_23,2512121811,yes,(${q3_1} = '1' or ${q3_5} != '5'),/Acceso/c2,[Acceso: ${eligible_flag} = 1],q3_1;q3_5,icdp-8eb3405/questionnaire.csv
+IAFF,iaff_doc,q4_1,2602120658,,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_doc,q4_1,2512090157,,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_doc,q4_1,2512091719,,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_doc,q4_1,2512111044,,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_doc,q4_1,2512121811,,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_address,q4_5,2602120658,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_address,q4_5,2512090157,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_address,q4_5,2512091719,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_address,q4_5,2512111044,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_address,q4_5,2512121811,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_phone,q4_6,2602120658,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_phone,q4_6,2512090157,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_phone,q4_6,2512091719,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_phone,q4_6,2512111044,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_phone,q4_6,2512121811,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_account,q4_12,2602120658,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_account,q4_12,2512090157,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_account,q4_12,2512091719,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_account,q4_12,2512111044,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IAFF,iaff_account,q4_12,2512121811,yes,,/Identidad,[Identidad: ${eligible_flag} = 1],,iaff-a9604d3/questionnaire.csv
+IUOF,iuof_freq,q4_15,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_freq,q4_15,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_freq,q4_15,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_freq,q4_15,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_freq,q4_15,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_cash,q4_16,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_cash,q4_16,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_cash,q4_16,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_cash,q4_16,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_cash,q4_16,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_time,q4_17,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_time,q4_17,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_time,q4_17,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_time,q4_17,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_time,q4_17,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_pay,q4_24,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_pay,q4_24,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_pay,q4_24,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_pay,q4_24,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_pay,q4_24,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_save,q4_25,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_save,q4_25,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_save,q4_25,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_save,q4_25,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_save,q4_25,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_notify,q4_26,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_notify,q4_26,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_notify,q4_26,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_notify,q4_26,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_notify,q4_26,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_risk,q4_27,2602120658,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_risk,q4_27,2512090157,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_risk,q4_27,2512091719,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_risk,q4_27,2512111044,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+IUOF,iuof_risk,q4_27,2512121811,,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/Identidad,[Identidad: ${eligible_flag} = 1],q4_12,iuof-8714646/questionnaire.csv
+OQI,oqi_easy,q5_14,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_easy,q5_14,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_easy,q5_14,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_easy,q5_14,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_easy,q5_14,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_time,q5_15,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_time,q5_15,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_time,q5_15,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_time,q5_15,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_time,q5_15,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_help,q5_16,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_help,q5_16,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_help,q5_16,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_help,q5_16,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_help,q5_16,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_kyc,q5_13,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_kyc,q5_13,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_kyc,q5_13,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_kyc,q5_13,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_kyc,q5_13,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_cost,q5_7,2602120658,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_cost,q5_7,2512090157,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_cost,q5_7,2512091719,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_cost,q5_7,2512111044,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_cost,q5_7,2512121811,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_confirm,q5_5,2602120658,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_confirm,q5_5,2512090157,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_confirm,q5_5,2512091719,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_confirm,q5_5,2512111044,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_confirm,q5_5,2512121811,yes,count-selected(${q5_2}) > 0,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q5_2,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_fail,q5_9,2602120658,yes,,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_fail,q5_9,2512090157,yes,,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_fail,q5_9,2512091719,yes,,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_fail,q5_9,2512111044,yes,,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_fail,q5_9,2512121811,yes,,/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_21,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_22,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_21,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_22,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_21,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_22,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_21,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_22,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_21,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_terms,q5_22,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_support,q5_23,2602120658,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_support,q5_23,2512090157,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_support,q5_23,2512091719,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_support,q5_23,2512111044,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+OQI,oqi_support,q5_23,2512121811,yes,"selected(${q4_12}, '1') or selected(${q4_12}, '2') or selected(${q4_12}, '3') or selected(${q4_12}, '4')",/SistemasdePagos,[SistemasdePagos: ${eligible_flag} = 1],q4_12,oqi-4b8a2c5/questionnaire.csv
+IURD,iurd_freq,q6_2,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_freq,q6_2,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_freq,q6_2,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_freq,q6_2,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_freq,q6_2,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_recent,q6_14,2602120658,,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_recent,q6_14,2512090157,,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_recent,q6_14,2512091719,,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_recent,q6_14,2512111044,,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_recent,q6_14,2512121811,,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_ops,q6_15,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,iurd-da6c988/questionnaire.csv
+IURD,iurd_ops,q6_15,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,iurd-da6c988/questionnaire.csv
+IURD,iurd_ops,q6_15,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,iurd-da6c988/questionnaire.csv
+IURD,iurd_ops,q6_15,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,iurd-da6c988/questionnaire.csv
+IURD,iurd_ops,q6_15,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,iurd-da6c988/questionnaire.csv
+IURD,iurd_digital,q6_13,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_digital,q6_13,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_digital,q6_13,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_digital,q6_13,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_digital,q6_13,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_canal,q6_4,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_canal,q6_4,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_canal,q6_4,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_canal,q6_4,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IURD,iurd_canal,q6_4,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,iurd-da6c988/questionnaire.csv
+IETR,ietr_time,q6_6,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_time,q6_6,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_time,q6_6,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_time,q6_6,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_time,q6_6,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_9,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_18,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_9,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_18,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_9,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_18,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_9,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_18,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_9,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_cost,q6_18,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_11,2602120658,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_20,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_11,2512090157,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_20,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_11,2512091719,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_20,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_11,2512111044,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_20,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_11,2512121811,yes,,/Remesas,[Remesas: ${eligible_flag} = 1],,ietr-0452e40/questionnaire.csv
+IETR,ietr_confirm,q6_20,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_problem,q6_16,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_problem,q6_16,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_problem,q6_16,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_problem,q6_16,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_problem,q6_16,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_limits,q6_17,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_limits,q6_17,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_limits,q6_17,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_limits,q6_17,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_limits,q6_17,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_speed,q6_21,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_speed,q6_21,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_speed,q6_21,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_speed,q6_21,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_speed,q6_21,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_surcharge,q6_22,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_surcharge,q6_22,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_surcharge,q6_22,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_surcharge,q6_22,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_surcharge,q6_22,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_clarity,q6_23,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_clarity,q6_23,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_clarity,q6_23,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_clarity,q6_23,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_clarity,q6_23,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_eval,q6_24,2602120658,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_eval,q6_24,2512090157,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_eval,q6_24,2512091719,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_eval,q6_24,2512111044,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IETR,ietr_eval,q6_24,2512121811,yes,${q6_14} = '1',/Remesas,[Remesas: ${eligible_flag} = 1],q6_14,ietr-0452e40/questionnaire.csv
+IPCS,e1_reaccion_segura,q7_2,2602120658,yes,(${q7_1} = '1') or (${q7_1} = '2'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_1,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_reaccion_segura,q7_2,2512090157,yes,(${q7_1} = '1') or (${q7_1} = '2'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_1,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_reaccion_segura,q7_2,2512091719,yes,(${q7_1} = '1') or (${q7_1} = '2'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_1,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_reaccion_segura,q7_2,2512111044,yes,(${q7_1} = '1') or (${q7_1} = '2'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_1,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_reaccion_segura,q7_2,2512121811,yes,(${q7_1} = '1') or (${q7_1} = '2'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_1,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_autenticacion,q7_6,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_autenticacion,q7_6,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_autenticacion,q7_6,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_autenticacion,q7_6,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_autenticacion,q7_6,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_habitos_claves,q7_7,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_habitos_claves,q7_7,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_habitos_claves,q7_7,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_habitos_claves,q7_7,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_habitos_claves,q7_7,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_educacion,q7_8,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_educacion,q7_8,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_educacion,q7_8,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_educacion,q7_8,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_educacion,q7_8,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_seguridad_percibida,q7_9,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_seguridad_percibida,q7_9,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_seguridad_percibida,q7_9,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_seguridad_percibida,q7_9,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_seguridad_percibida,q7_9,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_valora_prevencion,q7_10,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_valora_prevencion,q7_10,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_valora_prevencion,q7_10,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_valora_prevencion,q7_10,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IPCS,e1_valora_prevencion,q7_10,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,ipcs-bd46bba/questionnaire.csv
+IEDF,e2_exposicion,q7_1,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_exposicion,q7_1,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_exposicion,q7_1,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_exposicion,q7_1,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_exposicion,q7_1,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_bloqueo,q7_5,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_bloqueo,q7_5,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_bloqueo,q7_5,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_bloqueo,q7_5,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_bloqueo,q7_5,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_problema,q7_11,2602120658,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_problema,q7_11,2512090157,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_problema,q7_11,2512091719,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_problema,q7_11,2512111044,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_problema,q7_11,2512121811,yes,,/Seguridad,[Seguridad: ${eligible_flag} = 1],,iedf-4b7317e/questionnaire.csv
+IEDF,e2_demora,q7_13,2602120658,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_demora,q7_13,2512090157,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_demora,q7_13,2512091719,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_demora,q7_13,2512111044,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_demora,q7_13,2512121811,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_no_resuelto,q7_14,2602120658,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_no_resuelto,q7_14,2512090157,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_no_resuelto,q7_14,2512091719,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_no_resuelto,q7_14,2512111044,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_no_resuelto,q7_14,2512121811,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_insatisfaccion,q7_15,2602120658,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_insatisfaccion,q7_15,2512090157,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_insatisfaccion,q7_15,2512091719,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_insatisfaccion,q7_15,2512111044,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IEDF,e2_insatisfaccion,q7_15,2512121811,yes,(${q7_11} = '1') and (${q7_12} != '6'),/Seguridad,[Seguridad: ${eligible_flag} = 1],q7_11;q7_12,iedf-4b7317e/questionnaire.csv
+IAER,f1_decide_remesa,q9_4,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_decide_remesa,q9_4,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_decide_remesa,q9_4,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_decide_remesa,q9_4,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_decide_remesa,q9_4,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_administra,q9_5,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_administra,q9_5,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_administra,q9_5,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_administra,q9_5,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_administra,q9_5,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_ahorro_negocio,q9_6,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_ahorro_negocio,q9_6,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_ahorro_negocio,q9_6,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_ahorro_negocio,q9_6,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_ahorro_negocio,q9_6,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_control,q9_7,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_control,q9_7,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_control,q9_7,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_control,q9_7,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_control,q9_7,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cuenta_propia,q9_9,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cuenta_propia,q9_9,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cuenta_propia,q9_9,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cuenta_propia,q9_9,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cuenta_propia,q9_9,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_salud,q9_11,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_salud,q9_11,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_salud,q9_11,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_salud,q9_11,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_salud,q9_11,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_gastos,q9_13,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_gastos,q9_13,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_gastos,q9_13,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_gastos,q9_13,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_gastos,q9_13,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_opinion,q9_18,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_opinion,q9_18,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_opinion,q9_18,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_opinion,q9_18,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_opinion,q9_18,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cambiar_cuenta,q9_19,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cambiar_cuenta,q9_19,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cambiar_cuenta,q9_19,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cambiar_cuenta,q9_19,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_cambiar_cuenta,q9_19,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_no_evito,q9_20,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_no_evito,q9_20,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_no_evito,q9_20,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_no_evito,q9_20,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_no_evito,q9_20,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion1,q9_8,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion1,q9_8,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion1,q9_8,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion1,q9_8,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion1,q9_8,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion2,q9_16,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion2,q9_16,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion2,q9_16,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion2,q9_16,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+IAER,f1_sin_coercion2,q9_16,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,iaer-891549f/questionnaire.csv
+ICPF,f2_confianza,q9_1,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_confianza,q9_1,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_confianza,q9_1,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_confianza,q9_1,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_confianza,q9_1,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_normas,q9_15,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_normas,q9_15,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_normas,q9_15,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_normas,q9_15,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_normas,q9_15,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_comunidad,q9_22,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_comunidad,q9_22,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_comunidad,q9_22,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_comunidad,q9_22,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_comunidad,q9_22,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_consecuencias,q9_17,2602120658,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_consecuencias,q9_17,2512090157,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_consecuencias,q9_17,2512091719,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_consecuencias,q9_17,2512111044,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_consecuencias,q9_17,2512121811,yes,,/Confianza,[Confianza: ${eligible_flag} = 1],,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_mitigaciones,q9_21,2602120658,yes,${q9_20} = '1',/Confianza,[Confianza: ${eligible_flag} = 1],q9_20,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_mitigaciones,q9_21,2512090157,yes,${q9_20} = '1',/Confianza,[Confianza: ${eligible_flag} = 1],q9_20,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_mitigaciones,q9_21,2512091719,yes,${q9_20} = '1',/Confianza,[Confianza: ${eligible_flag} = 1],q9_20,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_mitigaciones,q9_21,2512111044,yes,${q9_20} = '1',/Confianza,[Confianza: ${eligible_flag} = 1],q9_20,icpf-1a1db95/questionnaire.csv
+ICPF,f2_sin_mitigaciones,q9_21,2512121811,yes,${q9_20} = '1',/Confianza,[Confianza: ${eligible_flag} = 1],q9_20,icpf-1a1db95/questionnaire.csv
+IEH,g1_info,q10_4,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_info,q10_4,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_info,q10_4,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_info,q10_4,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_info,q10_4,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_cashout,q10_6,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_cashout,q10_6,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_cashout,q10_6,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_cashout,q10_6,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_cashout,q10_6,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_capacitacion,q10_10,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_capacitacion,q10_10,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_capacitacion,q10_10,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_capacitacion,q10_10,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_capacitacion,q10_10,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_impacto_cap,q10_12,2602120658,yes,(${q10_10} = '1') or (${q10_10} = '2'),/Barreras,[Barreras: ${eligible_flag} = 1],q10_10,ieh-c639bda/questionnaire.csv
+IEH,g1_impacto_cap,q10_12,2512090157,yes,(${q10_10} = '1') or (${q10_10} = '2'),/Barreras,[Barreras: ${eligible_flag} = 1],q10_10,ieh-c639bda/questionnaire.csv
+IEH,g1_impacto_cap,q10_12,2512091719,yes,(${q10_10} = '1') or (${q10_10} = '2'),/Barreras,[Barreras: ${eligible_flag} = 1],q10_10,ieh-c639bda/questionnaire.csv
+IEH,g1_impacto_cap,q10_12,2512111044,yes,(${q10_10} = '1') or (${q10_10} = '2'),/Barreras,[Barreras: ${eligible_flag} = 1],q10_10,ieh-c639bda/questionnaire.csv
+IEH,g1_impacto_cap,q10_12,2512121811,yes,(${q10_10} = '1') or (${q10_10} = '2'),/Barreras,[Barreras: ${eligible_flag} = 1],q10_10,ieh-c639bda/questionnaire.csv
+IEH,g1_acompanamiento,q10_13,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_acompanamiento,q10_13,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_acompanamiento,q10_13,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_acompanamiento,q10_13,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_acompanamiento,q10_13,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_materiales,q10_16,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_materiales,q10_16,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_materiales,q10_16,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_materiales,q10_16,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IEH,g1_materiales,q10_16,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ieh-c639bda/questionnaire.csv
+IBPD,g2_barrera_principal,q10_1,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barrera_principal,q10_1,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barrera_principal,q10_1,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barrera_principal,q10_1,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barrera_principal,q10_1,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barreras_extra_bin,q10_2,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barreras_extra_bin,q10_2,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barreras_extra_bin,q10_2,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barreras_extra_bin,q10_2,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_barreras_extra_bin,q10_2,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_poca_info,q10_4,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_poca_info,q10_4,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_poca_info,q10_4,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_poca_info,q10_4,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_poca_info,q10_4,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_cashout_dificil,q10_6,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_cashout_dificil,q10_6,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_cashout_dificil,q10_6,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_cashout_dificil,q10_6,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_cashout_dificil,q10_6,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_sin_materiales,q10_16,2602120658,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_sin_materiales,q10_16,2512090157,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_sin_materiales,q10_16,2512091719,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_sin_materiales,q10_16,2512111044,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv
+IBPD,g2_sin_materiales,q10_16,2512121811,yes,,/Barreras,[Barreras: ${eligible_flag} = 1],,ibpd-c1050eb/questionnaire.csv

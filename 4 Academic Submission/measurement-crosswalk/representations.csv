@@ -1,0 +1,100 @@
+construct,representation,kind,schema_scope,present_states,parity_records,presence_disposition,source_packet
+IAT,h_iat3,empirical score quantile; not fixed category,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,5,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IAT,lca_iat2,fixed-category binary; index-specific cut/recoding,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,9,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IAT,lca_iat3,fixed-category ordinal,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,9,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IAT,segz_iat,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,1,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IAT,z_iat,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,0,0,ABSENT_IN_SCOPED_SCHEMA,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IAT,zcl_iat_score,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,9,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,h_ivs3,empirical score quantile; not fixed category,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,5,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,lca2_ivs_high,fixed-category binary; index-specific cut/recoding,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,8,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,lca_ivs3,fixed-category ordinal,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,9,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,segz_ivs,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,1,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,z_ivs,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,0,0,ABSENT_IN_SCOPED_SCHEMA,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IVS,zcl_ivs_score,sample-specific standardized continuous,36 retained identities; NEW_HEADER_ONLY_NO_ALIAS_VALUE_REPLAY,9,0,PRESENT_NO_PARITY_RECORD,measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv
+IADT,h_iadt3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,iadt-f2c99ab
+IADT,lca_iadt2,fixed-category binary; index-specific cut/recoding,36 retained identities,9,9,PRESENT_REPLAYED,iadt-f2c99ab
+IADT,lca_iadt3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iadt-f2c99ab
+IADT,z_iadt,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iadt-f2c99ab
+ICDP,h_icdp3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,icdp-8eb3405
+ICDP,lca2_icdp_high,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,icdp-8eb3405
+ICDP,lca_icdp2,fixed-category binary; index-specific cut/recoding,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,icdp-8eb3405
+ICDP,lca_icdp3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,icdp-8eb3405
+ICDP,segz_icdp,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,icdp-8eb3405
+ICDP,z_icdp,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,icdp-8eb3405
+IAFF,h_iaff3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,iaff-a9604d3
+IAFF,lca2_iaff_high,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,iaff-a9604d3
+IAFF,lca_iaff2,fixed-category binary; index-specific cut/recoding,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iaff-a9604d3
+IAFF,lca_iaff3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iaff-a9604d3
+IAFF,segz_iaff,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,iaff-a9604d3
+IAFF,z_iaff,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iaff-a9604d3
+IUOF,h_iuof3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,iuof-8714646
+IUOF,lca_iuof3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iuof-8714646
+IUOF,lca_iuof3_q,empirical score quantile; not fixed category,36 retained identities,9,9,PRESENT_REPLAYED,iuof-8714646
+IUOF,segz_iuof,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,iuof-8714646
+IUOF,z_iuof,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iuof-8714646
+OQI,any_qr_use,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,h_oqi3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,lca2_oqi_good,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,lca_di_qr_use,direct-item binary; not an index-category ordinal; item-specific sentinel policy,36 retained identities,9,9,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,lca_oqi3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,segz_oqi,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,oqi-4b8a2c5
+OQI,z_oqi,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,oqi-4b8a2c5
+OQI,zcl_oqi_score_01,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,oqi-4b8a2c5
+IURD,formal_remittance,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,h_iurd3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,iurd-da6c988
+IURD,lca2_iurd_high,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,iurd-da6c988
+IURD,lca_di_formal_remit,direct-item binary; not an index-category ordinal; item-specific sentinel policy,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,lca_iurd3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,recent_digital_txn,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,remit_channel_4cat,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,remit_channel_profile,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IURD,segz_iurd,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,iurd-da6c988
+IURD,z_iurd,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iurd-da6c988
+IURD,zcl_iurd_score_01,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,iurd-da6c988
+IETR,h_ietr3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,ietr-0452e40
+IETR,lca_ietr2,fixed-category binary; index-specific cut/recoding,36 retained identities,9,9,PRESENT_REPLAYED,ietr-0452e40
+IETR,lca_ietr3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,ietr-0452e40
+IETR,segz_ietr,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,ietr-0452e40
+IETR,z_ietr,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,ietr-0452e40
+IETR,zcl_ietr_score_01,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,ietr-0452e40
+IPCS,h_ipcs3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,ipcs-bd46bba
+IPCS,lca_ipcs3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,ipcs-bd46bba
+IPCS,segz_ipcs,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,ipcs-bd46bba
+IPCS,z_ipcs,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,ipcs-bd46bba
+IPCS,zcl_IPCS,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,ipcs-bd46bba
+IEDF,h_iedf2,source-local median binary; not fixed high,36 retained identities,5,5,PRESENT_REPLAYED,iedf-4b7317e
+IEDF,h_iedf3,empirical score quantile; not fixed category,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iedf-4b7317e
+IEDF,lca2_iedf_harm,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,iedf-4b7317e
+IEDF,lca_iedf2,fixed-category binary; index-specific cut/recoding,36 retained identities,9,9,PRESENT_REPLAYED,iedf-4b7317e
+IEDF,lca_iedf3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iedf-4b7317e
+IEDF,segz_iedf,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,iedf-4b7317e
+IEDF,z_iedf,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iedf-4b7317e
+IEDF,zcl_IEDF,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,iedf-4b7317e
+IAER,h_iaer2,source-local median binary; not fixed high,36 retained identities,5,5,PRESENT_REPLAYED,iaer-891549f
+IAER,lca_iaer2,fixed-category binary; index-specific cut/recoding,36 retained identities,9,9,PRESENT_REPLAYED,iaer-891549f
+IAER,lca_iaer3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,iaer-891549f
+IAER,segz_iaer,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,iaer-891549f
+IAER,z_iaer,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,iaer-891549f
+IAER,zcl_IAER,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,iaer-891549f
+ICPF,h_icpf2,source-local median binary; not fixed high,36 retained identities,5,5,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,h_icpf3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,lca2_icpf_high,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,lca_icpf2,fixed-category binary; index-specific cut/recoding,36 retained identities,9,9,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,lca_icpf3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,segz_icpf,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,icpf-1a1db95
+ICPF,z_icpf,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,icpf-1a1db95
+ICPF,zcl_ICPF,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,icpf-1a1db95
+IEH,any_training_3y,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,ieh-c639bda
+IEH,h_ieh3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,ieh-c639bda
+IEH,individual_support,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,ieh-c639bda
+IEH,lca2_ieh_adequate,fixed-category binary; index-specific cut/recoding,36 retained identities,8,8,PRESENT_REPLAYED,ieh-c639bda
+IEH,lca_ieh3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,ieh-c639bda
+IEH,recent_training_12m,direct source-item profile; sentinel policy differs,36 retained identities,9,9,PRESENT_REPLAYED,ieh-c639bda
+IEH,segz_ieh,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,ieh-c639bda
+IEH,z_ieh,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,ieh-c639bda
+IEH,zcl_IEH,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,ieh-c639bda
+IBPD,h_ibpd3,empirical score quantile; not fixed category,36 retained identities,5,5,PRESENT_REPLAYED,ibpd-c1050eb
+IBPD,lca_ibpd3,fixed-category ordinal,36 retained identities,9,9,PRESENT_REPLAYED,ibpd-c1050eb
+IBPD,segz_ibpd,sample-specific standardized continuous,36 retained identities,1,1,PRESENT_REPLAYED,ibpd-c1050eb
+IBPD,z_ibpd,sample-specific standardized continuous,36 retained identities,0,0,ABSENT_IN_SCOPED_SCHEMA,ibpd-c1050eb
+IBPD,zcl_IBPD,sample-specific standardized continuous,36 retained identities,9,9,PRESENT_REPLAYED,ibpd-c1050eb

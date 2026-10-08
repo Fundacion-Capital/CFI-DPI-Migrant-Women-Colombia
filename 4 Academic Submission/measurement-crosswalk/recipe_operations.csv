@@ -1,0 +1,1137 @@
+construct,recipe_commit,source,operation_order,operation,recipe_packet,original_execution_proven
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen tel_score = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace tel_score = 100 if q3_1 == 1,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace tel_score = 50  if q3_1 == 2,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace tel_score = 0   if q3_1 == 3,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen internet_score = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace internet_score = 100 if q3_5 == 1,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace internet_score = 75  if q3_5 == 2,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace internet_score = 50  if q3_5 == 3,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace internet_score = 25  if q3_5 == 4,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace internet_score = 0   if q3_5 == 5,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen access_score = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace access_score = 100 if q3_6 == 1,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,"replace access_score = 80  if inlist(q3_6, 2, 5)",iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace access_score = 40  if inlist(q3_6, 3, 4, 6)",iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen data_stability = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace data_stability = 100 if q3_7 <= 2 & q3_8 == 3,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace data_stability = 50  if q3_8 == 2,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace data_stability = 0   if q3_8 == 1 | q3_7 == 3,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen read_score = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace read_score = 100 if q3_12 == 1,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace read_score = 25  if q3_12 == 2,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace read_score = 0   if q3_12 == 3,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen iat_score = rowmean(tel_score internet_score access_score data_stability read_score),iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iat_score = iat_score / 100,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,egen iat_score_std = std(iat_score),iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,gen iat_cat = .,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace iat_cat = 1 if iat_score <= 0.45,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace iat_cat = 2 if iat_score > 0.45 & iat_score <= 0.80,iat-24f23bd,0
+IAT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace iat_cat = 3 if iat_score > 0.80,iat-24f23bd,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen years_in_col = 2026 - q2_1 if q2_1 < 2026,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"recode years_in_col (0/2=1 ""0–2 years"") (3/5=2 ""3–5 years"") (6/10=3 ""6–10 years"") (11/max=4 ""11+ years""), gen(years_cat)",ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,egen max_years = max(years_in_col),ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen antig_norm = (r(max) - years_in_col) / (r(max) - r(min)),ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,drop max_years,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen educ_norm = .,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace educ_norm = 1.00 if q2_2 == 1,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace educ_norm = 0.89 if q2_2 == 2,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace educ_norm = 0.78 if q2_2 == 3,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace educ_norm = 0.67 if q2_2 == 4,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace educ_norm = 0.56 if q2_2 == 5,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace educ_norm = 0.44 if q2_2 == 6,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace educ_norm = 0.33 if q2_2 == 7,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace educ_norm = 0.22 if q2_2 == 8,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace educ_norm = 0.11 if q2_2 == 9,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace educ_norm = 0.00 if q2_2 == 10,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen ocup_norm = .,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace ocup_norm = 0   if inlist(q2_3, 1, 3)",ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,"replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 6, 9)",ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace ocup_norm = 1   if inlist(q2_3, 5, 7, 8)",ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen ivs_score = rowmean(antig_norm educ_norm ocup_norm),ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,egen ivs_score_std = std(ivs_score),ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen ivs_cat = .,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace ivs_cat = 1 if ivs_score <= 0.33,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ivs_cat = 2 if ivs_score > 0.33 & ivs_score <= 0.66,ivs-4535102,0
+IVS,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ivs_cat = 3 if ivs_score > 0.66,ivs-4535102,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,recode q3_15 q3_16 q3_17 (98=.) (99=.),iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,gen iadt_appinstall = (q3_15 - 1) / 4,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,gen iadt_sendmoney = (q3_16 - 1) / 4,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen iadt_fraudesafe = (q3_17 - 1) / 4,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,egen iadt_score = rowmean(iadt_appinstall iadt_sendmoney iadt_fraudesafe),iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,egen iadt_score_std = std(iadt_score),iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen iadt_cat = .,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iadt_cat = 1 if iadt_score <= 0.33,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iadt_cat = 2 if iadt_score > 0.33 & iadt_score <= 0.66,iadt-f2c99ab,0
+IADT,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iadt_cat = 3 if iadt_score > 0.66,iadt-f2c99ab,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen icdp_qr = .,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace icdp_qr = 100 if q3_20 == 3,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace icdp_qr = 75 if inlist(q3_20,1,2)",icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace icdp_qr = 0 if q3_20 == 4,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen icdp_sms = .,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace icdp_sms = 100 if q3_21 == 1,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace icdp_sms = 50 if q3_21 == 2,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace icdp_sms = 25 if q3_21 == 3,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace icdp_sms = 0 if q3_21 == 4,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen icdp_pin = .,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace icdp_pin = 100 if q3_22 == 1,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace icdp_pin = 0 if inlist(q3_22,2,3)",icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen icdp_fraud = .,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace icdp_fraud = 100 if q3_23 == 2,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace icdp_fraud = 75 if q3_23 == 1,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace icdp_fraud = 25 if q3_23 == 3,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace icdp_fraud = 0 if inlist(q3_23,4,5)",icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,egen icdp_score = rowmean(icdp_qr icdp_sms icdp_pin icdp_fraud),icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace icdp_score = icdp_score / 100,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,egen icdp_score_std = std(icdp_score),icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen icdp_cat = .,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace icdp_cat = 1 if icdp_score <= 0.45,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace icdp_cat = 2 if icdp_score > 0.45 & icdp_score <= 0.80,icdp-8eb3405,0
+ICDP,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace icdp_cat = 3 if icdp_score > 0.80,icdp-8eb3405,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iaff_doc = 0,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iaff_doc = 100 if q4_1_1 == 1 | q4_1_2 == 1 | q4_1_3 == 1 | q4_1_4 == 1,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,gen iaff_address = .,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iaff_address = 100 if q4_5 == 1,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iaff_address = 50 if q4_5 == 3,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace iaff_address = 0 if q4_5 == 2 | q4_5 == 4,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen iaff_phone = .,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iaff_phone = 100 if q4_6 == 1,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iaff_phone = 0 if q4_6 == 3,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,"replace iaff_phone = 0 if inlist(q4_6,2,4)",iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen iaff_account = 0,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace iaff_account = 100 if q4_12_1 == 1 | q4_12_2 == 1 | q4_12_3 == 1 | q4_12_4 == 1,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,egen iaff_score = rowmean(iaff_doc iaff_address iaff_phone iaff_account),iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iaff_score = iaff_score / 100,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen iaff_score_std = std(iaff_score),iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen iaff_cat = .,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iaff_cat = 1 if iaff_score < 0.5,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iaff_cat = 2 if iaff_score >= 0.5 & iaff_score <= 0.8,iaff-a9604d3,0
+IAFF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iaff_cat = 3 if iaff_score > 0.8,iaff-a9604d3,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iuof_freq = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iuof_freq = 100 if q4_15==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iuof_freq = 80 if q4_15==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iuof_freq = 60 if q4_15==3,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iuof_freq = 40 if q4_15==4,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace iuof_freq = 0 if q4_15==5,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen iuof_cash = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iuof_cash = 100 if q4_16==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iuof_cash = 70 if q4_16==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iuof_cash = 30 if q4_16==3,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iuof_cash = 0 if q4_16==4 | q4_16==99,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen iuof_time = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iuof_time = 100 if q4_17==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iuof_time = 75 if q4_17==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace iuof_time = 40 if q4_17==3,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iuof_time = 0 if q4_17==4 | q4_17==99,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen iuof_pay = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iuof_pay = 100 if q4_24==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iuof_pay = 50 if q4_24==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace iuof_pay = 0 if q4_24==3 | q4_24==99,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen iuof_save = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace iuof_save = 100 if q4_25==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace iuof_save = 50 if q4_25==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iuof_save = 0 if q4_25==3 | q4_25==99,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,gen iuof_notify = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iuof_notify = 100 if q4_26==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace iuof_notify = 50 if q4_26==2,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace iuof_notify = 0 if q4_26==3 | q4_26==99,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,gen iuof_risk = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace iuof_risk = 0 if q4_27==1,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,replace iuof_risk = 100 if q4_27==0 | q4_27==98,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,egen iuof_score = rowmean(iuof_freq iuof_cash iuof_time iuof_pay iuof_save iuof_notify iuof_risk),iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,gen iuof_score_01 = iuof_score/100,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,egen iuof_score_std = std(iuof_score),iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,gen iuof_cat = .,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,replace iuof_cat = 1 if iuof_score_01 < 0.5,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace iuof_cat = 2 if iuof_score_01 >= 0.5 & iuof_score_01 < 0.8,iuof-8714646,0
+IUOF,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,replace iuof_cat = 3 if iuof_score_01 >= 0.8,iuof-8714646,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen qr_usage = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace qr_usage = 1 if q5_4 == 1 | q5_4 == 2 | q5_5 == 3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace qr_usage = 0 if q5_4 == 0,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,egen kyc_count = rowtotal(q5_13_1 q5_13_2 q5_13_3 q5_13_4 q5_13_5 q5_13_6),oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen oqi_kyc = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace oqi_kyc = 100 if kyc_count<=2,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace oqi_kyc = 70 if kyc_count==3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace oqi_kyc = 40 if kyc_count==4,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace oqi_kyc = 0 if kyc_count>=5,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen oqi_easy = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace oqi_easy = 100 if q5_14==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace oqi_easy = 75 if q5_14==2,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace oqi_easy = 25 if q5_14==3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace oqi_easy = 0 if q5_14==4 | q5_14==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen oqi_time = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace oqi_time = 100 if q5_15==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace oqi_time = 80 if q5_15==2,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace oqi_time = 60 if q5_15==3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace oqi_time = 30 if q5_15==4,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace oqi_time = 0 if q5_15==5 | q5_15==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen oqi_help = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace oqi_help = 100 if q5_16==0,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace oqi_help = 0 if q5_16==1 | q5_16==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen oqi_confirm = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,"replace oqi_confirm = 100 if inlist(q5_5,1,2,3)",oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace oqi_confirm = 0 if q5_5==4 | q5_5==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,gen oqi_cost = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace oqi_cost = 100 if q5_7==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace oqi_cost = 70 if q5_7==2,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace oqi_cost = 30 if q5_7==3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,replace oqi_cost = 0 if q5_7==4 | q5_7==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,gen oqi_fail = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace oqi_fail = 100 if q5_9==3,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace oqi_fail = 50 if q5_9==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace oqi_fail = 0 if q5_9==2 | q5_9 ==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,gen oqi_terms = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace oqi_terms = 100 if q5_21==1 & q5_22==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,"replace oqi_terms = 50 if inlist(q5_21,2) & inlist(q5_22,2)",oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace oqi_terms = 0 if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,gen oqi_support = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,replace oqi_support = 100 if q5_23==1,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace oqi_support = 50 if q5_23==2,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,43,replace oqi_support = 0 if q5_23==3 | q5_23==98,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,44,egen oqi_score = rowmean(oqi_easy oqi_time oqi_help oqi_kyc oqi_cost oqi_confirm oqi_fail oqi_terms oqi_support),oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,45,gen oqi_score_01 = oqi_score/100,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,46,egen oqi_score_std = std(oqi_score),oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,47,gen oqi_cat = .,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,48,replace oqi_cat = 1 if oqi_score < 45,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,49,replace oqi_cat = 2 if oqi_score >= 45 & oqi_score < 85,oqi-4b8a2c5,0
+OQI,CURRENT_AUTHORED_SOURCE,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,50,replace oqi_cat = 3 if oqi_score >= 85,oqi-4b8a2c5,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 75 if q6_2==2,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 25 if q6_2==3,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iurd_freq = 0 if q6_2==4,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen iurd_digital = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace iurd_digital = 100 if inlist(q6_13,2,3,4,5)",iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen iurd_recent = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_recent = 0 if q6_14==0,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen iurd_ops = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_ops = 20 if q6_15==1,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,gen iurd_canal = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,"replace iurd_canal = 100 if inlist(q6_4, 1, 2)",iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace iurd_canal = 0 if inlist(q6_4, 3, 4, 5)",iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital iurd_canal),iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen iurd_cat = .,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iurd_cat = 1 if iurd_score < 30,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 2 if iurd_score >= 30 & iurd_score < 55,iurd-da6c988,0
+IURD,80e5687f7aa3c4d3759c800e37ab18a1ff609a66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 3 if iurd_score >= 55,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 75 if q6_2==2,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 25 if q6_2==3,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iurd_freq = 0 if q6_2==4,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen iurd_digital = .,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iurd_digital = 25 if q6_13==2,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iurd_digital = 50 if q6_13==3,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_digital = 75 if q6_13==4,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_digital = 100 if q6_13==5,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen iurd_recent = .,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iurd_recent = 0 if q6_14==0,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen iurd_ops = .,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_ops = 20 if q6_15==1,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital),iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen iurd_cat = .,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iurd_cat = 1 if iurd_score < 45,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 2 if iurd_score >= 45 & iurd_score < 85,iurd-da6c988,0
+IURD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 3 if iurd_score >= 85,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 75 if q6_2==2,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 25 if q6_2==3,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iurd_freq = 0 if q6_2==4,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen iurd_digital = .,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iurd_digital = 25 if q6_13==2,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iurd_digital = 50 if q6_13==3,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_digital = 75 if q6_13==4,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_digital = 100 if q6_13==5,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen iurd_recent = .,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iurd_recent = 0 if q6_14==0,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen iurd_ops = .,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_ops = 20 if q6_15==1,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital),iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen iurd_cat = .,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iurd_cat = 1 if iurd_score < 40,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70,iurd-da6c988,0
+IURD,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 3 if iurd_score >= 70,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 75 if q6_2==2,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 25 if q6_2==3,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iurd_freq = 0 if q6_2==99,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen iurd_digital = .,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iurd_digital = 25 if q6_13==2,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iurd_digital = 50 if q6_13==3,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_digital = 75 if q6_13==4,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_digital = 100 if q6_13==5,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen iurd_recent = .,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iurd_recent = 0 if q6_14==0 | q6_14==98,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen iurd_ops = .,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_ops = 20 if q6_15==1 | q6_15==98,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital),iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen iurd_score_std = std(iurd_score),iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen iurd_cat = .,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 1 if iurd_score < 40,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70,iurd-da6c988,0
+IURD,a0778adcc59a1a58f7dc7988916e2cb2e1a47593,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace iurd_cat = 3 if iurd_score >= 70,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 75 if q6_2==2,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 25 if q6_2==3,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace iurd_freq = 0 if q6_2==99,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen iurd_recent = .,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace iurd_recent = 0 if q6_14==0 | q6_14==98,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen iurd_ops = .,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_ops = 20 if q6_15==1 | q6_15==98,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen iurd_digital = .,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_digital = 25 if q6_13==2,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iurd_digital = 50 if q6_13==3,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iurd_digital = 75 if q6_13==4,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace iurd_digital = 100 if q6_13==5,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital),iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen iurd_score_std = std(iurd_score),iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen iurd_cat = .,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 1 if iurd_score < 40,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70,iurd-da6c988,0
+IURD,192d3115110db3d7c1db3d07b3167ec2a44ebbfe,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace iurd_cat = 3 if iurd_score >= 70,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen iurd_freq = .,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace iurd_freq = 100 if q6_2==1,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace iurd_freq = 60 if q6_2==2,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace iurd_freq = 30 if q6_2==3,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen iurd_recent = .,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace iurd_recent = 100 if q6_14==1,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,replace iurd_recent = 0 if q6_14==0,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,gen iurd_ops = .,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace iurd_ops = 20 if q6_15==1,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace iurd_ops = 40 if q6_15==2,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace iurd_ops = 60 if q6_15==3,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace iurd_ops = 80 if q6_15==4,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace iurd_ops = 100 if q6_15==5,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,gen iurd_digital = .,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace iurd_digital = 0 if q6_13==1,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace iurd_digital = 25 if q6_13==2,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace iurd_digital = 50 if q6_13==3,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace iurd_digital = 75 if q6_13==4,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace iurd_digital = 100 if q6_13==5,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital),iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen iurd_score_01 = iurd_score/100,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,egen iurd_score_std = std(iurd_score),iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen iurd_cat = .,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace iurd_cat = 1 if iurd_score < 40,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace iurd_cat = 2 if iurd_score >= 40 & iurd_score < 70,iurd-da6c988,0
+IURD,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace iurd_cat = 3 if iurd_score >= 70,iurd-da6c988,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen ietr_time = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace ietr_time = 100 if q6_6==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace ietr_time = 80 if q6_6==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace ietr_time = 60 if q6_6==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace ietr_time = 30 if q6_6==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace ietr_time = 0 if q6_6==5,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen ietr_cost_fee = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace ietr_cost_fee = 100 if q6_9==1 | q6_9==99,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace ietr_cost_fee = 50 if q6_9==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace ietr_cost_fee = 0 if q6_9==3 | q6_9==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ietr_cost_fx = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace ietr_cost_fx = 100 if q6_18==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ietr_cost_fx = 50 if q6_18==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ietr_cost_fx = 0 if q6_18==3 | q6_18==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen ietr_cost = rowmean(ietr_cost_fee ietr_cost_fx),ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen ietr_conf_rem = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<5,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace ietr_conf_rem = 0 if q6_11==6 | q6_11 == 5,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen ietr_conf_pay = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace ietr_conf_pay = 100 if q6_20==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace ietr_conf_pay = 50 if q6_20==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace ietr_conf_pay = 0 if q6_20==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen ietr_confirm = rowmean(ietr_conf_rem ietr_conf_pay),ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen ietr_problem = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ietr_problem = 100 if q6_16==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ietr_problem = 75 if q6_16==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace ietr_problem = 25 if q6_16==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace ietr_problem = 0 if q6_16==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,gen ietr_limits = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace ietr_limits = 100 if q6_17==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,"replace ietr_limits = 0 if inlist(q6_17,1,2,3)",ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,gen ietr_speed = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace ietr_speed = 100 if q6_21==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace ietr_speed = 80 if q6_21==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace ietr_speed = 60 if q6_21==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,replace ietr_speed = 30 if q6_21==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace ietr_speed = 0 if q6_21==5,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen ietr_surcharge = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace ietr_surcharge = 0 if q6_22==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace ietr_surcharge = 100 if q6_22==2 | q6_22==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,gen ietr_clarity = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace ietr_clarity = 100 if q6_23==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,43,replace ietr_clarity = 50 if q6_23==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,44,replace ietr_clarity = 0 if q6_23==3 | q6_23==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,45,gen ietr_eval = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,46,replace ietr_eval = 0 if q6_24==1,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,47,replace ietr_eval = 25 if q6_24==2,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,48,replace ietr_eval = 50 if q6_24==3,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,49,replace ietr_eval = 75 if q6_24==4,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,50,replace ietr_eval = 100 if q6_24==5,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,51,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_surcharge ietr_clarity ietr_eval),ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,52,gen ietr_score_01 = ietr_score/100,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,53,gen ietr_cat = .,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,54,replace ietr_cat = 1 if ietr_score < 45,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,55,replace ietr_cat = 2 if ietr_score >= 45 & ietr_score < 85,ietr-0452e40,0
+IETR,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,56,replace ietr_cat = 3 if ietr_score >= 85,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen ietr_time = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace ietr_time = 100 if q6_6==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace ietr_time = 80 if q6_6==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace ietr_time = 60 if q6_6==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace ietr_time = 30 if q6_6==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace ietr_time = 0 if q6_6==5,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen ietr_cost_fee = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace ietr_cost_fee = 100 if q6_9==1 | q6_9==99,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace ietr_cost_fee = 50 if q6_9==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace ietr_cost_fee = 0 if q6_9==3 | q6_9==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ietr_cost_fx = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace ietr_cost_fx = 100 if q6_18==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ietr_cost_fx = 50 if q6_18==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ietr_cost_fx = 0 if q6_18==3 | q6_18==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen ietr_cost = rowmean(ietr_cost_fee ietr_cost_fx),ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen ietr_conf_rem = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<=5,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace ietr_conf_rem = 0 if q6_11==6,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen ietr_conf_pay = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace ietr_conf_pay = 100 if q6_20==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace ietr_conf_pay = 50 if q6_20==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace ietr_conf_pay = 0 if q6_20==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen ietr_confirm = rowmean(ietr_conf_rem ietr_conf_pay),ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen ietr_problem = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ietr_problem = 100 if q6_16==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ietr_problem = 75 if q6_16==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace ietr_problem = 25 if q6_16==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace ietr_problem = 0 if q6_16==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,gen ietr_limits = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace ietr_limits = 100 if q6_17==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,"replace ietr_limits = 0 if inlist(q6_17,1,2,3)",ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,gen ietr_speed = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace ietr_speed = 100 if q6_21==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace ietr_speed = 80 if q6_21==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace ietr_speed = 60 if q6_21==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,replace ietr_speed = 30 if q6_21==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace ietr_speed = 0 if q6_21==5,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen ietr_surcharge = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace ietr_surcharge = 0 if q6_22==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace ietr_surcharge = 100 if q6_22==2 | q6_22==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,gen ietr_clarity = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace ietr_clarity = 100 if q6_23==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,43,replace ietr_clarity = 50 if q6_23==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,44,replace ietr_clarity = 0 if q6_23==3 | q6_23==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,45,gen ietr_eval = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,46,replace ietr_eval = 0 if q6_24==1,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,47,replace ietr_eval = 25 if q6_24==2,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,48,replace ietr_eval = 50 if q6_24==3,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,49,replace ietr_eval = 75 if q6_24==4,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,50,replace ietr_eval = 100 if q6_24==5,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,51,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_surcharge ietr_clarity ietr_eval),ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,52,gen ietr_score_01 = ietr_score/100,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,53,gen ietr_cat = .,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,54,replace ietr_cat = 1 if ietr_score < 45,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,55,replace ietr_cat = 2 if ietr_score >= 45 & ietr_score < 85,ietr-0452e40,0
+IETR,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,56,replace ietr_cat = 3 if ietr_score >= 85,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen ietr_time = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace ietr_time = 100 if q6_6==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace ietr_time = 80 if q6_6==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace ietr_time = 60 if q6_6==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace ietr_time = 30 if q6_6==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace ietr_time = 0 if q6_6==5,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen ietr_cost_fee = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace ietr_cost_fee = 100 if q6_9==1 | q6_9==99,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace ietr_cost_fee = 50 if q6_9==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace ietr_cost_fee = 0 if q6_9==3 | q6_9==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ietr_cost_fx = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace ietr_cost_fx = 100 if q6_18==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ietr_cost_fx = 50 if q6_18==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ietr_cost_fx = 0 if q6_18==3 | q6_18==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen ietr_cost = rowmean(ietr_cost_fee ietr_cost_fx),ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen ietr_conf_rem = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<=5,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace ietr_conf_rem = 0 if q6_11==6,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen ietr_conf_pay = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace ietr_conf_pay = 100 if q6_20==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace ietr_conf_pay = 50 if q6_20==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace ietr_conf_pay = 0 if q6_20==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,egen ietr_confirm = rowmean(ietr_conf_rem ietr_conf_pay),ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen ietr_problem = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ietr_problem = 100 if q6_16==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ietr_problem = 75 if q6_16==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace ietr_problem = 25 if q6_16==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace ietr_problem = 0 if q6_16==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,gen ietr_limits = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace ietr_limits = 100 if q6_17==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,"replace ietr_limits = 0 if inlist(q6_17,1,2,3)",ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,gen ietr_speed = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace ietr_speed = 100 if q6_21==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace ietr_speed = 80 if q6_21==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace ietr_speed = 60 if q6_21==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,replace ietr_speed = 30 if q6_21==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace ietr_speed = 0 if q6_21==5,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen ietr_surcharge = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace ietr_surcharge = 0 if q6_22==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace ietr_surcharge = 100 if q6_22==2 | q6_22==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,gen ietr_clarity = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace ietr_clarity = 100 if q6_23==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,43,replace ietr_clarity = 50 if q6_23==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,44,replace ietr_clarity = 0 if q6_23==3 | q6_23==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,45,gen ietr_eval = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,46,replace ietr_eval = 0 if q6_24==1,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,47,replace ietr_eval = 25 if q6_24==2,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,48,replace ietr_eval = 50 if q6_24==3,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,49,replace ietr_eval = 75 if q6_24==4,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,50,replace ietr_eval = 100 if q6_24==5,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,51,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_surcharge ietr_clarity ietr_eval),ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,52,gen ietr_score_01 = ietr_score/100,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,53,gen ietr_cat = .,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,54,replace ietr_cat = 1 if ietr_score < 40,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,55,replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70,ietr-0452e40,0
+IETR,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,56,replace ietr_cat = 3 if ietr_score >= 70,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen ietr_time = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace ietr_time = 100 if q6_6==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace ietr_time = 80 if q6_6==2,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace ietr_time = 60 if q6_6==3,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace ietr_time = 30 if q6_6==4,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace ietr_time = 0 if q6_6==5 | q6_6==98,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen ietr_cost = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace ietr_cost = 100 if q6_9==1 & q6_18==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace ietr_cost = 75 if inlist(q6_9,1,2) & inlist(q6_18,1,2)",ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace ietr_cost = 25 if q6_9>=3 | q6_18==3,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace ietr_cost = 0 if q6_9>=3 | q6_18==3 | q6_9==99 | q6_18==98,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen ietr_confirm = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ietr_confirm = 100 if q6_11<=5 & q6_20==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ietr_confirm = 50 if q6_11<=5 & q6_20==2,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace ietr_confirm = 0 if q6_11==5 | q6_20==3 | q6_11==98 | q6_20==98,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen ietr_problem = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace ietr_problem = 100 if q6_16==4,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace ietr_problem = 75 if q6_16==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace ietr_problem = 25 if q6_16==2,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace ietr_problem = 0 if q6_16==98,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen ietr_limits = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace ietr_limits = 100 if q6_17==4,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,"replace ietr_limits = 0 if inlist(q6_17,1,2,3)",ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,gen ietr_speed = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ietr_speed = 100 if q6_21==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ietr_speed = 80 if q6_21==2,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace ietr_speed = 60 if q6_21==3,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace ietr_speed = 30 if q6_21==4,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace ietr_speed = 0 if q6_21>=5,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,gen ietr_eval = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,replace ietr_eval = 0 if q6_24==1,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,replace ietr_eval = 25 if q6_24==2,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace ietr_eval = 50 if q6_24==3,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace ietr_eval = 75 if q6_24==4,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace ietr_eval = 100 if q6_24==5,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_eval),ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,gen ietr_score_01 = ietr_score/100,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,egen ietr_score_std = std(ietr_score),ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,gen ietr_cat = .,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace ietr_cat = 1 if ietr_score < 40,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70,ietr-0452e40,0
+IETR,ad2205eba2196ce5969dfe8a945adfbbfba2c9e3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace ietr_cat = 3 if ietr_score >= 70,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen ietr_time = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace ietr_time = 100 if q6_6==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace ietr_time = 80 if q6_6==2,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,replace ietr_time = 60 if q6_6==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,replace ietr_time = 30 if q6_6==4,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace ietr_time = 0 if q6_6==5,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen ietr_cost = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace ietr_cost = 100 if q6_9==1 & q6_18==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace ietr_cost = 60 if inlist(q6_9,1,2) & inlist(q6_18,1,2)",ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace ietr_cost = 0 if q6_9>=3 | q6_18==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ietr_confirm = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace ietr_confirm = 100 if q6_11!=5 & q6_20==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ietr_confirm = 50 if q6_11!=5 & q6_20==2,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ietr_confirm = 0 if q6_11==5 | q6_20==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen ietr_problem = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace ietr_problem = 100 if q6_16==4,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace ietr_problem = 50 if q6_16==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace ietr_problem = 30 if q6_16==2,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace ietr_problem = 0 if q6_16==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen ietr_limits = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace ietr_limits = 100 if q6_17==4,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,"replace ietr_limits = 0 if inlist(q6_17,1,2,3)",ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,gen ietr_speed = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace ietr_speed = 100 if q6_21==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,replace ietr_speed = 80 if q6_21==2,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,replace ietr_speed = 60 if q6_21==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace ietr_speed = 30 if q6_21==4,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,replace ietr_speed = 0 if q6_21>=5,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,gen ietr_eval = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace ietr_eval = 0 if q6_24==1,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,replace ietr_eval = 25 if q6_24==2,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,replace ietr_eval = 50 if q6_24==3,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace ietr_eval = 75 if q6_24==4,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace ietr_eval = 100 if q6_24==5,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_eval),ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,gen ietr_score_01 = ietr_score/100,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,egen ietr_score_std = std(ietr_score),ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen ietr_cat = .,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace ietr_cat = 1 if ietr_score < 40,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace ietr_cat = 2 if ietr_score >= 40 & ietr_score < 70,ietr-0452e40,0
+IETR,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,replace ietr_cat = 3 if ietr_score >= 70,ietr-0452e40,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e1_reaccion_segura = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace e1_reaccion_segura = 0 if inlist(q7_2,4,5)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e1_autenticacion = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e1_autenticacion = 1 if inlist(q7_6,1,2)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e1_autenticacion = 0 if q7_6==3 | q7_6==98,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e1_habitos_claves = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace e1_habitos_claves = 1 if inlist(q7_7,1,2)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e1_habitos_claves = 0 if inlist(q7_7,3,4)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e1_educacion = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace e1_educacion = 1 if q7_8==1,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e1_educacion = 0 if inlist(q7_8,2,3,98)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e1_seguridad_percibida = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e1_valora_prevencion = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace e1_valora_prevencion = 0 if inlist(q7_10,6,7)",ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves e1_educacion e1_seguridad_percibida e1_valora_prevencion),ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IPCS = IPCS_raw * 100,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IPCS_cat = .,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IPCS_cat = 1 if IPCS < 45,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IPCS_cat = 2 if IPCS >= 45 & IPCS < 85,ipcs-bd46bba,0
+IPCS,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IPCS_cat = 3 if IPCS >= 85,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e1_reaccion_segura = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace e1_reaccion_segura = 0 if inlist(q7_2,4,5)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e1_autenticacion = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e1_autenticacion = 1 if inlist(q7_6,1,2)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e1_autenticacion = 0 if q7_6==3 | q7_6==98,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e1_habitos_claves = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace e1_habitos_claves = 1 if inlist(q7_7,1,2)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e1_habitos_claves = 0 if inlist(q7_7,3,4)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e1_educacion = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace e1_educacion = 1 if q7_8==1,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e1_educacion = 0 if inlist(q7_8,2,3,98)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e1_seguridad_percibida = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e1_valora_prevencion = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace e1_valora_prevencion = 0 if inlist(q7_10,6,7)",ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves e1_educacion e1_seguridad_percibida e1_valora_prevencion),ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IPCS = IPCS_raw * 100,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IPCS_cat = .,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IPCS_cat = 1 if IPCS < 40,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IPCS_cat = 2 if IPCS >= 40 & IPCS < 70,ipcs-bd46bba,0
+IPCS,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IPCS_cat = 3 if IPCS >= 70,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e1_reaccion_segura = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e1_reaccion_segura = 0 if q7_2==4 | q7_2==5,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e1_autenticacion = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e1_autenticacion = 1 if inlist(q7_6,1,2)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e1_autenticacion = 0 if q7_6==3 | q7_6==98,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e1_habitos_claves = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace e1_habitos_claves = 1 if inlist(q7_7,1,2)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e1_habitos_claves = 0 if inlist(q7_7,3,4)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e1_educacion = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace e1_educacion = 1 if q7_8==1,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e1_educacion = 0 if inlist(q7_8,2,3,98)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e1_seguridad_percibida = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e1_valora_prevencion = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)",ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace e1_valora_prevencion = 0 if q7_10==6 |q7_10==7,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves e1_educacion e1_seguridad_percibida e1_valora_prevencion),ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IPCS = IPCS_raw*100,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IPCS_cat = .,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IPCS_cat = 1 if IPCS < 40,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IPCS_cat = 2 if IPCS >= 40 & IPCS < 70,ipcs-bd46bba,0
+IPCS,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IPCS_cat = 3 if IPCS >= 70,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e1_reaccion_segura = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e1_reaccion_segura = 0 if q7_2==4,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e1_autenticacion = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e1_autenticacion = 1 if inlist(q7_6,1,2)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e1_autenticacion = 0 if q7_6==3,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e1_habitos_claves = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace e1_habitos_claves = 1 if inlist(q7_7,1,2)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e1_habitos_claves = 0 if inlist(q7_7,3,4)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e1_educacion = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace e1_educacion = 1 if q7_8==1,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e1_educacion = 0 if inlist(q7_8,2,3)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e1_seguridad_percibida = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e1_valora_prevencion = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)",ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace e1_valora_prevencion = 0 if q7_10==6,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves e1_educacion e1_seguridad_percibida e1_valora_prevencion),ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IPCS = IPCS_raw*100,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IPCS_cat = .,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IPCS_cat = 1 if IPCS < 40,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IPCS_cat = 2 if IPCS >= 40 & IPCS < 70,ipcs-bd46bba,0
+IPCS,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IPCS_cat = 3 if IPCS >= 70,ipcs-bd46bba,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e2_exposicion = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e2_exposicion = 0 if q7_1==3 | q7_1==98,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e2_bloqueo = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e2_bloqueo = 0 if q7_5==4 | q7_5==98,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e2_problema = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace e2_problema = 1 if q7_11==1,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e2_problema = 0 if inlist(q7_11,2,98)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e2_demora = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e2_demora = 0 if inlist(q7_13,1,2)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e2_no_resuelto = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace e2_no_resuelto = 0 if q7_14==1,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e2_insatisfaccion = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e2_insatisfaccion = 1 if inlist(q7_15,1,2)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace e2_insatisfaccion = 0 if inlist(q7_15,3,4)",iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_demora e2_no_resuelto e2_insatisfaccion),iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IEDF = IEDF_raw * 100,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IEDF_cat = .,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IEDF_cat = 1 if IEDF < 45,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IEDF_cat = 2 if IEDF >= 45 & IEDF < 80,iedf-4b7317e,0
+IEDF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IEDF_cat = 3 if IEDF >= 80,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e2_exposicion = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e2_exposicion = 0 if q7_1==3 | q7_1==98,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e2_bloqueo = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e2_bloqueo = 0 if q7_5==4 | q7_5==98,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e2_problema = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace e2_problema = 1 if q7_11==1,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace e2_problema = 0 if inlist(q7_11,2,98)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e2_demora = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e2_demora = 0 if inlist(q7_13,1,2)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e2_no_resuelto = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace e2_no_resuelto = 0 if q7_14==1,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen e2_insatisfaccion = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace e2_insatisfaccion = 1 if inlist(q7_15,1,2)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace e2_insatisfaccion = 0 if inlist(q7_15,3,4)",iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_demora e2_no_resuelto e2_insatisfaccion),iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IEDF = IEDF_raw * 100,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IEDF_cat = .,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IEDF_cat = 1 if IEDF < 40,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70,iedf-4b7317e,0
+IEDF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IEDF_cat = 3 if IEDF >= 70,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e2_exposicion = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e2_exposicion = 0 if q7_1==3 | q7_1==98,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e2_bloqueo = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e2_bloqueo = 0 if q7_5==4 | q7_5==98,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e2_problema = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace e2_problema = 1 if q7_11==1,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace e2_problema = 0 if q7_11==2 | q7_11==98,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e2_demora = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace e2_demora = 0 if inlist(q7_13,1,2)",iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e2_no_resuelto = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace e2_no_resuelto = 0 if q7_14==1,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_no_resuelto e2_demora),iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen IEDF = IEDF_raw*100,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,gen IEDF_cat = .,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace IEDF_cat = 1 if IEDF < 40,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70,iedf-4b7317e,0
+IEDF,3b10048f16ea1f44549f8fd6eb9163cf2f985be4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace IEDF_cat = 3 if IEDF >= 70,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e2_exposicion = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e2_exposicion = 0 if q7_1==3 | q7_1==98,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e2_bloqueo = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e2_bloqueo = 0 if q7_5==4 | q7_5==98,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e2_problema = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace e2_problema = 1 if q7_11==1,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace e2_problema = 0 if q7_11==2 | q7_11==98,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e2_no_resuelto = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace e2_no_resuelto = 0 if q7_14==1,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e2_demora = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e2_demora = 0 if inlist(q7_13,1,2)",iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_no_resuelto e2_demora),iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen IEDF = IEDF_raw*100,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,gen IEDF_cat = .,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace IEDF_cat = 1 if IEDF < 40,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70,iedf-4b7317e,0
+IEDF,0629dd04c60f0c7c65db96016df34411952421b1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace IEDF_cat = 3 if IEDF >= 70,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen e2_exposicion = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,replace e2_exposicion = 0 if q7_1==3,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen e2_bloqueo = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,replace e2_bloqueo = 0 if q7_5==4,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen e2_problema = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace e2_problema = 1 if q7_11==1,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace e2_problema = 0 if q7_11==2,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen e2_no_resuelto = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace e2_no_resuelto = 0 if q7_14==1,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen e2_demora = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace e2_demora = 0 if inlist(q7_13,1,2)",iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_no_resuelto e2_demora),iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen IEDF = IEDF_raw*100,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,gen IEDF_cat = .,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace IEDF_cat = 1 if IEDF < 40,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace IEDF_cat = 2 if IEDF >= 40 & IEDF < 70,iedf-4b7317e,0
+IEDF,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace IEDF_cat = 3 if IEDF >= 70,iedf-4b7317e,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f1_decide_remesa = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f1_decide_remesa = 1 if inlist(q9_4,4,5)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f1_administra = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f1_administra = 1 if inlist(q9_5,1,3)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f1_administra = 0 if inlist(q9_5,2,4,5,98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f1_ahorro_negocio = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace f1_ahorro_negocio = 0 if q9_6==3 |q9_6==98,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen f1_control = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace f1_control = 1 if inlist(q9_7,4,5)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace f1_control = 0 if inlist(q9_7,1,2,3)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen f1_cuenta_propia = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace f1_cuenta_propia = 1 if q9_9==1 |q9_9==2,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace f1_cuenta_propia = 0 if inlist(q9_9,3,4,98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen f1_salud = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace f1_salud = 1 if inlist(q9_11,1,2)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace f1_salud = 0 if inlist(q9_11,3,4,98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen f1_gastos = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace f1_gastos = 1 if inlist(q9_13,1,2)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,"replace f1_gastos = 0 if inlist(q9_13,3,4,98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen f1_opinion = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,"replace f1_opinion = 1 if inlist(q9_18,4,5)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,"replace f1_opinion = 0 if inlist(q9_18,1,2,3)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,gen f1_cambiar_cuenta = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,"replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace f1_cambiar_cuenta = 0 if q9_19==3 | q9_19==98,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,gen f1_no_evito = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace f1_no_evito = 1 if q9_20==0,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace f1_no_evito = 0 if q9_20==1 |q9_20==98,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,gen f1_sin_coercion1 = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,replace f1_sin_coercion1 = 0 if q9_8 == 1,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,"replace f1_sin_coercion1 = 1 if inlist(q9_8, 0, 98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,gen f1_sin_coercion2 = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace f1_sin_coercion2 = 0 if q9_16 == 1,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,"replace f1_sin_coercion2 = 1 if inlist(q9_16, 0, 98)",iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio f1_control f1_cuenta_propia f1_salud f1_gastos f1_opinion f1_cambiar_cuenta f1_no_evito f1_sin_coercion1 f1_sin_coercion2),iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen IAER = IAER_raw * 100,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,gen IAER_cat = .,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace IAER_cat = 1 if IAER < 40,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,replace IAER_cat = 2 if IAER >= 40 & IAER < 85,iaer-891549f,0
+IAER,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace IAER_cat = 3 if IAER >= 85,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f1_decide_remesa = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f1_decide_remesa = 1 if inlist(q9_4,4,5)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f1_administra = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f1_administra = 1 if inlist(q9_5,1,3)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f1_administra = 0 if inlist(q9_5,2,4,5,98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f1_ahorro_negocio = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace f1_ahorro_negocio = 0 if q9_6==3 |q9_6==98,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen f1_control = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace f1_control = 1 if inlist(q9_7,4,5)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace f1_control = 0 if inlist(q9_7,1,2,3)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen f1_cuenta_propia = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace f1_cuenta_propia = 1 if q9_9==1 |q9_9==2,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace f1_cuenta_propia = 0 if inlist(q9_9,3,4,98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen f1_salud = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace f1_salud = 1 if inlist(q9_11,1,2)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace f1_salud = 0 if inlist(q9_11,3,4,98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen f1_gastos = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace f1_gastos = 1 if inlist(q9_13,1,2)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,"replace f1_gastos = 0 if inlist(q9_13,3,4,98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen f1_opinion = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,"replace f1_opinion = 1 if inlist(q9_18,4,5)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,"replace f1_opinion = 0 if inlist(q9_18,1,2,3)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,gen f1_cambiar_cuenta = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,"replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace f1_cambiar_cuenta = 0 if q9_19==3 | q9_19==98,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,gen f1_no_evito = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace f1_no_evito = 1 if q9_20==0,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace f1_no_evito = 0 if q9_20==1 |q9_20==98,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,gen f1_sin_coercion1 = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,replace f1_sin_coercion1 = 0 if q9_8 == 1,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,"replace f1_sin_coercion1 = 1 if inlist(q9_8, 2, 98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,gen f1_sin_coercion2 = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace f1_sin_coercion2 = 0 if q9_16 == 1,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,"replace f1_sin_coercion2 = 1 if inlist(q9_16, 2, 98)",iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio f1_control f1_cuenta_propia f1_salud f1_gastos f1_opinion f1_cambiar_cuenta f1_no_evito f1_sin_coercion1 f1_sin_coercion2),iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,gen IAER = IAER_raw * 100,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,gen IAER_cat = .,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,40,replace IAER_cat = 1 if IAER < 40,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,41,replace IAER_cat = 2 if IAER >= 40 & IAER < 85,iaer-891549f,0
+IAER,a00115ec020d4313715b4b195168422cc126fdff,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,42,replace IAER_cat = 3 if IAER >= 85,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f1_decide_remesa = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f1_decide_remesa = 1 if inlist(q9_4,4,5)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f1_administra = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f1_administra = 1 if inlist(q9_5,1,3)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f1_administra = 0 if inlist(q9_5,2,4,5,98)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f1_ahorro_negocio = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace f1_ahorro_negocio = 0 if q9_6==3 |q9_6==98,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen f1_control = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace f1_control = 1 if inlist(q9_7,4,5)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace f1_control = 0 if inlist(q9_7,1,2,3)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen f1_cuenta_propia = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace f1_cuenta_propia = 1 if q9_9==1 |q9_9==2,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,"replace f1_cuenta_propia = 0 if inlist(q9_9,3,4,98)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen f1_salud = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace f1_salud = 1 if inlist(q9_11,1,2)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace f1_salud = 0 if inlist(q9_11,3,4,98)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen f1_gastos = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace f1_gastos = 1 if inlist(q9_13,1,2)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,"replace f1_gastos = 0 if inlist(q9_13,3,4,98)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen f1_opinion = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,"replace f1_opinion = 1 if inlist(q9_18,4,5)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,"replace f1_opinion = 0 if inlist(q9_18,1,2,3)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,gen f1_cambiar_cuenta = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,"replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)",iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,replace f1_cambiar_cuenta = 0 if q9_19==3 | q9_19==98,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,gen f1_no_evito = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,replace f1_no_evito = 1 if q9_20==0,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace f1_no_evito = 0 if q9_20==1 |q9_20==98,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio f1_control f1_cuenta_propia f1_salud f1_gastos f1_opinion f1_cambiar_cuenta f1_no_evito),iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,gen IAER = IAER_raw*100,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,gen IAER_cat = .,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,replace IAER_cat = 1 if IAER < 40,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,replace IAER_cat = 2 if IAER >= 40 & IAER < 70,iaer-891549f,0
+IAER,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,replace IAER_cat = 3 if IAER >= 70,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f1_decide_remesa = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f1_decide_remesa = 1 if inlist(q9_4,4,5)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f1_decide_remesa = 0 if inlist(q9_4,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f1_administra = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f1_administra = 1 if inlist(q9_5,1,3)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f1_administra = 0 if inlist(q9_5,2,4,5)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f1_ahorro_negocio = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace f1_ahorro_negocio = 0 if q9_6==3,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen f1_control = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace f1_control = 1 if inlist(q9_7,4,5)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace f1_control = 0 if inlist(q9_7,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen f1_no_coercion = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace f1_no_coercion = 1 if q9_8==0,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace f1_no_coercion = 0 if q9_8==1,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen f1_cuenta_propia = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace f1_cuenta_propia = 1 if q9_9==1,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace f1_cuenta_propia = 0 if inlist(q9_9,2,3)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen f1_salud = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,"replace f1_salud = 1 if inlist(q9_11,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,"replace f1_salud = 0 if inlist(q9_11,3,4)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,gen f1_gastos = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,"replace f1_gastos = 1 if inlist(q9_13,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,"replace f1_gastos = 0 if inlist(q9_13,3,4)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,25,gen f1_opinion = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,26,"replace f1_opinion = 1 if inlist(q9_18,4,5)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,27,"replace f1_opinion = 0 if inlist(q9_18,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,28,gen f1_cambiar_cuenta = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,29,"replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)",iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,30,replace f1_cambiar_cuenta = 0 if q9_19==3,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,31,gen f1_no_evito = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,32,replace f1_no_evito = 1 if q9_20==0,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,33,replace f1_no_evito = 0 if q9_20==1,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,34,egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio f1_control f1_no_coercion f1_cuenta_propia f1_salud f1_gastos f1_opinion f1_cambiar_cuenta f1_no_evito),iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,35,gen IAER = IAER_raw*100,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,36,gen IAER_cat = .,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,37,replace IAER_cat = 1 if IAER < 40,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,38,replace IAER_cat = 2 if IAER >= 40 & IAER < 70,iaer-891549f,0
+IAER,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,39,replace IAER_cat = 3 if IAER >= 70,iaer-891549f,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f2_confianza = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f2_confianza = 1 if inlist(q9_1,4,5)",icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f2_confianza = 0 if inlist(q9_1,1,2,3)",icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f2_normas = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f2_normas = 1 if inlist(q9_15,4,5)",icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f2_normas = 0 if inlist(q9_15,1,2,3)",icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f2_comunidad = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace f2_comunidad = 1 if q9_22==1,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace f2_comunidad = 0 if inlist(q9_22,2,3,4,98)",icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,egen sum_consecuencias = rowtotal(q9_17_1 q9_17_2 q9_17_3),icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen f2_sin_consecuencias = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace f2_sin_consecuencias = 1 if sum_consecuencias == 0,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace f2_sin_consecuencias = 0 if sum_consecuencias > 0,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,egen sum_mitigaciones = rowtotal(q9_21_1 q9_21_2 q9_21_3),icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,gen f2_sin_mitigaciones = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,replace f2_sin_mitigaciones = 1 if sum_mitigaciones == 0,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,replace f2_sin_mitigaciones = 0 if sum_mitigaciones > 0,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad f2_sin_consecuencias f2_sin_mitigaciones),icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,gen ICPF = ICPF_raw * 100,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen ICPF_cat = .,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,replace ICPF_cat = 1 if ICPF < 40,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace ICPF_cat = 2 if ICPF >= 40 & ICPF < 70,icpf-1a1db95,0
+ICPF,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace ICPF_cat = 3 if ICPF >= 70,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f2_confianza = .,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f2_confianza = 1 if inlist(q9_1,4,5)",icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f2_confianza = 0 if inlist(q9_1,1,2,3)",icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f2_normas = .,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f2_normas = 1 if inlist(q9_15,4,5)",icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f2_normas = 0 if inlist(q9_15,1,2,3)",icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f2_comunidad = .,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace f2_comunidad = 1 if q9_22==1,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace f2_comunidad = 0 if inlist(q9_22,2,3,4,98)",icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad),icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ICPF = ICPF_raw*100,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen ICPF_cat = .,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ICPF_cat = 1 if ICPF < 40,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ICPF_cat = 2 if ICPF >= 40 & ICPF < 70,icpf-1a1db95,0
+ICPF,b03b54dee98432d3ef8c5dbe06616bfed779a6a6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace ICPF_cat = 3 if ICPF >= 70,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen f2_confianza = .,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace f2_confianza = 1 if inlist(q9_1,4,5)",icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace f2_confianza = 0 if inlist(q9_1,1,2)",icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen f2_normas = .,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace f2_normas = 1 if inlist(q9_15,4,5)",icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace f2_normas = 0 if inlist(q9_15,1,2)",icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen f2_comunidad = .,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace f2_comunidad = 1 if q9_22==1,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace f2_comunidad = 0 if inlist(q9_22,3,4)",icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad),icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,gen ICPF = ICPF_raw*100,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen ICPF_cat = .,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace ICPF_cat = 1 if ICPF < 40,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace ICPF_cat = 2 if ICPF >= 40 & ICPF < 70,icpf-1a1db95,0
+ICPF,95179b38478d2bcc0f595bf227605b654c1d2482,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace ICPF_cat = 3 if ICPF >= 70,icpf-1a1db95,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,"gen g1_info = inlist(q10_4,3,4) if !missing(q10_4)",ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"gen g1_cashout = inlist(q10_6,1,2) if !missing(q10_6)",ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"gen g1_capacitacion = inlist(q10_10,1,2) if !missing(q10_10)",ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,"gen g1_impacto_cap = inlist(q10_12,3,4) if !missing(q10_12)",ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen g1_acompanamiento = (q10_13==1) if !missing(q10_13),ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"gen g1_materiales = inlist(q10_16,1,2) if !missing(q10_16)",ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion g1_impacto_cap g1_acompanamiento g1_materiales),ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,gen IEH = IEH_raw * 100,ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen IEH_cat = .,ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace IEH_cat = 1 if IEH < 40,ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace IEH_cat = 2 if IEH >= 40 & IEH < 70,ieh-c639bda,0
+IEH,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace IEH_cat = 3 if IEH >= 70 & !missing(IEH),ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen g1_info = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace g1_info = 1 if inlist(q10_4,3,4)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace g1_info = 0 if inlist(q10_4,1,2)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen g1_cashout = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace g1_cashout = 1 if inlist(q10_6,1,2)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace g1_cashout = 0 if inlist(q10_6,3,4,5)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen g1_capacitacion = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace g1_capacitacion = 1 if inlist(q10_10,1,2)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,"replace g1_capacitacion = 0 if inlist(q10_10,3,98)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen g1_impacto_cap = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace g1_impacto_cap = 1 if inlist(q10_12,3,4)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace g1_impacto_cap = 0 if inlist(q10_12,1,2)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen g1_acompanamiento = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace g1_acompanamiento = 1 if q10_13==1,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace g1_acompanamiento = 0 if q10_13==0 | q10_13==98,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen g1_materiales = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace g1_materiales = 1 if inlist(q10_16,1,2)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace g1_materiales = 0 if inlist(q10_16,3,4,98)",ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion g1_impacto_cap g1_acompanamiento g1_materiales),ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IEH = IEH_raw*100,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IEH_cat = .,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IEH_cat = 1 if IEH < 40,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IEH_cat = 2 if IEH >= 40 & IEH < 70,ieh-c639bda,0
+IEH,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IEH_cat = 3 if IEH >= 70,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen g1_info = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,"replace g1_info = 1 if inlist(q10_4,3,4)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace g1_info = 0 if inlist(q10_4,1,2)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,gen g1_cashout = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"replace g1_cashout = 1 if inlist(q10_6,1,2)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"replace g1_cashout = 0 if inlist(q10_6,3,4,5)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,gen g1_capacitacion = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,replace g1_capacitacion = 1 if q10_10==1,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,replace g1_capacitacion = 0 if q10_10==2,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,gen g1_impacto_cap = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace g1_impacto_cap = 1 if inlist(q10_12,3,4)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,"replace g1_impacto_cap = 0 if inlist(q10_12,1,2)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,gen g1_acompanamiento = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,replace g1_acompanamiento = 1 if q10_13==1,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,replace g1_acompanamiento = 0 if q10_13==0,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen g1_materiales = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,"replace g1_materiales = 1 if inlist(q10_16,1,2)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,"replace g1_materiales = 0 if inlist(q10_16,3,4)",ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion g1_impacto_cap g1_acompanamiento g1_materiales),ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,gen IEH = IEH_raw*100,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,21,gen IEH_cat = .,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,22,replace IEH_cat = 1 if IEH < 40,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,23,replace IEH_cat = 2 if IEH >= 40 & IEH < 70,ieh-c639bda,0
+IEH,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,24,replace IEH_cat = 3 if IEH >= 70,ieh-c639bda,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,"gen g2_barrera_principal = inrange(q10_1,1,15) if !missing(q10_1)",ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 q10_2_5 q10_2_6 q10_2_7 q10_2_8 q10_2_9 q10_2_10 q10_2_11 q10_2_12 q10_2_14 q10_2_15),ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,gen g2_barreras_extra_bin = (g2_barreras_extra > 0) if !missing(g2_barreras_extra),ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,"gen g2_poca_info = inlist(q10_4,1,2) if !missing(q10_4)",ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,"gen g2_cashout_dificil = inlist(q10_6,3,4,5,98) if !missing(q10_6)",ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,"gen g2_sin_materiales = inlist(q10_16,4,98) if !missing(q10_16)",ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin g2_poca_info g2_cashout_dificil g2_sin_materiales),ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,gen IBPD = IBPD_raw * 100,ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen IBPD_cat = .,ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,replace IBPD_cat = 1 if IBPD < 40,ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70,ibpd-c1050eb,0
+IBPD,d119b22927489427f66c50eb8a4e6a3b8fb207d7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,replace IBPD_cat = 3 if IBPD >= 70 & !missing(IBPD),ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen g2_barrera_principal = .,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace g2_barrera_principal = 0 if q10_1==16 | q10_1==98,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace g2_barrera_principal = 1 if inrange(q10_1,1,15)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 q10_2_5 q10_2_6 q10_2_7 q10_2_8 q10_2_9 q10_2_10 q10_2_11 q10_2_12 q10_2_14 q10_2_15),ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen g2_barreras_extra_bin = g2_barreras_extra>0,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen g2_poca_info = .,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,"replace g2_poca_info = 1 if inlist(q10_4,1,2)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace g2_poca_info = 0 if inlist(q10_4,3,4)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen g2_cashout_dificil = .,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,"replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5,98)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace g2_cashout_dificil = 0 if inlist(q10_6,1,2)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen g2_sin_materiales = .,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace g2_sin_materiales = 1 if q10_16==4 | q10_16==98,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace g2_sin_materiales = 0 if inlist(q10_16,1,2,3)",ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin g2_poca_info g2_cashout_dificil g2_sin_materiales),ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen IBPD = IBPD_raw*100,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen IBPD_cat = .,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace IBPD_cat = 1 if IBPD < 40,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70,ibpd-c1050eb,0
+IBPD,6376fcf4d7e38415115cb3563430f3287177a3a8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace IBPD_cat = 3 if IBPD >= 70,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,1,gen g2_barrera_principal = .,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,2,replace g2_barrera_principal = 0 if q10_1==16,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,3,"replace g2_barrera_principal = 1 if inrange(q10_1,1,15)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,4,egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 q10_2_5 q10_2_6 q10_2_7 q10_2_8 q10_2_9 q10_2_10 q10_2_11 q10_2_12 q10_2_14 q10_2_15),ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,5,gen g2_barreras_extra_bin = g2_barreras_extra>0,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,6,gen g2_poca_info = .,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,7,"replace g2_poca_info = 1 if inlist(q10_4,1,2)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,8,"replace g2_poca_info = 0 if inlist(q10_4,3,4)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,9,gen g2_cashout_dificil = .,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,10,"replace g2_cashout_dificil = 1 if inlist(q10_6,3,4,5)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,11,"replace g2_cashout_dificil = 0 if inlist(q10_6,1,2)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,12,gen g2_sin_materiales = .,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,13,replace g2_sin_materiales = 1 if q10_16==4,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,14,"replace g2_sin_materiales = 0 if inlist(q10_16,1,2,3)",ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,15,egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin g2_poca_info g2_cashout_dificil g2_sin_materiales),ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,16,gen IBPD = IBPD_raw*100,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,17,gen IBPD_cat = .,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,18,replace IBPD_cat = 1 if IBPD < 40,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,19,replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70,ibpd-c1050eb,0
+IBPD,d130a4fefaaaf62cb1a265d133b2b85e963e1cae,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,20,replace IBPD_cat = 3 if IBPD >= 70,ibpd-c1050eb,0

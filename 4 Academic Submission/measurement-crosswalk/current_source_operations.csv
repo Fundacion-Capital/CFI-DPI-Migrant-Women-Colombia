@@ -1,0 +1,418 @@
+construct,operation_order,first_line,last_line,operation,source,evidence
+IAT,1,1192,1192,gen tel_score = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,2,1193,1193,replace tel_score = 100 if q3_1 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,3,1194,1194,replace tel_score = 50  if q3_1 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,4,1195,1195,replace tel_score = 0   if q3_1 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,5,1199,1199,gen internet_score = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,6,1200,1200,replace internet_score = 100 if q3_5 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,7,1201,1201,replace internet_score = 75  if q3_5 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,8,1202,1202,replace internet_score = 50  if q3_5 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,9,1203,1203,replace internet_score = 25  if q3_5 == 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,10,1204,1204,replace internet_score = 0   if q3_5 == 5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,11,1208,1208,gen access_score = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,12,1209,1209,replace access_score = 100 if q3_6 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,13,1210,1210,"replace access_score = 80  if inlist(q3_6, 2, 5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,14,1211,1211,"replace access_score = 40  if inlist(q3_6, 3, 4, 6)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,15,1215,1215,gen data_stability = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,16,1216,1216,replace data_stability = 100 if q3_7 <= 2 & q3_8 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,17,1217,1217,replace data_stability = 50  if q3_8 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,18,1218,1218,replace data_stability = 0   if q3_8 == 1 | q3_7 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,19,1223,1223,gen read_score = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,20,1224,1224,replace read_score = 100 if q3_12 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,21,1225,1225,replace read_score = 25  if q3_12 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,22,1226,1226,replace read_score = 0   if q3_12 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,23,1231,1231,egen iat_score = rowmean(tel_score internet_score access_score data_stability read_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,24,1233,1233,replace iat_score = iat_score / 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,25,1236,1236,egen iat_score_std = std(iat_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,26,1240,1240,gen iat_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,27,1241,1241,replace iat_cat = 1 if iat_score <= 0.45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,28,1242,1242,replace iat_cat = 2 if iat_score > 0.45 & iat_score <= 0.80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IAT,29,1243,1243,replace iat_cat = 3 if iat_score > 0.80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,iat-24f23bd/sealed native driver and current source
+IVS,1,1057,1057,gen years_in_col = 2026 - q2_1 if q2_1 < 2026,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,2,1060,1064,"recode years_in_col (0/2=1 ""0–2 years"") (3/5=2 ""3–5 years"") (6/10=3 ""6–10 years"") (11/max=4 ""11+ years""), gen(years_cat)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,3,1134,1134,egen max_years = max(years_in_col),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,4,1135,1135,gen antig_norm = (r(max) - years_in_col) / (r(max) - r(min)),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,5,1138,1138,drop max_years,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,6,1141,1141,gen educ_norm = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,7,1142,1142,replace educ_norm = 1.00 if q2_2 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,8,1143,1143,replace educ_norm = 0.89 if q2_2 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,9,1144,1144,replace educ_norm = 0.78 if q2_2 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,10,1145,1145,replace educ_norm = 0.67 if q2_2 == 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,11,1146,1146,replace educ_norm = 0.56 if q2_2 == 5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,12,1147,1147,replace educ_norm = 0.44 if q2_2 == 6,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,13,1148,1148,replace educ_norm = 0.33 if q2_2 == 7,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,14,1149,1149,replace educ_norm = 0.22 if q2_2 == 8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,15,1150,1150,replace educ_norm = 0.11 if q2_2 == 9,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,16,1151,1151,replace educ_norm = 0.00 if q2_2 == 10,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,17,1155,1155,gen ocup_norm = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,18,1156,1156,"replace ocup_norm = 0   if inlist(q2_3, 1, 3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,19,1157,1157,"replace ocup_norm = 0.5 if inlist(q2_3, 2, 4, 6, 9)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,20,1158,1158,"replace ocup_norm = 1   if inlist(q2_3, 5, 7, 8)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,21,1163,1163,egen ivs_score = rowmean(antig_norm educ_norm ocup_norm),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,22,1167,1167,egen ivs_score_std = std(ivs_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,23,1171,1171,gen ivs_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,24,1172,1172,replace ivs_cat = 1 if ivs_score <= 0.33,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,25,1173,1173,replace ivs_cat = 2 if ivs_score > 0.33 & ivs_score <= 0.66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IVS,26,1174,1174,replace ivs_cat = 3 if ivs_score > 0.66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,ivs-4535102/sealed native driver and current source
+IADT,1,1256,1256,recode q3_15 q3_16 q3_17 (98=.) (99=.),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,2,1259,1259,gen iadt_appinstall = (q3_15 - 1) / 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,3,1262,1262,gen iadt_sendmoney = (q3_16 - 1) / 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,4,1265,1265,gen iadt_fraudesafe = (q3_17 - 1) / 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,5,1269,1269,egen iadt_score = rowmean(iadt_appinstall iadt_sendmoney iadt_fraudesafe),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,6,1273,1273,egen iadt_score_std = std(iadt_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,7,1277,1277,gen iadt_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,8,1278,1278,replace iadt_cat = 1 if iadt_score <= 0.33,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,9,1279,1279,replace iadt_cat = 2 if iadt_score > 0.33 & iadt_score <= 0.66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+IADT,10,1280,1280,replace iadt_cat = 3 if iadt_score > 0.66,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iadt-f2c99ab\source_operation_checks.json
+ICDP,1,1297,1297,gen icdp_qr = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,2,1298,1298,replace icdp_qr = 100 if q3_20 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,3,1299,1299,"replace icdp_qr = 75  if inlist(q3_20,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,4,1300,1300,replace icdp_qr = 0   if q3_20 == 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,5,1304,1304,gen icdp_sms = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,6,1305,1305,replace icdp_sms = 100 if q3_21 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,7,1306,1306,replace icdp_sms = 50  if q3_21 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,8,1307,1307,replace icdp_sms = 25  if q3_21 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,9,1308,1308,replace icdp_sms = 0   if q3_21 == 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,10,1312,1312,gen icdp_pin = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,11,1313,1313,replace icdp_pin = 100 if q3_22 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,12,1314,1314,"replace icdp_pin = 0   if inlist(q3_22,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,13,1318,1318,gen icdp_fraud = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,14,1319,1319,replace icdp_fraud = 100 if q3_23 == 2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,15,1320,1320,replace icdp_fraud = 75  if q3_23 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,16,1321,1321,replace icdp_fraud = 25  if q3_23 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,17,1322,1322,"replace icdp_fraud = 0   if inlist(q3_23,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,18,1326,1326,egen icdp_score = rowmean(icdp_qr icdp_sms icdp_pin icdp_fraud),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,19,1329,1329,replace icdp_score = icdp_score / 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,20,1331,1331,egen icdp_score_std = std(icdp_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,21,1336,1336,gen icdp_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,22,1337,1337,replace icdp_cat = 1 if icdp_score <= 0.45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,23,1338,1338,replace icdp_cat = 2 if icdp_score > 0.45 & icdp_score <= 0.80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+ICDP,24,1339,1339,replace icdp_cat = 3 if icdp_score > 0.80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icdp-8eb3405\source_operation_checks.json
+IAFF,1,1356,1356,gen iaff_doc = 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,2,1357,1361,replace iaff_doc = 100 if q4_1_1 == 1 | q4_1_2 == 1 | q4_1_3 == 1 | q4_1_4 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,3,1366,1366,gen iaff_address = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,4,1367,1367,replace iaff_address = 100 if q4_5 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,5,1368,1368,replace iaff_address = 50  if q4_5 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,6,1369,1369,replace iaff_address = 0   if q4_5 == 2 | q4_5 == 4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,7,1373,1373,gen iaff_phone = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,8,1374,1374,replace iaff_phone = 100 if q4_6 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,9,1375,1375,replace iaff_phone = 0  if q4_6 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,10,1376,1376,"replace iaff_phone = 0   if inlist(q4_6,2,4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,11,1380,1380,gen iaff_account = 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,12,1381,1385,replace iaff_account = 100 if q4_12_1 == 1 | q4_12_2 == 1 | q4_12_3 == 1 | q4_12_4 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,13,1389,1389,egen iaff_score = rowmean(iaff_doc iaff_address iaff_phone iaff_account),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,14,1392,1392,replace iaff_score = iaff_score / 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,15,1394,1394,egen iaff_score_std = std(iaff_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,16,1398,1398,gen iaff_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,17,1399,1399,replace iaff_cat = 1 if iaff_score < 0.5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,18,1400,1400,replace iaff_cat = 2 if iaff_score >= 0.5 & iaff_score <= 0.8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IAFF,19,1401,1401,replace iaff_cat = 3 if iaff_score > 0.8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaff-a9604d3\source_operation_checks.json
+IUOF,1,1419,1419,gen iuof_freq = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,2,1420,1420,replace iuof_freq = 100 if q4_15==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,3,1421,1421,replace iuof_freq = 80  if q4_15==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,4,1422,1422,replace iuof_freq = 60  if q4_15==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,5,1423,1423,replace iuof_freq = 40  if q4_15==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,6,1424,1424,replace iuof_freq = 0   if q4_15==5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,7,1428,1428,gen iuof_cash = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,8,1429,1429,replace iuof_cash = 100 if q4_16==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,9,1430,1430,replace iuof_cash = 70  if q4_16==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,10,1431,1431,replace iuof_cash = 30  if q4_16==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,11,1432,1432,replace iuof_cash = 0   if q4_16==4 | q4_16==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,12,1436,1436,gen iuof_time = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,13,1437,1437,replace iuof_time = 100 if q4_17==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,14,1438,1438,replace iuof_time = 75  if q4_17==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,15,1439,1439,replace iuof_time = 40  if q4_17==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,16,1440,1440,replace iuof_time = 0   if q4_17==4 | q4_17==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,17,1444,1444,gen iuof_pay = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,18,1445,1445,replace iuof_pay = 100 if q4_24==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,19,1446,1446,replace iuof_pay = 50  if q4_24==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,20,1447,1447,replace iuof_pay = 0   if q4_24==3 | q4_24==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,21,1451,1451,gen iuof_save = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,22,1452,1452,replace iuof_save = 100 if q4_25==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,23,1453,1453,replace iuof_save = 50  if q4_25==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,24,1454,1454,replace iuof_save = 0   if q4_25==3 | q4_25==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,25,1458,1458,gen iuof_notify = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,26,1459,1459,replace iuof_notify = 100 if q4_26==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,27,1460,1460,replace iuof_notify = 50  if q4_26==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,28,1461,1461,replace iuof_notify = 0   if q4_26==3 | q4_26==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,29,1465,1465,gen iuof_risk = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,30,1466,1466,replace iuof_risk = 0   if q4_27==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,31,1467,1467,replace iuof_risk = 100 if q4_27==0 | q4_27==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,32,1471,1472,egen iuof_score = rowmean(iuof_freq iuof_cash iuof_time iuof_pay iuof_save iuof_notify iuof_risk),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,33,1475,1475,gen iuof_score_01 = iuof_score/100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,34,1478,1478,egen iuof_score_std = std(iuof_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,35,1482,1482,gen iuof_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,36,1483,1483,replace iuof_cat = 1 if iuof_score_01 < 0.5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,37,1484,1484,replace iuof_cat = 2 if iuof_score_01 >= 0.5 & iuof_score_01 < 0.8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+IUOF,38,1485,1485,replace iuof_cat = 3 if iuof_score_01 >= 0.8,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iuof-8714646\source_operation_checks.json
+OQI,1,1501,1501,gen qr_usage = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,2,1502,1502,replace qr_usage = 1 if q5_4 == 1 | q5_4 == 2 | q5_5 == 3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,3,1503,1503,replace qr_usage = 0 if q5_4 == 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,4,1518,1518,egen kyc_count = rowtotal(q5_13_1 q5_13_2 q5_13_3 q5_13_4 q5_13_5 q5_13_6),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,5,1519,1519,gen oqi_kyc = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,6,1520,1520,replace oqi_kyc = 100 if kyc_count<=2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,7,1521,1521,replace oqi_kyc = 70  if kyc_count==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,8,1522,1522,replace oqi_kyc = 40  if kyc_count==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,9,1523,1523,replace oqi_kyc = 0   if kyc_count>=5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,10,1527,1527,gen oqi_easy = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,11,1528,1528,replace oqi_easy = 100 if q5_14==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,12,1529,1529,replace oqi_easy = 75  if q5_14==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,13,1530,1530,replace oqi_easy = 25  if q5_14==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,14,1531,1531,replace oqi_easy = 0   if q5_14==4 | q5_14==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,15,1535,1535,gen oqi_time = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,16,1536,1536,replace oqi_time = 100 if q5_15==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,17,1537,1537,replace oqi_time = 80  if q5_15==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,18,1538,1538,replace oqi_time = 60  if q5_15==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,19,1539,1539,replace oqi_time = 30  if q5_15==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,20,1540,1540,replace oqi_time = 0   if q5_15==5 | q5_15==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,21,1544,1544,gen oqi_help = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,22,1545,1545,replace oqi_help = 100 if q5_16==0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,23,1546,1546,replace oqi_help = 0   if q5_16==1 | q5_16==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,24,1550,1550,gen oqi_confirm = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,25,1551,1551,"replace oqi_confirm = 100 if inlist(q5_5,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,26,1552,1552,replace oqi_confirm = 0   if q5_5==4 | q5_5==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,27,1556,1556,gen oqi_cost = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,28,1557,1557,replace oqi_cost = 100 if q5_7==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,29,1558,1558,replace oqi_cost = 70  if q5_7==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,30,1559,1559,replace oqi_cost = 30  if q5_7==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,31,1560,1560,replace oqi_cost = 0   if q5_7==4 | q5_7==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,32,1564,1564,gen oqi_fail = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,33,1565,1565,replace oqi_fail = 100 if q5_9==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,34,1566,1566,replace oqi_fail = 50  if q5_9==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,35,1567,1567,replace oqi_fail = 0   if q5_9==2 | q5_9 ==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,36,1571,1571,gen oqi_terms = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,37,1572,1572,replace oqi_terms = 100 if q5_21==1 & q5_22==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,38,1573,1573,"replace oqi_terms = 50  if inlist(q5_21,2) & inlist(q5_22,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,39,1574,1574,replace oqi_terms = 0   if q5_21==3 | q5_22==3 | q5_21==98 | q5_22==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,40,1578,1578,gen oqi_support = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,41,1579,1579,replace oqi_support = 100 if q5_23==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,42,1580,1580,replace oqi_support = 50  if q5_23==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,43,1581,1581,replace oqi_support = 0   if q5_23==3 | q5_23==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,44,1588,1590,egen oqi_score = rowmean(oqi_easy oqi_time oqi_help oqi_kyc oqi_cost oqi_confirm oqi_fail oqi_terms oqi_support),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,45,1593,1593,gen oqi_score_01 = oqi_score/100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,46,1596,1596,egen oqi_score_std = std(oqi_score),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,47,1600,1600,gen oqi_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,48,1601,1601,replace oqi_cat = 1 if oqi_score < 45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,49,1602,1602,replace oqi_cat = 2 if oqi_score >= 45 & oqi_score < 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+OQI,50,1603,1603,replace oqi_cat = 3 if oqi_score >= 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\oqi-4b8a2c5\source_operation_checks.json
+IURD,1,1627,1627,gen iurd_freq = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,2,1628,1628,replace iurd_freq = 100 if q6_2==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,3,1629,1629,replace iurd_freq = 75  if q6_2==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,4,1630,1630,replace iurd_freq = 25  if q6_2==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,5,1631,1631,replace iurd_freq = 0   if q6_2==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,6,1635,1635,gen iurd_digital = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,7,1636,1636,replace iurd_digital = 0   if q6_13==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,8,1637,1637,"replace iurd_digital = 100  if inlist(q6_13,2,3,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,9,1641,1641,gen iurd_recent = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,10,1642,1642,replace iurd_recent = 100 if q6_14==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,11,1643,1643,replace iurd_recent = 0   if q6_14==0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,12,1648,1648,gen iurd_ops = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,13,1649,1649,replace iurd_ops = 20  if q6_15==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,14,1650,1650,replace iurd_ops = 40  if q6_15==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,15,1651,1651,replace iurd_ops = 60  if q6_15==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,16,1652,1652,replace iurd_ops = 80  if q6_15==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,17,1653,1653,replace iurd_ops = 100 if q6_15==5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,18,1657,1657,gen iurd_canal = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,19,1658,1658,"replace iurd_canal = 100 if inlist(q6_4, 1, 2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,20,1659,1659,"replace iurd_canal = 0   if inlist(q6_4, 3, 4, 5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,21,1663,1663,egen iurd_score = rowmean(iurd_freq iurd_recent iurd_ops iurd_digital iurd_canal),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,22,1666,1666,gen iurd_score_01 = iurd_score/100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,23,1670,1670,gen iurd_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,24,1671,1671,replace iurd_cat = 1 if iurd_score < 30,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,25,1672,1672,replace iurd_cat = 2 if iurd_score >= 30 & iurd_score < 55,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IURD,26,1673,1673,replace iurd_cat = 3 if iurd_score >= 55,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iurd-da6c988\source_operation_checks.json
+IETR,1,1684,1684,gen ietr_time = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,2,1685,1685,replace ietr_time = 100 if q6_6==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,3,1686,1686,replace ietr_time = 80  if q6_6==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,4,1687,1687,replace ietr_time = 60  if q6_6==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,5,1688,1688,replace ietr_time = 30  if q6_6==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,6,1689,1689,replace ietr_time = 0   if q6_6==5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,7,1693,1693,gen ietr_cost_fee = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,8,1694,1694,replace ietr_cost_fee = 100 if q6_9==1 | q6_9==99,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,9,1695,1695,replace ietr_cost_fee = 50  if q6_9==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,10,1696,1696,replace ietr_cost_fee = 0   if q6_9==3 | q6_9==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,11,1698,1698,gen ietr_cost_fx = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,12,1699,1699,replace ietr_cost_fx = 100 if q6_18==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,13,1700,1700,replace ietr_cost_fx = 50  if q6_18==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,14,1701,1701,replace ietr_cost_fx = 0   if q6_18==3 | q6_18==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,15,1703,1703,egen ietr_cost = rowmean(ietr_cost_fee ietr_cost_fx),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,16,1705,1705,drop ietr_cost_fee ietr_cost_fx,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,17,1708,1708,gen ietr_conf_rem = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,18,1709,1709,replace ietr_conf_rem = 100 if q6_11>=1 & q6_11<5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,19,1710,1710,replace ietr_conf_rem = 0   if q6_11==6 | q6_11 == 5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,20,1712,1712,gen ietr_conf_pay = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,21,1713,1713,replace ietr_conf_pay = 100 if q6_20==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,22,1714,1714,replace ietr_conf_pay = 50  if q6_20==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,23,1715,1715,replace ietr_conf_pay = 0   if q6_20==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,24,1717,1717,egen ietr_confirm = rowmean(ietr_conf_rem ietr_conf_pay),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,25,1719,1719,drop ietr_conf_rem ietr_conf_pay,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,26,1722,1722,gen ietr_problem = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,27,1723,1723,replace ietr_problem = 100 if q6_16==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,28,1724,1724,replace ietr_problem = 75  if q6_16==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,29,1725,1725,replace ietr_problem = 25  if q6_16==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,30,1726,1726,replace ietr_problem = 0   if q6_16==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,31,1730,1730,gen ietr_limits = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,32,1731,1731,replace ietr_limits = 100 if q6_17==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,33,1732,1732,"replace ietr_limits = 0   if inlist(q6_17,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,34,1736,1736,gen ietr_speed = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,35,1737,1737,replace ietr_speed = 100 if q6_21==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,36,1738,1738,replace ietr_speed = 80  if q6_21==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,37,1739,1739,replace ietr_speed = 60  if q6_21==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,38,1740,1740,replace ietr_speed = 30  if q6_21==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,39,1741,1741,replace ietr_speed = 0   if q6_21==5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,40,1745,1745,gen ietr_surcharge = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,41,1746,1746,replace ietr_surcharge = 0   if q6_22==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,42,1747,1747,replace ietr_surcharge = 100 if q6_22==2 | q6_22==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,43,1752,1752,gen ietr_clarity = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,44,1753,1753,replace ietr_clarity = 100 if q6_23==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,45,1754,1754,replace ietr_clarity = 50  if q6_23==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,46,1755,1755,replace ietr_clarity = 0   if q6_23==3 | q6_23==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,47,1759,1759,gen ietr_eval = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,48,1760,1760,replace ietr_eval = 0   if q6_24==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,49,1761,1761,replace ietr_eval = 25  if q6_24==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,50,1762,1762,replace ietr_eval = 50  if q6_24==3,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,51,1763,1763,replace ietr_eval = 75  if q6_24==4,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,52,1764,1764,replace ietr_eval = 100 if q6_24==5,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,53,1768,1770,egen ietr_score = rowmean(ietr_time ietr_cost ietr_confirm ietr_problem ietr_limits ietr_speed ietr_surcharge ietr_clarity ietr_eval),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,54,1773,1773,gen ietr_score_01 = ietr_score/100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,55,1777,1777,gen ietr_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,56,1778,1778,replace ietr_cat = 1 if ietr_score < 45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,57,1779,1779,replace ietr_cat = 2 if ietr_score >= 45 & ietr_score < 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IETR,58,1780,1780,replace ietr_cat = 3 if ietr_score >= 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ietr-0452e40\source_operation_checks.json
+IPCS,1,1798,1798,gen e1_reaccion_segura = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,2,1799,1799,"replace e1_reaccion_segura = 1 if inlist(q7_2,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,3,1800,1800,"replace e1_reaccion_segura = 0 if inlist(q7_2,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,4,1804,1804,gen e1_autenticacion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,5,1805,1805,"replace e1_autenticacion = 1 if inlist(q7_6,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,6,1806,1806,replace e1_autenticacion = 0 if q7_6==3 | q7_6==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,7,1810,1810,gen e1_habitos_claves = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,8,1811,1811,"replace e1_habitos_claves = 1 if inlist(q7_7,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,9,1812,1812,"replace e1_habitos_claves = 0 if inlist(q7_7,3,4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,10,1816,1816,gen e1_educacion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,11,1817,1817,replace e1_educacion = 1 if q7_8==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,12,1818,1818,"replace e1_educacion = 0 if inlist(q7_8,2,3,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,13,1822,1822,gen e1_seguridad_percibida = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,14,1823,1823,"replace e1_seguridad_percibida = 1 if inlist(q7_9,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,15,1824,1824,"replace e1_seguridad_percibida = 0 if inlist(q7_9,3,4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,16,1828,1828,gen e1_valora_prevencion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,17,1829,1829,"replace e1_valora_prevencion = 1 if inlist(q7_10,1,2,3,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,18,1830,1830,"replace e1_valora_prevencion = 0 if inlist(q7_10,6,7)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,19,1834,1835,egen IPCS_raw = rowmean(e1_reaccion_segura e1_autenticacion e1_habitos_claves e1_educacion e1_seguridad_percibida e1_valora_prevencion),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,20,1836,1836,gen IPCS = IPCS_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,21,1840,1840,gen IPCS_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,22,1841,1841,replace IPCS_cat = 1 if IPCS < 45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,23,1842,1842,replace IPCS_cat = 2 if IPCS >= 45 & IPCS < 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IPCS,24,1843,1843,replace IPCS_cat = 3 if IPCS >= 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ipcs-bd46bba\source_operation_checks.json
+IEDF,1,1855,1855,gen e2_exposicion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,2,1856,1856,"replace e2_exposicion = 1 if inlist(q7_1,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,3,1857,1857,replace e2_exposicion = 0 if q7_1==3 | q7_1==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,4,1861,1861,gen e2_bloqueo = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,5,1862,1862,"replace e2_bloqueo = 1 if inlist(q7_5,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,6,1863,1863,replace e2_bloqueo = 0 if q7_5==4 | q7_5==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,7,1867,1867,gen e2_problema = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,8,1868,1868,replace e2_problema = 1 if q7_11==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,9,1869,1869,"replace e2_problema = 0 if inlist(q7_11,2,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,10,1873,1873,gen e2_demora = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,11,1874,1874,"replace e2_demora = 1 if inlist(q7_13,3,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,12,1875,1875,"replace e2_demora = 0 if inlist(q7_13,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,13,1879,1879,gen e2_no_resuelto = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,14,1880,1880,"replace e2_no_resuelto = 1 if inlist(q7_14,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,15,1881,1881,replace e2_no_resuelto = 0 if q7_14==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,16,1885,1885,gen e2_insatisfaccion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,17,1886,1886,"replace e2_insatisfaccion = 1 if inlist(q7_15,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,18,1887,1887,"replace e2_insatisfaccion = 0 if inlist(q7_15,3,4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,19,1893,1894,egen IEDF_raw = rowmean(e2_exposicion e2_bloqueo e2_problema e2_demora e2_no_resuelto e2_insatisfaccion),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,20,1895,1895,gen IEDF = IEDF_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,21,1899,1899,gen IEDF_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,22,1900,1900,replace IEDF_cat = 1 if IEDF < 45,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,23,1901,1901,replace IEDF_cat = 2 if IEDF >= 45 & IEDF < 80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IEDF,24,1902,1902,replace IEDF_cat = 3 if IEDF >= 80,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iedf-4b7317e\source_operation_checks.json
+IAER,1,1921,1921,gen f1_decide_remesa = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,2,1922,1922,"replace f1_decide_remesa = 1 if inlist(q9_4,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,3,1923,1923,"replace f1_decide_remesa = 0 if inlist(q9_4,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,4,1927,1927,gen f1_administra = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,5,1928,1928,"replace f1_administra = 1 if inlist(q9_5,1,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,6,1929,1929,"replace f1_administra = 0 if inlist(q9_5,2,4,5,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,7,1933,1933,gen f1_ahorro_negocio = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,8,1934,1934,"replace f1_ahorro_negocio = 1 if inlist(q9_6,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,9,1935,1935,replace f1_ahorro_negocio = 0 if q9_6==3 |q9_6==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,10,1939,1939,gen f1_control = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,11,1940,1940,"replace f1_control = 1 if inlist(q9_7,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,12,1941,1941,"replace f1_control = 0 if inlist(q9_7,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,13,1945,1945,gen f1_cuenta_propia = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,14,1946,1946,replace f1_cuenta_propia = 1 if q9_9==1 |q9_9==2,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,15,1947,1947,"replace f1_cuenta_propia = 0 if inlist(q9_9,3,4,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,16,1951,1951,gen f1_salud = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,17,1952,1952,"replace f1_salud = 1 if inlist(q9_11,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,18,1953,1953,"replace f1_salud = 0 if inlist(q9_11,3,4,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,19,1957,1957,gen f1_gastos = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,20,1958,1958,"replace f1_gastos = 1 if inlist(q9_13,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,21,1959,1959,"replace f1_gastos = 0 if inlist(q9_13,3,4,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,22,1963,1963,gen f1_opinion = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,23,1964,1964,"replace f1_opinion = 1 if inlist(q9_18,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,24,1965,1965,"replace f1_opinion = 0 if inlist(q9_18,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,25,1969,1969,gen f1_cambiar_cuenta = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,26,1970,1970,"replace f1_cambiar_cuenta = 1 if inlist(q9_19,1,2)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,27,1971,1971,replace f1_cambiar_cuenta = 0 if q9_19==3 | q9_19==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,28,1975,1975,gen f1_no_evito = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,29,1976,1976,replace f1_no_evito = 1 if q9_20==0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,30,1977,1977,replace f1_no_evito = 0 if q9_20==1 |q9_20==98,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,31,1983,1983,gen f1_sin_coercion1 = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,32,1984,1984,replace f1_sin_coercion1 = 0 if q9_8 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,33,1985,1985,"replace f1_sin_coercion1 = 1 if inlist(q9_8, 0, 98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,34,1989,1989,gen f1_sin_coercion2 = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,35,1990,1990,replace f1_sin_coercion2 = 0 if q9_16 == 1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,36,1991,1991,"replace f1_sin_coercion2 = 1 if inlist(q9_16, 0, 98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,37,1995,1998,egen IAER_raw = rowmean(f1_decide_remesa f1_administra f1_ahorro_negocio f1_control f1_cuenta_propia f1_salud f1_gastos f1_opinion f1_cambiar_cuenta f1_no_evito f1_sin_coercion1 f1_sin_coercion2),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,38,1999,1999,gen IAER = IAER_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,39,2003,2003,gen IAER_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,40,2004,2004,replace IAER_cat = 1 if IAER < 40,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,41,2005,2005,replace IAER_cat = 2 if IAER >= 40 & IAER < 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+IAER,42,2006,2006,replace IAER_cat = 3 if IAER >= 85,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\iaer-891549f\source_operation_checks.json
+ICPF,1,2018,2018,gen f2_confianza = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,2,2019,2019,"replace f2_confianza = 1 if inlist(q9_1,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,3,2020,2020,"replace f2_confianza = 0 if inlist(q9_1,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,4,2024,2024,gen f2_normas = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,5,2025,2025,"replace f2_normas = 1 if inlist(q9_15,4,5)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,6,2026,2026,"replace f2_normas = 0 if inlist(q9_15,1,2,3)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,7,2030,2030,gen f2_comunidad = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,8,2031,2031,replace f2_comunidad = 1 if q9_22==1,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,9,2032,2032,"replace f2_comunidad = 0 if inlist(q9_22,2,3,4,98)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,10,2040,2040,egen sum_consecuencias = rowtotal(q9_17_1 q9_17_2 q9_17_3),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,11,2041,2041,gen f2_sin_consecuencias = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,12,2042,2042,replace f2_sin_consecuencias = 1 if sum_consecuencias == 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,13,2043,2043,replace f2_sin_consecuencias = 0 if sum_consecuencias > 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,14,2048,2048,egen sum_mitigaciones = rowtotal(q9_21_1 q9_21_2 q9_21_3),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,15,2049,2049,gen f2_sin_mitigaciones = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,16,2050,2050,replace f2_sin_mitigaciones = 1 if sum_mitigaciones == 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,17,2051,2051,replace f2_sin_mitigaciones = 0 if sum_mitigaciones > 0,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,18,2055,2056,egen ICPF_raw = rowmean(f2_confianza f2_normas f2_comunidad f2_sin_consecuencias f2_sin_mitigaciones),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,19,2057,2057,gen ICPF = ICPF_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,20,2061,2061,gen ICPF_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,21,2062,2062,replace ICPF_cat = 1 if ICPF < 40,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,22,2063,2063,replace ICPF_cat = 2 if ICPF >= 40 & ICPF < 70,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+ICPF,23,2064,2064,replace ICPF_cat = 3 if ICPF >= 70,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\icpf-1a1db95\source_operation_checks.json
+IEH,1,2118,2118,"gen g1_info = inlist(q10_4,3,4) if !missing(q10_4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,2,2122,2122,"gen g1_cashout = inlist(q10_6,1,2) if !missing(q10_6)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,3,2126,2126,"gen g1_capacitacion = inlist(q10_10,1,2) if !missing(q10_10)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,4,2130,2130,"gen g1_impacto_cap = inlist(q10_12,3,4) if !missing(q10_12)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,5,2134,2134,gen g1_acompanamiento = (q10_13==1) if !missing(q10_13),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,6,2138,2138,"gen g1_materiales = inlist(q10_16,1,2) if !missing(q10_16)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,7,2142,2143,egen IEH_raw = rowmean(g1_info g1_cashout g1_capacitacion g1_impacto_cap g1_acompanamiento g1_materiales),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,8,2144,2144,gen IEH = IEH_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,9,2148,2148,gen IEH_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,10,2149,2149,replace IEH_cat = 1 if IEH < 40,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,11,2150,2150,replace IEH_cat = 2 if IEH >= 40 & IEH < 70,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IEH,12,2151,2151,replace IEH_cat = 3 if IEH >= 70 & !missing(IEH),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ieh-c639bda\source_operation_checks.json
+IBPD,1,2163,2163,"gen g2_barrera_principal = inrange(q10_1,1,15) if !missing(q10_1)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,2,2167,2170,egen g2_barreras_extra = rowtotal(q10_2_1 q10_2_2 q10_2_3 q10_2_4 q10_2_5 q10_2_6 q10_2_7 q10_2_8 q10_2_9 q10_2_10 q10_2_11 q10_2_12 q10_2_14 q10_2_15),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,3,2171,2171,gen g2_barreras_extra_bin = (g2_barreras_extra > 0) if !missing(g2_barreras_extra),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,4,2175,2175,"gen g2_poca_info = inlist(q10_4,1,2) if !missing(q10_4)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,5,2179,2179,"gen g2_cashout_dificil = inlist(q10_6,3,4,5,98) if !missing(q10_6)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,6,2183,2183,"gen g2_sin_materiales = inlist(q10_16,4,98) if !missing(q10_16)",1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,7,2187,2188,egen IBPD_raw = rowmean(g2_barrera_principal g2_barreras_extra_bin g2_poca_info g2_cashout_dificil g2_sin_materiales),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,8,2189,2189,gen IBPD = IBPD_raw * 100,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,9,2193,2193,gen IBPD_cat = .,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,10,2194,2194,replace IBPD_cat = 1 if IBPD < 40,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,11,2195,2195,replace IBPD_cat = 2 if IBPD >= 40 & IBPD < 70,1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json
+IBPD,12,2196,2196,replace IBPD_cat = 3 if IBPD >= 70 & !missing(IBPD),1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do,audit-local\intake\ibpd-c1050eb\source_operation_checks.json

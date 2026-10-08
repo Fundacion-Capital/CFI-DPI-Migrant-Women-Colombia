@@ -523,7 +523,7 @@ Remaining measurement/exhibit audits and protected M6 replication precede explic
 | M5.02.15.d |90 LEGACY-A block records/210 source locators; no IBPD in 33 actual GSEM or operative clustering, actual outcome/profile overlays retained; literal IEH overlap, sentinel/polarity, fixed/quantile distinctions and association/internal-validation limits. No qualitative, exhibit or fitted-result change. |
 | M5.02.15.e | Independent critic/native source/form proof;768 originals/864 prior-private fingerprints/941 previous pointers/124 IDs/14 milestones/privacy/pending gates retained; same TeX/editor/preamble/fresh built-in compile diagnostics. Commit draft only. |
 
-### Next immediate — M5.01.1 / M5.07.1 consolidated historical measurement and overlap crosswalk (defined only)
+### Consolidated measurement/overlap checkpoint — M5.01.1 / M5.07.1
 
 All fifteen individual historical construct audits are bounded evidence, not closure of M4/M5/M6. Consolidate before choosing measurement corrections; do not introduce a sixteenth index or silently promote the parent gate.
 
@@ -534,6 +534,32 @@ All fifteen individual historical construct audits are bounded evidence, not clo
 5. **M5.07.1.b** — Crosswalk actual source model/cluster/profile/exhibit consumers against declarations; distinguish outcomes/predictors/indicators/overlays and internal versus independent validation. Static source presence is not fitted-result replication.
 6. **M5.07.1.c** — Consolidate all open measurement findings and unmet sample/design/M4/M5/M6 dependencies; specify the next protected replication frontier and author decisions required at M7. No estimator search, scientific revision or parent promotion.
 7. **M5.07.1.d** — Independent review, preservation of originals/sealed packets/pointers/124 IDs/14 milestones/privacy/pending gates, same-file LaTeX diagnostics, explicit residual limits and full proposed commit title/body. No staging, commit, push, cloud/history/access/Overleaf or release action.
+
+**7 October 2026.** [Detailed consolidated report and proposed commit](CONSOLIDATED_MEASUREMENT_CROSSWALK.md); [safe source-metadata crosswalk tables](measurement-crosswalk/). The seven children are bounded historical characterization, not a parent Measurement/Replication/Method Gate. The earlier version-domain child also labelled M5.01.1 remains a dated prior checkpoint; the `.a–.c` children here are the explicitly requested current consolidated-map work, not a renumbering of primary tasks.
+
+| Child | Evidence and acceptance boundary |
+|---|---|
+| M5.01.1.a |15 unchanged report/seal pins and36 retained identities; ordered native source/recipe authentication; no sealed-packet rerun/rewrite or unique producing-run claim. |
+| M5.01.1.b |89 current scored outer components, exact item/operation/scale lineage, default/dropped/adjacent helpers,99 analysis-alias candidates; IAT/IVS36-state headers only, not alias-value replay. |
+| M5.01.1.c |15 reference composition/sentinel/normalization/category/history contracts, five-version item applicability and model-sample limits; no imputation/recode. |
+| M5.07.1.a |105 pair maps independently reconstructed in Stata:1 literal partial-inverse,7 scored-to-routing,2 common-route-only,95 common-method-only; conditional50/60/60% overlap shares and IETR nested1/(n*k) retained. |
+| M5.07.1.b |33 explicit GSEM/five cluster commands/45 core specs;570 manifest-input and675 core-role rows, seven H1/twelve cluster measures; four IADT counterpart omissions; source use is not fitted evidence. |
+| M5.07.1.c |All103 inherited blocking entries verbatim/open; sample/design/exhibit/provenance/privacy and protected M6/M7 dependencies retained; next operational preflight below. |
+| M5.07.1.d |Separate full-precision/numeric-text/expected-map/core-role read-back, independent critic/native byte/pointer/ID/gate checks and fresh same-file compiler diagnostics. Bounded characterization only; rendering remains unverified if preview initialization fails. |
+
+### Next immediate — M6.01.2 / M6.02.1 operational protected-replication preflight (defined only)
+
+Operationalize the already documented M6.01.1 protected replay plan and [historical input contract](HISTORICAL_INPUT_CONTRACT.md), using this crosswalk before any estimator executes. This next task does not certify original runtime or the parent Replication Gate.
+
+1. **M6.01.2.a — Executor and environment.** Inspect isolated Stata MCP session/default/frame/log state; preserve unrelated work. Pin actual Stata edition/version, wrapper seed behavior, native ado/library/scheme resolution and source version. No installation/update.
+2. **M6.02.1.a — Actual execution route.** Trace master dispatch/commented legacy filenames, preparation/analysis branches, every reload/save/export/log/package/RNG/sort side effect and true input/PLUS paths. A declaration is not an executable entry point; no production-master repair here.
+3. **M6.02.1.b — Stage-specific input/version contract.** Bind source blobs to protected input identities/schema/aliases, sample/filter/denominator/cutpoint and stochastic contracts. Preserve old two-term IVS and all relevant IUOF/IURD/IETR/IPCS/IEDF/IAER/ICPF/IEH/IBPD regimes; do not assume latest state is historical authority.
+4. **M6.01.2.b — Safe destinations and operational adapter.** Specify an exact protected scratch output/write allowlist and minimal reversible path redirection if needed. Preflight no legacy overwrite or public participant/appendix export; no execution of the full producer or estimator yet.
+5. **M6.02.1.c — Comparison contract.** Pin historical target N/values/coefficients/SE/fit/posteriors/class labels/exhibits and explicit numeric/display/RNG comparison rules for later M6.04/.06/.07/.08. Unknown targets remain unverified, not filled by new attractive estimates.
+6. **M6.02.1.d — Failure and authority disposition.** Record unavailable clock/producer-log/compiled-form/runtime evidence, unresolved ethics/disclosure/privacy/sample/design limits and author-owned M7 choices; distinguish technical readiness from permission/scientific validity.
+7. **M6.02.1.e — Independent preflight review.** Verify exact scope, source/prior bytes, all pointers/124 IDs/14 milestones/pending gates and safe write boundaries; retain current handoff and full proposed commit title/body only. No fitting/scientific revision, Git/cloud/history/access/Overleaf action or public-data approval.
+
+Remaining sample/design/exhibit obligations continue in their own milestones. An operational preflight may identify a safely executable protected replay without declaring M0/M4/M5/M6 passed or implementing material M7 decisions.
 
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 

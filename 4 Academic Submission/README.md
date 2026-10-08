@@ -1,8 +1,18 @@
 # Academic redevelopment workspace
 
-**Current checkpoint — 7 October 2026:** bounded [IBPD historical audit](IBPD_MEASUREMENT_AUDIT.md) accepted; **next: M5.01.1 / M5.07.1 consolidated historical measurement and overlap crosswalk**. Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
+**Current checkpoint — 7 October 2026:** [consolidated historical measurement and overlap crosswalk](CONSOLIDATED_MEASUREMENT_CROSSWALK.md), M5.01.1 / M5.07.1, is the current bounded checkpoint. **Next: M6.01.2 / M6.02.1, operational preflight of the protected historical replication contract.** Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
 
 This is the academic redevelopment of the full legacy research manuscript, not a republication of the condensed CFI deliverables. The governing milestones and scientific boundaries are in [ACADEMIC_SUBMISSION_WORKPLAN.md](ACADEMIC_SUBMISSION_WORKPLAN.md). This workspace was initialized against repository commit `151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6` on 5 October 2026. No historical analysis or manuscript was changed during intake.
+
+## Consolidated measurement/overlap checkpoint — 7 October 2026
+
+[Full crosswalk, evidence ceilings, open findings, next task and proposed commit](CONSOLIDATED_MEASUREMENT_CROSSWALK.md). The [metadata-only tables](measurement-crosswalk/) connect all fifteen accepted measurement reports to89 scored outer terms, native current/historical operations, five-version routes, denominator/sentinel/scale contracts,99 analysis-alias candidates and105 pair relationships. One pair literally shares scored items (IEH–IBPD); seven have scored-to-routing dependencies and two share routing only. Conditional overlap shares and nested IETR weights are explicit; no statistical independence or scientific validity is inferred.
+
+Actual source inclusion differs from declarations: preferred H1 has seven measures; operative clustering twelve;33 explicit GSEM bodies and45 core specifications are catalogued, with570 manifest-input and675 core-role rows. Four standardized core counterparts omit IADT relative to raw full models. IAT/IVS analysis aliases receive36-state header-only Stata checks, not participant-value replay. Source inclusion is not fitted-result/sample/exhibit reproduction. All103 inherited blocking entries remain unchanged and open; original15 reports/seals are preserved.
+
+Definitive Stata MCP source/weight/polarity checks and separate numerical-text/expected-map/core-role read-back close normally in empty isolated sessions. Native preservation and the independent review govern bounded acceptance:768 original occurrences,938 prior-private fingerprints,1,016 previous pointers,124 primary task IDs,14 milestones, production/qualitative sources and all pending gates must remain intact. Fresh same-file built-in LaTeX diagnostics are retained; Windows preview-helper failure leaves compilation/layout unverified. No participant export, model fitting, production/scientific repair, staging/commit/push, cloud/history/access or Overleaf synchronization is included; zero participant fields are approved for public release.
+
+The next seven-child operational preflight implements the earlier M6.01.1 plan, without executing estimators or installing packages. Historical input/version, environment, reload/output/side-effect, RNG and comparison contracts must be operational before protected M6 fitting and explicit M7 revisions. Formal Paper-WorkFlow Stage2 entry still lacks its proposal prerequisite; this is preparation evidence, not stage promotion.
 
 ## IBPD checkpoint — 7 October 2026
 

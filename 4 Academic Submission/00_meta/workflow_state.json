@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "IBPD_MEASUREMENT_AUDIT.md#9-next-immediate-task-and-commit-draft",
+    "latest_handoff": "CONSOLIDATED_MEASUREMENT_CROSSWALK.md#9-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-07 IBPD: exact12operations/3807referencecells/64719statecells;5formnative match;36identities17complete3recipes194157variantcells24aliases10152cells;18000legalfactors294907subsets factorized; independentMCP numeric-text/readback/closedlogs/empty sessions/native/critic/preservation;768original864priorfingerprints941previouspointers; fresh native Windows helper setup-refresh failure/layoutunverified; allparentgatespending,next consolidated measurement-overlap crosswalk.",
+    "last_recovery_probe": "2026-10-07 M5.01.1/M5.07.1 seven bounded children accepted on native source417operations/89outerterms/105pairs/99analysisaliases; definitiveMCP header/driver04/core02/readback03/itemcount receipt plus independentcritic and final byte/pointer/ID/gate seal.33explicitGSEM5cluster45core570manifest675roles; no fitting or participant values loaded/exported.768original938priorfingerprints1016earlierpointers/124IDs14milestones103blocking entries intact; allparentgatespending/zeroapprovedfields. Corrected only utility import/name/helper/predictor/alias-type/IVSauxiliary/form_ame-vacuity errors; superseded attempts excluded. Fresh same-file native compiler fails beforeTeX Windowshelper setuprefresh; layoutunverified. Next M6.01.2/M6.02.1 seven-child operational protected-replication preflight; no production/scientific/Git/cloud/Overleaf action.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -222,7 +222,7 @@
       "IBPD_MEASUREMENT_AUDIT.md: IBPD-07 noIBPD in33actualGSEM or operative clustering; actual outcome/profile uses and literal IEH overlap not external/causal validation.",
       "IBPD_MEASUREMENT_AUDIT.md: IBPD-08 legacy prevention/mediation/institutional/exhibit/fitted-result provenance remains for protectedM6/M7; qualitative unchanged."
     ],
-    "last_audit": "2026-10-07 bounded M4.03.17/M5.02.15 historical IBPD measurement audit accepted with eight scientific findings open; next M5.01.1/M5.07.1 consolidated historical measurement and overlap crosswalk; no parent gate passed."
+    "last_audit": "2026-10-07 M5.01.1/M5.07.1 consolidated characterization checkpoint; parent empirical audit remains pending. See CONSOLIDATED_MEASUREMENT_CROSSWALK.md and bounded validation seal; no production/revised/fitted result changes."
   },
   "stages": {
     "0_intake_setup": "in_progress",
@@ -1404,7 +1404,72 @@
     "historical_ibpd_state_source_variant_summary_csv": "audit-local/intake/ibpd-c1050eb/state_source_variant_summary.csv",
     "historical_ibpd_verified_score_statistics_csv": "audit-local/intake/ibpd-c1050eb/verified_score_statistics.csv",
     "historical_ibpd_workflow_query_receipts_json": "audit-local/intake/ibpd-c1050eb/workflow_query_receipts.json",
-    "historical_ibpd_measurement_audit": "IBPD_MEASUREMENT_AUDIT.md"
+    "historical_ibpd_measurement_audit": "IBPD_MEASUREMENT_AUDIT.md",
+    "historical_consolidated_measurement_crosswalk": "CONSOLIDATED_MEASUREMENT_CROSSWALK.md",
+    "measurement_crosswalk_private_actual_calls_json": "audit-local/intake/measurement-crosswalk-111ed93/actual_calls.json",
+    "measurement_crosswalk_private_actual_model_inputs_csv": "audit-local/intake/measurement-crosswalk-111ed93/actual_model_inputs.csv",
+    "measurement_crosswalk_private_additional_historical_policy_pins_json": "audit-local/intake/measurement-crosswalk-111ed93/additional_historical_policy_pins.json",
+    "measurement_crosswalk_public_components_csv": "measurement-crosswalk/components.csv",
+    "measurement_crosswalk_private_components_csv": "audit-local/intake/measurement-crosswalk-111ed93/components.csv",
+    "measurement_crosswalk_private_consumer_locators_csv": "audit-local/intake/measurement-crosswalk-111ed93/consumer_locators.csv",
+    "measurement_crosswalk_public_consumer_summary_csv": "measurement-crosswalk/consumer_summary.csv",
+    "measurement_crosswalk_private_consumer_summary_csv": "audit-local/intake/measurement-crosswalk-111ed93/consumer_summary.csv",
+    "measurement_crosswalk_public_core_consumer_summary_csv": "measurement-crosswalk/core_consumer_summary.csv",
+    "measurement_crosswalk_private_core_consumer_summary_csv": "audit-local/intake/measurement-crosswalk-111ed93/core_consumer_summary.csv",
+    "measurement_crosswalk_private_core_model_inputs_csv": "audit-local/intake/measurement-crosswalk-111ed93/core_model_inputs.csv",
+    "measurement_crosswalk_private_core_model_presence_csv": "audit-local/intake/measurement-crosswalk-111ed93/core_model_presence.csv",
+    "measurement_crosswalk_private_core_model_source_manifest_json": "audit-local/intake/measurement-crosswalk-111ed93/core_model_source_manifest.json",
+    "measurement_crosswalk_public_core_model_specifications_csv": "measurement-crosswalk/core_model_specifications.csv",
+    "measurement_crosswalk_private_core_model_specifications_csv": "audit-local/intake/measurement-crosswalk-111ed93/core_model_specifications.csv",
+    "measurement_crosswalk_private_core_roles_tool_receipt_02_json": "audit-local/intake/measurement-crosswalk-111ed93/core_roles_tool_receipt_02.json",
+    "measurement_crosswalk_private_core_roles_do": "audit-local/intake/measurement-crosswalk-111ed93/core_roles.do",
+    "measurement_crosswalk_private_core_roles_log": "audit-local/intake/measurement-crosswalk-111ed93/core_roles.log",
+    "measurement_crosswalk_private_crosswalk_build_py": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_build.py",
+    "measurement_crosswalk_private_crosswalk_check_py": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_check.py",
+    "measurement_crosswalk_private_crosswalk_driver_do": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_driver.do",
+    "measurement_crosswalk_private_crosswalk_driver_log": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_driver.log",
+    "measurement_crosswalk_private_crosswalk_readback_do": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_readback.do",
+    "measurement_crosswalk_private_crosswalk_readback_log": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_readback.log",
+    "measurement_crosswalk_private_crosswalk_validation_json": "audit-local/intake/measurement-crosswalk-111ed93/crosswalk_validation.json",
+    "measurement_crosswalk_public_current_source_operations_csv": "measurement-crosswalk/current_source_operations.csv",
+    "measurement_crosswalk_private_current_source_operations_csv": "audit-local/intake/measurement-crosswalk-111ed93/current_source_operations.csv",
+    "measurement_crosswalk_private_driver_tool_receipt_03_json": "audit-local/intake/measurement-crosswalk-111ed93/driver_tool_receipt_03.json",
+    "measurement_crosswalk_private_entry_preservation_json": "audit-local/intake/measurement-crosswalk-111ed93/entry_preservation.json",
+    "measurement_crosswalk_private_excluded_helpers_csv": "audit-local/intake/measurement-crosswalk-111ed93/excluded_helpers.csv",
+    "measurement_crosswalk_private_header_metadata_do": "audit-local/intake/measurement-crosswalk-111ed93/header_metadata.do",
+    "measurement_crosswalk_private_header_metadata_log": "audit-local/intake/measurement-crosswalk-111ed93/header_metadata.log",
+    "measurement_crosswalk_private_header_tool_receipt_json": "audit-local/intake/measurement-crosswalk-111ed93/header_tool_receipt.json",
+    "measurement_crosswalk_private_iat_ivs_alias_headers_csv": "audit-local/intake/measurement-crosswalk-111ed93/iat_ivs_alias_headers.csv",
+    "measurement_crosswalk_private_ietr_complete_weights_csv": "audit-local/intake/measurement-crosswalk-111ed93/ietr_complete_weights.csv",
+    "measurement_crosswalk_public_instrument_routes_csv": "measurement-crosswalk/instrument_routes.csv",
+    "measurement_crosswalk_private_instrument_routes_csv": "audit-local/intake/measurement-crosswalk-111ed93/instrument_routes.csv",
+    "measurement_crosswalk_private_item_edges_csv": "audit-local/intake/measurement-crosswalk-111ed93/item_edges.csv",
+    "measurement_crosswalk_private_latex_compile_receipt_json": "audit-local/intake/measurement-crosswalk-111ed93/latex_compile_receipt.json",
+    "measurement_crosswalk_public_measurement_contracts_csv": "measurement-crosswalk/measurement_contracts.csv",
+    "measurement_crosswalk_private_measurement_contracts_csv": "audit-local/intake/measurement-crosswalk-111ed93/measurement_contracts.csv",
+    "measurement_crosswalk_public_measurement_manifest_csv": "measurement-crosswalk/measurement_manifest.csv",
+    "measurement_crosswalk_private_measurement_manifest_csv": "audit-local/intake/measurement-crosswalk-111ed93/measurement_manifest.csv",
+    "measurement_crosswalk_public_open_findings_csv": "measurement-crosswalk/open_findings.csv",
+    "measurement_crosswalk_private_open_findings_csv": "audit-local/intake/measurement-crosswalk-111ed93/open_findings.csv",
+    "measurement_crosswalk_public_overlap_pairs_csv": "measurement-crosswalk/overlap_pairs.csv",
+    "measurement_crosswalk_private_overlap_pairs_csv": "audit-local/intake/measurement-crosswalk-111ed93/overlap_pairs.csv",
+    "measurement_crosswalk_private_overlap_weight_cases_csv": "audit-local/intake/measurement-crosswalk-111ed93/overlap_weight_cases.csv",
+    "measurement_crosswalk_private_progress_md": "audit-local/intake/measurement-crosswalk-111ed93/progress.md",
+    "measurement_crosswalk_private_readback_tool_receipt_02_json": "audit-local/intake/measurement-crosswalk-111ed93/readback_tool_receipt_02.json",
+    "measurement_crosswalk_public_recipe_operations_csv": "measurement-crosswalk/recipe_operations.csv",
+    "measurement_crosswalk_private_recipe_operations_csv": "audit-local/intake/measurement-crosswalk-111ed93/recipe_operations.csv",
+    "measurement_crosswalk_public_representations_csv": "measurement-crosswalk/representations.csv",
+    "measurement_crosswalk_private_representations_csv": "audit-local/intake/measurement-crosswalk-111ed93/representations.csv",
+    "measurement_crosswalk_private_retained_state_identities_csv": "audit-local/intake/measurement-crosswalk-111ed93/retained_state_identities.csv",
+    "measurement_crosswalk_private_shared_item_mapping_csv": "audit-local/intake/measurement-crosswalk-111ed93/shared_item_mapping.csv",
+    "measurement_crosswalk_private_source_metadata_receipt_json": "audit-local/intake/measurement-crosswalk-111ed93/source_metadata_receipt.json",
+    "measurement_crosswalk_private_test_dependency_py": "audit-local/intake/measurement-crosswalk-111ed93/test_dependency.py",
+    "measurement_crosswalk_private_independent_source_review_md": "audit-local/intake/measurement-crosswalk-111ed93/independent_source_review.md",
+    "measurement_crosswalk_private_preservation_closeout_json": "audit-local/intake/measurement-crosswalk-111ed93/preservation_closeout.json",
+    "measurement_crosswalk_private_item_count_tool_receipt_json": "audit-local/intake/measurement-crosswalk-111ed93/item_count_tool_receipt.json",
+    "measurement_crosswalk_private_driver_tool_receipt_04_json": "audit-local/intake/measurement-crosswalk-111ed93/driver_tool_receipt_04.json",
+    "measurement_crosswalk_private_readback_tool_receipt_03_json": "audit-local/intake/measurement-crosswalk-111ed93/readback_tool_receipt_03.json",
+    "measurement_crosswalk_private_latex_compile_receipt_initial_json": "audit-local/intake/measurement-crosswalk-111ed93/latex_compile_receipt_initial.json"
   },
   "decisions": [
     {
@@ -1770,7 +1835,23 @@
     {
       "date": "2026-10-07",
       "decision": "Next immediate M5.01.1/M5.07.1 consolidated historical measurement and overlap crosswalk across all15audited constructs;seven granular children defined only. Consolidate exact components/aliases/denominators/sentinels/literal-versus-route overlap/actual-versus-declared consumers/open findings and protectedM6 frontier. No new estimator or recode;sample/design/exhibit obligations and historical replication precede explicitM7 scientific revisions."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Consolidate all15 sealed historical measurement audits via exact native operations/routes/alias-presence/history and Stata MCP105pair/conditional-weight/polarity/actualconsumer checks.89outercomponents;33GSEM/fivecluster/45core570manifest675roles. All103 inherited blocking entries remain verbatim/open. IAT/IVSnewalias evidence headeronly, no participant values loaded/exported or new estimation. Independent critic/native preservation/seal governs bounded child acceptance; no parent Measurement/Replication/Method Gate."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Preserve768overlapping original occurrences938prior-private fingerprintsall1016earlierpointers124primarytasks14milestones15reports/seals and qualitative/production sources. Diagnostic-only import/header-length/helper-overinclusion/core-predictor-assumption defects repaired and full affected checks repeated; superseded attempts excluded. Fresh same-file built-in LaTeX preview fails beforeTeX at Windows helper setuprefresh; renderingunverified, noalternatecompiler/PDF/tab/Overleaf. FormalStage2 remains blocked by missingproposal; preparationonly."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "NextM6.01.2/M6.02.1 is seven-child operationalpreflight implementing priorM6.01.1protectedreplayplan: executor/environment,realmaster/reloads/sideeffects,stage-versioncontracts,protectedwriteallowlist,comparison targets,authority/failurelimits and independentreview. No estimatorrun, packageinstallation, production/scientificrepair, participantderivative, Gitstage/commit/push/cloud/history/access/Overleaf/publicrelease action. Fullproposedcommittitle/body only; allparentgatespending."
+    },
+    {
+      "date": "2026-10-07",
+      "decision": "Fresh independent crosswalk critic passes after correcting diagnostic-only direct-item binary labels, omitted unscored IVS recode and nonexistent form_D_z assertion. Final metadata contains417nativeoperations (IVS26) and1136current/historical-operation rows;14compared modelIDs explicitly exist including form_ame. Definitive driver04/readback03 supersede earlier successful but incomplete-scope receipts; accepted header/core02/item-count scopes explicit. Final seal/read-only verification preserves all previous sources/pointers/gates; rendering remains unverified. Bounded task acceptance is not parent scientific/release authorization."
     }
   ],
-  "last_updated_beijing": "2026-10-08T00:00:28+08:00"
+  "last_updated_beijing": "2026-10-08T04:20:05+08:00"
 }
