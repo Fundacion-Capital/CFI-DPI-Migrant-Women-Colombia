@@ -1,8 +1,14 @@
 # Academic redevelopment workspace
 
-**Current checkpoint — 7 October 2026:** [consolidated historical measurement and overlap crosswalk](CONSOLIDATED_MEASUREMENT_CROSSWALK.md), M5.01.1 / M5.07.1, is the current bounded checkpoint. **Next: M6.01.2 / M6.02.1, operational preflight of the protected historical replication contract.** Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
+**Current checkpoint — 8 October 2026:** [protected historical replication operational preflight](PROTECTED_REPLICATION_PREFLIGHT.md), M6.01.2 / M6.02.1. Acceptance is bounded by its independent review and private final seal; **producer execution is not yet cleared**. **Next: M6.03.1 / M6.05.1, stage-bound protected execution adapter and immutable numerical-target intake, before any fit.** Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
 
 This is the academic redevelopment of the full legacy research manuscript, not a republication of the condensed CFI deliverables. The governing milestones and scientific boundaries are in [ACADEMIC_SUBMISSION_WORKPLAN.md](ACADEMIC_SUBMISSION_WORKPLAN.md). This workspace was initialized against repository commit `151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6` on 5 October 2026. No historical analysis or manuscript was changed during intake.
+
+## Protected replication preflight — 8 October 2026
+
+[Full operational findings, comparison rules, validation limits and proposed commit](PROTECTED_REPLICATION_PREFLIGHT.md). The [metadata-only contracts](replication-preflight/) bind source/input stages and comparison rules. Current Stata/MP19/four processors differs from the earlier IC observation; analysis itself declares version19 for regressions and version16 in later LCA sections. The live master does not dispatch the CFI producers, initial descriptive output input is missing, coded/NoPII paths retain contact-field headers, and independent git-derived appendix writes require their own protected redirect. Existing library resolution needs a tested owned-session Mata index refresh, not package installation.
+
+36 immutable states are independently header-readable without participant loading; 8,333 lexical statements/780 side-effect locators,154 vendored assets and564 output/appendix occurrences are pinned. Synthetic six-row DTA/CSV/graph write/read-back and guard/locator tests pass; real fits and numerical-target extraction remain pending. Original768 byte occurrences/1,004 earlier-private pins/1,081 existing pointers/124 primary IDs/14milestones/103 open issues and all parent gates are preserved. Shared default remains untouched; owned sessions close empty. Current built-in LaTeX diagnostics govern rendering status; no alternate compiler/tab/Overleaf synchronization. No production, participant derivative, Git/cloud/history/access/release action.
 
 ## Consolidated measurement/overlap checkpoint — 7 October 2026
 

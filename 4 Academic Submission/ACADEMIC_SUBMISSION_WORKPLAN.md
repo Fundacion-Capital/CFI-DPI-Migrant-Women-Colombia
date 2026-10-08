@@ -547,7 +547,7 @@ All fifteen individual historical construct audits are bounded evidence, not clo
 | M5.07.1.c |All103 inherited blocking entries verbatim/open; sample/design/exhibit/provenance/privacy and protected M6/M7 dependencies retained; next operational preflight below. |
 | M5.07.1.d |Separate full-precision/numeric-text/expected-map/core-role read-back, independent critic/native byte/pointer/ID/gate checks and fresh same-file compiler diagnostics. Bounded characterization only; rendering remains unverified if preview initialization fails. |
 
-### Next immediate — M6.01.2 / M6.02.1 operational protected-replication preflight (defined only)
+### Historical preflight plan — M6.01.2 / M6.02.1 (bounded implementation, 8 October 2026)
 
 Operationalize the already documented M6.01.1 protected replay plan and [historical input contract](HISTORICAL_INPUT_CONTRACT.md), using this crosswalk before any estimator executes. This next task does not certify original runtime or the parent Replication Gate.
 
@@ -560,6 +560,22 @@ Operationalize the already documented M6.01.1 protected replay plan and [histori
 7. **M6.02.1.e — Independent preflight review.** Verify exact scope, source/prior bytes, all pointers/124 IDs/14 milestones/pending gates and safe write boundaries; retain current handoff and full proposed commit title/body only. No fitting/scientific revision, Git/cloud/history/access/Overleaf action or public-data approval.
 
 Remaining sample/design/exhibit obligations continue in their own milestones. An operational preflight may identify a safely executable protected replay without declaring M0/M4/M5/M6 passed or implementing material M7 decisions.
+
+**8 October checkpoint:** [operational preflight](PROTECTED_REPLICATION_PREFLIGHT.md) implements these seven children, with acceptance governed by independent review and private final seal. Runtime Stata/MP19 differs from earlier IC; source has version19 regression and version16 LCA settings. Master dispatches are commented legacy filenames; initial descriptive input absent; NoPII naming does not remove contact headers; git-derived appendix outputs and legacy coded writes are unsafe for direct replay. Functional library loading passes after owned-session Mata reindex, without package changes. 36 retained headers,8,333 statements/780 side-effect locators,154 assets/564 output occurrences and protected six-row fixture routes are checked. Full fitted numeric targets and actual producer execution remain pending. Preserve768 original occurrences/1,004 previous-private fingerprints/1,081 earlier pointers/124 primary IDs/14milestones/103 unchanged issues/all parent gates.
+
+### Next immediate — M6.03.1 / M6.05.1 stage-bound protected execution adapter and immutable numerical-target intake (defined only)
+
+Build the smallest reversible operational-only adapter required by the preflight. It must not run the complete producers, fit estimators, change sample/measurement/estimator choices, repair production scripts, overwrite retained targets or move any participant data to public locations.
+
+1. **M6.03.1.a — Explicit stage bindings.** Select and name each protected source/input/version combination from the retained manifests; distinguish current coded input from the old two-term IVS exhibit states. Missing initial output alias needs explicit binding, not an automatic latest-state fallback. Verify schemas, hashes and source-version scope.
+2. **M6.03.1.b — Destination and reload graph.** Enumerate exact outputs/reloads, tempfiles, model files, copy/export/log operations and dynamic helpers for the first bounded stage. Shadow git-derived appendix paths and coded writes as well as output/cluster paths; reject unresolved or source-overlapping destinations.
+3. **M6.05.1.a — Minimal operational adapter.** Preserve originals; use a source-hash-guarded private derivative containing only documented path/environment/dispatch instrumentation. Do not invoke original installer/master logic. Preserve version transitions, formulas, filters, seed/start/order and estimator statements; quantify and review the semantic diff before any production-stage run.
+4. **M6.03.1.c — Immutable numerical-target intake.** Through Stata MCP, read appropriate stored estimate/data/aggregate target metadata and values without fitting. Bind N/e(sample) availability, coefficients/SE/fit, posterior/class fields and display precision to exact artifacts; unknown or precision-limited targets stay unverified. Keep every participant-linked target restricted.
+5. **M6.03.1.d — Negative and synthetic route tests.** Exercise the actual adapter on nonparticipant fixtures, including missing inputs, stale source hashes, undefined macros, escaping/existing writes, independent appendix paths, return-code/log closure and reload failures. Audit actual destinations; do not infer safety from macros alone.
+6. **M6.05.1.b — Statistical-inertness and authority review.** Compare the operational derivative to immutable source; label any potential value/sample/RNG/estimator change as unapproved rather than inert. Preserve unavailable historical runtime/clock/producer evidence and all M7 scientific/ethics/privacy holds.
+7. **M6.03.1.e — Independent review and seal.** Require fresh criticism, source/target/prior preservation, pointer/task/gate checks, empty owned-session closure and proposed full commit title/body. Define the next separately bounded M6.04 run only if the actual adapter and relevant comparison intake are ready; no Git/cloud/access/Overleaf or public release action.
+
+This adapter/target-intake task is a prerequisite, not a new permission to execute all historical estimators or a claim that the parent Replication Gate is complete.
 
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 

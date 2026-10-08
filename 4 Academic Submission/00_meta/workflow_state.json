@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "CONSOLIDATED_MEASUREMENT_CROSSWALK.md#9-next-immediate-task",
+    "latest_handoff": "PROTECTED_REPLICATION_PREFLIGHT.md#7-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-07 M5.01.1/M5.07.1 seven bounded children accepted on native source417operations/89outerterms/105pairs/99analysisaliases; definitiveMCP header/driver04/core02/readback03/itemcount receipt plus independentcritic and final byte/pointer/ID/gate seal.33explicitGSEM5cluster45core570manifest675roles; no fitting or participant values loaded/exported.768original938priorfingerprints1016earlierpointers/124IDs14milestones103blocking entries intact; allparentgatespending/zeroapprovedfields. Corrected only utility import/name/helper/predictor/alias-type/IVSauxiliary/form_ame-vacuity errors; superseded attempts excluded. Fresh same-file native compiler fails beforeTeX Windowshelper setuprefresh; layoutunverified. Next M6.01.2/M6.02.1 seven-child operational protected-replication preflight; no production/scientific/Git/cloud/Overleaf action.",
+    "last_recovery_probe": "2026-10-08 M6.01.2/M6.02.1 protected operational preflight; bounded acceptance governed by fresh independent review and private final seal. Actual StataMP19/4processors; mixed source version19 regressions/version16 LCA; master dispatches commented;initial descriptive input absent;NoPII contact headers and independent git-derived appendix writes block direct replay. Owned-session Mata reindex resolves functional palette load without package changes.36 retained state headers;8333statements780side-effect locators;154assets564target file occurrences;synthetic six-row write/readback/graph and negative guards. Preserve768original occurrences1004prior-private pins1081earlierpointers124IDs14milestones103open entries;allparentgatespending/zeroapprovedfields/noestimation. Next M6.03.1/M6.05.1 protected adapter and immutable numerical-target intake before fits. Shareddefault untouched; actual compiler diagnostic governs render status. No production/scientific/Git/cloud/history/access/Overleaf action.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1469,9 +1469,43 @@
     "measurement_crosswalk_private_item_count_tool_receipt_json": "audit-local/intake/measurement-crosswalk-111ed93/item_count_tool_receipt.json",
     "measurement_crosswalk_private_driver_tool_receipt_04_json": "audit-local/intake/measurement-crosswalk-111ed93/driver_tool_receipt_04.json",
     "measurement_crosswalk_private_readback_tool_receipt_03_json": "audit-local/intake/measurement-crosswalk-111ed93/readback_tool_receipt_03.json",
-    "measurement_crosswalk_private_latex_compile_receipt_initial_json": "audit-local/intake/measurement-crosswalk-111ed93/latex_compile_receipt_initial.json"
+    "measurement_crosswalk_private_latex_compile_receipt_initial_json": "audit-local/intake/measurement-crosswalk-111ed93/latex_compile_receipt_initial.json",
+    "protected_replication_preflight": "PROTECTED_REPLICATION_PREFLIGHT.md",
+    "protected_preflight_stage_contracts": "replication-preflight/stage_contracts.csv",
+    "protected_preflight_comparison_rules": "replication-preflight/comparison_rules.csv",
+    "protected_preflight_route_summary": "replication-preflight/route_summary.csv",
+    "protected_preflight_entry_preservation": "audit-local/intake/replication-preflight-0df80d3/entry_preservation.json",
+    "protected_preflight_progress": "audit-local/intake/replication-preflight-0df80d3/progress.md",
+    "protected_preflight_source_pins": "audit-local/intake/replication-preflight-0df80d3/source_pins.json",
+    "protected_preflight_source_statements": "audit-local/intake/replication-preflight-0df80d3/source_statements.csv",
+    "protected_preflight_side_effects": "audit-local/intake/replication-preflight-0df80d3/side_effects.csv",
+    "protected_preflight_target_pins": "audit-local/intake/replication-preflight-0df80d3/historical_target_pins.csv",
+    "protected_preflight_vendored_assets": "audit-local/intake/replication-preflight-0df80d3/vendored_asset_pins.json",
+    "protected_preflight_actual_input_paths": "audit-local/intake/replication-preflight-0df80d3/actual_input_paths.json",
+    "protected_preflight_environment_receipt": "audit-local/intake/replication-preflight-0df80d3/environment_tool_receipt.json",
+    "protected_preflight_dependency_receipt": "audit-local/intake/replication-preflight-0df80d3/dependency_tool_receipt.json",
+    "protected_preflight_header_receipt": "audit-local/intake/replication-preflight-0df80d3/header_tool_receipt.json",
+    "protected_preflight_route_header_receipt": "audit-local/intake/replication-preflight-0df80d3/route_header_tool_receipt.json",
+    "protected_preflight_library_reindex_receipt": "audit-local/intake/replication-preflight-0df80d3/library_reindex_tool_receipt.json",
+    "protected_preflight_scratch_definitive_receipt": "audit-local/intake/replication-preflight-0df80d3/scratch_tool_receipt_02.json",
+    "protected_preflight_continuation_definitive_receipt": "audit-local/intake/replication-preflight-0df80d3/continuation_tool_receipt_02.json",
+    "protected_preflight_synthetic_readback_receipt": "audit-local/intake/replication-preflight-0df80d3/synthetic_readback_tool_receipt.json",
+    "protected_preflight_native_checker": "audit-local/intake/replication-preflight-0df80d3/preflight_check.py",
+    "protected_preflight_destination_guard": "audit-local/intake/replication-preflight-0df80d3/destination_guard.py",
+    "protected_preflight_destination_tests": "audit-local/intake/replication-preflight-0df80d3/test_destination.py",
+    "protected_preflight_source_locator": "audit-local/intake/replication-preflight-0df80d3/source_effects.py",
+    "protected_preflight_source_locator_tests": "audit-local/intake/replication-preflight-0df80d3/test_source_effects.py",
+    "protected_preflight_independent_review": "audit-local/intake/replication-preflight-0df80d3/independent_source_review.md",
+    "protected_preflight_latex_compile_receipt": "audit-local/intake/replication-preflight-0df80d3/latex_compile_receipt.json",
+    "protected_preflight_final_session_receipt": "audit-local/intake/replication-preflight-0df80d3/final_session_tool_receipt.json",
+    "protected_preflight_native_final_suite_receipt": "audit-local/intake/replication-preflight-0df80d3/native_final_suite_tool_receipt.json",
+    "protected_preflight_final_validation": "audit-local/intake/replication-preflight-0df80d3/preflight_validation.json"
   },
   "decisions": [
+    {
+      "date": "2026-10-08",
+      "decision": "M6.01.2/M6.02.1 implements operational preflight only, with final acceptance subject to fresh critic and private seal. Missing initial descriptive input, unsafe legacy/independent appendix writes and contact-bearing NoPII schema forbid direct producer execution; original sources remain unchanged. Current StataMP19 runtime is not original-runtime certification; preserve source version19/version16 transitions and all historical recipes. Owned-session library reindex and nonparticipant fixtures validated without installations/fitting. Stage2 prerequisite missing; all parent gates and103 inherited issues unchanged. Next M6.03.1/M6.05.1 protected operational adapter/numerical-target intake before separately scoped M6.04. Commit title/body draft only; no staging/commit/push/history/cloud/access/Overleaf/public release. Shared default untouched; same-file native compiler receipt governs rendering."
+    },
     {
       "date": "2026-10-05",
       "decision": "User selected LEGACY-A, original full draft labelled 31 July 2026, SHA256 99919BBE239C5CE319B986B6B18C534DB02D6E3CB5469FF55EDFC1294CAFC76F, as academic foundation. This is manuscript authority, not analytical validation or prospective design lock."

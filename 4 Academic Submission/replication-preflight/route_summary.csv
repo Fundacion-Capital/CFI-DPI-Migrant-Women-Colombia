@@ -1,0 +1,12 @@
+stage,family,lexical_statements,execution_status
+analysis,environment,70,NOT_EXECUTED
+analysis,input,122,NOT_EXECUTED
+analysis,ordering,83,NOT_EXECUTED
+analysis,session,2,NOT_EXECUTED
+analysis,write,490,NOT_EXECUTED
+master,environment,3,NOT_EXECUTED
+master,install,2,NOT_EXECUTED
+master,session,2,NOT_EXECUTED
+preparation,input,2,NOT_EXECUTED
+preparation,session,1,NOT_EXECUTED
+preparation,write,3,NOT_EXECUTED
