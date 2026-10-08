@@ -1,0 +1,7 @@
+legacy_figure,source_asset,comparison,result,limit
+6,fig6_ivs_distribution_apa.png,Density and kdensity extra variant,FRESH_OUTPUT_PRESENT,Not legacy embedded percentage graph or certified old bin engine
+6,fig6_ivs_distribution_porcentage.png,Percentage histogram declared bins,DECLARED_COUNTS_MATCH,No old pixel-height certification
+7,fig8_ivs_by_age.png,Age displayed cells,LEGACY_MATCH_CURRENT_DIFFERS,Word figure number differs filename
+8,fig7_ivs_by_city.png,City displayed cells,LEGACY_MATCH_CURRENT_DIFFERS,Word figure number differs filename
+9,fig9_iat_phone_internet.png,Phone internet displayed cells,LEGACY_AND_CURRENT_MATCH,Original frequency legend issue remains open
+10,fig10_data_stability.png,Interruption displayed cells and denominators,LEGACY_AND_CURRENT_MATCH,Explicit N-A not structural missing

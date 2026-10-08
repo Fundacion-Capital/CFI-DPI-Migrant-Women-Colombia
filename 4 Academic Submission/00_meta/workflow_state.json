@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_STAGE_ADAPTER_AND_TARGET_INTAKE.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_DESCRIPTIVE_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-08 M6.03.1/M6.05.1 bounded protected stage adapter/immutable numerical-target intake. First A125-210 explicitly binds old state37;current35 separate. Six synthetic graphs/six native guard tests/five expected runtime failures;no historical participant producer or new fit. Exact Stata readback31resultsets2962scalars57722matrixcells/native stripes3040fullmacrochunks762coefficientSEpairs;38aggregate datasets17921numeric cells10071textchunks.67dataheaders18identifier-excluding posterior diagnostics11participantfiles headeronly;stored e.sample unavailable/core45full targets/lateradaptersheld. Preserve768original occurrences1046priorprivatepinsall1111earlierpointers124IDs14milestones103openentries/allgates. Three owned sessions empty/logs closed;shareddefault untouched. Independent review/private seal govern acceptance;sameTex/editor/preamble/freshcompileactualfailure renderingunverified. Next M6.04.1/M6.08.2 bounded IAT-IVS descriptive replay/exhibit comparison without fit;M6.03.2/M6.05.2 coretargets/lateradapters queued. No production/scientific/Git/cloud/history/access/Overleaf/public release action.",
+    "last_recovery_probe": "2026-10-08 M6.04.1/M6.08.2 bounded protected descriptive replay. Accepted source125-210 explicitold37 ninefields423 throughStataMCP once; sixfreshprivategraphs;current35notloaded. ExactnineTable2counts/threemeans/43legacydisplaycells/20declaredbincounts;22currentimageversiondifferences and known47.96/47.92 error retained. Allfour9/3/86/20aggregate DTA-CSV17 pairs exacteveryfieldreadback;17images inspected no pixel/font/binengine/uniqueruntime certification. Newprivatefailedpreflight/diagnostic/readback receipts retained/excluded; nooriginalcorrection/newfit. Preserve768originals1216priorprivatepins10priorpublicsnapshots1157earlierpointers124IDs14milestones103openissues/allgates. Ownedworkerempty/restoredPLUS;shareddefaultuntouched. Independentreview/private seal governboundedacceptance;sameTex/editor/preamblefreshactualcompilerdiagnostics. NextM6.03.2/M6.05.2 core45targetintake/nextregressionadapterpreparationbeforefit. NoGit/cloud/history/access/Overleaf/publicparticipantrelease.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1545,7 +1545,32 @@
     "protected_preflight_latex_compile_receipt": "audit-local/intake/replication-preflight-0df80d3/latex_compile_receipt.json",
     "protected_preflight_final_session_receipt": "audit-local/intake/replication-preflight-0df80d3/final_session_tool_receipt.json",
     "protected_preflight_native_final_suite_receipt": "audit-local/intake/replication-preflight-0df80d3/native_final_suite_tool_receipt.json",
-    "protected_preflight_final_validation": "audit-local/intake/replication-preflight-0df80d3/preflight_validation.json"
+    "protected_preflight_final_validation": "audit-local/intake/replication-preflight-0df80d3/preflight_validation.json",
+    "descriptive_replay_report": "PROTECTED_DESCRIPTIVE_REPLAY.md",
+    "descriptive_replay_children": "descriptive-replay/child_acceptance.csv",
+    "descriptive_replay_exhibits": "descriptive-replay/exhibit_comparison.csv",
+    "descriptive_replay_entry": "audit-local/intake/descriptive-replay-eda684a/entry_preservation.json",
+    "descriptive_replay_contract": "audit-local/intake/descriptive-replay-eda684a/replay_contract.json",
+    "descriptive_replay_driver": "audit-local/intake/descriptive-replay-eda684a/descriptive_replay.do",
+    "descriptive_replay_schema": "audit-local/intake/descriptive-replay-eda684a/schema_context_tool_receipt_02.json",
+    "descriptive_replay_execution": "audit-local/intake/descriptive-replay-eda684a/replay_tool_receipt.json",
+    "descriptive_replay_diagnostics": "audit-local/intake/descriptive-replay-eda684a/diagnostics_tool_receipt_03.json",
+    "descriptive_replay_readback": "audit-local/intake/descriptive-replay-eda684a/readback_tool_receipt_02.json",
+    "descriptive_replay_visual": "audit-local/intake/descriptive-replay-eda684a/visual_review.json",
+    "descriptive_replay_closure": "audit-local/intake/descriptive-replay-eda684a/final_closure_tool_receipt.json",
+    "descriptive_replay_session": "audit-local/intake/descriptive-replay-eda684a/final_session_tool_receipt.json",
+    "descriptive_replay_ledger": "audit-local/intake/descriptive-replay-eda684a/progress.md",
+    "descriptive_replay_review": "audit-local/intake/descriptive-replay-eda684a/independent_source_review.md",
+    "descriptive_replay_validation": "audit-local/intake/descriptive-replay-eda684a/descriptive_replay_validation.json",
+    "descriptive_replay_compiler": "audit-local/intake/descriptive-replay-eda684a/latex_compile_receipt.json",
+    "descriptive_replay_table2_dta": "audit-local/intake/descriptive-replay-eda684a/table2_03.dta",
+    "descriptive_replay_table2_csv": "audit-local/intake/descriptive-replay-eda684a/table2_03.csv",
+    "descriptive_replay_means_dta": "audit-local/intake/descriptive-replay-eda684a/means_03.dta",
+    "descriptive_replay_means_csv": "audit-local/intake/descriptive-replay-eda684a/means_03.csv",
+    "descriptive_replay_figure_cells_dta": "audit-local/intake/descriptive-replay-eda684a/figure_cells_03.dta",
+    "descriptive_replay_figure_cells_csv": "audit-local/intake/descriptive-replay-eda684a/figure_cells_03.csv",
+    "descriptive_replay_bins_dta": "audit-local/intake/descriptive-replay-eda684a/bins_03.dta",
+    "descriptive_replay_bins_csv": "audit-local/intake/descriptive-replay-eda684a/bins_03.csv"
   },
   "decisions": [
     {
@@ -1935,7 +1960,11 @@
     {
       "date": "2026-10-07",
       "decision": "Fresh independent crosswalk critic passes after correcting diagnostic-only direct-item binary labels, omitted unscored IVS recode and nonexistent form_D_z assertion. Final metadata contains417nativeoperations (IVS26) and1136current/historical-operation rows;14compared modelIDs explicitly exist including form_ame. Definitive driver04/readback03 supersede earlier successful but incomplete-scope receipts; accepted header/core02/item-count scopes explicit. Final seal/read-only verification preserves all previous sources/pointers/gates; rendering remains unverified. Bounded task acceptance is not parent scientific/release authorization."
+    },
+    {
+      "date": "2026-10-08",
+      "decision": "M6.04.1/M6.08.2 bounded old37 IAT-IVS descriptive replay only; all original scientific statements and prior bytes preserved. Exact numerical/displayed-target and full-precision native/CSV verification plus17image review distinguish22current-version differences and known table error; no fitting/original correction/scientific or release approval. Seven children governed by independent review and private seal, cumulative preservation/state gates, owned-session closure and actual same-file compiler receipt. Nextcore45targets/no-fit regressionadapter preparation separately defined; full commit draft only."
     }
   ],
-  "last_updated_beijing": "2026-10-08T04:20:05+08:00"
+  "last_updated_beijing": "2026-10-08T18:42:00+08:00"
 }
