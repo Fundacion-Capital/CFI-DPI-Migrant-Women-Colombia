@@ -1,8 +1,14 @@
 # Academic redevelopment workspace
 
-**Current checkpoint — 8 October 2026:** [protected historical replication operational preflight](PROTECTED_REPLICATION_PREFLIGHT.md), M6.01.2 / M6.02.1. Acceptance is bounded by its independent review and private final seal; **producer execution is not yet cleared**. **Next: M6.03.1 / M6.05.1, stage-bound protected execution adapter and immutable numerical-target intake, before any fit.** Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
+**Current checkpoint — 8 October 2026:** [protected stage adapter and immutable numerical-target intake](PROTECTED_STAGE_ADAPTER_AND_TARGET_INTAKE.md), M6.03.1 / M6.05.1. Independent review and the private final seal govern bounded acceptance. The first descriptive block is synthetic-tested; no participant producer or historical fit ran. **Next: M6.04.1 / M6.08.2, bounded protected IAT–IVS descriptive replay and exhibit comparison, without fitting.** Core45 targets and later stage/fit adapters remain separately held. Earlier dated handoffs below are historical records, not the current task. All parent gates remain pending.
 
 This is the academic redevelopment of the full legacy research manuscript, not a republication of the condensed CFI deliverables. The governing milestones and scientific boundaries are in [ACADEMIC_SUBMISSION_WORKPLAN.md](ACADEMIC_SUBMISSION_WORKPLAN.md). This workspace was initialized against repository commit `151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6` on 5 October 2026. No historical analysis or manuscript was changed during intake.
+
+## Protected stage adapter and target intake — 8 October 2026
+
+[Full stage/input contract, numerical intake, retained failures, validation limits and proposed commit](PROTECTED_STAGE_ADAPTER_AND_TARGET_INTAKE.md). Four [public-safe metadata tables](protected-stage-adapter/) summarize availability without coefficients, respondent values or private paths. A125–210 is explicitly bound to old state37; state35 is separate, not a latest fallback. The original scientific block is retained; six fresh private graph paths and checked error closure are validated on36 synthetic rows, including five expected failure routes.
+
+Stata-only exact read-back covers31 stored resultsets,2,962 scalars,57,722 matrix cells/native stripes,3,040 macro chunks and762 coefficient/SE pairs;38 aggregate files yield17,921 numerical cells and10,071 text chunks. All67 datasets have headers;18 posterior files have identifier-excluding restricted diagnostics, not row exports. Stored e(sample) is zeroed/unavailable; the S15 models do not stand in for all45 main models. No new fit, original producer repair, scientific correction, public participant derivative or parent-gate promotion occurs. Shared default remains untouched; three owned sessions close empty.768 originals/1,046 prior-private pins/all1,111 earlier pointers/124IDs/14milestones/103 open issues are retained. Same source/editor/preamble and actual compiler diagnostics; no Git/cloud/access/history/Overleaf action.
 
 ## Protected replication preflight — 8 October 2026
 
