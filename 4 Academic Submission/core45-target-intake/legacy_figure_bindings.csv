@@ -1,0 +1,10 @@
+family,model_id,manuscript_caption,caption_block,image_block,repository_figure,byte_identical,numeric_target,visual_check
+iurd,iurd_D_z,Figure 35. Standardized correlates of digital intensity in remittances and payments (IURD),B00673,B00674,fig40_coef_iurd.png,false,unavailable,legacy and repository inspected; not numeric parity
+form,form_ame,Figure 36. Average marginal effects on the probability of receiving remittances through a formal digital channel,B00680,B00681,fig41_ame_formal_remittance.png,false,unavailable,legacy and repository inspected; not numeric parity
+iuof,iuof_D_z,Figure 37. Standardized correlates of operational use of formal accounts and wallets (IUOF),B00687,B00688,fig42_coef_iuof.png,false,unavailable,legacy and repository inspected; not numeric parity
+ietr,ietr_D_z,Figure 38. Standardized correlates of transactional remittances experience in digital payments (IETR),B00699,B00700,fig43_coef_ietr.png,false,unavailable,legacy and repository inspected; not numeric parity
+oqi,oqi_D_z,Figure 39. Standardized correlates of onboarding quality (OQI),B00705,B00706,fig44_coef_oqi.png,false,unavailable,legacy and repository inspected; not numeric parity
+ipcs,ipcs_D_z,Figure 40. Standardized correlates of prevention and sage conduct (IPCS),B00718,B00719,fig45_coef_ipcs.png,false,unavailable,legacy and repository inspected; not numeric parity
+iedf,iedf_D_z,Figure 41. Standardized correlates of fraud exposure and recourse failure (IEDF),B00726,B00727,fig46_coef_iedf.png,false,unavailable,legacy and repository inspected; not numeric parity
+iaer,iaer_D_z,Figure 42. Standardized correlates of autonomy in remittance management (IAER),B00738,B00739,fig47_coef_iaer.png,false,unavailable,legacy and repository inspected; not numeric parity
+icpf,icpf_D_z,Figure 43. Standardized correlates of trust and relational climate (ICPF),B00745,B00746,fig48_coef_icpf.png,false,unavailable,legacy and repository inspected; not numeric parity

@@ -1,5 +1,5 @@
 {
-  "schema_version": 28,
+  "schema_version": 29,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_DESCRIPTIVE_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "CORE45_TARGET_INTAKE_AND_REGRESSION_ADAPTER.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-08 M6.04.1/M6.08.2 bounded protected descriptive replay. Accepted source125-210 explicitold37 ninefields423 throughStataMCP once; sixfreshprivategraphs;current35notloaded. ExactnineTable2counts/threemeans/43legacydisplaycells/20declaredbincounts;22currentimageversiondifferences and known47.96/47.92 error retained. Allfour9/3/86/20aggregate DTA-CSV17 pairs exacteveryfieldreadback;17images inspected no pixel/font/binengine/uniqueruntime certification. Newprivatefailedpreflight/diagnostic/readback receipts retained/excluded; nooriginalcorrection/newfit. Preserve768originals1216priorprivatepins10priorpublicsnapshots1157earlierpointers124IDs14milestones103openissues/allgates. Ownedworkerempty/restoredPLUS;shareddefaultuntouched. Independentreview/private seal governboundedacceptance;sameTex/editor/preamblefreshactualcompilerdiagnostics. NextM6.03.2/M6.05.2 core45targetintake/nextregressionadapterpreparationbeforefit. NoGit/cloud/history/access/Overleaf/publicparticipantrelease.",
+    "last_recovery_probe": "2026-10-08 M6.03.2/M6.05.2 no-fit core45 target intake/held IURD adapter:45 source-exact models;9 matching RTF-TXT pairs;1360 original tokens/850 numeric cells/8 unavailable placeholders;18 bound figures inspected;0 authenticated native core45 targets. Coded35 projected24 fields/literal setup/45 observable counts423OLS402formal, not e(sample). Actual fixed-matrix synthetic outreg2/coefplot/private-pref routes and no-fit guards pass. Unconditional459 before any fit. Preserve768 originals1298 prior-private8 entry-public1182 pointers124IDs14milestones103 unchanged issues/all gates; actual compiler/fresh critic/seal govern bounded acceptance. No original/qualitative correction, participant export, package install, Git/cloud/access/history/Overleaf/release. NextM6.04.2/M6.08.3 five-model IURD replay only with explicit fit authority and fresh preflight. Final executor correction binds actual3DTA diskreadback03, rawq6_4 423nonmissing/21Other coding exclusion, one critic/two Important fixes/all8 declined rulings, eststo empty-bookkeeper preconditions/cleanup/freshguard02, final owned-only closure. Shared-default activity origin unassigned; globalimmutability not certified. Final seal/read-only verification governs acceptance; rendering held after beforeTeX helper failure.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1570,7 +1570,13 @@
     "descriptive_replay_figure_cells_dta": "audit-local/intake/descriptive-replay-eda684a/figure_cells_03.dta",
     "descriptive_replay_figure_cells_csv": "audit-local/intake/descriptive-replay-eda684a/figure_cells_03.csv",
     "descriptive_replay_bins_dta": "audit-local/intake/descriptive-replay-eda684a/bins_03.dta",
-    "descriptive_replay_bins_csv": "audit-local/intake/descriptive-replay-eda684a/bins_03.csv"
+    "descriptive_replay_bins_csv": "audit-local/intake/descriptive-replay-eda684a/bins_03.csv",
+    "core45_targets_report": "CORE45_TARGET_INTAKE_AND_REGRESSION_ADAPTER.md",
+    "core45_target_availability": "core45-target-intake/model_target_availability.csv",
+    "core45_legacy_figures": "core45-target-intake/legacy_figure_bindings.csv",
+    "core45_selected_routes": "core45-target-intake/selected_stage_routes.csv",
+    "core45_child_acceptance": "core45-target-intake/child_acceptance.csv",
+    "core45_validation": "audit-local/intake/core-target-adapter-c33dc62/core45_validation.json"
   },
   "decisions": [
     {
@@ -1965,6 +1971,11 @@
       "date": "2026-10-08",
       "decision": "M6.04.1/M6.08.2 bounded old37 IAT-IVS descriptive replay only; all original scientific statements and prior bytes preserved. Exact numerical/displayed-target and full-precision native/CSV verification plus17image review distinguish22current-version differences and known table error; no fitting/original correction/scientific or release approval. Seven children governed by independent review and private seal, cumulative preservation/state gates, owned-session closure and actual same-file compiler receipt. Nextcore45targets/no-fit regressionadapter preparation separately defined; full commit draft only."
     }
-  ],
-  "last_updated_beijing": "2026-10-08T18:42:00+08:00"
+,
+{
+  "date": "2026-10-08",
+  "decision": "2026-10-08 M6.03.2/M6.05.2 no-fit core45 target intake/held IURD adapter:45 source-exact models;9 matching RTF-TXT pairs;1360 original tokens/850 numeric cells/8 unavailable placeholders;18 bound figures inspected;0 authenticated native core45 targets. Coded35 projected24 fields/literal setup/45 observable counts423OLS402formal, not e(sample). Actual fixed-matrix synthetic outreg2/coefplot/private-pref routes and no-fit guards pass. Unconditional459 before any fit. Preserve768 originals1298 prior-private8 entry-public1182 pointers124IDs14milestones103 unchanged issues/all gates; actual compiler/fresh critic/seal govern bounded acceptance. No original/qualitative correction, participant export, package install, Git/cloud/access/history/Overleaf/release. NextM6.04.2/M6.08.3 five-model IURD replay only with explicit fit authority and fresh preflight."
+}
+],
+  "last_updated_beijing": "2026-10-08T20:21:47+08:00"
 }

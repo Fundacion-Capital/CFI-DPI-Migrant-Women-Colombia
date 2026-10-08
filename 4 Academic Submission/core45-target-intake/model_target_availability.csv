@@ -1,0 +1,46 @@
+model_id,estimator,vce,table_asset,figure_asset,target_scale,precision,full_precision_native_target,observable_complete_cases,fitted_sample_membership,status
+iurd_A,reg,robust,Table_F1_IURD.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iurd_B,reg,robust,Table_F1_IURD.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iurd_C,reg,robust,Table_F1_IURD.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iurd_D,reg,robust,Table_F1_IURD.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iurd_D_z,reg,robust,,fig40_coef_iurd.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+form_A,logit,robust,Table_F1_FormalRemittance.txt,,OR and transformed SE shown,3dp plus original stars,unavailable,402,unverified; no fit,frozen_no_fit
+form_B,logit,robust,Table_F1_FormalRemittance.txt,,OR and transformed SE shown,3dp plus original stars,unavailable,402,unverified; no fit,frozen_no_fit
+form_C,logit,robust,Table_F1_FormalRemittance.txt,,OR and transformed SE shown,3dp plus original stars,unavailable,402,unverified; no fit,frozen_no_fit
+form_D,logit,robust,Table_F1_FormalRemittance.txt,,OR and transformed SE shown,3dp plus original stars,unavailable,402,unverified; no fit,frozen_no_fit
+form_ame,logit,robust,,fig41_ame_formal_remittance.png,AME figure only,visual only; numeric unavailable,unavailable,402,unverified; no fit,frozen_no_fit
+iuof_A,reg,robust,Table_F1_IUOF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iuof_B,reg,robust,Table_F1_IUOF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iuof_C,reg,robust,Table_F1_IUOF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iuof_D,reg,robust,Table_F1_IUOF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iuof_D_z,reg,robust,,fig42_coef_iuof.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+ietr_A,reg,robust,Table_F2_IETR.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ietr_B,reg,robust,Table_F2_IETR.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ietr_C,reg,robust,Table_F2_IETR.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ietr_D,reg,robust,Table_F2_IETR.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ietr_D_z,reg,robust,,fig43_coef_ietr.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+oqi_A,reg,robust,Table_F2_OQI.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+oqi_B,reg,robust,Table_F2_OQI.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+oqi_C,reg,robust,Table_F2_OQI.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+oqi_D,reg,robust,Table_F2_OQI.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+oqi_D_z,reg,robust,,fig44_coef_oqi.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+ipcs_A,reg,robust,Table_F3_IPCS.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ipcs_B,reg,robust,Table_F3_IPCS.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ipcs_C,reg,robust,Table_F3_IPCS.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ipcs_D,reg,robust,Table_F3_IPCS.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+ipcs_D_z,reg,robust,,fig45_coef_ipcs.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+iedf_A,reg,robust,Table_F3_IEDF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iedf_B,reg,robust,Table_F3_IEDF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iedf_C,reg,robust,Table_F3_IEDF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iedf_D,reg,robust,Table_F3_IEDF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iedf_D_z,reg,robust,,fig46_coef_iedf.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+iaer_A,reg,robust,Table_F4_IAER.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iaer_B,reg,robust,Table_F4_IAER.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iaer_C,reg,robust,Table_F4_IAER.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iaer_D,reg,robust,Table_F4_IAER.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+iaer_D_z,reg,robust,,fig47_coef_iaer.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit
+icpf_A,reg,robust,Table_F4_ICPF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+icpf_B,reg,robust,Table_F4_ICPF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+icpf_C,reg,robust,Table_F4_ICPF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+icpf_D,reg,robust,Table_F4_ICPF.txt,,OLS coefficient and robust SE shown,3dp plus original stars,unavailable,423,unverified; no fit,frozen_no_fit
+icpf_D_z,reg,robust,,fig48_coef_icpf.png,standardized coefficient figure only,visual only; numeric unavailable,unavailable,423,unverified; no fit,frozen_no_fit

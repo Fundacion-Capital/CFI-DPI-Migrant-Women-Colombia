@@ -593,7 +593,7 @@ Only the accepted IAT–IVS block, not a full producer or historical fit. Seven 
 
 **8 October bounded checkpoint:** [Full replay/comparison report](PROTECTED_DESCRIPTIVE_REPLAY.md) and [seven-child acceptance/status tables](descriptive-replay/). Analysis125–210 executed once through the accepted private adapter on explicit old37/nine fields/all423 observations, without fitting. Six fresh private graphs; nine table cells and three means exactly agree with retained targets;43 legacy display cells and20 declared-bin counts match. One old printed percentage remains discrepant and22 current-image cells differ by IVS version.17 images inspected; every-field17-digit CSV/native-DTA round-trip passes. Superseded new private helper failures retained/excluded; no original correction or pixel/font/scientific certification.768 originals/1,216 earlier-private pins/ten prior-public snapshots/all1,157 pointers/124primaryIDs/14milestones/103 unchanged open issues/all gates preserved. Owned worker empty/PLUS restored; shared default untouched. Same main.tex/editor/preamble, fresh actual compiler diagnostics, independent review/private seal govern bounded acceptance. Proposed commit only; no Git/cloud/access/history/Overleaf or public derivative.
 
-### Next immediate — M6.03.2 / M6.05.2 core45 target intake and next stage-specific regression adapter preparation (defined only)
+### Historical task contract — M6.03.2 / M6.05.2 core45 target intake and next stage-specific regression adapter preparation (before any fit)
 
 This is numerical-target and no-fit adapter preparation, not authorization to estimate45 models or search specifications. Choose the next source-exact regression stage from the real dependency graph; later LCA adapters are separate. Preserve all historical code/results and scientific findings.
 
@@ -606,6 +606,21 @@ This is numerical-target and no-fit adapter preparation, not authorization to es
 7. **M6.05.2.c — Independent review and sealed handoff.** Fresh criticism, source/target/native-read-back verification, cumulative fingerprints/pointers/task IDs/gates, empty owned-worker closure, same source/preamble/editor and actual native compiler diagnostics. Full proposed commit title/body; define a later separately authorized bounded fit only if prerequisites genuinely pass.
 
 The31 retained scan/final/S15 resultsets are not substitutes for all45 core targets. Any unavailable numerical precision, historical sample membership, unique generating producer/runtime or later LCA destination contract remains held, not invented. This next task is queued, not executed in the descriptive replay.
+
+### M6.03.2 / M6.05.2 bounded checkpoint — 8 October 2026
+
+[Full core45 target/held-adapter report](CORE45_TARGET_INTAKE_AND_REGRESSION_ADAPTER.md) and [four metadata-only tables](core45-target-intake/) implement the seven children above. All45 exact source equations; nine RTF–TXT string-equal table pairs;1,360 retained tokens/850 displayed numeric cells; all18 legacy/repository figures inspected. Native core45 full-precision resultsets and nine standardized/AME numerical targets remain unavailable, not replaced with S15. Coded35 projected24 fields/literal setup/all45 observable Ns pass without fitting;423OLS/402formal are not fitted-sample proof. Five-model IURD adapter retains scientific body/path-only destinations and unconditional459 hold. Native guards and actual synthetic outreg2/coefplot/private-pref routes pass. New failed tooling attempts remain retained/excluded. Fresh independent review/rulings, same-file actual compile, cumulative preservation and restricted seal/read-only verification govern child acceptance.768 originals/1298 earlier-private pins/eight entry-public snapshots/all1182 earlier pointers/124IDs/14milestones/103 unchanged issues/all parent gates preserved. No original correction/participant export/package install/Git/cloud/history/access/Overleaf action or fit.
+
+### Next immediate — M6.04.2 / M6.08.3 first bounded protected IURD replay (explicit fit authority required)
+
+Only IURD A/B/C/D/D_z, source1248–1292; no other40core models or LCA. Queued contract, not fit authority from this preparation:
+
+1. **M6.04.2.a — Source/input/target/authority preflight.** Revalidate final seal, literal source/coded35/dependencies/targets and obtain explicit five-model fit authorization. Retain runtime/producer/scientific and unavailable-target holds. Stop before fitting on any failure.
+2. **M6.04.2.b — Native capture/closure preflight.** Fresh private no-overwrite destinations and preference overlay; test log/PLUS/scheme/globals/normal/error closure. Add native aggregate b/V/scalar/stripe capture/read-back without changing scientific statements or exporting rows.
+3. **M6.04.2.c — One bounded fit.** After both preflights pass, remove the hold only for the separately authorized execution derivative and execute exactly these five models once through Stata MCP. No full producer/preparation rerun/input fallback/tuning; preserve failed proof.
+4. **M6.08.3.a — Native/displayed comparison.** Every-field native matrix/stripe/scalar read-back, exact available N/term/star/3dp table strings and visual-only standardized graph assessment. Unavailable full-precision history is not invented; no sample-membership mask export.
+5. **M6.04.2.d / M6.08.3.b — Scientific and mutation boundary.** Separate replication/discrepancy/risk/proposal; preserve originals/prior evidence/103 issues/all gates. Verify output allowlist, owned closure and shared-worker noninterference; no historical repair.
+6. **M6.08.3.c — Reviewed sealed handoff.** One fresh critic/rulings, cumulative fingerprints/pointers/task IDs, same main.tex/editor/preamble and actual compiler diagnostics; final seal plus read-only verification, full proposed commit and next smallest stage. No Git/cloud/Overleaf/release action without separate authority.
 
 ### M0 — Scope, access, authority, privacy, and prior dissemination
 
