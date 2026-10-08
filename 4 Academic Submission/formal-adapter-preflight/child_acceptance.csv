@@ -1,0 +1,7 @@
+child,scope,evidence,status,scientific_approval,release_approval,real_fit_executed
+M6.03.3.a,entry/authority/source,768 originals;1580 prior-private;13 public entry snapshots;five source-exact specifications;no fit authority,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False
+M6.05.3.a,historical target/type,210 strings;96 numeric;eight unavailable;40 RTF rows paired;two original figures inspected visual-only,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False
+M6.03.3.b,no-fit eligibility,423 loaded;402 eligible;21 Other coding exclusions;all15 aliases use423;fitted properties unverified,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False
+M6.03.3.c,held adapter/destinations,actual held459;fit destination absent;five fits/six raw and posted native states;no-overwrite guard,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False
+M6.03.3.d / M6.05.3.b,fixed synthetic/native preflight,483 native records/all fields exact reopened/CSV17;four OR columns;corrupt-copy rejection;carrier limit recorded,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False
+M6.05.3.c,audited handoff,direct producer tests;actual request journal;fresh critic/rulings;compiler receipt;private seal/read-only verification govern acceptance,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False,False

@@ -1,0 +1,6 @@
+model,source_first_line,source_last_line,estimator,loaded,observable_eligible,other_coding_exclusions,missing_predictors,standardization_cohort,RHS_plus_intercept_slots,actual_fitted_N,convergence_rank_separation,native_state,display,status
+form_A,1300,1300,robust logit,423,402,21,0,423,9,not fitted,unverified,form_A,OR and delta-method transformed SE,HELD_BEFORE_FITTING
+form_B,1306,1306,robust logit,423,402,21,0,423,13,not fitted,unverified,form_B,OR and delta-method transformed SE,HELD_BEFORE_FITTING
+form_C,1312,1312,robust logit,423,402,21,0,423,15,not fitted,unverified,form_C,OR and delta-method transformed SE,HELD_BEFORE_FITTING
+form_D,1318,1318,robust logit,423,402,21,0,423,17,not fitted,unverified,form_D,OR and delta-method transformed SE,HELD_BEFORE_FITTING
+form_ame,1325,1325,robust logit; posted margins after fifth raw logit,423,402,21,0,423,16,not fitted,unverified,form_z_logit then form_ame posted,seven posted AMEs; historical numerical figure target unavailable,HELD_BEFORE_FITTING
