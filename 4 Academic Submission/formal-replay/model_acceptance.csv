@@ -1,0 +1,6 @@
+model,native_raw_state,source_first_line,source_last_line,estimator,loaded,eligible,other_coding_exclusions,standardization_cohort,actual_fitted_N,slots,rank,base_terms,converged,unexpected_omissions,display,status,scientific_approval,release_approval
+form_A,form_A,1300,1300,robust logit,423,402,21,423,402,9,7,2,1,0,OR and delta-method transformed SE,BOUNDED_REPLAY_PASS_WITH_RETAINED_GUARD_FAILURE_NO_REFIT,False,False
+form_B,form_B,1306,1306,robust logit,423,402,21,423,402,13,11,2,1,0,OR and delta-method transformed SE,BOUNDED_REPLAY_PASS_WITH_RETAINED_GUARD_FAILURE_NO_REFIT,False,False
+form_C,form_C,1312,1312,robust logit,423,402,21,423,402,15,13,2,1,0,OR and delta-method transformed SE,BOUNDED_REPLAY_PASS_WITH_RETAINED_GUARD_FAILURE_NO_REFIT,False,False
+form_D,form_D,1318,1318,robust logit,423,402,21,423,402,17,15,2,1,0,OR and delta-method transformed SE,BOUNDED_REPLAY_PASS_WITH_RETAINED_GUARD_FAILURE_NO_REFIT,False,False
+form_ame,form_z_logit,1325,1325,robust logit,423,402,21,423,402,16,14,2,1,0,posted AME; separate raw logit retained,BOUNDED_REPLAY_PASS_WITH_RETAINED_GUARD_FAILURE_NO_REFIT,False,False

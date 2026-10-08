@@ -1,5 +1,5 @@
 {
-  "schema_version": 31,
+  "schema_version": 32,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_FORMAL_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_FORMAL_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "2026-10-08 M6.03.3/M6.05.3 preparation-only formal adapter/native preflight. Held459 before real logit/margins; five future fits/six states. Source setup1112-1236/formal1298-1343 literal except private destinations and unreachable capture/checks; coded35 projected24 fields. Native nofit423 loaded/402eligible/21Other coding exclusions/0missingpredictors/all15z use423; fitted sample/convergence/separation/rank unverified. Freeze210 strings96numeric8unavailable40RTF; Figure36/fig41 visual-only, historical precision/figure targets unavailable. Fixed binary/posted fixtures483 records23b305V128othermatrix11scalar16macro allscientificvalues/actualstripes/CSV17;4OR calls220strings42RTF;corrupt-copy rejection and closure pass; formatter empty/short-carrier limit retained/unpatched.21actual owned request records/outputs,zero real fits/margins. Preserve768originals1580priorprivate13publicentry1195priorpointers124IDs14milestones103issues/allgates. Fresh critic/rulings/current compiler/private seal/read-only governs acceptance. No original/science/qualitative correction, participant export, otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. NextM6.04.3/M6.08.4 separately authorized formal replay/comparison. Fresh independent critic I1/I2 fixed in one verified pass: actual seven malformed copies first accepted0 then rejected9; strict expected-native-key/model/kind and CSVrowcount/schema gates, native and eligibility positive readback unchanged. Minor joined word/number spacing deferred to editorial task; no re-review or fit.",
+    "last_recovery_probe": "M6.04.3/M6.08.4: one authorized five-logit plus original margins dispatch;actualN402/ranks7,11,13,15,14/two bases/no other omissions.Original adapter stopped9 at wrong posted cmd2 guard after all six early saves;actual est_cmd/model_vce schema correction tested on saved results only;no refit/new margins.210 strings96numeric8unavailable40RTF exact;2949 saved native records/all matrices/stripes/scalars/macros/CSV17 exact.Three images inspected;z-label/font/raster discrepancy retained,no numeric figure parity.Original768/prior1778/publicentry16/oldpointers1202/124IDs14milestones103issues/allgates preserved.Original failures retained;currentStataMP19 owned closure restored;shareddefault not inspected.Compile helper fails beforeTeX;freshcritic/rulings/seal/read-only governs acceptance. No production/scientific/qualitative repair, participant export, other familyLCA/Git/cloud/access/history/Overleaf/release. NextM6.03.4/M6.05.4 IUOF adapter/native preflight before separately authorized fit.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1590,7 +1590,14 @@
     "formal_adapter_preflight_receipt": "audit-local/intake/formal-adapter-634889c/preflight_acceptance.json",
     "formal_adapter_dispatch_manifest": "audit-local/intake/formal-adapter-634889c/dispatch_history_manifest_02.json",
     "formal_adapter_visual_receipt": "audit-local/intake/formal-adapter-634889c/visual_acceptance.json",
-    "formal_adapter_validation": "audit-local/intake/formal-adapter-634889c/formal_adapter_validation.json"
+    "formal_adapter_validation": "audit-local/intake/formal-adapter-634889c/formal_adapter_validation.json",
+    "formal_replay_report": "PROTECTED_FORMAL_REPLAY.md",
+    "formal_replay_model_acceptance": "formal-replay/model_acceptance.csv",
+    "formal_replay_child_acceptance": "formal-replay/child_acceptance.csv",
+    "formal_replay_preflight_receipt": "audit-local/intake/formal-replay-6a9b4fd/preflight_acceptance.json",
+    "formal_replay_dispatch_manifest": "audit-local/intake/formal-replay-6a9b4fd/dispatch_history_manifest_02.json",
+    "formal_replay_visual_receipt": "audit-local/intake/formal-replay-6a9b4fd/visual_acceptance.json",
+    "formal_replay_validation": "audit-local/intake/formal-replay-6a9b4fd/formal_replay_validation.json"
   },
   "decisions": [
     {
@@ -2008,7 +2015,19 @@
     {
       "date": "2026-10-08",
       "decision": "Fresh independent review found two Important exact-native-key/CSV-completeness gaps. One pass: six native/CSV and one eligibility missing-field native RED cases all wrongly accepted0; corrected canonical consumer and mechanically matching readonly02 require exact keys/model-kind total and rows/schema, all seven reject9; unchanged valid483native/seven eligibilityfields readback0. No fit, source/package repair or second review; Minor joined prose spacing deferred, all17 declined behaviors explicitly ruled. Final21actual owned Stata requests/outputs retained, initial17 intake untouched. Final suite/seal/read-only checks still govern acceptance."
+    },
+    {
+      "date": "2026-10-08",
+      "decision": "M6.04.3/M6.08.4 accepts the bounded formal family only, governed by final review/seal. Five source-exact robust logit fits and original margins executed once;N402 after21Other coding exclusions/all423 standardization;two bases/no extra omissions;raw-IADT versus standardized omission remains unchanged/open. Original return9 at audit cmd2 assumption retained; actual posted est_cmd/model_vce/delta validated via RED and five negative saved-result tests. Saved-only recovery completes original graph/native capture without another fit/margins or result modification."
+    },
+    {
+      "date": "2026-10-08",
+      "decision": "All210 table strings/96 numeric/eight unavailable/40 actual RTF rows agree;logical cells not file bytes.2949 current native records77b1069V1559othermatrix112scalar132macro including126scientific/sixstorednames pass all-scientific/actual-stripe/CSV17 readback.Three images inspected;point/interval/order/zero visual correspondence but z-label/font/raster presentation discrepancy. Historical native precision/member/unique producer/figure numeric equality unavailable;no tolerance widening/digitization or editorial repair."
+    },
+    {
+      "date": "2026-10-08",
+      "decision": "Preserve768originals1778prior-private16entry-public/all1202priorpointers124IDs14milestones103issues/allinheritedgates;current1209 pointers. Owned currentStataMP19 empty/restored;shareddefault and historical runtime not certified. All tooling failures retained/excluded,no original/qualitative/scientific change,participant export,otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. Same main.tex/editor/preamble and actual compiler helper failure leave rendering unverified. NextM6.03.4/M6.05.4 IUOF five-model adapter/capture preflight only,no fit authority implied."
     }
   ],
-  "last_updated_beijing": "2026-10-09T04:34:54+08:00"
+  "last_updated_beijing": "2026-10-09T05:19:04+08:00"
 }
