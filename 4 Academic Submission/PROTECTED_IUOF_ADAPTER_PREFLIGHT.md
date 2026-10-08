@@ -1,0 +1,74 @@
+# Protected IUOF adapter and native-capture preflight
+
+## 1. Bounded completion and authority
+
+M6.03.4 / M6.05.4 prepares the next historical IUOF replay. **No IUOF research regression, marginal-effects calculation, other model family or LCA was executed.** Fixed artificial e-class results exercise the output and native consumers without an estimator. Completion is governed by the private no-replace validation seal and separate read-only verification, not by this narrative alone. Scientific revision, inference, participant disclosure, publication and release gates remain pending.
+
+Entry is the owner-committed formal-remittance checkpoint, main at `a9365c6`. Its seal, complete private file set and recorded bytes were authenticated. The new entry preserves 768 original manifest entries, 1,937 prior-private fingerprints, 19 entry-public snapshots and all 1,209 previous workflow pointers. All original primary milestone identifiers, 14 milestone headings, 103 inherited issues and parent scientific/privacy/release gates remain unchanged. This is a local preparation task: no stage, commit, push, cloud/access/history action or Overleaf synchronization is included.
+
+## 2. Immutable IUOF source and exhibit contract
+
+The source is the preserved analysis do-file. Common setup is bound to lines 1112–1236 and the complete IUOF source-output block to lines 1345–1393. Line 1393 is the original figure-export command; line 1394 is the enclosing Family 1 brace. Only the actual brace is excluded as carrier syntax. Instrumentation and private destination substitutions reconstruct the original setup and complete IUOF body, including the figure export, exactly when removed.
+
+| Model | Original first line | Estimator and outcome | Expected coefficient slots | Expected rank, not an observed fit |
+|---|---:|---|---:|---:|
+| iuof_A | 1351 | Robust OLS, iuof_score_01 | 9 | 7 |
+| iuof_B | 1357 | Robust OLS, iuof_score_01 | 13 | 11 |
+| iuof_C | 1364 | Robust OLS, iuof_score_01 | 15 | 13 |
+| iuof_D | 1370 | Robust OLS, iuof_score_01 | 17 | 15 |
+| iuof_D_z | 1377 | Robust OLS, z_iuof | 16 | 14 |
+
+The first four models expand the original demographic/city controls and nested predictor blocks. The fifth standardizes the outcome as well as its continuous predictors; it is not the fourth model on the original outcome scale, not a logit model and not posted marginal effects. The historical standardized IADT omission is retained. The two expected bases are the first age category and first pooled city category. Scientific questions about pooling, overlap, index construction, omitted predictors and interpretation remain for later adjudication.
+
+The four-column historical table is frozen in its existing text and RTF representations: **40 text rows, 38 nonempty logical RTF rows and 200 literal strings**, including **100 numerical display cells** (46 coefficients, 46 standard errors, four sample sizes and four R-squared entries), 44 structural blanks, 16 metadata cells and 40 labels/notes. Existing text/RTF logical rows pair exactly. This authenticates targets; it does **not** compare a new research replay with them or establish missing unrounded native results.
+
+The repository coefficient plot and the image embedded beside legacy **Figure 37, “Standardized correlates of operational use of formal accounts and wallets (IUOF),”** are separately byte-pinned. Both were actually viewed. Labels, ordering, signs and interval relationships relative to zero correspond visually, at different raster sizes. Their bytes differ. Numeric figure equality, pixel equality and a unique historical producer are not certified; neither original is replaced.
+
+## 3. Projected eligibility and held execution adapter
+
+Stata reads only the source contract's 24 numeric fields from the protected coded input. The guard verifies input checksum/size, 423 observations, field types and actual factor supports. No names, telephone fields, participant dataset, row-level sample mask or respondent identifier is exported.
+
+The accepted no-estimation driver establishes **423 complete cases for each of the five models**, zero missing outcomes or predictors, an original IUOF outcome within its declared 0–1 support, and factor-expanded slot counts 9/13/15/17/16. All 15 source-created standardized aliases are checked over the complete 423-observation cohort, with unit standard deviations and near-zero means. These are eligibility/standardization checks; fitted sample membership, model rank, residual degrees of freedom and numerical estimates are not observed for IUOF here.
+
+The new source-exact adapter is **unconditionally held with return code 459 before any research regression**, with no flag or token bypass. Actual tests verify the hold and absence of a fit-output directory, as well as missing-input, checksum-mismatch, traversal/escape and destination-collision rejection. Eventual instrumentation requires the correct raw/standardized outcome, robust OLS, N=423, expected dimensions/rank/residual degrees of freedom, exactly two intentional bases and no unexpected omissions. A future authorized derivative must reauthenticate all pins; this task grants no fitting authority.
+
+The future runtime overlay is separated from the mutable fixture overlay. All runtime dependency files are byte-exact private copies of the preserved source dependencies, with actual Stata resolution verified. The exporter updated its synthetic overlay preference date/path/options during its explicit signed-OLS export. That expected private write is retained and pinned; upstream preferences are unchanged. The future source's explicit options still require actual displayed-exhibit verification after fitting.
+
+## 4. Actual fixed-result and native-consumer tests
+
+Five fixed artificial OLS result states exercise the raw and standardized model predicates. Their posted N/rank/scalars are controlled fixtures, not fitted research statistics. Six invalid estimator/outcome/VCE/sample/rank/residual-degree variants reject. Four synthetic table columns preserve signed OLS coefficients and ordinary standard errors rather than exponentiating them. The synthetic standardized plot was actually inspected and is explicitly labelled **NOT RESULTS**.
+
+The repaired general native writer and read-only consumer are reused byte-for-byte from the completed formal replay. Five synthetic native states contain **1,200 aggregate records**: 70 coefficient cells, 1,020 covariance cells, 30 extra-matrix cells, 40 scalars and 40 macros. Five stored-name bookkeepers are separate from the 35 scientific fixture macros. Every saved value, actual matrix equation/term stripe and 17-digit CSV field passes readback. This fixture record count is **not** an expected record count for future real IUOF estimates.
+
+Eight separate corrupted-copy cases reject with return code 9: wrong matrix coordinate, scalar name, scientific macro value, unexpected record/model, missing CSV row, missing CSV field, wrong matrix stripe and missing extra-matrix records. Accepted files are never used as mutation targets. A separate read-only pass reopens all five states and checks all native/CSV fields plus all five eligibility rows; accepted fixture, failed-diagnostic and preference bytes remain unchanged across that proof.
+
+## 5. Retained failures, review and completion gates
+
+The original eligibility attempt completed its substantive checks but returned 111 during optional-overlay cleanup, before setting restoration. Its driver, aggregate outputs and log remain preserved. An actual diagnosis reproduced the absent-overlay cause. The shared cleanup now captures only that optional removal; a fresh no-overwrite eligibility attempt returns 0 with normal closure. Initial worker setting values were not emitted before the failure, so original-context restoration is **not** backfilled or certified. The owned recovery baseline was explicitly normalized; subsequent accepted runs emit and restore PLUS, stcolor and line size 79. Shared-default/global/OS noninterference is not certified.
+
+The first synthetic preflight returned 198 in a new omission predicate because extended-macro word extraction lacked `of`. A first narrow diagnostic disproved a fixture-construction hypothesis and itself failed its mistaken expectation; it is retained and excluded. The next bounded trace located the predicate defect. The original predicate was preserved, the predicate and generator were corrected, and a fresh synthetic attempt passes with normal closure. No research source, equation or measurement recipe was repaired.
+
+The final acceptance audit also caught the exporter's expected mutable private preference write. The corrected audit distinguishes original immutable dependencies, the accepted fixture preference state and the untouched future runtime overlay instead of claiming all fixture preferences remain byte-identical to entry. Raw logs are retained; only Stata display-line wrapping is normalized for completion-marker checks.
+
+Actual provenance preserves **11 owned requests and 11 call-ID-linked outputs: nine file requests and two selections**, with zero research fits and zero margins calculations. The initial ten-request intake is retained. Fresh source/negative tests, the full inherited scoped suite, both house audit self-tests, one fresh independent review and exhaustive review rulings govern closure. Any required review fix receives one actual RED-to-GREEN pass; no second review or hidden scientific rerun is implied.
+
+The existing main.tex receives only a preparation checkpoint. The actual built-in compiler failed in the Windows preview helper before TeX execution (`setup refresh had errors`); the receipt is retained. Successful compilation, PDF layout and publication rendering remain unverified; no alternate document, renderer or preview tab is substituted. The private final seal and separate exact-file-set/byte verification govern acceptance. All historical full-precision, fitted-membership, producer, scientific and release limitations remain explicit.
+
+The independent reviewer found **one Important preparation defect and no Critical or additional actionable Minor findings**: the initial slice dropped source line 1393, the original figure export, while misidentifying it as the brace. The deficient contract, generator, held adapter and consumer pins remain preserved. One final tested fix includes the export exactly once and excludes only actual brace line 1394. An independent test checks the actual excluded source line and the complete original export rather than mirroring the contract's slice. The executed hold prefix is unchanged; this unreachable assembly correction required no additional Stata request, research fit or rerender.
+
+The first inherited suite also retained one dated-handoff failure: an unchanged historical test expected the superseded 8 October frontier in the live README. The historical test now runs against its authenticated entry snapshot, not edited or invented content. Separate date-independent live consumers verify exactly one current checkpoint and the current IUOF-preparation-to-IUOF-replay route. One initial duplicate-route test incorrectly caught its own missing-consumer assertion; that false-positive setup was corrected before the complete three-failure RED-to-GREEN run. These test-binding and test-setup corrections are recorded, not suppressed.
+
+**Exhaustive review rulings.** All twenty matters the reviewer declined to certify remain explicit: (1) actual IUOF fitted values/sample/rank/df/omissions await fitting; (2) robust-OLS scientific suitability is not endorsed; (3) standardized IADT omission is preserved, not corrected; (4) measurement/pooling/overlap/interpretation holds remain; (5) historical unrounded native equality is unavailable; (6) original fitted membership is unavailable and no row masks are exported; (7) historical-image numerical/pixel equality is not claimed; (8) unique producer/environment is not identified; (9) the real future native-record count is unknown; (10) real runtime-overlay display parity awaits replay; (11) the original initial worker context is not reconstructed; (12) default/global/OS noninterference is not certified; (13) restoration covers observed normalized settings, not every possible preference; (14) trusted fixed-destination guards are not a general path-security/race certificate; (15) portability is not tested; (16) the retained intake-stage pending-figure flag is superseded by actual visual acceptance, not rewritten; (17) new live-routing consumers require executor test evidence beyond the single review; (18) successful TeX/PDF rendering remains unverified; (19) final tests, rulings, seal and independent saved-file verification remain executor completion gates; (20) commit/merge/push/cloud/Overleaf/public release are not authorized. No additional actionable Minor item was deferred. The private rulings record includes evidence and effect for each item.
+
+**Final scoped suite:** 49 actual unit tests pass: ten current IUOF tests; nine unchanged formal-replay tests (seven contract/history plus two dated tests bound to the authenticated historical snapshot); four formal-adapter, four IURD-replay, nine core, six stage and seven replication-preflight tests. Both house audit self-tests pass, as do cumulative preservation and the working-diff whitespace check. No conventional root-suite configuration was found. These are bounded metadata/contract/native-consumer tests, not a master-pipeline run or research fitting.
+
+## 6. Next immediate task
+
+**M6.04.4 / M6.08.5 — first bounded protected IUOF five-model replay and displayed-exhibit comparison**, requiring the owner's next authorization.
+
+1. Authenticate this completed preparation seal, source/input/target/dependency pins and the untouched runtime overlay; preserve the held adapter and prior packets.
+2. Construct a fresh source-exact execution derivative with unique private destinations; retain the original-scale versus standardized-outcome distinction and all original specifications.
+3. Execute exactly five source-defined robust OLS fits, with no margins or other family/LCA, and capture actual sample counts, ranks, residual degrees of freedom and omission checks.
+4. Capture all actual native matrices/scalars/macros and stripes, then compare the four table columns with all 200 frozen strings/100 numerical display cells at their available precision.
+5. Assess the new standardized plot against both pinned historical images without fabricating unrounded or pixel-level targets; separate numerical reproduction from presentation and interpretation.
+6. Retain failures without silent replacement; finish fresh review/rulings, current tests, same-file compiler diagnostics, a no-replace seal and a separate saved-file proof. Scientific repair and release remain separate decisions.

@@ -1,0 +1,6 @@
+model,source_first_line,source_last_line,estimator,outcome,projected_loaded,eligible,missing_outcome,missing_predictors,expected_slots,expected_rank_not_fitted,standardization_cohort,fitted_N,historical_fit_executed,status,scientific_approval,release_approval
+iuof_A,1351,1351,robust OLS,iuof_score_01,423,423,0,0,9,7,423,not_executed,False,BOUNDED_PREPARATION_PASS_GOVERNED_BY_FINAL_SEAL_FITTING_HELD,False,False
+iuof_B,1357,1357,robust OLS,iuof_score_01,423,423,0,0,13,11,423,not_executed,False,BOUNDED_PREPARATION_PASS_GOVERNED_BY_FINAL_SEAL_FITTING_HELD,False,False
+iuof_C,1364,1364,robust OLS,iuof_score_01,423,423,0,0,15,13,423,not_executed,False,BOUNDED_PREPARATION_PASS_GOVERNED_BY_FINAL_SEAL_FITTING_HELD,False,False
+iuof_D,1370,1370,robust OLS,iuof_score_01,423,423,0,0,17,15,423,not_executed,False,BOUNDED_PREPARATION_PASS_GOVERNED_BY_FINAL_SEAL_FITTING_HELD,False,False
+iuof_D_z,1377,1377,robust OLS,z_iuof,423,423,0,0,16,14,423,not_executed,False,BOUNDED_PREPARATION_PASS_GOVERNED_BY_FINAL_SEAL_FITTING_HELD,False,False

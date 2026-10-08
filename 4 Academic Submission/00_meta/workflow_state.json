@@ -1,5 +1,5 @@
 {
-  "schema_version": 32,
+  "schema_version": 33,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_FORMAL_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IUOF_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "M6.04.3/M6.08.4: one authorized five-logit plus original margins dispatch;actualN402/ranks7,11,13,15,14/two bases/no other omissions.Original adapter stopped9 at wrong posted cmd2 guard after all six early saves;actual est_cmd/model_vce schema correction tested on saved results only;no refit/new margins.210 strings96numeric8unavailable40RTF exact;2949 saved native records/all matrices/stripes/scalars/macros/CSV17 exact.Three images inspected;z-label/font/raster discrepancy retained,no numeric figure parity.Original768/prior1778/publicentry16/oldpointers1202/124IDs14milestones103issues/allgates preserved.Original failures retained;currentStataMP19 owned closure restored;shareddefault not inspected.Compile helper fails beforeTeX;freshcritic/rulings/seal/read-only governs acceptance. No production/scientific/qualitative repair, participant export, other familyLCA/Git/cloud/access/history/Overleaf/release. NextM6.03.4/M6.05.4 IUOF adapter/native preflight before separately authorized fit.",
+    "last_recovery_probe": "M6.03.4/M6.05.4 IUOF preparation only:five literal robustOLS equations,no margins;raw versus standardized outcome preserved.768originals1937prior-private19public-entry1209old pointers;200literal targets100numeric38RTF;two originals plus NOT RESULTS fixture plot viewed. Five423 complete cases/zero missing;15full423 standardizations;slots9,13,15,17,16/ranks7,11,13,15,14 are expectations not fits. Actual held459/path/input guards;five fixed eclass states1200native records/all fields/stripes/CSV17;6model negatives8corrupt copies reject;readonly bytes unchanged. Retained cleanup111, omission predicate198 and excluded trace;fresh tests pass, owned recovery baseline explicitly normalized and subsequent contexts restored;original initial context and shareddefault/global noninterference not certified. Mutable synthetic pref retained;future runtime overlay separate/byte-exact.11owned requests/linked outputs,zero research fits/margins. Fresh critic/rulings/tests/same-file compiler/private seal/readonly govern acceptance.103issues/all parent science/privacy/release gates unchanged.No scientific/source/qualitative repair,participant export,other familyLCA,Git/cloud/Overleaf/release. NextM6.04.4/M6.08.5 IUOF bounded five-model replay requires next owner authority. Single fresh review found one Important missing-export assembly: deficient bytes preserved, complete source1345-1393/original export1393 retained, only actual brace1394 excluded in independent three-failure RED-to-GREEN fix; executed hold prefix unchanged, no new Stata dispatch. Historical dated handoff runs unchanged on authenticated snapshot; date-independent live checkpoint uniqueness/current route tested separately. All20 review limitations have explicit executor rulings; final actual scoped suite/seal/separate byte proof remain completion gates; preview helper failed beforeTeX.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1597,7 +1597,14 @@
     "formal_replay_preflight_receipt": "audit-local/intake/formal-replay-6a9b4fd/preflight_acceptance.json",
     "formal_replay_dispatch_manifest": "audit-local/intake/formal-replay-6a9b4fd/dispatch_history_manifest_02.json",
     "formal_replay_visual_receipt": "audit-local/intake/formal-replay-6a9b4fd/visual_acceptance.json",
-    "formal_replay_validation": "audit-local/intake/formal-replay-6a9b4fd/formal_replay_validation.json"
+    "formal_replay_validation": "audit-local/intake/formal-replay-6a9b4fd/formal_replay_validation.json",
+    "iuof_adapter_report": "PROTECTED_IUOF_ADAPTER_PREFLIGHT.md",
+    "iuof_adapter_models": "iuof-adapter/model_acceptance.csv",
+    "iuof_adapter_children": "iuof-adapter/child_acceptance.csv",
+    "iuof_adapter_contract": "audit-local/intake/iuof-adapter-a9365c6/iuof_contract.json",
+    "iuof_adapter_preflight": "audit-local/intake/iuof-adapter-a9365c6/preflight_acceptance.json",
+    "iuof_adapter_dispatch_manifest": "audit-local/intake/iuof-adapter-a9365c6/dispatch_history_manifest_02.json",
+    "iuof_adapter_validation": "audit-local/intake/iuof-adapter-a9365c6/iuof_adapter_validation.json"
   },
   "decisions": [
     {
