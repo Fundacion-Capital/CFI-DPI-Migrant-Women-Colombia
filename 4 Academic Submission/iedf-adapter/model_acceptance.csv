@@ -1,0 +1,6 @@
+model,observable_eligible,expected_slots,expected_rank,expected_df,research_fit_executed,scientific_approval,release_approval
+iedf_A,423,9,7,416,False,False,False
+iedf_B,423,13,11,412,False,False,False
+iedf_C,423,14,12,411,False,False,False
+iedf_D,423,15,13,410,False,False,False
+iedf_D_z,423,15,13,410,False,False,False

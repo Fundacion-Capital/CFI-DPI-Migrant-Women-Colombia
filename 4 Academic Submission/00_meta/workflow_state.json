@@ -1,5 +1,5 @@
 {
-  "schema_version": 40,
+  "schema_version": 41,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_IPCS_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IEDF_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1653,12 +1653,28 @@
     "ipcs_replay_history": "audit-local/intake/ipcs-replay-ef014b4/dispatch_history_manifest.json",
     "ipcs_replay_models": "ipcs-replay/model_acceptance.csv",
     "ipcs_replay_children": "ipcs-replay/child_acceptance.csv",
-    "ipcs_replay_validation": "audit-local/intake/ipcs-replay-ef014b4/ipcs_replay_validation.json"
+    "ipcs_replay_validation": "audit-local/intake/ipcs-replay-ef014b4/ipcs_replay_validation.json",
+    "iedf_adapter_report": "PROTECTED_IEDF_ADAPTER_PREFLIGHT.md",
+    "iedf_adapter_validation": "audit-local/intake/iedf-adapter-85813cd/iedf_adapter_validation.json",
+    "iedf_adapter_contract": "audit-local/intake/iedf-adapter-85813cd/adapter_contract.json",
+    "iedf_adapter_preflight": "audit-local/intake/iedf-adapter-85813cd/preflight_acceptance.json",
+    "iedf_adapter_targets": "audit-local/intake/iedf-adapter-85813cd/target_acceptance.json",
+    "iedf_adapter_models": "iedf-adapter/model_acceptance.csv",
+    "iedf_adapter_children": "iedf-adapter/child_acceptance.csv"
   },
   "decisions": [
-    {"date":"2026-10-09","decision":"Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."},
-    {"date":"2026-10-09","decision":"All200 literal strings100numerical38RTF rows exact;2315native aggregate records all values/actualstripes/CSV17,70scientific macros5storednames and5row9field aggregate CSV exact.3images actually inspected;construct order/directions/intervalzero visual correspondence,fonts/raster/bytes differ. Historical native precision/membership/unique producer/figure numeric or pixel equality unavailable. Retain diagnostic198 and CSVcase9;independent RED/GREEN saved-only recovery,no additional fitting/result change."},
-    {"date":"2026-10-09","decision":"Preserve768originals2142prior-private22entry-public1216oldpointers124IDs14milestones103issues/all parent gates. Fresh owned currentStataMP19 entry/exit context observed/restored;default/OS/font/historical runtime not certified. Freshcritic/exhaustive rulings/current tests/sameTex actual diagnostics/private seal/separate exact-set verification govern bounded IUOF acceptance only. No production/scientific/qualitative repair,participant release,otherfamilyLCA/packageinstallation/GitcloudaccesshistoryOverleaf. NextM6.03.5/M6.05.5 IETR held adapter/native preflight,no inherited IETR fit authority."},
+    {
+      "date": "2026-10-09",
+      "decision": "Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."
+    },
+    {
+      "date": "2026-10-09",
+      "decision": "All200 literal strings100numerical38RTF rows exact;2315native aggregate records all values/actualstripes/CSV17,70scientific macros5storednames and5row9field aggregate CSV exact.3images actually inspected;construct order/directions/intervalzero visual correspondence,fonts/raster/bytes differ. Historical native precision/membership/unique producer/figure numeric or pixel equality unavailable. Retain diagnostic198 and CSVcase9;independent RED/GREEN saved-only recovery,no additional fitting/result change."
+    },
+    {
+      "date": "2026-10-09",
+      "decision": "Preserve768originals2142prior-private22entry-public1216oldpointers124IDs14milestones103issues/all parent gates. Fresh owned currentStataMP19 entry/exit context observed/restored;default/OS/font/historical runtime not certified. Freshcritic/exhaustive rulings/current tests/sameTex actual diagnostics/private seal/separate exact-set verification govern bounded IUOF acceptance only. No production/scientific/qualitative repair,participant release,otherfamilyLCA/packageinstallation/GitcloudaccesshistoryOverleaf. NextM6.03.5/M6.05.5 IETR held adapter/native preflight,no inherited IETR fit authority."
+    },
     {
       "date": "2026-10-08",
       "decision": "M6.03.1/M6.05.1 implements only the explicit old37 IAT-IVS A125-210 guarded descriptive adapter and immutable target intake. Scientific source statements unchanged except six literal private paths/no-replace;current35 not fallback;other producers/fit adapters denied. All31stored resultsets/38aggregates exact Stata readback;67headers18identifier-excluding posterior checks/no row exports. Stored e.sample unavailable;S15 not core45. Native/synthetic/error/closure/preservation and fresh independent review/seal govern bounded acceptance;allparentgates103issues remain unchanged. No fit, historical participant producer, original correction, public derivative, Git/cloud/access/history/Overleaf action. Next M6.04.1/M6.08.2 bounded descriptive replay/exhibit comparison, with coretarget/lateradapter task separate. Full commit draft only. Actual same-file native compiler still fails beforeTeX at Windows helper setup refresh; renderingunverified."
