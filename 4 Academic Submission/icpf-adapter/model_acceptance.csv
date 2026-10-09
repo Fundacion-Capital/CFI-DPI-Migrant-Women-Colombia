@@ -1,0 +1,6 @@
+model,observable_eligible,expected_slots,expected_rank,expected_df,research_fit_executed,scientific_approval,release_approval
+icpf_A,423,9,7,416,False,False,False
+icpf_B,423,11,9,414,False,False,False
+icpf_C,423,12,10,413,False,False,False
+icpf_D,423,14,12,411,False,False,False
+icpf_D_z,423,14,12,411,False,False,False

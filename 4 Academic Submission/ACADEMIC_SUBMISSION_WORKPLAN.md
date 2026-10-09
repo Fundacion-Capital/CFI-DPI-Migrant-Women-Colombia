@@ -1174,3 +1174,15 @@ M6.04.9 / M6.08.10: [full audited record](PROTECTED_IAER_REPLAY.md) and [safe ac
 6. M6.08.10.c: fresh cumulative suites, one independent review/all rulings, eight safe public files/schema44/1293 pointers, actual same-main compiler, exclusive private seal/separate proof and full commit proposal. Scientific/release/rendering/parent gates held.
 
 Next immediate task: M6.03.10 / M6.05.10 — protected ICPF adapter/native-capture preflight before fitting, requiring a new owner request. Independently bind source1648–1693/export1693, exclude actual brace1694, freeze all relevant targets and use artificial result states only. IAER/IETR discrepancy provenance remains open for consolidated review; do not silently revise code/data/results during another family's historical replay.
+
+## ICPF protected adapter/native-capture child checkpoint — 9 October 2026
+
+[M6.03.10 / M6.05.10 report](PROTECTED_ICPF_ADAPTER_PREFLIGHT.md) and [five-model/six-child crosswalk](icpf-adapter/). Six granular children:
+- M6.03.10.a: authenticate committed IAER discrepancy handoff, cumulative bytes/state and literal ICPF source1648–1693/export1693; exclude enclosing brace1694.
+- M6.03.10.b: freeze170 strings/84 numerical entries,32 paired RTF rows/two notes, repository Figure48/legacy Figure43; original native/member/producer targets unavailable.
+- M6.03.10.c: retain unconditional held459 before five robust-OLS equations,15 common source aliases, separate pinned runtime/canonical capture/readers; RED→GREEN range carryover check before execution.
+- M6.05.10.a: actual numeric-only eligibility423 each/zero missing,15 full423 standardizations, observed slots9/11/12/14/14; ranks7/9/10/12/12 and df416/414/413/411/411 are expectations.
+- M6.05.10.b: five artificial states/908 complete native records, CSV17 and saved-only readback; six model/eight record/two alias negatives, held/input/path/size/collision/cleanup guards; actual three-image inspection. Preserve both diagnostic101 errors and outer abort; seven original request/output groups/eleven actual calls, zero research fits/margins; final corrected empty state verified.
+- M6.05.10.c: fresh cumulative tests, one independent final review/all rulings, eight safe public files/schema45/1300 pointers, same-main compiler, private exclusive seal/separate exact-set proof and full proposed commit text. No stage/commit/push/cloud/Overleaf/release.
+
+Original/prior bytes,124 IDs/14 milestones/103 inherited issue fields/all decisions and parent gates remain unchanged. ICPF-01–07 and IAER/IETR display discrepancies remain open. This operational checkpoint neither completes M6 nor approves science, privacy release or rendered layout. **Next: M6.04.10 / M6.08.11 — bounded ICPF five-model replay and displayed-exhibit comparison, requiring new owner request.**
