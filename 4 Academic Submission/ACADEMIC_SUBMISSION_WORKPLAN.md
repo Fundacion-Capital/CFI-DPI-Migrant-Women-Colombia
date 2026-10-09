@@ -1186,3 +1186,16 @@ Next immediate task: M6.03.10 / M6.05.10 — protected ICPF adapter/native-captu
 - M6.05.10.c: fresh cumulative tests, one independent final review/all rulings, eight safe public files/schema45/1300 pointers, same-main compiler, private exclusive seal/separate exact-set proof and full proposed commit text. No stage/commit/push/cloud/Overleaf/release.
 
 Original/prior bytes,124 IDs/14 milestones/103 inherited issue fields/all decisions and parent gates remain unchanged. ICPF-01–07 and IAER/IETR display discrepancies remain open. This operational checkpoint neither completes M6 nor approves science, privacy release or rendered layout. **Next: M6.04.10 / M6.08.11 — bounded ICPF five-model replay and displayed-exhibit comparison, requiring new owner request.**
+
+## ICPF bounded protected replay child checkpoint — 10 October 2026
+
+[M6.04.10 / M6.08.11 report](PROTECTED_ICPF_REPLAY.md) and [five-model/six-child crosswalk](icpf-replay/).
+
+1. M6.04.10.a: authenticate immutable preflight and all768 original records4793 prior-private58 snapshots1300 prior pointers; preserve124 IDs14 headings103 inherited issue fields and all gates.
+2. M6.04.10.b: fresh owned no-fit readiness/all15 aliases/five423-case designs,908 artificial records and positive/negative/cleanup tests.
+3. M6.04.10.c: execute exactly five source-exact robust-OLS equations once in one fit dispatch, preserving early native results; no margins/refits.
+4. M6.08.11.a: all170 strings84 numerical entries32 pairedRTF rows/two notes agree exactly; complete TXT/RTF content agrees after BOM/newline normalization; inspect three real figures and NOT RESULTS fixture.
+5. M6.08.11.b: saved-only1731 native records/all11 fields/stripes/CSV17 and all nine model predicates pass; N423/ranks7/9/10/12/12/df416/414/413/411/411/two bases/no extra omissions/no saved sample. Retain602 collision/wrapper false negative; separate reader and final empty-state proof pass without refit.
+6. M6.08.11.c: fresh current/dated suites, one actual independent reviewer/all declines ruled, eight safe public files/schema46/1307 pointers, same-main compiler, exclusive private seal/separate exact-set and byte proof, full commit proposal; science/release/rendering/parent gates remain held.
+
+Next immediate task: M6.03.11 / M6.05.11 — protected first interaction/heterogeneity adapter and native-capture preflight, before fitting; actual next source is section6/I1 vulnerability × digital access predicting IURD. No interaction/margins authority is inherited. Preserve ICPF-01–07, IAER-REPLAY-D01 and IETR-REPLAY-D01; no silent scientific correction.

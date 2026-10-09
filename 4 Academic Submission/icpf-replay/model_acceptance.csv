@@ -1,0 +1,6 @@
+model,outcome,fit_N,slots,rank,residual_df,bases,unexpected_omissions,saved_sample_count,displayed_cell_differences,scientific_approval,release_approval
+icpf_A,ICPF,423,9,7,416,2,0,0,0,False,False
+icpf_B,ICPF,423,11,9,414,2,0,0,0,False,False
+icpf_C,ICPF,423,12,10,413,2,0,0,0,False,False
+icpf_D,ICPF,423,14,12,411,2,0,0,0,False,False
+icpf_D_z,z_icpf,423,14,12,411,2,0,0,not_a_table_column,False,False
