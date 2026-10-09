@@ -1,5 +1,5 @@
 {
-  "schema_version": 36,
+  "schema_version": 37,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_IETR_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_OQI_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "M6.04.5/M6.08.6 bounded IETR replay WITH historical-display discrepancy. One original five robustOLS dispatch/no refit/margins,N423,ranks7/11/13/15/14,df416/412/410/408/409,two bases/no unexpected omissions. Complete1400-1445/export1445/setup1112-1236,24numeric15full423 aliases;held packet unchanged.2315current native all fields/stripes/CSV17 pass;200display cells75different43coefficients28SE4r2;38RTF paired;three images viewed, positions/font/raster differ,no numerical/pixel equality. Exact-comparison9 retained;IETR-REPLAY-D01 provenance unresolved, no scientific adoption/replacement. Runtime forced198 RED9/GREEN0 cleanup fixed in fresh derivative;metadata path substitution diagnostic retained.13actual owned pairs/onefive-fitdispatch/zero margins/refits, final saved-only proof and empty preserve stack.768originals2523prior-private28entry-public1230old pointers124IDs14headings103inherited issues/all gates unchanged,current1237pointers. Current/dated tests,fresh critic/all rulings,same-main actual compiler,no-replace seal/separate exact-set verification govern bounded completion;rendering/shareddefault/OSfont/historical runtime uncertified. No source/scientific/qualitative correction,participant export,otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. NextM6.03.6/M6.05.6 OQI held adapter/preflight requires next owner request;keep IETR discrepancy open.",
+    "last_recovery_probe": "M6.03.6/M6.05.6 OQI preparation only: zero research fits/margins; complete1448-1493/export1493/setup1112-1236, parent brace1494 excluded. Five423 observable eligibility/all15 full423 aliases; slots9/13/14/15/15 and ranks7/11/12/13/13 expectations, no fitted claim. Freeze180strings94numerical36TXTphysical34logicalRTF, original precision/member/producer unavailable, images visually inspected only. Held459/input checksum/size/path/file-directory collision guards; five fixed eclass states1072 native fields/stripes/CSV17 plus six invalid models/eight corruptions/separate saved-only proof. Untouched future runtime separate; normal/error cleanup and empty preserve stack verified. Twelve original owned pairs/ten files/two selections/zero fits; original nine-pair excerpt unchanged; final native alias REDfalseaccept0/GREENreject9/clean0 proof; reader06 exact15 names, runtime pin reconciled, case8 auxiliary-matrix wording corrected in one tested final pass; early alias/runtime-path tests and stale1200-reader label corrected with retained earlier evidence. Preserve768originals2682prior-private31entry-public/all1237prior pointers124IDs14headings/all inherited issues/gates,current1244pointers. OQI-01-07 and IETR-REPLAY-D01 remain open. Current/dated tests,fresh critic/rulings,same-main actual compiler,no-replace seal/separate exact-set verification govern bounded closure; rendering/shareddefault/OSfont/historical runtime unverified. No source/scientific/qualitative correction,participant export,otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. NextM6.04.6/M6.08.7 OQI five-model replay requires new owner request.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1625,7 +1625,14 @@
     "ietr_replay_validation": "audit-local/intake/ietr-replay-be1abb2/ietr_replay_validation.json",
     "ietr_replay_history": "audit-local/intake/ietr-replay-be1abb2/dispatch_history_manifest.json",
     "ietr_replay_discrepancy": "audit-local/intake/ietr-replay-be1abb2/display_pair_intake.json",
-    "ietr_replay_progress": "audit-local/intake/ietr-replay-be1abb2/progress.md"
+    "ietr_replay_progress": "audit-local/intake/ietr-replay-be1abb2/progress.md",
+    "oqi_adapter_report": "PROTECTED_OQI_ADAPTER_PREFLIGHT.md",
+    "oqi_adapter_models": "oqi-adapter/model_acceptance.csv",
+    "oqi_adapter_children": "oqi-adapter/child_acceptance.csv",
+    "oqi_adapter_validation": "audit-local/intake/oqi-adapter-cefde76/oqi_adapter_validation.json",
+    "oqi_adapter_history": "audit-local/intake/oqi-adapter-cefde76/dispatch_history_manifest_final.json",
+    "oqi_adapter_contract": "audit-local/intake/oqi-adapter-cefde76/oqi_contract.json",
+    "oqi_adapter_progress": "audit-local/intake/oqi-adapter-cefde76/progress.md"
   },
   "decisions": [
     {"date":"2026-10-09","decision":"Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."},

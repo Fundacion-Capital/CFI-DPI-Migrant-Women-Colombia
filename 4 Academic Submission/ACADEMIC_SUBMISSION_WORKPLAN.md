@@ -1104,3 +1104,20 @@ Next owner request is required. IETR-REPLAY-D01 remains an explicit unresolved p
 4. **M6.05.6.a — Held executable derivative:** new guarded no-overwrite private destination/dependencies/native capture; retain scientific literals and unconditional stop before a research fit.
 5. **M6.05.6.b — Real preflight tests:** input/path/collision guards, fixed synthetic scientific/native/display positives and malformed negatives; success/error cleanup and preserve-stack/context checks.
 6. **M6.05.6.c — Audited closure:** fresh current/dated tests/review/all rulings/same-file compiler/cumulative fingerprints/issue/pointer/gate invariants/private seal/separate proof/full commit text. A later OQI fit requires separate authority.
+
+## OQI preparation checkpoint and next six-child replay — 9 October 2026
+
+M6.03.6 / M6.05.6 is the bounded no-fit preparation documented in [PROTECTED_OQI_ADAPTER_PREFLIGHT.md](PROTECTED_OQI_ADAPTER_PREFLIGHT.md). The six owner-defined children authenticate the IETR discrepancy seal; freeze complete OQI1448–1493/export1493/setup1112–1236; check five423 observable eligibility/all15 distinct standardized aliases; hold459 with separate dependencies; exercise five fixed1072-record native states, six invalid models/eight corruptions and normal/error cleanup; and close through current/dated tests, original journal, one critic/rulings, actual compiler and exclusive seal/separate exact-set proof. Expected slots9/13/14/15/15 and ranks7/11/12/13/13 remain no-fit expectations. No research estimator or margins ran.
+
+Historical180strings/94numerical/36TXTphysical34RTFtable rows and two paragraph notes are checked; two historical images/NOT RESULTS fixture viewed without numerical/pixel equality. Preserve768originals2682prior-private31entry-public/all1237old pointers124IDs14milestone headings/all inherited issues and gates; current1244pointers. OQI-01–07 and IETR-REPLAY-D01 remain unresolved. Source, scientific/qualitative components, participant records, cloud/Git/Overleaf and release are untouched. Existing same-main preview helper failure beforeTeX leaves rendering unverified.
+
+Final critic identified stale runtime metadata and a14-distinct-name independent reader despite correct primary15alias artifacts. Both fixed once with superseded contracts/readers retained, exact15reader06, authenticated executed-runtime pin, native matched aggregate alias REDfalseaccept0/GREENreject9 and clean saved-only proof0. Eighth corruption wording corrected for auxiliary-matrix records, not a missing model. Final original journal expands unchanged9pairs to12pairs/tenfiles/twoselections; still zero research fits/margins. Final current/dated tests and exclusive seal/separate proof govern closure, not the earlier deficient success labels.
+
+The next immediate task is M6.04.6 / M6.08.7, protected OQI five-model replay and displayed-exhibit comparison, only with a new explicit owner request:
+
+1. M6.04.6.a: authenticate OQI seal/exact sets/source/input/targets/dependencies/inherited holds and narrow fit authority.
+2. M6.04.6.b: refreshed synthetic/native/guard/cleanup preflight and new separate authorized derivative; never unlock the sealed stop459 file.
+3. M6.04.6.c: exactly five original robustOLS equations once, full actual e-result/stripe capture, failure preservation; no margins/refit/other-family fitting.
+4. M6.08.7.a: all180 target strings/actual TXT-RTF rows and notes, strict displayed equality or explicit discrepancy; inspect repository/legacy/replay images visually without inferred numeric targets.
+5. M6.08.7.b: independent saved-only native/CSV and actual sample/rank/df/two-base/no-extra-omission checks plus owned-context cleanup; scientific adoption stays separate.
+6. M6.08.7.c: current/dated tests, single final critic/rulings, cumulative invariants, safe checkpoints, actual compiler, no-replace seal/separate proof and full commit draft.
