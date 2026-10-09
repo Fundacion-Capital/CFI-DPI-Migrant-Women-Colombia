@@ -1,0 +1,6 @@
+model,observable_eligible,expected_slots,expected_rank,expected_df,research_fit_executed,scientific_approval,release_approval
+iaer_A,423,9,7,416,False,False,False
+iaer_B,423,11,9,414,False,False,False
+iaer_C,423,13,11,412,False,False,False
+iaer_D,423,15,13,410,False,False,False
+iaer_D_z,423,15,13,410,False,False,False

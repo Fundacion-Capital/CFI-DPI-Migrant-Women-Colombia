@@ -1141,3 +1141,23 @@ The next immediate task is M6.04.6 / M6.08.7, protected OQI five-model replay an
 ### Protected IEDF historical replay checkpoint — 9 October 2026
 
 M6.04.8 / M6.08.9: [bounded IEDF replay](PROTECTED_IEDF_REPLAY.md). Six children authenticate/reprepare/execute/display/read-back/close. Five original robust-OLS fits once; zero margins/refits. N423 all5/ranks7,11,12,13,13/df416,412,411,410,410;2059 native records/CSV17/saved-model predicates pass.180 exact strings94 numerical entries34 paired RTF rows/two notes; three images visually correspond, serialization/raster differ. Preserve768 originals3757 prior-private46 snapshots1272 old→1279 current pointers124 IDs14 milestones103 issues/all gates. IEDF-01–07/IPCS-01–07/IETR-REPLAY-D01 remain open. Final suite/review/compiler/seal/separate proof governs bounded completion only. Next M6.03.9 / M6.05.9: IAER adapter/native preflight, zero fits, new explicit request.
+
+### Protected IAER adapter/native preflight checkpoint — 9 October 2026
+
+M6.03.9 / M6.05.9: [protected IAER preparation](PROTECTED_IAER_ADAPTER_PREFLIGHT.md). Zero research fits, fit dispatches or margins. Five423-case eligibility sets/all15 aliases; slots9/11/13/15/15 observed, ranks/df expected only.994 artificial records/CSV17/native stripes; six model/eight record/two alias controls and held459/path/input/collision/owned cleanup pass.180 frozen strings88 numerical entries34 paired RTF rows/two notes; three images viewed, no numerical figure certification. Preserve768 originals4020 prior-private49 snapshots1279 old→1286 current pointers124 primary IDs14 milestones103 issues/all gates. IAER-01–07 and all inherited scientific/release issues stay open.
+
+1. M6.03.9.a: authenticate IEDF replay seal/all exact sets/cumulative state and zero-fit authority.
+2. M6.03.9.b: independently bind source1600–1645/setup1112–1236/five equations/table and Figure47↔legacy42.
+3. M6.03.9.c: no-fit24-field projected input/five eligibility sets/factor dimensions/all15 literal aliases.
+4. M6.05.9.a: fresh no-overwrite held459 adapter, source round-trip and separate pinned dependencies/native readers.
+5. M6.05.9.b: fixed eclass capture, six model/eight record/two alias negatives, guard/normal/error cleanup and independent saved-only proof.
+6. M6.05.9.c: current/dated suites, one final critic/all rulings, safe checkpoints, actual compiler, exclusive seal/separate proof and full commit draft.
+
+Next immediate task: M6.04.9 / M6.08.10 — first bounded protected IAER five-model historical replay and displayed-exhibit comparison, requiring a new explicit owner request.
+
+1. M6.04.9.a: authenticate this seal/exact sets/source/input/targets/dependencies/inherited holds and narrow fit authority.
+2. M6.04.9.b: refresh no-fit/artificial/guard/cleanup checks and create separate authorized derivative; never unlock this sealed stop459 file.
+3. M6.04.9.c: exactly five original robust-OLS equations once in one dispatch; immediate native capture, failure preservation, no margins/refit/other family/LCA.
+4. M6.08.10.a: all180 strings88 numerical entries, TXT/RTF rows/two notes, strict displayed equality or explicit discrepancy; inspect repository/legacy/replay figures without inferred numeric targets.
+5. M6.08.10.b: saved-only native/CSV and actual N/rank/df/base/no-extra-omission/sample-absence checks plus owned cleanup; scientific adoption remains separate.
+6. M6.08.10.c: current/dated suites, one final critic/all rulings, cumulative invariants, safe checkpoints, actual compiler, no-replace seal/separate proof and complete commit proposal.
