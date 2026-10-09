@@ -1,0 +1,8 @@
+child,bounded_evidence,scientific_approval,release_approval
+M6.04.6.a,entry_and_source_authenticated,False,False
+M6.04.6.b,fresh_synthetic_and_native_preflight_pass,False,False
+M6.04.6.c,one_dispatch_five_original_OLS_fits_pass,False,False
+M6.08.7.a,180_display_strings_exact_three_images_visual_only,False,False
+M6.08.7.b,2059_native_fields_and_model_CSV_saved_only_pass,False,False
+M6.08.7.c,final_review_suite_compiler_seal_and_separate_proof_required,False,False
+

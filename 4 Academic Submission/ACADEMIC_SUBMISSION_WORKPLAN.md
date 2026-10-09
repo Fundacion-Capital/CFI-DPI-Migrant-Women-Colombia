@@ -1,5 +1,11 @@
 # Academic redevelopment and submission workplan
 
+## OQI bounded replay checkpoint — 9 October 2026
+
+M6.04.6 / M6.08.7: [OQI replay report](PROTECTED_OQI_REPLAY.md) records one five-model original robust-OLS dispatch; all N423, ranks7/11/12/13/13, df416/412/411/410/410, two bases/no extra omissions. All180 historical strings/94 numeric entries and34 RTF table rows/two notes agree;2059 native record fields/stripes/CSV17 and five-row/nine-field model CSV verified saved-only. Three images visually correspond; no historical native precision/member/producer/numerical-figure or pixel equality. Preserve768originals2879prior-private34entry-public1244prior pointers124IDs14headings103issues/all gates;1251current pointers. OQI-01–07/IETR-REPLAY-D01 stay open. Final review/rulings,current/dated tests,actual same-main compiler,exclusive seal/separate exact-set proof govern bounded closure, not scientific/release/layout approval.
+
+Next immediate task: M6.03.7 / M6.05.7 — protected IPCS five-model adapter and native-capture preflight, before fitting. The next literal source family is IPCS; six granular children are defined, not executed: (a)authenticate OQI seal/cumulative state, (b)freeze IPCS source/setup and exact historical targets, (c)establish no-fit projected-input/eligibility/standardization/scale/base/rank contracts, (d)build fresh no-overwrite held459 adapter and private dependency/native routes, (e)exercise synthetic positive/negative cases and success/error cleanup, (f)complete tests/review/rulings/compiler/seal/separate proof. No IPCS fit authority is inherited.
+
 Project: Digital public infrastructure and migrant women's financial inclusion in Colombia  
 Plan date: 5 October 2026, Europe/Berlin  
 Status: implementation in progress; bounded source reconciliation and selected-version preservation verified with explicit limits; historical estimator replication, revised estimation and scientific milestone gates remain pending

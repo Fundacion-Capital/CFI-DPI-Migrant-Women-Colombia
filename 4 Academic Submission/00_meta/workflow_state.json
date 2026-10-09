@@ -1,5 +1,5 @@
 {
-  "schema_version": 37,
+  "schema_version": 38,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_OQI_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_OQI_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1632,7 +1632,14 @@
     "oqi_adapter_validation": "audit-local/intake/oqi-adapter-cefde76/oqi_adapter_validation.json",
     "oqi_adapter_history": "audit-local/intake/oqi-adapter-cefde76/dispatch_history_manifest_final.json",
     "oqi_adapter_contract": "audit-local/intake/oqi-adapter-cefde76/oqi_contract.json",
-    "oqi_adapter_progress": "audit-local/intake/oqi-adapter-cefde76/progress.md"
+    "oqi_adapter_progress": "audit-local/intake/oqi-adapter-cefde76/progress.md",
+    "oqi_replay_report": "PROTECTED_OQI_REPLAY.md",
+    "oqi_replay_models": "oqi-replay/model_acceptance.csv",
+    "oqi_replay_children": "oqi-replay/child_acceptance.csv",
+    "oqi_replay_validation": "audit-local/intake/oqi-replay-f126864/oqi_replay_validation.json",
+    "oqi_replay_history": "audit-local/intake/oqi-replay-f126864/dispatch_history_manifest.json",
+    "oqi_replay_comparison": "audit-local/intake/oqi-replay-f126864/display_pair_intake.json",
+    "oqi_replay_progress": "audit-local/intake/oqi-replay-f126864/progress.md"
   },
   "decisions": [
     {"date":"2026-10-09","decision":"Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."},
