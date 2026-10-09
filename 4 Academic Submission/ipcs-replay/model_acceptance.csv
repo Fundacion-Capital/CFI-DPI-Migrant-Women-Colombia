@@ -1,0 +1,7 @@
+model,outcome,fit_N,slots,rank,residual_df,bases,unexpected_omissions,saved_sample_count,displayed_cell_differences,scientific_approval,release_approval
+ipcs_A,IPCS,423,9,7,416,2,0,0,0,False,False
+ipcs_B,IPCS,423,13,11,412,2,0,0,0,False,False
+ipcs_C,IPCS,423,14,12,411,2,0,0,0,False,False
+ipcs_D,IPCS,423,15,13,410,2,0,0,0,False,False
+ipcs_D_z,z_ipcs,423,15,13,410,2,0,0,not_a_table_column,False,False
+
