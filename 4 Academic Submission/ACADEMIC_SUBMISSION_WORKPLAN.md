@@ -1082,3 +1082,25 @@ A new explicit owner request is required; preparation/IUOF authority does not au
 4. **M6.08.6.a — Native producer/readback:** all actual scientific e-matrices/scalars/macros/stripes/CSV17, distinct stored-name bookkeeping. Fixture1200 is not a real-result target; unavailable historical precision/membership stays unavailable.
 5. **M6.08.6.b — Display/figure:** all200 literal strings/100 numerical display cells/exact RTF pairing at warranted precision; inspect new/repository/legacy standardized plots without unsupported numerical/pixel parity. Separate reproduction, discrepancy, presentation and scientific implications.
 6. **M6.08.6.c — Reviewed sealed closure:** retained failures/current tests/one fresh critic/all rulings/same-main compiler/cumulative original/private/public sets and pointers/IDs/issues/gates/no-replace seal/separate saved-file proof/full commit title/body. No scientific correction, qualitative change or release/Git/cloud/Overleaf authority.
+
+### IETR replay-with-discrepancy checkpoint — 9 October 2026
+
+[Protected IETR report](PROTECTED_IETR_REPLAY.md) and [safe acceptance metadata](ietr-replay/) document M6.04.5 / M6.08.6. This is audited completion with an unresolved numerical-display discrepancy, not exact historical reproduction or parent-gate approval.
+
+- **M6.04.5.a:** clean main at be1abb2; previous seal/exact sets,768originals2523prior-private28entry-public and1230prior pointers authenticated;124IDs/fourteen headings/103inherited issues and all gates unchanged.
+- **M6.04.5.b:** separate source-exact derivative retains1112–1236/1400–1445/export1445; old held packet untouched.24numeric fields,15distinct source-standardizations/full423, five423complete-case samples. Fresh forced-error198 runtime cleanup RED9→GREEN0 closes preparation MinorM1 without changing old evidence/packages. Synthetic1200native/stripes/CSV17 and six model negatives pass; accepted fixtures are not real estimates.
+- **M6.04.5.c:** one five-original-robustOLS dispatch returns0; actualN423,slots9/13/15/17/16,ranks7/11/13/15/14,df416/412/410/408/409,two bases/no additional omissions. Immediate native saves/no sample masks; no margins/refit/other-family/LCA or scientific correction.
+- **M6.08.6.a:** all2315 current native records, scientific e-values/actual stripes andCSV17 pass strict disk readback; five-row/nine-field aggregate CSV exact;13actual owned original requests/outputs,onefitdispatch,zero margins/refits. Final saved-only proof/empty preserve stack and observed owned context pass; shareddefault/OS/fonts/historical runtime uncertified.
+- **M6.08.6.b:** genuine display discrepancy75/200 cells:43 coefficients,28SE,4r2; all counts/labels/notes/metadata/blanks agree. Independent38RTF pairing for both files. Original equality test rejects9, retained; saved-only classifier verifies differences, not widened tolerance/equality. Three images viewed: directions/zero patterns correspond, but positions/font/raster differ. Historical native precision/membership/unique producer/numeric/pixel parity unavailable. Keep IETR-REPLAY-D01 open; no automatic result replacement.
+- **M6.08.6.c:** retain metadata substitution diagnostic, cleanup RED evidence and exact-equality rejection; current/dated tests, two house self-tests, one fresh critic/all rulings, actual same-main compiler, cumulative hashes/1237current pointers/no-replace private seal/separate exact-set proof govern bounded closure. Rendering unverified; no source/scientific/qualitative correction, participant export,package/Git/cloud/access/history/Overleaf/release action.
+
+### Next immediate — M6.03.6 / M6.05.6 protected OQI adapter and native-capture preflight, before fitting
+
+Next owner request is required. IETR-REPLAY-D01 remains an explicit unresolved provenance finding for later bounded reconciliation before scientific adoption; continuing preparation does not close it.
+
+1. **M6.03.6.a — Authenticate entry:** verify this IETR discrepancy-aware seal/exact sets and all cumulative immutable inputs/targets/pointers; preserve all inherited gates.
+2. **M6.03.6.b — Freeze OQI source/targets:** complete next source-output/setup boundaries, table/figure/legacy bindings, all available literal precision; no invented native history or opening/closing brace.
+3. **M6.03.6.c — No-fit model contract:** minimal numeric projection, outcomes/control expansion, missingness/eligibility, full-source standardizations, factor bases/omissions/rank expectations; no observation masks/export or estimation.
+4. **M6.05.6.a — Held executable derivative:** new guarded no-overwrite private destination/dependencies/native capture; retain scientific literals and unconditional stop before a research fit.
+5. **M6.05.6.b — Real preflight tests:** input/path/collision guards, fixed synthetic scientific/native/display positives and malformed negatives; success/error cleanup and preserve-stack/context checks.
+6. **M6.05.6.c — Audited closure:** fresh current/dated tests/review/all rulings/same-file compiler/cumulative fingerprints/issue/pointer/gate invariants/private seal/separate proof/full commit text. A later OQI fit requires separate authority.
