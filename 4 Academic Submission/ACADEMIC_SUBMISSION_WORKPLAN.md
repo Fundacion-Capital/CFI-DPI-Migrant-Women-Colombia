@@ -1,5 +1,11 @@
 # Academic redevelopment and submission workplan
 
+## IPCS protected no-fit checkpoint — 9 October 2026
+
+M6.03.7 / M6.05.7: [IPCS protected adapter/preflight](PROTECTED_IPCS_ADAPTER_PREFLIGHT.md). Zero research fits/margins. Source1500–1545/export1545, setup1112–1236; IPCS0–100, OQI not IAFF, standardized IADT retained. Five423-case eligibility sets/all15 distinct full423 aliases; ranks/df remain expectations. Freeze180 strings/94 numeric entries/34pairedRTF rows/two notes; three images inspected, no numerical/pixel equality or historical reproduction. Held459/input/path/size/checksum/collisions and owned normal/error cleanup pass;1072 artificial native records/stripes/CSV17, six model/eight record/one alias negatives pass. Failed capture-path601 retained; tested successor03/final saved-only07 pass. Preserve768originals3087prior-private37snapshots1251prior pointers124IDs14headings103issues/all gates;1258current pointers. IPCS-01–07/IETR-REPLAY-D01 stay open. Final tests/review/rulings/compiler/seal/separate proof govern operational closure, not scientific/release/layout approval.
+
+Next immediate: M6.04.7 / M6.08.8 — bounded IPCS replay/exhibit comparison. Six children defined in report section6; no fit authority inherited, no scientific/qualitative repair, participant export or Git/cloud/Overleaf action.
+
 ## OQI bounded replay checkpoint — 9 October 2026
 
 M6.04.6 / M6.08.7: [OQI replay report](PROTECTED_OQI_REPLAY.md) records one five-model original robust-OLS dispatch; all N423, ranks7/11/12/13/13, df416/412/411/410/410, two bases/no extra omissions. All180 historical strings/94 numeric entries and34 RTF table rows/two notes agree;2059 native record fields/stripes/CSV17 and five-row/nine-field model CSV verified saved-only. Three images visually correspond; no historical native precision/member/producer/numerical-figure or pixel equality. Preserve768originals2879prior-private34entry-public1244prior pointers124IDs14headings103issues/all gates;1251current pointers. OQI-01–07/IETR-REPLAY-D01 stay open. Final review/rulings,current/dated tests,actual same-main compiler,exclusive seal/separate exact-set proof govern bounded closure, not scientific/release/layout approval.

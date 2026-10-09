@@ -1,0 +1,7 @@
+child,bounded_evidence,scientific_approval,release_approval
+M6.03.7.a,entry_authenticated,False,False
+M6.03.7.b,IPCS_source_and180_targets_bound,False,False
+M6.03.7.c,5x423_eligibility15_aliases_no_fit,False,False
+M6.05.7.a,held459_private_no_overwrite,False,False
+M6.05.7.b,1072_native6_model8_record1_alias_negatives_pass,False,False
+M6.05.7.c,final_review_suite_compiler_seal_separate_proof_required,False,False

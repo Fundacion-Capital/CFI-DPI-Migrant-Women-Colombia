@@ -1,0 +1,6 @@
+model,source_line,outcome,expected_slots,expected_rank,expected_df,observable_eligible,research_fit_executed,scientific_approval,release_approval
+ipcs_A,1504,IPCS,9,7,416,423,False,False,False
+ipcs_B,1510,IPCS,13,11,412,423,False,False,False
+ipcs_C,1516,IPCS,14,12,411,423,False,False,False
+ipcs_D,1522,IPCS,15,13,410,423,False,False,False
+ipcs_D_z,1529,z_ipcs,15,13,410,423,False,False,False
