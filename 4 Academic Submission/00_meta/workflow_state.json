@@ -1,5 +1,5 @@
 {
-  "schema_version": 47,
+  "schema_version": 48,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_INTERACTION_I1_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_INTERACTION_I1_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -389,6 +389,13 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "i1_replay_report": "PROTECTED_INTERACTION_I1_REPLAY.md",
+    "i1_replay_model_acceptance": "interaction-i1-replay/model_acceptance.csv",
+    "i1_replay_display_comparison": "interaction-i1-replay/display_comparison.csv",
+    "i1_replay_entry": "audit-local/intake/interaction-i1-replay-f62f506/entry_preservation.json",
+    "i1_replay_contract": "audit-local/intake/interaction-i1-replay-f62f506/replay_contract.json",
+    "i1_replay_review": "audit-local/intake/interaction-i1-replay-f62f506/REVIEW_RESULT.md",
+    "i1_replay_validation": "audit-local/intake/interaction-i1-replay-f62f506/i1_replay_validation.json",
     "iuof_replay_report": "PROTECTED_IUOF_REPLAY.md",
     "iuof_replay_model_acceptance": "iuof-replay/model_acceptance.csv",
     "iuof_replay_child_acceptance": "iuof-replay/child_acceptance.csv",

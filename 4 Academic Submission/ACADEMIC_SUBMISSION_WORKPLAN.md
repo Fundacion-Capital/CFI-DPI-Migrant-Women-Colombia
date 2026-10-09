@@ -1205,3 +1205,19 @@ Next immediate task: M6.03.11 / M6.05.11 — protected first interaction/heterog
 M6.03.11 / M6.05.11: [bounded I1 preflight](PROTECTED_INTERACTION_I1_ADAPTER_PREFLIGHT.md) authenticates the ICPF predecessor; locks setup1112–1236 and full I1 source1703–1732 plus the shared table/selected column and figure bindings; prepares an unconditional459 held adapter; verifies projected-input eligibility, all15 aliases, full-input vulnerability percentiles and33-point grid without fitting; validates exact non-posted return copying and artificial native/display/saved-plot mechanics, negative and cleanup tests; completes current/dated suites, independent review/rulings, same-main compilation, exclusive seal and separate proof. No research regression or real margins. Original IAT0–0.3 extrapolation is documented, not repaired. All inherited gates/issues stay held; original primary tasks and14 milestone headings remain intact.
 
 Next child: M6.04.11 / M6.08.12 — bounded I1 historical replay and selected-column/figure comparison, requiring a new explicit owner request. Do not advance to another interaction, alter the grid/models, release data or treat preflight as scientific validation.
+
+### Dated child checkpoint — I1 historical replay, 10 October 2026
+
+[M6.04.11 / M6.08.12 report](PROTECTED_INTERACTION_I1_REPLAY.md) and [aggregate/model and selected-column crosswalk](interaction-i1-replay/).
+
+1. M6.04.11.a: authenticate direct eight-file preparation commit transition, immutable prior seal/exact set,768 originals5332 prior-private64 snapshots/all1314 inherited pointers124 primary IDs14 headings/issues/gates.
+2. M6.04.11.b: test-first source-exact new derivative; owned guard/dependency/input readiness; reject missing input, unowned path, wrong checksum and collisions before fitting.
+3. M6.04.11.c: one original robust-OLS I1 fit plus one explicit original non-posted prediction and original live graph route; early OLS/prediction preservation, no additional fit/refit.
+4. M6.08.12.a: full4,601 native records/all11 fields/actual stripes/saved-only CSV17, early-versus-final OLS and every original prefixed prediction return; real at33×15/Jacobian33×17.
+5. M6.08.12.b: saved linear-prediction and delta-covariance identities, ten exact aggregate DTA/CSV17 metrics, all53 historical selected-column strings aligned through40 present rows13 absent blanks; zero mismatches; preserve full four-column target.
+6. M6.08.12.c: three actual figures visually inspected; original labels/colours/order/directions correspond, font/raster differ; unavailable historical full precision/member/unique producer not inferred.
+7. M6.08.12.d: retain original non-significant interaction p0.766 and12 below-support grid points as interpretation limits, not automatic measurement/grid/model corrections.
+8. M6.08.12.e: owned state/dependency restoration, all failed no-fit/reader attempts retained; original call-linked receipts prove one fit; current/dated tests, one independent final review/all declined judgments explicitly ruled.
+9. M6.08.12.f: eight safe public files/schema48/current1321 pointers, existing main.tex/compiler, fresh post-review checks, private exclusive seal and separate fresh exact-set/hash proof; full proposed commit title/body; no staging/commit/push/cloud/Overleaf/release.
+
+Next immediate task: M6.03.12 / M6.05.12 — protected I2 interaction adapter and native-capture preflight, before fitting, requiring new owner instruction. Audit original years-in-Colombia derivation, formal-remittance coding/sample, full-input tenure percentiles, displayed ORs and probability-prediction/native capture, selected second shared-table column and Figure50/legacy binding. No I2 fit authority inherited.

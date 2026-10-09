@@ -1,0 +1,11 @@
+metric,value
+N,423
+rank,15
+df_r,408
+r2,.2737923121401018
+interaction_b,.099771897793508188
+interaction_se,.33486714949029661
+interaction_p,.76589701904256791
+prediction_points,33
+prediction_at_columns,15
+below_marginal_support,12
