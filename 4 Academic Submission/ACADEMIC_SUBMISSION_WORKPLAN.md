@@ -1199,3 +1199,9 @@ Original/prior bytes,124 IDs/14 milestones/103 inherited issue fields/all decisi
 6. M6.08.11.c: fresh current/dated suites, one actual independent reviewer/all declines ruled, eight safe public files/schema46/1307 pointers, same-main compiler, exclusive private seal/separate exact-set and byte proof, full commit proposal; science/release/rendering/parent gates remain held.
 
 Next immediate task: M6.03.11 / M6.05.11 — protected first interaction/heterogeneity adapter and native-capture preflight, before fitting; actual next source is section6/I1 vulnerability × digital access predicting IURD. No interaction/margins authority is inherited. Preserve ICPF-01–07, IAER-REPLAY-D01 and IETR-REPLAY-D01; no silent scientific correction.
+
+### Dated child checkpoint — I1 interaction preparation, 10 October 2026
+
+M6.03.11 / M6.05.11: [bounded I1 preflight](PROTECTED_INTERACTION_I1_ADAPTER_PREFLIGHT.md) authenticates the ICPF predecessor; locks setup1112–1236 and full I1 source1703–1732 plus the shared table/selected column and figure bindings; prepares an unconditional459 held adapter; verifies projected-input eligibility, all15 aliases, full-input vulnerability percentiles and33-point grid without fitting; validates exact non-posted return copying and artificial native/display/saved-plot mechanics, negative and cleanup tests; completes current/dated suites, independent review/rulings, same-main compilation, exclusive seal and separate proof. No research regression or real margins. Original IAT0–0.3 extrapolation is documented, not repaired. All inherited gates/issues stay held; original primary tasks and14 milestone headings remain intact.
+
+Next child: M6.04.11 / M6.08.12 — bounded I1 historical replay and selected-column/figure comparison, requiring a new explicit owner request. Do not advance to another interaction, alter the grid/models, release data or treat preflight as scientific validation.

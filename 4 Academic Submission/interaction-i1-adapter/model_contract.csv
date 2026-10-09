@@ -1,0 +1,2 @@
+model,estimator,outcome,interaction,controls,expected_observed_eligible,expected_slots_not_fit,expected_rank_not_fit,expected_residual_df_not_fit,prediction_kind,grid_points,historical_fit_authorized,historical_margins_authorized,scientific_release_status
+I1,robust OLS,iurd_score_01,c.ivs_score##c.iat_score,age city ICDP IAFF OQI IEDF IEH,423,17,15,408,non-post average predicted levels,33,False,False,HELD
