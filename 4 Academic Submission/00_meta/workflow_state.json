@@ -1,5 +1,5 @@
 {
-  "schema_version": 41,
+  "schema_version": 42,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_IEDF_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IEDF_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1660,7 +1660,14 @@
     "iedf_adapter_preflight": "audit-local/intake/iedf-adapter-85813cd/preflight_acceptance.json",
     "iedf_adapter_targets": "audit-local/intake/iedf-adapter-85813cd/target_acceptance.json",
     "iedf_adapter_models": "iedf-adapter/model_acceptance.csv",
-    "iedf_adapter_children": "iedf-adapter/child_acceptance.csv"
+    "iedf_adapter_children": "iedf-adapter/child_acceptance.csv",
+    "iedf_replay_report": "PROTECTED_IEDF_REPLAY.md",
+    "iedf_replay_validation": "audit-local/intake/iedf-replay-1c5e564/iedf_replay_validation.json",
+    "iedf_replay_contract": "audit-local/intake/iedf-replay-1c5e564/adapter_contract.json",
+    "iedf_replay_preflight": "audit-local/intake/iedf-replay-1c5e564/preflight_acceptance.json",
+    "iedf_replay_display": "audit-local/intake/iedf-replay-1c5e564/display_pair_intake.json",
+    "iedf_replay_models": "iedf-replay/model_acceptance.csv",
+    "iedf_replay_children": "iedf-replay/child_acceptance.csv"
   },
   "decisions": [
     {

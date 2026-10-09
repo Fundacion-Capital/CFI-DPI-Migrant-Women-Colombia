@@ -1,0 +1,6 @@
+model,outcome,fit_N,slots,rank,residual_df,bases,unexpected_omissions,saved_sample_count,displayed_cell_differences,scientific_approval,release_approval
+iedf_A,IEDF,423,9,7,416,2,0,0,0,False,False
+iedf_B,IEDF,423,13,11,412,2,0,0,0,False,False
+iedf_C,IEDF,423,14,12,411,2,0,0,0,False,False
+iedf_D,IEDF,423,15,13,410,2,0,0,0,False,False
+iedf_D_z,z_iedf,423,15,13,410,2,0,0,not_a_table_column,False,False

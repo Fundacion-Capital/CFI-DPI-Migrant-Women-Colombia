@@ -1137,3 +1137,7 @@ The next immediate task is M6.04.6 / M6.08.7, protected OQI five-model replay an
 4. M6.08.7.a: all180 target strings/actual TXT-RTF rows and notes, strict displayed equality or explicit discrepancy; inspect repository/legacy/replay images visually without inferred numeric targets.
 5. M6.08.7.b: independent saved-only native/CSV and actual sample/rank/df/two-base/no-extra-omission checks plus owned-context cleanup; scientific adoption stays separate.
 6. M6.08.7.c: current/dated tests, single final critic/rulings, cumulative invariants, safe checkpoints, actual compiler, no-replace seal/separate proof and full commit draft.
+
+### Protected IEDF historical replay checkpoint — 9 October 2026
+
+M6.04.8 / M6.08.9: [bounded IEDF replay](PROTECTED_IEDF_REPLAY.md). Six children authenticate/reprepare/execute/display/read-back/close. Five original robust-OLS fits once; zero margins/refits. N423 all5/ranks7,11,12,13,13/df416,412,411,410,410;2059 native records/CSV17/saved-model predicates pass.180 exact strings94 numerical entries34 paired RTF rows/two notes; three images visually correspond, serialization/raster differ. Preserve768 originals3757 prior-private46 snapshots1272 old→1279 current pointers124 IDs14 milestones103 issues/all gates. IEDF-01–07/IPCS-01–07/IETR-REPLAY-D01 remain open. Final suite/review/compiler/seal/separate proof governs bounded completion only. Next M6.03.9 / M6.05.9: IAER adapter/native preflight, zero fits, new explicit request.
