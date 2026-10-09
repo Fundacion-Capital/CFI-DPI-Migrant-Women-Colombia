@@ -1,0 +1,6 @@
+model,source_fit_line,estimator,outcome,loaded,standardization_cohort,actual_fitted_N,slots,rank,residual_df,base_terms,unexpected_omissions,saved_sample_count,display,scientific_approval,release_approval
+iuof_A,1351,robust OLS,iuof_score_01,423,423,423,9,7,416,2,0,0,original-scale coefficient and untransformed robust SE,False,False
+iuof_B,1357,robust OLS,iuof_score_01,423,423,423,13,11,412,2,0,0,original-scale coefficient and untransformed robust SE,False,False
+iuof_C,1364,robust OLS,iuof_score_01,423,423,423,15,13,410,2,0,0,original-scale coefficient and untransformed robust SE,False,False
+iuof_D,1370,robust OLS,iuof_score_01,423,423,423,17,15,408,2,0,0,original-scale coefficient and untransformed robust SE,False,False
+iuof_D_z,1377,robust OLS,z_iuof,423,423,423,16,14,409,2,0,0,standardized outcome coefficient plot,False,False

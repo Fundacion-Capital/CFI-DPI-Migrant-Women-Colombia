@@ -1,5 +1,5 @@
 {
-  "schema_version": 33,
+  "schema_version": 34,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_IUOF_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IUOF_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "M6.03.4/M6.05.4 IUOF preparation only:five literal robustOLS equations,no margins;raw versus standardized outcome preserved.768originals1937prior-private19public-entry1209old pointers;200literal targets100numeric38RTF;two originals plus NOT RESULTS fixture plot viewed. Five423 complete cases/zero missing;15full423 standardizations;slots9,13,15,17,16/ranks7,11,13,15,14 are expectations not fits. Actual held459/path/input guards;five fixed eclass states1200native records/all fields/stripes/CSV17;6model negatives8corrupt copies reject;readonly bytes unchanged. Retained cleanup111, omission predicate198 and excluded trace;fresh tests pass, owned recovery baseline explicitly normalized and subsequent contexts restored;original initial context and shareddefault/global noninterference not certified. Mutable synthetic pref retained;future runtime overlay separate/byte-exact.11owned requests/linked outputs,zero research fits/margins. Fresh critic/rulings/tests/same-file compiler/private seal/readonly govern acceptance.103issues/all parent science/privacy/release gates unchanged.No scientific/source/qualitative repair,participant export,other familyLCA,Git/cloud/Overleaf/release. NextM6.04.4/M6.08.5 IUOF bounded five-model replay requires next owner authority. Single fresh review found one Important missing-export assembly: deficient bytes preserved, complete source1345-1393/original export1393 retained, only actual brace1394 excluded in independent three-failure RED-to-GREEN fix; executed hold prefix unchanged, no new Stata dispatch. Historical dated handoff runs unchanged on authenticated snapshot; date-independent live checkpoint uniqueness/current route tested separately. All20 review limitations have explicit executor rulings; final actual scoped suite/seal/separate byte proof remain completion gates; preview helper failed beforeTeX.",
+    "last_recovery_probe": "M6.04.4/M6.08.5: one authorized5robustOLS IUOF dispatch;N423/ranks7,11,13,15,14/df416,412,410,408,409/two bases0extra omissions.200literal strings100numeric38RTF exact;2315native records70b1020V1085othermatrix65scalar75macro,70scientific5storednames/every fieldstripeCSV17 exact;5row9field aggregate CSV matches.3actual images correspond visually,fonts/raster/bytes differ,no historical native or numerical figure equality. Diagnostic198 quoted names and9 default-lowercased CSV retained;fresh saved-only clean/case(preserve) checks pass without refit. Preserve768originals2142prior-private22entry-public/all1216priorpointers124IDs14milestones103issues/all gates. Actual fresh owned entry/exitPLUS/scheme/lines observed/restored,empty stored/data/e/globals;shareddefault/OS/historicalruntime not certified. SameTex actual compiler/helper-beforeTeX limitation,freshcritic/rulings/tests/seal/separateproof govern acceptance. No scientific/source/qualitative repair,participant export,otherfamilyLCA/package/GitcloudaccesshistoryOverleafrelease. NextM6.03.5/M6.05.5 IETR adapter/native preflight before separately authorized fit.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -389,6 +389,13 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "iuof_replay_report": "PROTECTED_IUOF_REPLAY.md",
+    "iuof_replay_model_acceptance": "iuof-replay/model_acceptance.csv",
+    "iuof_replay_child_acceptance": "iuof-replay/child_acceptance.csv",
+    "iuof_replay_preflight_receipt": "audit-local/intake/iuof-replay-1dbc627/preflight_acceptance.json",
+    "iuof_replay_dispatch_manifest": "audit-local/intake/iuof-replay-1dbc627/dispatch_history_manifest.json",
+    "iuof_replay_visual_receipt": "audit-local/intake/iuof-replay-1dbc627/visual_acceptance.json",
+    "iuof_replay_validation": "audit-local/intake/iuof-replay-1dbc627/iuof_replay_validation.json",
     "protected_stage_adapter_report": "PROTECTED_STAGE_ADAPTER_AND_TARGET_INTAKE.md",
     "protected_stage_bindings_csv": "protected-stage-adapter/stage_bindings.csv",
     "protected_stored_target_availability_csv": "protected-stage-adapter/stored_target_availability.csv",
@@ -1607,6 +1614,9 @@
     "iuof_adapter_validation": "audit-local/intake/iuof-adapter-a9365c6/iuof_adapter_validation.json"
   },
   "decisions": [
+    {"date":"2026-10-09","decision":"Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."},
+    {"date":"2026-10-09","decision":"All200 literal strings100numerical38RTF rows exact;2315native aggregate records all values/actualstripes/CSV17,70scientific macros5storednames and5row9field aggregate CSV exact.3images actually inspected;construct order/directions/intervalzero visual correspondence,fonts/raster/bytes differ. Historical native precision/membership/unique producer/figure numeric or pixel equality unavailable. Retain diagnostic198 and CSVcase9;independent RED/GREEN saved-only recovery,no additional fitting/result change."},
+    {"date":"2026-10-09","decision":"Preserve768originals2142prior-private22entry-public1216oldpointers124IDs14milestones103issues/all parent gates. Fresh owned currentStataMP19 entry/exit context observed/restored;default/OS/font/historical runtime not certified. Freshcritic/exhaustive rulings/current tests/sameTex actual diagnostics/private seal/separate exact-set verification govern bounded IUOF acceptance only. No production/scientific/qualitative repair,participant release,otherfamilyLCA/packageinstallation/GitcloudaccesshistoryOverleaf. NextM6.03.5/M6.05.5 IETR held adapter/native preflight,no inherited IETR fit authority."},
     {
       "date": "2026-10-08",
       "decision": "M6.03.1/M6.05.1 implements only the explicit old37 IAT-IVS A125-210 guarded descriptive adapter and immutable target intake. Scientific source statements unchanged except six literal private paths/no-replace;current35 not fallback;other producers/fit adapters denied. All31stored resultsets/38aggregates exact Stata readback;67headers18identifier-excluding posterior checks/no row exports. Stored e.sample unavailable;S15 not core45. Native/synthetic/error/closure/preservation and fresh independent review/seal govern bounded acceptance;allparentgates103issues remain unchanged. No fit, historical participant producer, original correction, public derivative, Git/cloud/access/history/Overleaf action. Next M6.04.1/M6.08.2 bounded descriptive replay/exhibit comparison, with coretarget/lateradapter task separate. Full commit draft only. Actual same-file native compiler still fails beforeTeX at Windows helper setup refresh; renderingunverified."
@@ -2036,5 +2046,5 @@
       "decision": "Preserve768originals1778prior-private16entry-public/all1202priorpointers124IDs14milestones103issues/allinheritedgates;current1209 pointers. Owned currentStataMP19 empty/restored;shareddefault and historical runtime not certified. All tooling failures retained/excluded,no original/qualitative/scientific change,participant export,otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. Same main.tex/editor/preamble and actual compiler helper failure leave rendering unverified. NextM6.03.4/M6.05.4 IUOF five-model adapter/capture preflight only,no fit authority implied."
     }
   ],
-  "last_updated_beijing": "2026-10-09T05:19:04+08:00"
+  "last_updated_beijing": "2026-10-09T18:49:44+08:00"
 }

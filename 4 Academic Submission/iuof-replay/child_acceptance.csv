@@ -1,0 +1,7 @@
+child,scope,evidence,status,scientific_approval,release_approval
+M6.04.4.a,immutable entry and authority,768 originals;2142 prior-private;22 public snapshots;1216 old pointers;predecessor held,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
+M6.04.4.b,source-exact derivative and actual preflight,complete1345-1393 output/export;24 numeric fields;1200 fixed records;5 positives6 model negatives;guards/restored observed context,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
+M6.04.4.c,single source-exact IUOF dispatch,5 robustOLS fits once;N423;rank7/11/13/15/14;df416/412/410/408/409;2bases0unexpected omissions;no margins/refit,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
+M6.08.5.a,native capture and definitive readback,2315 actual records/all fields/stripes/CSV17;5 saved names70 scientific macros;5-row aggregate CSV exact;no sample mask,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
+M6.08.5.b,table and figure comparison,200 literal strings100numeric38RTF exact;3 actual images visually correspond;fonts/raster/bytes differ;no native historical/pixel equality,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
+M6.08.5.c,reviewed sealed handoff,retained diagnostic198/header9;tested saved-only fixes;fresh critic/rulings/current tests/compiler/private seal/separate proof,BOUNDED_PASS_GOVERNED_BY_FINAL_SEAL,False,False
