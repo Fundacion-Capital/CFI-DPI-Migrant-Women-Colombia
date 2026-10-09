@@ -1161,3 +1161,16 @@ Next immediate task: M6.04.9 / M6.08.10 — first bounded protected IAER five-mo
 4. M6.08.10.a: all180 strings88 numerical entries, TXT/RTF rows/two notes, strict displayed equality or explicit discrepancy; inspect repository/legacy/replay figures without inferred numeric targets.
 5. M6.08.10.b: saved-only native/CSV and actual N/rank/df/base/no-extra-omission/sample-absence checks plus owned cleanup; scientific adoption remains separate.
 6. M6.08.10.c: current/dated suites, one final critic/all rulings, cumulative invariants, safe checkpoints, actual compiler, no-replace seal/separate proof and complete commit proposal.
+
+## Protected IAER replay with historical discrepancy — 9 October 2026
+
+M6.04.9 / M6.08.10: [full audited record](PROTECTED_IAER_REPLAY.md) and [safe acceptance crosswalk](iaer-replay/). Six granular children authenticate, rehearse, execute once, compare, read back and close. Actual five423-case robust-OLS fits, ranks7/9/11/13/13 and df416/414/412/410/410;1,903 native records pass. Strict historical display comparison finds84of180 differences:40coefficients40SE4r2; N/labels/metadata/blanks/notes/stars agree. Three real figures share labels/directions/zero classifications, but positions differ. IAER-REPLAY-D01 remains open; no refit, scientific correction or historical replacement.
+
+1. M6.04.9.a: authenticate sealed preparation and all768 originals4259 prior-private52 snapshots1286 prior pointers; preserve original124 IDs14 milestones103 inherited issues/all gates.
+2. M6.04.9.b: fresh owned no-fit eligibility/all15 aliases,994 artificial native records and positive/negative/cleanup preflight.
+3. M6.04.9.c: single authorized five-OLS dispatch, source-exact setup/output and immediate early native preservation; no margins/refits.
+4. M6.08.10.a: strict180-string/88-numeric/34pairedRTF/two-note audit; preserve84 differences, per-column15/19/23/27, unchanged stars; inspect three real figures and artificial fixture.
+5. M6.08.10.b: saved-only1,903 native records/11 schema fields/CSV17 and all nine model fields;423/rank/df/two bases/no extra omissions/no saved sample; bounded owned cleanup.
+6. M6.08.10.c: fresh cumulative suites, one independent review/all rulings, eight safe public files/schema44/1293 pointers, actual same-main compiler, exclusive private seal/separate proof and full commit proposal. Scientific/release/rendering/parent gates held.
+
+Next immediate task: M6.03.10 / M6.05.10 — protected ICPF adapter/native-capture preflight before fitting, requiring a new owner request. Independently bind source1648–1693/export1693, exclude actual brace1694, freeze all relevant targets and use artificial result states only. IAER/IETR discrepancy provenance remains open for consolidated review; do not silently revise code/data/results during another family's historical replay.

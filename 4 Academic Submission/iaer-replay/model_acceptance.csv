@@ -1,0 +1,6 @@
+model,outcome,fit_N,slots,rank,residual_df,bases,unexpected_omissions,saved_sample_count,displayed_cell_differences,scientific_approval,release_approval
+iaer_A,IAER,423,9,7,416,2,0,0,15,False,False
+iaer_B,IAER,423,11,9,414,2,0,0,19,False,False
+iaer_C,IAER,423,13,11,412,2,0,0,23,False,False
+iaer_D,IAER,423,15,13,410,2,0,0,27,False,False
+iaer_D_z,z_iaer,423,15,13,410,2,0,0,not_a_table_column,False,False
