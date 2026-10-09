@@ -1,5 +1,5 @@
 {
-  "schema_version": 34,
+  "schema_version": 35,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_IUOF_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_IETR_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -23,7 +23,7 @@
       "scientific-readiness-to-owner-authorized-release"
     ],
     "fresh_evidence_required": true,
-    "last_recovery_probe": "M6.04.4/M6.08.5: one authorized5robustOLS IUOF dispatch;N423/ranks7,11,13,15,14/df416,412,410,408,409/two bases0extra omissions.200literal strings100numeric38RTF exact;2315native records70b1020V1085othermatrix65scalar75macro,70scientific5storednames/every fieldstripeCSV17 exact;5row9field aggregate CSV matches.3actual images correspond visually,fonts/raster/bytes differ,no historical native or numerical figure equality. Diagnostic198 quoted names and9 default-lowercased CSV retained;fresh saved-only clean/case(preserve) checks pass without refit. Preserve768originals2142prior-private22entry-public/all1216priorpointers124IDs14milestones103issues/all gates. Actual fresh owned entry/exitPLUS/scheme/lines observed/restored,empty stored/data/e/globals;shareddefault/OS/historicalruntime not certified. SameTex actual compiler/helper-beforeTeX limitation,freshcritic/rulings/tests/seal/separateproof govern acceptance. No scientific/source/qualitative repair,participant export,otherfamilyLCA/package/GitcloudaccesshistoryOverleafrelease. NextM6.03.5/M6.05.5 IETR adapter/native preflight before separately authorized fit.",
+    "last_recovery_probe": "M6.03.5/M6.05.5 IETR preparation only; zero research fits/margins. Complete1400–1445/export1445/setup1112–1236; no invented brace; five original robustOLS.768originals2282prior-private25entry-public1223old pointers124IDs14milestones103issues/all gates unchanged; current1230 pointers.24numeric/five423 complete cases/zero missing/15full423 z; slots9/13/15/17/16,ranks7/11/13/15/14 expectations.200strings100numeric38RTF and two historical/NOT RESULTS plots inspected. Actual held459/path/input/collision guards; five fixed states1200native/all fields/stripes/CSV17;six model negatives/eight corruptions;separate saved-file bytes. Fixture pref pinned; runtime untouched/separate. 16 original pairs/1 pre-dispatch abort/15 actual Stata calls zero fits; I1 initial14 distinct aliases corrected in fresh05 source-exact15-alias native/read-only proof; failures101/109/621 and empty preserved-state recovery retained; Minor M1 runtime-overlay error-cleanup deferred; managed fresh context restored, shareddefault/OS/fonts/historical runtime unverified. Retain metadata SyntaxError/tested substitution fix and duplicate entry refusal. Current tests/fresh critic/all rulings/same-main actual compiler/no-replace seal/separate proof govern acceptance; rendering unverified. No scientific/source/qualitative correction,participant export,otherfamilyLCA/packageinstall/GitcloudaccesshistoryOverleafrelease. NextM6.04.5/M6.08.6 IETR five-model replay requires new owner request.",
     "self_review_gate": "pending",
     "ethics_gate": "pending",
     "revision_rounds_cap": 2,
@@ -1611,7 +1611,14 @@
     "iuof_adapter_contract": "audit-local/intake/iuof-adapter-a9365c6/iuof_contract.json",
     "iuof_adapter_preflight": "audit-local/intake/iuof-adapter-a9365c6/preflight_acceptance.json",
     "iuof_adapter_dispatch_manifest": "audit-local/intake/iuof-adapter-a9365c6/dispatch_history_manifest_02.json",
-    "iuof_adapter_validation": "audit-local/intake/iuof-adapter-a9365c6/iuof_adapter_validation.json"
+    "iuof_adapter_validation": "audit-local/intake/iuof-adapter-a9365c6/iuof_adapter_validation.json",
+    "ietr_adapter_report": "PROTECTED_IETR_ADAPTER_PREFLIGHT.md",
+    "ietr_adapter_models": "ietr-adapter/model_acceptance.csv",
+    "ietr_adapter_children": "ietr-adapter/child_acceptance.csv",
+    "ietr_adapter_contract": "audit-local/intake/ietr-adapter-7be2233/ietr_contract.json",
+    "ietr_adapter_preflight": "audit-local/intake/ietr-adapter-7be2233/preflight_acceptance_02.json",
+    "ietr_adapter_dispatch_manifest": "audit-local/intake/ietr-adapter-7be2233/dispatch_history_manifest_02.json",
+    "ietr_adapter_validation": "audit-local/intake/ietr-adapter-7be2233/ietr_adapter_validation.json"
   },
   "decisions": [
     {"date":"2026-10-09","decision":"Bounded IUOF family accepts one5robustOLS dispatch and no refit/margins. ActualN423/ranks7,11,13,15,14/df416,412,410,408,409/two factor bases0extra omissions;raw-four and standardized-fifth outcomes preserved. Historical standardized IADT omission remains open,not corrected or endorsed."},
