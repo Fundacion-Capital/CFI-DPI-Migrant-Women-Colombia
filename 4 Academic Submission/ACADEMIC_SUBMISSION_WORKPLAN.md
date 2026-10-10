@@ -1221,3 +1221,18 @@ Next child: M6.04.11 / M6.08.12 — bounded I1 historical replay and selected-co
 9. M6.08.12.f: eight safe public files/schema48/current1321 pointers, existing main.tex/compiler, fresh post-review checks, private exclusive seal and separate fresh exact-set/hash proof; full proposed commit title/body; no staging/commit/push/cloud/Overleaf/release.
 
 Next immediate task: M6.03.12 / M6.05.12 — protected I2 interaction adapter and native-capture preflight, before fitting, requiring new owner instruction. Audit original years-in-Colombia derivation, formal-remittance coding/sample, full-input tenure percentiles, displayed ORs and probability-prediction/native capture, selected second shared-table column and Figure50/legacy binding. No I2 fit authority inherited.
+
+#### M6.03.12 / M6.05.12 — protected I2 adapter and no-fit native preflight
+
+1. M6.03.12.a: authenticate direct I1 replay commit, prior seal/exact set/bytes,768 originals5505 prior-private67 snapshots and all1321 inherited pointers; retain124 primary IDs14 milestone headings and every issue/decision/gate.
+2. M6.05.12.a: pin common1112–1236, complete I21735–1764 and next I31767 boundary; freeze the whole four-column table265 strings53 TXT/51 RTF rows and select only column2, with original ORs/stars/notes.
+3. M6.03.12.b: project26 numeric fields only; verify years_in_col=2026−q2_1 under original missingness, formal-channel coding,402 observable eligible/21 excluded and all15 aliases/pooling/control definitions without fitting.
+4. M6.03.12.c: retain original full-input tenure quartiles5/7/8; document eligible equality without changing percentile basis; check12 marginally supported grid points, with joint support and actual fit membership/separation untested.
+5. M6.05.12.b: held459 source-exact derivative, future early logit/prediction preservation, raw-log-odds versus eform-OR versus non-posted probability distinctions; zero estimator/real margins dispatches.
+6. M6.05.12.c: artificial native1078/11 fields/all returns/stripes/CSV17, early saved prediction equality, OR and labelled saved-plot capabilities; anticipated16 slots/rank14 are not fitted results or actual-return shape certification.
+7. M6.05.12.d: four guards/nine invalid states/eight corrupted copies, artificial bad rows/type/alias and forced cleanup; retain all failures and full actual returns/original call-linked evidence, immutable dependency roles and owned worker restoration.
+8. M6.05.12.e: bind and visually inspect repository Figure50, embedded legacy Figure45 and artificial NOT RESULTS figure; do not claim numerical/pixel equality, historical precision/membership/producer or live research bridge.
+9. M6.03.12.d: eight safe public files/schema49/current1328 pointers, existing main.tex/preamble/compiler; current/inherited tests, one final independent review/all declined judgments explicitly ruled, fresh post-review tests and actual review binding.
+10. M6.05.12.f: exclusive private seal and separate fresh exact-set/hash proof; proposed full commit title/body only, no Git/cloud/Overleaf/release/another fit. Treat completion as this bounded preparation child, not scientific endorsement or M6 completion.
+
+Next immediate task: M6.04.12 / M6.08.13 — first bounded protected I2 interaction historical replay and displayed-exhibit comparison, requiring new explicit owner fit authority. Preserve original append/eform semantics and second-column ordinal difference, early native states and non-posted probability route; audit actual convergence/omissions/sample and return shapes before certifying selected display agreement. No remedial refit or scientific correction is inherited.

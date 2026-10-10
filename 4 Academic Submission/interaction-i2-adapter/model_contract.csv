@@ -1,0 +1,3 @@
+model,source_lines,outcome,native_scale,display_scale,eligible_not_fitted,slots_not_fitted,rank_expected_not_fitted,grid_points,fit_authorized
+I2_LOGIT,1735-1764,formal_remittance,log odds,odds ratios,402,16,14,0,False
+I2_PRED,1750-1764,formal_remittance,average predicted probability,probability not AME,402,,,12,False

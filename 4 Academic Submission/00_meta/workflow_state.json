@@ -1,5 +1,5 @@
 {
-  "schema_version": 48,
+  "schema_version": 49,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_INTERACTION_I1_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_INTERACTION_I2_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1709,7 +1709,14 @@
     "i1_adapter_preflight": "audit-local/intake/interaction-i1-adapter-2b80d03/preflight_acceptance.json",
     "i1_adapter_targets": "audit-local/intake/interaction-i1-adapter-2b80d03/i1_contract.json",
     "i1_adapter_models": "interaction-i1-adapter/model_contract.csv",
-    "i1_adapter_children": "interaction-i1-adapter/child_acceptance.csv"
+    "i1_adapter_children": "interaction-i1-adapter/child_acceptance.csv",
+    "i2_adapter_report": "PROTECTED_INTERACTION_I2_ADAPTER_PREFLIGHT.md",
+    "i2_adapter_model_contract": "interaction-i2-adapter/model_contract.csv",
+    "i2_adapter_child_acceptance": "interaction-i2-adapter/child_acceptance.csv",
+    "i2_adapter_private_contract": "audit-local/intake/interaction-i2-adapter-8b5bb8c/i2_contract.json",
+    "i2_adapter_private_acceptance": "audit-local/intake/interaction-i2-adapter-8b5bb8c/preflight_acceptance.json",
+    "i2_adapter_review": "audit-local/intake/interaction-i2-adapter-8b5bb8c/review_acceptance.json",
+    "i2_adapter_validation": "audit-local/intake/interaction-i2-adapter-8b5bb8c/i2_preflight_validation.json"
   },
   "decisions": [
     {
