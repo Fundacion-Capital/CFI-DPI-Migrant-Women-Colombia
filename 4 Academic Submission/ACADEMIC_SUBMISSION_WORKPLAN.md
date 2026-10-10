@@ -1,5 +1,17 @@
 # Academic redevelopment and submission workplan
 
+#### Latest additive workflow — M6.04.15 / M6.08.16, recent digital use historical replay
+
+- M6.04.15.a: authenticate owner f2ba9d4, eight predecessor Git blobs, sealed preflight and two proofs; preserve768 originals/7454 prior-private/88 snapshots/1382 inherited pointers.
+- M6.04.15.b: source-bound mutation tests and numeric-only no-fit input/destination guard; reserve exactly one original robust-logit dispatch, no retry/refit/margins/prediction/sibling model.
+- M6.04.15.c: execute the literal section7.1 equation, preserve early native estimates before checks and formatting, and record after-formatter state. Actual N413/rank14/converged1.
+- M6.04.15.d: saved-only all660 native-record/11field comparisons and17-digitCSV readback; retain original auxiliary float audit and validate a saved-only all-double successor, without another fit. Close both owned workers and authenticate four selections/five parent calls/six API actions.
+- M6.08.16.a: preserve all464 shared historical tokens; compare all58 column1 tokens using full shared-row identities, actualTXT/RTF and notes. Classify40 matches/18 absent sibling blanks/zero nonstructural differences; do not claim unrounded or whole-table reproduction.
+- M6.08.16.b: add only eight safe public artifacts, schema57/nine pointers; retain original124 primary IDs/14 headings, qualitative inputs, all gates and I3-REPLAY-D01.
+- M6.08.16.c: require current/dated70-group339-test suites, one fresh independent review and explicit rulings, post-review tests, same-open-source built-in compilation, exclusive seal and separate exact-set/byte proof. No staging/commit/push/cloud/release or cleanup.
+
+Next immediate task after bounded technical closure: **M6.03.16 / M6.05.16 — protected recent digital problem supplementary-model adapter/native-capture preflight, without fitting**, covering only the first equation/export in section7.2 and the column2/private append context. All older next-task statements below are dated history; scientific/privacy/release gates remain open.
+
 **Current additive checkpoint:** M6.03.15 / M6.05.15 — [recent digital use source-faithful preparation](PROTECTED_RECENT_USE_ADAPTER_PREFLIGHT.md). All earlier next-task statements below are dated history. Original 124 primary task IDs and 14 milestone headings remain unchanged.
 
 #### Recent-use preflight granular acceptance sequence

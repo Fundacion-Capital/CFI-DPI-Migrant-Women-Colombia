@@ -1,5 +1,5 @@
 {
-  "schema_version": 56,
+  "schema_version": 57,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_RECENT_USE_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_RECENT_USE_HISTORICAL_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1770,7 +1770,16 @@
     "recent_use_preflight_review": "audit-local/intake/recent-use-adapter-c031020/review_acceptance.json",
     "recent_use_preflight_validation": "audit-local/intake/recent-use-adapter-c031020/recent_use_preflight_validation.json",
     "recent_use_preflight_report": "PROTECTED_RECENT_USE_ADAPTER_PREFLIGHT.md",
-    "recent_use_preflight_child_acceptance": "recent-use-adapter/child_acceptance.csv"
+    "recent_use_preflight_child_acceptance": "recent-use-adapter/child_acceptance.csv",
+    "recent_use_replay_contract": "audit-local/intake/recent-use-replay-f2ba9d4/replay_contract.json",
+    "recent_use_replay_authority": "audit-local/intake/recent-use-replay-f2ba9d4/authority.json",
+    "recent_use_replay_native_acceptance": "audit-local/intake/recent-use-replay-f2ba9d4/native_capture_acceptance.json",
+    "recent_use_replay_display_acceptance": "audit-local/intake/recent-use-replay-f2ba9d4/display_acceptance.json",
+    "recent_use_replay_dispatch_history": "audit-local/intake/recent-use-replay-f2ba9d4/dispatch_history_manifest.json",
+    "recent_use_replay_review": "audit-local/intake/recent-use-replay-f2ba9d4/review_acceptance.json",
+    "recent_use_replay_validation": "audit-local/intake/recent-use-replay-f2ba9d4/recent_use_replay_validation.json",
+    "recent_use_replay_report": "PROTECTED_RECENT_USE_HISTORICAL_REPLAY.md",
+    "recent_use_replay_child_acceptance": "recent-use-replay/child_acceptance.csv"
   },
   "decisions": [
     {
