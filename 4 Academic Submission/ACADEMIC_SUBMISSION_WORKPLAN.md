@@ -1,5 +1,18 @@
 # Academic redevelopment and submission workplan
 
+**Current additive checkpoint:** M6.03.15 / M6.05.15 — [recent digital use source-faithful preparation](PROTECTED_RECENT_USE_ADAPTER_PREFLIGHT.md). All earlier next-task statements below are dated history. Original 124 primary task IDs and 14 milestone headings remain unchanged.
+
+#### Recent-use preflight granular acceptance sequence
+
+- M6.03.15.a: authenticate owner checkpoint c031020 and exact sealed I4 replay; preserve 768 originals, 6,933 prior-private fingerprints, 85 public snapshots and 1,374 inherited pointers.
+- M6.03.15.b: freeze setup 1112–1236 and section 7.1 1836–1845 only; retain original float outcome coding, pooled-city controls, seven continuous controls, robust logit, native log-odds and OR display. Stop held execution before estimation; exclude all siblings/predictions/graphs.
+- M6.05.15.a: numeric-only protected-input guard and actual no-fit outcome/complete-case/design-support checks; 413 observable cases/rank 14 are not fitted sample/rank or evidence against separation.
+- M6.05.15.b: actual artificial logit/OR native writer, every-field saved-estimate/CSV17 readback, formatter outcome placeholder, normal-z stars and malformed-state/input/transport rejection; preserve every failed tooling probe.
+- M6.05.15.c: freeze all 58 selected historical tokens, 464 shared tokens and 56 RTF rows/notes. No historical unrounded producer or numeric manuscript binding is available; do not invent a figure or predictions absent from the source.
+- M6.05.15.d: current and inherited tests, one fresh independent critic with individually ruled exclusions, final same-source compiler check, exclusive validation seal and separate exact-set/byte readback. Accept bounded preparation only; keep scientific/privacy/release and I3-REPLAY-D01 holds.
+
+Next immediate task: **M6.04.15 / M6.08.16 — first bounded protected recent-use historical replay and supplementary-table column 1 comparison**. It needs new explicit owner fit authority, fresh sealed-entry authentication and exactly one original logit. Native estimates must be preserved before checks/export; no refit, sibling fit, margins or new specification is authorized by this handoff.
+
 **Latest additive checkpoint:** M6.03.14 / M6.05.14, I4 no-fit preparation; see the granular I4 checkpoint at the end and [current handoff](PROTECTED_INTERACTION_I4_ADAPTER_PREFLIGHT.md#6-next-immediate-task). Original primary IDs and milestone headings are unchanged. Next M6.04.14 / M6.08.15 requires separate explicit fit authority; earlier dated next-task statements are historical.
 
 **Current checkpoint — 9 October 2026:** M6.03.8 / M6.05.8: [IEDF protected adapter and preflight](PROTECTED_IEDF_ADAPTER_PREFLIGHT.md). Preparation only; zero research fits/fit dispatches/margins. Source1548–1593/export1593, setup1112–1236, excludes brace1594/IAER1600. Five423-case eligibility sets/all15 literal aliases; slots9/13/14/15/15 observed, ranks7/11/12/13/13 and df416/412/411/410/410 expected, not fitted. Freeze180 strings/94 numerical entries/34pairedRTF rows/two notes. Three images actually viewed; historical patterns visually correspond, no numerical/pixel equality. Held459/input/path/size/collision/preserve guards and normal/error owned cleanup pass.1072 artificial native records/stripes/CSV17, six model/eight record/two alias negatives pass; inherited corrected OQI label and late alias cleanup retained. Preserve768originals3527prior-private43snapshots1265old pointers124IDs14milestones103issues/all gates;1272current pointers. IEDF-01–07/IPCS-01–07/IETR-REPLAY-D01 stay open. Final tests/review/compiler/seal/separate proof govern operational closure, not science/release/rendering approval. **Next: M6.04.8 / M6.08.9 — bounded IEDF five-model historical replay and displayed-exhibit comparison, requiring new owner request.**
@@ -1320,3 +1333,16 @@ The next immediate task after validated technical closure is **M6.04.14 / M6.08.
 - M6.08.15.f: fresh post-review gate, exclusive private validation seal and separate exact-set/byte verification. Only bounded technical replay/display comparison closes; scientific/privacy/release approval does not.
 
 Next immediate task: **M6.03.15 / M6.05.15 — first supplementary item-level adapter and native-capture preflight, without fitting**. Pin section7.1 recent digital use, outcome derivation, original controls/sample, supplementary-table first column and native logit/OR interface. No I5, sibling fit, margins request or scientific correction is authorized by this handoff.
+
+#### M6.03.15 / M6.05.15 — recent digital use preflight and audited containment correction (10 October 2026)
+
+- M6.03.15.a: authenticate owner c031020 and sealed I4 replay; preserve 768 original checks, 6,933 prior-private fingerprints, 85 public snapshots and 1,374 inherited pointers.
+- M6.03.15.b: pin common setup1112–1236 and only section7.1/1836–1845, original binary coding, age/city and seven continuous controls; preserve all 58 selected historical tokens, 464 shared tokens and TXT/RTF notes. No sibling supplementary model or margins request.
+- M6.03.15.c: hold the fitting adapter before any input/estimator; preserve native estimates before future checking/formatting, and couple native capture, 17-digit CSV generation and saved-only readback.
+- M6.05.15.a: project only 24 numeric fields; verify original coding, 423 rows, 413 observable complete cases and design rank14 without claiming fitted sample/rank/convergence.
+- M6.05.15.b: test artificial logit states, all304 native records/11fields, OR/delta-SE/z formatting, actual private formatter and z-versus-t significance boundary, coupled writer/readback, and22 rejection cases; retain every failure.
+- M6.05.15.c: preserve the independent Important finding that eligibility01 created three empty root-level directories; preserve every formerly scoped file. Create eligibility02 with fresh guarded private output substitution, rerun only the no-fit check, require identical19 aggregate values and reject unbound/root-escaped paths. Leave the original empty directories untouched; no participant file exposure or cleanup authorization is claimed.
+- M6.05.15.d: authenticate13 actual selection requests and five closed owned workers; update the active eligibility pointer only to the safe successor, schema56/eight new pointers, without altering inherited gates, IDs, qualitative content or I3-REPLAY-D01.
+- M6.05.15.e: retain pre-correction owner/independent69-group325-test receipts. Require corrected owner and post-review69-group326-test suites, the same single independent review and explicit rulings, same-open-source built-in compilation, exclusive private seal and separate byte/exact-set verification. No Git/cloud/Overleaf/release or research fit.
+
+After technical closure, the next immediate task is **M6.04.15 / M6.08.16 — first bounded recent-use historical replay and selected displayed-exhibit comparison**, requiring new explicit fit authorization. Scientific validity, historical unrounded equality, public-release clearance and the original empty-directory cleanup remain outside this checkpoint.
