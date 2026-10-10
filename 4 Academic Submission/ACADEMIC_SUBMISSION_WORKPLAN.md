@@ -1255,7 +1255,9 @@ Next immediate task: M6.03.13 / M6.05.13 — protected I3 interaction adapter an
 
 ### Protected I3 interaction preparation and no-fit checkpoint
 
-**Closure hold:** the subsequent final seal check rejected a changed prior-I2 `native_model_acceptance.dta`. All 768 originals and the other 184 prior-I2 files still match; no final I3 seal exists. This task is not accepted complete despite the earlier green root, independent and post-review runs. Preserve both observed and pinned provenance, obtain owner direction, resolve the earlier archive discrepancy and rerun final preservation/closure before clearing M6.04.13 / M6.08.14. No historical fitting is authorized.
+**Targeted recovery substeps:** [M6.05.13.f.R1–R6](I3_PRESERVATION_RECOVERY_PROPOSAL.md#4-current-status-and-next-task) preserve the recovery, independent review and human approval chain. R1–R5 are verified: exactly one diagnostic is restored to its original sealed bytes, both versions retained, all 185 prior-I2 and 5,898 cumulative fingerprints matching, and the old seal unchanged. **R6 is the next immediate task:** correctly adopt the owner-created held checkpoint and complete fresh I3 closure without fitting.
+
+**Closure hold:** the prior-I2 `native_model_acceptance.dta` mismatch was resolved by the exact owner-approved restoration; all 768 originals and the full 185-file set match. No final I3 seal exists, and this task is not accepted complete. The fresh inherited suite has 252 passing unit tests and 63/64 passing command groups; the dated current-acceptance HEAD failure is retained and not waived. Authenticate the owner-checkpoint bridge and rerun final preservation/closure before clearing M6.04.13 / M6.08.14. No historical fitting is authorized.
 
 [M6.03.13 / M6.05.13 report](PROTECTED_INTERACTION_I3_ADAPTER_PREFLIGHT.md) and [safe preparation metadata](interaction-i3-adapter/).
 

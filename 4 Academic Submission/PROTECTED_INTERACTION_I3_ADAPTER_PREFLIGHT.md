@@ -52,7 +52,9 @@ The failed final preservation check is retained in the ignored private `closure_
 
 ## 6. Next immediate task
 
-**Immediate prerequisite: resolve the prior-I2 preservation discrepancy without overwriting either version or fabricating a new provenance baseline.** Owner direction is required before restoring or otherwise reconciling the earlier protected archive. Then rerun the preservation/closure checks. M6.03.13 / M6.05.13 remains open until these checks pass and the exclusive seal has a separate exact-set/hash proof.
+The recovery proposal passed independent review, and the owner's exact single-file approval has been implemented. The prior-I2 diagnostic is restored to its original sealed 1,835 bytes and SHA-256; both observed copies and the recovered candidate remain retained. Actual checks verify the exact 185-file prior-I2 set, all 5,898 cumulative fingerprints, 768 originals, 73 entry snapshots and 14 code pins; the old seal is unchanged. See the [restoration record](I3_PRESERVATION_RECOVERY_PROPOSAL.md#4-current-status-and-next-task). The earlier failed-preservation evidence remains preserved. No final I3 seal exists, and exact historical event attribution remains unproven.
+
+**Next immediate task: M6.05.13.f.R6 — owner-checkpoint adoption and final I3 preflight closure, without fitting.** Authenticate the relationship between the dated held checkpoint and the new owner-created checkpoint; retain the old tests and failure receipts without weakening their assertions. The fresh inherited suite reports 252 passing unit tests and 63/64 passing command groups; its dated current-acceptance HEAD gate remains red. Complete fresh current acceptance, review/compiler/source bindings and exclusive sealing with separate exact-set/hash readback. M6.03.13 / M6.05.13 remains open until all applicable closure gates pass.
 
 **Planned subsequent task, not yet cleared: M6.04.13 / M6.08.14 — first bounded protected I3 interaction historical replay and displayed-exhibit comparison.**
 
