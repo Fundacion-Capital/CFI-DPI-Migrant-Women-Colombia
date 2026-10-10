@@ -1,0 +1,54 @@
+source_row,kind,term,historical,replay,replay_row,replay_row_present,historical_label,replay_label,structural_ordinal,export_footer_difference,comparison_equal
+1,header,0,(2),(1),1,True,,,True,False,True
+2,header,1,I2: Years x IAFF -> Formal channel,I2: Years x IAFF -> Formal channel,2,True,VARIABLES,VARIABLES,False,False,True
+3,separator,1,,,3,True,,,False,False,True
+4,label,2.age_cat,0.704,0.704,6,True,2.age_cat,2.age_cat,False,False,True
+5,se,2.age_cat,(0.204),(0.204),7,True,,,False,False,True
+6,label,3.age_cat,0.744,0.744,8,True,3.age_cat,3.age_cat,False,False,True
+7,se,3.age_cat,(0.242),(0.242),9,True,,,False,False,True
+8,label,4.age_cat,0.499,0.499,10,True,4.age_cat,4.age_cat,False,False,True
+9,se,4.age_cat,(0.353),(0.353),11,True,,,False,False,True
+10,label,2.q3,0.489**,0.489**,12,True,2.q3,2.q3,False,False,True
+11,se,2.q3,(0.178),(0.178),13,True,,,False,False,True
+12,label,3.q3,0.799,0.799,14,True,3.q3,3.q3,False,False,True
+13,se,3.q3,(0.263),(0.263),15,True,,,False,False,True
+14,label,4.q3,0.544,0.544,16,True,4.q3,4.q3,False,False,True
+15,se,4.q3,(0.203),(0.203),17,True,,,False,False,True
+16,label,ivs_score,,,,False,ivs_score,,False,False,True
+17,separator,2,,,34,True,,,False,False,True
+18,label,iat_score,3.268,3.268,24,True,iat_score,iat_score,False,False,True
+19,se,iat_score,(3.112),(3.112),25,True,,,False,False,True
+20,label,c.ivs_score#c.iat_score,,,,False,c.ivs_score#c.iat_score,,False,False,True
+21,separator,3,,,,False,,,False,False,True
+22,label,icdp_score,4.368**,4.368**,26,True,icdp_score,icdp_score,False,False,True
+23,se,icdp_score,(3.180),(3.180),27,True,,,False,False,True
+24,label,iaff_score,22.790**,22.790**,20,True,iaff_score,iaff_score,False,False,True
+25,se,iaff_score,(32.154),(32.154),21,True,,,False,False,True
+26,label,oqi_score_01,0.736,0.736,28,True,oqi_score_01,oqi_score_01,False,False,True
+27,se,oqi_score_01,(0.556),(0.556),29,True,,,False,False,True
+28,label,IEDF,,,,False,IEDF,,False,False,True
+29,separator,4,,,,False,,,False,False,True
+30,label,IEH,1.007,1.007,30,True,IEH,IEH,False,False,True
+31,se,IEH,(0.005),(0.005),31,True,,,False,False,True
+32,label,formal_remittance,.,.,4,True,formal_remittance,formal_remittance,False,False,True
+33,se,formal_remittance,(.),(.),5,True,,,False,False,True
+34,label,years_in_col,1.338*,1.338*,18,True,years_in_col,years_in_col,False,False,True
+35,se,years_in_col,(0.208),(0.208),19,True,,,False,False,True
+36,label,c.years_in_col#c.iaff_score,0.662*,0.662*,22,True,c.years_in_col#c.iaff_score,c.years_in_col#c.iaff_score,False,False,True
+37,se,c.years_in_col#c.iaff_score,(0.140),(0.140),23,True,,,False,False,True
+38,label,c.icdp_score#c.oqi_score_01,,,,False,c.icdp_score#c.oqi_score_01,,False,False,True
+39,separator,5,,,,False,,,False,False,True
+40,label,ICPF,,,,False,ICPF,,False,False,True
+41,separator,6,,,,False,,,False,False,True
+42,label,c.IEDF#c.ICPF,,,,False,c.IEDF#c.ICPF,,False,False,True
+43,separator,7,,,,False,,,False,False,True
+44,label,Constant,0.033***,0.033***,32,True,Constant,Constant,False,False,True
+45,se,Constant,(0.040),(0.040),33,True,,,False,False,True
+46,separator,8,,,,False,,,False,False,True
+47,label,Observations,402,402,35,True,Observations,Observations,False,False,True
+48,label,R-squared,,,,False,R-squared,,False,False,True
+49,label,City FE,Yes,Yes,36,True,City FE,City FE,False,False,True
+50,label,Robust SE,Yes,Yes,37,True,Robust SE,Robust SE,False,False,True
+51,label,Estimator,Logit OR,Logit OR,38,True,Estimator,Estimator,False,False,True
+52,label,Robust standard errors in parentheses,,,39,True,Robust standard errors in parentheses,Robust seeform in parentheses,False,True,False
+53,label,"*** p<0.01, ** p<0.05, * p<0.1",,,40,True,"*** p<0.01, ** p<0.05, * p<0.1","*** p<0.01, ** p<0.05, * p<0.1",False,False,True

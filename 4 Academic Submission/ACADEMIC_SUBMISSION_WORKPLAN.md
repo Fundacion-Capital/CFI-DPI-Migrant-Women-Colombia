@@ -1236,3 +1236,19 @@ Next immediate task: M6.03.12 / M6.05.12 — protected I2 interaction adapter an
 10. M6.05.12.f: exclusive private seal and separate fresh exact-set/hash proof; proposed full commit title/body only, no Git/cloud/Overleaf/release/another fit. Treat completion as this bounded preparation child, not scientific endorsement or M6 completion.
 
 Next immediate task: M6.04.12 / M6.08.13 — first bounded protected I2 interaction historical replay and displayed-exhibit comparison, requiring new explicit owner fit authority. Preserve original append/eform semantics and second-column ordinal difference, early native states and non-posted probability route; audit actual convergence/omissions/sample and return shapes before certifying selected display agreement. No remedial refit or scientific correction is inherited.
+
+### Dated child checkpoint — I2 historical replay, 10 October 2026
+
+[M6.04.12 / M6.08.13 report](PROTECTED_INTERACTION_I2_REPLAY.md) and [aggregate/display crosswalks](interaction-i2-replay/).
+
+1. M6.04.12.a: authenticate direct eight-file preparation commit/prior seal/exact set;768 originals5712 prior-private70 snapshots1328 pointers124 IDs14 headings and every inherited issue/decision/gate.
+2. M6.04.12.b: source-exact separately owned derivative,26-field projection, fresh eligibility/tenure5/7/8 and runtime/checksum/path/collision guard checks before dispatch.
+3. M6.04.12.c: one original robust logit and one explicit non-posted probability request, no refit; actual N402/rank14/df_m13/convergence/two bases and exact e(sample)-mask match; early native states.
+4. M6.08.13.a: preserve original covariance audit rc9 and4.05e-17 asymmetry; separate1e-12 mathematical symmetry tolerance, material1e-4 corruption rejection and exact complete saved-return restoration; no repeated real margins.
+5. M6.08.13.b: separately source-bound saved-only plot/native continuation0;1,615 records660logit955prediction/11 fields/stripes/CSV17/early-late namespace sets exact; restored scalar enumeration order is not semantic. Do not claim uninterrupted bridge.
+6. M6.08.13.c: independent Stata/Mata probability/Jacobian/delta identities;41 exact aggregate DTA/CSV17 metrics/at12×14/Jacobian12×16;53 target rows40 present13 absent blanks, numerical equality plus explicit ordinal and disagreeing footer.
+7. M6.08.13.d: three actual images inspected, visual labels/colours/order/directions only; historical precision/member/producer/numerical-pixel equality unavailable. p0.051537 is10% not5%; joint support, causality and probability heterogeneity unverified.
+8. M6.08.13.e: all failed attempts and full actual call-linked receipts retained; immutable executable dependency roles and owned-worker restoration; current/inherited tests, one final independent review and every declined judgment ruled.
+9. M6.08.13.f: eight safe public files/schema50/current1335 pointers, existing main.tex/compiler, fresh post-review checks/review binding/exclusive seal/separate exact-set/hash proof; full commit title/body only, no Git/cloud/Overleaf/release/further fit.
+
+Next immediate task: M6.03.13 / M6.05.13 — protected I3 interaction adapter and native-capture preflight, before fitting and requiring new owner instruction. Pin complete source boundaries, shared third-column/figure bindings, inputs/sample/scales and prediction contract; no I3 fit authority inherited.
