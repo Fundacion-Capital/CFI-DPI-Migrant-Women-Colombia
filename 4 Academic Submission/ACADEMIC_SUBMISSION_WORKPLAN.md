@@ -1,5 +1,18 @@
 # Academic redevelopment and submission workplan
 
+#### Current bounded subtask — M6.03.17 / M6.05.17 (10 October 2026)
+
+1. M6.03.17.a: authenticate adopted owner4121331,183-file predecessor seal/eight committed blobs/two actual exit0 proofs; preserve768 originals,8012 inherited private fingerprints,97 public snapshots,1409 pointers and unchanged primary architecture/gates.
+2. M6.03.17.b: bind common setup1112–1236 and only fee_visible robust-logit/export1856–1861; retain original six controls (no IEDF), q6_18 coding, pooled-city/age factors and append/word/dec(3)/eform title/notes. Unconditional pre-load459; no activation.
+3. M6.03.17.c: pin both exact verified two-column seed files and private formatter; no preceding-model refit or shared-output overwrite. Source/coding/path/hold mutation tests RED→GREEN.
+4. M6.05.17.a: numeric-only24-field protected projection and aggregate eligibility:336 observable complete cases/rank13,234 yes/102 no/87 missing. Preserve failed q6_16 audit assertion and successful q6_18 successor; no e(sample) or participant export.
+5. M6.05.17.b: artificial-only15-slot e-post;271 native records ×11 fields keyed early/final equality, saved-only native/DTA/CSV17 readback. Six downstream checker rejections; hold459/escape198/collision602.
+6. M6.05.17.c: actual paired artificial TXT/RTF;42 keyed rows retained in each seed column, six new rows blank in both;48 TXT/46 logical RTF rows. Seed mutation, RTF corruption, missing-row/extra-column/native-key/field tests.
+7. M6.05.17.d: freeze58 selected column3/464 shared tokens/56 historical RTF rows; bounded private legacy search. No historical coefficient reproduction, unrounded/member/producer or exhaustive manuscript-binding certificate.
+8. M6.05.17.e: authenticate three selections/two closed owned workers/inventory in five actual parent calls and returns, including the failed audit probe; preserve receipts and raw journal line hashes. Zero fits/margins/predictions/default selection.
+9. M6.05.17.f: eight safe public files only; schema60 adds nine pointers without changing gates;16 current+367 inherited tests across73 groups; actual owner/independent/fresh-post-review receipts, sole reviewer/rulings, same-source built-in compilation, exclusive seal and separate exact-set/byte proof. Preserve all failures/ancillary qualifications/original root directories; no Git/cloud/access/install/delete/release.
+10. Next M6.04.17 / M6.08.18: one original fee-visible fit and column3 comparison ONLY with fresh explicit owner authorization. Earlier dated tasks remain historical, not current fit authority.
+
 #### Current bounded subtask — M6.04.16 / M6.08.17 (10 October 2026)
 
 1. M6.04.16.a: adopt owner7bf2e1d; authenticate176-file predecessor seal/eight Git blobs/two exit0 proofs; preserve768 originals,7826 prior-private fingerprints,94 public snapshots,1400 inherited pointers and unchanged task/milestone/gate architecture.
