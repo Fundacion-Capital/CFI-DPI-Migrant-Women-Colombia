@@ -1,0 +1,59 @@
+row,label,string
+1,,(2)
+2,VARIABLES,Recent digital problem
+3,,
+4,recent_digital_use,
+5,,
+6,2.age_cat,1.073
+7,,(0.466)
+8,3.age_cat,1.204
+9,,(0.568)
+10,4.age_cat,1.261
+11,,(1.710)
+12,2.q3,1.841
+13,,(0.886)
+14,3.q3,0.643
+15,,(0.312)
+16,4.q3,3.362*
+17,,(2.298)
+18,ivs_score,0.458
+19,,(0.687)
+20,iat_score,0.239
+21,,(0.344)
+22,icdp_score,78.785***
+23,,(120.007)
+24,iaff_score,0.058***
+25,,(0.048)
+26,oqi_score_01,0.024***
+27,,(0.034)
+28,IEDF,1.093***
+29,,(0.014)
+30,IEH,1.014*
+31,,(0.008)
+32,digital_problem,.
+33,,(.)
+34,fee_visible,
+35,,
+36,provider_info_clear,
+37,,
+38,feels_secure,
+39,,
+40,any_payment_problem,
+41,,
+42,4o.age_cat,
+43,,
+44,high_autonomy,
+45,,
+46,iurd_score_01,
+47,,
+48,ICPF,
+49,,
+50,Constant,0.143
+51,,(0.270)
+52,,
+53,Observations,360
+54,City FE,Yes
+55,Robust SE,Yes
+56,Estimator,Logit OR
+57,Robust seeform in parentheses,
+58,"*** p<0.01, ** p<0.05, * p<0.1",

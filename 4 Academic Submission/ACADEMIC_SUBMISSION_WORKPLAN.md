@@ -1,5 +1,18 @@
 # Academic redevelopment and submission workplan
 
+#### Latest additive workflow — M6.03.16 / M6.05.16, recent digital problem preflight
+
+- M6.03.16.a: authenticate owner7e4e2f9, eight adopted Git blobs, prior190-file seal/two exit0 proofs; preserve768 originals/7647 private fingerprints/91 snapshots/1391 inherited pointers.
+- M6.03.16.b: RED-to-GREEN source/append tests; retain setup1112-1236 and first equation/export1849-1854 only. Hold459 before loading/estimation; privately pin prior column1 TXT/RTF seed and append-only paths, excluding fee_visible and later equations.
+- M6.03.16.c: numeric-only24-field Stata-MCP eligibility, original coding and full-input standardization;360 observable cases/design rank14,119 yes/241 no/63 missing, not fitted diagnostics.
+- M6.05.16.a: artificial-only e-post/checker/native304x11/CSV17 and source-option append tests; preserve40 seed rows with six extra blank first-column cells. No estimator, real margins/predictions or sibling replay.
+- M6.05.16.b: preserve engine152 attempt and correct only the artificial eclass harness; retain failed ordinal assertion and verify unique-key/every-field native equality. Authenticate three selections/two closed owned workers/four parent pairs, zero research fits.
+- M6.05.16.c: freeze58 historical selected column2 tokens/464 shared tokens/56 RTF rows and source-relevant manuscript search without claiming historical numerical reproduction or unique producer.
+- M6.05.16.d: exact eight public files/schema58/nine additive pointers; preserve124 primary IDs/14 milestone headings, qualitative content, all scientific/privacy/release holds and I3-REPLAY-D01.
+- M6.05.16.e: require fresh71-group351-test owner/independent/post-review suites, explicit reviewer exclusions/rulings, same-open-source compiler success, exclusive private seal and separate saved-only exact-set/byte proof; no Git/cloud/release/cleanup.
+
+Next: **M6.04.16 / M6.08.17**, first bounded protected recent digital problem historical replay and supplementary-table column2 comparison, only after separate explicit owner fit authorization.
+
 #### Latest additive workflow — M6.04.15 / M6.08.16, recent digital use historical replay
 
 - M6.04.15.a: authenticate owner f2ba9d4, eight predecessor Git blobs, sealed preflight and two proofs; preserve768 originals/7454 prior-private/88 snapshots/1382 inherited pointers.
