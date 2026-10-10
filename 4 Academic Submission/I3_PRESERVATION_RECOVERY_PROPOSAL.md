@@ -1,6 +1,6 @@
 # I3 preservation recovery and authorized single-file restoration
 
-10 October 2026. Entry: clean owner-created main `9333e2d3d3d8414b3a678b09db3e689513a8e266`, directly over `ed098223`. **The owner-authorized single-file restoration is verified; both observed and recovered versions are retained. M6.03.13 / M6.05.13 remains open pending owner-checkpoint adoption and final I3 closure. No I3 fit is authorized.**
+10 October 2026. Recovery entry: clean owner-created main `9333e2d3d3d8414b3a678b09db3e689513a8e266`, directly over `ed098223`. **The owner-authorized single-file restoration remains verified; both observed and recovered versions are retained. R6 at the subsequent `81ad087` checkpoint establishes the separately authenticated current closure record, governed by its exclusive seal and separate byte proof. No I3 fit is authorized.**
 
 ## 1. What was recovered
 
@@ -49,5 +49,5 @@ Granular status:
 3. M6.05.13.f.R3 — recover exact sealed bytes in a new private candidate; verify readability and seven rejection/collision cases: verified.
 4. M6.05.13.f.R4 — independently review the proposal and perform final read-only preservation verification: accepted within the proposal scope; full review and all ten declined-judgment rulings retained.
 5. M6.05.13.f.R5 — obtain owner approval and restore the single diagnostic with full preservation proof: **completed and verified; exactly one archive file restored, original seal unchanged**.
-6. M6.05.13.f.R6 — authenticate adoption of the owner-created held checkpoint, then rerun and validate final I3 preflight closure: **next immediate task, without fitting**. Preserve dated failure receipts and tests; do not weaken their historical assertions or manufacture a new baseline. Fresh current acceptance, source/compiler/review bindings, exclusive sealing and separate exact-set/hash readback remain required.
-7. M6.04.13 / M6.08.14 — bounded I3 historical fit/display comparison: **not cleared; requires separate future fit authority**.
+6. M6.05.13.f.R6 — authenticate adoption of the owner-created held checkpoint, then rerun and validate final I3 preflight closure: current evidence is in `audit-local/intake/interaction-i3-closure-81ad087`, with actual Git lineage/content authentication, fresh saved-only Stata readback and preservation of all dated failures. The current `i3_closure_validation` seal and its separate exact-set/hash proof govern completion; neither the original failed seal nor its historical assertions is rewritten. See the [current I3 closure report](PROTECTED_INTERACTION_I3_ADAPTER_PREFLIGHT.md#7-r6-owner-checkpoint-adoption-and-closure-evidence).
+7. M6.04.13 / M6.08.14 — bounded I3 historical fit/display comparison: **next after verified R6 closure; requires separate future fit authority**.
