@@ -1,5 +1,18 @@
 # Academic redevelopment and submission workplan
 
+#### Current bounded subtask — M6.04.17 / M6.08.18 (10 October 2026)
+
+**M6.04.17 / M6.08.18:** [protected fee-visibility historical replay and column 3 comparison](PROTECTED_FEE_VISIBILITY_HISTORICAL_REPLAY.md). Exactly one original robust-logit fit, N=336, rank=13, converged=1; no refit, earlier/sibling model, margins or predictions. All 593 keyed native records across eleven fields agree in early, post-formatter and final saved-only readbacks. All 58 selected historical strings agree: 44 aligned rows and 14 certified blank sibling absences; paired TXT/RTF and both 42-row preceding seed columns are unchanged. The actual append adds two rows blank in each earlier column. Schema61 retains1418 pointers and adds nine;768 originals/8208 prior-private fingerprints/100 entry snapshots protected. Cumulative74-group400-test checks, independent review/rulings, same-source compiler and exclusive seal/separate byte verification are required for technical closure. No scientific, privacy or release gate is advanced; I3-REPLAY-D01 stays open. **Next: M6.03.18 / M6.05.18 — protected provider-information clarity adapter and native-capture preflight, without fitting.** All older handoffs are dated history.
+
+1. M6.04.17.a: authenticate committed77b0b5e and preflight seal/proofs; preserve768 originals/8208 private fingerprints/100 snapshots/1418 pointers.
+2. M6.04.17.b: activate only sealed source1856–1861; five boundary tests RED→GREEN; exclusive dispatch before one fit.
+3. M6.04.17.c: isolated Stata MCP fit only; preserve native before formatter; original append into both verified seed formats; restore empty state/private path.
+4. M6.08.18.a: saved-only early/post-formatter/final native593×11 equality; no fit retry, margins or predictions.
+5. M6.08.18.b: selected58 strings zero discrepancies;44 aligned/14 blank sibling absences; paired44 TXT/42 RTF rows; both seed42 rows unchanged/two new blanks.
+6. M6.08.18.c: seventeen current tests plus inherited383;74 cumulative groups; authenticated actual parent dispatch/owned worker closure.
+7. M6.08.18.d: schema61/1427 pointers; unchanged primary architecture and gates; same main.tex built-in compiler; sole fresh independent review and ruled exclusions.
+8. M6.08.18.e: identical owner/independent/post inventories; no-replace seal and separate actual byte proofs before technical closure. Next provider-information clarity preflight only.
+
 #### Current bounded subtask — M6.03.17 / M6.05.17 (10 October 2026)
 
 1. M6.03.17.a: authenticate adopted owner4121331,183-file predecessor seal/eight committed blobs/two actual exit0 proofs; preserve768 originals,8012 inherited private fingerprints,97 public snapshots,1409 pointers and unchanged primary architecture/gates.
