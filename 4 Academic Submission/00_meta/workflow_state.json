@@ -1,5 +1,5 @@
 {
-  "schema_version": 52,
+  "schema_version": 53,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_INTERACTION_I3_ADAPTER_PREFLIGHT.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_INTERACTION_I3_HISTORICAL_REPLAY.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1735,7 +1735,17 @@
     "i3_closure_current_acceptance": "audit-local/intake/interaction-i3-closure-81ad087/preseal_acceptance.json",
     "i3_closure_validation": "audit-local/intake/interaction-i3-closure-81ad087/i3_preflight_validation.json",
     "i3_closure_review": "audit-local/intake/interaction-i3-closure-81ad087/review_acceptance.json",
-    "i3_closure_saved_only_readback": "audit-local/intake/interaction-i3-closure-81ad087/native_readback_receipt.json"
+    "i3_closure_saved_only_readback": "audit-local/intake/interaction-i3-closure-81ad087/native_readback_receipt.json",
+    "i3_replay_contract": "audit-local/intake/interaction-i3-replay-f668af8/replay_contract.json",
+    "i3_replay_authority": "audit-local/intake/interaction-i3-replay-f668af8/authority.json",
+    "i3_replay_native_acceptance": "audit-local/intake/interaction-i3-replay-f668af8/native_capture_acceptance.json",
+    "i3_replay_display_acceptance": "audit-local/intake/interaction-i3-replay-f668af8/display_acceptance.json",
+    "i3_replay_image_review": "audit-local/intake/interaction-i3-replay-f668af8/image_review.json",
+    "i3_replay_dispatch_history": "audit-local/intake/interaction-i3-replay-f668af8/dispatch_history_manifest.json",
+    "i3_replay_validation": "audit-local/intake/interaction-i3-replay-f668af8/i3_replay_validation.json",
+    "i3_replay_review": "audit-local/intake/interaction-i3-replay-f668af8/review_acceptance.json",
+    "i3_replay_report": "PROTECTED_INTERACTION_I3_HISTORICAL_REPLAY.md",
+    "i3_replay_child_acceptance": "interaction-i3-replay/child_acceptance.csv"
   },
   "decisions": [
     {

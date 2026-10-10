@@ -1273,3 +1273,18 @@ Next immediate task: M6.03.13 / M6.05.13 — protected I3 interaction adapter an
 10. M6.05.13.f — Compile the same main.tex, preserve compiler/source binding, exclusively seal the private packet and separately verify exact private/public sets and all bytes. Provide complete proposed commit title/body; no Git/cloud/Overleaf/release/further fit.
 
 Next immediate task: M6.04.13 / M6.08.14 — first bounded protected I3 interaction historical replay and displayed-exhibit comparison. Requires new explicit owner fit authority; preparation does not certify results or scientific validity.
+
+
+#### M6.04.13 / M6.08.14 — bounded I3 replay and discrepancy closeout (10 October 2026)
+
+- M6.04.13.a: authenticate f668af8 owner checkpoint, R6 seal, 768 originals, 6,247 prior-private fingerprints and 76 public snapshots; preserve 1,347 inherited pointers.
+- M6.04.13.b: source-exact derivative/negative tests, dependency copies, checksum/collision guards and no-fit preflight; reserve one fit and one explicit margins dispatch.
+- M6.04.13.c: execute original I3 robust OLS/non-posted predicted levels once; preserve early OLS/r() states before checks/plot; no remedial fit. Actual N423/rank14/df409.
+- M6.08.14.a: validate 2,707 actual native records/every field/stripe; actual 22×14 at matrix/22×16 Jacobian; independent float-storage-aware prediction/covariance/t-inference algebra without refitting. Preserve failed nominal-double reconstruction.
+- M6.08.14.b: retain deficient aggregate float exports; exact-double successor matches every native and CSV value. Audit precision at the export boundary, not model changes.
+- M6.08.14.c: compare all 53 historical I3 tokens: fifteen other-column blank-row absences and one isolated ordinal are structural; **22 nonstructural displayed differences remain unresolved (I3-REPLAY-D01)**.
+- M6.08.14.d: inspect replay/repository/legacy figures; historical gap narrows, current gap widens. No pixel/numerical equivalence or supported moderation claim. Four below-support grid points retained, joint support not certified.
+- M6.08.14.e: schema53/1,357 pointers, eight safe public files, unchanged research sources/gates; same-main compilation, inherited/current tests, one independent review with explicit rulings.
+- M6.08.14.f: fresh post-review execution, exclusive private seal and separate saved-only exact-set/byte proof. Only technical replay/discrepancy audit completes; historical reproduction and scientific/release adoption do not.
+
+Next immediate task: **M6.03.14 / M6.05.14 — protected I4 IEDF × ICPF → IURD adapter/native-capture preflight, before fitting**. Require a new scoped owner instruction; no I4 fit or I3 corrective fit is authorized by this handoff.
