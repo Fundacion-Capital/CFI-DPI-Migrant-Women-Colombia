@@ -1305,3 +1305,18 @@ This additive checkpoint does not replace or renumber the original 124 primary t
 - **M6.05.14.e:** run current and byte-authenticated dated tests, one fresh independent review, explicit rulings/costs, final post-review tests, private exclusive seal and separate exact-set/byte verification. No staging, commit, push, synchronization, release, or scientific adoption.
 
 The next immediate task after validated technical closure is **M6.04.14 / M6.08.15 — first bounded protected I4 historical replay and displayed-exhibit comparison**, requiring new explicit fit authority. I3-REPLAY-D01 and all inherited measurement, scientific and privacy/release holds remain open.
+
+
+#### M6.04.14 / M6.08.15 — bounded I4 replay and displayed-exhibit closeout (10 October 2026)
+
+- M6.04.14.a: authenticate owner 1e9a38d and sealed I4 preflight; preserve 768 originals, 6,732 prior-private fingerprints, 82 public snapshots and 1,364 inherited pointers.
+- M6.04.14.b: source-exact derivative, positive/mutation tests, immutable dependency copies and no-fit checksum/projection/collision preflight; reserve exactly one fit and one original nonposted prediction request.
+- M6.04.14.c: original I4 robust OLS and fixed 33-point prediction grid once; immediate OLS/r() saves, observable/e(sample) equality, original TXT/RTF/graph. N423/rank16/df407; no refit or respondent export.
+- M6.08.15.a: all 4,739 early/final native records/every field/stripe; real at33×16/Jacobian33×18; saved-only independent prediction/covariance/t-inference checks, second worker readback and closure.
+- M6.08.15.b: retain the initial audit-only float prediction export; grouped-double saved-only successor verifies all 231 numeric prediction fields and CSV17 against native results.
+- M6.08.15.c: all 53 fourth-column historical tokens and TXT/RTF notes; 11 other-column blank absences and one ordinal are structural; zero nonstructural differences, no sibling-column or historical-unrounded certification.
+- M6.08.15.d: actual/repository/legacy graph inspection; original rising/rising/falling directions and crossing correspond. Interaction p0.2513, no supported moderation/causality; joint support not certified; I3-REPLAY-D01 remains open.
+- M6.08.15.e: eight safe public files, schema55/1,374 pointers, original124 primary tasks/14 milestone headings and all gates retained; same-main compilation, inherited/current tests, one independent review with explicit rulings.
+- M6.08.15.f: fresh post-review gate, exclusive private validation seal and separate exact-set/byte verification. Only bounded technical replay/display comparison closes; scientific/privacy/release approval does not.
+
+Next immediate task: **M6.03.15 / M6.05.15 — first supplementary item-level adapter and native-capture preflight, without fitting**. Pin section7.1 recent digital use, outcome derivation, original controls/sample, supplementary-table first column and native logit/OR interface. No I5, sibling fit, margins request or scientific correction is authorized by this handoff.
