@@ -1,5 +1,26 @@
 # Academic redevelopment and submission workplan
 
+## Perceived-security protected no-fit checkpoint — 11 October 2026
+
+M6.03.19 / M6.05.19 prepares the protected perceived-security (`feels_secure`) supplementary model without fitting. Exact source1873–1878/setup1112–1236; original q7_9 codes1/2=yes,3/4=no, other/missing remain missing. Original six predictors include IEDF and exclude IAFF. Guarded24 numeric fields/423 rows yield423 observable complete cases and design rank13, with384 secure/39 not secure/0 missing; these are not fitted sample/rank/convergence evidence. Artificial e-post only verifies271 keyed native records/11 fields, coupled CSV17 and separate saved-only readback, paired52TXT/50RTF rows, and four preserved46-row seed columns plus six new blanks each. Invalid-name failure198 before artificial results is preserved; corrected short checker and exclusive native02 successor pass identifier-limit RED→GREEN plus six negative checker cases. Four actual selections/seven parent calls and returns/three closed owned workers; default not selected. Schema64 preserves1445 pointers and adds nine;768 originals/8783 inherited private fingerprints/109 snapshots/124 primary IDs/14 milestone headings and all science/privacy/release holds remain unchanged. The sole independent77-group452-test review required two corrections: eligibility01 substituted IAFF for IEDF and the legacy search receipt misstated its terms. All213 reviewed bindings and the verdict are preserved; eligibility02 uses the exact predictor set and passes missing-value perturbations. Corrected aggregates remain423/rank13. Technical closure requires corrected77-group454-test owner/post suites, review/rulings, same-open-source compiler and exclusive seal/separate exact-set verification. I3-REPLAY-D01 remains open.
+
+Details: [protected preflight](PROTECTED_PERCEIVED_SECURITY_PREFLIGHT.md). **Next: M6.04.19 / M6.08.20 — first bounded perceived-security historical replay and supplementary-table column5 comparison**, requiring new explicit bounded-fit authorization. Earlier dated handoffs are historical, not current authority.
+
+Granular children:
+
+- M6.03.19.a: authenticate owner checkpoint, replay seal, exact protected sets and four-column seed.
+- M6.03.19.b: pin source setup/equation/export and freeze58 selected/464 shared historical tokens with56 logical RTF rows.
+- M6.03.19.c: hold adapter at459 before input/side effects, bind native save before checker/formatter and restrict private destinations.
+- M6.05.19.a: validate numeric24 projection, original mapping,423 eligibility and observable rank13 without fitting or participant export.
+- M6.05.19.b: preserve failed artificial attempt; prove short private program names with RED→GREEN and execute only exclusive native02 successor.
+- M6.05.19.c: validate artificial271 records/11 fields, all native/CSV17 fields and independent saved-only readback.
+- M6.05.19.d: validate exact four-column seed preservation, paired artificial append, corruption/missing-row/extra-column/native-key/field rejection cases.
+- M6.05.19.e: authenticate all actual selections/returns and both worker destructions; distinguish failed attempt from accepted artificial evidence.
+- M6.05.19.f: enforce additive schema64, unchanged inherited issues/gates/primary tasks, private paths and preserved failed/original artifacts.
+- M6.05.19.g: preserve the first failed owner suite and stale routing helper; verify current live acceptance routing RED→GREEN and require the preserved sole independent77-group452-test review and corrected owner/post77-group454-test suites, every review exclusion ruled, unchanged-preamble builtin compile, exclusive seal and separate byte/exact-set proof.
+- M6.05.19.h: preserve all 213 reviewed bindings; resolve the review's IAFF-for-IEDF eligibility defect and stale search receipt in one correction pass, require exact-model missing-value perturbations and identical25 aggregate values, preserve the original verdict and both old receipts, and validate two new focused tests without a second review or fit.
+
+
 ## Provider-information clarity bounded replay — 11 October 2026
 
 M6.04.18 / M6.08.19: one original provider-information clarity robust-logit replay, N368/rank13/converged1. All593 native records across11 fields agree in early, post-formatter and final saved-only captures. All58 column4 display strings agree:46 aligned rows and12 verified blank sibling absences. Each preceding seed column preserves44 rows and two new blanks. No refit, margins, predictions, participant export, production correction or shared-output overwrite. Schema63 preserves1436 pointers and adds nine;768 originals,8592 prior-private fingerprints and106 snapshots remain protected. Technical acceptance requires76 command groups/434 tests, sole fresh review/rulings, same-open-source compiler, exclusive seal and separate exact-set readback. Scientific/privacy/release gates and I3-REPLAY-D01 remain held/open.
