@@ -1,5 +1,12 @@
 # Academic redevelopment workspace
 
+## Provider-information clarity bounded replay — 11 October 2026
+
+M6.04.18 / M6.08.19: one original provider-information clarity robust-logit replay, N368/rank13/converged1. All593 native records across11 fields agree in early, post-formatter and final saved-only captures. All58 column4 display strings agree:46 aligned rows and12 verified blank sibling absences. Each preceding seed column preserves44 rows and two new blanks. No refit, margins, predictions, participant export, production correction or shared-output overwrite. Schema63 preserves1436 pointers and adds nine;768 originals,8592 prior-private fingerprints and106 snapshots remain protected. Technical acceptance requires76 command groups/434 tests, sole fresh review/rulings, same-open-source compiler, exclusive seal and separate exact-set readback. Scientific/privacy/release gates and I3-REPLAY-D01 remain held/open.
+
+Details: [protected replay](PROTECTED_PROVIDER_INFO_HISTORICAL_REPLAY.md). Next: **M6.03.19 / M6.05.19 — protected perceived-security supplementary-model adapter and native-capture preflight, without fitting**. This does not close the whole M6 milestone or authorize scientific adoption.
+
+
 ## Current provider-information clarity preflight checkpoint — 10 October 2026
 
 **M6.03.18 / M6.05.18:** [protected provider-information clarity supplementary-model preflight](PROTECTED_PROVIDER_INFO_PREFLIGHT.md), without fitting. Exact setup1112–1236/equation1863–1868 and original q6_23 coding retained; six continuous predictors exclude IEDF. Numeric-only checks:368 complete cases/design rank13,312 clear/56 not clear/55 missing—not fit evidence. Artificial271×11 native transport and paired append preserve44 rows in all three verified seed columns, with six additional prior-column blanks;50 TXT/48 logical RTF rows.58 historical column4 strings are frozen, not reproduced. Two Stata MCP selections/one closed owned worker; zero fits/margins/predictions. Schema62 preserves1427 pointers and adds nine;768 original checks/8400 inherited private fingerprints/103 snapshots protected. Matching75-group416-test runs, sole fresh review with all exclusions ruled, same-source compiler and exclusive seal/separate verification govern technical closure. I3-REPLAY-D01 and scientific/privacy/release holds remain open. **Next: M6.04.18 / M6.08.19, only with fresh explicit bounded-fit authorization.** Older handoffs below are dated history.
