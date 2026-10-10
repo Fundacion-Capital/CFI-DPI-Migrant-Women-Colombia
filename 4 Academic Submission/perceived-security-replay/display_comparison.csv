@@ -1,0 +1,59 @@
+source_row,kind,term,historical_label,historical,replay_row,replay_label,replay,replay_row_present,structural_sibling_absence,comparison_equal
+1,header,0,,(5),1,,(5),True,False,True
+2,header,1,VARIABLES,Feels secure,2,VARIABLES,Feels secure,True,False,True
+3,separator,1,,,3,,,True,False,True
+4,label,recent_digital_use,recent_digital_use,,4,recent_digital_use,,True,False,True
+5,se,recent_digital_use,,,5,,,True,False,True
+6,label,2.age_cat,2.age_cat,0.920,6,2.age_cat,0.920,True,False,True
+7,se,2.age_cat,,(0.468),7,,(0.468),True,False,True
+8,label,3.age_cat,3.age_cat,2.391,8,3.age_cat,2.391,True,False,True
+9,se,3.age_cat,,(1.456),9,,(1.456),True,False,True
+10,label,4.age_cat,4.age_cat,2.626,10,4.age_cat,2.626,True,False,True
+11,se,4.age_cat,,(4.484),11,,(4.484),True,False,True
+12,label,2.q3,2.q3,0.728,12,2.q3,0.728,True,False,True
+13,se,2.q3,,(0.550),13,,(0.550),True,False,True
+14,label,3.q3,3.q3,0.850,14,3.q3,0.850,True,False,True
+15,se,3.q3,,(0.541),15,,(0.541),True,False,True
+16,label,4.q3,4.q3,0.449,16,4.q3,0.449,True,False,True
+17,se,4.q3,,(0.249),17,,(0.249),True,False,True
+18,label,ivs_score,ivs_score,0.180,18,ivs_score,0.180,True,False,True
+19,se,ivs_score,,(0.248),19,,(0.248),True,False,True
+20,label,iat_score,iat_score,387.441***,20,iat_score,387.441***,True,False,True
+21,se,iat_score,,(682.127),21,,(682.127),True,False,True
+22,label,icdp_score,icdp_score,2.261,22,icdp_score,2.261,True,False,True
+23,se,icdp_score,,(2.290),23,,(2.290),True,False,True
+24,label,iaff_score,iaff_score,,24,iaff_score,,True,False,True
+25,se,iaff_score,,,25,,,True,False,True
+26,label,oqi_score_01,oqi_score_01,121.854***,26,oqi_score_01,121.854***,True,False,True
+27,se,oqi_score_01,,(130.735),27,,(130.735),True,False,True
+28,label,IEDF,IEDF,1.008,28,IEDF,1.008,True,False,True
+29,se,IEDF,,(0.009),29,,(0.009),True,False,True
+30,label,IEH,IEH,1.011,30,IEH,1.011,True,False,True
+31,se,IEH,,(0.010),31,,(0.010),True,False,True
+32,label,digital_problem,digital_problem,,32,digital_problem,,True,False,True
+33,se,digital_problem,,,33,,,True,False,True
+34,label,fee_visible,fee_visible,,34,fee_visible,,True,False,True
+35,se,fee_visible,,,35,,,True,False,True
+36,label,provider_info_clear,provider_info_clear,,36,provider_info_clear,,True,False,True
+37,se,provider_info_clear,,,37,,,True,False,True
+38,label,feels_secure,feels_secure,.,38,feels_secure,.,True,False,True
+39,se,feels_secure,,(.),39,,(.),True,False,True
+40,label,any_payment_problem,any_payment_problem,,,,,False,True,True
+41,se,any_payment_problem,,,,,,False,True,True
+42,label,4o.age_cat,4o.age_cat,,,,,False,True,True
+43,separator,2,,,42,,,True,False,True
+44,label,high_autonomy,high_autonomy,,,,,False,True,True
+45,se,high_autonomy,,,,,,False,True,True
+46,label,iurd_score_01,iurd_score_01,,,,,False,True,True
+47,se,iurd_score_01,,,,,,False,True,True
+48,label,ICPF,ICPF,,,,,False,True,True
+49,se,ICPF,,,,,,False,True,True
+50,label,Constant,Constant,0.005***,40,Constant,0.005***,True,False,True
+51,se,Constant,,(0.009),41,,(0.009),True,False,True
+52,separator,3,,,,,,False,True,True
+53,label,Observations,Observations,423,43,Observations,423,True,False,True
+54,label,City FE,City FE,Yes,44,City FE,Yes,True,False,True
+55,label,Robust SE,Robust SE,Yes,45,Robust SE,Yes,True,False,True
+56,label,Estimator,Estimator,Logit OR,46,Estimator,Logit OR,True,False,True
+57,label,Robust seeform in parentheses,Robust seeform in parentheses,,47,Robust seeform in parentheses,,True,False,True
+58,label,"*** p<0.01, ** p<0.05, * p<0.1","*** p<0.01, ** p<0.05, * p<0.1",,48,"*** p<0.01, ** p<0.05, * p<0.1",,True,False,True
