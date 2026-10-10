@@ -1,0 +1,11 @@
+child_id,status,evidence,scope_limit
+M6.04.16.a,PASS,Owner checkpoint and preserved entry manifest,No Git or cloud mutation
+M6.04.16.b,PASS,Five activation boundary tests RED to GREEN,Exact sealed original source only
+M6.04.16.c,PASS,Exclusive reservation and single fit N360 rank14 converged1,No refit S1 or sibling fit
+M6.08.17.a,PASS,660 native records across eleven fields equal all phases,Stored carrier normalized not raw byte equality
+M6.08.17.b,PASS,58 selected display tokens zero differences,42 aligned and16 sibling blank absences
+M6.08.17.c,PASS,40 seed rows retained two added column1 blanks,No whole shared table reproduction
+M6.08.17.d,PASS,Three selections one owned worker closed,Actual returns not machine-wide certificate
+M6.08.17.e,GATED,Cumulative suite independent review and compiler,Technical closure requires private validation seal
+M6.08.17.f,GATED,Exclusive private seal and separate exact-set readback,Not scientific or release approval
+M6.03.17_M6.05.17,NOT_STARTED,Fee-visibility held adapter and preflight,No fitting authorized

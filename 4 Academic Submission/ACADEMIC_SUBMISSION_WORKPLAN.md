@@ -1,5 +1,17 @@
 # Academic redevelopment and submission workplan
 
+#### Current bounded subtask — M6.04.16 / M6.08.17 (10 October 2026)
+
+1. M6.04.16.a: adopt owner7bf2e1d; authenticate176-file predecessor seal/eight Git blobs/two exit0 proofs; preserve768 originals,7826 prior-private fingerprints,94 public snapshots,1400 inherited pointers and unchanged task/milestone/gate architecture.
+2. M6.04.16.b: five source/boundary tests RED→GREEN; activate only sealed setup1112–1236/model1849–1854 into fresh guarded private fit-01. Pin both column1 seed files and private formatter dependencies. No participant identifiers or membership export.
+3. M6.04.16.c: actual no-fit24-field projection pass; reserve dispatch exclusively; run original digital_problem robust logit once; immediate native save before checks/formatting; original append and after-formatter save/coupled native readback. N360/rank14/converged1. No refit, S1 fit, sibling, margins or predictions.
+4. M6.08.17.a: saved-only early/formatter/final660-record ×11-field keyed equality; native estimates/DTA/CSV17 readback; six explicitly double diagnostic fields from saved model; empty worker/PLUS restoration and successful owned-worker destruction.
+5. M6.08.17.b: all58 historical column2 strings;42 aligned rows/16 sibling-only blank absences/zero differences; historical56 and replay40 logical RTF rows and exact notes; preserve40 seed-row column1 values and two newly blank first-column rows. No whole-table, historical unrounded/membership or unique-producer certificate.
+6. M6.08.17.c: seven evidence and four state boundary tests RED→GREEN. Authenticate actual parent authority/three selection calls/one worker closure; preserve raw journal line hashes and actual returns. Schema59 adds nine pointers only;124 primary IDs/14 milestone headings/all other state unchanged.
+7. M6.08.17.d: cumulative72-group/367-test owner, independent and post-review verification; authenticate one verbatim fresh review and rule every exclusion; same-open-main built-in compilation; exclusive private seal plus separate exact-set/byte readback with actual tool-result proofs. This contract governs technical closure, not scientific/publication acceptance.
+
+Next immediate task: **M6.03.17 / M6.05.17 — protected fee-visibility supplementary-model adapter and native-capture preflight, without fitting.** Pin source1856–1861 and shared-table column3; preserve private two-column append seed. No activation or next fit is authorized by this handoff. See [current replay report](PROTECTED_DIGITAL_PROBLEM_HISTORICAL_REPLAY.md).
+
 #### Latest additive workflow — M6.03.16 / M6.05.16, recent digital problem preflight
 
 - M6.03.16.a: authenticate owner7e4e2f9, eight adopted Git blobs, prior190-file seal/two exit0 proofs; preserve768 originals/7647 private fingerprints/91 snapshots/1391 inherited pointers.
