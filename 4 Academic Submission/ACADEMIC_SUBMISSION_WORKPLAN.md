@@ -1252,3 +1252,22 @@ Next immediate task: M6.04.12 / M6.08.13 — first bounded protected I2 interact
 9. M6.08.13.f: eight safe public files/schema50/current1335 pointers, existing main.tex/compiler, fresh post-review checks/review binding/exclusive seal/separate exact-set/hash proof; full commit title/body only, no Git/cloud/Overleaf/release/further fit.
 
 Next immediate task: M6.03.13 / M6.05.13 — protected I3 interaction adapter and native-capture preflight, before fitting and requiring new owner instruction. Pin complete source boundaries, shared third-column/figure bindings, inputs/sample/scales and prediction contract; no I3 fit authority inherited.
+
+### Protected I3 interaction preparation and no-fit checkpoint
+
+**Closure hold:** the subsequent final seal check rejected a changed prior-I2 `native_model_acceptance.dta`. All 768 originals and the other 184 prior-I2 files still match; no final I3 seal exists. This task is not accepted complete despite the earlier green root, independent and post-review runs. Preserve both observed and pinned provenance, obtain owner direction, resolve the earlier archive discrepancy and rerun final preservation/closure before clearing M6.04.13 / M6.08.14. No historical fitting is authorized.
+
+[M6.03.13 / M6.05.13 report](PROTECTED_INTERACTION_I3_ADAPTER_PREFLIGHT.md) and [safe preparation metadata](interaction-i3-adapter/).
+
+1. M6.03.13.a — Authenticate clean main ed098223 and its direct eight-file I2 replay commit; verify previous exact seal set and every byte. Preserve 768 originals, 5,898 prior-private fingerprints, 73 public snapshots and 1,335 inherited pointers.
+2. M6.03.13.b — Pin setup 1112–1236 and complete I3 1767–1796, excluding I4 at 1797. Freeze all shared-table strings; select only column three and bind repository Figure 51 / embedded legacy Figure 46.
+3. M6.03.13.c — Verify 24 numeric fields, literal pooling and fifteen aliases; observable complete cases 423, factor slots 16 and no-fit rank 14. Keep fitted rank/omissions/sample and df 409 expectation distinct.
+4. M6.03.13.d — Preserve full-input ICDP p25/p75 0.75/0.9375 and original 22-point predicted-level grid. Flag four OQI 0/.1 points below marginal support; do not revise grid or certify joint support.
+5. M6.05.13.a — Reuse immutable native writer, reader and return-capture helpers/dependencies; unconditional rc459 hold precedes input load, destination creation or any fit. Retain early OLS and prediction-saving instrumentation with exact source-removal roundtrip.
+6. M6.05.13.b — Execute artificial capability/export/saved-plot and aggregate contracts through owned Stata MCP only. Verify all 1,904 native records/eleven fields/17-digit CSV and early/final original fields/stripes. No research fit or real margins.
+7. M6.05.13.c — Reject path/input/checksum/collision, seven basic plus six additional state defects, eight native corruptions, bad rows/type/alias and forced cleanup. Retain failed probes; demonstrate Jacobian-label guard RED→GREEN and covariance roundoff/material-corruption distinction.
+8. M6.05.13.d — Authenticate thirteen file calls and one artificial diagnostic selection through eleven original call-linked outer records; preserve limitations of manually inspected bounded bindings and untouched workers.
+9. M6.05.13.e — Update eight safe files and schema 50→51 / pointers 1,335→1,342 without altering inherited issues/decisions/gates/124 primary IDs/fourteen milestones. Run current and inherited suites, one fresh independent review, explicit rulings and post-review tests.
+10. M6.05.13.f — Compile the same main.tex, preserve compiler/source binding, exclusively seal the private packet and separately verify exact private/public sets and all bytes. Provide complete proposed commit title/body; no Git/cloud/Overleaf/release/further fit.
+
+Next immediate task: M6.04.13 / M6.08.14 — first bounded protected I3 interaction historical replay and displayed-exhibit comparison. Requires new explicit owner fit authority; preparation does not certify results or scientific validity.
