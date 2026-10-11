@@ -1,5 +1,5 @@
 {
-  "schema_version": 74,
+  "schema_version": 75,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M1_K3_PREFLIGHT.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M1_K3_HISTORICAL_REPLAY.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1932,7 +1932,16 @@
     "lca_m1_k3_preflight_validation": "audit-local/intake/lca-m1-k3-adapter-7736020/lca_m1_k3_preflight_validation.json",
     "lca_m1_k3_preflight_report": "PROTECTED_LCA_M1_K3_PREFLIGHT.md",
     "lca_m1_k3_preflight_schema": "lca-m1-k3-preflight/native_schema.csv",
-    "lca_m1_k3_preflight_child": "lca-m1-k3-preflight/child_acceptance.csv"
+    "lca_m1_k3_preflight_child": "lca-m1-k3-preflight/child_acceptance.csv",
+    "lca_m1_k3_replay_authority": "audit-local/intake/lca-m1-k3-replay-3f5897f/authority_actual_request.json",
+    "lca_m1_k3_replay_contract": "audit-local/intake/lca-m1-k3-replay-3f5897f/contract.json",
+    "lca_m1_k3_replay_dispatch": "audit-local/intake/lca-m1-k3-replay-3f5897f/fit_dispatch_started.json",
+    "lca_m1_k3_replay_failure": "audit-local/intake/lca-m1-k3-replay-3f5897f/failed_fit_acceptance.json",
+    "lca_m1_k3_replay_review": "audit-local/intake/lca-m1-k3-replay-3f5897f/review_acceptance.json",
+    "lca_m1_k3_replay_validation": "audit-local/intake/lca-m1-k3-replay-3f5897f/lca_m1_k3_failed_attempt_validation.json",
+    "lca_m1_k3_replay_report": "PROTECTED_LCA_M1_K3_HISTORICAL_REPLAY.md",
+    "lca_m1_k3_replay_outcome": "lca-m1-k3-replay/attempt_outcome.csv",
+    "lca_m1_k3_replay_child": "lca-m1-k3-replay/child_acceptance.csv"
   },
   "decisions": [
     {
