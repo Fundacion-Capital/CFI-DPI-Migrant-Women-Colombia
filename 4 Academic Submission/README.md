@@ -586,3 +586,24 @@ Proposed next: **M6.08.24.R3 — protected saved-state numerical-discrepancy and
 ## Protected saved-state M1 three-class diagnostics — M6.08.24.R3
 
 No fit or respondent-data load. Strict saved-state/native readback, six diagnostic permutations, 128 theoretical-pattern comparisons and constrained-coordinate conditioning/rank checks explain label reordering and near-boundary logit sensitivity without resolving the historical numerical mismatch. The corrected derivative validates absent saved Hessians; raw flags and failed attempts remain preserved. See [the diagnostic report](PROTECTED_LCA_M1_K3_SAVED_DIAGNOSTICS.md) and its aggregate tables. Schema 78 preserves all 1,573 prior artifact pointers and adds ten; the original task IDs, milestones and manuscript preamble are unchanged. Source-bound review, cumulative tests, actual post-review execution and exclusive seal/separate verification govern diagnostic closure only. Scientific, privacy and release holds remain open. Proposed next: M6.08.24.R4, protected candidate-disposition/reporting contract without fitting.
+
+### M6.08.24.R4 — historical M1 three-class disposition and reporting contract
+
+[The source-bound contract](PROTECTED_LCA_M1_K3_CANDIDATE_DISPOSITION.md) retains M1_k3
+as historical grid/sensitivity evidence, holds exact replication and fresh scientific
+profile/inference acceptance, and excludes unsupported reporting claims without deleting
+or declaring the model invalid. The original flag=0 follows the k=4/5 reporting screen,
+not a convergence or small-class failure. Independent final lca_final_hybrid_H1_k4
+remains separate from M1_k3 and the H1_k4 grid state. Original criteria, targets,
+labels, tolerances and analytical code are unchanged; no Stata calls or participant
+loads are permitted. Two aggregate CSVs transcribe six context rows and 22 claim
+dispositions. R3 exact Git/EOL adoption and 768 original/14,058 private/154 public
+preservation bindings govern closure. Schema 79 adds ten pointers, retaining all
+1,583 existing pointers, 124 primary task IDs, 14 milestone headings and TeX preamble.
+Closure requires fresh cumulative tests, one original-scope independent review with
+individual rulings, actual post-review execution and exclusive seal/separate proofs;
+not numerical replication, scientific approval or public release.
+
+Next proposed scope: M6.03.26 / M6.05.26 — original M1 four-class adapter/native-capture
+preflight without fitting; exact seed 6429004, 500 starts and iterate(7000). No new
+fit, scientific correction, Git or cloud action is authorized by this reporting contract.
