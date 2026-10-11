@@ -1517,3 +1517,11 @@ See [PROTECTED_LCA_M1_K2_PREFLIGHT.md](PROTECTED_LCA_M1_K2_PREFLIGHT.md), the [h
 Bounded technical closure requires actual cumulative tests, sole independent review/root disposition, frozen-review enforcement, exclusive seal and separate byte verification. Schema72 retains1517 prior pointers and adds nine for1526. No original recorder, posterior/class assignment, grid, fit, production correction, participant export, Git/cloud/Overleaf action or release occurs. I3-REPLAY-D01 and scientific/privacy/runtime holds remain open.
 
 Next: **M6.04.24 / M6.08.23 — first bounded protected M1 two-class candidate historical replay and saved-native target comparison**. A single fit requires separate explicit authorization; no grid or posterior/classification scope is implied. Earlier handoffs remain dated history.
+
+### Protected M1 two-class historical replay — M6.04.24 / M6.08.23
+
+See [PROTECTED_LCA_M1_K2_HISTORICAL_REPLAY.md](PROTECTED_LCA_M1_K2_HISTORICAL_REPLAY.md), the [native comparison summary](lca-m1-k2-replay/native_comparison.csv) and [twelve-child requirements](lca-m1-k2-replay/child_acceptance.csv). One authorized fit, after actual verifier RED/GREEN and exclusive reservation, preserves the original seven binary-logit equations/sample/order/settings. N423/rank15/ll-1790.5919678071662/convergence1 and e(sample) count423 are observed. Fresh current-STER and historical-STER readbacks verify all279 native cells; target differences are all zero, without class relabeling or refitting. All workers are destroyed; schema73 retains1526 pointers plus nine. Originals,124 IDs/14 milestones and preamble remain unchanged.
+
+Task completion requires actual fresh cumulative tests, sole independent review/root dispositions, immutable scope/review enforcement, same-source compilation, exclusive seal and separate exact-set/byte proof. All science/runtime/genuine-PII/release/I3-REPLAY-D01 holds remain open. No grid, posterior/classification, participant export, production correction or Git/cloud/Overleaf action occurs.
+
+Proposed next: **M6.03.25 / M6.05.25 — protected next original M1 three-class candidate adapter/native-capture preflight, without fitting**. Confirm exact original clauses/settings/target first; no further fit is authorized. Earlier handoffs remain historical.
