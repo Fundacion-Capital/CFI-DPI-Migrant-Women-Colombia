@@ -1525,3 +1525,10 @@ See [PROTECTED_LCA_M1_K2_HISTORICAL_REPLAY.md](PROTECTED_LCA_M1_K2_HISTORICAL_RE
 Task completion requires actual fresh cumulative tests, sole independent review/root dispositions, immutable scope/review enforcement, same-source compilation, exclusive seal and separate exact-set/byte proof. All science/runtime/genuine-PII/release/I3-REPLAY-D01 holds remain open. No grid, posterior/classification, participant export, production correction or Git/cloud/Overleaf action occurs.
 
 Proposed next: **M6.03.25 / M6.05.25 — protected next original M1 three-class candidate adapter/native-capture preflight, without fitting**. Confirm exact original clauses/settings/target first; no further fit is authorized. Earlier handoffs remain historical.
+
+
+## Protected original M1 three-class candidate preflight — M6.03.25 / M6.05.25
+
+[No-fit preflight report](PROTECTED_LCA_M1_K3_PREFLIGHT.md) stages the original seven-binary three-class candidate behind exit 459: seed 6429003, 300 random starts, 5000 iterations, original sample clauses and row order. The 423-row projected input is eligible; saved-state capture and strict native readback validate all 607 metadata/coefficient/covariance cells against the historical STER and its own model21 carrier. This is not a fitted replay or class-selection approval. Invalid e-state/destination/CSV guards and eight adversarial mutations pass; failed fixture and wrong-carrier attempts remain preserved. Three owned workers are cleared/destroyed and default is untouched. Schema74 retains 1535 pointers and adds nine, with 768 originals, 12787 inherited private bindings and 139 public snapshots protected. Technical closure requires cumulative checks, sole original-scope-bound review, same-source compilation and exclusive seal/separate verification. Scientific, runtime, genuine-PII, public-exposure/release and I3-REPLAY-D01 holds stay open.
+
+Next: **M6.04.25 / M6.08.24 — first bounded protected original M1 three-class historical replay and native-target comparison**, only after fresh explicit single-fit authorization. No fitting is authorized by this preflight.
