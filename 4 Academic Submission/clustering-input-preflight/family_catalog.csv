@@ -1,0 +1,20 @@
+family,role,indicators,n_indicators,source_frozen
+M1,estimated_historical_grid_inputs,lca2_ivs_high lca2_icdp_high lca2_iaff_high lca2_oqi_good lca2_iurd_high lca2_iedf_harm lca2_icpf_high,7,True
+M2,estimated_historical_grid_inputs,lca2_ivs_high lca2_icdp_high lca2_iaff_high lca2_oqi_good lca2_iurd_high lca2_icpf_high,6,True
+M3,estimated_historical_grid_inputs,lca2_ivs_high lca2_icdp_high lca2_iaff_high lca2_oqi_good lca2_iurd_high lca2_iedf_harm,6,True
+M4,estimated_historical_grid_inputs,lca2_ivs_high lca2_icdp_high lca2_iaff_high lca2_oqi_good lca2_iurd_high,5,True
+H1,estimated_historical_grid_inputs,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2,7,True
+H2,estimated_historical_grid_inputs,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 h_icpf3,8,True
+H3,estimated_historical_grid_inputs,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_icpf3,7,True
+H4,estimated_historical_grid_inputs,h_ivs3 h_icdp3 h_iaff3 h_oqi3 h_iurd3 h_iedf2,6,True
+FINAL_H1,independent_final_inputs,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2,7,True
+A1_core,proposed_not_estimated_feature_set,lca_ivs3     lca_iat2     lca_icdp3     lca_iaff3     lca_iuof3     lca_oqi3     lca_iurd3     lca_ipcs3     lca_iedf2     lca_icpf2     lca_ieh3,11,True
+A2_core,proposed_not_estimated_feature_set,lca_ivs3     lca_iat3     lca_icdp3     lca_iaff3     lca_iuof3     lca_oqi3     lca_iurd3     lca_ipcs3     lca_iedf2     lca_icpf3     lca_ieh3,11,True
+B1_exp,proposed_not_estimated_feature_set,lca_ivs3     lca_iat2     lca_icdp3     lca_iaff3     lca_iuof3     lca_oqi3     lca_iurd3     lca_ipcs3     lca_iedf2     lca_icpf2     lca_ieh3     lca_iadt2     lca_ietr2     lca_ibpd3,14,True
+B2_expauto,proposed_not_estimated_feature_set,lca_ivs3     lca_iat2     lca_icdp3     lca_iaff3     lca_iuof3     lca_oqi3     lca_iurd3     lca_ipcs3     lca_iedf2     lca_icpf2     lca_ieh3     lca_iadt2     lca_ietr2     lca_ibpd3     lca_iaer2,15,True
+C1_reduced,proposed_not_estimated_feature_set,lca_ivs3     lca_icdp3     lca_iaff3     lca_iuof3     lca_oqi3     lca_iurd3     lca_iedf2     lca_icpf2     lca_ieh3,9,True
+C2_parsim,proposed_not_estimated_feature_set,lca_ivs3     lca_iat2     lca_icdp3     lca_iaff3     lca_oqi3     lca_iurd3     lca_iedf2     lca_icpf2     lca_ieh3,9,True
+D1_direct,proposed_not_estimated_feature_set,lca_di_smartphone     lca_di_data_stable     lca_di_qr_use     lca_di_formal_remit     lca_di_wallet_owner     lca_di_account_freq3     lca_di_onboard_help     lca_di_fee_clear     lca_di_fraud_attempt     lca_di_recourse3     lca_di_conflict_avoid     lca_di_provider_trust,12,True
+E1_benchfull,proposed_not_estimated_feature_set,zcl_ivs_score zcl_iat_score zcl_iadt_score zcl_icdp_score zcl_iaff_score zcl_iuof_score_01 zcl_oqi_score_01 zcl_iurd_score_01 zcl_ietr_score_01 zcl_IPCS zcl_IEDF zcl_IAER zcl_ICPF zcl_IEH zcl_IBPD,15,True
+E2_benchred,proposed_not_estimated_feature_set,zcl_ivs_score zcl_icdp_score zcl_iaff_score zcl_iuof_score_01 zcl_oqi_score_01 zcl_iurd_score_01 zcl_IEDF zcl_ICPF zcl_IEH,9,True
+DISTANCE_BENCHMARK,distance_benchmark_inputs,segz_ivs segz_icdp segz_iaff segz_iuof segz_oqi segz_iurd segz_ietr segz_iedf segz_ipcs segz_iaer segz_icpf segz_ieh,12,True
