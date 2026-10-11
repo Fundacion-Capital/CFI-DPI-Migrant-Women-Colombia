@@ -1582,3 +1582,9 @@ not numerical replication, scientific approval or public release.
 Next proposed scope: M6.03.26 / M6.05.26 — original M1 four-class adapter/native-capture
 preflight without fitting; exact seed 6429004, 500 starts and iterate(7000). No new
 fit, scientific correction, Git or cloud action is authorized by this reporting contract.
+
+## M6.03.26 / M6.05.26 — original M1 four-class no-fit preflight
+
+The source-bound M1_k4 adapter preserves seed 6429004, four classes, seven binary indicators, 500 starts and iterate(7000), with the original 423-case sample and input order. The adapter remains held at exit 459. Saved-only checks verified all 1,063 native records (32 stored slots; rank 31), six e-state guards, eight native mutations, destination protection and success/failure cleanup. Two failed no-fit attempts remain preserved. No fitting, prediction, production correction, participant export, Git/cloud action or release occurred. Temporary maxvar 32767 was restored to 5000 and the default session was unchanged.
+
+See [the preflight report](PROTECTED_LCA_M1_K4_PREFLIGHT.md) and aggregate [child acceptance](lca-m1-k4-preflight/child_acceptance.csv). Final technical acceptance is recorded only by the reviewed, sealed protected packet; scientific replication and release remain held. The next proposed task is M6.04.26 / M6.08.25, a single bounded original M1_k4 replay requiring separate explicit fit authority.

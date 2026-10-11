@@ -1,0 +1,12 @@
+child,evidence,status,boundary
+"eligibility","423 original complete cases; source sample block","PASS","No fitting or participant export"
+"held adapter","exit 459 before use and gsem","PASS","Separate fit authority required"
+"native target","7 metadata + 32 b + 1024 V = 1063","PASS","Saved state only"
+"e-state guards","6 wrong-state cases rejected","PASS","Includes test-only dimension fixture correction"
+"native mutations","8 malformed carrier cases rejected","PASS","Exact coordinates and stripes"
+"destination guards","collision 602; escape 198","PASS","No overwrite"
+"runtime cleanup","temporary 32767 restored to 5000 in all four runs","PASS","Capacity is not fit feasibility"
+"session boundary","owned workers destroyed; default inventory/activity unchanged","PASS","Four no-fit dispatches; zero fits"
+"failed preservation","r(507) and r(9) failed attempts retained","PASS","No source or target changes"
+"scientific acceptance","historical fit comparison not performed","HELD","No preferred model or release approval"
+
