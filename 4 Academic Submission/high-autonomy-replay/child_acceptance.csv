@@ -1,0 +1,14 @@
+child_id,task,acceptance_requirement,gate_requirement
+M6.04.21.01,M6.04.21 / M6.08.22,owner_adoption_and_authority,REQUIRED
+M6.04.21.02,M6.04.21 / M6.08.22,single_attempt_original_driver,REQUIRED
+M6.04.21.03,M6.04.21 / M6.08.22,protected_numeric_projection,REQUIRED
+M6.04.21.04,M6.04.21 / M6.08.22,one_original_fit_and_closed_worker,REQUIRED
+M6.04.21.05,M6.04.21 / M6.08.22,immediate_postformat_final_native,REQUIRED
+M6.04.21.06,M6.04.21 / M6.08.22,saved_only_double_diagnostics,REQUIRED
+M6.04.21.07,M6.04.21 / M6.08.22,frozen_column7_literal_comparison,REQUIRED
+M6.04.21.08,M6.04.21 / M6.08.22,six_seed_columns_and_rtf_pair,REQUIRED
+M6.04.21.09,M6.04.21 / M6.08.22,additive_state_and_inherited_preservation,REQUIRED
+M6.04.21.10,M6.04.21 / M6.08.22,owner_cumulative_suite,REQUIRED
+M6.04.21.11,M6.04.21 / M6.08.22,sole_review_and_postreview_checks,REQUIRED
+M6.04.21.12,M6.04.21 / M6.08.22,compiler_exclusive_seal_and_separate_verification,REQUIRED
+
