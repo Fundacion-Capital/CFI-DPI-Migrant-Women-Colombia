@@ -1,0 +1,13 @@
+child,status
+owner_adoption,PASS
+temporary_capacity,PASS
+projection423,PASS
+historical_native607_both,PASS
+foreign_coordinate_negative,PASS_R9_EXPECTED
+controlled_failure_cleanup,PASS_R9_EXPECTED
+restoration_and_default_state,PASS
+scientific_fit,NOT_AUTHORIZED
+current_native_comparison,NOT_PERFORMED
+fresh_suite,REQUIRED_THROUGH_SEAL
+original_review_dispositions,REQUIRED_THROUGH_SEAL
+seal_and_separate_proof,REQUIRED_THROUGH_SEAL
