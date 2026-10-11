@@ -1,5 +1,5 @@
 {
-  "schema_version": 77,
+  "schema_version": 78,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M1_K3_CAPACITY_REPLAY.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M1_K3_SAVED_DIAGNOSTICS.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1961,7 +1961,17 @@
     "lca_m1_k3_capacity_replay_validation": "audit-local/intake/lca-m1-k3-capacity-replay-6dd5012/validation.json",
     "lca_m1_k3_capacity_replay_report": "PROTECTED_LCA_M1_K3_CAPACITY_REPLAY.md",
     "lca_m1_k3_capacity_replay_outcome": "lca-m1-k3-capacity-replay/outcome.csv",
-    "lca_m1_k3_capacity_replay_comparison": "lca-m1-k3-capacity-replay/native_comparison.csv"
+    "lca_m1_k3_capacity_replay_comparison": "lca-m1-k3-capacity-replay/native_comparison.csv",
+    "lca_m1_k3_saved_diagnostics_authority": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/authority_actual_request.json",
+    "lca_m1_k3_saved_diagnostics_contract": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/diagnostic_contract.json",
+    "lca_m1_k3_saved_diagnostics_request": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/diagnostics_request.json",
+    "lca_m1_k3_saved_diagnostics_extension_request": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/extension02_request.json",
+    "lca_m1_k3_saved_diagnostics_actual": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/actual_stata_bindings.json",
+    "lca_m1_k3_saved_diagnostics_review": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/review_acceptance.json",
+    "lca_m1_k3_saved_diagnostics_validation": "audit-local/intake/lca-m1-k3-diagnostics-0421ff5/validation.json",
+    "lca_m1_k3_saved_diagnostics_report": "PROTECTED_LCA_M1_K3_SAVED_DIAGNOSTICS.md",
+    "lca_m1_k3_saved_diagnostics_state": "lca-m1-k3-saved-diagnostics/state_diagnostics.csv",
+    "lca_m1_k3_saved_diagnostics_comparison": "lca-m1-k3-saved-diagnostics/comparison_diagnostics.csv"
   },
   "decisions": [
     {
