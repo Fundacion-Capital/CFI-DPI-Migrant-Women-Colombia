@@ -1,0 +1,55 @@
+# Protected historical clustering/LCA intake
+
+M6.03.22 / M6.05.22 — owner checkpoint `f1a808f`; schema-only continuation, no fitting.
+
+## 1. Scope and acceptance boundary
+
+This stage preserves and reads existing evidence. It does not select, estimate, refit or approve a class solution, recompute posterior probabilities, produce margins, correct production code, export participant values, or authorize publication. Historical analysis, restricted input, legacy 31 July manuscript, previous seals and all scientific/privacy/release holds remain unchanged. I3-REPLAY-D01 remains open. The original incomplete handoff and every failed reader, probe, partial output and failed validation are retained as historical records; they are not retroactively marked successful.
+
+The owner authorized only the private reader schema correction. Numeric post fields use explicit `double(...)`; both stripe fields use explicit `str244(...)`. Workbook sheet metadata retains its original field order. Actual empty output schemas are checked before posting. No historical estimator, equation, seed, draw count, iteration limit, class definition, sample rule or original target is changed.
+
+Technical completion requires the current acceptance checks, inherited suite, sole fresh independent review with explicit root rulings, same-open-source compilation, and an exclusive private seal followed by separate exact-set/byte verification. These records live under the ignored protected intake directory, not the public replication package.
+
+## 2. Source and historical solution families
+
+The original source has 19,648 physical lines. Its clustering portion is preserved byte-for-byte and mapped into 16 stage windows: preamble/sample checks; inventory and diagnostic associations; recoding; proposed feature sets; minimal binary grid/distance benchmarks; hybrid grid; independent final fit; profile construction; visualizations; post-classification descriptives; core outcomes; regression overlays; report exports and appendix packaging. Literal command sites are recorded separately from executed intake commands.
+
+There are 33 literal GSEM sites: four minimal-binary families and four hybrid families, each with two through five classes, plus the independent final H1 four-class fit. Proposed feature sets are not assumed to equal estimated inputs. A test compares every indicator in all 33 equations, including grouped left-hand variables, against the preserved source catalog. The preserved catalog passes unchanged.
+
+Minimal grids use family-specific seeds 6429002–5 through 6432002–5 and 200/300/500/500 random draws; hybrid grids use 6529002–5 through 6532002–5 and 300/400/600/600 draws. These settings are frozen source facts, not settings rerun here. Distance k-means/Ward benchmarks remain distinct from probabilistic LCA solutions. Runtime execution and stochastic reproducibility are not certified by reading source.
+
+The independent final H1 fit uses seven indicators: six ordered-logit equations for vulnerability, digital capabilities, formal access, use, quality and remittance use, and one binary-logit equation for digital financial exposure/risk. The source sorts by KEY and sets the final seed explicitly; final class assignment uses modal posterior rules and certainty thresholds. Missing-KEY fallback, full-sample quantile coding, modal-class uncertainty and benchmark random-start behavior remain matters for later scientific/adapter assessment, not authorized corrections in this stage.
+
+Candidate `H1_k4.ster` and independent `lca_final_hybrid_H1_k4.ster` are separate artifacts and have different stored numerical targets. They must never be substituted merely because both have four classes and the same seven indicators. Table C10–C18 names recur across distinct diagnostic, hybrid, profile and overlay families; catalog entries use full paths and hashes rather than table numbers alone.
+
+## 3. Saved numerical targets and runtime
+
+All 220 clustering artifacts are fingerprinted. Exactly 152 aggregate-table, estimate or figure artifacts have exclusive protected byte-identical copies. The 68 excluded row carriers comprise 66 DTA files and two XLSX datasets. Their exclusion is conservative: it does not assert that every DTA contains identifiers. Only DTA schema counts are read, without participant values; the two respondent workbooks are not imported.
+
+All 31 saved estimates are restored read-only: 19 GSEM states, ten OLS states, one multinomial state and one formal-remittance logit state. Stored N is 423 except the formal-remittance overlay, which stores N = 402. Each GSEM stores convergence one; OLS has no stored convergence flag and is not classified as nonconverged. Native coefficient/covariance matrices, complete stripe identities and seven stored metadata fields yield 24,997 keyed records. Fresh readback checks all 31 native double-precision DTA carriers against the original saved estimates, including every b/V entry, metadata field and stripe.
+
+CSV exports retain 17 printed digits, but fresh Stata `real()` re-import did not reproduce every binary floating-point value exactly. The failed CSV equality attempt is preserved. CSV is a transport/display carrier, not the exact native-equality authority. The original STER files and verified double DTA captures remain authoritative; no tolerance was introduced to turn the failed exact check into a pass.
+
+The two frozen fit-summary workbooks list 32 candidate solutions. Their stored convergence/return-code status agrees with estimate presence: 18 converged candidates have saved estimates and 14 candidates recorded as nonconverged do not. The independent final solution supplies the nineteenth GSEM state. This is an agreement between saved evidence, not a reproduction of historical optimization, entropy, posterior probabilities, class membership or information criteria.
+
+The reader imports 33 aggregate workbooks covering 110 worksheets, preserves sheet identities/shapes and all rendered cell carriers, and reads schemas for 66 DTA files. Original XLSX bytes—not text-cell imports—remain full workbook authority. Three TXT/RTF overlay-table pairs are preserved with original notes; their saved bytes and shapes are checked, but no formatter or statistical equivalence is claimed. Membership-predictor relative-risk ratios, marginal effects, OLS outcomes and the remittance logit are distinct scales, not interchangeable coefficients.
+
+Current intake runs in Stata 19 on Windows with source version control 16. The same preserved log reports a Stata/MP 19.0 `about` header and `c(flavor)=IC`; the edition/provenance discrepancy remains unresolved, and neither edition is unconditionally certified. `plotplain`, `outreg2` and `esttab` are found. `coefplot` is absent but is not used by the clustering source; nothing is installed. Original historical runtime provenance is unavailable, and production portability has not been tested. Saved e(cmdline), VCE and properties are captured separately. The dedicated worker is emptied and destroyed; the default session is never selected and retains its entry activity timestamp.
+
+## 4. Appendix and manuscript locations
+
+All 156 files currently in appendix F/G are fingerprinted. The catalog finds 108 source artifacts with byte-identical appendix counterparts and lists every counterpart path. Absence of an exact-byte match is not silently treated as loss or equivalence. Frozen figures are preserved as bytes, not visually redrawn or statistically recreated.
+
+The authoritative legacy manuscript is read with the existing document parser. A protected location map records 22 relevant headings and 33 relevant caption candidates. No embedded cluster image is byte-identical to a source PNG; therefore caption proximity is only a location aid, not proof that an image or table displays identical values. This stage does not certify legacy numerical exhibits, image OCR, pagination, visual layout or manuscript interpretation. Later exhibit comparison must use these explicit unresolved bindings rather than inventing a provenance match.
+
+## 5. Validation and granular child contract
+
+The sole independent review passed 83 groups/563 tests but originally ruled WITH_FIXES, with zero Critical and five Important findings. All five are resolved through one preserved, saved-only correction: reject fractional count/dimension/rank metadata and invalid convergence flags; authenticate all actual dispatch journal records and call/return pairs; enforce all 14 inherited milestone-heading strings; disclose the MP-header/IC-flavor discrepancy; and bind native DTA/script/receipt bytes plus the actual compiler receipt. Original reviewed files and verdict are retained, with RED/GREEN regression evidence, explicit root rulings for every declined-to-judge item, corrected cumulative suites and fresh same-source compilation. No Stata worker is reopened for these corrections. Final acceptance enforces all frozen review bindings, permitting only explicitly preserved correction substitutions. The private legacy metadata label `rows_b` denotes coefficient slots (columns of b), not b's single row; native shape checks enforce one b row and matching square V.
+
+The [target catalog](clustering-lca-intake/target_catalog.csv) contains 220 path/hash/role records with safe inspection-status labels. The [12-child acceptance contract](clustering-lca-intake/child_acceptance.csv) covers owner/authority preservation, failed-attempt preservation and corrected schema, source families, target inventory, native readbacks, workbook cells, dataset schemas, runtime isolation, appendix/manuscript locations, additive workflow/compilation, cumulative independent review, and exclusive sealing. `REQUIRED` is a gate requirement, not a claim that every future scientific question has passed.
+
+The stage checks 768 original fingerprints, 10,826 inherited private bindings, 127 entry public snapshots and 571 files preserved before this continuation. Schema 70 preserves all 1,499 existing artifact pointers and adds nine, for 1,508 pointers. All 124 primary task IDs, 14 milestone headings and inherited holds remain protected. Public changes are limited to this report/catalog/child contract and additive README/workplan/register/state/manuscript checkpoints. No commit, push, cloud update, live Overleaf synchronization, release or production correction occurs.
+
+## 6. Next immediate task
+
+**M6.03.23 / M6.05.23 — protected deterministic clustering-input and recoding adapter/preflight, without fitting.** Build the smallest stage-bound adapter from the frozen source and input authority; verify input schema, KEY/sample/cutpoint behavior, feature-family identities and aggregate eligibility without estimating classes or releasing participant values. Any scientific correction must be separately specified and reviewed. Random-start optimization, class membership, posterior-derived profiles and downstream overlays remain beyond this intake acceptance; no LCA or benchmark fit is authorized by this handoff.

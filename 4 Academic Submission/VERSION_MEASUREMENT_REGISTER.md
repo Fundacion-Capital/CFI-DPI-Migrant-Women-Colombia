@@ -604,3 +604,10 @@ One original robust-OLS fit and original 33-point nonposted request; N423/rank16
 ### Protected high-autonomy preflight — 11 October 2026
 
 M6.03.21 / M6.05.21 retains exact source1890–1895/setup1112–1236 and IAER>=85 coding, with missing IAER unclassified. Predictors IVS/IURD/IAFF/ICPF/IEDF/IEH differ from the preceding model: IAT/ICDP/OQI are excluded. Observable423 complete cases/rank13,333 yes/90 no and no missing outcomes are no-fit diagnostics only. Artificial271 keyed native records/11 fields,15 slots/two bases and six preserved52-row predecessor columns plus ten new blanks each validate the capture/append interface. Shared table464 strings/58 selected column7 strings remain frozen; historical precision, participant membership, unique producer and manuscript numerical binding remain unestablished. Schema68 preserves every inherited hold,124 task IDs and14 milestones. Next M6.04.21 / M6.08.22 requires explicit fit authorization; technical closure is not scientific or release approval.
+
+
+## Protected clustering/LCA intake — M6.03.22 / M6.05.22
+
+The [no-fit intake report](PROTECTED_CLUSTERING_LCA_INTAKE.md) records the schema-only reader correction, preserved failed attempts, 220 artifact fingerprints, 31 saved-model native captures and exact double readbacks, 33 aggregate workbooks/110 worksheets, 66 schema-only dataset reads, and appendix/manuscript location limits. CSV17 re-import is not certified as binary-exact. Candidate H1 four-class and independent final H1 four-class targets differ and remain separate. All inherited scientific/privacy/release holds remain unchanged; I3-REPLAY-D01 stays open. Closure requires fresh cumulative checks, sole independent review, same-open-source compilation and exclusive seal/separate verification. No research fit, participant-value intake, production edit or Git/cloud mutation is authorized.
+
+Next: M6.03.23 / M6.05.23, protected deterministic clustering-input and recoding adapter/preflight, without fitting. See the [12-child contract](clustering-lca-intake/child_acceptance.csv); inherited milestone IDs are unchanged.

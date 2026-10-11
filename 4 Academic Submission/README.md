@@ -519,3 +519,10 @@ Native/critic/preservation retain768 original manifest records/786 prior-private
 ### Protected high-autonomy preflight — M6.03.21 / M6.05.21
 
 [High-autonomy no-fit handoff](PROTECTED_HIGH_AUTONOMY_PREFLIGHT.md) prepares only the original seventh supplementary model: unchanged IAER threshold and IVS/IURD/IAFF/ICPF/IEDF/IEH predictors. Observable eligibility is 423/rank13, with333 high-autonomy and90 other outcomes; these are not fitted quantities. Fixed artificial posting validates271 native records/11 fields and all six predecessor columns. Scientific, privacy, release and I3-REPLAY-D01 holds remain unchanged. Final acceptance is governed by cumulative tests, one independent review, same-source compilation, private seal and separate verification. Next M6.04.21 / M6.08.22 requires explicit authorization for one bounded original fit.
+
+
+## Protected clustering/LCA intake — M6.03.22 / M6.05.22
+
+The [no-fit intake report](PROTECTED_CLUSTERING_LCA_INTAKE.md) records the schema-only reader correction, preserved failed attempts, 220 artifact fingerprints, 31 saved-model native captures and exact double readbacks, 33 aggregate workbooks/110 worksheets, 66 schema-only dataset reads, and appendix/manuscript location limits. CSV17 re-import is not certified as binary-exact. Candidate H1 four-class and independent final H1 four-class targets differ and remain separate. All inherited scientific/privacy/release holds remain unchanged; I3-REPLAY-D01 stays open. Closure requires fresh cumulative checks, sole independent review, same-open-source compilation and exclusive seal/separate verification. No research fit, participant-value intake, production edit or Git/cloud mutation is authorized.
+
+Next: M6.03.23 / M6.05.23, protected deterministic clustering-input and recoding adapter/preflight, without fitting. See the [12-child contract](clustering-lca-intake/child_acceptance.csv); inherited milestone IDs are unchanged.

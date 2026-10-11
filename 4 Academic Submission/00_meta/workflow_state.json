@@ -1,5 +1,5 @@
 {
-  "schema_version": 69,
+  "schema_version": 70,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_HIGH_AUTONOMY_HISTORICAL_REPLAY.md#6-next-immediate-task",
+    "latest_handoff": "PROTECTED_CLUSTERING_LCA_INTAKE.md#6-next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -1887,7 +1887,16 @@
     "high_autonomy_replay_review": "audit-local/intake/high-autonomy-replay-7a506ec/review_acceptance.json",
     "high_autonomy_replay_validation": "audit-local/intake/high-autonomy-replay-7a506ec/high_autonomy_replay_validation.json",
     "high_autonomy_replay_report": "PROTECTED_HIGH_AUTONOMY_HISTORICAL_REPLAY.md",
-    "high_autonomy_replay_child": "high-autonomy-replay/child_acceptance.csv"
+    "high_autonomy_replay_child": "high-autonomy-replay/child_acceptance.csv",
+    "clustering_lca_intake_contract": "audit-local/intake/clustering-lca-intake-f1a808f/contract.json",
+    "clustering_lca_intake_authority": "audit-local/intake/clustering-lca-intake-f1a808f/authority_actual_request.json",
+    "clustering_lca_intake_source_map": "audit-local/intake/clustering-lca-intake-f1a808f/source_stage_map.csv",
+    "clustering_lca_intake_runtime": "audit-local/intake/clustering-lca-intake-f1a808f/runtime_acceptance.json",
+    "clustering_lca_intake_target_acceptance": "audit-local/intake/clustering-lca-intake-f1a808f/target_acceptance.json",
+    "clustering_lca_intake_review": "audit-local/intake/clustering-lca-intake-f1a808f/review_acceptance.json",
+    "clustering_lca_intake_validation": "audit-local/intake/clustering-lca-intake-f1a808f/clustering_lca_intake_validation.json",
+    "clustering_lca_intake_report": "PROTECTED_CLUSTERING_LCA_INTAKE.md",
+    "clustering_lca_intake_child": "clustering-lca-intake/child_acceptance.csv"
   },
   "decisions": [
     {

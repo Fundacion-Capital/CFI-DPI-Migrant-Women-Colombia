@@ -1,0 +1,13 @@
+child_id,task,acceptance_requirement,gate_requirement
+M6.03.22.01,M6.03.22 / M6.05.22,"Owner checkpoint, two actual user authorities and unchanged original/source/input/legacy fingerprints",REQUIRED
+M6.03.22.02,M6.03.22 / M6.05.22,Schema-only successor with all 571 entry files and every failed attempt unchanged,REQUIRED
+M6.03.22.03,M6.03.22 / M6.05.22,"Full physical source and all 16 stage windows, 33 GSEM sites, actual grouped indicators and source controls",REQUIRED
+M6.03.22.04,M6.03.22 / M6.05.22,All 220 saved artifacts; 152 exact protected copies; all row carriers excluded from value intake,REQUIRED
+M6.03.22.05,M6.03.22 / M6.05.22,"31 native saved estimates, 24997 keyed records, exact native double b/V/metadata/stripe readback",REQUIRED
+M6.03.22.06,M6.03.22 / M6.05.22,33 aggregate workbooks and 110 worksheet shapes/cell carriers; original XLSX authority retained,REQUIRED
+M6.03.22.07,M6.03.22 / M6.05.22,66 dataset schemas only; no respondent values loaded or exported,REQUIRED
+M6.03.22.08,M6.03.22 / M6.05.22,Required runtime dependencies checked; dedicated worker emptied/destroyed; default unchanged,REQUIRED
+M6.03.22.09,M6.03.22 / M6.05.22,156 appendix fingerprints and 108 byte-identical source mappings; legacy location map and explicit limits,REQUIRED
+M6.03.22.10,M6.03.22 / M6.05.22,"Additive schema70/1508 state, original IDs/milestones/holds and same-open-source compile",REQUIRED
+M6.03.22.11,M6.03.22 / M6.05.22,Fresh cumulative owner and post-review suites; one independent review and explicit root rulings,REQUIRED
+M6.03.22.12,M6.03.22 / M6.05.22,Exclusive completion seal and separate exact-set/byte saved-only verification,REQUIRED
