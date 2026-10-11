@@ -1,0 +1,13 @@
+child_id,task,gate,gate_requirement
+M6.03.24.01,M6.03.24 / M6.05.24,owner_checkpoint_and_predecessor_exact_seal,REQUIRED
+M6.03.24.02,M6.03.24 / M6.05.24,original_inherited_public_preservation,REQUIRED
+M6.03.24.03,M6.03.24 / M6.05.24,actual_no_fit_authority_and_dispatch,REQUIRED
+M6.03.24.04,M6.03.24 / M6.05.24,exact_single_M1_candidate_and_unconditional_hold,REQUIRED
+M6.03.24.05,M6.03.24 / M6.05.24,projected_input_complete_case_and_binary_domains,REQUIRED
+M6.03.24.06,M6.03.24 / M6.05.24,aggregate_native279_capture_schema_and_stripes,REQUIRED
+M6.03.24.07,M6.03.24 / M6.05.24,fresh_saved_native_exact_readback,REQUIRED
+M6.03.24.08,M6.03.24 / M6.05.24,negative_return_state_and_destination_rejection,REQUIRED
+M6.03.24.09,M6.03.24 / M6.05.24,failures_preserved_workers_destroyed_default_unchanged,REQUIRED
+M6.03.24.10,M6.03.24 / M6.05.24,eight_public_paths_additive_state_same_source_compile,REQUIRED
+M6.03.24.11,M6.03.24 / M6.05.24,cumulative_suite_sole_review_root_scope_enforcement,REQUIRED
+M6.03.24.12,M6.03.24 / M6.05.24,exclusive_seal_separate_exact_set_byte_verification,REQUIRED

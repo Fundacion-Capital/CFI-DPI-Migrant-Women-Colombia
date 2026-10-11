@@ -1,0 +1,2 @@
+model_id,feature_set,source_sample_start,source_sample_end,source_fit_start,source_fit_end,classes,indicators,seed,random_draws,iterations,stored_N,stored_rank,stored_ll,stored_converged,coefficient_slots,native_cells,ster_sha256,current_fit_claim
+M1_k2,M1_7bin_main,6683,6688,6692,6705,2,lca2_ivs_high lca2_icdp_high lca2_iaff_high lca2_oqi_good lca2_iurd_high lca2_iedf_harm lca2_icpf_high,6429002,200,5000,423,15,-1790.591967807166,1,16,279,B1ABB5E7398A9B01DD06B4B5C42075B06D5B0916EE502EDED3DB1D8E876F8E26,False
