@@ -2234,4 +2234,26 @@ remain withheld. The next proposed scope is one bounded original M1 four-class
 historical replay, requiring separate explicit fit authority.
 
 
+\section*{Protected original M1 four-class replay audit}
+The authorized original four-class candidate was replayed once with seven binary
+indicators, seed 6429004, 500 randomid draws, 7,000 maximum iterations and the
+original 423 complete cases and input order. Both current and historical stored
+states passed complete native readback. Of 1,063 native cells, 70 matched exactly
+and 71 were within the unchanged absolute/relative tolerance. All seven metadata
+cells were within tolerance, but only one of 32 coefficient cells and 63 of 1,024
+covariance cells matched. The observed log likelihood was
+$-1702.825792144313$, compared with the historical $-1702.825790720468$.
+Stored convergence and rank 31 do not establish parameter reproduction or
+statistical identification. No relabeling, target change or additional fit was
+performed; historical numerical replication and scientific acceptance remain held.
+
+The estimator and comparison completed before an implementer cleanup error
+(\texttt{mata clear}, return code 3499). The failed driver, actual result and log
+were preserved; a separate no-fit recovery used \texttt{clear mata}, restored
+\texttt{maxvar} from 32767 to 5000, and verified cleanup. The owned worker was
+destroyed and the default session remained unchanged. This audit appends only
+aggregate reporting and does not change production analysis, qualitative material
+or legacy research findings. The next protected step is saved-state numerical and
+identification diagnostics without fitting; the single-fit authority is exhausted.
+
 \end{document}
