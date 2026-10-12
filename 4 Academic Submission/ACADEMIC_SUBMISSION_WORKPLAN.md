@@ -1603,3 +1603,15 @@ No fit or respondent load occurred. The two immutable states passed strict 2,126
 ## M6.08.25.R2 — original M1 four-class candidate disposition
 
 Historical M1_k4 report_candidate=1 is retained as eligibility, not preferred-model selection or fresh scientific acceptance. Archival evidence is RETAIN; fresh exact replication/profile/inference acceptance is HOLD; unsupported claims are EXCLUDE. The independent final hybrid H1_k4 remains a separate historical identity. No Stata call, fit, respondent load, target change or scientific correction occurred. See [the disposition report](PROTECTED_LCA_M1_K4_CANDIDATE_DISPOSITION.md) and its six-row candidate context / 22-claim reporting contract. Schema83 preserves prior identities and pointers. The next proposed task is M6.03.27 / M6.05.27, original M1_k5 nonconvergence-aware source/runtime/reporting intake and adapter preflight without fitting; no historical saved target is fabricated. Technical completion requires the reviewed protected seal; scientific/release holds remain open.
+
+### M6.03.27 / M6.05.27 — original M1_k5 failed-candidate no-fit preflight
+
+See [the protected five-class preflight](PROTECTED_LCA_M1_K5_FAILED_CANDIDATE_PREFLIGHT.md).
+Historical rc0/converged0/report_candidate0 and unavailable diagnostics are retained;
+no saved original estimate or native target is fabricated. Owned Stata MCP workers
+verified eligibility423, held459 and nonconvergence-aware status fixtures, with
+success/forced-failure cleanup and worker destruction. Zero fits or participant
+exports; main.tex and production code unchanged. Schema84 retains prior pointers.
+Closure is governed by the reviewed protected seal, not this status paragraph.
+The next proposed M6.04.27 / M6.08.26 requires separate single-fit authority and
+compares historical convergence/status, not an unavailable native target.
