@@ -1,5 +1,5 @@
 {
-  "schema_version": 82,
+  "schema_version": 83,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M1_K4_SAVED_DIAGNOSTICS.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M1_K4_CANDIDATE_DISPOSITION.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -419,6 +419,16 @@
     "lca_m1_k4_saved_diagnostics_report": "PROTECTED_LCA_M1_K4_SAVED_DIAGNOSTICS.md",
     "lca_m1_k4_saved_diagnostics_state": "lca-m1-k4-saved-diagnostics/state_diagnostics.csv",
     "lca_m1_k4_saved_diagnostics_comparison": "lca-m1-k4-saved-diagnostics/comparison_diagnostics.csv",
+    "lca_m1_k4_candidate_disposition_authority": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/authority_actual_request.json",
+    "lca_m1_k4_candidate_disposition_contract": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/reporting_contract.json",
+    "lca_m1_k4_candidate_disposition_source_windows": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/historical_source_windows.json",
+    "lca_m1_k4_candidate_disposition_history": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/unit_history_actual.json",
+    "lca_m1_k4_candidate_disposition_final_execution": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/actual_final_runner_binding.json",
+    "lca_m1_k4_candidate_disposition_review": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/review_acceptance.json",
+    "lca_m1_k4_candidate_disposition_validation": "audit-local/intake/lca-m1-k4-disposition-2c9b96b/validation.json",
+    "lca_m1_k4_candidate_disposition_report": "PROTECTED_LCA_M1_K4_CANDIDATE_DISPOSITION.md",
+    "lca_m1_k4_candidate_disposition_candidates": "lca-m1-k4-candidate-disposition/candidate_disposition.csv",
+    "lca_m1_k4_candidate_disposition_claims": "lca-m1-k4-candidate-disposition/reporting_contract.csv",
     "perceived_security_preflight_contract": "audit-local/intake/perceived-security-adapter-7c4decd/contract.json",
     "perceived_security_preflight_authority": "audit-local/intake/perceived-security-adapter-7c4decd/authority.json",
     "perceived_security_preflight_native_append": "audit-local/intake/perceived-security-adapter-7c4decd/native_append_acceptance.json",

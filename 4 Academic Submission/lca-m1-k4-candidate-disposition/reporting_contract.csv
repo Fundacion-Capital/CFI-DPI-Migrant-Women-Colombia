@@ -1,0 +1,23 @@
+id,disposition,claim,reason,evidence
+C01,RETAIN,Historical convergence and grid diagnostics,Saved historical evidence only; not a new result,original minimal grid M1_k4
+C02,RETAIN,Historical report_candidate=1,"The explicit k=4/5 gate, convergence, modal share and entropy screen is met; eligibility is not final selection or fresh scientific acceptance",source 7033-7037; original grid M1_k4
+C03,RETAIN,Historical grid/sensitivity role,M1_k4 remains archived; original final specification is separate H1 four-class hybrid,source 6730-6747 and 8727-8952
+C04,RETAIN,Four-class bounded fit completed but mismatched,Sample/rank/convergence agreed; exact original coefficient/covariance targets did not,sealed four-class replay outcome and native comparison
+C05,RETAIN,Four-class saved-only diagnostics completed,Coordinate and permutation diagnostics explain sensitivity without changing target acceptance,sealed four-class state/comparison diagnostics
+C06,HOLD,Fresh exact historical replication,Native mismatch remains open; no label or tolerance substitution permitted,four-class replay/diagnostic seals
+C07,HOLD,"Fresh validated profiles, memberships and inference",No participant-level prediction or classification was validated in four-class diagnostic/disposition,four-class diagnostic contract and current authority
+C08,EXCLUDE,Label-aligned probability closeness certifies exact targets,Diagnostic similarity does not pass original native coefficient/covariance acceptance,four-class comparison diagnostics
+C09,EXCLUDE,M1_k4 is the historically selected final model,Hardcoded independent final H1_k4 is distinct from M1_k4,source 8816-8832 and 8952
+C10,EXCLUDE,Historical flag one proves preferred model or valid fresh inference,The report screen is eligibility only; saved convergence and note=OK do not resolve the replay mismatch,source 7033-7037; M1_k4 grid row
+C11,EXCLUDE,Bounded replay mismatch proves nonidentification or scientific invalidity,Mismatch and conditioning diagnostics do not prove those stronger claims,four-class diagnostic limitations
+C12,EXCLUDE,Generic identification or full numerical rank proves fitted-point/inferential adequacy,Generic theorem and saved Jacobian checks answer narrower questions,four-class identification discussion
+C13,EXCLUDE,A stored Hessian certifies stationarity or covariance,Stored Hessian unavailable; finite saved gradient components are not a certificate,four-class saved Hessian availability and gradients
+C14,EXCLUDE,128 theoretical patterns validate actual respondent classification,"These are analytic probability patterns, not observed participant predictions",four-class no-participant-load contract
+C15,EXCLUDE,Lowest pooled BIC selects a global winner across all feature families,Response events differ across recodings; no global selection rule or optimum is established,source families; Stata IC note
+C16,EXCLUDE,H1_k4 grid state equals independent final H1_k4,Their immutable native targets differ despite the shared nominal seed,candidate_final_distinction.json
+C17,EXCLUDE,Historical report screen is explicitly missing-value-safe,No nonmissing guard; Stata numeric missing exceeds finite values; do not silently rewrite rule,source 7033-7037; Stata missing-values FAQ
+C18,EXCLUDE,Minimum modal-class share equals mixture weight,Modal assignment share and estimated class prior are distinct quantities,source 6578-6585; four-class saved mixture weights
+C19,EXCLUDE,The small-class count threshold is part of report_candidate,Count<20 OR share<5 is a separate warning; report flag explicitly screens percentage only,source 6588-6589 versus 7033-7037
+C20,EXCLUDE,A return code of zero alone establishes convergence,M1_k5 records rc=0 with converged=0 and unavailable fit diagnostics,original minimal grid M1_k5
+C21,EXCLUDE,K4R2 authorizes another fit or scientific correction,It is a reporting contract only; next candidate is proposed preflight without fitting,current direct authority
+C22,EXCLUDE,Original code automatically chose preferred model by BIC,Final H1_k4 is explicitly coded; the audited selection/export blocks do not implement an argmin BIC rule,source report screens and final 8727-8952
