@@ -725,3 +725,14 @@ exports; main.tex and production code unchanged. Schema84 retains prior pointers
 Closure is governed by the reviewed protected seal, not this status paragraph.
 The next proposed M6.04.27 / M6.08.26 requires separate single-fit authority and
 compares historical convergence/status, not an unavailable native target.
+
+### M6.04.27 / M6.08.26 — original M1_k5 bounded status replay
+
+See [the protected replay report](PROTECTED_LCA_M1_K5R_REPLAY_STATUS.md).
+Exactly one original fit recorded rc0/converged0, matching historical status;
+no numerical target or posterior diagnostics were fabricated. The300s transport
+timeout and subsequent r3499 cleanup failure are retained; a separate no-fit
+recovery restored5000, verified status, and the owned worker was destroyed.
+Zero refits/predictions/participant exports; main.tex and production code unchanged.
+Schema85 retains prior pointers. Closure is governed by the reviewed protected
+seal, not this paragraph. Next proposed M6.08.26.R1 is no-fit candidate disposition.
