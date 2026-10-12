@@ -1,5 +1,5 @@
 {
-  "schema_version": 85,
+  "schema_version": 86,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M1_K5R_REPLAY_STATUS.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M1_K5_CANDIDATE_DISPOSITION.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -389,6 +389,16 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "lca_m1_k5_candidate_disposition_authority": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/authority.json",
+    "lca_m1_k5_candidate_disposition_contract": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/reporting_contract.json",
+    "lca_m1_k5_candidate_disposition_source_windows": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/historical_source_windows.json",
+    "lca_m1_k5_candidate_disposition_preservation": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/entry_preservation.json",
+    "lca_m1_k5_candidate_disposition_review": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/review.json",
+    "lca_m1_k5_candidate_disposition_validation": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/validation.json",
+    "lca_m1_k5_candidate_disposition_execution": "audit-local/intake/lca-m1-k5-disposition-f66d3f4/final_checks.json",
+    "lca_m1_k5_candidate_disposition_report": "PROTECTED_LCA_M1_K5_CANDIDATE_DISPOSITION.md",
+    "lca_m1_k5_candidate_disposition_candidates": "lca-m1-k5-candidate-disposition/candidate_context.csv",
+    "lca_m1_k5_candidate_disposition_claims": "lca-m1-k5-candidate-disposition/reporting_contract.csv",
     "lca_m1_k5_replay_authority": "audit-local/intake/lca-m1-k5-replay-aa62011/authority_actual_request.json",
     "lca_m1_k5_replay_contract": "audit-local/intake/lca-m1-k5-replay-aa62011/contract.json",
     "lca_m1_k5_replay_reservation": "audit-local/intake/lca-m1-k5-replay-aa62011/fit_dispatch_started.json",

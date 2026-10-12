@@ -651,3 +651,7 @@ recovery restored5000, verified status, and the owned worker was destroyed.
 Zero refits/predictions/participant exports; main.tex and production code unchanged.
 Schema85 retains prior pointers. Closure is governed by the reviewed protected
 seal, not this paragraph. Next proposed M6.08.26.R1 is no-fit candidate disposition.
+
+### M6.08.26.R1 — M1_k5 failed-candidate reporting contract
+
+See [protected original M1 five-class disposition](PROTECTED_LCA_M1_K5_CANDIDATE_DISPOSITION.md). Retain historical rc0/converged0/report_candidate0 and replay status match only; fresh reporting flag was not recomputed. Native numerical identity and scientific use remain held. Preserve original timeout, cleanup failure and separate no-fit recovery unchanged. This reporting task makes no Stata dispatch, fit, prediction or respondent-data load; its receipt describes only checks actually run. No manuscript/production/preferred-model change or release authorization. Next: M6.03.28 / M6.05.28, original M2 two-class preflight without fitting.
