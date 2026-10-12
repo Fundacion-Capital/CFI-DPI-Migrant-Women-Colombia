@@ -1,0 +1,2 @@
+model_id,source_sample_lines,source_estimator_lines,seed,classes,indicators,random_draws,iteration_ceiling,saved_N,saved_slots,saved_rank,saved_converged,native_records,current_research_fits,fresh_convergence,scientific_acceptance
+M2_k2,6774-6778,6784-6794,6430002,2,6,200,5000,423,14,13,1,217,0,NOT_FITTED,HOLD

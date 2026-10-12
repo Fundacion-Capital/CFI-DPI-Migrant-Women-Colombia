@@ -655,3 +655,7 @@ seal, not this paragraph. Next proposed M6.08.26.R1 is no-fit candidate disposit
 ### M6.08.26.R1 — M1_k5 failed-candidate reporting contract
 
 See [protected original M1 five-class disposition](PROTECTED_LCA_M1_K5_CANDIDATE_DISPOSITION.md). Retain historical rc0/converged0/report_candidate0 and replay status match only; fresh reporting flag was not recomputed. Native numerical identity and scientific use remain held. Preserve original timeout, cleanup failure and separate no-fit recovery unchanged. This reporting task makes no Stata dispatch, fit, prediction or respondent-data load; its receipt describes only checks actually run. No manuscript/production/preferred-model change or release authorization. Next: M6.03.28 / M6.05.28, original M2 two-class preflight without fitting.
+
+### M6.03.28 / M6.05.28 — original M2 two-class protected preflight
+
+See [protected M2_k2 adapter and native-capture preflight](PROTECTED_LCA_M2_K2_PREFLIGHT.md). Exact six-indicator M2 sample6774–6778/estimator6784–6794/seed6430002; saved N423/14slots/rank13/217native records. No fit or prediction; adapter exit459-held. Preserve initial stripe-whitelist failure; corrected saved-state capture, native equality and adversarial checks use a new request, not a retry. Four no-fit selections, restored maxvar5000, three owned workers destroyed, default inventory unchanged. All prior evidence/scientific/release holds retained. Next proposed task M6.04.28/M6.08.27 bounded original M2 two-class replay, requiring separate single-fit authority.
