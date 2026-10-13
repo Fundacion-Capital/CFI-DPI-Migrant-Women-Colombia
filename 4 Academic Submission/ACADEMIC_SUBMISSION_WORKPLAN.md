@@ -1638,3 +1638,8 @@ See [protected M2_k2 adapter and native-capture preflight](PROTECTED_LCA_M2_K2_P
 ### M6.04.28 / M6.08.27 — bounded original M2 two-class replay
 
 See [protected M2_k2 native-target comparison](PROTECTED_LCA_M2_K2_REPLAY.md). Single original-specification fit rc0/converged1/N423/rank13/14slots; no refit or predictions. Native217 comparison:34exact/183different/0stripe mismatches; coefficient max3.597559853937978,covariance0.2297577852467991,metadata3.18323145621e-12. No relabel/tolerance/target substitution; exact historical replication and scientific acceptance held. Source/preflight/all failures preserved; default inventory unchanged and only owned workers destroyed. Next M6.08.27.R1 saved-state discrepancy/class-parameterization diagnostics without fitting.
+
+
+### M6.08.27.R1 — saved-state M2 two-class diagnostics
+
+See [protected M2_k2 diagnostic report](PROTECTED_LCA_M2_K2_DIAGNOSTICS.md). Zero fits/predictions; both native217 states strictly verified. Diagnostic class swap reduces coefficient difference to 1.77453595374e-7 and covariance difference to 3.47626848696e-8; 64-pattern maximum difference 1.57395261408e-9 and total variation 9.06043928116e-9. Residual differences remain; original exact mismatch unchanged. Both distribution Jacobians and free covariances rank13 at four thresholds; finite stored gradients, no stored Hessian. Scientific/global-optimum/release holds remain. Next M6.08.27.R2: original M2 two-class candidate-disposition and reporting contract, without fitting.
