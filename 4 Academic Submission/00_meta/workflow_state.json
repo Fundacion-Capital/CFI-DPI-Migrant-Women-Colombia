@@ -1,5 +1,5 @@
 {
-"schema_version": 106,
+"schema_version": 107,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M3_K3_PREFLIGHT.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M3_K3_REPLAY.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2247,7 +2247,17 @@
     "lca_m3_k3_preflight_validation": "audit-local/intake/lca-m3-k3-adapter-64a686c/validation.json",
     "lca_m3_k3_preflight_execution": "audit-local/intake/lca-m3-k3-adapter-64a686c/actual_final_execution.json",
     "lca_m3_k3_preflight_report": "PROTECTED_LCA_M3_K3_PREFLIGHT.md",
-    "lca_m3_k3_preflight_candidate": "lca-m3-k3-preflight/historical_candidate.csv"
+    "lca_m3_k3_preflight_candidate": "lca-m3-k3-preflight/historical_candidate.csv",
+    "lca_m3_k3_replay_authority": "audit-local/intake/lca-m3-k3-replay-450e60c/authority_actual_request.json",
+    "lca_m3_k3_replay_contract": "audit-local/intake/lca-m3-k3-replay-450e60c/contract.json",
+    "lca_m3_k3_replay_adapter": "audit-local/intake/lca-m3-k3-replay-450e60c/adapter_manifest.json",
+    "lca_m3_k3_replay_runtime": "audit-local/intake/lca-m3-k3-replay-450e60c/native_acceptance.json",
+    "lca_m3_k3_replay_preservation": "audit-local/intake/lca-m3-k3-replay-450e60c/entry_preservation.json",
+    "lca_m3_k3_replay_review": "audit-local/intake/lca-m3-k3-replay-450e60c/review.json",
+    "lca_m3_k3_replay_validation": "audit-local/intake/lca-m3-k3-replay-450e60c/validation.json",
+    "lca_m3_k3_replay_execution": "audit-local/intake/lca-m3-k3-replay-450e60c/actual_final_execution.json",
+    "lca_m3_k3_replay_report": "PROTECTED_LCA_M3_K3_REPLAY.md",
+    "lca_m3_k3_replay_summary": "lca-m3-k3-replay/comparison_summary.csv"
   },
   "decisions": [
     {
