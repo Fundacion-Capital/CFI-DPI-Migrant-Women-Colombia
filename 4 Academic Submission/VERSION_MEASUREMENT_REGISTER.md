@@ -763,3 +763,8 @@ See [protected M2_k2 disposition and reporting contract](PROTECTED_LCA_M2_K2_CAN
 ### M6.03.29 / M6.05.29 — original M2 three-class protected preflight
 
 See [protected M2_k3 adapter and native-capture preflight](PROTECTED_LCA_M2_K3_PREFLIGHT.md). Original six-indicator sample6774–6778/estimator6802–6812/seed6430003/classes3/draws300/iterate5000; historical N423/rank20/21slots/469native. No fit/prediction; held459 before loading/estimation. Exact saved-state native readback, six invalid-state/eight malformed-carrier rejections and collision/escape guards; normal0/injected9 cleanup restores5000, only owned worker destroyed, default inventory unchanged. Earlier two-class discrepancies and all scientific/release holds remain. Next M6.04.29/M6.08.28 bounded original M2 three-class replay requires separate single-fit authority.
+
+
+### M6.04.29 / M6.08.28 — bounded original M2 three-class replay
+
+See [protected M2_k3 native-target comparison](PROTECTED_LCA_M2_K3_REPLAY.md). One original-specification fit rc0/converged1/N423/rank20/21slots; no refit/predictions. Native469 comparison:48exact/421different/0stripe mismatches; coefficient max1.566503204926907 and covariance max2203564.740426676, despite likelihood difference4.38425445282e-6. Large covariance discrepancy unresolved; no label-equivalence, exact-replication or scientific acceptance claim. Both saved states/native captures retained, maxvar5000/owned cleanup/default unchanged; prior failures preserved. Next M6.08.28.R1 protected saved-state M2 three-class numerical-discrepancy and identification diagnostics, without fitting.
