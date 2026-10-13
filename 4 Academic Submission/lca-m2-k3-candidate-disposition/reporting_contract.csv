@@ -1,0 +1,18 @@
+disposition,claim_id,statement
+RETAIN,historical_candidate,"Original M2_k3 is a converged six-binary-indicator candidate with N_complete423, df20 and archival report_candidate0. Original screening admits k4/k5 only; this exclusion is not nonconvergence or intrinsic invalidity."
+RETAIN,replay_status,"Exactly one original-specification replay reported rc0/converged1/N423/rank20/21slots; no refit, predictions or new posterior classification."
+RETAIN,original_native_mismatch,"Original exact comparison remains469cells,48exact,421numerical differences and0stripe mismatches. Maximum coefficient/covariance differences remain1.5665032049269065/2203564.7404266763."
+RETAIN,diagnostic_alignment,All six diagnostic permutations favor identity123. Small model-implied probability differences do not remove original coefficient/covariance differences or prove equivalent estimates.
+RETAIN,pattern_distribution,All64 theoretical binary patterns were evaluated from saved parameters under conditional independence. These are not empirical frequencies or respondent classifications; no tolerance-based acceptance was imposed.
+RETAIN,reference_intercept,The first class-membership intercept is fixed to zero as the reference. All three mixture weights depend on the free intercepts; no probability is fixed by this reference constraint.
+RETAIN,archival_posterior,"Historical entropy/posterior/class-size metrics remain archival fit-grid outputs, not fresh replay results."
+RETAIN,rank_and_conditioning,Both saved-point probability/logit Jacobians have numerical rank20 at four thresholds. Original logits and covariance are poorly conditioned near item-probability boundaries; numerical rank is not formal/global identification or reliable inference.
+RETAIN,stored_derivatives,"Finite stored gradients are present; stored H is absent in both states. Neither fresh scores nor a Hessian was evaluated, and gradient magnitude is not an optimizer-accuracy acceptance rule."
+HOLD,exact_identity,"Exact historical identity remains unaccepted; no target substitution, historical-state overwrite, acceptance tolerance or relabel-based certification."
+HOLD,scientific_use,"Substantive class interpretation, inferential reporting, measurement validity, formal/global identification, optimality and robustness remain unaccepted by this bounded disposition."
+EXCLUDE,fresh_reporting_flag,Replay report_candidate and posterior diagnostics are NOT_RECOMPUTED. Never attribute archival flags or posterior/class-size metrics to the new replay.
+EXCLUDE,missing_as_zero,"Stored Hessian diagnostics are UNAVAILABLE, not zero. Original screen lacks explicit missing-value guards; Stata numeric missing exceeds finite thresholds. Preserve that caveat without rewriting the historical screen."
+EXCLUDE,selection_claim,Original k4/k5 reporting screen is not BIC minimization or a universal scientific-validity rule; M2_k3 exclusion is not evidence that every three-class model is unsuitable.
+EXCLUDE,cross_feature_ic,No absolute BIC/AIC ranking of M2 against H1: their indicator/outcome structures differ. Original archival preference is not independently revalidated here.
+EXCLUDE,preferred_model_change,The separately selected historical H1_k4 preference is unchanged. This M2 disposition neither certifies nor replaces H1.
+EXCLUDE,new_authority,"No Stata call, new fit, prediction, participant-data load, production/manuscript edit, deletion, commit/push, cloud synchronization or release is authorized."

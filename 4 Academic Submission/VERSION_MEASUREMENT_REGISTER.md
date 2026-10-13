@@ -773,3 +773,8 @@ See [protected M2_k3 native-target comparison](PROTECTED_LCA_M2_K3_REPLAY.md). O
 ### M6.08.28.R1 — protected original M2 three-class saved-state diagnostics
 
 See [M2_k3 diagnostics](PROTECTED_LCA_M2_K3_DIAGNOSTICS.md). Zero fits/predictions; strict native469 readback for both saved states. All6 permutations favor original ordering; all64-pattern maximum difference 3.1097817678044093e-6 and total variation9.6064432955298438e-6, without equivalence acceptance. Original covariance discrepancy2203564.7404266763 remains. Both probability Jacobians rank20 at four thresholds, but logit/boundary scaling and large coordinate17 IURD-class2 variance remain concerns; stored gradients present, Hessians absent. Preserve all packets/failures; no scientific/exact-replication acceptance. Next M6.08.28.R2 no-fit candidate-disposition/reporting contract.
+
+
+### M6.08.28.R2 — original M2 three-class candidate disposition
+
+See [M2_k3 disposition/reporting contract](PROTECTED_LCA_M2_K3_CANDIDATE_DISPOSITION.md). Reporting-only,zero Stata calls/fits/predictions/participant loads. Retain converged archival candidate outside original k4/k5 reporting screen; entropy/posteriors/class sizes and flag0 remain archival, fresh counterparts NOT_RECOMPUTED. Identity is closest diagnostic alignment, but469-native48exact/421different/0stripe and covariance discrepancy2203564.7404266763 remain. Boundary/conditioning and stored-Hessian absence caveats retained; exact replication/scientific use/release held. H1_k4 preference unchanged; no cross-feature AIC/BIC ranking. Next M6.03.30/M6.05.30 original M2_k4 no-fit adapter/preflight: seed6430004,draws500,iterate7000,N423/rank27/28slots/819native.
