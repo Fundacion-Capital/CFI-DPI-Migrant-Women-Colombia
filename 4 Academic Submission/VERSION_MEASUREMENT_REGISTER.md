@@ -783,3 +783,7 @@ See [M2_k3 disposition/reporting contract](PROTECTED_LCA_M2_K3_CANDIDATE_DISPOSI
 ### M6.03.30 / M6.05.30 — original M2 four-class protected preflight
 
 See [M2_k4 protected adapter/native preflight](PROTECTED_LCA_M2_K4_PREFLIGHT.md). No fitting: original sample6774–6778,seed6430004,estimator6820–6830,classes4/draws500/iterate7000. Historical N423/rank27/28slots/native819; fresh convergence unevaluated. Held459 before input/estimator; strict saved-native readback and malformed-state/carrier, destination and cleanup checks. Previous packets/failures and all scientific/exact/release holds retained. Next M6.04.30/M6.08.29 bounded original M2_k4 replay requires separate single-fit authority.
+
+### M6.04.30 / M6.08.29 — original M2 four-class bounded attempt and diagnostic comparison
+
+See [M2_k4 bounded replay audit](PROTECTED_LCA_M2_K4_REPLAY.md). One original fit: rc0 but converged0/rank23 versus archived converged1/rank27, N423/28slots. Transport timeout300s and strict comparison601 retained; separate zero-fit diagnostic capture/readback compares819native cells:60exact/759different/0stripe. Three owned workers cleaned up; default inventory unchanged. No retry/predictions/participant export. Diagnostic-only result, scientific/exact/release holds and H1_k4 preference retained. Next M6.08.29.R1 saved-state nonconvergence/discrepancy/identification diagnostics, without fitting.
