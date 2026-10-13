@@ -1,0 +1,2 @@
+task,model_id,seed,classes,draws,iterations,historical_N,historical_rank,slots,native_records,historical_converged,research_fits,predictions,held_return_code,scientific_acceptance,fresh_convergence
+M6.03.29 / M6.05.29,M2_k3,6430003,3,300,5000,423,20,21,469,1,0,0,459,false,NOT_EVALUATED

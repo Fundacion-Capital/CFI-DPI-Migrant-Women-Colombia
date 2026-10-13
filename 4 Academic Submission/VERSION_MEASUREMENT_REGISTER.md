@@ -758,3 +758,8 @@ See [protected M2_k2 diagnostic report](PROTECTED_LCA_M2_K2_DIAGNOSTICS.md). Zer
 ### M6.08.27.R2 — original M2 two-class reporting disposition
 
 See [protected M2_k2 disposition and reporting contract](PROTECTED_LCA_M2_K2_CANDIDATE_DISPOSITION.md). Retain historical converged M2_k2 and archival report_candidate0; original screen restricts candidates to k4/5, not a BIC-minimization or scientific-validity test. Preserve217native/34exact/183different and approximate label-alignment diagnostics with residuals; no new fit, prediction, posterior metrics or reporting flag. Reference-class intercept is fixed to zero, not a mixture probability; R1 wording clarified here without changing its seal. H1_k4 preference unchanged; scientific/exact-replication/release holds maintained. Next M6.03.29/M6.05.29: protected original M2 three-class adapter/native-capture preflight, without fitting.
+
+
+### M6.03.29 / M6.05.29 — original M2 three-class protected preflight
+
+See [protected M2_k3 adapter and native-capture preflight](PROTECTED_LCA_M2_K3_PREFLIGHT.md). Original six-indicator sample6774–6778/estimator6802–6812/seed6430003/classes3/draws300/iterate5000; historical N423/rank20/21slots/469native. No fit/prediction; held459 before loading/estimation. Exact saved-state native readback, six invalid-state/eight malformed-carrier rejections and collision/escape guards; normal0/injected9 cleanup restores5000, only owned worker destroyed, default inventory unchanged. Earlier two-class discrepancies and all scientific/release holds remain. Next M6.04.29/M6.08.28 bounded original M2 three-class replay requires separate single-fit authority.
