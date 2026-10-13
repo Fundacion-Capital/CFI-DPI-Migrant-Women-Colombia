@@ -659,3 +659,7 @@ See [protected original M1 five-class disposition](PROTECTED_LCA_M1_K5_CANDIDATE
 ### M6.03.28 / M6.05.28 — original M2 two-class protected preflight
 
 See [protected M2_k2 adapter and native-capture preflight](PROTECTED_LCA_M2_K2_PREFLIGHT.md). Exact six-indicator M2 sample6774–6778/estimator6784–6794/seed6430002; saved N423/14slots/rank13/217native records. No fit or prediction; adapter exit459-held. Preserve initial stripe-whitelist failure; corrected saved-state capture, native equality and adversarial checks use a new request, not a retry. Four no-fit selections, restored maxvar5000, three owned workers destroyed, default inventory unchanged. All prior evidence/scientific/release holds retained. Next proposed task M6.04.28/M6.08.27 bounded original M2 two-class replay, requiring separate single-fit authority.
+
+### M6.04.28 / M6.08.27 — bounded original M2 two-class replay
+
+See [protected M2_k2 native-target comparison](PROTECTED_LCA_M2_K2_REPLAY.md). Single original-specification fit rc0/converged1/N423/rank13/14slots; no refit or predictions. Native217 comparison:34exact/183different/0stripe mismatches; coefficient max3.597559853937978,covariance0.2297577852467991,metadata3.18323145621e-12. No relabel/tolerance/target substitution; exact historical replication and scientific acceptance held. Source/preflight/all failures preserved; default inventory unchanged and only owned workers destroyed. Next M6.08.27.R1 saved-state discrepancy/class-parameterization diagnostics without fitting.
