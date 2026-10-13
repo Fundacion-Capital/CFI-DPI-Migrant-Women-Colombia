@@ -753,3 +753,8 @@ See [protected M2_k2 native-target comparison](PROTECTED_LCA_M2_K2_REPLAY.md). S
 ### M6.08.27.R1 — saved-state M2 two-class diagnostics
 
 See [protected M2_k2 diagnostic report](PROTECTED_LCA_M2_K2_DIAGNOSTICS.md). Zero fits/predictions; both native217 states strictly verified. Diagnostic class swap reduces coefficient difference to 1.77453595374e-7 and covariance difference to 3.47626848696e-8; 64-pattern maximum difference 1.57395261408e-9 and total variation 9.06043928116e-9. Residual differences remain; original exact mismatch unchanged. Both distribution Jacobians and free covariances rank13 at four thresholds; finite stored gradients, no stored Hessian. Scientific/global-optimum/release holds remain. Next M6.08.27.R2: original M2 two-class candidate-disposition and reporting contract, without fitting.
+
+
+### M6.08.27.R2 — original M2 two-class reporting disposition
+
+See [protected M2_k2 disposition and reporting contract](PROTECTED_LCA_M2_K2_CANDIDATE_DISPOSITION.md). Retain historical converged M2_k2 and archival report_candidate0; original screen restricts candidates to k4/5, not a BIC-minimization or scientific-validity test. Preserve217native/34exact/183different and approximate label-alignment diagnostics with residuals; no new fit, prediction, posterior metrics or reporting flag. Reference-class intercept is fixed to zero, not a mixture probability; R1 wording clarified here without changing its seal. H1_k4 preference unchanged; scientific/exact-replication/release holds maintained. Next M6.03.29/M6.05.29: protected original M2 three-class adapter/native-capture preflight, without fitting.
