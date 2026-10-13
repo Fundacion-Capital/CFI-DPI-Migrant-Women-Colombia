@@ -1668,3 +1668,8 @@ See [M2_k3 diagnostics](PROTECTED_LCA_M2_K3_DIAGNOSTICS.md). Zero fits/predictio
 ### M6.08.28.R2 — original M2 three-class candidate disposition
 
 See [M2_k3 disposition/reporting contract](PROTECTED_LCA_M2_K3_CANDIDATE_DISPOSITION.md). Reporting-only,zero Stata calls/fits/predictions/participant loads. Retain converged archival candidate outside original k4/k5 reporting screen; entropy/posteriors/class sizes and flag0 remain archival, fresh counterparts NOT_RECOMPUTED. Identity is closest diagnostic alignment, but469-native48exact/421different/0stripe and covariance discrepancy2203564.7404266763 remain. Boundary/conditioning and stored-Hessian absence caveats retained; exact replication/scientific use/release held. H1_k4 preference unchanged; no cross-feature AIC/BIC ranking. Next M6.03.30/M6.05.30 original M2_k4 no-fit adapter/preflight: seed6430004,draws500,iterate7000,N423/rank27/28slots/819native.
+
+
+### M6.03.30 / M6.05.30 — original M2 four-class protected preflight
+
+See [M2_k4 protected adapter/native preflight](PROTECTED_LCA_M2_K4_PREFLIGHT.md). No fitting: original sample6774–6778,seed6430004,estimator6820–6830,classes4/draws500/iterate7000. Historical N423/rank27/28slots/native819; fresh convergence unevaluated. Held459 before input/estimator; strict saved-native readback and malformed-state/carrier, destination and cleanup checks. Previous packets/failures and all scientific/exact/release holds retained. Next M6.04.30/M6.08.29 bounded original M2_k4 replay requires separate single-fit authority.
