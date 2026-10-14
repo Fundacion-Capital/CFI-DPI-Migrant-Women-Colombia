@@ -1,5 +1,5 @@
 {
-"schema_version": 118,
+  "schema_version": 119,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M4_K2_CANDIDATE_DISPOSITION.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M4_K3_PREFLIGHT.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2370,7 +2370,15 @@
     "lca_m4_k2_disposition_execution": "audit-local/intake/lca-m4-k2-disposition-287313f/actual_final_execution.json",
     "lca_m4_k2_disposition_report": "PROTECTED_LCA_M4_K2_CANDIDATE_DISPOSITION.md",
     "lca_m4_k2_disposition_context": "lca-m4-k2-candidate-disposition/candidate_context.csv",
-    "lca_m4_k2_disposition_claims": "lca-m4-k2-candidate-disposition/reporting_contract.csv"
+    "lca_m4_k2_disposition_claims": "lca-m4-k2-candidate-disposition/reporting_contract.csv",
+    "lca_m4_k3_preflight": "PROTECTED_LCA_M4_K3_PREFLIGHT.md",
+    "lca_m4_k3_preflight_candidate": "lca-m4-k3-preflight/historical_candidate.csv",
+    "lca_m4_k3_preflight_contract": "audit-local/intake/lca-m4-k3-adapter-bd50809/contract.json",
+    "lca_m4_k3_dependency_guard": "audit-local/intake/lca-m4-k3-adapter-bd50809/guard.py",
+    "lca_m4_k3_guard_manifest": "audit-local/intake/lca-m4-k3-adapter-bd50809/guard_manifest.json",
+    "lca_m4_k3_native_acceptance": "audit-local/intake/lca-m4-k3-adapter-bd50809/native_acceptance.json",
+    "lca_m4_k3_preflight_validation": "audit-local/intake/lca-m4-k3-adapter-bd50809/validation.json",
+    "lca_m4_k3_preflight_closure": "audit-local/intake/lca-m4-k3-adapter-bd50809-verification/closure.json"
   },
   "decisions": [
     {
