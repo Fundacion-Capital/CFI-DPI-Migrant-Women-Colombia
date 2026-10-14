@@ -1,0 +1,22 @@
+disposition,claim_id,statement
+RETAIN,historical_candidate,"Original M3_k3 converged with N_complete=423, six binary indicators and report_candidate=0. The original reporting screen limits candidates to four or five classes."
+RETAIN,replay_status,"One original-specification replay converged with N423, rank20 and 21 slots; no refit or predictions."
+RETAIN,original_native_mismatch,"Original native comparison remains 469 cells, 48 exact matches, 421 differences and zero stripe mismatches."
+RETAIN,label_alignment,"Closest diagnostic order is replay classes3-2-1 in historical order. Probability differences shrink, but rebased logit/covariance residuals remain. Approximate alignment is not exact replication."
+RETAIN,reference_intercept,The first class-membership intercept is fixed to zero as the reference. All three weights depend on the two free intercepts; no class probability is fixed by that normalization.
+RETAIN,archival_information_criteria,"Historical likelihood, df, AIC and BIC are archival grid values. Replay information criteria were not recomputed; context is not a new ranking."
+RETAIN,archival_posterior,"Historical entropy, posterior summary and class sizes are archival grid values, not fresh replay predictions."
+RETAIN,fitted_point_rank,"Both saved distribution Jacobians have numerical rank20 at four relative thresholds. This is conditional local evidence at the fitted points under the assumed model, not global identification, optimality or validity."
+RETAIN,stored_derivatives,Stored gradients are finite1x21; saved H is absent in both states. No new scores or Hessian were evaluated or reconstructed.
+HOLD,exact_identity,"Exact numerical identity remains unaccepted. No tolerance widening, target replacement or saved-state rewriting."
+HOLD,scientific_acceptance,"Measurement validity, global identification/optimality, robustness, substantive interpretation and scientific use remain unaccepted."
+EXCLUDE,fresh_reporting_flag,"Replay report_candidate, entropy, posterior maximums and class sizes are NOT_RECOMPUTED. Never present archival quantities as fresh replay outputs."
+EXCLUDE,missing_as_zero,Absent H and unavailable diagnostics must not become zero. Preserve the original reporting screen missing-value ordering caveat.
+EXCLUDE,selection_claim,The archival k4/k5 screen is not BIC minimization or a universal validity rule. M3_k3 exclusion does not imply nonconvergence or intrinsic invalidity.
+EXCLUDE,cross_feature_bic,Do not compare absolute M3/H1 AIC or BIC as if their feature/likelihood structures were identical.
+EXCLUDE,preferred_model_change,The separately selected final historical H1_k4 refit remains unchanged and is not revalidated here.
+EXCLUDE,failed_candidate_blanks,"Preserve M3_k5 rc0/convergence0 and blank likelihood, criteria, posterior and class-size fields. Missing is not zero or new evaluation."
+EXCLUDE,new_authority,"No Stata call, fit, prediction, participant-data load/export, analysis/manuscript edit, Git/cloud action or release is authorized."
+RETAIN,boundary_conditioning,"Each state has three item probabilities within1e-6/1e-4 of a boundary, none within1e-8; minimum class weights about0.149 are not vanishing. Large logit uncertainty and conditioning remain warnings despite close pattern probabilities."
+RETAIN,scale_threshold_rank,"Free covariance numerical rank is14 at relative1e-8 and20 at tighter thresholds. Rank/conditioning are scale- and threshold-dependent, not an invariant rank14 or global identification verdict."
+RETAIN,invariance_scope,All six permutations/reference/covariance mappings passed controlled fixtures. Actual fitted replay distribution invariance was asserted only for the closest ordering; do not promote fixture coverage to all-six actual-state assertions.
