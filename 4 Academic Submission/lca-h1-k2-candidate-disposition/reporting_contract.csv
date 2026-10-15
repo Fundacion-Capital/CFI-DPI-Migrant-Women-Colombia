@@ -1,0 +1,21 @@
+disposition,claim_id,statement
+RETAIN,historical_specification,"Original H1_k2 uses six ordered-logit indicators and one binary-logit indicator; two classes, seed6529002, 300 random-id draws, difficult and 5000 iterations, with N423."
+RETAIN,historical_status,"Archived rc0/convergence1 and report_candidate0 remain distinct: the source reporting screen requires k4 or k5, min_class_pct>=5 and entropy>=0.60."
+RETAIN,sealed_replay_status,"The single bounded replay recorded rc0/convergence1, N423, rank27, 28 slots and log likelihood -2878.969497373987; no refit or prediction."
+RETAIN,bounded_native_identity,"EXACT_NATIVE_TARGET_MATCH: 819 of 819 native cells match exactly, comprising seven metadata, 28 coefficient and 784 covariance cells; zero value or stripe mismatches and maximum absolute difference0."
+RETAIN,own_state_validation,Both historical and replay carriers independently matched their own saved states in the sealed preceding task. This node does not decode or re-evaluate those states.
+RETAIN,unchanged_original_specification,"The replay retained original sample, row order, mixed-input recoding and estimator; no new sorting, class relabeling, weights, tolerance or model revision."
+RETAIN,archival_information_criteria,"Archived df27, AIC5811.938994747974 and BIC5921.218043582224 are original grid values; fresh replay information criteria are NOT_RECOMPUTED."
+RETAIN,archival_posterior,"Archived entropy.8345212795641216, average maximum posterior.9555072316327362 and minimum modal class108/25.53191489361702 percent are historical, not new predictions."
+RETAIN,screen_scope,Historical report_candidate0 excludes this two-class candidate from the original reporting screen; it does not mean nonconvergence or intrinsic scientific invalidity.
+RETAIN,initial_grid_context,"Four original H1 grid rows are archival context only, not a new selection exercise or a validation of the separately fitted final preferred model."
+RETAIN,failed_context_blanks,"H1_k3 and H1_k5 record rc0/convergence0 and report_candidate0. Their nine blank likelihood/information/posterior/class-size diagnostics remain unavailable, never zero-filled."
+HOLD,fresh_reporting_flag,"Fresh report_candidate, posterior metrics and information criteria remain NOT_RECOMPUTED; archival values must never be labeled fresh replay outputs."
+HOLD,scientific_acceptance,"Exact native replication does not establish measurement validity, identification, global optimum, statistical inference, robustness, stable class interpretation or scientific acceptance."
+HOLD,uncertainty_diagnostics,"Previously displayed large IUOF threshold uncertainty is not resolved by exact replication; no new Hessian, Jacobian, scores, conditioning, posterior or uncertainty diagnostics are calculated here."
+EXCLUDE,full_replication_claim,Do not describe this one-candidate native match as replication of the full analytical workflow or validation of final H1_k4.
+EXCLUDE,missing_screen_revision,Retain the original screen exactly. Its numeric missing-value behavior has no new missing guard; no general validity or missingness-safe guarantee is inferred.
+EXCLUDE,cross_feature_ic_ranking,Do not rank different feature/outcome sets by absolute AIC/BIC in this contract; no new candidate ranking or preferred-model change.
+EXCLUDE,preferred_model_substitution,The separate final H1_k4 refit at source lines8804-8832 remains unchanged and unvalidated by H1_k2; initial-grid H1_k4 is not silently substituted for that refit.
+HOLD,next_failed_candidate,Next is original H1_k3 failed-candidate source/runtime/reporting intake and nonconvergence-aware adapter preflight only. Frozen intake has no saved H1_k3 state or native numerical target; no future fit is authorized.
+EXCLUDE,new_authority,"This task makes zero Stata calls, fits, predictions, participant loads/exports or new statistics; no production, manuscript, Git, cloud, Overleaf or release action is authorized."
