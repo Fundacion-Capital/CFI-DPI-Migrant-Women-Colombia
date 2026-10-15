@@ -1,0 +1,23 @@
+disposition,claim_id,statement
+RETAIN,historical_candidate,"Original M4_k3 converged with N_complete=423, five binary indicators and report_candidate=0. The historical screen limits reporting candidates to four or five classes."
+RETAIN,replay_status,"One original-specification replay converged with N423, rank17 and 18 native slots; no refit or predictions."
+RETAIN,original_native_mismatch,"The original unaligned comparison remains349 cells,42 exact matches,307 differences and zero stripe mismatches. No diagnostic alignment replaces it."
+RETAIN,label_alignment,"The closest diagnostic replay-column order is132 in historical order. Nonzero coefficient, covariance and theoretical-distribution residuals remain; this is not exact replication."
+RETAIN,reference_intercept,The first class-membership intercept is fixed to zero as the reference. All three weights depend on the two free intercepts; no class probability is fixed by the normalization.
+RETAIN,archival_information_criteria,"Historical likelihood, df, AIC and BIC are archival grid values. Fresh replay information criteria are NOT_RECOMPUTED; context is not a new ranking."
+RETAIN,archival_posterior,"Historical entropy, posterior summary and class sizes are archival grid diagnostics, not fresh replay predictions."
+RETAIN,fitted_point_rank,"Both saved distribution Jacobians have numerical rank17 at four relative thresholds under the assumed five-binary model. This is local numerical evidence, not global identification, optimality or validity."
+RETAIN,stored_derivatives,"Stored gradients are finite1x18; stored H is absent in both saved states. No fresh scores or Hessian were evaluated, inverted or reconstructed."
+HOLD,exact_identity,"Exact numerical replication remains unaccepted. No tolerance widening, target substitution, class relabelling or saved-state rewriting."
+HOLD,scientific_acceptance,"Measurement validity, stable inference, global identification/optimality, robustness, substantive class interpretation and scientific use remain unaccepted."
+EXCLUDE,fresh_reporting_flag,"Fresh replay report_candidate, entropy, posterior maximums and class sizes are NOT_RECOMPUTED. Never present archival quantities as fresh replay outputs."
+EXCLUDE,missing_as_zero,"Missing stored H and other unavailable values remain unavailable, not zero. Preserve the original screen missing-value ordering caveat without repair."
+EXCLUDE,selection_claim,"The archival k4/k5 reporting screen is not BIC minimization or a universal validity rule. M4_k3 exclusion does not imply nonconvergence, tiny classes or intrinsic invalidity."
+EXCLUDE,cross_feature_bic,Do not rank absolute M4/H1 AIC or BIC across different outcome/feature structures.
+EXCLUDE,preferred_model_change,The separately selected final historical H1_k4 refit remains unchanged and is not newly validated or replaced here.
+EXCLUDE,failed_candidate_blanks,"Preserve M4_k5 rc0/convergence0 and blank likelihood, criteria, posterior and class-size fields. Missing is not zero and rc0 is not convergence."
+EXCLUDE,new_authority,"No new Stata call, fit, prediction, participant-data load/export, production/manuscript edit, Git/cloud action or release is authorized."
+RETAIN,boundary_conditioning,Each state has one item probability within1e-4 of a boundary and none within1e-6/1e-8; minimum weights about0.167 are not vanishing. Large logit uncertainty and conditioning remain warnings despite close pattern probabilities.
+RETAIN,scale_threshold_rank,Free covariance and standardized correlation matrices have numerical rank17 at all four relative thresholds. Logit/probability conditioning differs substantially; full local rank does not establish stable inference.
+RETAIN,invariance_scope,All six permutation/reference/covariance transformations passed controlled fixtures; actual fitted-distribution invariance was asserted only for the closest ordering. Do not extend the fixture claim to all-six actual-state assertions.
+HOLD,future_dispatch_guard,"The reviewed R1 guard is purpose-bound to pinned source, not an arbitrary Stata/Mata sandbox. Any new executable adapter or dependency graph requires its own preflight and authority."

@@ -1,5 +1,5 @@
 {
-  "schema_version": 121,
+  "schema_version": 122,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M4_K3_DIAGNOSTICS.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M4_K3_CANDIDATE_DISPOSITION.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2398,7 +2398,17 @@
     "lca_m4_k3_diagnostics_validation": "audit-local/intake/lca-m4-k3-diagnostics-ad15705/validation.json",
     "lca_m4_k3_diagnostics_execution": "audit-local/intake/lca-m4-k3-diagnostics-ad15705/actual_final_execution.json",
     "lca_m4_k3_diagnostics_report": "PROTECTED_LCA_M4_K3_DIAGNOSTICS.md",
-    "lca_m4_k3_diagnostics_summary": "lca-m4-k3-diagnostics/diagnostics_summary.csv"
+    "lca_m4_k3_diagnostics_summary": "lca-m4-k3-diagnostics/diagnostics_summary.csv",
+    "lca_m4_k3_disposition_authority": "audit-local/intake/lca-m4-k3-disposition-6829388/authority_actual_request.json",
+    "lca_m4_k3_disposition_contract": "audit-local/intake/lca-m4-k3-disposition-6829388/reporting_contract.json",
+    "lca_m4_k3_disposition_sources": "audit-local/intake/lca-m4-k3-disposition-6829388/historical_source_windows.json",
+    "lca_m4_k3_disposition_preservation": "audit-local/intake/lca-m4-k3-disposition-6829388/entry_preservation.json",
+    "lca_m4_k3_disposition_review": "audit-local/intake/lca-m4-k3-disposition-6829388/review.json",
+    "lca_m4_k3_disposition_validation": "audit-local/intake/lca-m4-k3-disposition-6829388/validation.json",
+    "lca_m4_k3_disposition_execution": "audit-local/intake/lca-m4-k3-disposition-6829388/actual_final_execution.json",
+    "lca_m4_k3_disposition_report": "PROTECTED_LCA_M4_K3_CANDIDATE_DISPOSITION.md",
+    "lca_m4_k3_disposition_context": "lca-m4-k3-candidate-disposition/candidate_context.csv",
+    "lca_m4_k3_disposition_claims": "lca-m4-k3-candidate-disposition/reporting_contract.csv"
   },
   "decisions": [
     {
