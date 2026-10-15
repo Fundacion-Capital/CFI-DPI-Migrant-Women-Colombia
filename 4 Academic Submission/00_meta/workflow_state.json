@@ -1,5 +1,5 @@
 {
-  "schema_version": 123,
+  "schema_version": 124,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M4_K4_PREFLIGHT.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M4_K4_REPLAY.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2416,7 +2416,17 @@
     "lca_m4_k4_guard_manifest": "audit-local/intake/lca-m4-k4-adapter-3c7b2f5/guard_manifest.json",
     "lca_m4_k4_native_acceptance": "audit-local/intake/lca-m4-k4-adapter-3c7b2f5/native_acceptance.json",
     "lca_m4_k4_preflight_validation": "audit-local/intake/lca-m4-k4-adapter-3c7b2f5/validation.json",
-    "lca_m4_k4_preflight_closure": "audit-local/intake/lca-m4-k4-adapter-3c7b2f5-verification/closure.json"
+    "lca_m4_k4_preflight_closure": "audit-local/intake/lca-m4-k4-adapter-3c7b2f5-verification/closure.json",
+    "lca_m4_k4_replay_authority": "audit-local/intake/lca-m4-k4-replay-d2c015e/authority_actual_request.json",
+    "lca_m4_k4_replay_contract": "audit-local/intake/lca-m4-k4-replay-d2c015e/contract.json",
+    "lca_m4_k4_replay_request": "audit-local/intake/lca-m4-k4-replay-d2c015e/fit_request.json",
+    "lca_m4_k4_replay_dispatch": "audit-local/intake/lca-m4-k4-replay-d2c015e/fit_dispatch_started.json",
+    "lca_m4_k4_replay_acceptance": "audit-local/intake/lca-m4-k4-replay-d2c015e/native_acceptance.json",
+    "lca_m4_k4_replay_validation": "audit-local/intake/lca-m4-k4-replay-d2c015e/validation.json",
+    "lca_m4_k4_replay_execution": "audit-local/intake/lca-m4-k4-replay-d2c015e/actual_final_execution.json",
+    "lca_m4_k4_replay_report": "PROTECTED_LCA_M4_K4_REPLAY.md",
+    "lca_m4_k4_replay_comparison": "lca-m4-k4-replay/comparison_summary.csv",
+    "lca_m4_k4_replay_closure": "audit-local/intake/lca-m4-k4-replay-d2c015e-verification/closure.json"
   },
   "decisions": [
     {

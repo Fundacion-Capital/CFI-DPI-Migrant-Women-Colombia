@@ -1796,3 +1796,8 @@ Completed as a metadata-only reporting contract, with no Stata call or fitting. 
 ### M6.03.38 / M6.05.38 — original M4 four-class protected preflight
 
 Prepared and checked without fitting: original five binary indicators, seed6432004,500 starts/7000 iterations and unconditional held exit459. Stata MCP verified423 eligible projected rows and both607-record carriers against the historical saved state; destination, invalid-estate, malformed-carrier and deliberate cleanup-negative tests passed. Six authenticated events, two workers destroyed and unchanged inventory. Historical report_candidate1 is archival, not fresh eligibility or scientific acceptance. See [preflight report](PROTECTED_LCA_M4_K4_PREFLIGHT.md) and [archival candidate row](lca-m4-k4-preflight/historical_candidate.csv). Next: **M6.04.38 / M6.08.37**, bounded original M4 four-class replay/native-target comparison, only after separate explicit single-fit authorization.
+
+
+## M6.04.38 / M6.08.37 — bounded original M4 four-class replay
+
+Exactly one authorized fit and one separate diagnostic-only native-target comparison are technically audited; result **NONCONVERGED_DIAGNOSTIC_NATIVE_DISCREPANCY**. The fit did not converge (rc0/convergence0/rank22); this is not converged replication or scientific acceptance. The300s transport timeout and withheld strict capture are preserved, without a retry. See [replay report](PROTECTED_LCA_M4_K4_REPLAY.md) and [aggregate comparison](lca-m4-k4-replay/comparison_summary.csv). Preserve all prior evidence. Next: **M6.08.37.R1**, saved-state nonconvergence/identification diagnostics without fitting. Final closure remains gated by the protected post-review seal and external verification proofs.
