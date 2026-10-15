@@ -1801,3 +1801,8 @@ Prepared and checked without fitting: original five binary indicators, seed64320
 ## M6.04.38 / M6.08.37 — bounded original M4 four-class replay
 
 Exactly one authorized fit and one separate diagnostic-only native-target comparison are technically audited; result **NONCONVERGED_DIAGNOSTIC_NATIVE_DISCREPANCY**. The fit did not converge (rc0/convergence0/rank22); this is not converged replication or scientific acceptance. The300s transport timeout and withheld strict capture are preserved, without a retry. See [replay report](PROTECTED_LCA_M4_K4_REPLAY.md) and [aggregate comparison](lca-m4-k4-replay/comparison_summary.csv). Preserve all prior evidence. Next: **M6.08.37.R1**, saved-state nonconvergence/identification diagnostics without fitting. Final closure remains gated by the protected post-review seal and external verification proofs.
+
+
+### M6.08.37.R1 — original M4 four-class saved-state diagnostics
+
+Completed without fitting: both607-record own-state checks; five indicators,32theoretical patterns, all24class permutations and synthetic derivative/covariance fixtures. Closest diagnostic permutation2143 retains substantial profile and pattern differences; fresh state remains convergence0/rank22. Original raw comparison and every prior packet are unchanged. No scientific/exact acceptance or release. See [diagnostic report](PROTECTED_LCA_M4_K4_DIAGNOSTICS.md) and [aggregate summary](lca-m4-k4-diagnostics/diagnostics_summary.csv). Final technical closure is gated by protected post-review seal and separate verification. Next: **M6.08.37.R2**, candidate-disposition/reporting contract without fitting.
