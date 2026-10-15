@@ -1,5 +1,5 @@
 {
-  "schema_version": 126,
+  "schema_version": 127,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_M4_K4_CANDIDATE_DISPOSITION.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_M4_K5_FAILED_CANDIDATE_PREFLIGHT.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2446,7 +2446,17 @@
     "lca_m4_k4_disposition_execution": "audit-local/intake/lca-m4-k4-disposition-4ce20a3/actual_final_execution.json",
     "lca_m4_k4_disposition_report": "PROTECTED_LCA_M4_K4_CANDIDATE_DISPOSITION.md",
     "lca_m4_k4_disposition_context": "lca-m4-k4-candidate-disposition/candidate_context.csv",
-    "lca_m4_k4_disposition_claims": "lca-m4-k4-candidate-disposition/reporting_contract.csv"
+    "lca_m4_k4_disposition_claims": "lca-m4-k4-candidate-disposition/reporting_contract.csv",
+    "lca_m4_k5_preflight_authority": "audit-local/intake/lca-m4-k5-adapter-59d389c/authority_actual_request.json",
+    "lca_m4_k5_preflight_contract": "audit-local/intake/lca-m4-k5-adapter-59d389c/contract.json",
+    "lca_m4_k5_preflight_adapter": "audit-local/intake/lca-m4-k5-adapter-59d389c/stage_held.do",
+    "lca_m4_k5_preflight_runtime": "audit-local/intake/lca-m4-k5-adapter-59d389c/runtime_acceptance.json",
+    "lca_m4_k5_preflight_preservation": "audit-local/intake/lca-m4-k5-adapter-59d389c/entry_preservation.json",
+    "lca_m4_k5_preflight_review": "audit-local/intake/lca-m4-k5-adapter-59d389c/review.json",
+    "lca_m4_k5_preflight_validation": "audit-local/intake/lca-m4-k5-adapter-59d389c/validation.json",
+    "lca_m4_k5_preflight_execution": "audit-local/intake/lca-m4-k5-adapter-59d389c/actual_final_execution.json",
+    "lca_m4_k5_preflight_report": "PROTECTED_LCA_M4_K5_FAILED_CANDIDATE_PREFLIGHT.md",
+    "lca_m4_k5_preflight_status": "lca-m4-k5-preflight/historical_status.csv"
   },
   "decisions": [
     {
