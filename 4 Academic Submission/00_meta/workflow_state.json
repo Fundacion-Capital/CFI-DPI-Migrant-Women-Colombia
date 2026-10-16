@@ -1,5 +1,5 @@
 {
-  "schema_version": 142,
+  "schema_version": 143,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_H1_K4_FIXTURE_RECOVERY.md#next-immediate-task",
+    "latest_handoff": "WP01_H1_K4_DIAGNOSTICS_AND_DISPOSITION.md#next-work-package",
+    "last_completed_work_package": "WP01: bounded saved-state diagnostics and reporting; scientific acceptance withheld",
+    "next_work_package": "WP02: remaining historical LCA candidate-grid manifest and bounded execution; new fit authority required",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2596,7 +2598,17 @@
     "lca_h1_k4_fixture_recovery_result": "audit-local/intake/lca-h1-k4-fixture-recovery-r1-c2272d2/fixture_result.json",
     "lca_h1_k4_fixture_recovery_review": "audit-local/intake/lca-h1-k4-fixture-recovery-r1-c2272d2/review.json",
     "lca_h1_k4_fixture_recovery_audit": "audit-local/intake/lca-h1-k4-fixture-recovery-r1-c2272d2/final_audit.json",
-    "lca_h1_k4_fixture_recovery_validation": "audit-local/intake/lca-h1-k4-fixture-recovery-r1-c2272d2/validation.json"
+    "lca_h1_k4_fixture_recovery_validation": "audit-local/intake/lca-h1-k4-fixture-recovery-r1-c2272d2/validation.json",
+    "wp01_h1_k4_report": "WP01_H1_K4_DIAGNOSTICS_AND_DISPOSITION.md",
+    "wp01_h1_k4_metrics": "wp01-h1-k4/diagnostic_metrics.csv",
+    "wp01_h1_k4_context": "wp01-h1-k4/candidate_context.csv",
+    "wp01_h1_k4_reporting_contract": "wp01-h1-k4/reporting_contract.csv",
+    "wp01_h1_k4_producer": "audit-local/intake/wp01-h1-k4-b0181e6/wp01.py",
+    "wp01_h1_k4_reader": "audit-local/intake/wp01-h1-k4-b0181e6/precision.py",
+    "wp01_h1_k4_result": "audit-local/intake/wp01-h1-k4-b0181e6/diagnostic_result.json",
+    "wp01_h1_k4_review": "audit-local/intake/wp01-h1-k4-b0181e6/review.json",
+    "wp01_h1_k4_audit": "audit-local/intake/wp01-h1-k4-b0181e6/final_audit.json",
+    "wp01_h1_k4_validation": "audit-local/intake/wp01-h1-k4-b0181e6/validation.json"
   },
   "decisions": [
     {
