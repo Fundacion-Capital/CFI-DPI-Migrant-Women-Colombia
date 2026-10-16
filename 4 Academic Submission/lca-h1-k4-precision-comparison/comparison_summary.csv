@@ -1,0 +1,5 @@
+kind,cells,exact_matches,mismatches,stripe_mismatches,max_abs_difference,max_abs_difference_hex,outcome,scientific_acceptance,release
+"all",3199,118,3081,0,79021410430324.7,"+1.1f7a6c64b5d2dX+02e",NATIVE_NUMERICAL_DISCREPANCY,False,False
+"V",3136,111,3025,0,79021410430324.7,"+1.1f7a6c64b5d2dX+02e",NATIVE_NUMERICAL_DISCREPANCY,False,False
+"b",56,1,55,0,39.97900710667828,"+1.3fd501ad8de0eX+005",NATIVE_NUMERICAL_DISCREPANCY,False,False
+"meta",7,6,1,0,2.83593863060e-06,"+1.7ca21c0000000X-013",NATIVE_NUMERICAL_DISCREPANCY,False,False
