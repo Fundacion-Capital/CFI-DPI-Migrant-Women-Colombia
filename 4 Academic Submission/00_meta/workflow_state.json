@@ -1,5 +1,5 @@
 {
-  "schema_version": 132,
+  "schema_version": 133,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_H1_K2_CANDIDATE_DISPOSITION.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_H1_K3_FAILED_CANDIDATE_PREFLIGHT.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2506,7 +2506,17 @@
     "lca_h1_k2_disposition_execution": "audit-local/intake/lca-h1-k2-disposition-8c95d72/actual_final_execution.json",
     "lca_h1_k2_disposition_report": "PROTECTED_LCA_H1_K2_CANDIDATE_DISPOSITION.md",
     "lca_h1_k2_disposition_context": "lca-h1-k2-candidate-disposition/candidate_context.csv",
-    "lca_h1_k2_disposition_claims": "lca-h1-k2-candidate-disposition/reporting_contract.csv"
+    "lca_h1_k2_disposition_claims": "lca-h1-k2-candidate-disposition/reporting_contract.csv",
+    "lca_h1_k3_preflight_authority": "audit-local/intake/lca-h1-k3-adapter-42ac65a/authority_actual_request.json",
+    "lca_h1_k3_preflight_contract": "audit-local/intake/lca-h1-k3-adapter-42ac65a/contract.json",
+    "lca_h1_k3_preflight_adapter": "audit-local/intake/lca-h1-k3-adapter-42ac65a/stage_held.do",
+    "lca_h1_k3_preflight_runtime": "audit-local/intake/lca-h1-k3-adapter-42ac65a/runtime_acceptance.json",
+    "lca_h1_k3_preflight_preservation": "audit-local/intake/lca-h1-k3-adapter-42ac65a/entry_preservation.json",
+    "lca_h1_k3_preflight_review": "audit-local/intake/lca-h1-k3-adapter-42ac65a/review.json",
+    "lca_h1_k3_preflight_validation": "audit-local/intake/lca-h1-k3-adapter-42ac65a/validation.json",
+    "lca_h1_k3_preflight_execution": "audit-local/intake/lca-h1-k3-adapter-42ac65a/actual_final_execution.json",
+    "lca_h1_k3_preflight_report": "PROTECTED_LCA_H1_K3_FAILED_CANDIDATE_PREFLIGHT.md",
+    "lca_h1_k3_preflight_status": "lca-h1-k3-preflight/historical_status.csv"
   },
   "decisions": [
     {
