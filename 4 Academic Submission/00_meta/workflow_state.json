@@ -1,5 +1,5 @@
 {
-  "schema_version": 136,
+  "schema_version": 137,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_H1_K4_PREFLIGHT.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_H1_K4_REPLAY_HOLD.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2546,7 +2546,17 @@
     "lca_h1_k4_preflight_validation": "audit-local/intake/lca-h1-k4-adapter-6d5a874/validation.json",
     "lca_h1_k4_preflight_execution": "audit-local/intake/lca-h1-k4-adapter-6d5a874/actual_final_execution.json",
     "lca_h1_k4_preflight_report": "PROTECTED_LCA_H1_K4_PREFLIGHT.md",
-    "lca_h1_k4_preflight_candidate": "lca-h1-k4-preflight/historical_candidate.csv"
+    "lca_h1_k4_preflight_candidate": "lca-h1-k4-preflight/historical_candidate.csv",
+    "lca_h1_k4_replay_hold_authority": "audit-local/intake/lca-h1-k4-replay-ee74b64/authority_actual_request.json",
+    "lca_h1_k4_replay_hold_contract": "audit-local/intake/lca-h1-k4-replay-ee74b64/contract.json",
+    "lca_h1_k4_replay_hold_adapter": "audit-local/intake/lca-h1-k4-replay-ee74b64/adapter_manifest.json",
+    "lca_h1_k4_replay_hold_runtime": "audit-local/intake/lca-h1-k4-replay-ee74b64/failure_facts.json",
+    "lca_h1_k4_replay_hold_preservation": "audit-local/intake/lca-h1-k4-replay-ee74b64/entry_preservation.json",
+    "lca_h1_k4_replay_hold_review": "audit-local/intake/lca-h1-k4-replay-ee74b64/review.json",
+    "lca_h1_k4_replay_hold_validation": "audit-local/intake/lca-h1-k4-replay-ee74b64/validation.json",
+    "lca_h1_k4_replay_hold_execution": "audit-local/intake/lca-h1-k4-replay-ee74b64/actual_final_execution.json",
+    "lca_h1_k4_replay_hold_report": "PROTECTED_LCA_H1_K4_REPLAY_HOLD.md",
+    "lca_h1_k4_replay_hold_summary": "lca-h1-k4-replay-hold/replay_status.csv"
   },
   "decisions": [
     {

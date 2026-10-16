@@ -1,0 +1,2 @@
+model_id,evidence,fit_rc,converged,fit_N,rank,slots,ll,eligible,historical_ll,comparison_body_rc,native_comparison_available,exact_matches,mismatches,stripe_mismatches,requested_task_complete,scientific_acceptance,further_fit_authorized
+H1_k4,FRESH_SINGLE_FIT_CAPTURE_COMPARISON_BLOCKED,0,1,423,55,56,-2764.56108744326,423,-2764.561090279198,9,False,,,,False,False,False
