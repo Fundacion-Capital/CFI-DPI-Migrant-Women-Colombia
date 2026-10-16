@@ -1,0 +1,21 @@
+disposition,claim_id,statement
+RETAIN,original_specification,"Original H1_k3: six ordered-logit indicators plus binary-logit h_iedf2, three classes, seed6529003, 400 random-id draws, difficult, 6000 iterations; no specification changes."
+RETAIN,historical_status,Archived rc0/convergence0/report_candidate0/N_complete423 remain unchanged. Return code zero is not convergence.
+RETAIN,sealed_replay_status,"One prior bounded fit, no refit/retry: rc0/convergence0, eligible423, new_state_saved0; HISTORICAL_RC_AND_NONCONVERGENCE_MATCH only."
+RETAIN,sample_semantics,"Fresh423 is eligible input count, not a captured estimation-sample N; fresh fit_N remains blank."
+RETAIN,historical_diagnostic_blanks,"All nine archived likelihood, rank, information-criterion, posterior and class-size diagnostic fields remain blank, not zero-filled or reconstructed."
+RETAIN,normal_transport,Actual provider response completed normally: COMPLETED_PROVIDER_RESPONSE_REQUIRES_DURABLE_STATUS; do not claim an observed timeout or recovery.
+RETAIN,durable_aggregate_capture,Three-field pre_capture_status.dta was postclosed before optional converged-only state save; CSV export occurred later. Final four-field status was separately postclosed.
+RETAIN,completion_cleanup,"Sealed same-worker no-fit aggregate readback checked initial/final agreement and empty data/e state; maxvar restored to5000, worker destroyed, session inventory unchanged."
+RETAIN,preserved_authority,"The prior single-fit authority is consumed; all packets and fingerprints remain preserved, with no retry or new fit authority."
+RETAIN,initial_grid_context,"Four original H1 grid rows are archival context, not freshly fitted or scientifically accepted candidates."
+RETAIN,screen_scope,"Original report_candidate requires converged1, k4/5, min_class_pct>=5 and entropy>=0.60. H1_k3 fails convergence and class-count conditions; no screen correction here."
+HOLD,screen_missingness,Original screen has no explicit missing guard; Stata numeric missing values compare above finite thresholds. Do not infer a missingness-safe general screen.
+HOLD,fresh_metrics,"Fresh information criteria, posterior metrics and reporting flag remain NOT_RECOMPUTED; do not copy archival report_candidate0 into a fresh field."
+EXCLUDE,numerical_identity,"No frozen H1_k3 native target and no fresh saved state; status agreement is not coefficient, covariance, likelihood or numerical replication."
+HOLD,scientific_acceptance,"No inference about cause of nonconvergence, identification, uncertainty, instrument quality or candidate validity follows from status agreement."
+EXCLUDE,foreign_targets,"No substitute target from another candidate or final refit; absence applies to the frozen intake, not a claim of global archive absence."
+EXCLUDE,cross_feature_ranking,"Do not rank distinct feature/outcome sets by absolute AIC/BIC, rerank candidates or change the preferred model in this reporting node."
+RETAIN,preferred_refit_distinction,Initial-grid H1_k4.ster is distinct from the separate sorted/seeded final lca_final_hybrid_H1_k4 refit at source8804-8832; preferred-model validation is not granted here.
+HOLD,next_preflight,"Next M6.03.42 / M6.05.42 is original initial-grid H1_k4 mixed-input adapter and native-capture preflight only, without fitting; its saved target is not evidence of fresh validation."
+EXCLUDE,new_authority,"Zero Stata calls, fits, predictions, participant loads/exports or new numerical diagnostics in this task; no production/manuscript edits, Git actions, cloud synchronization or release authority."
