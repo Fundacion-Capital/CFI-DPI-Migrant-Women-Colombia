@@ -1,0 +1,9 @@
+task,group,status,fits,saved_state_loads,historical_diagnostics_complete,scientific_acceptance,release
+M6.08.41.R4.R1,uniform1458_identical_rank13,PASS,0,0,False,False,False
+M6.08.41.R4.R1,logit_jacobian55_sign_fault,PASS,0,0,False,False,False
+M6.08.41.R4.R1,probability_jacobian55,PASS,0,0,False,False,False
+M6.08.41.R4.R1,all24_scratch_permutations,PASS,0,0,False,False,False
+M6.08.41.R4.R1,fixed_base_indefinite_threshold,PASS,0,0,False,False,False
+M6.08.41.R4.R1,extreme_and_nonlabel_change,PASS,0,0,False,False,False
+M6.08.41.R4.R1,synthetic_comparison79,PASS,0,0,False,False,False
+M6.08.41.R4.R1,unavailable_spectrum47,PASS,0,0,False,False,False
