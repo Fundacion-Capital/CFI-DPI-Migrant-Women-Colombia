@@ -1,0 +1,2 @@
+task,status,stata_body_rc,diagnostics_complete,fits,saved_state_readbacks,metric_rows,scientific_acceptance,release
+M6.08.41.R4,FAILED_MATA_PARSER_BEFORE_STATE_READBACK,3000,False,0,0,0,False,False
