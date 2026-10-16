@@ -1,0 +1,2 @@
+task,model_id,outcome,initial_predicates_passed,full_predicates_passed,full_predicates_failed,failed_predicate,initial_assertion_rc,full_assertion_rc,status_ll_hex,saved_ll_hex,status_minus_saved,adjacent_double_steps,native_records,self_readback_exact,fits,historical_comparison_complete,scientific_acceptance,further_fit_authorized
+M6.08.41.R1,H1_k4,DEFAULT_LOCAL_NUMERIC_SERIALIZATION_LOSS,4,8,1,full.ll,0,9,-1.5991f46da75ffX+00b,-1.5991f46da75feX+00b,-4.547473508864641e-13,1,3199,True,0,False,False,False

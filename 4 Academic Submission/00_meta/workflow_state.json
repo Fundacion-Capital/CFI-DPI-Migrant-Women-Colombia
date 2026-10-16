@@ -1,5 +1,5 @@
 {
-  "schema_version": 137,
+  "schema_version": 138,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_H1_K4_REPLAY_HOLD.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_H1_K4_READBACK_DIAGNOSTICS.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2556,7 +2556,15 @@
     "lca_h1_k4_replay_hold_validation": "audit-local/intake/lca-h1-k4-replay-ee74b64/validation.json",
     "lca_h1_k4_replay_hold_execution": "audit-local/intake/lca-h1-k4-replay-ee74b64/actual_final_execution.json",
     "lca_h1_k4_replay_hold_report": "PROTECTED_LCA_H1_K4_REPLAY_HOLD.md",
-    "lca_h1_k4_replay_hold_summary": "lca-h1-k4-replay-hold/replay_status.csv"
+    "lca_h1_k4_replay_hold_summary": "lca-h1-k4-replay-hold/replay_status.csv",
+    "lca_h1_k4_readback_report": "PROTECTED_LCA_H1_K4_READBACK_DIAGNOSTICS.md",
+    "lca_h1_k4_readback_summary": "lca-h1-k4-readback-diagnostics/readback_summary.csv",
+    "lca_h1_k4_readback_result": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/diagnostic_result.json",
+    "lca_h1_k4_readback_execution": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/actual_history.json",
+    "lca_h1_k4_readback_preservation": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/entry_preservation.json",
+    "lca_h1_k4_readback_review": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/review.json",
+    "lca_h1_k4_readback_audit": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/final_audit.json",
+    "lca_h1_k4_readback_validation": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/validation.json"
   },
   "decisions": [
     {
