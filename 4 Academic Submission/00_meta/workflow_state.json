@@ -1,5 +1,5 @@
 {
-  "schema_version": 138,
+  "schema_version": 139,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,7 +15,7 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "PROTECTED_LCA_H1_K4_READBACK_DIAGNOSTICS.md#next-immediate-task",
+    "latest_handoff": "PROTECTED_LCA_H1_K4_PRECISION_PREFLIGHT.md#next-immediate-task",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2564,7 +2564,15 @@
     "lca_h1_k4_readback_preservation": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/entry_preservation.json",
     "lca_h1_k4_readback_review": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/review.json",
     "lca_h1_k4_readback_audit": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/final_audit.json",
-    "lca_h1_k4_readback_validation": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/validation.json"
+    "lca_h1_k4_readback_validation": "audit-local/intake/lca-h1-k4-readback-r1-55a410f/validation.json",
+    "lca_h1_k4_precision_r2_report": "PROTECTED_LCA_H1_K4_PRECISION_PREFLIGHT.md",
+    "lca_h1_k4_precision_r2_summary": "lca-h1-k4-precision-preflight/preflight_status.csv",
+    "lca_h1_k4_precision_r2_contract": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/r2_contract.py",
+    "lca_h1_k4_precision_r2_result": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/preflight_result.json",
+    "lca_h1_k4_precision_r2_execution": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/actual_history.json",
+    "lca_h1_k4_precision_r2_review": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/review.json",
+    "lca_h1_k4_precision_r2_audit": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/final_audit.json",
+    "lca_h1_k4_precision_r2_validation": "audit-local/intake/lca-h1-k4-comparison-preflight-r2-54dc03c/validation.json"
   },
   "decisions": [
     {

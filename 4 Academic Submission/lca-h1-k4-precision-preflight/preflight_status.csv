@@ -1,0 +1,2 @@
+task,model_id,status,authority_hold_rc,status_roundtrip_exact,negative_status_cases,fresh_self_records,historical_self_records,fits,historical_cross_comparisons,comparison_available,exact_matches,mismatches,scientific_acceptance,release
+M6.08.41.R2,H1_k4,PREFLIGHT_ONLY_NO_CROSS_COMPARISON,459,True,5,3199,3199,0,0,False,,,False,False
