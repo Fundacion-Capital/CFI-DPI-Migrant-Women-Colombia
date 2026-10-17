@@ -1,0 +1,10 @@
+check_name,before_N,excluded_N,retained_N,evidence,epistemic_status
+EMPTY_KEY,490,0,490,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+DECLINED_OR_PREFER_NOT_RESPOND_CONSENT,490,4,486,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+Q1_CODE_2,486,8,478,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+NO_OR_PREFER_NOT_RESPOND_REMITTANCE,478,55,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+RETAINED_MISSING_consent,423,0,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+RETAINED_MISSING_q1,423,0,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+RETAINED_MISSING_q5,423,0,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+RETAINED_MISSING_q4,423,0,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED
+RETAINED_REPORTED_AGE_BELOW_18,423,0,423,audit-local/intake/input-contract-c4be81a/stata_historical_filter_flow.csv,INHERITED_AGGREGATE_NOT_RECOMPUTED

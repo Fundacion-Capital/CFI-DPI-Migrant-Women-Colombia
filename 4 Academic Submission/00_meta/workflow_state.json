@@ -1,5 +1,5 @@
 {
-  "schema_version": 149,
+  "schema_version": 150,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -37,6 +37,13 @@
       "next_package": "WP04 scientific-foundation synthesis feeding WP06 decision lock",
       "fits_authorized_now": 0,
       "participant_outputs_authorized_now": 0,
+      "scientific_acceptance": false,
+      "release": false
+    },
+    "wp04_foundation_wp06_lock": {
+      "status": "EVIDENCE_AND_READ_ONLY_RULES_LOCKED_MATERIAL_AUTHOR_DECISIONS_PENDING",
+      "fits_authorized_now": 0,
+      "participant_processing_authorized_now": 0,
       "scientific_acceptance": false,
       "release": false
     }
@@ -2680,7 +2687,20 @@
     "preferred_final_artifact_gates": "preferred-final-protocol/artifact_disposition_crosswalk.csv",
     "preferred_final_protocol_review": "audit-local/intake/wp03-preferred-final-protocol-789bce8/review.json",
     "preferred_final_protocol_validation": "audit-local/intake/wp03-preferred-final-protocol-789bce8/validation.json",
-    "preferred_final_protocol_closure": "audit-local/intake/wp03-preferred-final-protocol-789bce8-verification/closure.json"
+    "preferred_final_protocol_closure": "audit-local/intake/wp03-preferred-final-protocol-789bce8-verification/closure.json",
+    "wp04_foundation_01": "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md",
+    "wp04_foundation_02": "WP06_RETROSPECTIVE_DECISION_LOCK.md",
+    "wp04_foundation_03": "scientific-foundation/sample_filter_evidence.csv",
+    "wp04_foundation_04": "scientific-foundation/construct_decisions.csv",
+    "wp04_foundation_05": "scientific-foundation/inherited_findings.csv",
+    "wp04_foundation_06": "scientific-foundation/downstream_outcome_roles.csv",
+    "wp04_foundation_07": "scientific-foundation/core_equation_coverage.csv",
+    "wp04_foundation_08": "scientific-foundation/exhibit_coverage.csv",
+    "wp04_foundation_09": "scientific-foundation/decision_lock.json",
+    "wp04_foundation_10": "audit-local/intake/wp04-foundation-56c7424/review.json",
+    "wp04_foundation_11": "audit-local/intake/wp04-foundation-56c7424/validation.json",
+    "wp04_foundation_12": "audit-local/intake/wp04-foundation-56c7424-verification/closure.json",
+    "wp04_foundation_historical_coverage": "scientific-foundation/historical_analysis_coverage.csv"
   },
   "decisions": [
     {
