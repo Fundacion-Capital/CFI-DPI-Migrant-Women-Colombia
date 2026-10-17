@@ -1,0 +1,7 @@
+metric,value
+input_rows_moved_by_KEY_sort,423
+input_complete_cases,423
+raw_archive_order_differences,422
+raw_KEY_indicator_sample_matches,423
+segment_archive_order_differences,423
+segment_KEY_sample_matches,423

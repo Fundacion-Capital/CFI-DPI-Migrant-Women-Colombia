@@ -1,5 +1,5 @@
 {
-  "schema_version": 145,
+  "schema_version": 146,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,9 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "WP03_FINAL_LCA_DOWNSTREAM_PREFLIGHT.md#next-work-package",
-    "last_completed_work_package": "WP03 source-exact manifest and metadata-only operational preflight; numerical execution withheld",
-    "next_work_package": "WP03 execution authorization: source-bound preferred-final LCA before downstream fits or participant outputs",
+    "latest_handoff": "WP03_PREFERRED_FINAL_REPLAY_PREPARATION.md#next-task",
+    "last_completed_work_package": "Bounded preferred-final preparation: protected input checks/capacity/native fixtures; no fitting",
+    "next_work_package": "Separately authorized single version16 preferred-final replay in a new sibling packet; no retries or downstream participant outputs",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2635,7 +2635,17 @@
     "wp03_runtime": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/operational_acceptance.json",
     "wp03_authority": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/authority.json",
     "wp03_review": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/review.json",
-    "wp03_validation": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/validation.json"
+    "wp03_validation": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/validation.json",
+    "preferred_final_preparation_report": "WP03_PREFERRED_FINAL_REPLAY_PREPARATION.md",
+    "preferred_final_preparation_input_order": "preferred-final-preparation/input_order_checks.csv",
+    "preferred_final_preparation_capacity_native": "preferred-final-preparation/capacity_native_checks.csv",
+    "preferred_final_preparation_contract": "preferred-final-preparation/execution_contract.csv",
+    "preferred_final_preparation_dispositions": "preferred-final-preparation/disposition_contract.csv",
+    "preferred_final_preparation_source": "audit-local/intake/wp03-final-replay-preparation-eb7df12/source_contract.json",
+    "preferred_final_preparation_adapters": "audit-local/intake/wp03-final-replay-preparation-eb7df12/execution_adapter_manifest.json",
+    "preferred_final_preparation_acceptance": "audit-local/intake/wp03-final-replay-preparation-eb7df12/acceptance.json",
+    "preferred_final_preparation_review": "audit-local/intake/wp03-final-replay-preparation-eb7df12/review.json",
+    "preferred_final_preparation_validation": "audit-local/intake/wp03-final-replay-preparation-eb7df12/validation.json"
   },
   "decisions": [
     {

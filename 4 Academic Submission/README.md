@@ -912,3 +912,7 @@ Thirteen named bounded fits, no retries; source-exact input/recoding/native pref
 ### WP03 source-exact preferred-final/downstream preflight
 
 Metadata-only Stata preflight, zero fits/participant loads/exports/predictions/relabelings. Eight source regions, 88 expanded conditional operation slots (51 primary estimation/cluster operations, 35 ANOVAs and 2 legacy fallback attempts), 83 archived source-referenced artifacts and distinct benchmark lineage inputs. The separate sorted preferred-final H1 fit and all downstream executions remain unauthorized. [WP03 manifest and preflight](WP03_FINAL_LCA_DOWNSTREAM_PREFLIGHT.md). Next: owner-approved staged execution contract, beginning with the single distinct preferred-final fit only if authorized; retain all scientific/privacy/release holds.
+
+### Preferred-final bounded replay preparation (no fitting)
+
+Source-version16 single-fit adapter, temporary32767/32760-variable capacity probe,423-record protected KEY/indicator/sample checks and3199-field archived native fixture; no fit, participant export, prediction or relabeling. Archived output orders differ and do not prove historical estimation-time order. Preserve all failed diagnostic packets and require new explicit fit authority in a fresh sibling execution packet. [Preparation report and next execution gates](WP03_PREFERRED_FINAL_REPLAY_PREPARATION.md).

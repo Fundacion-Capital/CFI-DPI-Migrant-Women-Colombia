@@ -1,0 +1,2 @@
+model_id,source_start,source_end,classes,eligible,source_version,host_stata,seed,random_start_draws,iteration_ceiling,current_fit_authority,future_fit_ceiling,retries,temporary_maxvar,restored_maxvar,fit_capacity_sufficiency_proven,target_sha256,execution_destination,destination_created
+lca_final_hybrid_H1_k4,8816,8829,4,423,16,19,6529004,600,8000,0,1,0,32767,5000,False,1C24B46A1A39A6B8876770F1F68E8D78619DF12A0CCDFEA9B869F94B64E06987,4 Academic Submission/audit-local/intake/wp03-preferred-final-replay-eb7df12,False
