@@ -1,5 +1,5 @@
 {
-  "schema_version": 144,
+  "schema_version": 145,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,9 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "WP02_HYBRID_GRID_AUDIT_AND_DISPOSITIONS.md#next-work-package",
-    "last_completed_work_package": "WP02: thirteen original hybrid candidate replays, saved-state diagnostics and dispositions; scientific acceptance withheld",
-    "next_work_package": "WP03: distinct preferred final LCA and downstream historical workflow source/fit manifest; new execution authority required",
+    "latest_handoff": "WP03_FINAL_LCA_DOWNSTREAM_PREFLIGHT.md#next-work-package",
+    "last_completed_work_package": "WP03 source-exact manifest and metadata-only operational preflight; numerical execution withheld",
+    "next_work_package": "WP03 execution authorization: source-bound preferred-final LCA before downstream fits or participant outputs",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2622,7 +2622,20 @@
     "wp02_hybrid_grid_actual_history": "audit-local/intake/wp02-hybrid-grid-06f9a18/actual_stata_history.json",
     "wp02_hybrid_grid_review": "audit-local/intake/wp02-hybrid-grid-06f9a18/review.json",
     "wp02_hybrid_grid_audit": "audit-local/intake/wp02-hybrid-grid-06f9a18/final_audit.json",
-    "wp02_hybrid_grid_validation": "audit-local/intake/wp02-hybrid-grid-06f9a18/validation.json"
+    "wp02_hybrid_grid_validation": "audit-local/intake/wp02-hybrid-grid-06f9a18/validation.json",
+    "wp03_report": "WP03_FINAL_LCA_DOWNSTREAM_PREFLIGHT.md",
+    "wp03_regions": "wp03-preflight/source_regions.csv",
+    "wp03_commands": "wp03-preflight/source_commands.csv",
+    "wp03_operations": "wp03-preflight/expanded_operations.csv",
+    "wp03_artifacts": "wp03-preflight/artifact_manifest.csv",
+    "wp03_targets": "wp03-preflight/stored_model_targets.csv",
+    "wp03_budgets": "wp03-preflight/stage_budgets.csv",
+    "wp03_lineage": "wp03-preflight/benchmark_lineage.csv",
+    "wp03_manifest": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/manifest.json",
+    "wp03_runtime": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/operational_acceptance.json",
+    "wp03_authority": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/authority.json",
+    "wp03_review": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/review.json",
+    "wp03_validation": "audit-local/intake/wp03-final-downstream-preflight-8b7dfe2/validation.json"
   },
   "decisions": [
     {
