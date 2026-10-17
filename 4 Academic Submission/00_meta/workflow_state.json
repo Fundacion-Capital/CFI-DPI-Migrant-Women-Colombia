@@ -1,5 +1,5 @@
 {
-  "schema_version": 146,
+  "schema_version": 147,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,9 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "WP03_PREFERRED_FINAL_REPLAY_PREPARATION.md#next-task",
-    "last_completed_work_package": "Bounded preferred-final preparation: protected input checks/capacity/native fixtures; no fitting",
-    "next_work_package": "Separately authorized single version16 preferred-final replay in a new sibling packet; no retries or downstream participant outputs",
+    "latest_handoff": "WP03_PREFERRED_FINAL_REPLAY_AND_COMPARISON.md#next-task",
+    "last_completed_work_package": "Single preferred-final source-exact fit and exact native comparison: EXACT_NATIVE_FIELDS_ONLY_SCIENTIFIC_HOLD",
+    "next_work_package": "Preferred-final saved-state discrepancy/identification and disposition audit without fitting; no participant outputs or downstream execution",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2645,7 +2645,17 @@
     "preferred_final_preparation_adapters": "audit-local/intake/wp03-final-replay-preparation-eb7df12/execution_adapter_manifest.json",
     "preferred_final_preparation_acceptance": "audit-local/intake/wp03-final-replay-preparation-eb7df12/acceptance.json",
     "preferred_final_preparation_review": "audit-local/intake/wp03-final-replay-preparation-eb7df12/review.json",
-    "preferred_final_preparation_validation": "audit-local/intake/wp03-final-replay-preparation-eb7df12/validation.json"
+    "preferred_final_preparation_validation": "audit-local/intake/wp03-final-replay-preparation-eb7df12/validation.json",
+    "preferred_final_replay_report": "WP03_PREFERRED_FINAL_REPLAY_AND_COMPARISON.md",
+    "preferred_final_replay_outcome": "preferred-final-replay/replay_outcome.csv",
+    "preferred_final_replay_native_summary": "preferred-final-replay/native_field_comparison.csv",
+    "preferred_final_replay_native_metadata": "preferred-final-replay/native_metadata_comparison.csv",
+    "preferred_final_replay_acceptance": "audit-local/intake/wp03-preferred-final-replay-eb7df12/replay_acceptance.json",
+    "preferred_final_replay_authority": "audit-local/intake/wp03-preferred-final-replay-eb7df12/execution_authority.json",
+    "preferred_final_replay_reservation": "audit-local/intake/wp03-preferred-final-replay-eb7df12/future_fit_reservation.json",
+    "preferred_final_replay_review": "audit-local/intake/wp03-preferred-final-replay-eb7df12/review.json",
+    "preferred_final_replay_validation": "audit-local/intake/wp03-preferred-final-replay-eb7df12/validation.json",
+    "preferred_final_replay_closure": "audit-local/intake/wp03-preferred-final-replay-eb7df12-verification/closure.json"
   },
   "decisions": [
     {

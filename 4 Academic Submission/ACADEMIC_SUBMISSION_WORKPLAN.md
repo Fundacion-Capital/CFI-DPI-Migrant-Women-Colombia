@@ -1891,3 +1891,7 @@ Metadata-only Stata preflight, zero fits/participant loads/exports/predictions/r
 ### Preferred-final bounded replay preparation (no fitting)
 
 Source-version16 single-fit adapter, temporary32767/32760-variable capacity probe,423-record protected KEY/indicator/sample checks and3199-field archived native fixture; no fit, participant export, prediction or relabeling. Archived output orders differ and do not prove historical estimation-time order. Preserve all failed diagnostic packets and require new explicit fit authority in a fresh sibling execution packet. [Preparation report and next execution gates](WP03_PREFERRED_FINAL_REPLAY_PREPARATION.md).
+
+### Preferred-final single bounded replay — 17 October 2026
+
+One authorized source-exact fit, no retries; rc0/converged1,423eligible; 3199/3199 exact native fields, 0 differing; **EXACT_NATIVE_FIELDS_ONLY_SCIENTIFIC_HOLD**. No scientific/release acceptance, predictions, assignments, relabeling or downstream fits. Prior preparation and every packet preserved. [Replay/comparison and next saved-state audit](WP03_PREFERRED_FINAL_REPLAY_AND_COMPARISON.md). Technical closure is governed by the actual independent review, final audit, seal and separate verification.
