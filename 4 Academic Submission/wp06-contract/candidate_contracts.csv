@@ -1,0 +1,265 @@
+recipe_id,classes,schedule,seed,sortseed,source_version,requested_host,randomid_draws,iteration_ceiling,difficult,sort,input_file,input_sha256,allowed_fields,expected_reference_N,load_command,identity_assertions,sample_setup,random_setup,expected_slots,expected_free_parameters,expected_native_fields,command,proposed_deadline_seconds,cleanup_grace_seconds,temporary_maxvar,restore_maxvar,retries,resampling_fits,authorized_now,status,output_prefix
+H1_k2_s01,2,1,6529101,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529101
+estimates clear
+ereturn clear",28,27,819,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 2) ///
+    startvalues(randomid, draws(600) seed(6529101)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k2_s01/H1_k2_s01
+H1_k2_s02,2,2,6529102,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529102
+estimates clear
+ereturn clear",28,27,819,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 2) ///
+    startvalues(randomid, draws(600) seed(6529102)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k2_s02/H1_k2_s02
+H1_k2_s03,2,3,6529103,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529103
+estimates clear
+ereturn clear",28,27,819,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 2) ///
+    startvalues(randomid, draws(600) seed(6529103)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k2_s03/H1_k2_s03
+H1_k3_s01,3,1,6529101,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529101
+estimates clear
+ereturn clear",42,41,1813,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 3) ///
+    startvalues(randomid, draws(600) seed(6529101)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k3_s01/H1_k3_s01
+H1_k3_s02,3,2,6529102,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529102
+estimates clear
+ereturn clear",42,41,1813,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 3) ///
+    startvalues(randomid, draws(600) seed(6529102)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k3_s02/H1_k3_s02
+H1_k3_s03,3,3,6529103,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529103
+estimates clear
+ereturn clear",42,41,1813,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 3) ///
+    startvalues(randomid, draws(600) seed(6529103)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k3_s03/H1_k3_s03
+H1_k4_s01,4,1,6529101,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529101
+estimates clear
+ereturn clear",56,55,3199,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 4) ///
+    startvalues(randomid, draws(600) seed(6529101)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k4_s01/H1_k4_s01
+H1_k4_s02,4,2,6529102,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529102
+estimates clear
+ereturn clear",56,55,3199,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 4) ///
+    startvalues(randomid, draws(600) seed(6529102)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k4_s02/H1_k4_s02
+H1_k4_s03,4,3,6529103,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529103
+estimates clear
+ereturn clear",56,55,3199,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 4) ///
+    startvalues(randomid, draws(600) seed(6529103)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k4_s03/H1_k4_s03
+H1_k5_s01,5,1,6529101,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529101
+estimates clear
+ereturn clear",70,69,4977,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 5) ///
+    startvalues(randomid, draws(600) seed(6529101)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k5_s01/H1_k5_s01
+H1_k5_s02,5,2,6529102,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529102
+estimates clear
+ereturn clear",70,69,4977,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 5) ///
+    startvalues(randomid, draws(600) seed(6529102)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k5_s02/H1_k5_s02
+H1_k5_s03,5,3,6529103,6529004,16,Stata 19; exact executable/build and MCP binding require fresh attestation,600,8000,1,KEY ascending; unique/nonmissing internally checked,2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta,3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81,KEY;h_ivs3;h_icdp3;h_iaff3;h_iuof3;h_oqi3;h_iurd3;h_iedf2,423,"use KEY h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 using ""2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta"", clear","assert _N==423
+isid KEY
+assert !missing(KEY)","egen final_lca_miss=rowmiss(h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2)
+gen byte final_lca_sample=(final_lca_miss==0)
+assert final_lca_sample==1","set sortseed 6529004
+set seed 6529103
+estimates clear
+ereturn clear",70,69,4977,"gsem ///
+    (h_ivs3  <-, ologit) ///
+    (h_icdp3 <-, ologit) ///
+    (h_iaff3 <-, ologit) ///
+    (h_iuof3 <-, ologit) ///
+    (h_oqi3  <-, ologit) ///
+    (h_iurd3 <-, ologit) ///
+    (h_iedf2 <-, logit) ///
+    if final_lca_sample == 1, ///
+    lclass(C 5) ///
+    startvalues(randomid, draws(600) seed(6529103)) ///
+    difficult ///
+    iterate(8000) ///
+    nolog
+",3600,60,32767,5000,0,0,0,DESIGN_ONLY_BLOCKED_NOT_RESERVED,4 Academic Submission/audit-local/intake/wp06-continuity-validation-fd08dd4/H1_k5_s03/H1_k5_s03

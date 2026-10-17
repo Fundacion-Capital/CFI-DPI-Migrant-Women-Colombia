@@ -1,5 +1,5 @@
 {
-  "schema_version": 150,
+  "schema_version": 151,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -42,6 +42,13 @@
     },
     "wp04_foundation_wp06_lock": {
       "status": "EVIDENCE_AND_READ_ONLY_RULES_LOCKED_MATERIAL_AUTHOR_DECISIONS_PENDING",
+      "fits_authorized_now": 0,
+      "participant_processing_authorized_now": 0,
+      "scientific_acceptance": false,
+      "release": false
+    },
+    "wp06_documentary_contract": {
+      "status": "DOCUMENTARY_RESOLUTIONS_AND_EXACT_CONTRACT_DESIGN_COMPLETE_ACTIVATION_BLOCKED",
       "fits_authorized_now": 0,
       "participant_processing_authorized_now": 0,
       "scientific_acceptance": false,
@@ -2700,7 +2707,18 @@
     "wp04_foundation_10": "audit-local/intake/wp04-foundation-56c7424/review.json",
     "wp04_foundation_11": "audit-local/intake/wp04-foundation-56c7424/validation.json",
     "wp04_foundation_12": "audit-local/intake/wp04-foundation-56c7424-verification/closure.json",
-    "wp04_foundation_historical_coverage": "scientific-foundation/historical_analysis_coverage.csv"
+    "wp04_foundation_historical_coverage": "scientific-foundation/historical_analysis_coverage.csv",
+    "wp06_documentary_01": "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+    "wp06_documentary_02": "wp06-contract/documentary_evidence.csv",
+    "wp06_documentary_03": "wp06-contract/decision_resolutions.csv",
+    "wp06_documentary_04": "wp06-contract/instrument_consent_notes.csv",
+    "wp06_documentary_05": "wp06-contract/instrument_eligibility.csv",
+    "wp06_documentary_06": "wp06-contract/construct_resolution_cards.csv",
+    "wp06_documentary_07": "wp06-contract/candidate_contracts.csv",
+    "wp06_documentary_08": "wp06-contract/bounded_contract.json",
+    "wp06_documentary_09": "audit-local/intake/wp06-decisions-fd08dd4/review.json",
+    "wp06_documentary_10": "audit-local/intake/wp06-decisions-fd08dd4/validation.json",
+    "wp06_documentary_11": "audit-local/intake/wp06-decisions-fd08dd4-verification/closure.json"
   },
   "decisions": [
     {

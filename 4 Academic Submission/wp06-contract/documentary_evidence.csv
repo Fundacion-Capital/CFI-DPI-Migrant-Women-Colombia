@@ -1,0 +1,47 @@
+evidence_id,document_id,title,source_path,fetched_text_sha256,source_character_offset,excerpt,documentary_resolution,scope
+E01,methodology,Detailed methodology.docx,0 Admin/Detailed methodology.docx,E36FB18C94140227B949EC2A122FD80D2D181EB6FC9428044B56799F19837A00,19770,"s of the Sampling Strategy, the study will employ purposive sampling focused on migrant women accessible through existing community partnerships. This will ensure relevance and feasibility within the six-month research timeline. Data Analysis will rely on descriptive statistics for an overview of key indicators and Cluster analysis to segment migra","Purposive/non-national-representative design intent, not proof of achieved recruitment","Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E02,methodology,Detailed methodology.docx,0 Admin/Detailed methodology.docx,E36FB18C94140227B949EC2A122FD80D2D181EB6FC9428044B56799F19837A00,18246,"ción Capital (FK) cohorts and community partners.
+Eligibility: Women aged 18+, Venezuelan or other migrant background, resident ≥3 months in Colombia, and received remittances in the last 12 months or expect to receive them in the next 12 months.
+Segments (for quotas/analysis): Documentation status (PPT/cédula de extranjería vs. undocumented), entr",Planned migrant/residence and received-or-expected remittance scope differs from field guidance/form,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E03,enumerator,Información para encuestadoras.docx,2 Data/0 Instruments and support docs/Información para encuestadoras.docx,EC88C85DFE799F03E38C5A953C45CFD75628C6ED52966D67BD58ABB1DBC17700,1301,"ntes.
+2. ¿Cómo puedes participar de este estudio?
+Cada encuestadora aplicará 20 encuestas a otras mujeres migrantes adultas, mayores de18 años, residentes en Colombia desde hace más de 3 meses, que hayan enviado o recibido remesas en los últimos 12 meses.
+Las encuestas se harán mediante la plataforma SurveyCTO, y deben aplicarse siguiendo las instr","Operational guidance:20 surveys, adult migrant women, residence>3months, sent/received in12months","Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E04,enumerator,Información para encuestadoras.docx,2 Data/0 Instruments and support docs/Información para encuestadoras.docx,EC88C85DFE799F03E38C5A953C45CFD75628C6ED52966D67BD58ABB1DBC17700,2572,"idencial y se usará sólo para esta investigación.
+No se compartirán nombres ni datos que identifiquen a ninguna participante.
+¿Tienes dudas? Escríbenos.
+Jorge Zavala
+Líder de Datos e investigación – Fundación Capital
+Correo: jorge.zavala@fundacioncapital.org
+
+Angélica Cardozo
+Líder de Soluciones digitales – Fundación Capital
+Correo: angelica.cardoz","Confidentiality commitment, not permission to publish identifiers","Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E05,grant_application,SurveyCTO PhD Research Grant - Application responses.docx,0 Admin/SurveyCTO PhD Research Grant - Application responses.docx,3254F85B6B37D33C725B1A4296E96E0C35137497CCAD095CBA9F8A7393C9BA15,6763," is purposive (not population-representative), We will not compute design weights; where helpful, We will report calibration-weighted robustness checks against known DANE margins.
+Descriptive statistics and visualization will summarize key outcomes by key segments (arrival cohort, documentation status, city, entrepreneurship). For dimensionality re",No design weights proposed for purposive sample; calibration not demonstrated,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E06,grant_application,SurveyCTO PhD Research Grant - Application responses.docx,0 Admin/SurveyCTO PhD Research Grant - Application responses.docx,3254F85B6B37D33C725B1A4296E96E0C35137497CCAD095CBA9F8A7393C9BA15,7860," interactions (documentation × city), and conduct pre-specified robustness checks (alternative codings, imputed vs complete-case).
+Qualitative data collected will be transcribed and analyzed in R: structured codebooks, double-coding with inter-coder reliability (Krippendorff’s alpha), thematic coding, and framework matrices aligned to the four acto",Application promises are not a dated registered analysis plan or evidence of completed activities,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E07,index_notes,CFI-DPI Nota metodológicas para índices.docx,2 Data/0 Instruments and support docs/CFI-DPI Nota metodológicas para índices.docx,74EB2780AC46A0DC97C1C9D429C714724DFEA1FD12C5326B5AA4A09E39BD4732,1347,"pretación continua
+· Valores cercanos a 0 indican alta vulnerabilidad socioeconómica.
+· Valores cercanos a 1 indican menor vulnerabilidad relativa.
+Interpretación categórica
+· Alta vulnerabilidad: ≤ 0.33
+· Vulnerabilidad media: 0.34 – 0.66
+· Baja vulnerabilidad: > 0.66
+C0. Índice de Acceso a Telecomunicaciones (IAT)
+Construcción
+Integra tres compon",Narrative IVS polarity conflicts with audited higher-score vulnerability direction,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E08,index_notes,CFI-DPI Nota metodológicas para índices.docx,2 Data/0 Instruments and support docs/CFI-DPI Nota metodológicas para índices.docx,74EB2780AC46A0DC97C1C9D429C714724DFEA1FD12C5326B5AA4A09E39BD4732,2808,"etencia Digital Práctica (ICDP)
+Construcción
+Mide habilidades observables en el uso de herramientas digitales (QR, OTP, PIN y reacción ante mensajes sospechosos). Cada componente se escala entre 0 y 100; el índice es el promedio simple.
+Interpretación continua
+Captura el nivel efectivo de dominio operativo, más allá de la percepción subjetiva.
+Inte",Narrative practical-skill claim exceeds questionnaire-based competence evidence,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E09,modules,CFI-DPI - Guia de encuesta - Cuantitativo Bloques y módulos.docx,2 Data/0 Instruments and support docs/CFI-DPI - Guia de encuesta - Cuantitativo Bloques y módulos.docx,C13277C812C8D9E4BABC44C1600C4B24548AFF945FDCAEDE056C67A64DBA3963,4959,"ion notes)
+Bloque A — Introducción y elegibilidad
+M1 — Consent (ethical templates for minimal-risk surveys; audio consent scripts)
+Synthesis and justification. In interviewer-administered surveys with vulnerable populations (migrant women, undocumented), consent must be brief, oral-capable, and layered (general participation → audio/GPS recording →",Blueprint proposes layered consent; not proof of deployed or recorded consent,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"
+E10,expanded_concept,Nota de concepto ampliada.docx,0 Admin/Nota de concepto ampliada.docx,AD2763FD8B4692472A3E17E7C414C78DB22B5C3CB13A2A7728ED4E9A29E7749C,31832,"esentative national sample, the study will employ purposive sampling focused on migrant women accessible through existing community partnerships. This will ensure relevance and feasibility within the six-month research timeline.
+· Data Analysis:
+· Descriptive statistics will provide an overview of key indicators.
+· Cluster analysis will be used to ",Earlier concept also documents nonprobability design intent,"Documentary content; no inference of execution, psychometric validation, author/institutional approval or participant compliance"

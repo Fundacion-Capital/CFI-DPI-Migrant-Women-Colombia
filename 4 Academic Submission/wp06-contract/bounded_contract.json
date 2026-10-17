@@ -1,0 +1,64 @@
+{
+  "status": "DOCUMENTARY_RESOLUTIONS_AND_EXACT_CONTRACT_DESIGN_COMPLETE_ACTIVATION_BLOCKED",
+  "fits_authorized_now": 0,
+  "participant_processing_authorized_now": 0,
+  "scientific_approval": false,
+  "ethics_clearance": false,
+  "activated": false,
+  "proposed_total_fits": 12,
+  "proposed_total_randomid_draws": 7200,
+  "retries": 0,
+  "resampling_fits": 0,
+  "proposed_total_fit_seconds": 43200,
+  "proposed_total_cleanup_seconds": 720,
+  "source": {
+    "file": "1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do",
+    "bytes": 646092,
+    "sha256": "714377CA31DE2B6D70DB0994E3C7EF6A38374165D7B1FB7C7ABEB3B3F56549C9"
+  },
+  "input": {
+    "file": "2 Output/cluster/data/CFI_DPI_hybrid_LCA_ready_variables.dta",
+    "bytes": 1285021,
+    "sha256": "3F95CDB4D5559D6F16CA46E645E43EB586DB50E62AF3C4FE0B14AB22BF3B4B81"
+  },
+  "family_condition": "Continuity-validation H1 only, not adopted primary academic measurement; invalidate on sample/indicator change",
+  "reference_target": {
+    "file": "2 Output/cluster/models/lca_final_hybrid_H1_k4.ster",
+    "bytes": 209495,
+    "sha256": "1C24B46A1A39A6B8876770F1F68E8D78619DF12A0CCDFEA9B869F94B64E06987"
+  },
+  "reference_use": "Archived four-class state is a comparison anchor, not equality target for changed-seed/new-class runs",
+  "changed_from_historical": [
+    "classes 2,3,5 and three new fixed seeds 6529101/6529102/6529103; no repeated6529004 fit"
+  ],
+  "blocked_by": [
+    "D1_population_and_rights_signoff",
+    "D2_positive_sample_version_missingness_signoff",
+    "D3_measurement_family_signoff",
+    "D4_validation_only_scope_and_inferential_hold_signoff",
+    "D5_runtime_capacity_native_capture_deadline_cleanup_preflight",
+    "D6_proposed_comparison_reporting_rules_signoff",
+    "explicit_owner_12_named_fits_and_projected_input_authority"
+  ],
+  "comparison_proposal": {
+    "absolute_ll_difference": 1e-06,
+    "max_item_probability_difference": 0.0001,
+    "max_class_weight_difference": 0.0001,
+    "purpose": "Flags for limited same-k repeatability, not scientific acceptance or exact historical equality",
+    "matching": "All k! permutations in scratch probability coordinates; keep all ties and originals unchanged"
+  },
+  "runtime_implementation": "NOT_BUILT_NOT_TESTED; connector timeout is not enforced optimization deadline or proven quiescence",
+  "native_schema": "Dimensions are expected algebra under six3-level ordinal plus one binary intercept-only model; stripes/capture and math fixtures for every k remain preflight blockers",
+  "forbidden": [
+    "participant predictions/assignments/exports",
+    "sample mask export or estimates save with sample",
+    "applied relabeling",
+    "benchmark/downstream regressions",
+    "automatic retry/resume",
+    "scientific adoption",
+    "public release",
+    "production edits",
+    "Git/cloud sync"
+  ],
+  "activation_policy": "This design cannot activate itself. A separately sealed approved contract and fresh per-recipe exclusive reservation are required; no directory is reserved now."
+}
