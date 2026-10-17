@@ -1,5 +1,5 @@
 {
-  "schema_version": 148,
+  "schema_version": 149,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -31,7 +31,15 @@
     "revision_rounds_cap": 2,
     "method_gate_rounds_cap": 2,
     "method_gate_rounds": 0,
-    "budget_exhausted_action": "deliver-with-known-gaps"
+    "budget_exhausted_action": "deliver-with-known-gaps",
+    "preferred_final_scientific_protocol": {
+      "status": "PROTOCOL_PREPARED_EXECUTION_AND_SCIENTIFIC_HOLD",
+      "next_package": "WP04 scientific-foundation synthesis feeding WP06 decision lock",
+      "fits_authorized_now": 0,
+      "participant_outputs_authorized_now": 0,
+      "scientific_acceptance": false,
+      "release": false
+    }
   },
   "analysis_backend": {
     "primary": "stata",
@@ -2665,7 +2673,14 @@
     "preferred_final_diagnostic_fixtures": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/fixture_acceptance.json",
     "preferred_final_diagnostic_review": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/review.json",
     "preferred_final_diagnostic_validation": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/validation.json",
-    "preferred_final_diagnostic_closure": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234-verification/closure.json"
+    "preferred_final_diagnostic_closure": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234-verification/closure.json",
+    "preferred_final_scientific_protocol": "WP03_PREFERRED_FINAL_SCIENTIFIC_PROTOCOL.md",
+    "preferred_final_operation_gates": "preferred-final-protocol/operation_gate_crosswalk.csv",
+    "preferred_final_stage_gates": "preferred-final-protocol/stage_gate_crosswalk.csv",
+    "preferred_final_artifact_gates": "preferred-final-protocol/artifact_disposition_crosswalk.csv",
+    "preferred_final_protocol_review": "audit-local/intake/wp03-preferred-final-protocol-789bce8/review.json",
+    "preferred_final_protocol_validation": "audit-local/intake/wp03-preferred-final-protocol-789bce8/validation.json",
+    "preferred_final_protocol_closure": "audit-local/intake/wp03-preferred-final-protocol-789bce8-verification/closure.json"
   },
   "decisions": [
     {
