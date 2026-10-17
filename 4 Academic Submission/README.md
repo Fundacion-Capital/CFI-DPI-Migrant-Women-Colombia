@@ -920,3 +920,7 @@ Source-version16 single-fit adapter, temporary32767/32760-variable capacity prob
 ### Preferred-final single bounded replay — 17 October 2026
 
 One authorized source-exact fit, no retries; rc0/converged1,423eligible; 3199/3199 exact native fields, 0 differing; **EXACT_NATIVE_FIELDS_ONLY_SCIENTIFIC_HOLD**. No scientific/release acceptance, predictions, assignments, relabeling or downstream fits. Prior preparation and every packet preserved. [Replay/comparison and next saved-state audit](WP03_PREFERRED_FINAL_REPLAY_AND_COMPARISON.md). Technical closure is governed by the actual independent review, final audit, seal and separate verification.
+
+### Preferred-final saved-state numerical/identification audit — 17 October 2026
+
+Zero fits/participant loads/exports/relabeling; both saved final states pass fresh3199-field native checks,126 precision-safe diagnostic rows and tail/Jacobian fixtures. Exact replication retained alongside severe native scaling, near-boundary probabilities and enormous cutpoint uncertainty; local probability-coordinate rank is not global identification or regular inference. Preserve failed green syntax packet and recovered fixtures. [Audit, disposition and next scientific protocol](WP03_PREFERRED_FINAL_SAVED_STATE_AUDIT.md). Scientific/privacy/release and downstream-execution holds remain; actual final review/audit/seal/separate verification govern technical closure.

@@ -1,5 +1,5 @@
 {
-  "schema_version": 147,
+  "schema_version": 148,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,9 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "WP03_PREFERRED_FINAL_REPLAY_AND_COMPARISON.md#next-task",
-    "last_completed_work_package": "Single preferred-final source-exact fit and exact native comparison: EXACT_NATIVE_FIELDS_ONLY_SCIENTIFIC_HOLD",
-    "next_work_package": "Preferred-final saved-state discrepancy/identification and disposition audit without fitting; no participant outputs or downstream execution",
+    "latest_handoff": "WP03_PREFERRED_FINAL_SAVED_STATE_AUDIT.md#next-task",
+    "last_completed_work_package": "Preferred-final saved-state diagnostics and scientific-hold reporting contract; no fitting",
+    "next_work_package": "Preferred-final scientific-adjudication/remediation protocol and downstream execution-gate crosswalk; no fitting or participant outputs",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2655,7 +2655,17 @@
     "preferred_final_replay_reservation": "audit-local/intake/wp03-preferred-final-replay-eb7df12/future_fit_reservation.json",
     "preferred_final_replay_review": "audit-local/intake/wp03-preferred-final-replay-eb7df12/review.json",
     "preferred_final_replay_validation": "audit-local/intake/wp03-preferred-final-replay-eb7df12/validation.json",
-    "preferred_final_replay_closure": "audit-local/intake/wp03-preferred-final-replay-eb7df12-verification/closure.json"
+    "preferred_final_replay_closure": "audit-local/intake/wp03-preferred-final-replay-eb7df12-verification/closure.json",
+    "preferred_final_diagnostic_report": "WP03_PREFERRED_FINAL_SAVED_STATE_AUDIT.md",
+    "preferred_final_diagnostic_metrics": "preferred-final-diagnostics/diagnostic_metrics.csv",
+    "preferred_final_diagnostic_native": "preferred-final-diagnostics/native_state_checks.csv",
+    "preferred_final_diagnostic_contract": "preferred-final-diagnostics/reporting_contract.csv",
+    "preferred_final_diagnostic_manifest": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/state_manifest.json",
+    "preferred_final_diagnostic_acceptance": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/diagnostic_acceptance.json",
+    "preferred_final_diagnostic_fixtures": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/fixture_acceptance.json",
+    "preferred_final_diagnostic_review": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/review.json",
+    "preferred_final_diagnostic_validation": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234/validation.json",
+    "preferred_final_diagnostic_closure": "audit-local/intake/wp03-preferred-final-diagnostics-9a78234-verification/closure.json"
   },
   "decisions": [
     {
