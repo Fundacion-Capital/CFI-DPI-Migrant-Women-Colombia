@@ -1,0 +1,50 @@
+{
+  "status": "ARTIFICIAL_PREFLIGHT_COMPLETE_WITH_OPERATIONAL_AND_EXTERNAL_BLOCKERS",
+  "fits_authorized_now": 0,
+  "participant_processing_authorized_now": 0,
+  "scientific_approval": false,
+  "ethics_clearance": false,
+  "activated": false,
+  "retries": 0,
+  "prior_twelve_recipes_unchanged": true,
+  "evidence": {
+    "mathematics": "PASS_ARTIFICIAL_ONLY",
+    "native_precision": "PASS_ARTIFICIAL_ONLY",
+    "owned_fixture_cleanup": "PASS_EVENTUAL_ONLY",
+    "shared_session": "UNCHANGED",
+    "independent_interrupt": "NOT_ESTABLISHED",
+    "loaded_image": "NOT_ATTESTED",
+    "empirical_schema": "NOT_BOUND"
+  },
+  "nine_external_gates": "ALL_PENDING",
+  "fifteen_measurement_choices": "ALL_PENDING",
+  "candidate_executable": {
+    "version": "521.19.0.115",
+    "sha256": "717B0E4958BEBA2961EB46BA39C4A7CA78AC5DE131B4EB29B46E20E3BA7A83D7",
+    "loaded_image_attested": false
+  },
+  "current_runtime": {
+    "stata_version": 19,
+    "build": "12 Aug 2026",
+    "reported_flavor": "IC",
+    "temporary_maxvar": 32767,
+    "restored_maxvar": 5000
+  },
+  "mandatory_successor_gates": [
+    "author/institutional and strict sample decisions",
+    "exact loaded-image binding",
+    "source-exact actual native stripe binding",
+    "independently interruptible owned worker and production cleanup",
+    "separate named-fit and projected-input authority"
+  ],
+  "forbidden": [
+    "fitting",
+    "participant loads/exports",
+    "saved-estimate loads",
+    "applied relabeling",
+    "scientific adoption",
+    "release",
+    "automatic retry"
+  ],
+  "activation_policy": "This artificial-only package cannot activate any fit; separately approved sealed successor required"
+}

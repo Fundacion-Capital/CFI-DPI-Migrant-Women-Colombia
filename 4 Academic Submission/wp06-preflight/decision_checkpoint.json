@@ -1,0 +1,83 @@
+[
+  {
+    "gate_id": "D1_population",
+    "required_action": "Authors: population, actual recruitment and claims; reconcile planning/field/form differences",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D1_rights",
+    "required_action": "Institution/authors: ethics approval or exemption, consent versions, data rights and disclosure safeguards",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D2_sample",
+    "required_action": "Separate authorized restricted membership/version/missingness audit; no participant check in this package",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D3_measurement",
+    "required_action": "Authors: fifteen documented construct choices, indicator family and continuity versus primary analysis",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D4_scope",
+    "required_action": "Authors: validation-only purpose, no causal/national/class-error inference or downstream permission",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D5_operational",
+    "required_action": "Synthetic evidence only; bind future actual worker, exact schema/controller, input and resource limits separately",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "D6_reporting",
+    "required_action": "Authors: dated retrospective comparison/reporting rules, negative/inconclusive/no-LCA allowed",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "OWNER_FITS",
+    "required_action": "Separate explicit authorization of twelve named fits after all gates genuinely pass",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  },
+  {
+    "gate_id": "OWNER_INPUT",
+    "required_action": "Separate explicit projected participant-input authority and verified restricted sample/rights",
+    "status": "PENDING_EXTERNAL_DECISION",
+    "approved": false,
+    "evidence": "",
+    "approved_by": "",
+    "execution_authorized": false
+  }
+]

@@ -1,0 +1,82 @@
+# WP06 — gate-resolution preparation and artificial-only operational preflight
+
+## Outcome and authority
+
+This package continues the sealed documentary checkpoint at Git owner state `82ac6207c97c6bfb71bc65439865ba341d302ac9`. It prepares the decisions that researchers and the institution must make, and tests the proposed continuity-validation machinery with constructed matrices and fixed empty-worker tasks only. **No model was fitted, no participant dataset or saved estimate was loaded, no participant eligibility or consent record was examined, and no labels were applied.** Historical and failed packets remain intact.
+
+The correct handoff is **gate preparation and artificial preflight completed, with operational and external-approval blockers retained**. It is not an activated contract, a passed production execution gate, an approved academic measurement system, or evidence that the proposed models are identified in the research sample. The twelve original WP06 recipes, their distinct seeds, projected inputs and limits remain unchanged and inactive. Their future execution directory remains uncreated.
+
+Deliverables are the [nine-gate checkpoint](wp06-preflight/decision_checkpoint.json), [fifteen measurement prompts](wp06-preflight/measurement_checkpoints.csv), [artificial result register](wp06-preflight/artificial_results.csv), [operational gate contract](wp06-preflight/operational_gate_contract.json) and [artificial-only scripts and instructions](wp06-preflight/README.md). These extend, rather than replace, the previous documentary decisions and historical scientific holds.
+
+## 1. Prepared researcher and institutional decisions
+
+All nine checkpoint rows remain pending. Each needs an explicit decision-maker, date, supporting evidence and rationale in a separately approved successor. No artificial result can fill an approval field. A preparation checklist must not be transformed into an ethics certificate, empirical membership check or execution grant.
+
+**D1 population and recruitment.** Authors must define the population the paper actually studies and which eligibility and recruitment claims are supportable. Resolve the differences between planning documents, enumerator guidance and form calculation rather than combining them into a rule that was never implemented. Keep the purposive, exploratory recruitment description and its limitations visible unless implementation evidence supports a change. Do not claim probability sampling, population representativeness or completed activities merely because a proposal described them. The historical 423-person analytical reference is not by itself proof of positive eligibility, recruitment coverage or consent administration.
+
+**D1 rights and ethics.** Institutional and author review must establish the applicable approval or exemption basis, consent versions, rights to analyse and publish, confidentiality obligations and disclosure safeguards. Blank-form confidentiality and aggregate-publication wording is evidence of stated intent, not proof that every respondent received or accepted it. Do not publish identifiable data, signed consent material or contact information. This package does not search for new approvals, infer they are absent, interpret legal compliance or cure historical exposure.
+
+**D2 academic sample, version and missingness.** A separately scoped restricted review must reconcile actual retained membership with strict positive form conditions, form-version routes, population criteria and documented cleaning. No sample exclusions, harmonization, imputation, weighting, timestamp correction or file substitution is approved here. Any discrepancy must yield an explicit disposition before an analytical successor, not a silent adjustment during fitting. The proposed common input and completeness assertions are execution checks, not substitutes for a scientific sample definition or consent rights.
+
+**D3 fifteen measurement decisions.** The accompanying cards retain the source-based historical scale, category, normalization and missing/sentinel contracts, together with their unresolved scientific questions. For each construct, authors should specify retain/revise/reject/defer, interpretation, item/route/version scope, denominator, polarity, category boundaries and the reason for the choice. A revised recipe requires its own version and prospective audit before use. Historical code remains the authority for what historical scores calculated, not proof that those scores are scientifically preferred. Narrative notes cannot silently override the code; equally, historical reproducibility does not prevent a justified, transparent academic revision. In particular, resolve IVS direction, ICDP performance wording, available-item composition, default/refusal handling, float/category boundaries and shared-item dependence. Do not adopt H1 as the primary academic family merely because continuity fixtures use its structure.
+
+**D4 inferential role.** Authors must distinguish descriptive segmentation, validation, covariate profiling and downstream outcome analysis. Purposive recruitment does not supply design weights or causal effects. A class-defining or shared-item comparison is not independent validation. No posterior assignment, naive weighting, hard-class regression, benchmark fit or class-error correction method is approved here. A future method must be justified for the actual roles of covariates and outcomes; software availability alone does not establish suitability.
+
+**D5 operational contract.** The artificial checks below supply bounded evidence about implementation mathematics, numeric transport and fixture lifecycle. They do not close loaded-image identity, actual fitted-model stripe binding, production cancellation, fit feasibility or participant-input gates. A future exact worker and capture adapter must be tied to a separately sealed approved contract, not inferred from a machine's installed file or an earlier session.
+
+**D6 comparison and reporting.** Authors must approve and date the retrospective validation question, diagnostic tolerances and reporting rules before new estimation. Keep negative, inconclusive, descriptive-only, revised-family and no-LCA dispositions available. There is no automatic four-class preference, smallest-BIC adoption, entropy-only decision or search-until-agreement rule. Preserve all candidate statuses, failures, conflicts and unavailable targets. The archived four-class state remains a comparison anchor, not an equality target for different seeds or class counts.
+
+**Two distinct owner grants remain absent:** named-fit authority and projected participant-input authority. Resolving scientific/institutional gates does not itself grant either. The current request authorizes artificial fixtures only; it does not waive these requirements.
+
+## 2. Current runtime and artificial capacity evidence
+
+A newly owned named Stata MCP worker was checked empty before tests. It reported Stata 19, build 12 August 2026, `c(flavor)=IC`, no observations/variables and no estimation command. The proposed temporary `maxvar=32767` setting was accepted and restored to 5000 while the worker remained empty. This proves that this setting can be changed on that worker; it does not establish that a particular model, 600 random starts or 8,000 iterations will fit within memory or time.
+
+A local candidate `StataMP-64.exe` reports file version 521.19.0.115 and SHA-256 `717B0E4958BEBA2961EB46BA39C4A7CA78AC5DE131B4EB29B46E20E3BA7A83D7`. Process enumeration did not establish the loaded image. Therefore the candidate disk hash is **not** claimed as an executable identity attestation for the MCP worker. The observed flavor/build strings are preserved exactly rather than silently reconciled to the filename. Loaded-image identity remains a gate.
+
+The worker's temporary mathematics and matrices were cleared only after confirming ownership and artificial-only state. The baseline setting and empty state were checked again before destroying the owned session. The pre-existing default session was neither inspected for participant contents nor altered; its session metadata, including last activity, remained unchanged on final readback.
+
+## 3. General-class mathematical fixtures
+
+All probability, derivative, rank and covariance calculations ran in Stata/Mata through MCP. Python was used only for metadata, CSV validation, precision readback, preservation and lifecycle receipts—not for estimating or reproducing the research statistics.
+
+The constructed model has six three-category ordinal items and one binary item, exactly the dimensional structure underlying the proposed H1 continuity recipes. It therefore has **1,458 possible response patterns**. For class counts 2, 3, 4 and 5, the fixture tests 28/42/56/70 stored coordinates with the baseline mixing logit constrained to zero and 27/41/55/69 free coordinates. Synthetic coordinates are explicitly prefixed `ART`; these are not fresh observed `gsem` stripes.
+
+The tests establish the following for these artificial cases:
+
+- Class weights and ordered-logit category probabilities produce finite nonnegative pattern probabilities summing to one, including stable extreme-logit cases.
+- Uniform identical-component fixtures give the hand-derived uniform pattern probability `1/1458` and derivative rank 13, demonstrating that the test does not equate nominal parameter count with identification.
+- A constructed nondegenerate fixture has full free-coordinate derivative rank at the stated numerical tolerance. Every analytic derivative is checked against a central finite difference; the maximum permitted absolute error is `1e-8`. This is a numerical implementation check, not evidence of empirical identification.
+- All 2, 6, 24 and 120 permutations are enumerated. Mixing-logit reference changes, item coordinates and covariance cross-terms transform consistently; inverse transformations recover the original synthetic coordinates/covariance and leave response-pattern probabilities unchanged.
+- A separate non-self-inverse cycle test requires the unique correct inverse match. A deliberately changed item is not explained away as relabeling. Identical-component ties retain every admissible match rather than selecting a convenient one. None of these scratch transformations is applied to participant or saved-model states.
+- Missing parameters and crossed/equal ordinal cuts are intentionally rejected. Their captured assertion failures are expected negative tests, not failed research models.
+
+These checks do not demonstrate a global optimum, empirical class separation, appropriate class count, actual fitted-model identification, psychometric validity or optimizer adequacy. Artificial full rank and artificial degeneracy are implementation fixtures only.
+
+## 4. Native-field schema and precision
+
+Artificial native captures contain the seven declared metadata fields, all stored coefficients and every covariance coordinate. The expected totals are **819, 1,813, 3,199 and 4,977 fields**. The artificial metadata uses `N=11`, not the historical research sample size; it is deliberately not a fabricated model fit. Each row is labelled `ARTIFICIAL_WP06` and carries explicit coordinates and artificial stripes.
+
+Capture uses exclusive file creation and refuses an existing output. Values are recorded with 17-significant-digit decimal and Stata hexadecimal representations, with in-Stata exact readback before emission. The independent metadata reader checks dimensions, completeness, unique coordinates, stripe agreement, finite/missing-safe values, exact decimal/hex equality, the fixed baseline coordinate and covariance row/column, and symmetry. It rejects truncation, duplication, malformed schemas, wrong origin, changed stripes, nonfinite values, asymmetric covariance, precision loss and fabricated approvals. Stata's hexadecimal exponent is decoded as documented; Stata missing/out-of-range encodings are rejected.
+
+This validates the artificial transport and schema checks. It does **not** validate the stripes or coordinates returned by a future actual fitted model. Those must be bound to source-exact native output before production use. The artificial matrices are not exportable participant data, saved estimates or research results.
+
+## 5. Lifecycle, timeout and cleanup: tested limits
+
+Three fixed artificial tasks were durably reserved once: a successful arithmetic assertion, an intentional arithmetic assertion failure, and a ten-second sleep. The no-fit receipt controller permits only named artificial fixtures, never a model identifier, arbitrary participant path or arbitrary estimator payload. Attempts are consumed on reservation; success, error, timeout and abandonment cannot redispatch. Receipt chains verify ownership, monotone finite elapsed times and legal transitions. A tampered receipt targeting `default` is rejected.
+
+Success and error remain nonquiescent until an owned-session destroy request and absent-session readback. Timeout is neither success nor proof of quiescence. The outer synthetic deadline returned after **1.213 seconds**; the connector eventually returned a one-second timeout error, but the intervening status request was delayed. The durable timeout event occurred at 3.401 seconds from the broader fixture start, destroy was requested at 15.485 seconds, and absence was recorded at 16.515 seconds. Entry/session overhead and receipt writes are distinct from the bounded sleep interval. All these timings are observations of one artificial test, not guaranteed latency bounds.
+
+**Operational finding: prompt independent interruption is not established.** The tested interface cannot be certified as enforcing the proposed fit deadline. Eventual owned-session destruction within the proposed 60-second cleanup allowance in this fixture does not prove reliable interruption of active optimization or a sufficient production cleanup budget. The controller must not automatically start the next model after a connector timeout, a status message or an unresolved worker. The D5 production-deadline/cancellation gate remains blocked. No retry was dispatched.
+
+## 6. Preservation, audit and remaining gates
+
+The entry baseline preserves 1,131 tracked files, 19,962 prior-private files and all 2,306 previous workflow pointers. Previous source analysis, datasets, saved states, manuscript, qualitative materials and packets are not edited. Preservation checks read file hashes only; no participant contents are parsed or loaded. The parent seal and separate closure were verified before new work. Governance updates are additive and all earlier pointers remain intact.
+
+The failed initial helper, incomplete file-endpoint response, diagnostic logs, failed assertions, corrected test-oracle explanation, actual MCP responses, artificial native files and consumed-attempt receipts are retained in the new ignored packet. The final audit must verify every delivered source/table, scoped metadata regressions, real fixture markers, lifecycle receipts, unchanged shared-session metadata, preservation fingerprints and a separate immutable readback. A successful tool response alone is not acceptance.
+
+No participant sample/consent audit, institutional approval, full literature update, qualitative reanalysis, scientific measurement adoption, actual `gsem` capture, model fit, prediction, class assignment, applied relabeling, manuscript change, Git mutation, cloud synchronization or public-data release occurs here.
+
+The next combined task should resolve the prepared author/institutional checkpoints and investigate **no-fit operational remediation** for independently interruptible owned workers, exact loaded-image identity and source-exact general-class capture binding. Actual participant membership/input verification requires its own explicit authorization. Only after those gates genuinely close should a separately sealed execution proposal be presented. This package creates no fit permission and cannot activate itself.
+
+Technical references are used narrowly: the [official Stata format documentation](https://www.stata.com/manuals/dformat.pdf) specifies hexadecimal numeric representation; the [Mata file-I/O documentation](https://www.stata.com/manuals/m-5fopen.pdf) specifies exclusive `fopen(...,"w")` behavior. The runtime and fixture claims above come from the preserved local receipts, not these manuals.

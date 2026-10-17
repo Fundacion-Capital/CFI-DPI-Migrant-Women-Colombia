@@ -1,0 +1,11 @@
+check,status,evidence,production_gate_closed
+mathematics_native_k2,PASS_ARTIFICIAL_ONLY,28slots;27free;819fields;1458patterns,0
+mathematics_native_k3,PASS_ARTIFICIAL_ONLY,42slots;41free;1813fields;1458patterns,0
+mathematics_native_k4,PASS_ARTIFICIAL_ONLY,56slots;55free;3199fields;1458patterns,0
+mathematics_native_k5,PASS_ARTIFICIAL_ONLY,70slots;69free;4977fields;1458patterns,0
+capacity_setting,PASS_SETTING_CHANGE_ONLY,32767 accepted;5000 restored;empty worker,0
+runtime,PARTIAL,Stata19;12Aug2026;IC;loaded image not attested,0
+success_failure_lifecycle,PASS_ARTIFICIAL_ONLY,Consumed once;owned cleanup/readback,0
+timeout,BLOCKED_PRODUCTION_DEADLINE,Outer flag1.213s;delayed status;eventual destroy not prompt interruption,0
+actual_gsem_stripes,NOT_TESTED_NO_FITTING,ART schema only;no actual fitted model capture,0
+author_institution_sample,PENDING,No artificial evidence substitutes researcher/rights/membership approval,0
