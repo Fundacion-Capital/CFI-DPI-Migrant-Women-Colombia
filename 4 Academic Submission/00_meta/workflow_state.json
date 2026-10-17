@@ -1,5 +1,5 @@
 {
-  "schema_version": 143,
+  "schema_version": 144,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -15,9 +15,9 @@
     "stage_passport": "README.md#stage-passport",
     "pipeline_status": "README.md#pipeline-status-and-execution-contract",
     "handoff_dir": "audit-local/intake",
-    "latest_handoff": "WP01_H1_K4_DIAGNOSTICS_AND_DISPOSITION.md#next-work-package",
-    "last_completed_work_package": "WP01: bounded saved-state diagnostics and reporting; scientific acceptance withheld",
-    "next_work_package": "WP02: remaining historical LCA candidate-grid manifest and bounded execution; new fit authority required",
+    "latest_handoff": "WP02_HYBRID_GRID_AUDIT_AND_DISPOSITIONS.md#next-work-package",
+    "last_completed_work_package": "WP02: thirteen original hybrid candidate replays, saved-state diagnostics and dispositions; scientific acceptance withheld",
+    "next_work_package": "WP03: distinct preferred final LCA and downstream historical workflow source/fit manifest; new execution authority required",
     "checkpoint_policy": "full-at-hard-gates",
     "reset_boundaries": [
       "historical-baseline-lock",
@@ -2608,7 +2608,21 @@
     "wp01_h1_k4_result": "audit-local/intake/wp01-h1-k4-b0181e6/diagnostic_result.json",
     "wp01_h1_k4_review": "audit-local/intake/wp01-h1-k4-b0181e6/review.json",
     "wp01_h1_k4_audit": "audit-local/intake/wp01-h1-k4-b0181e6/final_audit.json",
-    "wp01_h1_k4_validation": "audit-local/intake/wp01-h1-k4-b0181e6/validation.json"
+    "wp01_h1_k4_validation": "audit-local/intake/wp01-h1-k4-b0181e6/validation.json",
+    "wp02_hybrid_grid_report": "WP02_HYBRID_GRID_AUDIT_AND_DISPOSITIONS.md",
+    "wp02_hybrid_grid_source_manifest": "wp02-hybrid-grid/source_manifest.csv",
+    "wp02_hybrid_grid_dispositions": "wp02-hybrid-grid/candidate_dispositions.csv",
+    "wp02_hybrid_grid_native_comparisons": "wp02-hybrid-grid/native_comparisons.csv",
+    "wp02_hybrid_grid_metrics": "wp02-hybrid-grid/diagnostic_metrics.csv",
+    "wp02_hybrid_grid_whole_grid_context": "wp02-hybrid-grid/whole_grid_context.csv",
+    "wp02_hybrid_grid_manifest": "audit-local/intake/wp02-hybrid-grid-06f9a18/manifest.json",
+    "wp02_hybrid_grid_producer": "audit-local/intake/wp02-hybrid-grid-06f9a18/wp02.py",
+    "wp02_hybrid_grid_reader": "audit-local/intake/wp02-hybrid-grid-06f9a18/finish.py",
+    "wp02_hybrid_grid_result": "audit-local/intake/wp02-hybrid-grid-06f9a18/result.json",
+    "wp02_hybrid_grid_actual_history": "audit-local/intake/wp02-hybrid-grid-06f9a18/actual_stata_history.json",
+    "wp02_hybrid_grid_review": "audit-local/intake/wp02-hybrid-grid-06f9a18/review.json",
+    "wp02_hybrid_grid_audit": "audit-local/intake/wp02-hybrid-grid-06f9a18/final_audit.json",
+    "wp02_hybrid_grid_validation": "audit-local/intake/wp02-hybrid-grid-06f9a18/validation.json"
   },
   "decisions": [
     {
