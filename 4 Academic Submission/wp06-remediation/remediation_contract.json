@@ -1,0 +1,51 @@
+{
+  "status": "NOFIT_REMEDIATION_AND_CHECKPOINT_PREPARATION_COMPLETE_ACTIVATION_BLOCKED",
+  "fits_authorized_now": 0,
+  "participant_processing_authorized_now": 0,
+  "activated": false,
+  "scientific_approval": false,
+  "ethics_clearance": false,
+  "retries": 0,
+  "real_responses_pending": 24,
+  "capability": {
+    "loaded_module": {
+      "loaded_module_attested": true,
+      "scope": "OBSERVED_OWNED_ARTIFICIAL_WORKER_ONLY",
+      "module_path": "C:\\Program Files\\Stata19\\mp-64.dll",
+      "disk_sha256": "836D8863FDF5B621ABC7BCCF8230BDD8112EC46AFFC310ED87271235DB0B15C3",
+      "in_memory_digest": false,
+      "future_worker_rebind_required": true
+    },
+    "direct_probe": {
+      "flag_seconds": 1.209,
+      "destroy_requested_seconds": 1.209,
+      "destroy_returned_seconds": 12.994,
+      "os_probe_return_seconds": 12.994,
+      "sleep_completion_marker": true,
+      "eventual_bound_process_exit_proven": true,
+      "prompt_interrupt_proven": false
+    },
+    "successor_guard": {
+      "state": "QUARANTINED_CONSUMED_TIMEOUT",
+      "registry_absent": true,
+      "engine_stop_proven": false,
+      "owned_command_completion_recorded": true,
+      "advance_allowed": false,
+      "retry_allowed": false
+    },
+    "actual_fitted_schema_bound": false,
+    "shared_default": "UNCHANGED_AT_READBACK",
+    "real_approvals": 0
+  },
+  "current_remediation": "Fail-closed quarantine; registry absence never stands in for independently observed process termination",
+  "retained_blockers": [
+    "prompt independently enforceable production interruption",
+    "fresh per-worker loaded-module binding",
+    "actual fitted gsem stripe binding",
+    "nine real external decisions and fifteen measurement choices",
+    "separate fit and participant-input authority"
+  ],
+  "activation_policy": "No fixture, hypothetical response, registry absence, process exit or this seal can activate a fit",
+  "shared_service_changes": false,
+  "os_process_termination_calls": false
+}

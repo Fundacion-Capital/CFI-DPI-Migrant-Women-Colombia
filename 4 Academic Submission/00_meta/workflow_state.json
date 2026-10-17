@@ -1,5 +1,5 @@
 {
-  "schema_version": 152,
+  "schema_version": 153,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -61,6 +61,15 @@
       "scientific_acceptance": false,
       "release": false,
       "production_deadline_gate": "BLOCKED"
+    },
+    "wp06_nofit_remediation": {
+      "status": "NOFIT_REMEDIATION_AND_CHECKPOINT_PREPARATION_COMPLETE_ACTIVATION_BLOCKED",
+      "fits_authorized_now": 0,
+      "participant_processing_authorized_now": 0,
+      "scientific_acceptance": false,
+      "release": false,
+      "prompt_interrupt": "BLOCKED",
+      "real_responses_pending": 24
     }
   },
   "analysis_backend": {
@@ -2738,7 +2747,15 @@
     "wp06_preflight_09": "wp06-preflight/README.md",
     "wp06_preflight_10": "audit-local/intake/wp06-preflight-82ac620/review.json",
     "wp06_preflight_11": "audit-local/intake/wp06-preflight-82ac620/validation.json",
-    "wp06_preflight_12": "audit-local/intake/wp06-preflight-82ac620-verification/closure.json"
+    "wp06_preflight_12": "audit-local/intake/wp06-preflight-82ac620-verification/closure.json",
+    "wp06_remediation_01": "WP06_NOFIT_REMEDIATION_AND_OWNER_CHECKPOINT.md",
+    "wp06_remediation_02": "wp06-remediation/OWNER_INSTITUTION_CHECKPOINT.md",
+    "wp06_remediation_03": "wp06-remediation/receipt_guard.py",
+    "wp06_remediation_04": "wp06-remediation/remediation_contract.json",
+    "wp06_remediation_05": "wp06-remediation/response_template.json",
+    "wp06_remediation_06": "audit-local/intake/wp06-remediation-3ee86db/review.json",
+    "wp06_remediation_07": "audit-local/intake/wp06-remediation-3ee86db/validation.json",
+    "wp06_remediation_08": "audit-local/intake/wp06-remediation-3ee86db-verification/closure.json"
   },
   "decisions": [
     {
