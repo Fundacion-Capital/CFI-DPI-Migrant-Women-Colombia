@@ -1,0 +1,57 @@
+{
+  "status": "INDEPENDENT_CONTROL_PATH_INVESTIGATION_AND_PROPOSAL_COMPLETE_NOT_IMPLEMENTED",
+  "implemented_live": false,
+  "service_changes_authorized": false,
+  "fit_authority": 0,
+  "participant_processing_authority": 0,
+  "process_kill_authority": 0,
+  "real_approvals": 0,
+  "retries": 0,
+  "activation_allowed": false,
+  "recommended_path": "Owned independent supervisor plus a strictly bound adapter to existing event-based stop; separately approved hard-stop fallback only",
+  "envelope_fields": [
+    "session_id",
+    "owner_nonce",
+    "worker_epoch",
+    "command_id",
+    "pid",
+    "creation_time",
+    "engine_module_digest",
+    "reservation_id"
+  ],
+  "rejection_rules": [
+    "default/shared/unknown worker",
+    "missing binding",
+    "epoch/PID/creation mismatch",
+    "duplicate or stale break",
+    "late response as success",
+    "automatic restart/resume",
+    "legacy stop_requested response without independently verified delivery"
+  ],
+  "prior_facts_retained": [
+    "timed-out slots consumed",
+    "registry absence is not engine exit",
+    "observed prior worker binding is not future binding"
+  ],
+  "source_findings": [
+    "hidden five-second result-wait grace",
+    "synchronous destroy in async handler",
+    "same-ID automatic recovery",
+    "unexposed event-stop route exists"
+  ],
+  "validation_stages": [
+    "source review and operator scope",
+    "isolated no-fit adapter/ownership fixtures",
+    "separately authorized empty-Stata cooperative-stop test",
+    "separately authorized owned-process fallback/cleanup test",
+    "fresh exact sealed execution contract after all scientific/institutional/input gates"
+  ],
+  "open_limits": [
+    "live stop route not invoked",
+    "actual optimizer interrupt untested",
+    "tool orchestration serialization not localized",
+    "hard-stop backend unimplemented",
+    "Windows ownership/job/handle design unvalidated",
+    "empirical schema and all real scientific/institutional approvals remain held"
+  ]
+}

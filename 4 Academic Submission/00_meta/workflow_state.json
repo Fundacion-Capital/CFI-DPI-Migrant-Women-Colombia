@@ -1,5 +1,5 @@
 {
-  "schema_version": 153,
+  "schema_version": 154,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -70,6 +70,14 @@
       "release": false,
       "prompt_interrupt": "BLOCKED",
       "real_responses_pending": 24
+    },
+    "wp06_independent_control_proposal": {
+      "status": "INDEPENDENT_CONTROL_PATH_INVESTIGATION_AND_PROPOSAL_COMPLETE_NOT_IMPLEMENTED",
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "scientific_acceptance": false,
+      "release": false
     }
   },
   "analysis_backend": {
@@ -2755,7 +2763,15 @@
     "wp06_remediation_05": "wp06-remediation/response_template.json",
     "wp06_remediation_06": "audit-local/intake/wp06-remediation-3ee86db/review.json",
     "wp06_remediation_07": "audit-local/intake/wp06-remediation-3ee86db/validation.json",
-    "wp06_remediation_08": "audit-local/intake/wp06-remediation-3ee86db-verification/closure.json"
+    "wp06_remediation_08": "audit-local/intake/wp06-remediation-3ee86db-verification/closure.json",
+    "wp06_control_01": "WP06_INDEPENDENT_CONTROL_PATH_INVESTIGATION.md",
+    "wp06_control_02": "wp06-control-proposal/artificial_control_fixtures.py",
+    "wp06_control_03": "wp06-control-proposal/artificial_evidence.json",
+    "wp06_control_04": "wp06-control-proposal/proposal_contract.json",
+    "wp06_control_05": "wp06-control-proposal/source_boundary_register.json",
+    "wp06_control_06": "audit-local/intake/wp06-control-investigation-ef49585/review.json",
+    "wp06_control_07": "audit-local/intake/wp06-control-investigation-ef49585/validation.json",
+    "wp06_control_08": "audit-local/intake/wp06-control-investigation-ef49585-verification/closure.json"
   },
   "decisions": [
     {

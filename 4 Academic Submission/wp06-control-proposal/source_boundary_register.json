@@ -1,0 +1,134 @@
+[
+  {
+    "evidence_id": "S01",
+    "file": "stata_mcp_server.py",
+    "symbol": "stata_run_selection_endpoint",
+    "start": 2371,
+    "end": 2423,
+    "function_sha256": "8961E98A3E02F5D011F041740885CD1B35BACD31AC745C5F412EE35029A99C49",
+    "source_sha256": "6AA984B08A6657254804E690C77FB877A2D8E62C3B809CAA14FE533D30402092",
+    "fact": "Selection endpoint awaits thread-offloaded session execute, not a direct synchronous execute",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S02",
+    "file": "stata_mcp_server.py",
+    "symbol": "call_tool",
+    "start": 3085,
+    "end": 3363,
+    "function_sha256": "6B536E46CD2B31486DD68CDFB99E6C60F018D68FD5FFF881C5AE413247646C93",
+    "source_sha256": "6AA984B08A6657254804E690C77FB877A2D8E62C3B809CAA14FE533D30402092",
+    "fact": "Session destroy branch calls synchronous destroy_session directly from async REST handler",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S03",
+    "file": "session_manager.py",
+    "symbol": "_wait_for_matching_result",
+    "start": 1059,
+    "end": 1087,
+    "function_sha256": "A779328CC7E98638D94C850A310A17135A1247CE046C2639B73FBA56B0C6BA15",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Result wait uses wall-clock timeout plus five seconds and matches command IDs",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S04",
+    "file": "session_manager.py",
+    "symbol": "_execute_command",
+    "start": 964,
+    "end": 1057,
+    "function_sha256": "4F26A899F8606B02CCDDEA06123F884F6997417BB49102CDA4965D40F3410620",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Execution timeout can invoke session recovery before returning timeout status",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S05",
+    "file": "session_manager.py",
+    "symbol": "_recover_session",
+    "start": 623,
+    "end": 632,
+    "function_sha256": "9C4FD99618CF01A96784739B87130D35F942505498E7AC1C70046B0A5BC2C6C4",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Recovery restarts same session ID; session string alone is not a process epoch",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S06",
+    "file": "session_manager.py",
+    "symbol": "_restart_session_with_same_id",
+    "start": 423,
+    "end": 520,
+    "function_sha256": "F81FAFF165C7F25FB8DE4EF239E5BA4DA5B5ECFB1078A27C6E1B812CDFE54892",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Recovery gracefully queues exit, joins, terminates and creates replacement under same ID",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S07",
+    "file": "session_manager.py",
+    "symbol": "destroy_session",
+    "start": 376,
+    "end": 421,
+    "function_sha256": "C846B9BF39BFE42B1E5765C3A2079574BB54A20067C4E6A5B93AA4F96117A1C9",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Synchronous destroy performs graceful exit/join and termination outside manager lock; lock protects lookup/state and removal",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S08",
+    "file": "session_manager.py",
+    "symbol": "stop_execution",
+    "start": 921,
+    "end": 962,
+    "function_sha256": "17D715478F6628E4DA5ED98D0ECA20C1F840A721778AC06616DBB14BC6344C0A",
+    "source_sha256": "5F9B427FFBD0D01AFC51542A47F2652AFF02A084C7C08CC73700AD9B8FDA2308",
+    "fact": "Existing event-based stop path; optional session ID and no ownership/command-epoch envelope",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S09",
+    "file": "stata_mcp_server.py",
+    "symbol": "stop_execution",
+    "start": 3378,
+    "end": 3451,
+    "function_sha256": "B867918AEDB42B723CBE53BCAD56250B13274C91C58AE35D8CC5165CA8D5EBCF",
+    "source_sha256": "6AA984B08A6657254804E690C77FB877A2D8E62C3B809CAA14FE533D30402092",
+    "fact": "Separate REST stop route offloads manager stop with two-second await; can report stop_requested when stop_sent is false; await timeout does not stop thread; not exposed by MCP session tool",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S10",
+    "file": "stata_worker.py",
+    "symbol": "handle_stop",
+    "start": 736,
+    "end": 763,
+    "function_sha256": "8A61FA5E30C8F6971754A59B6305F1D0B56ABA64104D2CDF9DD1B6705B7EFBF4",
+    "source_sha256": "0B5C27BDC3D2CB2B12327A2DA43118CEE8B124C753CAF65D82AF3D3C5CEA088F",
+    "fact": "Native break request guarded once per execution; request is not termination proof",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S11",
+    "file": "stata_worker.py",
+    "symbol": "stop_monitor_thread",
+    "start": 770,
+    "end": 796,
+    "function_sha256": "7A022F0E641F584029CBD06A36458DF33D2E116A9F4DD3AEB77C1F0423B9333F",
+    "source_sha256": "0B5C27BDC3D2CB2B12327A2DA43118CEE8B124C753CAF65D82AF3D3C5CEA088F",
+    "fact": "Worker monitor polls separate stop event; cooperative signal capability, actual optimizer effect untested",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  },
+  {
+    "evidence_id": "S12",
+    "file": "stata_mcp_server.py",
+    "symbol": "call_tool_http",
+    "start": 5524,
+    "end": 5562,
+    "function_sha256": "D0B544C96315470178EEB7D73EDD6C03EB332E7ADF2456C604B3BFD3BB0D1CD3",
+    "source_sha256": "6AA984B08A6657254804E690C77FB877A2D8E62C3B809CAA14FE533D30402092",
+    "fact": "MCP session actions routed through internal /v1/tools; ordinary execution via API operation map",
+    "status": "VERIFIED_INSTALLED_SOURCE_NOT_RUNTIME_CANCELLATION_TEST"
+  }
+]

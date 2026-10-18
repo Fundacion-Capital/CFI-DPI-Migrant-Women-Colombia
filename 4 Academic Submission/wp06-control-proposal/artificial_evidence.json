@@ -1,0 +1,51 @@
+{
+  "blocking": {
+    "order": [
+      "work_started",
+      "work_returned",
+      "control_reached"
+    ],
+    "fixture_cleanup_complete": true,
+    "origin": "ARTIFICIAL_PATTERN_ONLY",
+    "work_stopped_at_control": true
+  },
+  "offloaded": {
+    "order": [
+      "work_started",
+      "control_reached",
+      "work_returned"
+    ],
+    "fixture_cleanup_complete": true,
+    "origin": "ARTIFICIAL_PATTERN_ONLY",
+    "work_stopped_at_control": false
+  },
+  "cooperative": {
+    "worker_outcome": "STOPPED_ARTIFICIAL",
+    "fixture_cleanup_complete": true,
+    "stata_interrupt_validated": false
+  },
+  "selection_dispatch": [
+    {
+      "call": "asyncio.to_thread",
+      "awaited": true
+    }
+  ],
+  "tool_dispatch": [
+    {
+      "call": "asyncio.to_thread",
+      "awaited": true
+    },
+    {
+      "call": "asyncio.to_thread",
+      "awaited": true
+    },
+    {
+      "call": "asyncio.to_thread",
+      "awaited": true
+    },
+    {
+      "call": "session_manager.destroy_session",
+      "awaited": false
+    }
+  ]
+}
