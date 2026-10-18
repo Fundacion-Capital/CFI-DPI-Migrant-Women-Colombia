@@ -1,5 +1,5 @@
 {
-  "schema_version": 164,
+  "schema_version": 165,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,36 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_deployment_handoff_evidence_contract": {
+      "status": "ARTIFICIAL_DEPLOYMENT_CONTRACT_VALIDATED_RUNTIME_UNADOPTED",
+      "owner_checkpoint": "831bf0304f047e82e105993fdf68edc9b761a32f",
+      "scope": "D01-D05 metadata-only deployment, one-use role credential handoff and independent artificial evidence acceptance",
+      "inherited_tests": 117,
+      "initial_successor_tests": 24,
+      "final_successor_tests": 31,
+      "final_normal_tests": 148,
+      "final_optimized_tests": 148,
+      "final_failures": 0,
+      "final_errors": 0,
+      "documentary_preflight_tests_each_mode": 17,
+      "review_important_fixed": 1,
+      "review_minor_disposed": 2,
+      "owner_correction_passes": 1,
+      "second_review_claimed": false,
+      "further_design_checkpoints_waived_by_owner": true,
+      "source_boundary": "Trusted in-memory coordinator and separately pinned synthetic O/L witness callbacks; no live deployment/evidence collector",
+      "host_probes": 0,
+      "actor_launches": 0,
+      "live_control": 0,
+      "service_changes": 0,
+      "stata": 0,
+      "participant_processing": 0,
+      "operational_adoption": false,
+      "scientific_acceptance": false,
+      "release": false,
+      "acceptance": "Final exact-source receipts, review disposition, preservation seal and separate readback only",
+      "next_boundary": "Consolidate existing receipts into WP06 scientific/operational gate crosswalk; identify author/institutional decisions and missing operational evidence without fitting or new runtime authority"
+    },
     "wp06_identity_bootstrap_artificial": {
       "status": "ARTIFICIAL_IDENTITY_BOOTSTRAP_IMPLEMENTED_VALIDATED_RUNTIME_UNADOPTED",
       "owner_checkpoint": "5e0d6b071cf224eb3184c1d056624ab8bdb309e3",
@@ -614,6 +644,18 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_deployment_contract_document": "WP06_DEPLOYMENT_HANDOFF_EVIDENCE_CONTRACT.md",
+    "wp06_deployment_contract_source": "wp06-stage-b/deployment_contract.py",
+    "wp06_deployment_contract_tests": "wp06-stage-b/test_deployment_contract.py",
+    "wp06_deployment_contract_entry": "audit-local/intake/wp06-deployment-contract-831bf03/entry.json",
+    "wp06_deployment_contract_approval": "audit-local/intake/wp06-deployment-contract-831bf03/approval.json",
+    "wp06_deployment_contract_ledger": "audit-local/intake/wp06-deployment-contract-831bf03/progress.md",
+    "wp06_deployment_contract_review": "audit-local/intake/wp06-deployment-contract-831bf03/review.json",
+    "wp06_deployment_contract_audit": "audit-local/intake/wp06-deployment-contract-831bf03/audit.py",
+    "wp06_deployment_contract_commit": "audit-local/intake/wp06-deployment-contract-831bf03/commit_proposal.md",
+    "wp06_deployment_contract_test_receipt": "audit-local/intake/wp06-deployment-contract-831bf03/runs/final_normal/result.json",
+    "wp06_deployment_contract_seal": "audit-local/intake/wp06-deployment-contract-831bf03/validation.json",
+    "wp06_deployment_contract_closure": "audit-local/intake/wp06-deployment-contract-831bf03-verification/closure.json",
     "wp06_identity_bootstrap_plan": "WP06_IDENTITY_BOOTSTRAP_IMPLEMENTATION_PLAN.md",
     "wp06_identity_bootstrap_report": "WP06_IDENTITY_BOOTSTRAP_IMPLEMENTATION.md",
     "wp06_identity_bootstrap_contract_source": "wp06-stage-b/identity_contract.py",
