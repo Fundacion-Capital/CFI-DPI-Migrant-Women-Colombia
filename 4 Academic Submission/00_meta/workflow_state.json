@@ -1,5 +1,5 @@
 {
-  "schema_version": 161,
+  "schema_version": 162,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,30 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_stage_b_artificial_implementation": {
+      "status": "BOUNDED_ARTIFICIAL_POLICY_STATE_COMPLETE_NATIVE_INTEGRATION_DEFERRED",
+      "tasks": 8,
+      "initial_artificial_tests": 40,
+      "final_artificial_tests": 47,
+      "independent_initial_important_findings": 7,
+      "owner_resolved_important_findings": 7,
+      "deferred_minors": 1,
+      "native_implementation_complete": false,
+      "live_backend_implemented": false,
+      "live_role_loops_implemented": false,
+      "live_case_executor_implemented": false,
+      "cases_executed": 0,
+      "host_probes": 0,
+      "process_launches": 0,
+      "live_control": 0,
+      "service_changes": 0,
+      "stata": 0,
+      "participant_processing": 0,
+      "native_provider_adopted": false,
+      "operational_adoption": false,
+      "scientific_acceptance": false,
+      "release": false
+    },
     "wp06_stage_b_implementation_plan": {
       "status": "PLAN_COMPLETE_IMPLEMENTATION_AND_EXECUTION_BLOCKED",
       "scope": "DOCUMENTARY_IMPLEMENTATION_PLAN_ONLY",
@@ -531,6 +555,18 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_stage_b_impl_01": "WP06_STAGE_B_ARTIFICIAL_IMPLEMENTATION.md",
+    "wp06_stage_b_impl_02": "wp06-stage-b/journal_protocol.py",
+    "wp06_stage_b_impl_03": "wp06-stage-b/win32_bridge.py",
+    "wp06_stage_b_impl_04": "wp06-stage-b/supervisor.py",
+    "wp06_stage_b_impl_05": "wp06-stage-b/actors.py",
+    "wp06_stage_b_impl_06": "wp06-stage-b/observer.py",
+    "wp06_stage_b_impl_07": "wp06-stage-b/launch_stage_b.py",
+    "wp06_stage_b_impl_08": "wp06-stage-b/test_stage_b.py",
+    "wp06_stage_b_impl_09": "audit-local/intake/wp06-stage-b-implementation-c46e53b/approval.json",
+    "wp06_stage_b_impl_10": "audit-local/intake/wp06-stage-b-implementation-c46e53b/review.json",
+    "wp06_stage_b_impl_11": "audit-local/intake/wp06-stage-b-implementation-c46e53b/validation.json",
+    "wp06_stage_b_impl_12": "audit-local/intake/wp06-stage-b-implementation-c46e53b-verification/closure.json",
     "wp06_stage_b_plan_01": "WP06_STAGE_B_IMPLEMENTATION_PLAN.md",
     "wp06_stage_b_plan_02": "wp06-stage-b-plan/plan.json",
     "wp06_stage_b_plan_03": "audit-local/intake/wp06-stage-b-plan-1a2f052/authorization.json",
