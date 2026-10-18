@@ -1,0 +1,196 @@
+{
+  "kind": "DOCUMENTARY_METADATA_PINS_NOT_PARTICIPANT_OR_LIVE_EVIDENCE",
+  "sources": [
+    {
+      "path": "wp06-remediation/response_template.json",
+      "bytes": 13886,
+      "sha256": "F64770918E31CC1088D03BB54378A470389299C9ABBB52FA8BC8BB0484895609"
+    },
+    {
+      "path": "wp06-preflight/decision_checkpoint.json",
+      "bytes": 2772,
+      "sha256": "41B04CCD3245EA27A6C0297601415156023ECC57AC63EE7B1465FEA7E749926F"
+    },
+    {
+      "path": "wp06-contract/construct_resolution_cards.csv",
+      "bytes": 15073,
+      "sha256": "D90ACE76DCA47A9249CFF7BD68399B4EE5D40BBBD7997395024D77183C658522"
+    },
+    {
+      "path": "wp06-stage-b-preflight/gates.json",
+      "bytes": 9336,
+      "sha256": "0FAC7B61523DE51746DF4923E75AE6680B71EDAD8BFB33C61D129E33DFA5687F"
+    },
+    {
+      "path": "wp06-operator-checkpoint/checkpoint.json",
+      "bytes": 10413,
+      "sha256": "3B324AC8168AE3BD580AD245B8A55F054375F548A0F360976ACB9AEE61A32F1B"
+    },
+    {
+      "path": "wp06-stage-a-plan/design_adoption.json",
+      "bytes": 1373,
+      "sha256": "EAED7B753194C8B54923911A11B23F32C924245297C173F718AA323B53BFCD34"
+    },
+    {
+      "path": "wp06-operational-contract/contract.json",
+      "bytes": 6794,
+      "sha256": "306435A63DA30B96F9F10314456D613AC39210635C7925F1327AB052FAD1C59B"
+    },
+    {
+      "path": "wp06-operational-contract/acceptance_plan.json",
+      "bytes": 12309,
+      "sha256": "BE76FC0A31586B9F0250087E9E4CACAA4717E8373574F009C0529025A000B834"
+    },
+    {
+      "path": "preferred-final-protocol/stage_gate_crosswalk.csv",
+      "bytes": 2589,
+      "sha256": "9041C5C09FB3435F628E4E47ACCB6DE03AD55AE3DAB67249502301C9C845F6F7"
+    },
+    {
+      "path": "preferred-final-protocol/operation_gate_crosswalk.csv",
+      "bytes": 58838,
+      "sha256": "F32335000F0933F7EEB2EA445BFF043128F1B398D78C65E66201A30347E8DAFF"
+    },
+    {
+      "path": "wp06-contract/candidate_contracts.csv",
+      "bytes": 16239,
+      "sha256": "B031530B21082012D5E37B18073684709F9C98F34D024BB1A89EE960868C37A7"
+    },
+    {
+      "path": "audit-local/intake/wp06-stage-a-implementation-c870e8b/acceptance_results.json",
+      "bytes": 33072,
+      "sha256": "4551340269500952CB00454030F7B989825EBF96C2F380ED9E44F58E6A349E1F"
+    },
+    {
+      "path": "scientific-foundation/decision_lock.json",
+      "bytes": 1074,
+      "sha256": "C758330B13818498E893950D0B1D7516253BEB311EF83ED4A90F8CACA1EF135A"
+    },
+    {
+      "path": "wp06-contract/decision_resolutions.csv",
+      "bytes": 1670,
+      "sha256": "C59CE66300C1F7AE9B099C7BCC52CFA6BF46E62904E32A109D7E7714350ACDEF"
+    },
+    {
+      "path": "wp06-remediation/remediation_contract.json",
+      "bytes": 1981,
+      "sha256": "C59B88DA861F2D2119ADFD74D7C0E3EC356A7F3D3175556E82B59C7006AE57A4"
+    },
+    {
+      "path": "WP03_PREFERRED_FINAL_SCIENTIFIC_PROTOCOL.md",
+      "bytes": 21968,
+      "sha256": "E9301616B7EB8AE542EB8439D98B4CD58A95AB2A6B66A365980F408BF02885C7"
+    },
+    {
+      "path": "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md",
+      "bytes": 16458,
+      "sha256": "3F4F9B7C567DCA8334F5F141D15976D7F8A7A94739EE61467DC76DDBD9C96F9F"
+    },
+    {
+      "path": "WP06_RETROSPECTIVE_DECISION_LOCK.md",
+      "bytes": 12167,
+      "sha256": "FC5FA3A4FB7BB5FF1C554BE118BDE78C96B0098CE070341CD459DF8917FCB611"
+    },
+    {
+      "path": "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "bytes": 20336,
+      "sha256": "8813D05109D361FD3AB7ABCABA504F137038C2242B9A50ECBF4F587B5E3D1A2C"
+    },
+    {
+      "path": "WP06_NOFIT_REMEDIATION_AND_OWNER_CHECKPOINT.md",
+      "bytes": 12228,
+      "sha256": "2554FE8557B5F0FE85C521E08971D5796E6308CC2DB62F2ADF47B413ECCA1EDF"
+    },
+    {
+      "path": "WP06_STAGE_A_ARTIFICIAL_IMPLEMENTATION.md",
+      "bytes": 8123,
+      "sha256": "06B67F663895C7519651E98A125B0E6AD74726C5DE73DEB942A2AE7A638AF0F2"
+    },
+    {
+      "path": "WP06_STAGE_B_ARTIFICIAL_IMPLEMENTATION.md",
+      "bytes": 9396,
+      "sha256": "C1B3E67944AA04889006F0BDFF94DE54DDD169119F508E16D03A6B9CE32A6ED7"
+    },
+    {
+      "path": "WP06_NATIVE_PROVIDER_ARTIFICIAL.md",
+      "bytes": 9347,
+      "sha256": "EC5CF9C51A8B498E1872B8084773D1D3737E499B7AAE7B3CD871B77BEB310E12"
+    },
+    {
+      "path": "WP06_IDENTITY_BOOTSTRAP_IMPLEMENTATION.md",
+      "bytes": 8923,
+      "sha256": "BB531FC19A406D5106CF93D16E41FD69093DE50D85F8D6C6A8DCAA5C2C51C999"
+    },
+    {
+      "path": "WP06_DEPLOYMENT_HANDOFF_EVIDENCE_CONTRACT.md",
+      "bytes": 15205,
+      "sha256": "8CC17C3CBEDA961D2DA43E081AD628A711B55D933FECFF1891D255F89172E043"
+    },
+    {
+      "path": "scientific-foundation/sample_filter_evidence.csv",
+      "bytes": 1370,
+      "sha256": "D11A09E390D84CD79E71E2CFD6ADD401E0A3CB24FEC1EA4A98ABBF46BE785DAC"
+    },
+    {
+      "path": "scientific-foundation/inherited_findings.csv",
+      "bytes": 30638,
+      "sha256": "2D782C50F9416A33E69D98D7371FED1F03F565E3287EE2AC2834F3D9B70E3179"
+    },
+    {
+      "path": "scientific-foundation/historical_analysis_coverage.csv",
+      "bytes": 28281,
+      "sha256": "F1E316433CCD8EA55A82A7B0AD721FC1C30A842E7170CB7A7182F7BBED14C6F7"
+    },
+    {
+      "path": "scientific-foundation/core_equation_coverage.csv",
+      "bytes": 15496,
+      "sha256": "02079504080F66556CDA21E5FD0AF9EE65A56561761A79904556A6C6D5EB2DF7"
+    },
+    {
+      "path": "scientific-foundation/downstream_outcome_roles.csv",
+      "bytes": 28011,
+      "sha256": "51321F5E75223F5905D0A0FC881104C7901CCA65DA1167C0EC2923C995478151"
+    },
+    {
+      "path": "scientific-foundation/exhibit_coverage.csv",
+      "bytes": 21519,
+      "sha256": "CB32FE471B6A9AB3F3AD858133CDE652DE63A12800A91C6A33A876E57BC80064"
+    },
+    {
+      "path": "measurement-crosswalk/overlap_pairs.csv",
+      "bytes": 13167,
+      "sha256": "AAE7B6702B33E148462A6C44C56BFFD4AF4C0BE449860EE8F8C472A48B4CD72A"
+    },
+    {
+      "path": "audit-local/intake/wp06-native-provider-852c236/validation.json",
+      "bytes": 120234,
+      "sha256": "5622930E5C85FB593C888AC7D6DEBBF2AB585A300E6733749F27E8B7AFEB426A"
+    },
+    {
+      "path": "audit-local/intake/wp06-native-provider-852c236-verification/closure.json",
+      "bytes": 743,
+      "sha256": "9DC372677A545ACD0BDC2A90133C5A45EB48A50973F0DD8C82683FFF92874831"
+    },
+    {
+      "path": "audit-local/intake/wp06-identity-bootstrap-5e0d6b0/validation.json",
+      "bytes": 99132,
+      "sha256": "B7D3B235ED0C53FF74FC76B546AE14B1A4B673421F45C19E455DC6DF43FC6944"
+    },
+    {
+      "path": "audit-local/intake/wp06-identity-bootstrap-5e0d6b0-verification/closure.json",
+      "bytes": 752,
+      "sha256": "573D973D4E04AD934A2812D8607C3E6A8752E02254B6A56C5ECAEEDEC3D1D822"
+    },
+    {
+      "path": "audit-local/intake/wp06-deployment-contract-831bf03/validation.json",
+      "bytes": 70668,
+      "sha256": "B4E4C4EB6AC4629E38933C5DA7DC8E038968D22787C6E8BCB6CE1C7E305FA883"
+    },
+    {
+      "path": "audit-local/intake/wp06-deployment-contract-831bf03-verification/closure.json",
+      "bytes": 742,
+      "sha256": "BD3AADFC65503443C5C755D8FC124E253B2B0E8BB850B99D4C224C6A2410F363"
+    }
+  ],
+  "limitations": "Historical seals/results characterize their original scopes. No institution, host or scientific result newly verified."
+}

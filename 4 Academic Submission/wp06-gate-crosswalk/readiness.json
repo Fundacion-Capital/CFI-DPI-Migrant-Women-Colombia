@@ -1,0 +1,166 @@
+{
+  "status": "DOCUMENTARY_CROSSWALK_ALL_EXECUTION_GATES_HELD",
+  "execution_ready": false,
+  "activated": false,
+  "fits_authorized": 0,
+  "participant_processing_authorized": 0,
+  "operational_adoption": false,
+  "scientific_approval": false,
+  "release": false,
+  "gate_counts": {
+    "AUTHOR": 9,
+    "MEASURE": 15,
+    "OP": 15,
+    "PROFILE": 7,
+    "CASE": 28,
+    "CONTROL": 12,
+    "ACADEMIC": 8
+  },
+  "pending_external_responses": 24,
+  "proposed_recipes": 12,
+  "downstream_operation_slots": 88,
+  "conditional_only": [
+    "OP:G13",
+    "OP:G14",
+    "CASE:AC21"
+  ],
+  "qualification": "Dependency links are documentary requirements, never activation switches. AUTHOR:OWNER_FITS is for new proposed fits; no historical authorization is erased.",
+  "scientific_evidence_gaps": [
+    {
+      "issue_id": "WP04-ELIG01",
+      "gate_keys": [
+        "AUTHOR:D1_population",
+        "AUTHOR:D2_sample"
+      ],
+      "evidence_sources": [
+        "scientific-foundation/sample_filter_evidence.csv"
+      ],
+      "remaining": "Define positive eligibility before any authorized retained-code/sample audit; historical exclusions and N423 do not certify the academic target population.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-POP01",
+      "gate_keys": [
+        "AUTHOR:D1_population",
+        "AUTHOR:D4_scope"
+      ],
+      "evidence_sources": [
+        "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+      ],
+      "remaining": "Distinguish household remittance receipt from personal receipt/principal management, migrant status and actual DPI use; preserve purposive coverage limits.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-ETH01",
+      "gate_keys": [
+        "AUTHOR:D1_rights",
+        "ACADEMIC:G7"
+      ],
+      "evidence_sources": [
+        "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+      ],
+      "remaining": "Obtain applicable ethics/consent/secondary-use/publication/privacy-history evidence or document limits with institutional guidance; absence here is not proof of nonexistence.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-TIME01",
+      "gate_keys": [
+        "AUTHOR:D2_sample",
+        "MEASURE:IVS"
+      ],
+      "evidence_sources": [
+        "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+      ],
+      "remaining": "Historical export settings unavailable; retain unverified timestamp causation, actual-version semantics and justified tenure/reference year; no timestamp normalization adopted.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-GEO01",
+      "gate_keys": [
+        "AUTHOR:D1_population",
+        "AUTHOR:D2_sample",
+        "AUTHOR:D4_scope"
+      ],
+      "evidence_sources": [
+        "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+      ],
+      "remaining": "Justify geographic coverage and Meta-to-Bogota regression pooling before interpreting geography; no recoding approved.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-MEAS01",
+      "gate_keys": [
+        "AUTHOR:D3_measurement",
+        "ACADEMIC:G5"
+      ],
+      "evidence_sources": [
+        "wp06-contract/construct_resolution_cards.csv",
+        "measurement-crosswalk/overlap_pairs.csv"
+      ],
+      "remaining": "Adjudicate fifteen recipes, available-term/nested weights, direction/categories/routes/sentinels and105 item-map relationships; overlap metadata are not empirical correlations.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "WP04-CORR01",
+      "gate_keys": [
+        "ACADEMIC:G6",
+        "AUTHOR:D4_scope"
+      ],
+      "evidence_sources": [
+        "scientific-foundation/historical_analysis_coverage.csv"
+      ],
+      "remaining": "Locate dedicated source/target/sample/missingness correlation-stage reconciliation receipt; the reviewed handoff documents a coverage gap, not that all correlations are wrong.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "I3-REPLAY-D01",
+      "gate_keys": [
+        "ACADEMIC:G6",
+        "AUTHOR:D6_reporting"
+      ],
+      "evidence_sources": [
+        "scientific-foundation/historical_analysis_coverage.csv"
+      ],
+      "remaining": "Retain open historical I3 replay qualification; displayed comparison alone does not close it. Locate exact scope/evidence before any separately authorized diagnostic.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "PREFERRED_FINAL_SCIENTIFIC_HOLD",
+      "gate_keys": [
+        "ACADEMIC:G2",
+        "AUTHOR:D3_measurement",
+        "AUTHOR:D6_reporting"
+      ],
+      "evidence_sources": [
+        "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+      ],
+      "remaining": "Exact3199-field preferred-final reproduction does not settle severe cutpoint uncertainty, near-boundary/scale concerns, stability/enumeration/local dependence or scientific selection.",
+      "resolved_by_this_package": false
+    },
+    {
+      "issue_id": "DOWNSTREAM_VALIDATION_AND_EXHIBIT_GAP",
+      "gate_keys": [
+        "ACADEMIC:G4",
+        "ACADEMIC:G5",
+        "ACADEMIC:G6",
+        "ACADEMIC:G7"
+      ],
+      "evidence_sources": [
+        "scientific-foundation/historical_analysis_coverage.csv",
+        "scientific-foundation/core_equation_coverage.csv",
+        "scientific-foundation/downstream_outcome_roles.csv",
+        "scientific-foundation/exhibit_coverage.csv"
+      ],
+      "remaining": "Carry103 finding entries without claiming independent deduplication; retain45 equation/24 family,82 downstream-role and83 artifact coverage. Qualify shared-item/class-error, IAT-IVS denominator/rounding and unique-producer/exhibit interpretation before downstream claims.",
+      "resolved_by_this_package": false
+    }
+  ],
+  "inherited_coverage_counts": {
+    "scientific-foundation/inherited_findings.csv": 103,
+    "scientific-foundation/historical_analysis_coverage.csv": 24,
+    "scientific-foundation/core_equation_coverage.csv": 45,
+    "scientific-foundation/downstream_outcome_roles.csv": 82,
+    "scientific-foundation/exhibit_coverage.csv": 83,
+    "measurement-crosswalk/overlap_pairs.csv": 105
+  }
+}
