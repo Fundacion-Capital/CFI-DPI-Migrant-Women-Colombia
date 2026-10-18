@@ -1,5 +1,5 @@
 {
-  "schema_version": 162,
+  "schema_version": 163,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,33 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_native_provider_artificial": {
+      "status": "ARTIFICIAL_SOURCE_IMPLEMENTATION_SUBJECT_TO_FINAL_SEAL_RUNTIME_UNADOPTED",
+      "owner_checkpoint": "852c23686b292b9d133d9d500dad9fa05e63e6fa",
+      "scope": "N01-N05 residual ABI adapter/provider and bounded role/channel composition; artificial-only",
+      "final_artificial_tests": 81,
+      "unchanged_historical_regression_tests": 47,
+      "new_tests": 34,
+      "inert_documentary_tests_per_mode": 17,
+      "independent_review_important": 6,
+      "independent_review_minor": 1,
+      "owner_resolved_important": 7,
+      "single_owner_correction_pass": true,
+      "second_review_claimed": false,
+      "full_native_integration_complete": false,
+      "four_process_identity_contract_resolved": false,
+      "operational_adoption": false,
+      "scientific_acceptance": false,
+      "release": false,
+      "host_probes": 0,
+      "actor_launches": 0,
+      "live_control": 0,
+      "service_changes": 0,
+      "stata": 0,
+      "participant_processing": 0,
+      "acceptance": "Only actual new validation seal and separate closure govern bounded acceptance; old packets and gates unchanged",
+      "next": "Artificial-only source-exact run/actor/target identity and authenticated bootstrap integration contract; no automatic host or fit authority"
+    },
     "wp06_stage_b_artificial_implementation": {
       "status": "BOUNDED_ARTIFICIAL_POLICY_STATE_COMPLETE_NATIVE_INTEGRATION_DEFERRED",
       "tasks": 8,
@@ -555,6 +582,18 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_native_provider_report": "WP06_NATIVE_PROVIDER_ARTIFICIAL.md",
+    "wp06_native_provider_backend": "wp06-stage-b/native_backend.py",
+    "wp06_native_provider_authority": "wp06-stage-b/providers.py",
+    "wp06_native_provider_runtime": "wp06-stage-b/native_runtime.py",
+    "wp06_native_provider_tests": "wp06-stage-b/test_native_backend.py",
+    "wp06_native_provider_entry": "audit-local/intake/wp06-native-provider-852c236/entry.json",
+    "wp06_native_provider_approval": "audit-local/intake/wp06-native-provider-852c236/approval.json",
+    "wp06_native_provider_ledger": "audit-local/intake/wp06-native-provider-852c236/progress.md",
+    "wp06_native_provider_review": "audit-local/intake/wp06-native-provider-852c236/review.json",
+    "wp06_native_provider_audit": "audit-local/intake/wp06-native-provider-852c236/audit.py",
+    "wp06_native_provider_seal": "audit-local/intake/wp06-native-provider-852c236/validation.json",
+    "wp06_native_provider_closure": "audit-local/intake/wp06-native-provider-852c236-verification/closure.json",
     "wp06_stage_b_impl_01": "WP06_STAGE_B_ARTIFICIAL_IMPLEMENTATION.md",
     "wp06_stage_b_impl_02": "wp06-stage-b/journal_protocol.py",
     "wp06_stage_b_impl_03": "wp06-stage-b/win32_bridge.py",
