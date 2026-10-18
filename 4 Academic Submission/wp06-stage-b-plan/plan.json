@@ -1,0 +1,693 @@
+{
+  "contract_id": "WP06_STAGE_B_DISPOSABLE_V1",
+  "kind": "DOCUMENTARY_IMPLEMENTATION_PLAN_ONLY",
+  "date": "2026-10-18",
+  "status": "PLAN_COMPLETE_IMPLEMENTATION_AND_EXECUTION_BLOCKED",
+  "authority": {
+    "process_launches": 0,
+    "live_control": 0,
+    "service_changes": 0,
+    "live_probes": 0,
+    "stata_execution": 0,
+    "participant_processing": 0,
+    "fits": 0,
+    "process_kills": 0,
+    "release": 0,
+    "stage_b_execution": 0
+  },
+  "source_pins": [
+    {
+      "file": "4 Academic Submission/WP06_STAGE_B_DESIGN_AND_NOEXEC_PREFLIGHT.md",
+      "bytes": 28489,
+      "sha256": "57274F410D4B71969957530B1B1855D2446455EEF17BD9AA1715456425E196C2"
+    },
+    {
+      "file": "4 Academic Submission/wp06-stage-b-preflight/design.json",
+      "bytes": 3830,
+      "sha256": "752B24BE9C500FCD89CEA3D5EBBDBA8CEB074B1C7B8FB7DB249AE11BB95C4773"
+    },
+    {
+      "file": "4 Academic Submission/wp06-stage-b-preflight/gates.json",
+      "bytes": 9336,
+      "sha256": "0FAC7B61523DE51746DF4923E75AE6680B71EDAD8BFB33C61D129E33DFA5687F"
+    },
+    {
+      "file": "4 Academic Submission/wp06-stage-b-preflight/cases.json",
+      "bytes": 7374,
+      "sha256": "7A4A65A5FFB754C200BAA995D0F4351DE7D739438AE0F00855A58E2B9FA1E6E5"
+    },
+    {
+      "file": "4 Academic Submission/wp06-stage-b-preflight/sources.json",
+      "bytes": 6457,
+      "sha256": "8B7A4B3113F2BD8E3AF8A7F5024196D9DD68F985469A050DE29AC3188F79F8CB"
+    },
+    {
+      "file": "4 Academic Submission/audit-local/intake/wp06-stage-b-preflight-1516520/validation.json",
+      "bytes": 6179,
+      "sha256": "7ED9D52B0821A91D6C19BBA204962C4AA4C7AB3FB162BEE9913302A19875464A"
+    },
+    {
+      "file": "4 Academic Submission/audit-local/intake/wp06-stage-b-preflight-1516520-verification/closure.json",
+      "bytes": 760,
+      "sha256": "0EFED81EB93832D481C29FD3DB0B2C5DFCEB04B74C21163924F3D9E56A1F8A51"
+    }
+  ],
+  "future_files": [
+    "wp06-stage-b/launch_stage_b.py",
+    "wp06-stage-b/observer.py",
+    "wp06-stage-b/supervisor.py",
+    "wp06-stage-b/actors.py",
+    "wp06-stage-b/win32_bridge.py",
+    "wp06-stage-b/journal_protocol.py",
+    "wp06-stage-b/test_stage_b.py"
+  ],
+  "enforcement_stages": [
+    {
+      "id": "PRECREATION",
+      "obligations": [
+        "G01_POLICY",
+        "G02_POLICY",
+        "G03_POLICY",
+        "G04_POLICY",
+        "G05_POLICY",
+        "G06_POLICY",
+        "G07_PLAN",
+        "G08_POLICY",
+        "G09_LIMITS",
+        "G10_PLAN",
+        "G11_POLICY",
+        "G12_POLICY",
+        "G15_PLAN"
+      ],
+      "allowed": [
+        "APPROVE_EXACT_BUILD_SCOPE_LIMITS_AND_EXPECTED_RESOURCE_MANIFEST"
+      ],
+      "blocked": [
+        "ACTOR_CREATION_WITHOUT_ALL_PRECREATION_DECISIONS"
+      ]
+    },
+    {
+      "id": "QUIESCENT_BOOTSTRAP",
+      "obligations": [
+        "ALL_PRECREATION_DECISIONS_AUTHENTICATED",
+        "BOUNDED_BOOTSTRAP_CEILING_AND_LAUNCH_CAPS"
+      ],
+      "allowed": [
+        "CREATE_ONLY_PREDECLARED_IDLE_ACTORS_AND_PRIVATE_RESOURCES",
+        "COLLECT_ACTUAL_IDENTITY_CLOCK_PEER_AND_RESOURCE_EVIDENCE"
+      ],
+      "blocked": [
+        "WORK_DISPATCH",
+        "FAULT_STIMULUS",
+        "LIVE_CONTROL",
+        "TERMINATION",
+        "RETRY_OR_EXTRA_LAUNCH_ON_FAILURE"
+      ]
+    },
+    {
+      "id": "PREARM_WORK_FAULT",
+      "obligations": [
+        "ALL_PRECREATION_DECISIONS_AUTHENTICATED",
+        "G04_OBSERVED",
+        "G07_OBSERVED",
+        "G08_OBSERVED",
+        "G09_RUNTIME_BOUND",
+        "G10_ARMED",
+        "G11_EXACT_FAULT_AUTHORITY",
+        "RESERVATION_AND_SINGLE_USE_SLOT_COMMITTED"
+      ],
+      "allowed": [
+        "ONLY_EXACT_SEPARATELY_AUTHORIZED_CASE_WORK_AND_FAULT"
+      ],
+      "blocked": [
+        "MISSING_RUNTIME_BINDING",
+        "UNBOUNDED_CALIBRATION",
+        "IMPLICIT_RETRY"
+      ]
+    },
+    {
+      "id": "CONDITIONAL_FALLBACK",
+      "obligations": [
+        "ALL_PREARM_OBLIGATIONS",
+        "G13_PROFILE_REVISION",
+        "G14_EXACT_TARGET_TERMINATION_GRANT"
+      ],
+      "allowed": [
+        "ONLY_AC21_EXACT_OWNED_WORKER_REQUEST_WITHIN_UNCHANGED_CEILING"
+      ],
+      "blocked": [
+        "DEFAULT_FALLBACK",
+        "PID_ONLY_TARGETING",
+        "RETRY"
+      ]
+    },
+    {
+      "id": "COMPLETION",
+      "obligations": [
+        "ALL_APPLICABLE_CASE_GATES",
+        "WORKER_APPLICATION_OBSERVED",
+        "SAME_RETAINED_HANDLE_EXIT",
+        "G15_OBSERVED_RESOURCE_CLEANUP",
+        "L_OBSERVES_O_EXIT",
+        "FULL_CASE_COVERAGE_OR_HOLD"
+      ],
+      "allowed": [
+        "ASSESS_EVIDENCE_AND_PRESERVE_DISPOSITION"
+      ],
+      "blocked": [
+        "INFER_EXIT_FROM_REQUEST",
+        "RELEASE_OR_SCIENTIFIC_APPROVAL"
+      ]
+    }
+  ],
+  "pending_runtime": {
+    "windows_build": null,
+    "interpreter_path": null,
+    "interpreter_sha256": null,
+    "launch_attestor_pid": null,
+    "process_inventory": null,
+    "host_id": null,
+    "boot_id": null,
+    "qpc_frequency_hz": null,
+    "clock_domain_proof": null,
+    "acl_evidence": null,
+    "credential_lifecycle_evidence": null,
+    "active_store_path": null,
+    "archive_path": null,
+    "retention_years": null,
+    "execution_budget_ns": null,
+    "cleanup_budget_ns": null,
+    "ipc_budget_ns": null,
+    "heartbeat_interval_ns": null,
+    "heartbeat_loss_budget_ns": null,
+    "worker_self_ceiling_ns": null,
+    "shutdown_budget_ns": null,
+    "scheduling_delay_bound_ns": null,
+    "active_build_digest": null,
+    "process_launch_grant": null,
+    "fault_grant": null,
+    "fallback_profile_revision": null,
+    "termination_grant": null
+  },
+  "implementation_authorized": false,
+  "execution_authorized": false,
+  "scientific_acceptance": false,
+  "tasks": [
+    {
+      "id": "B01",
+      "title": "Contracts, authenticated phase admission and integer time",
+      "depends_on": [],
+      "files": [
+        "wp06-stage-b/journal_protocol.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "ContractTests",
+      "tests": [
+        "test_binding_rejects_missing_extra_bool_or_wrong_generation",
+        "test_envelope_rejects_tamper_role_replay_gap_and_oversize",
+        "test_policy_does_not_satisfy_observed_prearm",
+        "test_decision_requires_pinned_verifier_scope_epoch_and_expiry",
+        "test_tick_floor_equality_and_one_tick_ambiguity"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B02",
+      "title": "Reservation journal and replay quarantine",
+      "depends_on": [
+        "B01"
+      ],
+      "files": [
+        "wp06-stage-b/journal_protocol.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "JournalTests",
+      "tests": [
+        "test_prepare_commits_binding_before_arm",
+        "test_duplicate_or_uncertain_prepare_never_reopens",
+        "test_stale_high_watermark_recovery_blocks_dispatch",
+        "test_postattempt_persistence_failure_cannot_resignal",
+        "test_readers_observe_complete_committed_records"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B03",
+      "title": "Owned Windows boundary and I/O lifetimes",
+      "depends_on": [
+        "B01"
+      ],
+      "files": [
+        "wp06-stage-b/win32_bridge.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "BridgeTests",
+      "tests": [
+        "test_import_and_missing_admission_make_no_native_call",
+        "test_bootstrap_uses_exact_executable_environment_and_handle_allowlist",
+        "test_owned_token_checks_all_binding_fields_before_signal",
+        "test_cancel_request_retains_buffer_until_observed_completion",
+        "test_fallback_requires_both_grants_and_same_handle_exit"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B04",
+      "title": "Independent supervisor single-use stop path",
+      "depends_on": [
+        "B01",
+        "B02",
+        "B03"
+      ],
+      "files": [
+        "wp06-stage-b/supervisor.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "SupervisorTests",
+      "tests": [
+        "test_dispatch_denied_until_committed_prearm",
+        "test_due_stop_survives_blocked_controller_queue_and_journal",
+        "test_deadline_and_controller_loss_consume_once",
+        "test_supervisor_loss_never_causes_resend",
+        "test_postaction_unknown_stays_consumed_and_holds_evidence"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B05",
+      "title": "Fixed actor transitions",
+      "depends_on": [
+        "B01",
+        "B03",
+        "B04"
+      ],
+      "files": [
+        "wp06-stage-b/actors.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "ActorTests",
+      "tests": [
+        "test_blocked_work_does_not_block_receiver_transition",
+        "test_stop_applied_requires_current_exact_event_and_lease",
+        "test_self_ceiling_exit_does_not_claim_supervisor_application",
+        "test_second_controller_is_fresh_not_resumed",
+        "test_worker_replacement_preserves_old_generation_and_rejects_stale_records"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B06",
+      "title": "Independent evidence and cleanup closure",
+      "depends_on": [
+        "B01",
+        "B03",
+        "B04",
+        "B05"
+      ],
+      "files": [
+        "wp06-stage-b/observer.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "ObserverTests",
+      "tests": [
+        "test_signal_ack_or_natural_exit_cannot_prove_application",
+        "test_wrong_handle_or_replacement_exit_cannot_close_original",
+        "test_pending_io_or_missing_resource_stays_hold_without_kill",
+        "test_observer_cannot_self_attest_final_exit",
+        "test_late_ambiguous_or_artificial_evidence_cannot_pass_real_case"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B07",
+      "title": "Deny-by-default staged orchestration",
+      "depends_on": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06"
+      ],
+      "files": [
+        "wp06-stage-b/launch_stage_b.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "LaunchTests",
+      "tests": [
+        "test_default_entry_denies_before_any_native_call",
+        "test_quiescent_bootstrap_cannot_dispatch_fault_or_control",
+        "test_bootstrap_failure_consumes_allowance_without_replacement_or_kill",
+        "test_total_and_concurrent_caps_and_no_resume_enforced",
+        "test_untrusted_provider_or_changed_build_revokes_admission"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    },
+    {
+      "id": "B08",
+      "title": "Integration fixtures and implementation audit",
+      "depends_on": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07"
+      ],
+      "files": [
+        "wp06-stage-b/journal_protocol.py",
+        "wp06-stage-b/win32_bridge.py",
+        "wp06-stage-b/supervisor.py",
+        "wp06-stage-b/actors.py",
+        "wp06-stage-b/observer.py",
+        "wp06-stage-b/launch_stage_b.py",
+        "wp06-stage-b/test_stage_b.py"
+      ],
+      "test_class": "IntegrationTests",
+      "tests": [
+        "test_ac17_ac18_independence_and_fresh_client_model",
+        "test_ac19_retained_handle_variant_forces_full_case_hold",
+        "test_ac20_transport_uncertainty_never_duplicates_control",
+        "test_ac21_disabled_and_exact_grant_branch_remains_conditional",
+        "test_ac22_full_inventory_and_launcher_exit_evidence_required"
+      ],
+      "status": "NOT_IMPLEMENTED",
+      "steps": [
+        "WRITE_NAMED_ARTIFICIAL_TESTS",
+        "PRESERVE_EXPECTED_RED_OR_CHARACTERIZATION_RECEIPT",
+        "IMPLEMENT_EXACT_INTERFACE_WITHOUT_RUNTIME_ACTIVATION",
+        "PRESERVE_CUMULATIVE_NORMAL_AND_OPTIMIZED_GREEN",
+        "AUDIT_SPEC_INTERFACE_AND_AUTHORITY_BOUNDARIES",
+        "PREPARE_COMMIT_TITLE_BODY_NO_GIT_ACTION"
+      ],
+      "run_only_after_separate_approval": true
+    }
+  ],
+  "requirements": [
+    {
+      "id": "D01",
+      "tasks": [
+        "B01",
+        "B07",
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D02",
+      "tasks": [
+        "B03",
+        "B06",
+        "B07"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D03",
+      "tasks": [
+        "B05",
+        "B07"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D04",
+      "tasks": [
+        "B03",
+        "B07"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D05",
+      "tasks": [
+        "B03",
+        "B06"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D06",
+      "tasks": [
+        "B01",
+        "B03",
+        "B05"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D07",
+      "tasks": [
+        "B02",
+        "B04"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D08",
+      "tasks": [
+        "B04",
+        "B05",
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D09",
+      "tasks": [
+        "B04",
+        "B06",
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D10",
+      "tasks": [
+        "B02"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D11",
+      "tasks": [
+        "B01",
+        "B03"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D12",
+      "tasks": [
+        "B01",
+        "B03"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D13",
+      "tasks": [
+        "B03",
+        "B06"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D14",
+      "tasks": [
+        "B01",
+        "B04",
+        "B06"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D15",
+      "tasks": [
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D16",
+      "tasks": [
+        "B05",
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D17",
+      "tasks": [
+        "B03",
+        "B06",
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D18",
+      "tasks": [
+        "B01",
+        "B07"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    },
+    {
+      "id": "D19",
+      "tasks": [
+        "B08"
+      ],
+      "evidence_kind": "FUTURE_IMPLEMENTATION_AND_ARTIFICIAL_TESTS_NOT_RUNTIME_PROOF"
+    }
+  ],
+  "case_crosswalk": [
+    {
+      "id": "AC17",
+      "tasks": [
+        "B04",
+        "B05",
+        "B06",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "NO_RUNTIME_EVIDENCE"
+    },
+    {
+      "id": "AC18",
+      "tasks": [
+        "B04",
+        "B05",
+        "B07",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "NO_RUNTIME_EVIDENCE"
+    },
+    {
+      "id": "AC19",
+      "tasks": [
+        "B03",
+        "B05",
+        "B06",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "REPLACEMENT_ONLY_FULL_AC19_HOLD_NUMERIC_PID_REUSE_UNAVAILABLE"
+    },
+    {
+      "id": "AC20",
+      "tasks": [
+        "B01",
+        "B03",
+        "B04",
+        "B06",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "NO_RUNTIME_EVIDENCE"
+    },
+    {
+      "id": "AC21",
+      "tasks": [
+        "B03",
+        "B06",
+        "B07",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "DISABLED_PENDING_PROFILE_REVISION_AND_EXACT_TARGET_GRANT"
+    },
+    {
+      "id": "AC22",
+      "tasks": [
+        "B03",
+        "B06",
+        "B07",
+        "B08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_authorized": false,
+      "limit": "NO_RUNTIME_EVIDENCE"
+    }
+  ],
+  "handoff": {
+    "recommended_method": "NATIVE_AFTER_PLAN_REVIEW_AND_EXPLICIT_IMPLEMENTATION_APPROVAL",
+    "method_selected": false,
+    "next_scope": "REVIEW_PLAN_THEN_ARTIFICIAL_ONLY_IMPLEMENTATION_NO_LAUNCH",
+    "runtime_adoption": false
+  },
+  "review": {
+    "method": "OWNER_SPEC_COVERAGE_STEP_INTERFACE_AND_PROPORTION_SELF_REVIEW",
+    "independent_review_performed": false
+  }
+}

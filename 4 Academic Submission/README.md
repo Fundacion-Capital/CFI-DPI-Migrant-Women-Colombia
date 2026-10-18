@@ -984,3 +984,8 @@ The exact Stage-A plan was approved. The isolated journal, authenticated synthet
 ### Stage-B design and no-execution preflight — 18 October 2026
 
 The [exact Stage-B design/preflight](WP06_STAGE_B_DESIGN_AND_NOEXEC_PREFLIGHT.md) defines owned disposable roles, independent control/evidence, six AC17–AC22 plans and15pending external gates. Documentary validation is not runtime eligibility: all27runtime facts remain null, all six cases NOT_EXECUTED, all launch/control/service/engine/research authorities zero. StageA remains sealed and unchanged; its stored results were revalidated, not rerun. AC21 remains conditional/disabled under cooperative-only profile; no PID-reuse success is invented. Next is explicit design review and a separately approved isolated implementation plan, not a process launch or test run.
+
+
+### Isolated Stage-B implementation plan — 18 October 2026
+
+The [implementation plan](WP06_STAGE_B_IMPLEMENTATION_PLAN.md) and [task/coverage manifest](wp06-stage-b-plan/plan.json) define eight dependency-ordered tasks, 40 prospective artificial tests and 19 design obligations across the same seven future files. This is planning only: none of the eight tasks or six AC17–AC22 runtime cases is implemented/executed. The five-phase gate mapping and all pending/null facts are inherited exactly; AC19 full numeric-reuse acceptance remains HOLD and AC21 disabled. Native implementation is recommended but not selected/authorized. Owner plan self-review, fresh inert metadata checks, preservation seal and separate readback govern documentary closure only. Next is owner review and explicit artificial-only implementation authority, not bootstrap, host probes, live control or research execution.
