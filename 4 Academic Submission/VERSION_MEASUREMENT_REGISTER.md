@@ -1059,3 +1059,8 @@ Current handoff: [operator implementation-selection checkpoint](WP06_OPERATOR_IM
 ### Scoped design approval and exact Stage-A plan — 18 October 2026
 
 The owner approved O01–O07 recommended profiles for artificial development only. The new [Stage-A implementation plan](WP06_STAGE_A_IMPLEMENTATION_PLAN.md) records the scoped approval, exact file/interface boundary and AC01–AC16 fixture design. Status: PLAN_REVIEW_REQUIRED; no new operational code, cases or live actions executed. Earlier pending records remain immutable; production budgets/paths/retention and institutional adoption remain unresolved. Next is review of this exact plan before its artificial implementation, not Stage B/C, service integration or research execution.
+
+
+### Stage-A artificial implementation — 18 October 2026
+
+The exact Stage-A plan was approved. The isolated journal, authenticated synthetic protocol and lifecycle harness are implemented with separate AC01–AC16 fixture results; see the [Stage-A implementation report](WP06_STAGE_A_ARTIFICIAL_IMPLEMENTATION.md). Final owner validation: 39 new tests normally/optimized plus 109 named predecessors; the single independent review's cancellation-before-reservation finding was reproduced and corrected in one owner pass. Final acceptance and preservation receipts govern closure, not superseded candidates. All prior packets, catalogue statuses and institutional responses remain preserved. No live transport/process/supervisor/service integration, Stata, participant processing, fit or release. AC17–AC28 stay unexecuted; any next Stage-B design/authorization is separate.

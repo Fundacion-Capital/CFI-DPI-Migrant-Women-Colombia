@@ -1,5 +1,5 @@
 {
-  "schema_version": 158,
+  "schema_version": 159,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,22 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_stage_a_implementation": {
+      "status": "STAGE_A_ARTIFICIAL_ONLY_ACCEPTED_NOT_OPERATIONAL",
+      "exact_plan_approved": true,
+      "scope": "A_ARTIFICIAL_ONLY",
+      "artificial_cases": 16,
+      "stage_b_c_cases_executed": 0,
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "live_probe_authority": 0,
+      "live_stop_authority": 0,
+      "process_kill_authority": 0,
+      "operational_adoption": false,
+      "scientific_acceptance": false,
+      "release": false
+    },
     "wp06_stage_a_plan": {
       "status": "DESIGNS_APPROVED_EXACT_STAGE_A_PLAN_REVIEW_REQUIRED",
       "profile_design_approvals": 7,
@@ -485,6 +501,16 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_stage_a_impl_01": "WP06_STAGE_A_ARTIFICIAL_IMPLEMENTATION.md",
+    "wp06_stage_a_impl_02": "wp06-stage-a/journal.py",
+    "wp06_stage_a_impl_03": "wp06-stage-a/protocol.py",
+    "wp06_stage_a_impl_04": "wp06-stage-a/harness.py",
+    "wp06_stage_a_impl_05": "wp06-stage-a/test_stage_a.py",
+    "wp06_stage_a_impl_06": "audit-local/intake/wp06-stage-a-implementation-c870e8b/approval.json",
+    "wp06_stage_a_impl_07": "audit-local/intake/wp06-stage-a-implementation-c870e8b/acceptance_results.json",
+    "wp06_stage_a_impl_08": "audit-local/intake/wp06-stage-a-implementation-c870e8b/review.json",
+    "wp06_stage_a_impl_09": "audit-local/intake/wp06-stage-a-implementation-c870e8b/validation.json",
+    "wp06_stage_a_impl_10": "audit-local/intake/wp06-stage-a-implementation-c870e8b-verification/closure.json",
     "wp06_stage_a_plan_01": "WP06_STAGE_A_IMPLEMENTATION_PLAN.md",
     "wp06_stage_a_plan_02": "wp06-stage-a-plan/design_adoption.json",
     "wp06_stage_a_plan_03": "wp06-stage-a-plan/fixture_manifest.json",
