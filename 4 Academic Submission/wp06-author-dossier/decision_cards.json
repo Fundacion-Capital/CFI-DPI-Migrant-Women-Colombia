@@ -1,0 +1,1777 @@
+[
+  {
+    "decision_id": "D1_population",
+    "construct": "",
+    "responsible_role": "authors",
+    "question": "What population and recruitment/coverage description can the authors substantiate from the actual field process and instrument?",
+    "historical_facts": {
+      "documentary_resolution": "Purposive design intent and strict instrument eligibility documented; plan/field/form eligibility differ",
+      "remaining_blocker": "Reconcile purposive recruitment, plan/field/form eligibility and claims; historical423 is not an approved academic population."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Which planning, enumerator and form rule governed actual recruitment?",
+      "What evidence supports migrant/residence and personal remittance-management claims?",
+      "Which conclusions must remain descriptive of the observed survey cohort?"
+    ],
+    "substantive_alternatives": [
+      "Specify a narrowly supported observed-cohort description without inventing national representativeness",
+      "Defend a broader defined target only with attributable recruitment and eligibility evidence",
+      "Defer unsupported population claims pending documentation"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Actual recruitment channels, locations, dates and inclusion instructions, distinguished from planning intentions",
+      "An attributable author statement of target population, achieved cohort and household versus personal/principal remittance status",
+      "Documented coverage/selection limits and the claims those limits permit"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D1_population",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D1_population"
+    ],
+    "prerequisites": [],
+    "affected_outputs": [
+      "Eligibility narrative",
+      "Descriptive denominators",
+      "Geographic/population claims",
+      "All later sample/measurement and inferential decisions"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D1_rights",
+    "construct": "",
+    "responsible_role": "institutional_research_governance",
+    "question": "What institutional ethics, consent, data-use and disclosure basis applies to this study and each proposed use?",
+    "historical_facts": {
+      "documentary_resolution": "Purposive design intent and strict instrument eligibility documented; plan/field/form eligibility differ",
+      "remaining_blocker": "Document applicable ethics approval/exemption, implemented consent versions, analysis/publication rights, restricted access and disclosure policy; limited searches do not prove absence."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Do existing documents cover the intended academic analysis and publication?",
+      "Who is authorized to interpret rights/ethics requirements and decide restrictions?",
+      "What privacy-history and public-derivative safeguards remain necessary?"
+    ],
+    "substantive_alternatives": [
+      "Document an applicable existing basis and its precise limitations after institutional review",
+      "Prepare a targeted request to locate or clarify the applicable records",
+      "Defer the affected uses while the institution determines the appropriate route"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Applicable approval/exemption determination or institutional guidance, issuing body, date and scope; do not invent retrospective clearance",
+      "Actual consent wording/versions and administration record, separated from blank templates or consent-coded participation",
+      "Analysis/secondary-use/publication/data-transfer permissions and restricted access/disclosure safeguards",
+      "Attributable statement of unavailable evidence, its consequences and the institutionally appropriate route"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D1_rights",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D1_rights"
+    ],
+    "prerequisites": [],
+    "affected_outputs": [
+      "Permitted analysis/data access",
+      "Consent/ethics statement",
+      "Public replication derivative",
+      "Publication/disclosure"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D2_sample",
+    "construct": "",
+    "responsible_role": "authors",
+    "question": "What positively defined academic sample, version policy and missingness/denominator treatment should be assessed, without silently changing historical 423?",
+    "historical_facts": {
+      "documentary_resolution": "Design rules separated from exclusion code; historical423 remains continuity reference, not approved academic sample",
+      "remaining_blocker": "Authorize a restricted positive-eligibility, version/order, missingness/sentinel and denominator audit; no exclusions, imputation, weighting or timestamp correction approved."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Which retained codes meet positive eligibility, rather than merely escaping historical exclusions?",
+      "How will actual form versions and structural skips be distinguished from nonresponse?",
+      "What evidence justifies Meta-to-Bogota pooling and reference-year scaling?"
+    ],
+    "substantive_alternatives": [
+      "Preserve the historical sample solely as a qualified continuity reference",
+      "Specify a candidate academic policy and a separately authorized validation plan before any filtering",
+      "Defer sample-dependent academic conclusions until the evidence is adequate"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Author-defined positive eligibility policy linked to D1 population/rights",
+      "Documented key/order/version, skip/sentinel/unavailable-item and denominator policies",
+      "Separate scope for any protected aggregate eligibility/membership audit; this dossier performs none",
+      "Justified reference-year/tenure, timestamp-uncertainty and geography/pooling treatment"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D2_sample",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D2_sample"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D1_rights"
+    ],
+    "affected_outputs": [
+      "Academic sample definition",
+      "All score denominators",
+      "Normalization/category policies",
+      "Comparability with historical outputs",
+      "Potential invalidation of proposed recipes"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_measurement",
+    "construct": "",
+    "responsible_role": "authors",
+    "question": "Which fifteen construct dispositions, indicator roles and justified primary versus continuity family will the authors adopt?",
+    "historical_facts": {
+      "documentary_resolution": "Narrative note is not historical scoring authority; retain code-based provenance and explicit conflicts",
+      "remaining_blocker": "Obtain all fifteen construct dispositions and explicit indicator-family/role/overlap choices; H1 continuity is not primary measurement adoption."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Are the chosen measurements comparable across available-term and form-version patterns?",
+      "Which indicators define a typology and which can count as genuinely external outcomes?",
+      "Would any sample/indicator change invalidate the twelve continuity recipes?"
+    ],
+    "substantive_alternatives": [
+      "Complete evidence review while retaining historically qualified recipes for explicitly justified roles",
+      "Prepare a new scientific specification and validation plan, without applying changes",
+      "Defer primary family selection until the fifteen decisions and overlap implications are resolved"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Completed substantive rationale for each of the fifteen construct cards, including content/direction/routing/weights/categories",
+      "A declared primary/continuity/auxiliary/excluded role map and scored-item/routing overlap assessment",
+      "A versioned specification and validation/output-impact plan for every proposed revision",
+      "Explicit H1 continuity-family disposition; it is not adopted by historical reproduction"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D3_measurement",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D3_measurement"
+    ],
+    "prerequisites": [
+      "MEASURE:IAT",
+      "MEASURE:IVS",
+      "MEASURE:IADT",
+      "MEASURE:ICDP",
+      "MEASURE:IAFF",
+      "MEASURE:IUOF",
+      "MEASURE:OQI",
+      "MEASURE:IURD",
+      "MEASURE:IETR",
+      "MEASURE:IPCS",
+      "MEASURE:IEDF",
+      "MEASURE:IAER",
+      "MEASURE:ICPF",
+      "MEASURE:IEH",
+      "MEASURE:IBPD"
+    ],
+    "affected_outputs": [
+      "Indicator family",
+      "Primary versus continuity analysis",
+      "All fifteen score interpretations",
+      "Downstream role map",
+      "Twelve proposed H1 recipes"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D4_scope",
+    "construct": "",
+    "responsible_role": "authors",
+    "question": "What descriptive/validation estimands and uncertainty treatment can be defended without national, causal or independent-validation overclaims?",
+    "historical_facts": {
+      "documentary_resolution": "No national design weights or causal effects inferred; uncertain/shared-item class comparisons cannot be independent validation",
+      "remaining_blocker": "Specify descriptive/validation-only estimands and limits; any class-error-adjusted inference needs separately justified implementation; no causal/national inference by default."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Are hard-class comparisons being used descriptively or inferentially?",
+      "How would generated-class uncertainty and shared content be addressed?",
+      "Which conclusions require evidence beyond exact replay?"
+    ],
+    "substantive_alternatives": [
+      "Define a descriptive/continuity interpretation with explicit limitations",
+      "Specify a separately justified uncertainty-aware methodological proposal for later validation",
+      "Defer inferential overlays rather than imply unsupported causal/national evidence"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Explicit purpose and estimand for descriptive, regression, interaction, typology and downstream comparisons",
+      "Class-error/multiplicity/reference/sample assumptions and justified implementation plan if inference is proposed",
+      "Outcome-role/overlap map separating defining indicators, shared-item helpers and genuinely external variables",
+      "Scientific limitations for preferred-final boundary/scale/cutpoint concerns and lack of broader identification evidence"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D4_scope",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D4_scope"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D3_measurement"
+    ],
+    "affected_outputs": [
+      "Results interpretation",
+      "Class/profile comparisons",
+      "Uncertainty and multiplicity",
+      "Causal/national language",
+      "Discussion/conclusions"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D5_operational",
+    "construct": "",
+    "responsible_role": "runtime_operator",
+    "question": "What exact future runtime/build/input/output/attempt contract could satisfy the still-held operational requirements?",
+    "historical_facts": {
+      "documentary_resolution": "Exactly12 proposed new-seed recipes, bounded outputs/options and zero retry; no duplicate original-seed fit",
+      "remaining_blocker": "Fresh exact-worker/build/capacity/native-schema binding, enforced independent deadlines, transport, prearm, exit/cleanup and applicable independent operational acceptance; artificial tests insufficient."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Which real operational evidence is still absent despite artificial148-test success?",
+      "What exact safe scope, destinations and no-retry reservations would a later contract contain?",
+      "Who can approve real principals, stores, budgets and independent acceptance?"
+    ],
+    "substantive_alternatives": [
+      "Prepare an exact operational evidence/decision specification without probing or deploying",
+      "Request attributable operator/steward/assessor information under a later authorized workflow",
+      "Defer execution while any current binding, deadline or cleanup condition is unverified"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Named accountable operator/assessor and scoped operational adoption of all seven profiles, including O01 journal/storage",
+      "Fresh worker/build/module/schema/capacity and host/boot/clock/transport/security evidence collected only under separate authority",
+      "Measured finite execution/control/IPC/cleanup budgets, independent prearm and exact exit/resource inventory",
+      "Applicable acceptance-case evidence and failure/late-output rules; conditional AC21/G13/G14 need a separate fallback revision/grant"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D5_operational",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D5_operational"
+    ],
+    "prerequisites": [
+      "OP:G01",
+      "OP:G02",
+      "OP:G03",
+      "OP:G04",
+      "OP:G05",
+      "OP:G06",
+      "OP:G07",
+      "OP:G08",
+      "OP:G09",
+      "OP:G10",
+      "OP:G11",
+      "OP:G12",
+      "OP:G15",
+      "CASE:AC17",
+      "CASE:AC18",
+      "CASE:AC19",
+      "CASE:AC20",
+      "CASE:AC22",
+      "CASE:AC23",
+      "CASE:AC24",
+      "CASE:AC25",
+      "CASE:AC26",
+      "CASE:AC27",
+      "CASE:AC28"
+    ],
+    "affected_outputs": [
+      "Any future protected execution",
+      "Operational adoption",
+      "Current-worker/native-schema binding",
+      "Budget/cleanup/reservation contract"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D6_reporting",
+    "construct": "",
+    "responsible_role": "authors",
+    "question": "What dated retrospective comparison, candidate disposition and reporting rules will the authors defend before new validation?",
+    "historical_facts": {
+      "documentary_resolution": "Retrospective status, full failure ledger, negative/inconclusive outcomes and no significance-driven selection fixed as documentary policy",
+      "remaining_blocker": "Dated retrospective candidate/comparison/tolerance/reporting rules including failures, inconclusive outcomes and no-LCA option; no significance-driven choice."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "How will exact historical matches remain distinct from scientific suitability?",
+      "What happens if stability/identification criteria are not met?",
+      "Which old exhibits require reconciliation before manuscript use?"
+    ],
+    "substantive_alternatives": [
+      "Document retrospective comparison and complete failure reporting with scope limitations",
+      "Revise a proposed comparison/reporting policy before any new authorized run",
+      "Defer candidate adoption or omit LCA claims if defensible criteria remain unmet"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "Retrospective status and a full success/failure/unavailable-target/deviation ledger",
+      "Predeclared scientific comparison/tolerance/stability/enumeration criteria and non-significance-driven selection rationale",
+      "Explicit allowed inconclusive, negative and no-LCA conclusions",
+      "Exhibit-to-source/denominator/rounding qualification, including correlation gap and I3-REPLAY-D01"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:D6_reporting",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:D6_reporting"
+    ],
+    "prerequisites": [
+      "AUTHOR:D3_measurement",
+      "AUTHOR:D4_scope"
+    ],
+    "affected_outputs": [
+      "Candidate selection/disposition",
+      "Tables/figures and denominators",
+      "Failure/negative-result reporting",
+      "Manuscript claims and appendices"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "OWNER_FITS",
+    "construct": "",
+    "responsible_role": "project_owner",
+    "question": "What exact named-fit authorization, if any, would the owner consider only after prerequisites genuinely pass?",
+    "historical_facts": {
+      "documentary_resolution": "No new execution grant in this crosswalk; historical grants remain scoped to their named completed attempts.",
+      "remaining_blocker": "Separate explicit signed authorization naming each proposed fit, version, seed/start/iteration/time limits, destinations, one attempt and no retries after prerequisites pass."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Are all applicable gates actually satisfied for the exact proposed fit?",
+      "Which named fits and destinations, if any, are within the later grant?",
+      "Does a changed sample/family invalidate this proposal before authorization?"
+    ],
+    "substantive_alternatives": [
+      "Complete review of a proposed grant dossier without granting execution",
+      "Request missing prerequisite evidence or redesign the proposed scope",
+      "Defer every new fit; do not transfer a past grant"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A distinct attributable future grant naming each approved recipe/source version/class/seed/start/iteration/time limit",
+      "Approved input/hash/order, exclusive output/reservation scope, no retries and failure/cleanup conditions",
+      "Genuine scientific/institutional/operational prerequisite evidence; twelve proposed recipes are not authority",
+      "Explicit separation from the88 downstream operation slots and historical already-completed bounded grants"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:OWNER_FITS",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:OWNER_FITS"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D1_rights",
+      "AUTHOR:D2_sample",
+      "AUTHOR:D3_measurement",
+      "AUTHOR:D4_scope",
+      "AUTHOR:D5_operational",
+      "AUTHOR:D6_reporting",
+      "AUTHOR:OWNER_INPUT"
+    ],
+    "affected_outputs": [
+      "Only specifically named future attempts",
+      "Twelve proposed continuity recipes",
+      "Failure/reservation/output scope; not downstream or release authority"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "OWNER_INPUT",
+    "construct": "",
+    "responsible_role": "project_owner",
+    "question": "What separate participant projection/access/output authorization, if any, would the owner consider after rights/sample conditions are substantiated?",
+    "historical_facts": {
+      "documentary_resolution": "No new execution grant in this crosswalk; historical grants remain scoped to their named completed attempts.",
+      "remaining_blocker": "Separate explicit participant projection/load/output scope tied to rights, eligible sample, exact version/hash/key/order and restricted destination; zero-fit profiling still needs it."
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Which exact projection and outputs, if any, may be processed?",
+      "What protected verification is needed before permission is considered?",
+      "Are internal outputs and public derivatives separately bounded?"
+    ],
+    "substantive_alternatives": [
+      "Complete review of a proposed participant-access dossier without authorizing processing",
+      "Request missing rights/sample/output-safeguard evidence",
+      "Defer access and outputs; a fit grant alone does not cover them"
+    ],
+    "options": [
+      {
+        "choice": "evidence_review_complete",
+        "meaning": "Record completion of a defined documentary review together with its substantive conclusion and limitations.",
+        "consequence": "Not an ethics determination, authenticated approval, fit/input grant, deployment adoption or release permission; separate scope-specific action remains necessary."
+      },
+      {
+        "choice": "request_evidence",
+        "meaning": "Prepare a precise request for the missing record or clarification.",
+        "consequence": "This dossier sends nothing; identify owner role and evidence needed without inventing a response or presuming the document exists."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A distinct attributable future scope naming participant fields, version/hash/key/order, membership policy and permitted operations",
+      "Restricted destinations, access/stewardship and aggregate/small-cell/disclosure limits",
+      "Rights/consent/population/measurement prerequisites and treatment of unavailable evidence",
+      "Explicit statement that zero-fit profiling still needs access/output permission and publication remains separate"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#AUTHOR:OWNER_INPUT",
+      "WP06_DOCUMENTARY_RESOLUTIONS_AND_BOUNDED_CONTRACT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "",
+    "gate_keys": [
+      "AUTHOR:OWNER_INPUT"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D1_rights",
+      "AUTHOR:D2_sample",
+      "AUTHOR:D3_measurement"
+    ],
+    "affected_outputs": [
+      "Protected sample verification",
+      "Zero-fit profiling/posteriors",
+      "Participant-derived aggregates/outputs",
+      "Separate public derivative/release"
+    ],
+    "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IAT",
+    "construct": "IAT",
+    "responsible_role": "authors",
+    "question": "Adjudicate float-boundary categories, phone/Internet relevance and sample-specific standardization; not affordability alone",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "5:420;4:2;3:1",
+      "scale_and_direction": "0-1 higher telecom access",
+      "fixed_category_contract": "<=.45 low;>.45<=.80 middle;>.80 high",
+      "normalization_standardization": "0-100 rowmean then float /100; standardized normalized score",
+      "missing_and_sentinel_contract": "Available-term rowmean; all-source-absent missing score/high category latent; 71 nominal .80 float high assignments observed",
+      "historical_regime": "Current authored replay; no original-run proof; new analysis-alias headers only",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Note39/79 boundaries differ from source45/80; do not transplant note categories"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Available-term rowmean; all-source-absent missing score/high category latent; 71 nominal .80 float high assignments observed",
+      "Note39/79 boundaries differ from source45/80; do not transplant note categories",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Adjudicate float-boundary categories, phone/Internet relevance and sample-specific standardization; not affordability alone",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IAT",
+      "wp06-contract/construct_resolution_cards.csv#IAT",
+      "IAT_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IAT_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IAT"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IVS",
+    "construct": "IVS",
+    "responsible_role": "authors",
+    "question": "Choose justified reference year/tenure and cohort scaling; distinguish legacy two-term and current three-term regimes",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "3:423",
+      "scale_and_direction": "0-1 higher vulnerability",
+      "fixed_category_contract": "<=.33 low;>.33<=.66 middle;>.66 high",
+      "normalization_standardization": "Education and occupation ordinal maps; tenure inverse observed min-max on 2026 reference year; sample SD",
+      "missing_and_sentinel_contract": "All-source-absent missing/high latent; arrival 2026 omitted; constant-tenure denominator risk; four observed float category discrepancies",
+      "historical_regime": "Old retained states 37/38/39 have no tenure term and two-term stored scores despite same authored source; IVS-05 original generation cause unverified",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note higher values mean less vulnerability; audited source higher values mean more vulnerability: polarity conflict"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "All-source-absent missing/high latent; arrival 2026 omitted; constant-tenure denominator risk; four observed float category discrepancies",
+      "Note higher values mean less vulnerability; audited source higher values mean more vulnerability: polarity conflict",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Choose justified reference year/tenure and cohort scaling; distinguish legacy two-term and current three-term regimes",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IVS",
+      "wp06-contract/construct_resolution_cards.csv#IVS",
+      "IVS_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IVS_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IVS"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IADT",
+    "construct": "IADT",
+    "responsible_role": "authors",
+    "question": "Retain perceived-capability interpretation; decide comparability of one/two/three available terms",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "3:323;2:99;1:1",
+      "scale_and_direction": "0-1 higher perceived skill",
+      "fixed_category_contract": "<=.33 low;>.33<=.66 middle;>.66 high",
+      "normalization_standardization": "Likert 1-5 to 0-1; normalized-score SD",
+      "missing_and_sentinel_contract": "Smartphone-only app-install and phone-gated sending versus universally routed safety; defensive recode 98/99 to missing; all-absent missing/high latent",
+      "historical_regime": "Current stored replay exact; no observed category precision defect; standardized counterpart omission is not a changed fit",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Perceived self-efficacy retained, not demonstrated performance; no new validation inferred"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Smartphone-only app-install and phone-gated sending versus universally routed safety; defensive recode 98/99 to missing; all-absent missing/high latent",
+      "Perceived self-efficacy retained, not demonstrated performance; no new validation inferred",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Retain perceived-capability interpretation; decide comparability of one/two/three available terms",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IADT",
+      "wp06-contract/construct_resolution_cards.csv#IADT",
+      "IADT_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IADT_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IADT"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_ICDP",
+    "construct": "ICDP",
+    "responsible_role": "authors",
+    "question": "Separate reported capability/knowledge/hypothetical scenario; adjudicate routed available-item scoring",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "4:422;2:1",
+      "scale_and_direction": "0-1 higher mixed reported and hypothetical competency",
+      "fixed_category_contract": "<=.45 low;>.45<=.80 middle;>.80 high",
+      "normalization_standardization": "0-100 component mean then float /100; normalized-score SD",
+      "missing_and_sentinel_contract": "Phone skips remove two terms; ability and hypothetical scenario are not observed task performance; all-absent missing/high latent",
+      "historical_regime": "Current replay exact; hybrid upper group contains score 1 only; fixed and empirical groups distinct",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note observable/effective skill claim exceeds reported/hypothetical items;39/79 differs from source45/80"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Phone skips remove two terms; ability and hypothetical scenario are not observed task performance; all-absent missing/high latent",
+      "Note observable/effective skill claim exceeds reported/hypothetical items;39/79 differs from source45/80",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Separate reported capability/knowledge/hypothetical scenario; adjudicate routed available-item scoring",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:ICDP",
+      "wp06-contract/construct_resolution_cards.csv#ICDP",
+      "ICDP_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "ICDP_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:ICDP"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IAFF",
+    "construct": "IAFF",
+    "responsible_role": "authors",
+    "question": "Review constant account term, OR defaults and refusal/unknown scoring; do not equate generated completeness with formal inclusion",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "4:423",
+      "scale_and_direction": "0-1 higher formal-access proxies",
+      "fixed_category_contract": "<.50 low;>=.50<=.80 middle;>.80 high",
+      "normalization_standardization": "0-100 component mean then float /100; normalized-score SD",
+      "missing_and_sentinel_contract": "Document/account OR flags 1-4; refusal/unknown mostly adverse zero; account term constant 100; all-raw-absent OR defaults supply zeros and low",
+      "historical_regime": "Exact replay; principal-product assignment is not ownership; original producing fit not established",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note39/79 differs from source50/80; account/default composition remains unresolved"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Document/account OR flags 1-4; refusal/unknown mostly adverse zero; account term constant 100; all-raw-absent OR defaults supply zeros and low",
+      "Note39/79 differs from source50/80; account/default composition remains unresolved",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Review constant account term, OR defaults and refusal/unknown scoring; do not equate generated completeness with formal inclusion",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IAFF",
+      "wp06-contract/construct_resolution_cards.csv#IAFF",
+      "IAFF_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IAFF_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IAFF"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IUOF",
+    "construct": "IUOF",
+    "responsible_role": "authors",
+    "question": "Resolve routed access denominator, 60/90-day wording and sentinel/default semantics",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "7:408;6:15",
+      "scale_and_direction": "0-1 higher mixed use proxies",
+      "fixed_category_contract": "<.50 low;>=.50<.80 middle;>=.80 high",
+      "normalization_standardization": "Raw 0-100 mean /100; preparation SD raw and analysis standardized aliases normalized",
+      "missing_and_sentinel_contract": "Optional-item genuine nonresponse distinct from N/A99 zero; nonlending refusal98 scores 100 in six cases; all-absent missing/high latent; 60 versus 90-day mismatch",
+      "historical_regime": "Old raw 40/70 and mixed raw/normalized middle logic retained separately; current recipe not all historical category states",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note40/70 differs from source50/80; use/intensity/security claims need component justification"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Optional-item genuine nonresponse distinct from N/A99 zero; nonlending refusal98 scores 100 in six cases; all-absent missing/high latent; 60 versus 90-day mismatch",
+      "Note40/70 differs from source50/80; use/intensity/security claims need component justification",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Resolve routed access denominator, 60/90-day wording and sentinel/default semantics",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IUOF",
+      "wp06-contract/construct_resolution_cards.csv#IUOF",
+      "IUOF_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IUOF_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IUOF"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_OQI",
+    "construct": "OQI",
+    "responsible_role": "authors",
+    "question": "Adjudicate KYC rowtotal/default and scale direction; QR helper is not an OQI scored component",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "9:325;8:98",
+      "scale_and_direction": "0-1 higher mixed onboarding/transaction quality",
+      "fixed_category_contract": "<45 raw low;>=45<85 middle;>=85 high",
+      "normalization_standardization": "Raw 0-100 mean /100; raw-score preparation SD",
+      "missing_and_sentinel_contract": "Legal mixed privacy pairs omitted; default KYC rowtotal gives 100 with all raw absent; other/unknown only KYC may score best; q5_4 QR not an OQI input",
+      "historical_regime": "Exact OQI scoring; adjacent QR helper version defect is not a changed OQI mean; older QR-only differences retained",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note uses IFO friction label; do not silently alias IFO to OQI or import40/70 rather than source45/85"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Legal mixed privacy pairs omitted; default KYC rowtotal gives 100 with all raw absent; other/unknown only KYC may score best; q5_4 QR not an OQI input",
+      "Note uses IFO friction label; do not silently alias IFO to OQI or import40/70 rather than source45/85",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Adjudicate KYC rowtotal/default and scale direction; QR helper is not an OQI scored component",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:OQI",
+      "wp06-contract/construct_resolution_cards.csv#OQI",
+      "OQI_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "OQI_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:OQI"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IURD",
+    "construct": "IURD",
+    "responsible_role": "authors",
+    "question": "Choose remittance-use construct/denominator; distinguish channel helper from graded index and historical regimes",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "5:349;4:51;3:21;2:2",
+      "scale_and_direction": "0-1 higher digital remittance-use proxies",
+      "fixed_category_contract": "<30 raw low;>=30<55 middle;>=55 high",
+      "normalization_standardization": "Raw 0-100 mean /100; no current preparation SD; analysis SD aliases",
+      "missing_and_sentinel_contract": "Sentinels98/99 and optional/routed gaps produce available-case means; Other channel zero differs from formal-remittance helper; all-absent missing/high latent",
+      "historical_regime": "Six authentic recipes; older graded four-term 40/70 or 45/85 versus current binary five-term 30/55; compatible is not unique producer",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note40/70 differs from source30/55 and descriptions omit current recipe/route qualifications"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Sentinels98/99 and optional/routed gaps produce available-case means; Other channel zero differs from formal-remittance helper; all-absent missing/high latent",
+      "Note40/70 differs from source30/55 and descriptions omit current recipe/route qualifications",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Choose remittance-use construct/denominator; distinguish channel helper from graded index and historical regimes",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IURD",
+      "wp06-contract/construct_resolution_cards.csv#IURD",
+      "IURD_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IURD_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IURD"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IETR",
+    "construct": "IETR",
+    "responsible_role": "authors",
+    "question": "Adjudicate nested conditional weights, route/period and fee/FX polarity before any new score",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "9:249;8:103;7:12;6:3;5:1;4:0;3:46;2:4;1:5",
+      "scale_and_direction": "0-1 higher mixed transaction efficiency",
+      "fixed_category_contract": "<45 raw low;>=45<85 middle;>=85 high",
+      "normalization_standardization": "Nine outer terms with two nested two-input means; raw /100 and analysis SD",
+      "missing_and_sentinel_contract": "174 partial means; cost/confirmation inner denominators vary; q6_14 domestic gate; FX99 best but domestic no-fee4 zero; speed6 omitted; current all-absent missing/high",
+      "historical_regime": "Five recipes; older seven-term 40/70 defaults versus nine-term 45/85; dropped fee/FX and confirmation intermediates remain ancestors",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Note40/70 differs from source45/85; simple-average wording hides nested available-case weights"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "174 partial means; cost/confirmation inner denominators vary; q6_14 domestic gate; FX99 best but domestic no-fee4 zero; speed6 omitted; current all-absent missing/high",
+      "Note40/70 differs from source45/85; simple-average wording hides nested available-case weights",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Adjudicate nested conditional weights, route/period and fee/FX polarity before any new score",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IETR",
+      "wp06-contract/construct_resolution_cards.csv#IETR",
+      "IETR_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IETR_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IETR"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IPCS",
+    "construct": "IPCS",
+    "responsible_role": "authors",
+    "question": "Separate perceptions/preferences/security behavior; contact-gated composition needs explicit policy",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "6:238;5:185",
+      "scale_and_direction": "0-100 higher mixed security perceptions/preferences",
+      "fixed_category_contract": "<45 low;>=45<85 middle;>=85 high",
+      "normalization_standardization": "Binary float rowmean 0-1 then *100; analysis SD",
+      "missing_and_sentinel_contract": "Contact q7_1 gates reaction; unknown/Other/preference codes may score zero; all-absent missing/high latent",
+      "historical_regime": "Four textual recipes; old 40/70 differs; two populated empirical groups; Figure27 exposure helper is blocking not contact",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Note40/70 differs from source45/85; preventive-behavior claim is broader than mixed perceptions/preferences"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Contact q7_1 gates reaction; unknown/Other/preference codes may score zero; all-absent missing/high latent",
+      "Note40/70 differs from source45/85; preventive-behavior claim is broader than mixed perceptions/preferences",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Separate perceptions/preferences/security behavior; contact-gated composition needs explicit policy",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IPCS",
+      "wp06-contract/construct_resolution_cards.csv#IPCS",
+      "IPCS_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IPCS_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IPCS"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IEDF",
+    "construct": "IEDF",
+    "responsible_role": "authors",
+    "question": "Separate fraud attempts, harms/problems and recourse/satisfaction; resolve ties, versioned options and available terms",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "6:96;5:8;3:290;2:29",
+      "scale_and_direction": "0-100 higher mixed fraud/payment-problem proxies",
+      "fixed_category_contract": "<45 low;>=45<80 middle;>=80 high",
+      "normalization_standardization": "Binary float rowmean 0-1 then *100; analysis SD",
+      "missing_and_sentinel_contract": "Versioned complaint gates; legal contact4/pending4/satisfaction5 omitted; unknown contact zero; all-absent missing/high latent",
+      "historical_regime": "Five recipes; older five-term 40/70; source-local h_iedf2 median serialization includes147 ties (269 vs122 strict positives)",
+      "preferred_final_input": "true",
+      "index_note_reconciliation": "Note40/70 differs from source45/80; exposure/harms/recourse not a validated single damage intensity"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Versioned complaint gates; legal contact4/pending4/satisfaction5 omitted; unknown contact zero; all-absent missing/high latent",
+      "Note40/70 differs from source45/80; exposure/harms/recourse not a validated single damage intensity",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Separate fraud attempts, harms/problems and recourse/satisfaction; resolve ties, versioned options and available terms",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IEDF",
+      "wp06-contract/construct_resolution_cards.csv#IEDF",
+      "IEDF_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IEDF_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IEDF"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "This is a preferred-final defining input:an approved scoring/category/family change must invalidate and replace the current H1 continuity proposal before execution.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IAER",
+    "construct": "IAER",
+    "responsible_role": "authors",
+    "question": "Separate autonomy/norms/intention; ceiling makes median binary constant; no ownership/use claim",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "12:423",
+      "scale_and_direction": "0-100 higher mixed autonomy/norms/intention",
+      "fixed_category_contract": "<40 low;>=40<85 middle;>=85 high",
+      "normalization_standardization": "Twelve binary terms float rowmean *100; analysis SD",
+      "missing_and_sentinel_contract": "Coercion refusal98 can score positive absence; all-absent missing/high latent; intention not actual ownership/use",
+      "historical_regime": "Four recipes with phantom No2 and 10-/11-/12-term regimes; ceiling246 at100 and median100 binary constant zero; only two empirical groups",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Note high70 differs from source85; ceilings/norms/intention limit autonomy interpretation"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Coercion refusal98 can score positive absence; all-absent missing/high latent; intention not actual ownership/use",
+      "Note high70 differs from source85; ceilings/norms/intention limit autonomy interpretation",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Separate autonomy/norms/intention; ceiling makes median binary constant; no ownership/use claim",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IAER",
+      "wp06-contract/construct_resolution_cards.csv#IAER",
+      "IAER_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IAER_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IAER"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_ICPF",
+    "construct": "ICPF",
+    "responsible_role": "authors",
+    "question": "Resolve trust/restriction direction, Other/None version meanings and positive routed/default terms",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "5:423",
+      "scale_and_direction": "0-100 higher mixed trust/restriction construct",
+      "fixed_category_contract": "<40 low;>=40<70 middle;>=70 high",
+      "normalization_standardization": "Five-term binary/ordinal mean *100; two 3-flag rowtotals; analysis SD",
+      "missing_and_sentinel_contract": "Nada1 penalized; restriction4 excluded; refusal98 omitted;375 mitigation skips default positive; all-raw-absent gives100/high",
+      "historical_regime": "Three recipes; older three-term versus current five-term; strict median80 positives15 without serialization defect; fixed binary and quantiles differ",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Nominal40/70 note cuts not flagged as numerical conflict; construct/routing/sentinel decisions remain open"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Nada1 penalized; restriction4 excluded; refusal98 omitted;375 mitigation skips default positive; all-raw-absent gives100/high",
+      "Nominal40/70 note cuts not flagged as numerical conflict; construct/routing/sentinel decisions remain open",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Resolve trust/restriction direction, Other/None version meanings and positive routed/default terms",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:ICPF",
+      "wp06-contract/construct_resolution_cards.csv#ICPF",
+      "ICPF_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "ICPF_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:ICPF"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IEH",
+    "construct": "IEH",
+    "responsible_role": "authors",
+    "question": "Review training polarity and applicable denominator; shared inverse-coded items with IBPD are not independent evidence",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "6:186;5:237",
+      "scale_and_direction": "0-100 higher scored enablers",
+      "fixed_category_contract": "<40 low;>=40<70 middle;>=70 high with !missing guard",
+      "normalization_standardization": "Six binary terms float rowmean *100; analysis SD",
+      "missing_and_sentinel_contract": "Training gates change term; no-change3 and somewhat-more4 positive but much-more5 zero; all-absent missing score/category under current guard",
+      "historical_regime": "Three recipes; older missing-high guard differs; current state37 discrepancy196 cells; adjacent enabler labels not scored; IEH/IBPD partial inverse overlap",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Nominal40/70 note cuts not flagged as numerical conflict; training polarity/weights/shared items remain open"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Training gates change term; no-change3 and somewhat-more4 positive but much-more5 zero; all-absent missing score/category under current guard",
+      "Nominal40/70 note cuts not flagged as numerical conflict; training polarity/weights/shared items remain open",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Review training polarity and applicable denominator; shared inverse-coded items with IBPD are not independent evidence",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IEH",
+      "wp06-contract/construct_resolution_cards.csv#IEH",
+      "IEH_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IEH_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IEH"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  },
+  {
+    "decision_id": "D3_IBPD",
+    "construct": "IBPD",
+    "responsible_role": "authors",
+    "question": "Review refusal/unknown/default-zero barriers and shared items; no independent corroboration with IEH",
+    "historical_facts": {
+      "reference_N": "423",
+      "outer_term_counts": "5:423",
+      "scale_and_direction": "0-100 higher scored barriers",
+      "fixed_category_contract": "<40 low;>=40<70 middle;>=70 high with !missing guard",
+      "normalization_standardization": "Five binary terms float rowmean *100; default extra-barrier subtotal; analysis SD",
+      "missing_and_sentinel_contract": "Main refusal zero; extra refusal unscored; cash/material unknown positive; all-raw-absent default extra0 produces0/low not missing",
+      "historical_regime": "Three recipes; current/6376 compatible but earlier sentinel policy changes25 scores/4 categories per state; no unique producing run; IEH literal overlap",
+      "preferred_final_input": "false",
+      "index_note_reconciliation": "Nominal40/70 note cuts not flagged as numerical conflict; default zero/refusal/shared items remain open"
+    },
+    "evidence_interpretation": "Inherited documentary/aggregate characterization, not new participant/scientific verification or an institutional determination.",
+    "unresolved_questions": [
+      "Main refusal zero; extra refusal unscored; cash/material unknown positive; all-raw-absent default extra0 produces0/low not missing",
+      "Nominal40/70 note cuts not flagged as numerical conflict; default zero/refusal/shared items remain open",
+      "How should available-term weighting and historical alternatives be justified for the intended claim?"
+    ],
+    "substantive_alternatives": [],
+    "options": [
+      {
+        "choice": "retain_historical",
+        "meaning": "Consider retaining the documented historical recipe for an explicitly justified scientific or continuity role.",
+        "consequence": "Requires rationale about the specific content/routing/category risks; does not validate the construct, endorse all historical claims or authorize any computation."
+      },
+      {
+        "choice": "revise_recipe",
+        "meaning": "Propose a new versioned recipe; document the intended correction and validation plan first.",
+        "consequence": "Preserve historical outputs separately; assess sample/indicator/denominator/overlap effects before any separately authorized implementation or fit."
+      },
+      {
+        "choice": "exclude_from_primary",
+        "meaning": "Consider excluding this construct from a future primary specification while preserving its historical record.",
+        "consequence": "Requires an explicit role/claim/output-impact statement; an H1-defining change invalidates the present continuity proposal, not silently a new fit permission."
+      },
+      {
+        "choice": "defer",
+        "meaning": "Record that a defensible decision cannot yet be made.",
+        "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
+      }
+    ],
+    "selected_choice": "",
+    "minimum_evidence": [
+      "A substantive author rationale for Review refusal/unknown/default-zero barriers and shared items; no independent corroboration with IEH",
+      "Explicit content/direction/denominator/routing/sentinel/category policy and meaningful cross-version comparability",
+      "Declared primary/continuity/auxiliary/excluded role; item/routing overlap and downstream consequence",
+      "For any revision:versioned recipe, validation plan and affected-output list before implementation"
+    ],
+    "evidence_refs": [
+      "wp06-gate-crosswalk/gate_crosswalk.csv#MEASURE:IBPD",
+      "wp06-contract/construct_resolution_cards.csv#IBPD",
+      "IBPD_MEASUREMENT_AUDIT.md",
+      "WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md"
+    ],
+    "report_ref": "IBPD_MEASUREMENT_AUDIT.md",
+    "gate_keys": [
+      "MEASURE:IBPD"
+    ],
+    "prerequisites": [
+      "AUTHOR:D1_population",
+      "AUTHOR:D2_sample"
+    ],
+    "affected_outputs": [
+      "Construct interpretation and any future score/category",
+      "Dependent regression/profile/exhibit/claim outputs"
+    ],
+    "recipe_and_scope_consequence": "Not a preferred-final defining input in the source card; any role/recipe change still needs a downstream/output-impact assessment. Do not infer that all H1 inputs or the sample are unchanged.",
+    "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
+    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
+    "approved": false
+  }
+]
