@@ -1,5 +1,5 @@
 {
-  "schema_version": 156,
+  "schema_version": 157,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -91,6 +91,17 @@
     },
     "wp06_operational_contract": {
       "status": "DOCUMENTARY_CONTRACT_AND_PLAN_COMPLETE_OPERATIONAL_GATE_CLOSED",
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "live_probe_authority": 0,
+      "live_stop_authority": 0,
+      "process_kill_authority": 0,
+      "scientific_acceptance": false,
+      "release": false
+    },
+    "wp06_operator_recommendations": {
+      "status": "SEVEN_RECOMMENDATIONS_COMPLETE_REAL_ADOPTION_PENDING",
       "fit_authority": 0,
       "participant_processing_authority": 0,
       "service_changes_authorized": false,
@@ -2809,7 +2820,15 @@
     "wp06_operational_06": "wp06-operational-contract/test_package.py",
     "wp06_operational_07": "audit-local/intake/wp06-operational-contract-f3e3e16/review.json",
     "wp06_operational_08": "audit-local/intake/wp06-operational-contract-f3e3e16/validation.json",
-    "wp06_operational_09": "audit-local/intake/wp06-operational-contract-f3e3e16-verification/closure.json"
+    "wp06_operational_09": "audit-local/intake/wp06-operational-contract-f3e3e16-verification/closure.json",
+    "wp06_operator_01": "WP06_OPERATOR_IMPLEMENTATION_SELECTION_CHECKPOINT.md",
+    "wp06_operator_02": "wp06-operator-checkpoint/check_checkpoint.py",
+    "wp06_operator_03": "wp06-operator-checkpoint/checkpoint.json",
+    "wp06_operator_04": "wp06-operator-checkpoint/sources.json",
+    "wp06_operator_05": "wp06-operator-checkpoint/test_checkpoint.py",
+    "wp06_operator_06": "audit-local/intake/wp06-operator-checkpoint-5605021/review.json",
+    "wp06_operator_07": "audit-local/intake/wp06-operator-checkpoint-5605021/validation.json",
+    "wp06_operator_08": "audit-local/intake/wp06-operator-checkpoint-5605021-verification/closure.json"
   },
   "decisions": [
     {

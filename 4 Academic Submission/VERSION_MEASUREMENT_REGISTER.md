@@ -1049,3 +1049,8 @@ Current handoff: [isolated bound-control implementation](WP06_ISOLATED_BOUND_CON
 ### WP06 operational integration contract and acceptance plan — 18 October 2026
 
 Current handoff: [integration contract](WP06_OPERATIONAL_INTEGRATION_CONTRACT.md) and [acceptance plan](WP06_OPERATIONAL_ACCEPTANCE_TEST_PLAN.md). Normative interfaces cover durable reservations, trusted registration, authenticated exact-bound control/receipts, atomic consumption, monotonic clock domains, independent supervision and fail-closed cleanup. Planned acceptance cases remain NOT_EXECUTED and backend/auth/supervisor selections unresolved. Documentary checks are not operational passes or deployment/fit authority. No service changes, live probe, Stata, participant processing, process control or new real approvals. Previous packets and24pending decisions retained; next is operator implementation-selection checkpoint, not live execution.
+
+
+### O01–O07 evidence-backed recommendation checkpoint — 18 October 2026
+
+Current handoff: [operator implementation-selection checkpoint](WP06_OPERATOR_IMPLEMENTATION_SELECTION_CHECKPOINT.md). Seven concrete recommended profiles are supported by official technical documentation and the preserved contract, with alternatives, threat/compatibility limits and acceptance mappings. Recommendations are not operator adoption: all real decisions remain blank/pending,28planned cases unexecuted,24real checkpoints unchanged. No database, key, pipe, supervisor, service change, live probe, Stata or participant processing. Next is explicit adoption or revision for a separately bounded artificial implementation, not live execution.
