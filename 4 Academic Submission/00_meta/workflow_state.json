@@ -1,5 +1,5 @@
 {
-  "schema_version": 154,
+  "schema_version": 155,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -76,6 +76,16 @@
       "fit_authority": 0,
       "participant_processing_authority": 0,
       "service_changes_authorized": false,
+      "scientific_acceptance": false,
+      "release": false
+    },
+    "wp06_isolated_bound_control": {
+      "status": "ISOLATED_ARTIFICIAL_ADAPTER_COMPLETE_LIVE_GATE_CLOSED",
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "live_stop_authority": 0,
+      "process_kill_authority": 0,
       "scientific_acceptance": false,
       "release": false
     }
@@ -2771,7 +2781,15 @@
     "wp06_control_05": "wp06-control-proposal/source_boundary_register.json",
     "wp06_control_06": "audit-local/intake/wp06-control-investigation-ef49585/review.json",
     "wp06_control_07": "audit-local/intake/wp06-control-investigation-ef49585/validation.json",
-    "wp06_control_08": "audit-local/intake/wp06-control-investigation-ef49585-verification/closure.json"
+    "wp06_control_08": "audit-local/intake/wp06-control-investigation-ef49585-verification/closure.json",
+    "wp06_bound_control_01": "WP06_ISOLATED_BOUND_CONTROL_ADAPTER.md",
+    "wp06_bound_control_02": "wp06-bound-control/adapter.py",
+    "wp06_bound_control_03": "wp06-bound-control/artificial_evidence.json",
+    "wp06_bound_control_04": "wp06-bound-control/contract.json",
+    "wp06_bound_control_05": "wp06-bound-control/test_adapter.py",
+    "wp06_bound_control_06": "audit-local/intake/wp06-bound-control-65859db/review.json",
+    "wp06_bound_control_07": "audit-local/intake/wp06-bound-control-65859db/validation.json",
+    "wp06_bound_control_08": "audit-local/intake/wp06-bound-control-65859db-verification/closure.json"
   },
   "decisions": [
     {

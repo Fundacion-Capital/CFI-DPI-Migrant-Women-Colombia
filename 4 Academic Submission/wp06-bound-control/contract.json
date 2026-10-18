@@ -1,0 +1,23 @@
+{
+  "origin": "ARTIFICIAL_ONLY",
+  "status": "ISOLATED_ADAPTER_IMPLEMENTED_LIVE_GATE_CLOSED",
+  "live_adapter_available": false,
+  "automatic_watchdog_installed": false,
+  "durable_reservation_store": false,
+  "fits": 0,
+  "participant_processing": 0,
+  "service_changes": 0,
+  "live_stop_calls": 0,
+  "process_kills": 0,
+  "real_approvals": 0,
+  "retries": 0,
+  "release": false,
+  "binding_fields": ["origin", "session_id", "owner_nonce", "worker_epoch", "command_id", "pid", "creation_time", "engine_module_digest", "reservation_id"],
+  "states": ["RESERVED", "RUNNING_BOUND", "STOP_REQUESTED", "EXIT_CONFIRMED", "UNKNOWN_QUARANTINED"],
+  "scope": "Artificial identities, in-memory consumption, intent-only adapter; test-only channel validates current identity atomically before setting an artificial event",
+  "deadline_policy": "Execution deadline armed at reservation; cleanup ends at earlier of execution deadline plus cleanup budget or stop-intent time plus cleanup budget; equality expires",
+  "terminal_policy": "No terminal promotion, restart, retry or reservation/command reuse within the same reservation book",
+  "delivery_gate_policy": "Any invalid, expired or rollback consumption permanently quarantines that gate; fresh caller timestamps cannot reopen it",
+  "limits": ["No installed-service integration", "No native interruption or operating-system identity/exit proof", "No independent process supervisor", "No durable cross-process reservation authority", "Artificial receipts are not authenticated live evidence", "Caller must schedule tick; controller_lost is a supplied artificial observation, not death detection"],
+  "next_gate": "Review the isolated adapter and unresolved operational scope before separately authorizing any live control test or service deployment"
+}

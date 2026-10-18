@@ -202,3 +202,8 @@ Current handoff: [bounded remediation and owner checkpoint](WP06_NOFIT_REMEDIATI
 ### WP06 independent control-path investigation and proposal — 18 October 2026
 
 Current handoff: [independent control-path investigation](WP06_INDEPENDENT_CONTROL_PATH_INVESTIGATION.md). Installed-source trace identifies timeout+5s result wait, same-ID recovery, synchronous async-handler destroy and a separate existing event-stop route not exposed by current MCP session actions. Selection itself is already thread-offloaded. Artificial event/transport fixtures distinguish responsiveness from stopping work. Proposed independent owned supervisor/bound stop adapter remains unimplemented/unapproved; no live stop call, hard kill, service change, fitting or participant processing. Previous packets/recipes/24 pending responses remain intact. Next is review of exact operator/service scope and acceptance design, not another model fit or repeated destroy probe.
+
+
+### WP06 isolated bound-control adapter — 18 October 2026
+
+Current handoff: [isolated bound-control implementation](WP06_ISOLATED_BOUND_CONTROL_ADAPTER.md). Artificial-only intent adapter and consumption gate implement immutable ownership, consumed in-memory reservations, one-shot stop intents, monotonic execution/cleanup deadlines and fail-closed receipt/state transitions. Artificial race/controller fixtures do not establish native cancellation or process independence. No live adapter, automatic watchdog, durable ledger, service change, Stata execution, participant processing or fit authority. Previous packets and 24 pending real checkpoints remain intact. Next is separately scoped operational-interface review, not a live probe or model fit.
