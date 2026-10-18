@@ -1,5 +1,5 @@
 {
-  "schema_version": 155,
+  "schema_version": 156,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -84,6 +84,17 @@
       "fit_authority": 0,
       "participant_processing_authority": 0,
       "service_changes_authorized": false,
+      "live_stop_authority": 0,
+      "process_kill_authority": 0,
+      "scientific_acceptance": false,
+      "release": false
+    },
+    "wp06_operational_contract": {
+      "status": "DOCUMENTARY_CONTRACT_AND_PLAN_COMPLETE_OPERATIONAL_GATE_CLOSED",
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "live_probe_authority": 0,
       "live_stop_authority": 0,
       "process_kill_authority": 0,
       "scientific_acceptance": false,
@@ -2789,7 +2800,16 @@
     "wp06_bound_control_05": "wp06-bound-control/test_adapter.py",
     "wp06_bound_control_06": "audit-local/intake/wp06-bound-control-65859db/review.json",
     "wp06_bound_control_07": "audit-local/intake/wp06-bound-control-65859db/validation.json",
-    "wp06_bound_control_08": "audit-local/intake/wp06-bound-control-65859db-verification/closure.json"
+    "wp06_bound_control_08": "audit-local/intake/wp06-bound-control-65859db-verification/closure.json",
+    "wp06_operational_01": "WP06_OPERATIONAL_INTEGRATION_CONTRACT.md",
+    "wp06_operational_02": "WP06_OPERATIONAL_ACCEPTANCE_TEST_PLAN.md",
+    "wp06_operational_03": "wp06-operational-contract/acceptance_plan.json",
+    "wp06_operational_04": "wp06-operational-contract/check_package.py",
+    "wp06_operational_05": "wp06-operational-contract/contract.json",
+    "wp06_operational_06": "wp06-operational-contract/test_package.py",
+    "wp06_operational_07": "audit-local/intake/wp06-operational-contract-f3e3e16/review.json",
+    "wp06_operational_08": "audit-local/intake/wp06-operational-contract-f3e3e16/validation.json",
+    "wp06_operational_09": "audit-local/intake/wp06-operational-contract-f3e3e16-verification/closure.json"
   },
   "decisions": [
     {

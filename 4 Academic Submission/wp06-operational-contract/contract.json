@@ -1,0 +1,37 @@
+{
+  "contract_id": "WP06_OPERATIONAL_INTEGRATION_V1",
+  "version": 1,
+  "kind": "DOCUMENTARY_ONLY",
+  "current_phase": "DOCUMENTARY_PREPARATION",
+  "operational_ready": false,
+  "real_approvals": 0,
+  "authorities": {"service_changes": 0, "live_probes": 0, "stata_execution": 0, "participant_processing": 0, "fits": 0, "live_stop_calls": 0, "process_kills": 0, "release": 0},
+  "binding_fields": ["contract_digest", "build_digest", "host_id", "boot_id", "session_id", "owner_nonce", "worker_epoch", "command_id", "pid", "creation_time", "engine_module_digest", "reservation_id", "lease_id", "scope_id"],
+  "receipt_fields": ["receipt_id", "message_type", "sequence", "previous_digest", "binding", "clock_domain", "monotonic_time", "utc_audit_time", "issuer_principal", "credential_id", "authentication_proof_ref", "payload_digest", "status_code"],
+  "required_receipts": ["REGISTERED", "RESERVED_DURABLE", "SUPERVISOR_ARMED", "STOP_APPLIED_IF_REQUESTED", "ENGINE_EXIT_OBSERVED", "CLEANUP_OBSERVED"],
+  "phase_authorizations": {"A_ARTIFICIAL": ["new_artificial_implementation_scope"], "B_DISPOSABLE": ["new_disposable_process_scope"], "C_EMPTY_ENGINE": ["new_empty_engine_scope", "operator_integration_adoption"]},
+  "conditional_authorizations": {"any_service_or_configuration_write":"new_exact_service_change_scope", "any_process_termination":"new_exact_owned_termination_scope", "any_engine_execution":"new_empty_engine_scope", "any_fit_or_participant_processing":"OUT_OF_SCOPE_REQUIRES_SEPARATE_RESEARCH_CONTRACT"},
+  "requirements": [
+    {"id":"C01","obligation":"Separate documentary validity, operational acceptance and fit/data/release authority","required_evidence":"Scope-specific dated principal decision and manifest; never inferred from tests","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C02","obligation":"Trusted registrar binds current process handle, boot, generation, command and installed build; no caller self-registration","required_evidence":"Operator-approved build record and registrar plus independent current-process observations","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C03","obligation":"Durably reserve unique reservation/command before dispatch; journal crash uncertainty as consumed; never auto-resume","required_evidence":"Transactional reserve receipt and crash/restart/replay tests","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C04","obligation":"Authenticate scoped control intents and receipts; reject replay, revocation and wrong principal","required_evidence":"Selected authenticated transport/proof verifier and negative authenticity tests","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C05","obligation":"Recheck full binding under trusted consumer lock/owned handle immediately before one native break per command","required_evidence":"Current-generation consumption evidence and concurrent/late/duplicate tests","implementation_status":"ARTIFICIAL_PARTIAL"},
+    {"id":"C06","obligation":"Bound execution and cleanup with boot-scoped monotonic domains; reject rollback, nonfinite and unbounded cross-domain time","required_evidence":"Approved numeric budgets and boundary/domain tests; no hidden grace","implementation_status":"ARTIFICIAL_PARTIAL"},
+    {"id":"C07","obligation":"Arm independent supervisor before work; detect controller death without engine/event-loop cooperation","required_evidence":"Supervisor identity/arm receipt and blocked-transport/controller-death tests","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C08","obligation":"Verify authenticated ordered delivery, engine exit and cleanup separately; acknowledgement and registry absence are insufficient","required_evidence":"Verified event chain plus independent exact-process exit and cleanup observations","implementation_status":"ARTIFICIAL_PARTIAL"},
+    {"id":"C09","obligation":"Quarantine all uncertain states and replacements; preserve consumed attempts and late outputs; no retry or relabel","required_evidence":"Forward-only journal/recovery records and late-result/replacement tests","implementation_status":"ARTIFICIAL_PARTIAL"},
+    {"id":"C10","obligation":"Restrict journal to approved control metadata; protect secrets and participant content; preserve failure packets","required_evidence":"Allowlist/redaction test using artificial canaries and restricted preservation manifest","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C11","obligation":"Bound cleanup and separately authorize exact owned-process fallback; no process-name/default-session kill","required_evidence":"Owned-handle/fallback decision and exact exit/cleanup receipts; unknown remains quarantined","implementation_status":"NOT_IMPLEMENTED"},
+    {"id":"C12","obligation":"Stage adoption only after implementation decisions, independent acceptance and exact new authority; never activate a fit automatically","required_evidence":"Signed scope/build/test matrix plus preserved dispositions and separate later fit contract","implementation_status":"NOT_IMPLEMENTED"}
+  ],
+  "open_choices": [
+    {"id":"O01","subject":"Durable journal backend, atomicity/durability and crash semantics","role":"runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O02","subject":"Authenticated transport, canonical proof format, principal/key provisioning and revocation","role":"runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O03","subject":"Independent supervisor hosting, failure detection, owned handles and fallback isolation","role":"runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O04","subject":"Trusted registration/build attestation and approved installation/change procedure","role":"runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O05","subject":"Exact execution/cleanup budgets, clock-domain proof and transport-delay bounds","role":"runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O06","subject":"Acceptance principal, disposable/empty-engine scope and separately scoped service/fallback changes","role":"project_owner_and_runtime_operator","checkpoint":"D5_operational","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""},
+    {"id":"O07","subject":"Restricted journal/receipt location, allowlist, retention and disclosure review","role":"project_owner_and_institution","checkpoint":"D1_rights","status":"PENDING_OPERATOR_DECISION","selected_value":"","evidence_ref":""}
+  ]
+}

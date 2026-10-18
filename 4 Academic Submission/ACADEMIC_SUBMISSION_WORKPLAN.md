@@ -1934,3 +1934,8 @@ Current handoff: [independent control-path investigation](WP06_INDEPENDENT_CONTR
 ### WP06 isolated bound-control adapter — 18 October 2026
 
 Current handoff: [isolated bound-control implementation](WP06_ISOLATED_BOUND_CONTROL_ADAPTER.md). Artificial-only intent adapter and consumption gate implement immutable ownership, consumed in-memory reservations, one-shot stop intents, monotonic execution/cleanup deadlines and fail-closed receipt/state transitions. Artificial race/controller fixtures do not establish native cancellation or process independence. No live adapter, automatic watchdog, durable ledger, service change, Stata execution, participant processing or fit authority. Previous packets and 24 pending real checkpoints remain intact. Next is separately scoped operational-interface review, not a live probe or model fit.
+
+
+### WP06 operational integration contract and acceptance plan — 18 October 2026
+
+Current handoff: [integration contract](WP06_OPERATIONAL_INTEGRATION_CONTRACT.md) and [acceptance plan](WP06_OPERATIONAL_ACCEPTANCE_TEST_PLAN.md). Normative interfaces cover durable reservations, trusted registration, authenticated exact-bound control/receipts, atomic consumption, monotonic clock domains, independent supervision and fail-closed cleanup. Planned acceptance cases remain NOT_EXECUTED and backend/auth/supervisor selections unresolved. Documentary checks are not operational passes or deployment/fit authority. No service changes, live probe, Stata, participant processing, process control or new real approvals. Previous packets and24pending decisions retained; next is operator implementation-selection checkpoint, not live execution.
