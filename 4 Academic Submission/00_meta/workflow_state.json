@@ -1,5 +1,5 @@
 {
-  "schema_version": 159,
+  "schema_version": 160,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,23 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_stage_b_preflight": {
+      "status": "STAGE_B_DESIGN_PREFLIGHT_COMPLETE_EXECUTION_BLOCKED",
+      "scope": "DESIGN_AND_NO_EXECUTION_PREFLIGHT_ONLY",
+      "stage_b_cases": 6,
+      "cases_executed": 0,
+      "pending_gates": 15,
+      "process_launch_authority": 0,
+      "live_control_authority": 0,
+      "service_changes_authorized": false,
+      "stata_execution_authority": 0,
+      "participant_processing_authority": 0,
+      "fit_authority": 0,
+      "process_kill_authority": 0,
+      "operational_adoption": false,
+      "scientific_acceptance": false,
+      "release": false
+    },
     "wp06_stage_a_implementation": {
       "status": "STAGE_A_ARTIFICIAL_ONLY_ACCEPTED_NOT_OPERATIONAL",
       "exact_plan_approved": true,
@@ -501,6 +518,17 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_stage_b_01": "WP06_STAGE_B_DESIGN_AND_NOEXEC_PREFLIGHT.md",
+    "wp06_stage_b_02": "wp06-stage-b-preflight/design.json",
+    "wp06_stage_b_03": "wp06-stage-b-preflight/gates.json",
+    "wp06_stage_b_04": "wp06-stage-b-preflight/cases.json",
+    "wp06_stage_b_05": "wp06-stage-b-preflight/sources.json",
+    "wp06_stage_b_06": "wp06-stage-b-preflight/check_preflight.py",
+    "wp06_stage_b_07": "wp06-stage-b-preflight/test_preflight.py",
+    "wp06_stage_b_08": "audit-local/intake/wp06-stage-b-preflight-1516520/authorization.json",
+    "wp06_stage_b_09": "audit-local/intake/wp06-stage-b-preflight-1516520/review.json",
+    "wp06_stage_b_10": "audit-local/intake/wp06-stage-b-preflight-1516520/validation.json",
+    "wp06_stage_b_11": "audit-local/intake/wp06-stage-b-preflight-1516520-verification/closure.json",
     "wp06_stage_a_impl_01": "WP06_STAGE_A_ARTIFICIAL_IMPLEMENTATION.md",
     "wp06_stage_a_impl_02": "wp06-stage-a/journal.py",
     "wp06_stage_a_impl_03": "wp06-stage-a/protocol.py",

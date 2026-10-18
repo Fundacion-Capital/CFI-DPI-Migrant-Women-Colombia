@@ -1954,3 +1954,8 @@ The owner approved O01–O07 recommended profiles for artificial development onl
 ### Stage-A artificial implementation — 18 October 2026
 
 The exact Stage-A plan was approved. The isolated journal, authenticated synthetic protocol and lifecycle harness are implemented with separate AC01–AC16 fixture results; see the [Stage-A implementation report](WP06_STAGE_A_ARTIFICIAL_IMPLEMENTATION.md). Final owner validation: 39 new tests normally/optimized plus 109 named predecessors; the single independent review's cancellation-before-reservation finding was reproduced and corrected in one owner pass. Final acceptance and preservation receipts govern closure, not superseded candidates. All prior packets, catalogue statuses and institutional responses remain preserved. No live transport/process/supervisor/service integration, Stata, participant processing, fit or release. AC17–AC28 stay unexecuted; any next Stage-B design/authorization is separate.
+
+
+### Stage-B design and no-execution preflight — 18 October 2026
+
+The [exact Stage-B design/preflight](WP06_STAGE_B_DESIGN_AND_NOEXEC_PREFLIGHT.md) defines owned disposable roles, independent control/evidence, six AC17–AC22 plans and15pending external gates. Documentary validation is not runtime eligibility: all27runtime facts remain null, all six cases NOT_EXECUTED, all launch/control/service/engine/research authorities zero. StageA remains sealed and unchanged; its stored results were revalidated, not rerun. AC21 remains conditional/disabled under cooperative-only profile; no PID-reuse success is invented. Next is explicit design review and a separately approved isolated implementation plan, not a process launch or test run.

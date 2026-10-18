@@ -1,0 +1,256 @@
+{
+  "contract_id": "WP06_STAGE_B_DISPOSABLE_V1",
+  "kind": "UNEXECUTED_STAGE_B_CASE_PLANS",
+  "cases": [
+    {
+      "id": "AC17",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C07"
+      ],
+      "precondition": "New explicit disposable scope; owned non-Stata process and armed independent supervisor",
+      "stimulus": "Block dispatcher/client/event loop and engine-like work queue",
+      "pass_evidence": "Supervisor remains scheduled through an independent channel within approved local deadline",
+      "failure_disposition": "QUARANTINE_OPERATIONAL_FAILURE",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "BLOCK_CONTROLLER_AND_WORK_QUEUE_KEEP_INDEPENDENT_PATH",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G15"
+      ],
+      "max_new_processes": 4,
+      "max_concurrent_new": 4,
+      "conditional_fallback": false,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "CURRENT_BUILD_SCOPE",
+        "AUTHENTICATED_ORDERED_OBSERVATIONS",
+        "SAME_HANDLE_EXIT",
+        "BOUNDED_CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "id": "AC18",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C03",
+        "C07",
+        "C09"
+      ],
+      "precondition": "Owned disposable process and durable reservation",
+      "stimulus": "Lose/terminate disposable controller, restart client or sever heartbeat",
+      "pass_evidence": "Supervisor detects loss independently; old lease/attempt consumed and no auto-resume",
+      "failure_disposition": "QUARANTINE_OPERATIONAL_FAILURE",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "CONTROLLER_SELF_EXIT_OR_HEARTBEAT_SEVER_PREDECLARED_SECOND_CLIENT",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G15"
+      ],
+      "max_new_processes": 5,
+      "max_concurrent_new": 4,
+      "conditional_fallback": false,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "CURRENT_BUILD_SCOPE",
+        "AUTHENTICATED_ORDERED_OBSERVATIONS",
+        "SAME_HANDLE_EXIT",
+        "BOUNDED_CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "id": "AC19",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C02",
+        "C05"
+      ],
+      "precondition": "Disposable process handles and trusted registry",
+      "stimulus": "Exit/recreate worker, recycle numeric PID and replace same-session registration",
+      "pass_evidence": "Creation/boot/generation/handle mismatch prevents stale process targeting",
+      "failure_disposition": "QUARANTINE_NO_DISPATCH",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "TWO_PREDECLARED_WORKERS_NO_PID_CHURN_NO_UNOBSERVED_REUSE_PASS",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G15"
+      ],
+      "max_new_processes": 5,
+      "max_concurrent_new": 4,
+      "conditional_fallback": false,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "CURRENT_BUILD_SCOPE",
+        "AUTHENTICATED_ORDERED_OBSERVATIONS",
+        "SAME_HANDLE_EXIT",
+        "BOUNDED_CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "id": "AC20",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C04",
+        "C06",
+        "C08"
+      ],
+      "precondition": "Approved local transport with disposable endpoints",
+      "stimulus": "Connection loss, receipt duplication/reordering and blocked response channel",
+      "pass_evidence": "No false delivery/exit; cleanup remains bounded independently of response await",
+      "failure_disposition": "QUARANTINE_UNVERIFIED_EVIDENCE",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "BOUNDED_TRANSPORT_RECEIPT_FAULTS_NO_RESPONSE_DEPENDENT_CLEANUP",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G15"
+      ],
+      "max_new_processes": 4,
+      "max_concurrent_new": 4,
+      "conditional_fallback": false,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "CURRENT_BUILD_SCOPE",
+        "AUTHENTICATED_ORDERED_OBSERVATIONS",
+        "SAME_HANDLE_EXIT",
+        "BOUNDED_CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "id": "AC21",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C07",
+        "C11"
+      ],
+      "precondition": "Separate exact owned-termination scope and disposable handle; fallback selected",
+      "stimulus": "Cooperative stop fails; request fallback only against that owned handle",
+      "pass_evidence": "Independent exact-process exit and cleanup established; name/default/shared/recycled targets denied",
+      "failure_disposition": "QUARANTINE_OPERATIONAL_FAILURE",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "DISABLED_EXACT_OWNED_WORKER_FALLBACK_CONDITIONAL",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15"
+      ],
+      "max_new_processes": 4,
+      "max_concurrent_new": 4,
+      "conditional_fallback": true,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "SEPARATE_PROFILE_REVISION",
+        "EXACT_WORKER_TERMINATION_GRANT",
+        "RETAINED_HANDLE_EXIT",
+        "CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    },
+    {
+      "id": "AC22",
+      "phase": "B_DISPOSABLE",
+      "requirements": [
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "precondition": "No research data or installed-service change; explicit disposable inventory",
+      "stimulus": "Finish/fail each disposable attempt including supervisor shutdown",
+      "pass_evidence": "All owned resources accounted for; sealed receipts and no unintended process/config change",
+      "failure_disposition": "HOLD_ADOPTION_PRESERVE_FAILURE",
+      "status": "NOT_EXECUTED",
+      "execution_evidence": [],
+      "variant": "ALL_OWNED_RESOURCES_AND_OBSERVER_EXIT_ATTESTED",
+      "required_gates": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11",
+        "G12",
+        "G15"
+      ],
+      "max_new_processes": 4,
+      "max_concurrent_new": 4,
+      "conditional_fallback": false,
+      "actual_inventory": null,
+      "independent_evidence": [
+        "CURRENT_BUILD_SCOPE",
+        "AUTHENTICATED_ORDERED_OBSERVATIONS",
+        "SAME_HANDLE_EXIT",
+        "BOUNDED_CLEANUP_INVENTORY"
+      ],
+      "execution_authorized": false
+    }
+  ]
+}

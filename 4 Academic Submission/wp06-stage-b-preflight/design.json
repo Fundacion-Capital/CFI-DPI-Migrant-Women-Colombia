@@ -1,0 +1,131 @@
+{
+  "contract_id": "WP06_STAGE_B_DISPOSABLE_V1",
+  "kind": "DESIGN_AND_NO_EXECUTION_PREFLIGHT_ONLY",
+  "phase": "B_DISPOSABLE",
+  "status": "DESIGN_ONLY_NOT_ADOPTED",
+  "operational_eligible": false,
+  "cases_executed": 0,
+  "authority": {
+    "process_launches": 0,
+    "live_control": 0,
+    "service_changes": 0,
+    "live_probes": 0,
+    "stata_execution": 0,
+    "participant_processing": 0,
+    "fits": 0,
+    "process_kills": 0,
+    "release": 0,
+    "stage_b_execution": 0
+  },
+  "source_pins": {
+    "case_catalogue": {
+      "bytes": 12309,
+      "file": "4 Academic Submission/wp06-operational-contract/acceptance_plan.json",
+      "sha256": "BE76FC0A31586B9F0250087E9E4CACAA4717E8373574F009C0529025A000B834"
+    },
+    "stage_a_seal": {
+      "bytes": 347385,
+      "file": "4 Academic Submission/audit-local/intake/wp06-stage-a-implementation-c870e8b/validation.json",
+      "sha256": "92B35EF1B8B69613D128C689CD9B3E477D8C0FA9C07E19761506AF1EF89306B7"
+    },
+    "stage_a_closure": {
+      "bytes": 836,
+      "file": "4 Academic Submission/audit-local/intake/wp06-stage-a-implementation-c870e8b-verification/closure.json",
+      "sha256": "5607C4BD98B2101CC8E4C8D9914CB764496F87957F716F7014FF7DA877D42689"
+    },
+    "profile_checkpoint": {
+      "bytes": 10413,
+      "file": "4 Academic Submission/wp06-operator-checkpoint/checkpoint.json",
+      "sha256": "3B324AC8168AE3BD580AD245B8A55F054375F548A0F360976ACB9AEE61A32F1B"
+    }
+  },
+  "roles": [
+    {
+      "role": "LAUNCH_ATTESTOR",
+      "creator": "EXTERNAL_OPERATOR",
+      "new_process": false,
+      "max_simultaneous": 0
+    },
+    {
+      "role": "OBSERVER",
+      "creator": "LAUNCH_ATTESTOR",
+      "new_process": true,
+      "max_simultaneous": 1
+    },
+    {
+      "role": "SUPERVISOR",
+      "creator": "OBSERVER",
+      "new_process": true,
+      "max_simultaneous": 1
+    },
+    {
+      "role": "CONTROLLER",
+      "creator": "OBSERVER",
+      "new_process": true,
+      "max_simultaneous": 1
+    },
+    {
+      "role": "WORKER",
+      "creator": "SUPERVISOR",
+      "new_process": true,
+      "max_simultaneous": 1
+    }
+  ],
+  "launch_caps": {
+    "max_concurrent_new": 4,
+    "default_total_new": 4,
+    "AC18_total_new": 5,
+    "AC19_total_new": 5,
+    "retries": 0,
+    "unplanned_replacements": 0
+  },
+  "profiles": {
+    "control": "COOPERATIVE_ONLY",
+    "fallback_enabled": false,
+    "AC21": "CONDITIONAL_BLOCKED_PENDING_PROFILE_REVISION_AND_EXACT_GRANT",
+    "transport": "LOCAL_EXPLICIT_ACL_OVERLAPPED_PIPE_AND_PRIVATE_WORKER_EVENT",
+    "journal": "LOCAL_RESTRICTED_SINGLE_WRITER_DELETE_EXTRA_NO_RETRY",
+    "clock": "PROPOSED_QPC_INTEGER_DOMAIN_REQUIRES_OPERATOR_ADOPTION",
+    "boot_binding": "LOGICAL_RUN_BOOT_NAMESPACE_RETAINED_OBSERVER_NO_RESUME",
+    "stop_consumer": "SUPERVISOR_WATCHDOG_SINGLE_CONSUMER_PRECOMMITTED_SLOT",
+    "pid_reuse": "RETAINED_HANDLE_REPLACEMENT_ONLY_FULL_AC19_HOLD_PENDING_REVIEWED_SCOPE_RESTRICTION"
+  },
+  "prohibited": {
+    "auto_restart": true,
+    "default_or_shared_target": true,
+    "pid_or_name_only_target": true,
+    "shell_or_arbitrary_code": true,
+    "job_assignment_or_kill_on_close": true,
+    "stage_a_public_keys_or_operational_import": true,
+    "uncertain_io_buffer_reuse": true,
+    "wait_handle_close_before_completion": true,
+    "scientific_authority_inheritance": true
+  },
+  "future_files": [
+    "wp06-stage-b/launch_stage_b.py",
+    "wp06-stage-b/observer.py",
+    "wp06-stage-b/supervisor.py",
+    "wp06-stage-b/actors.py",
+    "wp06-stage-b/win32_bridge.py",
+    "wp06-stage-b/journal_protocol.py",
+    "wp06-stage-b/test_stage_b.py"
+  ],
+  "runtime_observations_available": false,
+  "source_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15"
+  ]
+}

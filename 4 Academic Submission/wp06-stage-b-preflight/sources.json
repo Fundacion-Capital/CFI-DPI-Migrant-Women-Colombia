@@ -1,0 +1,141 @@
+{
+  "kind": "OFFICIAL_DOCUMENTATION_NOT_HOST_VALIDATION",
+  "verified_on": "2026-10-18",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "CreateProcessW",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Explicit executable, handle/environment rules and initialization boundary; process creation does not establish readiness.",
+      "host_verified": false
+    },
+    {
+      "id": "S02",
+      "title": "Named pipe security",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipe-security-and-access-rights",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Named pipes support security descriptors and access checks; default permissions are not the proposed least-privilege policy.",
+      "host_verified": false
+    },
+    {
+      "id": "S03",
+      "title": "Overlapped pipe I/O",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/ipc/synchronous-and-overlapped-input-and-output",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Overlapped pipe operations require completion handling and per-operation state; pending return is not completed work.",
+      "host_verified": false
+    },
+    {
+      "id": "S04",
+      "title": "CancelIoEx",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-cancelioex",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Cancellation requests do not wait for completion; operations may complete normally, cancel or fail.",
+      "host_verified": false
+    },
+    {
+      "id": "S05",
+      "title": "GetProcessTimes",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Creation time uses FILETIME; exit-time contents are undefined before exit, and query rights are required.",
+      "host_verified": false
+    },
+    {
+      "id": "S06",
+      "title": "WaitForSingleObject",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Process waits require synchronization rights; closing a waited handle is undefined, and low-power timeout behavior differs by Windows version.",
+      "host_verified": false
+    },
+    {
+      "id": "S07",
+      "title": "TerminateProcess",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminateprocess",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Termination of another process is asynchronous; a request is not independent proof of completed exit.",
+      "host_verified": false
+    },
+    {
+      "id": "S08",
+      "title": "QPC timing guidance",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Same-machine comparisons are supported subject to documented limitations; cross-thread differences within one tick have ambiguous ordering.",
+      "host_verified": false
+    },
+    {
+      "id": "S09",
+      "title": "Process security and rights",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Creation returns a broad process handle; query, synchronization and termination rights differ and should be separated.",
+      "host_verified": false
+    },
+    {
+      "id": "S10",
+      "title": "DuplicateHandle",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/handleapi/nf-handleapi-duplicatehandle",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Handle duplication supports explicit rights/inheritance; same-access duplication ignores requested narrower rights.",
+      "host_verified": false
+    },
+    {
+      "id": "S11",
+      "title": "Job objects",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Job lifetime and process grouping have separate behavior; this design does not select or configure a Job Object.",
+      "host_verified": false
+    },
+    {
+      "id": "S12",
+      "title": "Named pipe creation flags",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-createnamedpipea",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "Named-pipe flags include rejecting remote clients and overlapped operation; this is documentation, not an endpoint created here.",
+      "host_verified": false
+    },
+    {
+      "id": "S13",
+      "title": "Pipe client PID",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeclientprocessid",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "API retrieves the pipe client's process ID, not complete ownership or creation-time proof.",
+      "host_verified": false
+    },
+    {
+      "id": "S14",
+      "title": "Pipe server PID",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getnamedpipeserverprocessid",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "API retrieves the pipe server's process ID, not authenticated role or retained-handle provenance.",
+      "host_verified": false
+    },
+    {
+      "id": "S15",
+      "title": "PROCESS_INFORMATION process-object and identifier lifetime",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information",
+      "publisher": "Microsoft",
+      "status": "DOCUMENTATION_VERIFIED",
+      "fact": "A retained process handle keeps its process object and identifier alive. Numeric identifier reuse is unavailable in the selected retained-handle replacement variant; it is not merely unlikely.",
+      "host_verified": false
+    }
+  ]
+}
