@@ -1,0 +1,194 @@
+{
+  "kind": "UNEXECUTED_STAGE_A_FIXTURE_PLAN",
+  "status": "PLAN_REVIEW_REQUIRED",
+  "operational_eligible": false,
+  "catalogue_pin": {
+    "sha256": "BE76FC0A31586B9F0250087E9E4CACAA4717E8373574F009C0529025A000B834",
+    "file": "4 Academic Submission/wp06-operational-contract/acceptance_plan.json",
+    "bytes": 12309
+  },
+  "future_files": [
+    "wp06-stage-a/journal.py",
+    "wp06-stage-a/protocol.py",
+    "wp06-stage-a/harness.py",
+    "wp06-stage-a/test_stage_a.py"
+  ],
+  "fixture_clock": {
+    "kind": "SYNTHETIC_INTEGER_NANOSECOND_TICKS_NOT_HOST_CLOCK",
+    "start": 100,
+    "execution_allowance": 10,
+    "cleanup_allowance": 3
+  },
+  "production_execution_budget_ns": null,
+  "production_cleanup_budget_ns": null,
+  "production_store_path": null,
+  "retention_years": null,
+  "live_authorities": {
+    "service_changes": 0,
+    "live_probes": 0,
+    "stata_execution": 0,
+    "participant_processing": 0,
+    "fits": 0,
+    "live_stop_calls": 0,
+    "process_kills": 0,
+    "release": 0
+  },
+  "cases": [
+    {
+      "id": "AC01",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C01",
+        "C02"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC02",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C02",
+        "C05"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC03",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C03"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC04",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C03",
+        "C09"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC05",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C03",
+        "C09"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC06",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C04",
+        "C08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC07",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C04",
+        "C09"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC08",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C05"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC09",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C06"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC10",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C06",
+        "C09"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC11",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C06",
+        "C07"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC12",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C08"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC13",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C05",
+        "C08",
+        "C09"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC14",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C03",
+        "C10"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC15",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C10"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    },
+    {
+      "id": "AC16",
+      "phase": "A_ARTIFICIAL",
+      "requirements": [
+        "C11",
+        "C12"
+      ],
+      "status": "NOT_EXECUTED",
+      "execution_evidence": []
+    }
+  ]
+}

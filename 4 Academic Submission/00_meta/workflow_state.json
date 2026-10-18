@@ -1,5 +1,5 @@
 {
-  "schema_version": 157,
+  "schema_version": 158,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,21 @@
     "language": "English"
   },
   "orchestration": {
+    "wp06_stage_a_plan": {
+      "status": "DESIGNS_APPROVED_EXACT_STAGE_A_PLAN_REVIEW_REQUIRED",
+      "profile_design_approvals": 7,
+      "exact_plan_approved": false,
+      "operational_adoption": false,
+      "planned_cases_executed": 0,
+      "fit_authority": 0,
+      "participant_processing_authority": 0,
+      "service_changes_authorized": false,
+      "live_probe_authority": 0,
+      "live_stop_authority": 0,
+      "process_kill_authority": 0,
+      "scientific_acceptance": false,
+      "release": false
+    },
     "status": "active",
     "entry_routing": "README.md#entry-routing",
     "stage_passport": "README.md#stage-passport",
@@ -470,6 +485,12 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+    "wp06_stage_a_plan_01": "WP06_STAGE_A_IMPLEMENTATION_PLAN.md",
+    "wp06_stage_a_plan_02": "wp06-stage-a-plan/design_adoption.json",
+    "wp06_stage_a_plan_03": "wp06-stage-a-plan/fixture_manifest.json",
+    "wp06_stage_a_plan_04": "audit-local/intake/wp06-stage-a-plan-3288dd1/review.json",
+    "wp06_stage_a_plan_05": "audit-local/intake/wp06-stage-a-plan-3288dd1/validation.json",
+    "wp06_stage_a_plan_06": "audit-local/intake/wp06-stage-a-plan-3288dd1-verification/closure.json",
     "lca_m3_k4_preflight_authority": "audit-local/intake/lca-m3-k4-adapter-304ac45/authority_actual_request.json",
     "lca_m3_k4_preflight_contract": "audit-local/intake/lca-m3-k4-adapter-304ac45/contract.json",
     "lca_m3_k4_preflight_adapter": "audit-local/intake/lca-m3-k4-adapter-304ac45/stage_held.do",

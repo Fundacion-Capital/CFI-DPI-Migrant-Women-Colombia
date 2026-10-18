@@ -1,0 +1,37 @@
+{
+  "kind": "SCOPED_USER_DESIGN_ADOPTION",
+  "date": "2026-10-18",
+  "source_kind": "AUTHENTICATED_USER_MESSAGE_IN_THIS_CHAT",
+  "decision_maker_role": "PROJECT_OWNER",
+  "legal_identity_independently_verified": false,
+  "source_text": "I approve the O01–O07 recommended profiles. Fully implement the next bounded artificial-only stage, preserve all packets and deeply audit before completion. No service changes, live probes, Stata execution or participant processing.",
+  "profile_ids": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07"
+  ],
+  "adoption_scope": "DESIGN_APPROVED_FOR_ARTIFICIAL_DEVELOPMENT_ONLY",
+  "exact_plan_approved": false,
+  "operational_adoption": false,
+  "institutional_approval": false,
+  "recommendation_pin": {
+    "sha256": "3B324AC8168AE3BD580AD245B8A55F054375F548A0F360976ACB9AEE61A32F1B",
+    "file": "4 Academic Submission/wp06-operator-checkpoint/checkpoint.json",
+    "bytes": 10413
+  },
+  "interpretation": "Accepts recommended profiles for artificial development only. Does not fill historical pending responses, identify institutional principals, or approve an exact patch plan that did not yet exist.",
+  "excluded_authorities": [
+    "service_changes",
+    "live_probes",
+    "stata_execution",
+    "participant_processing",
+    "fits",
+    "live_stop_calls",
+    "process_kills",
+    "release"
+  ]
+}

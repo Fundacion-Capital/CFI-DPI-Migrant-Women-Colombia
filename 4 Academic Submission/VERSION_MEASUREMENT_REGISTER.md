@@ -1054,3 +1054,8 @@ Current handoff: [integration contract](WP06_OPERATIONAL_INTEGRATION_CONTRACT.md
 ### O01–O07 evidence-backed recommendation checkpoint — 18 October 2026
 
 Current handoff: [operator implementation-selection checkpoint](WP06_OPERATOR_IMPLEMENTATION_SELECTION_CHECKPOINT.md). Seven concrete recommended profiles are supported by official technical documentation and the preserved contract, with alternatives, threat/compatibility limits and acceptance mappings. Recommendations are not operator adoption: all real decisions remain blank/pending,28planned cases unexecuted,24real checkpoints unchanged. No database, key, pipe, supervisor, service change, live probe, Stata or participant processing. Next is explicit adoption or revision for a separately bounded artificial implementation, not live execution.
+
+
+### Scoped design approval and exact Stage-A plan — 18 October 2026
+
+The owner approved O01–O07 recommended profiles for artificial development only. The new [Stage-A implementation plan](WP06_STAGE_A_IMPLEMENTATION_PLAN.md) records the scoped approval, exact file/interface boundary and AC01–AC16 fixture design. Status: PLAN_REVIEW_REQUIRED; no new operational code, cases or live actions executed. Earlier pending records remain immutable; production budgets/paths/retention and institutional adoption remain unresolved. Next is review of this exact plan before its artificial implementation, not Stage B/C, service integration or research execution.
