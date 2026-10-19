@@ -36,7 +36,7 @@
         "consequence": "Keep affected scientific/operational uses held, identify missing evidence and retain uncertainty; no assumption is substituted."
       }
     ],
-    "selected_choice": "",
+"selected_choice": "evidence_review_complete",
     "minimum_evidence": [
       "Actual recruitment channels, locations, dates and inclusion instructions, distinguished from planning intentions",
       "An attributable author statement of target population, achieved cohort and household versus personal/principal remittance status",
@@ -60,8 +60,10 @@
     ],
     "recipe_and_scope_consequence": "No gate closes or operation activates by completing this preparation card.",
     "non_authorization": "This dossier and evidence-review completion are not a fit grant, participant-processing grant, institutional approval, deployment adoption or release permission.",
-    "decision_status": "PREPARED_FOR_REVIEW_NO_DECISION",
-    "approved": false
+"decision_status": "DOCUMENTARY_ACCOUNT_ACCEPTED_EXECUTION_GATES_HELD",
+"approved": false,
+"documentary_accepted": true,
+"acceptance_record_ref": "wp06-author-dossier/d1_population_acceptance.json"
   },
   {
     "decision_id": "D1_rights",

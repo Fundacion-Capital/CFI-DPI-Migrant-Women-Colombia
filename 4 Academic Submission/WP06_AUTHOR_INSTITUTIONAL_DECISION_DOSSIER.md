@@ -2,7 +2,9 @@
 
 ## Purpose and non-authorization
 
-Prepared from the sealed scientific/operational crosswalk and existing documentary evidence. This dossier supplies questions, evidence, alternatives and consequences for human review; it supplies no decisions. All 24 responses, names, dates, substantive conclusions and approval fields remain blank. Nothing has been sent. No contact, analysis change, fitting, host probe, participant/saved-state processing, Stata action, Git/cloud operation or release is included. It is not a manuscript revision or a new scientific validation.
+Prepared from the sealed scientific/operational crosswalk and existing documentary evidence. The original preparation snapshot had 24 blank responses. On 19 October 2026 the author explicitly accepted the corrected D1_population documentary account and authorized recording that acceptance. One documentary response is now recorded; the other 23 decisions remain blank. General approval and execution flags remain false. No institutional determination, sample adoption, analysis change, fitting, participant processing, Stata execution, Git/cloud mutation or release is inferred. Historical preparation packets remain unchanged.
+
+Current record: [accepted population account](wp06-author-dossier/D1_POPULATION_ACCEPTED_ACCOUNT_2026-10-19.md), [attributable acceptance](wp06-author-dossier/d1_population_acceptance.json), and [audit receipt](wp06-author-dossier/d1_population_acceptance_audit.json). Existing manual test/non-official exclusions and the historical analytical dataset are preserved. This is documentary acceptance with limitations, not independent verification of every retained record. The accepted snapshot preserves its original pending labels and unchecked checklist as historical review text; the acceptance record supplies the current disposition.
 
 The original full manuscript remains the academic foundation. These inherited audits characterize historical recipes and reported results; they do not make the condensed CFI/Canva versions binding, validate the actual cohort or replace the authors’ scientific judgment. Existing historical grants and results retain their original scopes. The crosswalk and every previous packet remain preserved.
 
@@ -51,7 +53,9 @@ Artificial 148-test success is not actual operational acceptance. O01–O07 desi
 
 ## D1_population — What population and recruitment/coverage description can the authors substantiate from the actual field process and instrument?
 
-**Accountable role:** authors. **Status:** prepared; no decision.
+**Accountable role:** authors. **Status:** documentary account accepted on 19 October 2026; execution gates held.
+
+The author selected `evidence_review_complete` for the corrected account in writing block 46381 by direct instruction in this chat. This accepts documentary wording, source distinctions, scope of claims and explicit limitations only. External identity verification, coauthor/institutional signoff, positive participant eligibility, academic sample adoption and execution/release authorization are not inferred. See the [acceptance record](wp06-author-dossier/d1_population_acceptance.json). The original brief below is retained as historical context; its questions and alternatives are not new unrecorded decisions. D1_rights and the other 23 response forms remain pending.
 
 What population and recruitment/coverage description can the authors substantiate from the actual field process and instrument?
 

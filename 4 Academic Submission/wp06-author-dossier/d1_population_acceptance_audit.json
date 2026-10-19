@@ -1,0 +1,121 @@
+{
+  "status": "D1_POPULATION_DOCUMENTARY_ACCEPTANCE_AUDITED_EXECUTION_HELD",
+  "date": "2026-10-19",
+  "baseline": "ddc82befc5b6c87fda54c935f321993117a5a438",
+  "checks_passed": [
+    "HEAD unchanged",
+    "Index unchanged",
+    "Direct author documentary acceptance dated and bounded",
+    "Accepted account fingerprint matches response",
+    "Four unauthorized-authority negative controls rejected",
+    "Exact 24 response identities preserved",
+    "Other 23 responses unchanged including D1_rights",
+    "One bounded response only; no general approval",
+    "Other 23 decision cards unchanged",
+    "Original D1 card facts/options/limits preserved",
+    "Readiness counts reconcile",
+    "All scientific gaps and activation holds preserved",
+    "All prior artifact pointers preserved; six scoped additions",
+    "Prior workflow state unchanged outside explicit acceptance addition",
+    "Prior governance text preserved: README.md",
+    "Prior governance text preserved: ACADEMIC_SUBMISSION_WORKPLAN.md",
+    "Prior governance text preserved: ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md",
+    "Prior governance text preserved: VERSION_MEASUREMENT_REGISTER.md",
+    "Dossier D1_rights and all later briefs unchanged",
+    "All tracked/private/data/service fingerprints outside bounded edits preserved",
+    "Preimage preserved: WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+    "Preimage preserved: wp06-author-dossier/response_forms.json",
+    "Preimage preserved: wp06-author-dossier/decision_cards.json",
+    "Preimage preserved: wp06-author-dossier/readiness.json",
+    "Preimage preserved: README.md",
+    "Preimage preserved: ACADEMIC_SUBMISSION_WORKPLAN.md",
+    "Preimage preserved: ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md",
+    "Preimage preserved: VERSION_MEASUREMENT_REGISTER.md",
+    "Preimage preserved: 00_meta/workflow_state.json",
+    "Changed-path allowlist; no analysis/data/manuscript edits",
+    "Repository-configured diff whitespace check passes"
+  ],
+  "negative_authority_controls_rejected": [
+    "institutional_approval",
+    "sample_approved",
+    "execution_authorized",
+    "identity_verified"
+  ],
+  "preserved_tracked_outside_edits": 1210,
+  "preserved_prior_private": 23263,
+  "preserved_old_pointers": 2467,
+  "new_pointers": 6,
+  "preserved_service_sources": 3,
+  "preserved_restricted_dataset_fingerprints": 2,
+  "other_responses_unchanged": 23,
+  "other_cards_unchanged": 23,
+  "documentary_acceptances": 1,
+  "institutional_approval": false,
+  "scientific_approval": false,
+  "sample_approved": false,
+  "execution_authorized": false,
+  "participant_processing": 0,
+  "stata_execution": 0,
+  "fits": 0,
+  "analysis_changes": 0,
+  "git_mutations": 0,
+  "release": false,
+  "source_fingerprints": [
+    {
+      "file": "4 Academic Submission/00_meta/workflow_state.json",
+      "bytes": 358623,
+      "sha256": "C53CD9606EEBD6A5915006C55EA0E171835F027700228186E6D04C2AC58172C3"
+    },
+    {
+      "file": "4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md",
+      "bytes": 50140,
+      "sha256": "5BE9B49993DADC7A5E4B63C6D4C4DF69625AE95A32B23E1121606EFF1C9289FF"
+    },
+    {
+      "file": "4 Academic Submission/ACADEMIC_SUBMISSION_WORKPLAN.md",
+      "bytes": 362186,
+      "sha256": "2186BBDBAD35A35D1C95397121C7A2CF23B042D38583E6CD036CF14C98ACAA4C"
+    },
+    {
+      "file": "4 Academic Submission/README.md",
+      "bytes": 241140,
+      "sha256": "5AE2460EFD549537717A8315C28964A98910644BB7D84B66480BDE6A8977A956"
+    },
+    {
+      "file": "4 Academic Submission/VERSION_MEASUREMENT_REGISTER.md",
+      "bytes": 240459,
+      "sha256": "F636C9A80209A974BB896AEEE2B530F4A9427BD35E78DA17CB4273089BDCBBAE"
+    },
+    {
+      "file": "4 Academic Submission/WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+      "bytes": 109404,
+      "sha256": "11DC9073AE15ABE34E576C4F651A73F6DFC309D8E73AEDE224518F9D85D8058E"
+    },
+    {
+      "file": "4 Academic Submission/wp06-author-dossier/D1_POPULATION_ACCEPTED_ACCOUNT_2026-10-19.md",
+      "bytes": 19235,
+      "sha256": "6F01061D1534BAA44E6BD9B5C2AE4938D70E19BDE28CD1DAE2A1E0EC6D2E7E36"
+    },
+    {
+      "file": "4 Academic Submission/wp06-author-dossier/d1_population_acceptance.json",
+      "bytes": 3524,
+      "sha256": "A6603320A70C8530CA73DC1466C7A79DCC05EFAA0CF26954C3A7C8E6F5544722"
+    },
+    {
+      "file": "4 Academic Submission/wp06-author-dossier/decision_cards.json",
+      "bytes": 105617,
+      "sha256": "A82C7985C72B8E28B25B5DE555B3C016266E2EAC8813A60C6979DF81BFE0713D"
+    },
+    {
+      "file": "4 Academic Submission/wp06-author-dossier/readiness.json",
+      "bytes": 7246,
+      "sha256": "C810326EB4B50758A46173E8F13A20063BF1131C9723B2A7C59F1E173C9E4581"
+    },
+    {
+      "file": "4 Academic Submission/wp06-author-dossier/response_forms.json",
+      "bytes": 24653,
+      "sha256": "3594E067F2C57822EF72504A059C76C8045258AAA614724690FE1C70FE6F6E00"
+    }
+  ],
+  "scope_note": "Metadata/preservation checks only; historical preparation/runtime tests not rerun, and participant values not loaded."
+}

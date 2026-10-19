@@ -1,5 +1,5 @@
 {
-  "schema_version": 167,
+"schema_version": 168,
   "project": {
     "short_name": "CFI-DPI-Migrant-Women-Colombia",
     "created_at_beijing": "2026-10-05T18:40:00+08:00",
@@ -10,6 +10,25 @@
     "language": "English"
   },
   "orchestration": {
+"wp06_d1_population_documentary_acceptance": {
+"status": "DOCUMENTARY_ACCOUNT_ACCEPTED_EXECUTION_GATES_HELD",
+"date": "2026-10-19",
+"date_timezone": "Europe/Berlin",
+"owner_checkpoint": "ddc82befc5b6c87fda54c935f321993117a5a438",
+"decision_id": "D1_population",
+"choice": "evidence_review_complete",
+"documentary_accepted": true,
+"responses_received": 1,
+"remaining_blank_responses": 23,
+"institutional_approval": false,
+"scientific_acceptance": false,
+"sample_approved": false,
+"execution_authorized": false,
+"participant_processing_authorized": false,
+"operational_adoption": false,
+"release": false,
+"next_boundary": "Review D1_rights using located project-specific ethics materials and attributable institutional evidence; no contact, participant processing, fitting or approval inferred. Other documentary decisions remain pending."
+},
     "wp06_author_institutional_decision_dossier": {
       "status": "AUTHOR_INSTITUTIONAL_DOSSIER_PREPARED_DECISIONS_UNMADE",
       "owner_checkpoint": "261f76f5aa4cb964d0f690c0add545056089ebf7",
@@ -713,6 +732,12 @@
     "last_rebuild_check": ""
   },
   "artifacts": {
+"wp06_d1_population_account": "wp06-author-dossier/D1_POPULATION_ACCEPTED_ACCOUNT_2026-10-19.md",
+"wp06_d1_population_acceptance": "wp06-author-dossier/d1_population_acceptance.json",
+"wp06_d1_population_acceptance_audit": "wp06-author-dossier/d1_population_acceptance_audit.json",
+"wp06_d1_population_acceptance_entry": "audit-local/intake/wp06-d1-population-acceptance-ddc82be/entry.json",
+"wp06_d1_population_acceptance_seal": "audit-local/intake/wp06-d1-population-acceptance-ddc82be/validation.json",
+"wp06_d1_population_acceptance_closure": "audit-local/intake/wp06-d1-population-acceptance-ddc82be/closure.json",
     "wp06_author_dossier_report": "WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
     "wp06_author_dossier_cards": "wp06-author-dossier/decision_cards.json",
     "wp06_author_dossier_responses": "wp06-author-dossier/response_forms.json",
