@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "record_id": "Focused_brief_reported_approvals_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "BRIEF_SPECIFIC_APPROVAL_REPORT_RECORDED_UNSENT_UNDERLYING_DECISIONS_HELD",
+  "baseline_head": "aa36d67786524fef47e1b58798d11b7834a851a7",
+  "branch": "main",
+  "scope": "Record the user's explicit report that Fundación Capital and Angélica approved this exact brief; keep the brief unsent and preserve prior records without resolving institutional questions.",
+  "confirmation_record": {
+    "path": "focused_brief_reported_approvals_2026-10-24.json",
+    "bytes": 4232,
+    "sha256": "25C26A9345124D043DF311C3172FA31E48DC313DCF417327495280A240F39726"
+  },
+  "brief": {
+    "path": "FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+    "bytes": 11701,
+    "sha256": "803B8DA4F2D686DFA91B38830B6E591AF251337B1C17FB3135718DE4B2664F7F",
+    "unchanged": true,
+    "transmitted_by_agent": false
+  },
+  "content_checks": {
+    "report_type": true,
+    "exact_instruction": true,
+    "date_is_report_date": true,
+    "two_named_reported_approvals": true,
+    "no_independent_verification": true,
+    "no_dates_or_instruments_invented": true,
+    "brief_hash": true,
+    "brief_bytes": true,
+    "old_acceptance_preserved": true,
+    "old_audit_preserved": true,
+    "report_not_assumption": true,
+    "authority_held": true,
+    "six_negative_controls": true,
+    "unsent_scoped": true,
+    "no_underlying_answers": true,
+    "all_twelve_pending": true,
+    "formal_register_unsent": true,
+    "rights_held": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 21,
+  "failures": [],
+  "negative_controls": {
+    "verified_status": true,
+    "sent": true,
+    "institutional_response": true,
+    "ethics": true,
+    "journal_submission": true,
+    "public_release": true
+  },
+  "negative_control_count": 6,
+  "negative_control_method": "Read-only validation rejected six in-memory mutations claiming independent verification, sent status, adoption of an institutional response, ethics clearance, journal-submission permission or public-release permission. No mutated record was saved and no action was performed.",
+  "evidence_status": {
+    "parties_reported_to_approve": [
+      "Fundación Capital",
+      "Angélica Cardozo"
+    ],
+    "approval_scope": "Exact focused clarification brief only",
+    "author_confirmed": true,
+    "independently_verified": false,
+    "actual_approval_dates_supplied": false,
+    "approval_instruments_supplied": false,
+    "individual_institutional_approver_supplied": false,
+    "underlying_decisions_resolved": false
+  },
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1238,
+        "bytes": 66471820,
+        "sha256": "E43D6CFEE505ED350436C9A508E9E87799F999A7332CBC50E3B656DBC71E7918"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_update": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1238,
+        "bytes": 66471820,
+        "sha256": "E43D6CFEE505ED350436C9A508E9E87799F999A7332CBC50E3B656DBC71E7918"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included, no participant values parsed.",
+    "historical_acceptance_and_audit": "Both retained unchanged; the new explicit approval report supplements the earlier refused-assumption record rather than rewriting it.",
+    "scope_limit": "All existing tracked files and the complete prior audit-local tree rehashed. No external protected originals, approval instruments, mailbox, management-held documents or direct coauthor/institutional statement were examined in this update."
+  },
+  "institutional_state": {
+    "selected_decisions": 0,
+    "assigned_reviewers": 0,
+    "institutional_response_adopted": false,
+    "formal_D1_rights_approved": false,
+    "formal_records_changed": false
+  },
+  "authority": {
+    "independently_verified_institutional_approval": false,
+    "independently_verified_coauthor_approval": false,
+    "ethics_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "contact_authorized": false,
+    "journal_submission_authorized": false,
+    "public_release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "email_draft_creation": false,
+    "transmission": false,
+    "participant_processing": false,
+    "fit": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent scope/provenance review, 21 content/status checks, six in-memory boundary controls and declared preservation fingerprints; not independent approval authentication.",
+  "proposed_commit": {
+    "title": "docs: record reported approvals of the exact unsent clarification brief",
+    "description": [
+      "Record the user's explicit confirmation that Fundación Capital and Angélica approved the exact focused institutional clarification brief.",
+      "Classify the approvals as author-confirmed and brief-specific, without inventing approval dates, instruments, an institutional decision-maker or independent verification.",
+      "Keep the brief unchanged and unsent by this workflow; preserve the earlier acceptance and refused-assumption audit as dated history.",
+      "Leave all 12 substantive institutional decisions, D1_rights and all processing/execution/submission/release gates unchanged.",
+      "Verify all 1,238 existing tracked files and 23,281 prior audit-local files.",
+      "No contacts, participant processing, fitting, source edits, commit, push, synchronization, submission or public release."
+    ]
+  },
+  "completion_boundary": "The user's report of brief-specific approvals is recorded and audited. The substantive institutional answers, documentary approval authentication and later action-specific permissions remain outstanding."
+}

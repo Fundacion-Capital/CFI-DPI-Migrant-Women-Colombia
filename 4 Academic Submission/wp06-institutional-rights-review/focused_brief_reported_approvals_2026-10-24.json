@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "record_id": "Focused_brief_Fundacion_Capital_and_coauthor_approval_report_2026-10-24",
+  "record_type": "DIRECT_AUTHOR_REPORT_OF_BRIEF_SPECIFIC_APPROVALS",
+  "status": "BRIEF_APPROVALS_AUTHOR_CONFIRMED_NOT_INDEPENDENTLY_VERIFIED_UNSENT",
+  "confirmation_received_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "Yes, Fundación Capital and Angélica approved this exact brief. Record my confirmation, keep it unsent, preserve all packets and fully audit the update without treating the underlying institutional decisions as resolved.",
+  "reported_by": "Project author by direct user statement in this chat",
+  "reporter_identity_independently_verified": false,
+  "approved_artifact": {
+    "path": "FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+    "bytes": 11701,
+    "sha256": "803B8DA4F2D686DFA91B38830B6E591AF251337B1C17FB3135718DE4B2664F7F",
+    "unchanged": true,
+    "scope": "Approval of the exact clarification brief as an artifact, not responses to the questions it requests."
+  },
+  "reported_approvals": [
+    {
+      "party": "Fundación Capital",
+      "approval_of_exact_brief_reported": true,
+      "evidence_status": "AUTHOR_CONFIRMED_NOT_INDEPENDENTLY_VERIFIED",
+      "individual_approver": null,
+      "approval_date": null,
+      "approval_instrument_ref": null,
+      "communication_mode": null,
+      "mandate_or_approval_authenticated": false
+    },
+    {
+      "party": "Angélica Cardozo",
+      "approval_of_exact_brief_reported": true,
+      "evidence_status": "AUTHOR_CONFIRMED_NOT_INDEPENDENTLY_VERIFIED",
+      "approval_date": null,
+      "approval_instrument_ref": null,
+      "communication_mode": null,
+      "direct_coauthor_attestation_received_by_agent": false,
+      "approval_authenticated": false
+    }
+  ],
+  "distinction_from_previous_record": {
+    "prior_acceptance_ref": "focused_brief_documentary_acceptance_2026-10-24.json",
+    "prior_acceptance_sha256": "1DD971873DD9914E2FA46E17CFBD68DE82A8130EC179850DAEB1FBF9B5E6DFDB",
+    "prior_audit_ref": "focused_brief_documentary_acceptance_audit_2026-10-24.json",
+    "prior_audit_sha256": "3F17CBCCF716A1829ECD164D92B41B5A33716AA6695535D2C556859FBE1D3367",
+    "prior_records_preserved": true,
+    "clarification": "The earlier instruction asked to assume approvals; that assumption was not adopted. The user now explicitly reports that both parties actually approved this exact brief. This addendum records that new report at author-confirmed evidence level without rewriting the earlier snapshot.",
+    "not_merely_assumed": true,
+    "independent_verification_performed": false
+  },
+  "delivery": {
+    "status": "UNSENT_BY_THIS_WORKFLOW",
+    "agent_sent": false,
+    "contacts_made": false,
+    "recipient_selected": false,
+    "delivery_channel_selected": false,
+    "note": "How the parties reviewed or communicated approval outside this workflow has not been established. This record does not assert that no off-workflow circulation ever occurred."
+  },
+  "unresolved_information": [
+    "Actual approval dates and communication modes",
+    "Original approval records, if any",
+    "Identity/capacity of the individual who approved for Fundación Capital",
+    "Independent confirmation by the institution or coauthor"
+  ],
+  "formal_decisions": {
+    "brief_specific_report_only": true,
+    "substantive_answers_provided": false,
+    "institutional_register_changed": false,
+    "dispositions_selected": 0,
+    "reviewers_assigned": 0,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false
+  },
+  "authority": {
+    "ethics_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "contact_authorized": false,
+    "journal_submission_authorized": false,
+    "public_release_authorized": false
+  },
+  "unchanged_boundaries": "No study-specific ethics determination, mandate validation, consent sufficiency, public microdata permission, disclosure clearance, final manuscript/CFI pre-submission approval or release clearance is inferred from approval of this brief.",
+  "audit_ref": "focused_brief_reported_approvals_audit_2026-10-24.json"
+}
