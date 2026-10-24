@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "record_id": "Focused_brief_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "USER_ACCEPTANCE_RECORDED_BRIEF_UNSENT_EXTERNAL_APPROVALS_NOT_ESTABLISHED",
+  "baseline_head": "4f9e2648db0adaeefbbd08954906a58ef45db9e6",
+  "branch": "main",
+  "scope": "Record the user's documentary acceptance and preserve the unsent brief and all prior packets. Do not adopt institutional/coauthor approvals from an assumption.",
+  "acceptance": {
+    "path": "focused_brief_documentary_acceptance_2026-10-24.json",
+    "bytes": 2830,
+    "sha256": "1DD971873DD9914E2FA46E17CFBD68DE82A8130EC179850DAEB1FBF9B5E6DFDB"
+  },
+  "accepted_brief": {
+    "path": "FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+    "bytes": 11701,
+    "sha256": "803B8DA4F2D686DFA91B38830B6E591AF251337B1C17FB3135718DE4B2664F7F",
+    "unchanged": true,
+    "unsent": true
+  },
+  "content_checks": {
+    "user_acceptance": true,
+    "date": true,
+    "exact_instruction": true,
+    "brief_hash": true,
+    "brief_bytes": true,
+    "assumption_requested_not_adopted": true,
+    "approvals_not_invented": true,
+    "five_negative_controls": true,
+    "unsent": true,
+    "no_fields_filled": true,
+    "original_labels_preserved": true,
+    "prior_records_not_changed": true,
+    "twelve_pending": true,
+    "register_not_sent": true,
+    "rights_pending": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 18,
+  "failures": [],
+  "negative_controls": {
+    "institutional_approval_verified": true,
+    "coauthor_approval_verified": true,
+    "institutional_approval_inferred": true,
+    "coauthor_approval_inferred": true,
+    "requested_assumption_adopted": true
+  },
+  "negative_control_count": 5,
+  "negative_control_method": "Five isolated in-memory copies attempted to set verified/inferred institutional/coauthor approval or adoption of the requested assumption true. The boundary validator rejected each; no altered copy was saved.",
+  "approval_request_disposition": {
+    "request_preserved_verbatim_in_acceptance": true,
+    "assumption_adopted": false,
+    "reason": "A user instruction to assume approvals does not establish that another author or an authorized institution approved the exact brief or issued the substantive determinations. This update records neither as fact.",
+    "historical_author_reported_oral_protocol_approval_unchanged": true,
+    "claim_that_approval_cannot_exist": false
+  },
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1236,
+        "bytes": 66462697,
+        "sha256": "5E95920E82B34513AB2B8A9C6E7DE9ADDC3EE122BDB10369340530D89B3423D1"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_update": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1236,
+        "bytes": 66462697,
+        "sha256": "5E95920E82B34513AB2B8A9C6E7DE9ADDC3EE122BDB10369340530D89B3423D1"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. No participant values parsed.",
+    "scope_limit": "All existing tracked files and the complete prior audit-local tree rehashed. External protected originals, institutional correspondence and management records were not inspected in this acceptance-only update; no operation wrote to them."
+  },
+  "formal_state": {
+    "institutional_decisions_completed": 0,
+    "R01_disposition": null,
+    "R01_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "readiness_changed": false,
+    "workflow_state_changed": false
+  },
+  "authority": {
+    "identity_verified": false,
+    "coauthor_approval_verified": false,
+    "institutional_approval_verified": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_processing": false,
+    "fitting": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "manuscript_or_analysis_change": false,
+    "git_commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent scope and evidence-status review, 18 checks, five in-memory negative controls and full declared preservation comparison; not independent coauthor/institutional validation.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of unsent institutional brief",
+    "description": [
+      "Record the user's acceptance of the exact focused institutional clarification brief with its hash and scope in a separate wrapper.",
+      "Keep the original brief, blank institutional responses and all prior accounts/acceptance/audit records unchanged and unsent.",
+      "Preserve the request to assume coauthor/institutional approval but do not adopt that unsupported assumption as an actual decision.",
+      "Leave all institutional, ethics, participant-processing, execution, submission and release gates unchanged.",
+      "Verify all 1,236 existing tracked files and 23,281 prior audit-local files.",
+      "No contacts, fitting, source edits, commit, push, synchronization, submission or public release."
+    ]
+  },
+  "completion_boundary": "Documentary acceptance recorded and preservation audited. The requested assumption of institutional/coauthor approval is not implemented; actual decisions and supporting scope/evidence remain to be established."
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "record_id": "Focused_institutional_brief_single_author_documentary_acceptance_2026-10-24",
+  "record_type": "DIRECT_USER_DOCUMENTARY_ACCEPTANCE_UNSENT_BRIEF",
+  "status": "DOCUMENTARY_ACCEPTANCE_RECORDED_UNSENT_EXTERNAL_APPROVALS_NOT_ESTABLISHED",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "source_instruction": "I accept the focused institutional clarification brief for documentary purposes. Record my acceptance, keep it unsent, preserve all packets and fully audit the update. Asume institutional and coauthor approval.",
+  "accepted_brief": {
+    "path": "FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+    "bytes": 11701,
+    "sha256": "803B8DA4F2D686DFA91B38830B6E591AF251337B1C17FB3135718DE4B2664F7F",
+    "original_draft_labels_preserved": true,
+    "response_fields_preserved_blank": true
+  },
+  "scope": "User accepts the exact clarification brief as a documentary artifact. This is not a response by Katherine, Fundación Capital, Angélica or CFI and does not resolve any substantive institutional question.",
+  "approval_request_handling": {
+    "user_requested_assumption_of_institutional_and_coauthor_approval": true,
+    "requested_assumption_adopted": false,
+    "reason": "An instruction to assume approval is not evidence that an authorized institutional reviewer or coauthor approved the exact brief or its substantive determinations. No approval is fabricated or adopted; actual reported decisions can be assessed separately if supplied.",
+    "institutional_approval_verified": false,
+    "coauthor_approval_verified": false,
+    "institutional_approval_inferred": false,
+    "coauthor_approval_inferred": false,
+    "note": "These evidence-status fields do not assert that no approval could exist. Previously recorded author reports of historical oral institutional approval remain unchanged and retain their original scope."
+  },
+  "delivery": {
+    "status": "UNSENT",
+    "sent": false,
+    "recipient_selected": false,
+    "delivery_channel_selected": false,
+    "contacts_made": false
+  },
+  "formal_state": {
+    "institutional_register_changed": false,
+    "reviewer_assigned_by_this_intake": false,
+    "dispositions_selected": 0,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false
+  },
+  "authority": {
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "previous_records_changed": false,
+  "audit_ref": "focused_brief_documentary_acceptance_audit_2026-10-24.json"
+}
