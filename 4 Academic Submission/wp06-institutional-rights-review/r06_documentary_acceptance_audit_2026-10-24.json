@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "record_id": "R06_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R06_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "94fa04b21e25661979ebe17d39598ce3d616e6e5",
+  "branch": "main",
+  "baseline_context": "The working tree was clean at entry. R03-R05 acceptance files previously untracked in this conversation were now tracked at the current HEAD; the current repository state was used, not the older 30358d5 baseline.",
+  "scope": "Record only the user's documentary acceptance of R06. Preserve the accepted review text and all prior packets. No request/transfer-history certification, participant inspection, contact, deletion, retention-rule adoption, access or release.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R06_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 8024,
+      "sha256": "408787EBCC9EA8C622BBF00285CE2BFC50C2E5F65A4AE5A83F7A33B1C1B79E24"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r06_documentary_acceptance_2026-10-24.json",
+      "bytes": 5913,
+      "sha256": "78A7D6734623ED3FABB46B41C189658C2AB136DB23E4883E4DC8083841FFC68D"
+    }
+  ],
+  "content_checks": {
+    "acceptance": true,
+    "exact_instruction": true,
+    "identity_boundary": true,
+    "correct_date": true,
+    "snapshot_hash": true,
+    "snapshot_bytes": true,
+    "honest_provenance": true,
+    "historical_review_status_framed": true,
+    "no_requests_qualified": true,
+    "no_register": true,
+    "shared_responsibility_no_lead": true,
+    "no_formal_procedure": true,
+    "case_by_case": true,
+    "historical_channel": true,
+    "current_channel_unknown": true,
+    "alternative_channel_unestablished": true,
+    "no_deadline_statement": true,
+    "no_retention_period_statement": true,
+    "aggregate_distinction_not_discussed": true,
+    "no_universal_promises": true,
+    "downloaded_copy_explanation_unknown": true,
+    "public_nonrelease_author_report": true,
+    "private_nonrelease_author_report": true,
+    "reports_only_not_certified": true,
+    "historical_privacy_concern_retained": true,
+    "no_release_history_verification": true,
+    "r04_restricted": true,
+    "r05_uncertainties_preserved": true,
+    "keys_not_deletion_permission": true,
+    "eight_wrapper_limitations": true,
+    "no_new_procedure": true,
+    "no_new_retention_rule": true,
+    "authority_held": true,
+    "formal_wrapper_held": true,
+    "register_pending": true,
+    "register_authority_held": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "link": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 42,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "request_handling_procedure_adopted": true,
+    "retention_period_adopted": true,
+    "contact_authorized": true,
+    "participant_processing_authorized": true,
+    "deletion_authorized": true,
+    "reconsent_authorized": true,
+    "execution_authorized": true,
+    "external_data_access_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_formal_rights_approval": true,
+    "erase_zero_request_qualification": true,
+    "invent_maintained_channel": true,
+    "invent_formal_procedure": true
+  },
+  "negative_control_count": 18,
+  "negative_control_method": "In-memory fixtures only: fourteen false authority/adoption flags individually set true; formal D1_rights approval introduced; text fixtures removed the zero-request qualification, invented a maintained current channel or invented an agreed procedure. Corresponding checks rejected all 18 mutants. No fixture written to a source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding consolidated R06 chat account. Substantive introductory clarification, review text, documentary conclusion and historical review-status/no-change statements are retained beneath a separate acceptance/provenance preamble. Non-substantive memory citation excluded. No platform-authenticated export or message ID claimed; fingerprints identify saved artifacts only.",
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R06",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "reported_no_requests_and_no_distribution_kept_distinct_from_verified_history": true
+  },
+  "formal_state": {
+    "R06_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R06_selected_disposition": null,
+    "R06_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "request_handling_procedure_adopted": false,
+    "retention_period_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "deletion_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_value_parsing": false,
+    "fit": false,
+    "stata_execution": false,
+    "live_permissions_or_exposure_probe": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "deletion": false,
+    "retention_period_selection": false,
+    "request_handling_procedure_implementation": false,
+    "data_transfer": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent substantive/authority review, 42 positive checks and 18 negative controls plus before/after preservation fingerprints. Final saved-file checks run after audit creation. Not an independent institutional, request-register, transfer-history, repository-exposure or participant-rights determination. Audit is not self-hashed.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R06 withdrawal and retention account",
+    "description": [
+      "Preserve the reviewed R06 account in a dated snapshot and record the author's exact documentary acceptance separately.",
+      "Distinguish no requests reported from verified absence, and preserve the lack of a shared register, designated lead or agreed formal procedure.",
+      "Retain the unknown current enumerator-mediated channel, unstated withdrawal deadline and retention period, and unresolved treatment of individual records, analytical derivatives and already-produced findings.",
+      "Preserve the author's reports-only sharing account alongside the historical privacy concern without certifying release or transfer history.",
+      "Leave R06, D1_rights and the R04 restricted-data route unchanged at the institutional level. Do not adopt retention rules, deletion promises, access permissions or release authority.",
+      "Audit 42 content/status checks and 18 negative controls; verify preservation of all pre-existing tracked files and the complete prior private audit tree.",
+      "No participant inspection, contacts, fitting, source edits, deletion, data transfer, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "R06 is accepted and recorded for documentary purposes only; its formal institutional response, retention requirements and request-handling arrangements remain unresolved. R07 (historical privacy concern and repository exposure) is the next documentary topic, not automatically initiated.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1252,
+        "bytes": 66582991,
+        "sha256": "E05C81D3BB7327E5E81AB9E3FF1E8A35C204BF3F3F9D04280CC94157DD2DB533"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1252,
+        "bytes": 66582991,
+        "sha256": "E05C81D3BB7327E5E81AB9E3FF1E8A35C204BF3F3F9D04280CC94157DD2DB533"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. Private-file bytes were treated as opaque preservation objects, without parsing, interpreting or displaying participant values.",
+    "scope_limit": "All 1,252 pre-existing tracked files and all 23,281 prior audit-local files were rehashed. No pre-existing untracked files were present at entry. External originals, correspondence, participant records, historical downloads, permissions, request histories and remote Git exposure were not inspected. New R06 artifacts are outside the prior-file preservation groups."
+  }
+}

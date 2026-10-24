@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "record_id": "R06_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R06",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R06_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R06 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R06_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "bytes": 8024,
+    "sha256": "408787EBCC9EA8C622BBF00285CE2BFC50C2E5F65A4AE5A83F7A33B1C1B79E24",
+    "source": "Immediately preceding assistant consolidated R06 account, including its sharing-history clarification, review status and limitations, accepted by the exact user instruction above.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "Separate acceptance/provenance preamble followed by frozen substantive review text. Pre-acceptance and no-change statements describe the prior review turn. Non-substantive memory citation excluded. No substantive account change intended or platform-authenticated export claimed."
+  },
+  "author_confirmations": {
+    "requests": "No withdrawal, deletion or use-restriction requests reported; no shared register established. This is not independently verified absence.",
+    "responsibility": "Either author would coordinate case by case; no designated lead or agreed formal procedure.",
+    "historical_channel": "Women were told requests could go through enumerators to the authors; whether that channel is maintained today is unknown. No alternative current route established by this review.",
+    "timing": "No specific withdrawal/data-removal time limit and no identifier/original-response retention period were stated.",
+    "scope_of_explanation": "The distinction between removing individual records and changing already-produced aggregate tables, figures or findings was not discussed.",
+    "public_sharing": "Author reports no individual-level dataset was publicly downloadable, including de-identified versions; no release/history audit performed.",
+    "private_sharing": "Author reports no individual-level dataset supplied privately outside the two authors and fieldwork coordinators; only reports shared externally and data remained within the identified project arrangements.",
+    "scope_limit": "No claim that reports passed disclosure review or that technical cloud transfers, complete copy history or earlier repository exposure were independently assessed."
+  },
+  "documentary_context": [
+    "Formal R06 response remains pending, with no institutional disposition or assigned reviewer.",
+    "R04 keeps individual-level analytical inputs restricted and does not authorize public release or private external verification.",
+    "R05 retains unknown retention requirements, former-coordinator copies, possible separate coauthor copies and absent formal handover arrangement.",
+    "Retained analytical keys may assist locating records but do not establish authorized or feasible deletion across source, analytical, synchronized, backup and historical copies."
+  ],
+  "unresolved_limitations": [
+    "No independently checked evidence of the reported absence of requests; no shared recording mechanism.",
+    "No agreed formal handling procedure or single lead; case-by-case coordination is reported, not a tested process.",
+    "Current availability of the enumerator-mediated request channel and an alternative current route are not established.",
+    "No participant-facing retention period or applicable institutional rule established; no unlimited-retention or deletion promise inferred.",
+    "Scope and feasibility of actions on identifiers, analytical derivatives, synchronized copies, backups, historical versions and already-produced findings remain undetermined.",
+    "Whether limits on recovering already-downloaded copies were explained remains unknown.",
+    "Reported public/private dataset non-distribution is not independently reconciled with the preserved historical Git-tracked genuine-contact concern; neither current exposure nor verified absence of past exposure is inferred.",
+    "External report disclosure safety is not verified; no participant, transfer, correspondence or request-register inspection was undertaken."
+  ],
+  "formal_state": {
+    "R06_selected_disposition": null,
+    "R06_reviewer_assigned": false,
+    "R06_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "request_handling_procedure_adopted": false,
+    "retention_period_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "deletion_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R07 historical privacy concern and repository exposure; not automatically initiated. No participant inspection, live exposure/history audit, contact or remediation authority supplied.",
+  "audit_ref": "r06_documentary_acceptance_audit_2026-10-24.json"
+}
