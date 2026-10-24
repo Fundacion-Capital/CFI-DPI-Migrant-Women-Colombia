@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "record_id": "R01_reviewer_route_account_preparation_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "PREPARATION_AUDITED_ACCOUNT_PENDING_AUTHOR_REVIEW",
+  "baseline_head": "ee720398e2bb3a30cea175cc06725d2a09c5df07",
+  "branch": "main",
+  "scope": "Consolidate the user's R01 clarifications for review without adopting an institutional response, assuming further approvals, changing prior packets or contacting anyone.",
+  "account": {
+    "path": "R01_REVIEWER_AND_ROUTE_ACCOUNT_2026-10-24.md",
+    "bytes": 14139,
+    "words_whitespace_delimited": 1831,
+    "sha256": "FDC76E7BAE0F58CD390E7EC01ECC669D7A466E7C46B2F2D278B21A5F0B3C02A8",
+    "accepted": false
+  },
+  "content_checks": {
+    "pending_review": true,
+    "historical_title": true,
+    "signature_provenance": true,
+    "standing_duties": true,
+    "management_records": true,
+    "both_capacities": true,
+    "individual_not_committee": true,
+    "oral_before_fieldwork": true,
+    "both_recipients": true,
+    "no_coauthor_attestation": true,
+    "no_exact_date_invention": true,
+    "current_role_confirmed": true,
+    "public_title_not_mandate": true,
+    "linkedin_limits": true,
+    "no_further_approval": true,
+    "no_implicit_release": true,
+    "earlier_accounts_frozen": true,
+    "six_unmarked_review_items": true,
+    "no_contact_details": true,
+    "no_authority_created": true,
+    "local_links_resolve": true,
+    "r01_response_blank": true,
+    "register_unsent": true,
+    "no_packet_authority": true,
+    "d1_rights_held": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true,
+    "whitespace_clean": true
+  },
+  "content_checks_passed": 29,
+  "failures": [],
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1231,
+        "bytes": 66417844,
+        "sha256": "AB5AE5327CD5090999D79A8A0ECFD3790D709404C44235D1095E2C44BEA74C03"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_account_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1231,
+        "bytes": 66417844,
+        "sha256": "AB5AE5327CD5090999D79A8A0ECFD3790D709404C44235D1095E2C44BEA74C03"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records. Hidden files included; no participant values parsed.",
+    "scope_limit": "All existing Git-tracked files and the complete prior audit-local tree rehashed. External protected originals were not reread or rehashed in this narrative-only task; no operation wrote to them."
+  },
+  "evidence": {
+    "public_pages_checked_on": "2026-10-24",
+    "spanish_team_page": {
+      "url": "https://fundacioncapital.org/equipo/",
+      "observed_title": "Directora de Transformación Estratégica",
+      "limit": "Management affiliation/title, not the complete appointment or ethics mandate."
+    },
+    "english_team_page": {
+      "url": "https://fundacioncapital.org/eng/equipo/",
+      "observed_title": "Chief Strategy Officer. CSO",
+      "limit": "Current public title must not be silently substituted for the historical project-period title."
+    },
+    "linkedin": {
+      "url": "https://co.linkedin.com/in/katherine-yepes-02463935",
+      "status": "Earlier index observation; direct access was rate-limited, not retried or authenticated in this task.",
+      "full_profile_verified": false
+    },
+    "author_confirmations": [
+      "Historical bilingual legal/control/corporate-process title from project-period signature",
+      "Standing legal, representation, ethics and data-protection responsibilities",
+      "Formal role records held by management but not examined here",
+      "Individual institutional review, not committee membership",
+      "Project reviewed from inception in both legal/data and ethics capacities",
+      "Complete protocol orally approved before fieldwork",
+      "Oral approval communicated to both authors, reported by the user only",
+      "Those responsibilities continue for this project today"
+    ],
+    "not_independently_examined": [
+      "Historical signature-bearing message",
+      "Management-held appointment, role description or delegation",
+      "Original study-specific oral approval or exact date/protocol version",
+      "Separate coauthor or Katherine attestation"
+    ],
+    "provenance_limit": "Web text observations are tool-supported but no local page snapshot or message seal was created; title evidence does not establish study approval."
+  },
+  "formal_state": {
+    "R01_reviewer_assigned": false,
+    "R01_selected_disposition": null,
+    "R01_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "new_account_accepted": false,
+    "coauthor_approval": false,
+    "institutional_determination_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "execution_authorized": false,
+    "participant_processing_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "email_search": false,
+    "participant_load_or_export": false,
+    "fit": false,
+    "stata_execution": false,
+    "manuscript_edit": false,
+    "original_document_edit": false,
+    "prior_packet_edit": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "review_method": "Same-agent second-pass evidence-attribution and authority-boundary review plus 29 content/status checks and full declared file-set fingerprint comparison; not external institutional/coauthor verification.",
+  "proposed_commit": {
+    "title": "docs: consolidate R01 reviewer and institutional route account",
+    "description": [
+      "Add a dated R01 account for author review consolidating Katherine Yepes's reported historical/current responsibilities and oral pre-fieldwork approval of the complete protocol.",
+      "Separate current official management/title evidence from the user-supplied historical signature, management-held mandate records and author-confirmed study-specific approval.",
+      "Distinguish individual institutional review from committee or independent external approval and retain all consent/privacy/rights/publication limitations.",
+      "Leave the original institutional packet, decision fields, accepted records and all approval/execution/submission/release gates unchanged.",
+      "Add preparation/preservation audit evidence; no contacts, participant processing, fitting, source replacement, commit, push, submission or release."
+    ]
+  },
+  "completion_boundary": "Account preparation only. User review/acceptance of this new account, documentary mandate verification, institutional response and any further action remain separate."
+}
