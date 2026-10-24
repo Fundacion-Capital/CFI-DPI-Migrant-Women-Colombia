@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "record_id": "R02_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R02_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "b8a929cdc207a2fb88d18987102da3378c60253a",
+  "branch": "main",
+  "scope": "Record the user's documentary acceptance of the R02 account as presented in the preceding chat response, preserve the review text and prior packets, and leave all institutional/execution decisions unchanged.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r02_documentary_acceptance_2026-10-24.json",
+      "bytes": 3834,
+      "sha256": "253400103DB522BAA2EA3C613BDC5DB0ADD078D3D5E1D35418197BAEE97CF796"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R02_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 5227,
+      "sha256": "527E696B0C5A95FE9C63379944DCCAC21892CE095B756282ABBCAB29E03AC719"
+    }
+  ],
+  "content_checks": {
+    "documentary_acceptance": true,
+    "exact_instruction": true,
+    "date": true,
+    "account_hash": true,
+    "account_bytes": true,
+    "source_provenance": true,
+    "historical_context_framed": true,
+    "normalization_disclosed": true,
+    "knowledge_of_undertaking": true,
+    "operational_rationale": true,
+    "explicit_start_without_external": true,
+    "internal_final_route": true,
+    "complete_oral_protocol": true,
+    "both_recipients": true,
+    "current_scope": true,
+    "current_direct_oral": true,
+    "current_no_additional_review_attributed": true,
+    "unverified_uniandes": true,
+    "no_unknown_date_invention": true,
+    "no_committee_clearance": true,
+    "use_and_journal_limits": true,
+    "six_limitations": true,
+    "authority_held": true,
+    "negative_controls": true,
+    "r02_still_pending": true,
+    "register_unsent": true,
+    "rights_held": true,
+    "local_acceptance_link": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 31,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "execution_authorized": true,
+    "release_authorized": true
+  },
+  "negative_control_count": 6,
+  "negative_control_method": "Six in-memory copies of the acceptance record separately claimed coauthor approval, authenticated institutional confirmation, committee approval, adopted ethics clearance, execution authority or release authority. The validator rejected each. No mutated copy was saved.",
+  "snapshot_provenance": "The accepted account previously existed in chat, not a pre-existing local file. This task created a frozen review-text snapshot with separately identified acceptance framing and disclosed typographic apostrophe normalization. The new file hash identifies this local transcription, not a previously sealed chat export.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1240,
+        "bytes": 66482782,
+        "sha256": "8E588AB2EA76720BB13A63C11BB6822CC6F6098A538CDA374F95F688F2109D01"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1240,
+        "bytes": 66482782,
+        "sha256": "8E588AB2EA76720BB13A63C11BB6822CC6F6098A538CDA374F95F688F2109D01"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included and no participant values parsed.",
+    "scope_limit": "All existing tracked files and the complete prior audit-local tree rehashed. External protected originals, correspondence, management-held instruments and direct third-party confirmations were not re-examined or written in this documentary-only task."
+  },
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R02",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "reported_history_and_present_conclusion_retained_as_author_confirmations": true
+  },
+  "formal_state": {
+    "R02_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R02_selected_disposition": null,
+    "R02_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "institutional_confirmation_authenticated": false,
+    "coauthor_approval_inferred": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_processing": false,
+    "fit": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent comparison against the preceding chat account, evidence/authority-boundary review, 31 content/status checks, six negative controls and declared preservation fingerprints. Not independent institutional/coauthor authentication.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R02 ethics-route account",
+    "description": [
+      "Preserve the reviewed R02 chat account in a dated local snapshot and record the user's documentary acceptance in a separate attributable wrapper.",
+      "Retain the author-confirmed historical internal authorization, operational rationale and direct oral present-use conclusion without converting them into committee approval or independently authenticated clearance.",
+      "Preserve exact-date/version and journal/consent/disclosure/licensing limitations; do not assume new institutional or coauthor decisions.",
+      "Leave the institutional register, D1_rights, all prior accounts/packets and approval/execution/submission/release gates unchanged.",
+      "Verify all 1,240 existing tracked files and 23,281 prior audit-local files.",
+      "No contacts, participant processing, fitting, source edits, commit, push, synchronization, submission or public release."
+    ]
+  },
+  "completion_boundary": "R02 documentary account accepted by the user and recorded. The formal institutional response, independent evidence verification, consent coverage and all substantive downstream gates remain separate; R03 is the next documentary review topic."
+}

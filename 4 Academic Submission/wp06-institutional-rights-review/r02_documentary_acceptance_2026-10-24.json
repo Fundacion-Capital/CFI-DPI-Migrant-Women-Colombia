@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "record_id": "R02_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R02",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R02_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R02 account for documentary purposes",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R02_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "bytes": 5227,
+    "sha256": "527E696B0C5A95FE9C63379944DCCAC21892CE095B756282ABBCAB29E03AC719",
+    "source": "Immediately preceding assistant chat account, including its explicit evidence/scope limitations and historical review context.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "typographic_normalization": "Typographic apostrophes normalized to ASCII; framing metadata is identified separately. No substantive account change."
+  },
+  "author_confirmed_history": [
+    "Katherine knew the written undertaking to await Universidad Nacional authorization.",
+    "Operational need to begin and lack of an external review decision informed the decision to proceed.",
+    "She orally approved the complete protocol before fieldwork and expressly permitted data collection without awaiting an external decision.",
+    "Both authors directly received that historical authorization, according to the user.",
+    "She indicated internal review would be the final institutional route."
+  ],
+  "author_confirmed_present_use": [
+    "Katherine reviewed the current academic-journal preparation and proposed public anonymized replication package.",
+    "She concluded the existing internal route covers those current academic uses without additional ethics review.",
+    "The user heard that conclusion directly from Katherine, orally."
+  ],
+  "unresolved_limitations": [
+    "Exact historical/current decision dates, reviewed protocol/package versions, approval references and supporting instruments are not supplied.",
+    "UniAndes contact is author-reported, not independently verified in correspondence reviewed.",
+    "The written undertaking to await authorization remains preserved; no external administrative response becomes an exemption.",
+    "Individual internal review is not university, formal committee or independent external approval.",
+    "The reported present-use conclusion is not independently authenticated and does not by itself establish consent sufficiency, anonymization, disclosure clearance, reuse licensing, final release-file approval or final manuscript approval.",
+    "Future journal acceptance of the route remains a separate question."
+  ],
+  "formal_state": {
+    "R02_selected_disposition": null,
+    "R02_reviewer_assigned": false,
+    "R02_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R03 consent evidence and coverage; any participant-record inspection requires separate explicit scope.",
+  "audit_ref": "r02_documentary_acceptance_audit_2026-10-24.json"
+}
