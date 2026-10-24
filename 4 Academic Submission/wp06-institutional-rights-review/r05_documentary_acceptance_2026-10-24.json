@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "record_id": "R05_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R05",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R05_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R05 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R05_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "bytes": 10567,
+    "sha256": "721468AB413D1758801F34293BB5A0BE22114B45336FB66E7BDA522D8D3C7270",
+    "source": "Immediately preceding assistant consolidated R05 account, accepted by the exact user instruction above.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "Separate acceptance/provenance preamble precedes frozen substantive review text, including its prior-turn review-status and no-change statements. Non-substantive memory citation excluded. No substantive account change intended; no platform-authenticated chat export claimed."
+  },
+  "author_confirmations": {
+    "current_access": "Only the two authors have current study access in SurveyCTO, Dropbox and OneDrive; individual accounts, no shared credentials.",
+    "historical_access": "Coordinators had fieldwork access; deletion or retention of their copies is unknown.",
+    "storage": "SurveyCTO, the user's Fundación Capital institutional OneDrive, personal Dropbox and personally owned non-institutionally-managed computer.",
+    "personal_dropbox": "The user's own choice, not explicitly authorized by Fundación Capital; institutional awareness unknown. No active links allowing access without signing in as either author are reported.",
+    "administrative_identifiers": "Names/telephones occur in original response files and separate administrative lists; women were told retention was for validation/duplicate checks and identifiers were used only for those purposes.",
+    "analytical_structure": "Working/final analytical datasets reportedly exclude names/telephones but contain an internal key linking rows to identifiable originals; not irreversibly anonymous.",
+    "authentication": "User confirms MFA/2FA on his Dropbox, institutional Microsoft and SurveyCTO accounts. His Windows account is exclusive and password-protected; this does not establish drive encryption or Angélica's settings.",
+    "incidents_and_transfers": "No known incidents or transfers outside the described arrangements; not verified logs.",
+    "github": "User confirms no PII in current files and full Git history; not an independent history/remediation audit and not a deletion of the earlier historical finding.",
+    "retention_and_handover": "Applicable institutional retention policy unknown; no formal handover arrangement established."
+  },
+  "documentary_findings": "Retained register/evidence manifest and R03/R04 records establish documentary context and pending formal decisions, not current security, institutional authorization, absence of exposure or participant-level compliance.",
+  "unresolved_limitations": [
+    "Personal Dropbox storage lacks explicit institutional authorization; institutional awareness unknown.",
+    "Former coordinators' retained copies and deletion confirmations unknown.",
+    "Angélica's separate local copies and device/account protections not established.",
+    "No live permissions, links, MFA, encryption, backups, access-log or device audit; actual drive encryption unverified.",
+    "Analytical keys permit relinking to identifiable originals; no disclosure-risk assessment performed.",
+    "Applicable institutional retention policy unknown; no retention period, permanent-retention authorization or deletion authority inferred.",
+    "No formal custody-handover arrangement established.",
+    "Earlier Git-tracked genuine-contact finding retained alongside current author assurance; cleanup process, timing and full-history removal not independently verified.",
+    "Formal institutional responsibility/policy/delegation and use-specific determinations not independently established; no security certification or release permission supplied."
+  ],
+  "formal_state": {
+    "R05_selected_disposition": null,
+    "R05_reviewer_assigned": false,
+    "R05_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "security_certified": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "deletion_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R06 withdrawal, restrictions and retention after sharing; not automatically initiated and no inspection, contact, deletion or release authority supplied.",
+  "audit_ref": "r05_documentary_acceptance_audit_2026-10-24.json"
+}

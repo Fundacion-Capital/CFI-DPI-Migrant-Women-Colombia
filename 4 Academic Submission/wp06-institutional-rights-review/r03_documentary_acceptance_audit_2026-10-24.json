@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "record_id": "R03_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R03_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "30358d5826a89f276e15e38f798523da377c95c8",
+  "branch": "main",
+  "scope": "Record only the direct user's documentary acceptance of the immediately preceding R03 consolidated account; preserve all existing packets and leave formal institutional, access, execution and release gates unchanged.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 10633,
+      "sha256": "ACC61A91E3397FB6C4998A810E552F66FDE164486477D29CA244412D22DE9B53"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r03_documentary_acceptance_2026-10-24.json",
+      "bytes": 6107,
+      "sha256": "0C5B14F5D4121B802F1686A3BE7639496E41D198FA25AB9B4936A3F70B99A678"
+    }
+  ],
+  "content_checks": {
+    "documentary_acceptance": true,
+    "exact_instruction": true,
+    "correct_identity_boundary": true,
+    "date": true,
+    "account_hash": true,
+    "account_bytes": true,
+    "frozen_snapshot": true,
+    "source_provenance": true,
+    "correction_explicit": true,
+    "quantitative_surveycto_only": true,
+    "quantitative_no_paper_audio": true,
+    "qualitative_separate_uninspected": true,
+    "consent_sequence": true,
+    "sharing_beginning_modes": true,
+    "public_individual_access": true,
+    "identifiers_excluded": true,
+    "single_not_separate": true,
+    "own_words_no_script": true,
+    "no_comprehension_test": true,
+    "withdrawal_download_unknown": true,
+    "supervision_oral_no_record": true,
+    "training_unlocated": true,
+    "originals_excluded_preserved": true,
+    "unchanged_author_report": true,
+    "author_custody": true,
+    "requests_escalation": true,
+    "requests_unverified": true,
+    "written_tension_retained": true,
+    "no_template_attribution": true,
+    "seven_limitations": true,
+    "no_sample_change": true,
+    "no_record_coverage_claim": true,
+    "authority_held": true,
+    "formal_wrapper_held": true,
+    "register_pending": true,
+    "register_unsent": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "snapshot_wrapper_link": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 42,
+  "boundary_checks": {
+    "R03_approval_assumed": true,
+    "R03_execution_authorized": true,
+    "R03_contact_authorized": true,
+    "no_reviewer_or_decision": true,
+    "no_register_authority": true,
+    "all_twelve_responses_pending": true,
+    "only_two_new_files_before_audit": true
+  },
+  "boundary_checks_passed": 7,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "contact_authorized": true,
+    "participant_processing_authorized": true,
+    "reconsent_authorized": true,
+    "execution_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "formal_rights_approval": true,
+    "remove_surveycto_only": true,
+    "erase_training_uncertainty": true
+  },
+  "negative_control_count": 13,
+  "negative_control_method": "In-memory copies only: each of ten false authority flags was individually changed to true; a formal rights approval was introduced; the quantitative SurveyCTO-only correction and training uncertainty were separately removed from text fixtures. The corresponding check rejected each of the 13 mutants. No fixture was written to any source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding chat account. The substantive review text and pre-acceptance/no-change statements are retained as history under a clearly separate acceptance/provenance preamble. No message ID was available; none was invented. The non-substantive memory citation is excluded. Hashes identify the resulting saved snapshot, not a platform-authenticated chat export.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. File bytes were hashed as opaque preservation objects; no participant values were parsed or displayed.",
+    "scope_limit": "All 1,243 pre-existing tracked files and all 23,281 prior audit-local files were rehashed. The three new acceptance artifacts are not old packet content. External Dropbox/OneDrive originals, participant records, consent edit histories, recordings, correspondence and institutional instruments were not re-examined. No claim of external source verification or independently verified consent coverage is made."
+  },
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R03",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "author_confirmations_document_findings_and_unresolved_limitations_kept_separate": true
+  },
+  "formal_state": {
+    "R03_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R03_selected_disposition": null,
+    "R03_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_processing": false,
+    "fit": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent substantive and boundary review, 42 content/status checks plus seven additional register/scope checks, 13 in-memory negative controls and before/after preservation fingerprints. Not independent institutional/coauthor authentication or participant-level verification. A final saved-file readback is performed after this audit is created; the audit is not self-hashed.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R03 consent-evidence account",
+    "description": [
+      "Preserve the reviewed R03 consent-evidence account in a dated snapshot and record the author's exact documentary acceptance in a separate attributable record.",
+      "Retain the correction that quantitative consent was documented only in SurveyCTO; distinguish signed qualitative documents and keep all earlier packets intact.",
+      "Separate author confirmations from retained-document findings and preserve unresolved training corroboration, exact wording, participant-level coverage, record integrity, comprehension and withdrawal limitations.",
+      "Keep the institutional R03 response, D1_rights and all coauthor, ethics, access, execution, submission and public-release decisions unchanged.",
+      "Audit 49 content/boundary checks and 13 negative controls; verify preservation of all 1,243 existing tracked files and 23,281 prior audit-local files.",
+      "No participant inspection, contacts, fitting, analysis changes, source edits, commit, push, cloud synchronization, submission or public release."
+    ]
+  },
+  "completion_boundary": "Documentary acceptance recorded only. R03 is not institutionally resolved and documentary corroboration is not supplied by acceptance. R04 (consent scope and need for additional permission) remains the next documentary topic, not automatically initiated."
+}

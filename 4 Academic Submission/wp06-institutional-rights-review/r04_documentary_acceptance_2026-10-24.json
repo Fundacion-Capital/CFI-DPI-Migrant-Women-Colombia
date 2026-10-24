@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "record_id": "R04_single_author_narrowed_route_documentary_acceptance_2026-10-24",
+  "issue_id": "R04",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_PLANNING_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R04_NARROWED_ROUTE_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the narrowed R04 route for documentary purposes. Record it, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+    "bytes": 6711,
+    "sha256": "8813C35E4D5EE8F73341A42468C1B69B9FBE4BB2F9D83EEB19D03FD77D8406CD",
+    "source": "Immediately preceding assistant recommendation accepted by the exact user instruction above.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "Separate acceptance and scope preamble, followed by the frozen substantive recommendation including its policy links, access-error caveat, draft data-availability statement and prior-turn no-change statement. Non-substantive memory citation excluded. No substantive recommendation change intended."
+  },
+  "accepted_documentary_route": {
+    "current_purpose": "Reproduction of this paper, not broad future-use or linkage permissions.",
+    "public_package_plan": "Complete preparation/analysis code, README and software requirements, variable-construction documentation, blank instruments, exhibit-to-code mapping and non-disclosive outputs only after relevant review and separate release authorization.",
+    "restricted_inputs_plan": "Preserve the exact final analytical sample, variables required for the published analyses and provenance in the restricted archive. No public individual-level survey data release is adopted.",
+    "future_use_scope_narrowed": "Do not pursue the earlier proposal for academic research on any topic or linkage to other datasets as part of the present package. This changes documentary planning preferences, not the historical consent account.",
+    "no_recontact_now": "Do not initiate participant recontact or a new consent exercise; necessity, feasibility and sufficiency of additional permission are not predetermined.",
+    "code_privacy_review_required": "Before any public code release, check for identifiers embedded in manual exclusions or other commands; preserve historical sample rules and avoid changing the sample, models or results.",
+    "external_verification": "Any access to restricted inputs requires separate use-specific institutional and journal assessment and authorization; no access arrangement is approved.",
+    "data_availability_statement": "Working draft only; not final submission text, an access promise or a public-release decision.",
+    "not_implemented_by_this_record": "No code sanitization, participant output preparation, data transformation, access mechanism, license, manuscript change or release is implemented here."
+  },
+  "unresolved_limitations": [
+    "Retained only-for-this-research and aggregate-publication wording remains distinct from the author's account of an additional oral public-sharing explanation; neither is rewritten.",
+    "Training corroboration, exact spoken wording, participant-level consent coverage and integrity remain unresolved as preserved in R03.",
+    "Katherine's consideration of the specific consent-and-reuse distinction is unknown; her reported ethics-route conclusion is not adopted as this use-specific determination.",
+    "Neither public individual-level release nor private external verification is authorized; consent sufficiency, disclosure risk and additional-permission questions are not institutionally resolved.",
+    "The route does not currently provide public end-to-end reproduction or guarantee journal acceptance. Current selected-journal requirements and any editorial exception remain to be established.",
+    "Policy links in the accepted recommendation are historical support, not newly checked in this recording task. The World Development author guide was inaccessible in the prior check; exact current requirements and any exemption were not verified."
+  ],
+  "formal_state": {
+    "R04_selected_disposition": null,
+    "R04_reviewer_assigned": false,
+    "R04_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R05 data responsibility, administrative identifiers and security; not automatically initiated and no participant inspection or access authority is supplied.",
+  "audit_ref": "r04_documentary_acceptance_audit_2026-10-24.json"
+}

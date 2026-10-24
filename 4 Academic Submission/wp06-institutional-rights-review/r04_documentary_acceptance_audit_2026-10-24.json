@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "record_id": "R04_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R04_USER_NARROWED_ROUTE_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "30358d5826a89f276e15e38f798523da377c95c8",
+  "branch": "main",
+  "scope": "Record the user's documentary acceptance of the narrowed R04 planning route only; add a frozen recommendation snapshot, acceptance record and audit without editing any pre-existing packet or activating participant, institutional, execution, access or release authority.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+      "bytes": 6711,
+      "sha256": "8813C35E4D5EE8F73341A42468C1B69B9FBE4BB2F9D83EEB19D03FD77D8406CD"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r04_documentary_acceptance_2026-10-24.json",
+      "bytes": 5527,
+      "sha256": "88ABBA7FD1E77D41254D371DBA102E629E777C56004EAC1755C3217A75FA0E29"
+    }
+  ],
+  "content_checks": {
+    "documentary_acceptance": true,
+    "exact_instruction": true,
+    "identity_boundary": true,
+    "correct_date": true,
+    "source_hash": true,
+    "source_bytes": true,
+    "honest_provenance": true,
+    "public_code_restricted_data": true,
+    "paper_replication_only": true,
+    "no_broad_reuse_linkage": true,
+    "final_sample_inputs": true,
+    "no_sample_models_results_change": true,
+    "no_new_consent_exercise": true,
+    "code_identifier_review": true,
+    "safe_output_review": true,
+    "package_contents": true,
+    "no_external_access": true,
+    "draft_statement": true,
+    "no_public_reproduction_claim": true,
+    "no_journal_guarantee": true,
+    "journal_guide_failure_preserved": true,
+    "written_oral_distinct": true,
+    "katherine_specific_unknown": true,
+    "no_historical_record_change": true,
+    "no_license": true,
+    "no_implementation": true,
+    "six_limitations": true,
+    "authority_held": true,
+    "formal_state_held": true,
+    "all_register_responses_pending": true,
+    "register_authority_held": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "local_wrapper_link": true,
+    "no_tracked_edits": true,
+    "empty_index": true,
+    "unchanged_head": true
+  },
+  "content_checks_passed": 37,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "contact_authorized": true,
+    "participant_processing_authorized": true,
+    "reconsent_authorized": true,
+    "execution_authorized": true,
+    "external_data_access_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_formal_rights_approval": true,
+    "erase_restricted_data_boundary": true,
+    "erase_replication_only_scope": true
+  },
+  "negative_control_count": 14,
+  "negative_control_method": "In-memory fixtures only. Eleven false authority flags were individually set true; a formal D1_rights approval was introduced; the restricted-data boundary and paper-replication-only scope were separately removed from the text fixture. Corresponding checks rejected all 14 mutants. No fixture was written to a source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding assistant recommendation. Substantive text, policy links, guide-access failure, draft statement and prior-turn no-change wording are retained as history beneath a separately labelled acceptance/scope preamble. The chat memory citation is excluded. No platform-authenticated export or message ID is claimed. Hashes identify saved local artifacts only.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "preexisting_untracked_R03_packet",
+        "count": 3,
+        "bytes": 25794,
+        "sha256": "AD7D4F71012D73A1775F08C5F0220B7CE56A346B3C36F15B6B000C926AB5C7A7"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "preexisting_untracked_R03_packet",
+        "count": 3,
+        "bytes": 25794,
+        "sha256": "AD7D4F71012D73A1775F08C5F0220B7CE56A346B3C36F15B6B000C926AB5C7A7"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. Participant-file bytes, where present in the private tree, were opaque preservation objects only; no participant values were parsed, interpreted or displayed.",
+    "scope_limit": "All 1,243 existing tracked files, the three pre-existing untracked R03 files and all 23,281 prior audit-local files were rehashed. External originals, consent records, institutional decisions and remote policies were not re-examined in this documentary recording task. New R04 artifacts are not included in the pre-existing preservation groups.",
+    "preexisting_untracked_files": [
+      "4 Academic Submission/wp06-institutional-rights-review/R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "4 Academic Submission/wp06-institutional-rights-review/r03_documentary_acceptance_2026-10-24.json",
+      "4 Academic Submission/wp06-institutional-rights-review/r03_documentary_acceptance_audit_2026-10-24.json"
+    ],
+    "pre_audit_scope_check": {
+      "untracked_files": 5,
+      "expected_existing_R03": 3,
+      "expected_new_R04_before_audit": 2,
+      "unexpected_files": [],
+      "missing_files": []
+    }
+  },
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R04",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "planning_scope_narrowed_not_historical_consent_rewritten": true
+  },
+  "formal_state": {
+    "R04_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R04_selected_disposition": null,
+    "R04_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_processing": false,
+    "fit": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "code_sanitization_or_data_preparation": false,
+    "license_adoption": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent content and authority-boundary review, 37 positive checks, 14 negative controls, exact expected-addition check and before/after preservation fingerprints. Not independent institutional/coauthor authentication or a consent-sufficiency, disclosure or journal-policy determination. A final saved-file readback is performed separately after creating this audit; the audit is not self-hashed.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of narrowed R04 replication route",
+    "description": [
+      "Preserve the accepted R04 recommendation in a dated snapshot and record the author's exact documentary acceptance separately.",
+      "Narrow the present plan to this paper's replication code, documentation and non-disclosive outputs while retaining individual-level analytical inputs under restricted custody.",
+      "Do not adopt broad future-research, linkage, public-microdata, external-access or recontact permissions. Keep code privacy checks and output disclosure review as requirements before any separately authorized release.",
+      "Preserve the historical consent account, sample, models, results, draft-only data-availability statement and unresolved institutional/journal questions.",
+      "Leave the formal R04 response, D1_rights and all approval, access, execution, submission and release gates unchanged.",
+      "Audit 37 content/status checks and 14 negative controls; verify all 1,243 existing tracked files, three untracked R03 files and 23,281 prior audit-local files.",
+      "No participant inspection, contacts, fitting, source edits, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "The user has accepted a narrower documentary planning route, not supplied institutional consent clearance or a release decision. No public or private external access is activated. R05 (data responsibility, administrative identifiers and security) is the next documentary topic, not automatically initiated."
+}

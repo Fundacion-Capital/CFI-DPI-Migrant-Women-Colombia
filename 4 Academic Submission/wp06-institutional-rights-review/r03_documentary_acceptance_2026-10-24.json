@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "record_id": "R03_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R03",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R03_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R03 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "bytes": 10633,
+    "sha256": "ACC61A91E3397FB6C4998A810E552F66FDE164486477D29CA244412D22DE9B53",
+    "source": "Immediately preceding assistant chat account, sections 1-8 and its review-status and no-change limitations, accepted by the user's exact instruction above.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "A separate acceptance/provenance preamble precedes the frozen review text. Pre-acceptance status statements describe the prior review turn, not the current acceptance. The chat's memory citation is excluded; no substantive account wording is intentionally changed."
+  },
+  "author_confirmed_history": [
+    "Quantitative consent was documented only in SurveyCTO for both telephone and in-person interviews; no quantitative paper forms or separate audio consent recordings.",
+    "Signed paper participation/consent documents belong to qualitative interviews and focus groups, not the quantitative survey; preservation is author-reported and contents/coverage uninspected.",
+    "Affirmative consent preceded substantive quantitative questions, with no known exceptions.",
+    "From the beginning of fieldwork all enumerators were instructed to explain publicly downloadable anonymized individual survey responses, without approved-researcher access restrictions and excluding names, telephone numbers and identifying details.",
+    "A single agreement covered participation and the explained uses; there was no separate public-sharing choice.",
+    "Enumerators used their own words following training, answered questions and obtained affirmative agreement without a formal comprehension check.",
+    "Coordinators obtained direct oral confirmation from enumerators during fieldwork; no written verification record is available.",
+    "The author recalls an approximately three-hour recorded training session with review and feedback; it has not been located or reviewed.",
+    "Original SurveyCTO consent responses, including submissions later excluded, are reported preserved and unchanged under the research authors' retention and access responsibility.",
+    "Women were told they could request withdrawal or data removal through enumerators, who were instructed to forward requests to the research authors; no requests were previously reported by the author."
+  ],
+  "retained_document_findings_from_prior_review": [
+    "The reviewed quantitative definition includes a required participation-consent question and privacy wording about voluntariness, confidentiality, anonymization and aggregate publication, not a separate recorded public-sharing choice.",
+    "The enumerator information sheet says information is confidential and used only for this research; it does not explicitly explain public downloading of individual responses.",
+    "The instrument-development guide discusses consent, sharing and anonymized reuse generally, but does not corroborate implemented public-download training or delivery to each respondent.",
+    "The retained blank written consent template cannot be attributed to quantitative respondents or used to infer secondary-use choices."
+  ],
+  "unresolved_limitations": [
+    "Training recording/transcript not located or reviewed; no documentary corroboration of its specific public-download content.",
+    "No retained fixed script; exact spoken wording cannot be reconstructed or assumed identical.",
+    "No independent verification of interview-level delivery, comprehension, electronic coverage/denominators/missingness across versions, sample linkage or edit history.",
+    "Whether women were told downloaded copies might not be recoverable or removable remains unknown.",
+    "Written only-for-this-research and aggregate-publication wording remains visible alongside the author's account of an additional oral public-sharing explanation; neither is silently reinterpreted.",
+    "Preservation of qualitative signed documents does not establish their wording, completeness, coverage or permissions for quotations, recordings, transcripts, images or public sharing.",
+    "No independently checked withdrawal/request register; no institutional consent-sufficiency determination or public-release permission follows from this acceptance."
+  ],
+  "formal_state": {
+    "R03_selected_disposition": null,
+    "R03_reviewer_assigned": false,
+    "R03_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R04 consent scope and need for additional permission; no automatic start, participant inspection, institutional disposition or release authorization.",
+  "audit_ref": "r03_documentary_acceptance_audit_2026-10-24.json"
+}

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "record_id": "R05_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R05_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "30358d5826a89f276e15e38f798523da377c95c8",
+  "branch": "main",
+  "scope": "Record the user's documentary acceptance of R05 only, preserving the preceding account and all prior tracked, untracked packet and private audit files. No security certification, institutional response, participant inspection, live control check, transfer, deletion or release.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R05_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 10567,
+      "sha256": "721468AB413D1758801F34293BB5A0BE22114B45336FB66E7BDA522D8D3C7270"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r05_documentary_acceptance_2026-10-24.json",
+      "bytes": 5677,
+      "sha256": "594D852E3DC66680533609FCBDFF9F5724A503238D0DFDCCB6D17CB8623257E4"
+    }
+  ],
+  "content_checks": {
+    "acceptance": true,
+    "exact_instruction": true,
+    "identity_boundary": true,
+    "correct_date": true,
+    "hash": true,
+    "bytes": true,
+    "provenance": true,
+    "historical_review_status_framed": true,
+    "custodians_not_controller": true,
+    "historical_copies_unknown": true,
+    "storage_inventory": true,
+    "dropbox_not_authorized": true,
+    "institutional_awareness_unknown": true,
+    "angelica_copies_unknown": true,
+    "identifiers_both_locations": true,
+    "explained_and_limited_purpose": true,
+    "direct_identifiers_removed": true,
+    "direct_internal_key": true,
+    "not_irreversibly_anonymous": true,
+    "separate_accounts": true,
+    "mfa_user_only": true,
+    "windows_password_not_encryption": true,
+    "encryption_unknown": true,
+    "current_links_not_live_check": true,
+    "incidents_transfers_qualified": true,
+    "github_history_author_only": true,
+    "earlier_privacy_finding_preserved": true,
+    "template_not_quantitative": true,
+    "retention_policy_unknown": true,
+    "handover_absent": true,
+    "nine_limitations": true,
+    "restricted_r04_preserved": true,
+    "authority_held": true,
+    "formal_state_held": true,
+    "register_pending": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "local_link": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 41,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "security_certified": true,
+    "contact_authorized": true,
+    "participant_processing_authorized": true,
+    "deletion_authorized": true,
+    "reconsent_authorized": true,
+    "execution_authorized": true,
+    "external_data_access_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_formal_rights_approval": true,
+    "invent_encryption_verification": true,
+    "invent_irreversible_anonymity": true,
+    "invent_personal_storage_authorization": true
+  },
+  "negative_control_count": 17,
+  "negative_control_method": "In-memory copies only: thirteen false authority/certification flags individually set true; formal D1_rights approval introduced; three text fixtures replaced unverified encryption, non-anonymity and unauthorized personal-storage wording with unsupported positive claims. Corresponding checks rejected all 17 mutants. No fixture written to any source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding consolidated R05 account. Frozen substantive text includes its historical pre-acceptance status and no-change statements under a separately labelled acceptance/provenance preamble. Chat memory citation excluded. No platform-authenticated export or message ID is claimed; hashes identify the saved local snapshot only.",
+  "validation_attempts": [
+    {
+      "attempt": 1,
+      "status": "FAILED_BEFORE_CHECK_EXECUTION",
+      "exit_status": "nonzero",
+      "failed_command": "\n$ErrorActionPreference='Stop'\n$b='4 Academic Submission/wp06-institutional-rights-review'\n$p=\"$b/R05_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md\"\n$a=Get-Content -Raw -LiteralPath \"$b/r05_documentary_acceptance_2026-10-24.json\"|ConvertFrom-Json\n$body=Get-Content -Raw -Encoding UTF8 -LiteralPath $p\n$r=Get-Content -Raw -LiteralPath \"$b/decision_register.json\"|ConvertFrom-Json\n$rr=$r.decisions|Where-Object id -eq 'R05'\n$rights=@(Get-Content -Raw -LiteralPath '4 Academic Submission/wp06-author-dossier/response_forms.json'|ConvertFrom-Json)|Where-Object decision_id -eq 'D1_rights'\nfunction Check($a,$body){\n[ordered]@{\n acceptance=($a.documentary_accepted_by_user -eq $true)\n exact_instruction=($a.source_instruction -ceq 'I accept the R05 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.')\n identity_boundary=($a.identity_independently_verified -eq $false)\n correct_date=($a.acceptance_date -eq '2026-10-24' -and $a.date_timezone -eq 'Europe/Berlin')\n hash=($a.accepted_account.sha256 -eq (Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash)\n bytes=($a.accepted_account.bytes -eq (Get-Item -LiteralPath $p).Length)\n provenance=($a.accepted_account.source_message_id -eq $null -and $body -match 'frozen chat snapshot' -and $body -match 'prior-acceptance|pre-acceptance')\n historical_review_status_framed=($body -match 'it is not yet recorded as accepted' -and $body -match 'rather than this recording task')\n custodians_not_controller=($body -match 'not establish.*formal institutional assignment of data-controller responsibilities')\n historical_copies_unknown=($body -match 'do not know whether former coordinators deleted their copies')\n storage_inventory=($body -match 'SurveyCTO' -and $body -match 'institutional account' -and $body -match 'personal account' -and $body -match 'personally owned computer')\n dropbox_not_authorized=($body.Contains('not an explicitly authorized Fundación Capital arrangement'))\n institutional_awareness_unknown=($body -match 'Whether Katherine or another responsible manager knew about it is unknown')\n angelica_copies_unknown=($body -match 'Whether Angélica retains separate local copies is')\n identifiers_both_locations=($body -match 'both the original survey-response files and separate administrative lists')\n explained_and_limited_purpose=($body -match 'Women were told' -and $body -match 'validation and duplicate-participation checks' -and $body -match 'Identifiers were used.*only for those purposes')\n direct_identifiers_removed=($body -match 'working and final analytical datasets do not retain names or telephone numbers')\n direct_internal_key=($body -match 'key directly within the dataset')\n not_irreversibly_anonymous=($body.Contains('We should not describe those analytical datasets as irreversibly anonymous.'))\n separate_accounts=($body -match 'separate individual accounts' -and $body -match 'no shared login credentials')\n mfa_user_only=($body -match 'Angélica’s authentication and device-protection settings have not been established')\n windows_password_not_encryption=($body -match 'Windows account is used exclusively by you and protected by a password' -and $body -match 'sign-in password and cloud-account protections do not establish encryption')\n encryption_unknown=($body.Contains('Actual drive-encryption status remains unverified'))\n current_links_not_live_check=($body -match 'no active links permitting access' -and $body -match 'no live permissions, shared-link, authentication, encryption, backup or access-log audit')\n incidents_transfers_qualified=($body -match 'No known transfers' -and $body -match 'No known security incidents' -and $body -match 'not independently audited findings')\n github_history_author_only=($body -match 'No PII in either the current GitHub files or the full Git history' -and $body -match 'No fresh inspection established the cleanup process')\n earlier_privacy_finding_preserved=($body -match 'earlier project record identified genuine contact details in a Git-tracked dataset' -and $body -match 'neither repeat the old finding as proof of current exposure')\n template_not_quantitative=($body -match 'quantitative consent was documented only in SurveyCTO' -and $body -match 'cannot be assumed to have been administered')\n retention_policy_unknown=($body -match 'do not know whether an institutional retention policy applies' -and $body -match 'no retention period or deletion authority should be invented')\n handover_absent=($body -match 'No formal handover arrangement has been established')\n nine_limitations=($a.unresolved_limitations.Count -eq 9 -and $body -match '9\\. \\*\\*Institutional responsibility')\n restricted_r04_preserved=($body -match 'R04 documentary route keeps individual-level analytical inputs restricted')\n authority_held=(@($a.authority.psobject.Properties|Where-Object Value -ne $false).Count -eq 0)\n formal_state_held=($a.formal_state.R05_selected_disposition -eq $null -and $a.formal_state.R05_reviewer_assigned -eq $false -and $a.formal_state.institutional_response_adopted -eq $false -and $a.formal_state.D1_rights_approved -eq $false -and $a.formal_state.prior_records_changed -eq $false)\n register_pending=($rr.status -eq 'PREPARED_NOT_SENT_NO_RESPONSE' -and $rr.selected_disposition -eq $null -and $rr.reviewer_assigned -eq $false -and @($r.authority.psobject.Properties|Where-Object Value -ne $false).Count -eq 0 -and $r.submission.sent -eq $false)\n rights_held=(@($rights).Count -ge 1 -and @($rights|Where-Object approved -eq $true).Count -eq 0 -and @($rights|Where-Object choice).Count -eq 0)\n next_topic_bounded=($a.next_documentary_topic -match '^R06' -and $a.next_documentary_topic -match 'not automatically initiated')\n local_link=($body -match '\\(r05_documentary_acceptance_2026-10-24.json\\)')\n no_existing_diff=([string]::IsNullOrWhiteSpace((git diff --name-only|Out-String)))\n index_empty=([string]::IsNullOrWhiteSpace((git diff --cached --name-only|Out-String)))\n head_unchanged=((git rev-parse HEAD).Trim() -eq '30358d5826a89f276e15e38f798523da377c95c8')\n}\n}\n$c=Check $a $body\n$n=[ordered]@{}\nforeach($k in $a.authority.psobject.Properties.Name){\n $m=$a|ConvertTo-Json -Depth 12|ConvertFrom-Json\n $m.authority.$k=$true\n $n[$k]=((Check $m $body).authority_held -eq $false)\n}\n$m=$a|ConvertTo-Json -Depth 12|ConvertFrom-Json\n$m.formal_state.D1_rights_approved=$true\n$n['invent_formal_rights_approval']=((Check $m $body).formal_state_held -eq $false)\n$n['invent_encryption_verification']=((Check $a ($body.Replace('Actual drive-encryption status remains unverified','Actual drive encryption is verified'))).encryption_unknown -eq $false)\n$n['invent_irreversible_anonymity']=((Check $a ($body.Replace('We should not describe those analytical datasets as irreversibly anonymous.','Those analytical datasets are irreversibly anonymous.'))).not_irreversibly_anonymous -eq $false)\n$n['invent_personal_storage_authorization']=((Check $a ($body.Replace('not an explicitly authorized Fundación Capital arrangement','an explicitly authorized Fundación Capital arrangement'))).dropbox_not_authorized -eq $false)\n$f=@($c.Keys|Where-Object{-not $c[$_]});$nf=@($n.Keys|Where-Object{-not $n[$_]})\n[pscustomobject]@{checks=$c;passed=$c.Count-$f.Count;failures=$f;negative_controls=$n;negative_count=$n.Count;negative_failures=$nf;artifacts=@('R05_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md','r05_documentary_acceptance_2026-10-24.json')|ForEach-Object{$q=Join-Path $b $_;[pscustomobject]@{path=$q;bytes=(Get-Item -LiteralPath $q).Length;sha256=(Get-FileHash -LiteralPath $q -Algorithm SHA256).Hash}}}|ConvertTo-Json -Depth 6 -Compress\nif($f.Count -or $nf.Count){exit 1}\n",
+      "error_output": "ParserError: \r\nLine |\r\n  33 |   mfa_user_only=($body -match 'Ang�lica's authentication and device-pr .\r\n     |                                         ~\r\n     | Unexpected token 's' in expression or statement.\r\n",
+      "root_cause": "PowerShell treats a typographic apostrophe as a quote delimiter. The Angélica possessive in a single-quoted assertion caused a parser error; no check or mutation executed in this attempt.",
+      "source_or_packet_change": false
+    },
+    {
+      "attempt": 2,
+      "status": "PASSED_AFTER_SINGLE_TEST_COMMAND_QUOTING_CORRECTION",
+      "change": "Only the affected assertion literal was changed from single-quoted to double-quoted. No account/source or substantive test expectation was changed.",
+      "parser_fixture": {
+        "before_errors": 2,
+        "after_errors": 0,
+        "before_message": [
+          "Unexpected token 's' in expression or statement.",
+          "The string is missing the terminator: '."
+        ]
+      },
+      "content_checks_passed": 41,
+      "negative_controls_passed": 17
+    }
+  ],
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R05",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "author_confirmations_documentary_findings_and_limitations_kept_separate": true
+  },
+  "formal_state": {
+    "R05_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R05_selected_disposition": null,
+    "R05_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "security_certified": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "deletion_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "external_data_access_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_value_parsing": false,
+    "fit": false,
+    "stata_execution": false,
+    "live_permissions_or_security_probe": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "data_transformation": false,
+    "deletion": false,
+    "transfer": false,
+    "license_adoption": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "resolved_validation_failures": 1,
+  "unresolved_validation_failures": [],
+  "review_method": "Same-agent substantive/boundary review, 41 positive checks and 17 negative controls after preservation of the initial parser failure. Preservation fingerprints are compared separately before finalizing this audit; final saved-file readback is performed after creation. Not independent security, consent, data-controller, history-cleanup or institutional authentication. Audit not self-hashed.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R05 data-custody account",
+    "description": [
+      "Preserve the accepted R05 account and record the author's exact documentary acceptance in a separate attributable record.",
+      "Distinguish author-reported access, storage, administrative identifier use and authentication from verified documentary context and unresolved security evidence.",
+      "Retain the directly stored analytical linkage key and non-anonymity distinction, personal Dropbox authorization gap, former coordinators' unknown copies, unknown retention/encryption and absent handover arrangement.",
+      "Preserve the historical Git-tracked privacy finding alongside the author's current full-history assurance without claiming an independent cleanup audit.",
+      "Leave the formal R05 response, D1_rights, R04 restricted-data route and all institutional, security, deletion, access, execution and release gates unchanged.",
+      "Validate 41 content/status checks and 17 negative controls; retain the failed validation command and its quoting recovery. Confirm preservation of 1,243 tracked files, six prior R03/R04 files and 23,281 private audit files.",
+      "No participant inspection, contacts, live security checks, fitting, source edits, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "Documentary acceptance recorded only. No unresolved security fact is certified, no institutional permission is assumed, and R05 remains formally pending. R06 (withdrawal, restrictions and retention after sharing) is the next documentary topic, not automatically initiated.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "preexisting_untracked_R03_R04_packets",
+        "count": 6,
+        "bytes": 47946,
+        "sha256": "8E87E53C918E7F792615BF12164DC65E84D3A94C368C68A8C044BF91541D66C8"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1243,
+        "bytes": 66499175,
+        "sha256": "CE63955906A6EB7F7B9AD103F634D783AA745F7F199B200DE6BCA16BBD167CD8"
+      },
+      {
+        "group": "preexisting_untracked_R03_R04_packets",
+        "count": 6,
+        "bytes": 47946,
+        "sha256": "8E87E53C918E7F792615BF12164DC65E84D3A94C368C68A8C044BF91541D66C8"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records, hidden files included. Private file bytes were opaque preservation objects; no participant values parsed, interpreted or displayed.",
+    "scope_limit": "All 1,243 existing tracked files, the six pre-existing untracked R03/R04 files and all 23,281 prior audit-local files were rehashed. External originals, participant records, permissions, cloud/device settings, edit histories and remote Git history were not inspected. New R05 artifacts are excluded from the old-file preservation groups.",
+    "preexisting_untracked_files": [
+      "4 Academic Submission/wp06-institutional-rights-review/R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "4 Academic Submission/wp06-institutional-rights-review/R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+      "4 Academic Submission/wp06-institutional-rights-review/r03_documentary_acceptance_2026-10-24.json",
+      "4 Academic Submission/wp06-institutional-rights-review/r03_documentary_acceptance_audit_2026-10-24.json",
+      "4 Academic Submission/wp06-institutional-rights-review/r04_documentary_acceptance_2026-10-24.json",
+      "4 Academic Submission/wp06-institutional-rights-review/r04_documentary_acceptance_audit_2026-10-24.json"
+    ]
+  }
+}
