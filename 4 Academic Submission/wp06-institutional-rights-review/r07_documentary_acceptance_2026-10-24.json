@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "record_id": "R07_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R07",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "R07_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R07 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R07_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "bytes": 9199,
+    "sha256": "7787E50B557A7B764C63D91BCBD7E3099AE269852ABB990845DF84F3E8BBEE59",
+    "source": "Immediately preceding assistant consolidated R07 account, accepted by the exact user instruction above.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "Separate acceptance/provenance preamble precedes frozen substantive review text, including its prior-turn review status and no-change statements. Non-substantive memory citation excluded. Local links are provenance locators, not attachments of private evidence. No substantive account change intended; no platform-authenticated export claimed."
+  },
+  "author_confirmations": {
+    "visibility": "Repository remained public after the historical finding.",
+    "remediation": "No later removal, redaction or Git-history cleanup occurred beyond restricted preservation.",
+    "approval_role": "The two authors jointly have authority to approve privacy-related repository changes; not independently authenticated.",
+    "plan": "No specific remediation plan has been jointly approved.",
+    "third_party_copies": "No known third-party clones, forks or downloads; no retained access/download records to substantiate absence.",
+    "institutional_awareness": "Whether Katherine received the specific historical finding is unknown; general project review is not evidence of this assessment."
+  },
+  "historical_documentary_findings": {
+    "date": "2026-10-05",
+    "baseline": "151b0e8db2e34cc9e05c2f0e6f19afb5e080a5d6",
+    "recorded_contact_current_stata": 11,
+    "recorded_contact_current_excel": 2,
+    "recorded_linked_posterior_files": 18,
+    "recorded_selected_historical_only_paths": 2,
+    "proposed_cleanup_paths": 33,
+    "repository_private_at_historical_observation": false,
+    "listed_forks_at_historical_observation": 0,
+    "remediation_performed_in_original_receipt": false,
+    "cleanup_proposal": "Owner-review proposal only; target manifest is not an approved or completed deletion list.",
+    "release_boundary_workflow": "History remediation and creation of an anonymized dataset recorded as not performed.",
+    "preservation": "Later receipt records 35 exact versions copied, 35 local hash/size matches and sources retained; authorization excluded deletion, Git cleanup, commits/pushes and Overleaf synchronization.",
+    "evidence_limit": "Existing documentary receipts reviewed; no original data checks repeated, no current accessibility or full-history audit performed."
+  },
+  "reconciliation": {
+    "earlier_accounts_unchanged": true,
+    "earlier_assurances": "Earlier no-PII/full-history and non-availability assurances remain preserved as history.",
+    "current_interpretation": "Earlier clean-history/non-availability assurances are not substantiated by the reviewed cleanup records and remain unreconciled with historical findings; they cannot support a verified clean-state declaration.",
+    "no_current_exposure_finding": true,
+    "restricted_preservation_not_repository_remediation": true
+  },
+  "unresolved_limitations": [
+    "Current remote accessibility and present data-bearing revisions not inspected; no safe-state certification.",
+    "Which affected versions were accessible remotely, through which routes and for what period remains unestablished.",
+    "Third-party access, downloads, clones, caches and external retained copies are unknown; zero listed forks was only a historical observation.",
+    "Institutional receipt/assessment of the specific finding and any required response remain unresolved; no legal reportability or notification determination.",
+    "No jointly approved remediation plan or independently authenticated authority instrument supplied.",
+    "Existing local/historical audit scope is not exhaustive coverage of every remote ref, release, cache, external clone or Overleaf copy.",
+    "Earlier assurances are not silently overwritten and do not become verified facts by this documentary acceptance.",
+    "R04 remains restricted; acceptance does not authorize assessment, cleanup, history rewriting, deletion, visibility change, contacts or release."
+  ],
+  "formal_state": {
+    "R07_selected_disposition": null,
+    "R07_reviewer_assigned": false,
+    "R07_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "clean_repository_certified": false,
+    "cleanup_plan_approved": false,
+    "history_rewrite_authorized": false,
+    "deletion_authorized": false,
+    "repository_visibility_change_authorized": false,
+    "notification_authorized": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "external_data_access_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R08 derivative-specific disclosure and anonymization review within the R04 restricted-data route; not automatically initiated. No derivative creation, participant inspection or release authority supplied.",
+  "audit_ref": "r07_documentary_acceptance_audit_2026-10-24.json"
+}

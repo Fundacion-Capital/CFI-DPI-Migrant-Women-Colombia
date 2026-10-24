@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "record_id": "R07_documentary_acceptance_audit_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "R07_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_INSTITUTIONAL_RESPONSE_HELD",
+  "baseline_head": "7208a523118c5eb65326ccd55912fe78c429d19e",
+  "branch": "main",
+  "scope": "Record the exact user's documentary acceptance of R07 only. Preserve the reviewed account, earlier assurances and all prior packets. No new exposure/history assessment, participant inspection, notifications, cleanup, history rewrite, visibility change or release.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R07_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 9199,
+      "sha256": "7787E50B557A7B764C63D91BCBD7E3099AE269852ABB990845DF84F3E8BBEE59"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r07_documentary_acceptance_2026-10-24.json",
+      "bytes": 6307,
+      "sha256": "70B4E659A3FDA1F6D52CCDFA96D628D9BE547F2852566C90420D15A77DB674FE"
+    }
+  ],
+  "content_checks": {
+    "acceptance": true,
+    "exact_instruction": true,
+    "identity_boundary": true,
+    "correct_date": true,
+    "snapshot_hash": true,
+    "snapshot_bytes": true,
+    "provenance": true,
+    "historical_review_status": true,
+    "visibility_author_report": true,
+    "no_later_cleanup": true,
+    "joint_general_authority_not_plan": true,
+    "no_known_copies_not_absence": true,
+    "institutional_awareness_unknown": true,
+    "historical_counts_match_receipts": true,
+    "historical_baseline": true,
+    "historical_remediation_false": true,
+    "proposed_not_implemented": true,
+    "preservation_receipt_match": true,
+    "preservation_not_cleanup": true,
+    "earlier_accounts_preserved": true,
+    "assurance_unsubstantiated": true,
+    "no_new_current_exposure_finding": true,
+    "historical_access_unknown": true,
+    "no_reportability_determination": true,
+    "r04_restricted": true,
+    "no_assessment_authorization": true,
+    "no_clean_release_clearance": true,
+    "eight_limitations": true,
+    "authority_held": true,
+    "formal_wrapper_held": true,
+    "register_pending": true,
+    "register_authority_held": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "wrapper_link": true,
+    "private_locators_not_attachments": true,
+    "private_source_links_resolve": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 40,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "committee_approval_inferred": true,
+    "ethics_clearance_adopted": true,
+    "clean_repository_certified": true,
+    "cleanup_plan_approved": true,
+    "history_rewrite_authorized": true,
+    "deletion_authorized": true,
+    "repository_visibility_change_authorized": true,
+    "notification_authorized": true,
+    "contact_authorized": true,
+    "participant_processing_authorized": true,
+    "external_data_access_authorized": true,
+    "execution_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_formal_rights_approval": true,
+    "invent_later_cleanup": true,
+    "erase_unsubstantiated_assurance": true,
+    "invent_clean_release_clearance": true
+  },
+  "negative_control_count": 20,
+  "negative_control_method": "In-memory fixtures only. Sixteen false authority/certification flags individually set true; formal D1_rights approval introduced; text fixtures invented later cleanup, erased the unsubstantiated-assurance conclusion or invented clean/release clearance. The corresponding checks rejected all 20 mutants. No fixture written to a source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding consolidated R07 chat account. Frozen substantive review text, historical observations, local evidence links, conclusion and prior-turn review/no-change statements retained under a separate acceptance/provenance preamble. Memory citation excluded. No platform-authenticated export/message ID claimed. Fingerprints identify saved artifacts only.",
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R07",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "preservation_distinguished_from_cleanup": true,
+    "earlier_assurances_retained_but_not_clean_state_clearance": true
+  },
+  "formal_state": {
+    "R07_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R07_selected_disposition": null,
+    "R07_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "committee_approval_inferred": false,
+    "ethics_clearance_adopted": false,
+    "clean_repository_certified": false,
+    "cleanup_plan_approved": false,
+    "history_rewrite_authorized": false,
+    "deletion_authorized": false,
+    "repository_visibility_change_authorized": false,
+    "notification_authorized": false,
+    "contact_authorized": false,
+    "participant_processing_authorized": false,
+    "external_data_access_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "notification": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_value_parsing": false,
+    "data_bearing_revision_inspection": false,
+    "live_repository_visibility_or_exposure_probe": false,
+    "fit": false,
+    "stata_execution": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "remediation": false,
+    "history_rewrite": false,
+    "deletion": false,
+    "repository_visibility_change": false,
+    "data_transfer": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent substantive and authority-boundary review, comparison of recorded aggregate counts with existing metadata-only audit/preservation receipts, 40 positive checks and 20 negative controls. Before/after preservation compared before final audit creation; final saved-file checks run afterward. Not an independent institutional, exposure, download, remote-ref or current-data safety assessment. Audit is not self-hashed.",
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R07 privacy-history account",
+    "description": [
+      "Preserve the accepted R07 account in a dated snapshot and record the author's exact documentary acceptance separately.",
+      "Distinguish completed restricted preservation from unperformed repository cleanup; retain the author's confirmation that the repository remained public and no later cleanup occurred.",
+      "Preserve earlier clean-history and non-availability assurances as history, while recording that reviewed cleanup evidence does not substantiate them.",
+      "Retain unknown historical access, third-party copies and specific institutional awareness; do not certify current exposure, safety or legal reportability.",
+      "Leave R07, D1_rights, the R04 restricted-data route and all cleanup, notification, history-rewrite, deletion, visibility, access and release gates unchanged.",
+      "Validate 40 content/status checks and 20 negative controls; verify all pre-existing tracked files and the complete prior private audit tree.",
+      "No participant inspection, contacts, exposure probes, fitting, source edits, remediation, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "R07 accepted and recorded for documentary purposes only. Formal institutional review and evidence needed for any remediation remain unresolved; no clean-state or release certificate is created. R08 (derivative-specific disclosure and anonymization review within the restricted-data route) is next, not automatically initiated.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1255,
+        "bytes": 66606676,
+        "sha256": "5B118DB977A921BD415E6C2C8200DED4E6AFE5470B9763255E3C608044623EE5"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1255,
+        "bytes": 66606676,
+        "sha256": "5B118DB977A921BD415E6C2C8200DED4E6AFE5470B9763255E3C608044623EE5"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. File bytes in the private tree are opaque preservation objects only; no participant values parsed, interpreted or displayed.",
+    "scope_limit": "All 1,255 pre-existing tracked files and all 23,281 prior audit-local files were rehashed. No pre-existing untracked files were present. External originals, participants, current data contents, remote visibility, historical downloads, server-visible refs and external copies were not inspected. New R07 artifacts are outside the old-file preservation groups."
+  }
+}
