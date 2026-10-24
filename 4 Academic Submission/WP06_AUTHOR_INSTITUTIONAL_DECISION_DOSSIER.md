@@ -1,5 +1,11 @@
 # WP06 — author/institutional decision dossier
 
+## Historical consent account: single-author documentary acceptance
+
+On 24 October 2026, the user explicitly accepted the historical consent account for documentary purposes. See the [unchanged reviewed account](wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md), [acceptance record](wp06-author-dossier/d1_rights_documentary_acceptance_2026-10-24.json), and [acceptance audit](wp06-author-dossier/d1_rights_documentary_acceptance_audit_2026-10-24.json). This records one author's acceptance of the account and its evidence distinctions and limitations, not coauthor assent or an institutional rights/ethics determination. The original pending-review labels and unmarked checklist remain preserved as the reviewed snapshot; this separate record supplies its current single-author documentary disposition. No individual checklist item or reviewer field is completed by inference.
+
+The formal D1_rights response remains `PREPARED_BLANK_NO_RESPONSE`, with `approved=false` and `execution_authorized=false`: its accountable role is institutional research governance, which this author-only acceptance does not replace. All existing response forms, decision cards, readiness and workflow-state records remain unchanged. Coauthor/institutional approval, ethics clearance, consent-record verification, re-consent determination, participant processing, submission and public release are not granted. The earlier D1_population acceptance retains its existing scope.
+
 ## Purpose and non-authorization
 
 Prepared from the sealed scientific/operational crosswalk and existing documentary evidence. The original preparation snapshot had 24 blank responses. On 19 October 2026 the author explicitly accepted the corrected D1_population documentary account and authorized recording that acceptance. One documentary response is now recorded; the other 23 decisions remain blank. General approval and execution flags remain false. No institutional determination, sample adoption, analysis change, fitting, participant processing, Stata execution, Git/cloud mutation or release is inferred. Historical preparation packets remain unchanged.

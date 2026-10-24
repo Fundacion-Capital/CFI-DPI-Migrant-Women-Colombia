@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "record_id": "D1_rights_single_author_documentary_acceptance_2026-10-24",
+  "decision_id": "D1_rights",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_RESPONSE",
+  "status": "DOCUMENTARY_ACCOUNT_ACCEPTED_BY_ONE_AUTHOR_GATES_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "accepted_by": "Project author, by direct user instruction in this chat",
+  "identity_verified": false,
+  "coauthor_approval": false,
+  "institutional_approval": false,
+  "documentary_accepted_by_user": true,
+  "source_instruction": "I accept the historical consent account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. Do not assume coauthor or institutional approval. Provide the commit title and description.",
+  "accepted_account": {
+    "path": "wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+    "bytes": 16611,
+    "sha256": "0B61F9795B4F1864CE8EC949135F3CFFB712458202A4870309E10DC5E657496E",
+    "original_review_labels_preserved": true
+  },
+  "preserved_checklist": {
+    "path": "wp06-author-dossier/D1_RIGHTS_CONSENT_EVIDENCE_CHECKLIST_2026-10-24.md",
+    "sha256": "744F82AF303D5F89F7AF7FFA0AA3EC1C47EA71402C0480C2421FD9CD55A45E8C",
+    "items_checked_by_inference": false,
+    "reviewer_fields_completed": false,
+    "checklist_itself_individually_accepted": false
+  },
+  "prior_preparation_audit": {
+    "path": "wp06-author-dossier/d1_rights_consent_review_audit_2026-10-24.json",
+    "sha256": "5AB46F28E6AFA3080F337737EE8977EEE79068E93CB374845005E560BE81DAD7",
+    "unchanged": true
+  },
+  "scope": "Accepts the dated historical quantitative-survey consent account as documentary wording with its distinctions among verified documents, one author's testimony, prior Outlook observations and unresolved evidence. Does not independently verify the underlying practice or consent permissions.",
+  "limitations": [
+    "Public-download explanation is author-reported, spoken only; exact contemporaneous wording is not recovered.",
+    "Retained written template describes aggregate publication and a separate optional secondary-use choice; discrepancies remain unresolved.",
+    "Participant-level consent coverage, recorded sharing choices, withdrawal-register completeness and administrative identifier safeguards are not independently audited.",
+    "Executive delegation and outside-email CFI support remain author-confirmed, not independently authenticated institutional instruments.",
+    "Independent ethics approval or exemption is not established; institutional assessment and the need for any additional consent remain undetermined.",
+    "Both authors' actual package-specific approval and CFI approval before initial journal submission remain separate future checkpoints.",
+    "Anonymization, disclosure safeguards, access conditions and licensing require separate assessment."
+  ],
+  "approved": false,
+  "ethics_clearance": false,
+  "scientific_approval": false,
+  "sample_approved": false,
+  "execution_authorized": false,
+  "participant_processing_authorized": false,
+  "reconsent_authorized": false,
+  "institutional_contact_authorized": false,
+  "submission_authorized": false,
+  "release_authorized": false,
+  "formal_response_changed": false,
+  "formal_response_status": "PREPARED_BLANK_NO_RESPONSE",
+  "evidence_review_complete_entered": false,
+  "note": "The required institutional-research-governance response is not replaced by an author's documentary acceptance. The accepted snapshot's original labels remain historical; this wrapper is the current single-author documentary disposition only.",
+  "audit_ref": "wp06-author-dossier/d1_rights_documentary_acceptance_audit_2026-10-24.json"
+}

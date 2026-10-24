@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "record_id": "D1_rights_documentary_acceptance_audit_2026-10-24",
+  "date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_RECORDED_GATES_HELD",
+  "baseline_head": "3bea59fe2fabbada572c0b2e9776bfcd79c35371",
+  "branch": "main",
+  "authorized_scope": "Record the user's documentary acceptance of the historical consent account, preserve originals/packets, audit the update and supply proposed commit text. No coauthor or institutional approval.",
+  "public_changes": [
+    {
+      "path": "4 Academic Submission/WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+      "change": "Six-line additive acceptance/navigation note; all pre-existing text preserved.",
+      "before_sha256": "11DC9073AE15ABE34E576C4F651A73F6DFC309D8E73AEDE224518F9D85D8058E",
+      "after_sha256": "53E3E90269875421F75AE09B9991440CBED0F2D8FC9A93D71F4DE36097013F90"
+    },
+    {
+      "path": "4 Academic Submission/wp06-author-dossier/d1_rights_documentary_acceptance_2026-10-24.json",
+      "change": "New attributable single-author acceptance wrapper for the exact historical account.",
+      "sha256": "32232ABD9B5ECC9527431B2F12A8AB263979E18874B02526D0E913C80DF960D6"
+    },
+    {
+      "path": "4 Academic Submission/wp06-author-dossier/d1_rights_documentary_acceptance_audit_2026-10-24.json",
+      "change": "New technical audit receipt; does not seal its own hash."
+    }
+  ],
+  "checks": {
+    "acceptance_scope": true,
+    "date": true,
+    "exact_instruction": true,
+    "account_hash": true,
+    "account_bytes": true,
+    "checklist_hash": true,
+    "prior_receipt_hash": true,
+    "authority_held": true,
+    "negative_controls": true,
+    "no_checklist_inference": true,
+    "unmarked_boxes": true,
+    "limitations_retained": true,
+    "institutional_response_pending": true,
+    "form_counts": true,
+    "no_execution_grants": true,
+    "preimage_preserved": true,
+    "only_additive_note": true,
+    "only_expected_edit": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "passed_checks": 20,
+  "failures": [],
+  "negative_authority_controls": {
+    "coauthor_approval": true,
+    "institutional_approval": true,
+    "identity_verified": true,
+    "execution_authorized": true,
+    "release_authorized": true
+  },
+  "negative_control_method": "In-memory copies of the acceptance record were separately altered to set coauthor approval, institutional approval, identity verification, execution authority and release authority true. The boundary validator rejected each; no mutated copy was saved.",
+  "preservation": {
+    "algorithm": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. No participant values parsed.",
+    "baseline": [
+      {
+        "group": "tracked_except_dossier",
+        "count": 1224,
+        "bytes": 66236789,
+        "sha256": "EBC7A2AA1D405FB2E3FF59594A93BC84AB0DA9DE3AD6E6C7F46560F3E0D8CEDA"
+      },
+      {
+        "group": "prior_audit_local",
+        "count": 23280,
+        "bytes": 2135746989,
+        "sha256": "4405A6712D6FFAE7F35BCD160C647F5E4863A7DB7E4CF2DB1ACB06C5E5FD0D1D"
+      }
+    ],
+    "post_update": [
+      {
+        "group": "tracked_except_dossier",
+        "count": 1224,
+        "bytes": 66236789,
+        "sha256": "EBC7A2AA1D405FB2E3FF59594A93BC84AB0DA9DE3AD6E6C7F46560F3E0D8CEDA"
+      },
+      {
+        "group": "prior_audit_local",
+        "count": 23280,
+        "bytes": 2135746989,
+        "sha256": "4405A6712D6FFAE7F35BCD160C647F5E4863A7DB7E4CF2DB1ACB06C5E5FD0D1D"
+      }
+    ],
+    "all_groups_equal": true,
+    "exclusions": "Only the intentionally modified dossier is excluded from the tracked-file group. Only the new, exact d1-rights-documentary-acceptance-2026-10-24 directory is excluded from the prior-audit-local group.",
+    "dossier_preimage": {
+      "path": "4 Academic Submission/audit-local/intake/d1-rights-documentary-acceptance-2026-10-24/dossier_before.md",
+      "bytes": 109404,
+      "sha256": "11DC9073AE15ABE34E576C4F651A73F6DFC309D8E73AEDE224518F9D85D8058E",
+      "git_ignored": true
+    },
+    "original_account_checklist_and_preparation_audit": "Exact reviewed hashes retained; none of the three preparation files was edited.",
+    "scope_limit": "Full existing tracked and prior audit-local file sets were rehashed. External restricted originals were not reread or rehashed in this documentary-only acceptance update; no operation wrote to them."
+  },
+  "preserved_reporting_issue": {
+    "type": "Audit-output capture, not a document validation failure",
+    "detail": "First validation command exited successfully, but a Git LF/CRLF warning prefixed captured JSON and the orchestration JSON parser refused it.",
+    "resolution": "Repeated the validation with per-command core.safecrlf=false and explicitly selected the JSON result line; all 20 checks and five negative controls passed. No Git configuration was changed.",
+    "original_result_adopted": false
+  },
+  "authority": {
+    "acceptance_by_user_only": true,
+    "account_documentary_accepted": true,
+    "coauthor_approval": false,
+    "institutional_approval": false,
+    "identity_verified": false,
+    "formal_D1_rights_response_changed": false,
+    "formal_D1_rights_approved": false,
+    "ethics_clearance": false,
+    "execution_authorized": false,
+    "participant_processing_authorized": false,
+    "sample_adopted": false,
+    "consent_records_verified": false,
+    "reconsent_determined": false,
+    "submission_authorized": false,
+    "public_release_authorized": false
+  },
+  "unchanged_records": [
+    "All 24 response forms (only the existing D1_population documentary response is populated)",
+    "decision_cards.json",
+    "readiness.json",
+    "workflow_state.json and all other tracked workflow-state files",
+    "D1_population accepted account and acceptance records",
+    "The original 24-item unmarked consent checklist and blank reviewer fields",
+    "All prior audit-local packets"
+  ],
+  "no_actions": [
+    "No participant-data load/export",
+    "No fitting or Stata execution",
+    "No analysis, sample or manuscript change",
+    "No participant, coauthor, institution or funder contact",
+    "No consent-form replacement or backdating",
+    "No commit, push, cloud synchronization, journal submission or public release"
+  ],
+  "proposed_commit": {
+    "title": "docs: record author acceptance of historical consent account",
+    "description": [
+      "Record the user's 24 October 2026 documentary acceptance of the exact historical consent account through a separately attributable acceptance record.",
+      "Add a dossier navigation/status note while retaining the reviewed account, unmarked checklist and preparation audit unchanged.",
+      "Preserve all limitations; do not infer coauthor assent, institutional approval, ethics clearance or individual checklist acceptance.",
+      "Leave D1_rights' institutional response, all existing decision/status files, data, code, manuscript and execution/submission/release gates unchanged.",
+      "Preserve the original dossier preimage and verify all 1,224 other tracked files and 23,280 prior audit-local files.",
+      "No participant processing, fitting, contact, commit, push, synchronization, submission or release."
+    ]
+  },
+  "audit_limit": "Technical evidence and a same-agent review, not independent institutional/coauthor validation. Recorded documentary acceptance does not verify historical consent practice or close D1_rights."
+}
