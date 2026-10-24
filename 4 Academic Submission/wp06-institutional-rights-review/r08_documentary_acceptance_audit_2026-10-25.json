@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "record_id": "R08_practical_documentary_acceptance_audit_2026-10-25",
+  "prepared_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "status": "R08_USER_PRACTICAL_ACCOUNT_ACCEPTED_DISCLOSURE_CHECKS_NOT_PERFORMED",
+  "baseline_head": "c4209e2cee167b30321238f1b0bec51670b8c9cc",
+  "branch": "main",
+  "scope": "Record the user's acceptance of the practical R08 scope, retaining the user's scientific-decision correction and unperformed-check limits. Add only snapshot, acceptance and audit records; no additional review bureaucracy, participant processing, scientific change or disclosure/release clearance.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\R08_ACCEPTED_PRACTICAL_ACCOUNT_2026-10-25.md",
+      "bytes": 5516,
+      "sha256": "E6E7E8929FA718F4B5BD0790A149131B7EB6D930733E608560F9CAFA8E57C131"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r08_documentary_acceptance_2026-10-25.json",
+      "bytes": 5641,
+      "sha256": "21FAEEFBD9DC5239ADD4190244E0D3DD432D407585DBD9DB070CE1B272B64A39"
+    }
+  ],
+  "content_checks": {
+    "acceptance": true,
+    "exact_instruction": true,
+    "identity_boundary": true,
+    "client_date": true,
+    "snapshot_hash": true,
+    "snapshot_bytes": true,
+    "provenance": true,
+    "historical_review_status": true,
+    "final_paper_scope": true,
+    "respondent_outputs_restricted": true,
+    "individual_figures_held": true,
+    "small_tables_specific_review": true,
+    "no_arbitrary_threshold": true,
+    "embedded_identifiers_excluded": true,
+    "originals_exclusions_preserved": true,
+    "no_silent_sample_change": true,
+    "other_outputs_excluded": true,
+    "exact_whole_package_version": true,
+    "choices_not_clearance": true,
+    "scientific_decisions_user": true,
+    "blanket_joint_requirement_removed": true,
+    "existing_obligations_not_waived": true,
+    "presentation_science_distinction": true,
+    "no_new_bureaucracy": true,
+    "six_unperformed_checks": true,
+    "no_external_review_claim": true,
+    "old_proposal_not_certificate": true,
+    "r07_not_remediated": true,
+    "reproduction_limits_honest": true,
+    "authority_held": true,
+    "formal_wrapper_held": true,
+    "register_pending": true,
+    "rights_held": true,
+    "next_topic_bounded": true,
+    "local_link": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 38,
+  "failures": [],
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "ethics_clearance_adopted": true,
+    "reviewer_appointed": true,
+    "disclosure_clearance_adopted": true,
+    "anonymization_certified": true,
+    "scientific_change_authorized": true,
+    "participant_processing_authorized": true,
+    "contact_authorized": true,
+    "transformation_authorized": true,
+    "deletion_authorized": true,
+    "history_rewrite_authorized": true,
+    "external_data_access_authorized": true,
+    "execution_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_formal_rights_approval": true,
+    "erase_user_scientific_decisions": true,
+    "reinstate_blanket_joint_requirement": true,
+    "invent_disclosure_clearance": true
+  },
+  "negative_control_count": 20,
+  "negative_control_method": "In-memory fixtures only: sixteen false authority/certification flags individually set true; formal D1_rights approval introduced; text fixtures erased the user's scientific-decision clause, reinstated the blanket joint-review requirement or invented disclosure clearance. Corresponding checks rejected all 20 mutants. No fixture written to any source or packet.",
+  "snapshot_provenance": "Same-agent comparison with the immediately preceding practical R08 account. Frozen substantive text includes the author's correction, all scope choices, unperformed checks and prior-turn review-status/no-change statements under a separate acceptance/provenance preamble. Chat memory citation excluded. No platform-authenticated export or message ID claimed. Hashes identify saved artifacts only.",
+  "documentary_acceptance": {
+    "by_user": true,
+    "issue": "R08",
+    "institutional_or_coauthor_acceptance_inferred": false,
+    "methodology_results_and_interpretation_decisions_left_to_user": true,
+    "earlier_blanket_joint_review_requirement_not_adopted": true,
+    "scope_choices_not_disclosure_clearance": true
+  },
+  "formal_state": {
+    "R08_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "R08_selected_disposition": null,
+    "R08_reviewer_assigned": false,
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "ethics_clearance_adopted": false,
+    "reviewer_appointed": false,
+    "disclosure_clearance_adopted": false,
+    "anonymization_certified": false,
+    "scientific_change_authorized": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "transformation_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "external_data_access_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "transmission": false,
+    "participant_record_inspection": false,
+    "participant_value_parsing": false,
+    "disclosure_assessment": false,
+    "reviewer_appointment": false,
+    "fit": false,
+    "stata_execution": false,
+    "scientific_or_results_change": false,
+    "source_code_sanitization": false,
+    "original_or_prior_packet_edit": false,
+    "analysis_or_manuscript_change": false,
+    "data_transformation": false,
+    "deletion": false,
+    "history_rewrite": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent content and authority-boundary review, 38 positive checks and 20 negative controls, with before/after preservation compared before final audit creation. Final saved-file checks run afterward; audit not self-hashed. This verifies the documentary update, not safety of the underlying data, tables, figures, code or publication package.",
+  "proposed_commit": {
+    "title": "docs: record acceptance of practical R08 disclosure-review scope",
+    "description": [
+      "Preserve the practical R08 account and record the author's exact documentary acceptance dated 25 October 2026.",
+      "Keep methodological, results and interpretation decisions with the user. Do not adopt the earlier blanket joint-author-review requirement or introduce new forms, committees or appointments; preserve existing obligations without assuming approvals.",
+      "Limit the proposed public package to the final paper and selected appendices; retain respondent-level inputs/auxiliary outputs under restricted custody.",
+      "Retain specific review for individual-level figures and small/rare tables, identifier exclusion from public materials, restricted originals/exclusion rules and whole-package version scope.",
+      "Distinguish accepted scope from checks not performed. Do not certify disclosure safety, implement changes, resolve R07 or authorize release.",
+      "Validate 38 content/status checks and 20 negative controls; verify all pre-existing tracked files and the complete prior private audit tree.",
+      "No participant inspection, contacts, fitting, scientific changes, source edits, transformations, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "Practical R08 scope accepted and recorded for documentary purposes only. Actual disclosure checks, final exhibit inventory and any release decision remain unperformed or unresolved. R09 (access, reuse licence and replication-package scope within the narrowed route) is next, not automatically initiated.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1258,
+        "bytes": 66632007,
+        "sha256": "8BF2DB8331CCCE88EA8A9332F1302BA27F589173799BD3A31213971936E03C60"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1258,
+        "bytes": 66632007,
+        "sha256": "8BF2DB8331CCCE88EA8A9332F1302BA27F589173799BD3A31213971936E03C60"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. Private-file bytes were opaque preservation objects only; no participant values parsed, interpreted or displayed.",
+    "scope_limit": "All 1,258 pre-existing tracked files and all 23,281 prior audit-local files were rehashed. No pre-existing untracked files were present. External originals, participants, current output/data contents, code identifiers, package composition and disclosure risk were not inspected. New R08 artifacts are excluded from old-file preservation groups."
+  }
+}

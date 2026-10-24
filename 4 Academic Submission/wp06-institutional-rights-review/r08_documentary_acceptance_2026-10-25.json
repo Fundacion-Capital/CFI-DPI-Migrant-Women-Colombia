@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "record_id": "R08_single_author_practical_documentary_acceptance_2026-10-25",
+  "issue_id": "R08",
+  "record_type": "DIRECT_SINGLE_AUTHOR_PRACTICAL_SCOPE_ACCEPTANCE_NOT_DISCLOSURE_CLEARANCE",
+  "status": "R08_PRACTICAL_ACCOUNT_ACCEPTED_BY_USER_CHECKS_NOT_PERFORMED",
+  "acceptance_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the practical R08 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R08_ACCEPTED_PRACTICAL_ACCOUNT_2026-10-25.md",
+    "bytes": 5516,
+    "sha256": "E6E7E8929FA718F4B5BD0790A149131B7EB6D930733E608560F9CAFA8E57C131",
+    "source": "Immediately preceding practical R08 chat account, including the author's scientific-decision correction and all unperformed-check limitations.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true,
+    "snapshot_framing": "Separate acceptance/provenance preamble followed by frozen substantive review text, including prior-turn review-status and no-change statements. Non-substantive memory citation excluded. No substantive account change intended or platform-authenticated export claimed."
+  },
+  "accepted_choices": {
+    "scope": "Final paper, selected appendices, and explanatory/reproduction code and documentation, subject to R04 restricted inputs. Historical/exploratory outputs excluded unless separately selected and reviewed.",
+    "respondent_level_outputs": "Remain restricted, including class assignments, posterior probabilities, fitted predictions and respondent-level data behind figures.",
+    "individual_figures": "Excluded unless specifically disclosure-reviewed; removal of names/point labels is not treated as sufficient.",
+    "detailed_tables": "Very small subgroups and rare combinations held for specific review; no arbitrary numerical threshold or automatic unsafe-cell finding adopted.",
+    "embedded_identifiers": "Excluded from public materials; exact originals and manual-exclusion rules preserved in restricted custody, with no deletion of exclusion commands or silent sample change.",
+    "package_review": "Consider the exact proposed package together and in the reviewed version; individual-item review does not automatically cover combinations or additions.",
+    "scientific_decisions": "Methodological, results and interpretation decisions remain with the user. Flag concerns and distinguish presentation-only changes from scientific changes; do not apply either silently.",
+    "joint_review_correction": "The earlier proposed blanket joint-author-review requirement for every scientific change is not part of this practical R08 account. Existing coauthor/institutional obligations are not waived or assumed satisfied.",
+    "proportionality": "No new forms, committees or reviewer appointment introduced by this account."
+  },
+  "checks_not_performed": [
+    "Final exhibit/appendix list and versions not fixed.",
+    "Actual figures not classified as aggregate or respondent-level.",
+    "Tables and combinations not examined for disclosure risk.",
+    "Public code/logs/paths/labels/metadata not inspected or sanitized for identifiers in this exchange.",
+    "Any public-code adaptation has not been tested for exact sample/results preservation.",
+    "No package-wide disclosure assessment or output clearance."
+  ],
+  "continuing_limits": [
+    "Scope choices are not findings that actual files passed review.",
+    "No specialist identified, no external review claimed and no reviewer appointed; this statement does not create an extra appointment requirement.",
+    "Older field/release specification remains a proposal, not an anonymization certificate.",
+    "R07 historical concern remains separate and unresolved; a narrower future package is not cleanup.",
+    "Restricted inputs limit public end-to-end reproduction; documentation must describe that honestly.",
+    "Acceptance does not implement transformations, change analysis, certify safety, assume coauthor/institutional approval or authorize release."
+  ],
+  "formal_state": {
+    "R08_selected_disposition": null,
+    "R08_reviewer_assigned": false,
+    "R08_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "ethics_clearance_adopted": false,
+    "reviewer_appointed": false,
+    "disclosure_clearance_adopted": false,
+    "anonymization_certified": false,
+    "scientific_change_authorized": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "transformation_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "external_data_access_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R09 access, reuse licence and replication-package scope within the narrowed R04/R08 route; not automatically initiated. No license, external access or release authority supplied.",
+  "audit_ref": "r08_documentary_acceptance_audit_2026-10-25.json"
+}
