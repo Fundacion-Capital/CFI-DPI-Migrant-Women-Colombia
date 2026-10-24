@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "record_id": "R01_documentary_acceptance_and_focused_clarification_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "USER_DOCUMENTARY_ACCEPTANCE_RECORDED_BRIEF_PREPARED_NOT_SENT",
+  "baseline_head": "ced741f540fc0b674adc30585dcec41c42046515",
+  "branch": "main",
+  "scope": "Record the user's acceptance of the exact R01 account for documentary purposes and prepare one focused institutional clarification brief without contacts or further approvals.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\r01_documentary_acceptance_2026-10-24.json",
+      "sha256": "81F5FF7130C10B5C08784325CB1BC1338ED8AFE54F372C089E329A5C4CB082BA",
+      "bytes": 3205
+    },
+    {
+      "path": "4 Academic Submission\\wp06-institutional-rights-review\\FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+      "sha256": "803B8DA4F2D686DFA91B38830B6E591AF251337B1C17FB3135718DE4B2664F7F",
+      "bytes": 11701
+    }
+  ],
+  "content_checks": {
+    "documentary_acceptance": true,
+    "date": true,
+    "exact_instruction": true,
+    "accepted_hash": true,
+    "accepted_bytes": true,
+    "prior_audit_hash": true,
+    "no_checklist_inference": true,
+    "authority_held": true,
+    "negative_controls_pass": true,
+    "formal_disposition_blank": true,
+    "seven_limitations": true,
+    "brief_unsent": true,
+    "five_focus_blocks": true,
+    "historical_confirmation_not_new_approval": true,
+    "no_retrodate": true,
+    "no_repeated_email_search": true,
+    "consent_scope_distinguished": true,
+    "reconsent_not_preselected": true,
+    "metadata_only_evidence": true,
+    "outside_remit_preserved": true,
+    "privacy_disclosure_not_resolved": true,
+    "future_checkpoint": true,
+    "no_qualitative_extension": true,
+    "blank_response_fields": true,
+    "no_external_contacts": true,
+    "local_links_resolve": true,
+    "no_contact_details": true,
+    "formatting_clean": true,
+    "all_twelve_unanswered": true,
+    "register_unsent": true,
+    "d1_rights_pending": true,
+    "no_existing_diff": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 34,
+  "content_failures": [],
+  "negative_authority_controls": {
+    "coauthor_approval": true,
+    "institutional_approval": true,
+    "formal_R01_reviewer_assigned": true,
+    "contact_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true
+  },
+  "negative_control_count": 6,
+  "negative_control_method": "Six in-memory copies of the acceptance record were separately altered to claim coauthor approval, institutional approval, reviewer assignment, contact authority, submission authority or release authority. The held-authority validator rejected all; no altered copy was saved and no action was attempted.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1233,
+        "bytes": 66439410,
+        "sha256": "110A5FE6C498CDB3F8B43D9065A7B93F39E689FA0B11DEF9D0EF7F598D71BDF6"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1233,
+        "bytes": 66439410,
+        "sha256": "110A5FE6C498CDB3F8B43D9065A7B93F39E689FA0B11DEF9D0EF7F598D71BDF6"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records, including hidden files; participant values were not parsed.",
+    "reviewed_account": {
+      "path": "R01_REVIEWER_AND_ROUTE_ACCOUNT_2026-10-24.md",
+      "bytes": 14139,
+      "sha256": "FDC76E7BAE0F58CD390E7EC01ECC669D7A466E7C46B2F2D278B21A5F0B3C02A8",
+      "unchanged": true
+    },
+    "prior_preparation_audit": {
+      "path": "r01_account_preparation_audit_2026-10-24.json",
+      "sha256": "9157DB6E68CCF344CF2CC237608FA38E63E57FBB7CA0425586BB45901D2F686B",
+      "unchanged": true
+    },
+    "scope_limit": "All existing tracked repository files and the complete prior audit-local tree were rehashed. External protected originals, mailbox contents, public websites and management-held documents were not re-examined in this acceptance/brief task; no operation wrote to them."
+  },
+  "focused_brief": {
+    "language": "Spanish",
+    "words_whitespace_delimited": 1620,
+    "status": "DRAFT_NOT_SENT_NO_RESPONSE",
+    "focus_blocks": [
+      "R01/R02 mandate, historical review and present route",
+      "R03 consent evidence and coverage",
+      "R04 consent scope and any additional permission",
+      "R10 institutional delegation and grant/publication/data rights",
+      "R12 use-specific conclusion and matters requiring R05-R09/R11 review"
+    ],
+    "responses_prefilled": false,
+    "recipient_selected": false,
+    "delivery_channel_selected": false,
+    "external_transmission_performed": false
+  },
+  "documentary_state": {
+    "R01_account_accepted_by_user": true,
+    "identity_independently_verified": false,
+    "individual_review_checkboxes_completed": false,
+    "other_author_acceptance_inferred": false,
+    "institutional_confirmation_inferred": false,
+    "reported_historical_oral_approval_preserved_as_author_account": true
+  },
+  "institutional_state": {
+    "R01_reviewer_assigned": false,
+    "R01_disposition": null,
+    "R01_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_decisions_completed": 0,
+    "all_twelve_responses_unchanged": true,
+    "D1_rights_approved": false,
+    "formal_response_changed": false
+  },
+  "authority": {
+    "coauthor_approval": false,
+    "institutional_approval_assumed": false,
+    "ethics_clearance_adopted": false,
+    "execution_authorized": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "contact_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "email_draft_creation": false,
+    "participant_load_or_export": false,
+    "fit": false,
+    "stata_execution": false,
+    "sample_change": false,
+    "qualitative_change": false,
+    "manuscript_change": false,
+    "original_consent_form_edit": false,
+    "prior_packet_edit": false,
+    "git_commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "reportable_failures": [],
+  "review_method": "Same-agent source/scope review, 34 content/status checks, six negative controls and declared preservation fingerprints; not independent institutional/legal/coauthor validation.",
+  "proposed_commit": {
+    "title": "docs: accept R01 account and prepare institutional clarification brief",
+    "description": [
+      "Record the user's 24 October 2026 documentary acceptance of the exact R01 reviewer/route account in a separate attributable wrapper.",
+      "Preserve the reviewed account, unmarked checklist and prior preparation audit without changing their historical labels.",
+      "Prepare one Spanish unsent clarification brief focusing on mandate/history, consent evidence and scope, institutional delegation and grant/publication rights.",
+      "Include evidence locators and blank use-specific response fields without drafting an institutional certification or assuming further approvals.",
+      "Leave all 12 institutional decisions, D1_rights, readiness/workflow records, data, code and manuscript unchanged.",
+      "Verify all 1,233 existing tracked files and 23,281 prior audit-local files; no contacts, participant processing, fitting, commit, push, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "Documentary acceptance intake and brief preparation only. The focused brief has not itself been accepted by the user or sent; institutional confirmation, mandate evidence, use-specific decisions and all later action-specific approvals remain outstanding."
+}

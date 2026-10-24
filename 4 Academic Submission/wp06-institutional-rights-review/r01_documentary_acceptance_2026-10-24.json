@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "R01_single_author_documentary_acceptance_2026-10-24",
+  "issue_id": "R01",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_DETERMINATION",
+  "status": "R01_ACCOUNT_ACCEPTED_BY_USER_INSTITUTIONAL_RESPONSE_HELD",
+  "acceptance_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R01 account for documentary purposes. Record my acceptance and prepare the focused institutional clarification brief without contacting anyone. Preserve all packets, assume no further approvals, and fully audit the work.",
+  "accepted_by": "Project author by direct instruction in this chat",
+  "identity_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R01_REVIEWER_AND_ROUTE_ACCOUNT_2026-10-24.md",
+    "bytes": 14139,
+    "sha256": "FDC76E7BAE0F58CD390E7EC01ECC669D7A466E7C46B2F2D278B21A5F0B3C02A8",
+    "original_review_labels_preserved": true,
+    "individual_checklist_items_checked": false
+  },
+  "preserved_preparation_audit": {
+    "path": "r01_account_preparation_audit_2026-10-24.json",
+    "sha256": "9157DB6E68CCF344CF2CC237608FA38E63E57FBB7CA0425586BB45901D2F686B",
+    "unchanged": true
+  },
+  "scope": "Accepts the R01 narrative as documentary wording, including its source distinctions and limitations. Does not independently authenticate Katherine's mandate, study-specific oral decision or the other author's receipt/assent.",
+  "unresolved_limitations": [
+    "Management-held role, appointment/policy/delegation records not examined.",
+    "Original historical signature-bearing message not independently inspected.",
+    "Study-specific oral pre-fieldwork approval is author-confirmed; no exact date, reviewed version, conditions or written determination supplied.",
+    "Communication to both authors is reported by one author, not separate coauthor corroboration.",
+    "Current official website titles corroborate management affiliation, not the full ethics mandate or historical title.",
+    "Applicability/sufficiency of individual institutional review and any additional review route remain undetermined.",
+    "Public microdata permission, privacy history, disclosure review, grant obligations and actual coauthor/CFI approval remain separate."
+  ],
+  "coauthor_approval": false,
+  "institutional_approval": false,
+  "ethics_clearance_adopted": false,
+  "formal_R01_reviewer_assigned": false,
+  "formal_R01_disposition": null,
+  "formal_D1_rights_response_changed": false,
+  "execution_authorized": false,
+  "participant_processing_authorized": false,
+  "contact_authorized": false,
+  "submission_authorized": false,
+  "release_authorized": false,
+  "focused_brief": {
+    "path": "FOCUSED_INSTITUTIONAL_CLARIFICATION_BRIEF_2026-10-24.md",
+    "status": "DRAFT_NOT_SENT_NO_RESPONSE",
+    "responses_prefilled": false
+  },
+  "note": "Historical reported oral approval is described, not erased or converted into a newly authenticated decision. This wrapper supplies the current single-author documentary disposition while the reviewed snapshot remains unchanged.",
+  "audit_ref": "r01_acceptance_and_clarification_audit_2026-10-24.json"
+}
