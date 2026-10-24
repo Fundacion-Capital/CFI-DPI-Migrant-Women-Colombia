@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "packet_id": "D1_rights_institutional_review_preparation_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "PREPARATION_AUDITED_NOT_SENT_NO_INSTITUTIONAL_RESPONSE",
+  "baseline_head": "f4c48455cf89addf860787054e8f54f5d8eed869",
+  "branch": "main",
+  "scope": "Create an unsent institutional D1_rights briefing, unselected decision register and evidence locators; preserve all prior documents and packets, assume no approvals and contact no one.",
+  "deliverables": [
+    {
+      "path": "README.md",
+      "bytes": 14671,
+      "sha256": "5B27AD4EE223AB10C75F851A3193CF5C9ED7541B90A2A8BF463CCD25F21C8955"
+    },
+    {
+      "path": "decision_register.json",
+      "bytes": 27271,
+      "sha256": "EB56E16DB7B64C5110D552CF7ED588CB7D3B872DA99B2D1DF48927B7DCFA5E8C"
+    },
+    {
+      "path": "evidence_manifest.json",
+      "bytes": 8723,
+      "sha256": "394BAD31FBEF2031F481D79FAB8DA2E540948CCB3C1DF685BC1322DC520D8B0D"
+    }
+  ],
+  "content_checks": {
+    "packet_unsent": true,
+    "no_automatic_adoption": true,
+    "all_packet_authorities_false": true,
+    "twelve_unique_decisions": true,
+    "all_decision_ids": true,
+    "sixteen_evidence_entries": true,
+    "no_responses": true,
+    "determination_fields_blank": true,
+    "no_decision_conditions_populated": true,
+    "questions_complete": true,
+    "evidence_refs_resolve": true,
+    "dependencies_resolve": true,
+    "dependency_graph_acyclic": true,
+    "nine_current_repository_pins": true,
+    "repository_pins_match": true,
+    "four_restricted_locators": true,
+    "restricted_pins_match": true,
+    "context_entries_not_fake_hashes": true,
+    "oral_only_preserved": true,
+    "cfi_outside_email_preserved": true,
+    "no_backdating": true,
+    "reconsent_not_preselected": true,
+    "no_qualitative_extension": true,
+    "privacy_status_unknown": true,
+    "no_automatic_gate": true,
+    "no_raw_contact_details": true,
+    "no_completed_boxes": true,
+    "links_exist_or_reserved_audit": true,
+    "formal_rights_held": true,
+    "single_author_acceptance_preserved": true,
+    "no_existing_tracked_changes": true,
+    "index_empty": true,
+    "head_unchanged": true
+  },
+  "content_checks_passed": 33,
+  "content_check_failures": [],
+  "negative_boundary_controls": {
+    "clean_preparation_accepted": true,
+    "negative_controls": {
+      "institutional_approval": true,
+      "coauthor_approval": true,
+      "contacts_made": true,
+      "sent": true,
+      "recipient": true,
+      "selected_disposition": true,
+      "reviewer_name": true,
+      "automatic_adoption": true
+    },
+    "negative_count": 8,
+    "failures": 0
+  },
+  "negative_control_method": "Read-only validator accepted the unfilled preparation object and rejected eight separately altered in-memory copies: institutional/coauthor approval, contacts made, sent, recipient, selected disposition, reviewer name and automatic adoption. No altered copy was saved; no live contact or approval occurred.",
+  "preservation": {
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF> records; hidden files included. Source contents hashed without parsing participant values.",
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1227,
+        "bytes": 66359020,
+        "sha256": "7ABE5D25B0A736A99CAE6A3BF5CEFB8D3465342578D91036A09A101854A45250"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1227,
+        "bytes": 66359020,
+        "sha256": "7ABE5D25B0A736A99CAE6A3BF5CEFB8D3465342578D91036A09A101854A45250"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "prior_private_packets_modified": false,
+    "existing_tracked_files_modified": false,
+    "source_identity": "Nine repository sources and four restricted originals were individually fingerprint-checked against evidence_manifest.json. Restricted originals were neither copied nor edited.",
+    "scope_limit": "All existing tracked files and the complete prior audit-local tree were hashed; only four selected external restricted originals were individually checked. Other protected folders, cloud access settings, raw participant records, mailbox exports and historical/current public exposure were not comprehensively audited."
+  },
+  "accepted_historical_account": {
+    "path": "../wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+    "sha256": "0B61F9795B4F1864CE8EC949135F3CFFB712458202A4870309E10DC5E657496E",
+    "acceptance_ref": "../wp06-author-dossier/d1_rights_documentary_acceptance_2026-10-24.json",
+    "single_author_documentary_acceptance_preserved": true,
+    "coauthor_or_institutional_acceptance_inferred": false
+  },
+  "review_state": {
+    "decision_count": 12,
+    "evidence_count": 16,
+    "reviewers_assigned": 0,
+    "recipients_selected": 0,
+    "decisions_selected": 0,
+    "completed_institutional_responses": 0,
+    "packet_sent": false,
+    "formal_D1_rights_response_changed": false,
+    "formal_D1_rights_approved": false
+  },
+  "actions_performed": {
+    "contact": false,
+    "participant_load_or_export": false,
+    "consent_record_inspection": false,
+    "fit": false,
+    "stata_execution": false,
+    "analysis_or_sample_change": false,
+    "qualitative_change": false,
+    "source_replacement_or_backdating": false,
+    "live_security_or_exposure_probe": false,
+    "deletion_or_history_rewrite": false,
+    "git_commit_or_push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "authority": {
+    "institutional_approval": false,
+    "coauthor_approval": false,
+    "ethics_clearance": false,
+    "participant_processing_authorized": false,
+    "reconsent_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "public_release_authorized": false,
+    "automatic_workflow_adoption": false
+  },
+  "unchanged_formal_records": [
+    "response_forms.json",
+    "decision_cards.json",
+    "readiness.json",
+    "All existing workflow state and gate records",
+    "D1_population acceptance",
+    "Historical consent account, checklist, preparation audit and acceptance records"
+  ],
+  "review_method": "Same-agent second-pass evidence/decision/authority review plus explicit structural checks and file-set preservation. No independent institutional, legal or coauthor review is claimed.",
+  "reportable_failures": [],
+  "proposed_commit": {
+    "title": "docs: prepare institutional D1_rights review packet",
+    "description": [
+      "Add an unsent institutional briefing, 12 unselected decision records and 16 evidence entries.",
+      "Separate historical ethics review, consent coverage and scope, data stewardship, privacy history, derivative disclosure, access/licensing and coauthor/funder checkpoints.",
+      "Preserve the accepted historical account and distinguish one author's documentary acceptance from institutional or coauthor approval.",
+      "Pin accessible evidence, retain explicit limits on prior mailbox observations and author testimony, and leave reviewer/decision fields unfilled.",
+      "Audit all 1,227 existing tracked files and 23,281 prior audit-local files without modifying them.",
+      "No contacts, participant processing, fitting, source replacement, Git/cloud mutation, submission or public release."
+    ]
+  },
+  "completion_boundary": "Preparation and technical audit only. Competent reviewers, actual institutional determinations, supporting evidence retrieval, any separately authorized participant/disclosure checks, coauthor/funder approvals and submission/release remain outstanding."
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "packet_id": "D1_rights_institutional_review_preparation_2026-10-24",
+  "status": "EVIDENCE_LOCATORS_ONLY_NO_APPROVAL",
+  "prepared_date": "2026-10-24",
+  "repository_paths_relative_to": "4 Academic Submission",
+  "restricted_paths_relative_to": "Restricted CFI-DPI project root; authorized custodians must supply access separately.",
+  "source_count": 16,
+  "sources": [
+    {
+      "id": "E01",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+      "bytes": 16611,
+      "sha256": "0B61F9795B4F1864CE8EC949135F3CFFB712458202A4870309E10DC5E657496E",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Retained historical account: accepted by one author only through E04; preserve original preparation labels."
+    },
+    {
+      "id": "E02",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/D1_RIGHTS_CONSENT_EVIDENCE_CHECKLIST_2026-10-24.md",
+      "bytes": 10710,
+      "sha256": "744F82AF303D5F89F7AF7FFA0AA3EC1C47EA71402C0480C2421FD9CD55A45E8C",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Unmarked 24-item review checklist; no item-level acceptance or reviewer signature inferred."
+    },
+    {
+      "id": "E03",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/d1_rights_consent_review_audit_2026-10-24.json",
+      "bytes": 8417,
+      "sha256": "5AB46F28E6AFA3080F337737EE8977EEE79068E93CB374845005E560BE81DAD7",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Earlier preparation audit; evidence of technical checks, not ethics approval."
+    },
+    {
+      "id": "E04",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/d1_rights_documentary_acceptance_2026-10-24.json",
+      "bytes": 3770,
+      "sha256": "32232ABD9B5ECC9527431B2F12A8AB263979E18874B02526D0E913C80DF960D6",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Direct single-author documentary acceptance; institutional/coauthor/processing/release flags remain false."
+    },
+    {
+      "id": "E05",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/d1_rights_documentary_acceptance_audit_2026-10-24.json",
+      "bytes": 7578,
+      "sha256": "5DCC6F228DF20D90650BDB53666CF01421E265B5C128BB703056603A5225301F",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Acceptance audit and preservation evidence; not independent institutional validation."
+    },
+    {
+      "id": "E06",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+      "bytes": 110883,
+      "sha256": "53E3E90269875421F75AE09B9991440CBED0F2D8FC9A93D71F4DE36097013F90",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Current dossier navigation and decision context; not a decision issued by an institution."
+    },
+    {
+      "id": "E07",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/response_forms.json",
+      "bytes": 24653,
+      "sha256": "3594E067F2C57822EF72504A059C76C8045258AAA614724690FE1C70FE6F6E00",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Formal D1_rights response remains blank/unapproved; only D1_population has a populated documentary response."
+    },
+    {
+      "id": "E08",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-author-dossier/readiness.json",
+      "bytes": 7246,
+      "sha256": "C810326EB4B50758A46173E8F13A20063BF1131C9723B2A7C59F1E173C9E4581",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Readiness metadata; a technical state record does not grant rights."
+    },
+    {
+      "id": "E09",
+      "kind": "RETAINED_REPOSITORY_DOCUMENT",
+      "path": "wp06-contract/instrument_consent_notes.csv",
+      "bytes": 7028,
+      "sha256": "B36198350FFCFBDB1BFCF62F67874AECF32EFEABAA75AC44FE6901B7F0B8F5C3",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED",
+      "interpretation_limit": "Inherited extracted notes for five form versions: aggregate/non-identifying publication language. No fresh raw-form or respondent-compliance review."
+    },
+    {
+      "id": "E10",
+      "kind": "RESTRICTED_ORIGINAL_LOCATOR_NOT_ATTACHED",
+      "restricted_project_path": "5 Deliverables and presentations/IRB/UNacional/Formato de consentimiento informado.docx",
+      "bytes": 46727,
+      "sha256": "B82465A7BBC1F7D1D11C79563AA8CD30903375DC723C604CE1A9DE9AAA344593",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED_CONTENT_AS_REPORTED_IN_E01",
+      "interpretation_limit": "Original written consent template; content distinctions are inherited from the accepted account. File identity checked now; no signed participant form reviewed."
+    },
+    {
+      "id": "E11",
+      "kind": "RESTRICTED_ORIGINAL_LOCATOR_NOT_ATTACHED",
+      "restricted_project_path": "0 Admin/Sub-Grant Award Letter - Fundacion Capital Fundak_CFI DPI Insights Cohort 1_2025-10.pdf",
+      "bytes": 522161,
+      "sha256": "A7A2067EF1E3E314A0FF17A6D4B42CDEE1A7B83DC97BC65A11754D75B1264915",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED_CONTENT_AS_REPORTED_IN_E01",
+      "interpretation_limit": "Grant award; content review and visual observations are inherited from the account. File identity checked now; no legal conclusion or complete-execution authentication."
+    },
+    {
+      "id": "E12",
+      "kind": "RESTRICTED_ORIGINAL_LOCATOR_NOT_ATTACHED",
+      "restricted_project_path": "5 Deliverables and presentations/IRB/UNacional/Carta de presentación.docx",
+      "bytes": 583628,
+      "sha256": "8D89AAC07BCBFE69B6FFAD077F90385FC9E2E6159F7D4D01573A53C4BAC346A3",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED_CONTENT_AS_REPORTED_IN_E01",
+      "interpretation_limit": "Submission-stage presentation letter; does not establish delivery, substantive review or approval."
+    },
+    {
+      "id": "E13",
+      "kind": "RESTRICTED_ORIGINAL_LOCATOR_NOT_ATTACHED",
+      "restricted_project_path": "5 Deliverables and presentations/IRB/UNacional/Consideraciones éticas del proyecto.docx",
+      "bytes": 24815,
+      "sha256": "6A546FD950C7B1D1EBC6B43C75071229BBC385CF0385C74835C2C08341BAEE06",
+      "review_status": "CURRENT_FILE_IDENTITY_CHECKED_CONTENT_AS_REPORTED_IN_E01",
+      "interpretation_limit": "Ethical-considerations document; proposed safeguards and authorization chronology, not verified implementation."
+    },
+    {
+      "id": "E14",
+      "kind": "PRIOR_OUTLOOK_OBSERVATION",
+      "locator": "Earlier institutional Outlook review in this conversation; summarized in E01 section 5.",
+      "sha256": null,
+      "review_status": "NOT_REVERIFIED_OR_EXPORTED_NOW",
+      "interpretation_limit": "Rosario external-review suspension and Nacional intake request are distinct; no original message identifier/export seal or subsequent decision is supplied here."
+    },
+    {
+      "id": "E15",
+      "kind": "DIRECT_AUTHOR_CONFIRMATIONS",
+      "locator": "This conversation, as consolidated in E01 and accepted in E04.",
+      "sha256": null,
+      "review_status": "ONE_AUTHOR_DOCUMENTARY_ACCOUNT_ACCEPTED",
+      "interpretation_limit": "Spoken-only explanation, institutional delegation, CFI support outside email, joint release approval, no reported withdrawal requests and pre-submission CFI checkpoint; not authenticated institutional instruments or coauthor assent."
+    },
+    {
+      "id": "E16",
+      "kind": "HISTORICAL_PRIVACY_CONCERN_AUTHOR_CONTEXT",
+      "locator": "Earlier user confirmation in this conversation that contact details in a Git-tracked dataset were genuine; E01 also records administrative identifiers.",
+      "sha256": null,
+      "review_status": "CURRENT_EXPOSURE_AND_REMEDIATION_NOT_ASSESSED",
+      "interpretation_limit": "Do not infer whether current or historical public exposure occurred, whether cleanup was completed, or that notification is required; competent institutional assessment and separate checks are needed."
+    }
+  ],
+  "not_attached": [
+    "Participant-level data",
+    "Names, telephones, consent recordings or signed participant forms",
+    "Management originals not held by the author",
+    "Email exports or institutional decisions not established"
+  ],
+  "evidence_limit": "Fingerprints establish identity of accessible files, not historical compliance, lawful use, signature authenticity, current access security or approval. No participant values or cloud access settings were inspected."
+}

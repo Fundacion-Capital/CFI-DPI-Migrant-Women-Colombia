@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "packet_id": "D1_rights_institutional_review_preparation_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "PREPARED_NOT_SENT_NO_RESPONSES",
+  "scope": "Unsent institutional questions about quantitative-survey ethics, consent, stewardship, publication and replication rights. No legal or institutional determination.",
+  "submission": {
+    "sent": false,
+    "recipient": null,
+    "submitted_at": null,
+    "tracking_reference": null
+  },
+  "authority": {
+    "institutional_approval": false,
+    "coauthor_approval": false,
+    "ethics_clearance": false,
+    "participant_processing_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false,
+    "contacts_made": false
+  },
+  "automatic_workflow_adoption": false,
+  "decisions": [
+    {
+      "id": "R01",
+      "title": "Competent institutional reviewer and scope",
+      "proposed_reviewer_role": "Institutional research-governance lead; authority to be established",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "Which body or authorized role can determine the ethics and data-governance basis for this non-university project and the proposed academic uses?",
+      "evidence_refs": [
+        "E01",
+        "E04",
+        "E06",
+        "E12",
+        "E13",
+        "E14"
+      ],
+      "dependencies": [],
+      "considerations": [
+        "Identify the applicable review remit and policy basis; distinguish historical collection, continued analysis, publication and public microdata sharing.",
+        "Record the competent body's identity, mandate, exact study/material scope and whether referral is needed."
+      ],
+      "evidence_needed": [
+        "An institutional determination or reasoned referral by a competent body, not an author's assertion of exemption.",
+        "Confirmation of the responsible institution and decision-maker; reviewer roles listed here are proposals, not appointments."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "Neither author acceptance, a grant award nor an administrative non-review message supplies independent ethics clearance."
+    },
+    {
+      "id": "R02",
+      "title": "Historical approval gap and present-use route",
+      "proposed_reviewer_role": "Competent ethics/research-governance body",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "How should the institution address the absence of an established committee approval/exemption and the submission-stage undertaking to await authorization?",
+      "evidence_refs": [
+        "E01",
+        "E12",
+        "E13",
+        "E14",
+        "E15"
+      ],
+      "dependencies": [
+        "R01"
+      ],
+      "considerations": [
+        "Reconcile dated submission materials, fieldwork chronology and the two universities' distinct responses.",
+        "Determine what present review or assessment is appropriate and any limits on continued use; preserve actual dates and distinguish new decisions from historical approval."
+      ],
+      "evidence_needed": [
+        "Original correspondence or authenticated locators if available; a dated institutional conclusion covering exact proposed uses and limitations.",
+        "If evidence is unavailable, an explicit explanation of the limitation and its consequences, rather than invented retrospective clearance."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "No committee approval or exemption is established. Do not presume one can be backdated or that later review cures past collection."
+    },
+    {
+      "id": "R03",
+      "title": "Consent evidence and coverage",
+      "proposed_reviewer_role": "Institutional governance with the authorized consent-record custodian",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What evidence can substantiate the implemented participation consent and public-sharing explanation across respondents and instrument versions?",
+      "evidence_refs": [
+        "E01",
+        "E02",
+        "E04",
+        "E09",
+        "E10",
+        "E15"
+      ],
+      "dependencies": [
+        "R01"
+      ],
+      "considerations": [
+        "Distinguish SurveyCTO participation agreement, signed in-person forms, reported telephone consent and the spoken-only public-download explanation.",
+        "Specify any later bounded evidence-verification protocol, required coverage/denominators, missing-record treatment and whether surviving recordings establish exact content. No participant inspection is undertaken in this packet."
+      ],
+      "evidence_needed": [
+        "A source/version inventory and institutionally acceptable evidence standard; any participant-level check needs separate restricted-access authority.",
+        "Separate evidence of participation from permission for public microdata and optional secondary uses; report unavailable records explicitly."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "One author's accepted account is not a record-level verification or proof of exact spoken wording or retained audio."
+    },
+    {
+      "id": "R04",
+      "title": "Consent scope and need for additional permission",
+      "proposed_reviewer_role": "Competent institutional ethics/data-protection reviewer",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "Does the existing consent basis support the exact proposed public individual-level derivative and reuse, given aggregate-publication wording and optional secondary-use permission?",
+      "evidence_refs": [
+        "E01",
+        "E02",
+        "E09",
+        "E10",
+        "E15"
+      ],
+      "dependencies": [
+        "R02",
+        "R03"
+      ],
+      "considerations": [
+        "Assess the spoken account, written template and inherited instrument notes without silently treating them as identical.",
+        "Determine whether additional information/consent or another permissible route is needed, or whether uses must be limited. Consider study analysis, aggregate findings, open microdata and future reuse separately."
+      ],
+      "evidence_needed": [
+        "A dated use-specific determination identifying evidence, applicable conditions, affected records and limitations.",
+        "If further consent is required, a separately reviewed, honestly dated prospective process; no reconstructed form may be represented as administered historically."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "Neither re-consent necessity nor its sufficiency is preselected. No recontact or new consent exercise is authorized."
+    },
+    {
+      "id": "R05",
+      "title": "Data responsibility, administrative identifiers and security",
+      "proposed_reviewer_role": "Institutional data controller/custodian or competent equivalent",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "Who is responsible for each data class, and how are contact details, consent evidence and analytical data separated and protected?",
+      "evidence_refs": [
+        "E01",
+        "E02",
+        "E10",
+        "E15",
+        "E16"
+      ],
+      "dependencies": [
+        "R01"
+      ],
+      "considerations": [
+        "Identify controller/custodian roles, authorized users, institutional policies, processors, storage locations and any relevant transfers.",
+        "Reconcile the no-name template statement with administrative names/phones, purpose, respondent information, linkage keys and access; determine required retention/deletion safeguards."
+      ],
+      "evidence_needed": [
+        "Authorized role and storage/access inventory with relevant policies and delegation instruments.",
+        "A separate review plan for security/retention/transfer questions; no credentials, signed participant records or identifiers in the Git packet."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "No live access-control audit, deletion or data transfer is performed; a blank template alone does not prove a breach."
+    },
+    {
+      "id": "R06",
+      "title": "Withdrawal, restrictions and retention after sharing",
+      "proposed_reviewer_role": "Institutional data custodian and data-protection reviewer",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "How are withdrawal, deletion, use restrictions and retention handled, including practical limits after anonymized public release?",
+      "evidence_refs": [
+        "E01",
+        "E02",
+        "E10",
+        "E15"
+      ],
+      "dependencies": [
+        "R05"
+      ],
+      "considerations": [
+        "Distinguish the author's report of no requests from a verified request-handling register.",
+        "Determine the request channel, responsible role, permissible retention periods, processing of later requests, and honest communication of limits once data are irreversibly anonymized or downloaded."
+      ],
+      "evidence_needed": [
+        "Documented procedure and scope-specific institutional determination; any register check needs separate authorization.",
+        "Clear treatment of withdrawal before release, identifiers/linkage and copies already distributed; no universal deletion promise."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "The historical report is not a permanently verified absence of requests or a waiver of participant rights."
+    },
+    {
+      "id": "R07",
+      "title": "Historical privacy concern and repository exposure",
+      "proposed_reviewer_role": "Institutional privacy/security lead and authorized repository owner",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What is the documented status of the earlier concern about genuine contact information in Git-tracked research data, and what institutional assessment/remediation is required?",
+      "evidence_refs": [
+        "E01",
+        "E06",
+        "E16"
+      ],
+      "dependencies": [
+        "R05"
+      ],
+      "considerations": [
+        "Recover existing preservation, cleanup and exposure-assessment evidence through a separately authorized review.",
+        "Establish current and historical scope, whether any public exposure occurred, relevant institutional response requirements, and release conditions. Do not infer that the repository is currently safe or that an incident is legally reportable."
+      ],
+      "evidence_needed": [
+        "A dated assessment by the competent institutional role, supported by existing records or newly authorized checks.",
+        "Evidence of any completed remediation, with restricted originals preserved; inability to establish exposure must remain explicit."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "No host/network/GitHub visibility probe, history rewrite, deletion, notification or contact is authorized. No current exposure finding is made."
+    },
+    {
+      "id": "R08",
+      "title": "Derivative-specific disclosure and anonymization review",
+      "proposed_reviewer_role": "Appropriately qualified institutional disclosure reviewer",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What exact survey derivative, outputs and documentation could be shared at an acceptable disclosure risk?",
+      "evidence_refs": [
+        "E01",
+        "E02",
+        "E10"
+      ],
+      "dependencies": [
+        "R04",
+        "R05",
+        "R07"
+      ],
+      "considerations": [
+        "Define a version/hash/variable scope and assess direct identifiers, linkage keys, small or rare combinations, geography, dates, free text, labels, metadata and released tables.",
+        "Define transformations, residual-risk criteria, external linkage threat model and open versus restricted-access implications; preserve analytical validity and document any deviations."
+      ],
+      "evidence_needed": [
+        "A separately authorized disclosure-review protocol and a version-specific assessment, not a generic anonymization label.",
+        "No participant file or transformed dataset is loaded, exported, generated or tested in this preparation stage."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "Deleting names/phones is not a completed anonymization assessment; scientific modifications or utility compromises need separate author decisions."
+    },
+    {
+      "id": "R09",
+      "title": "Access, reuse licence and replication-package scope",
+      "proposed_reviewer_role": "Institutional data-rights reviewer with both authors",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "Which access conditions and reuse terms are permitted for the named data/code/documentation package?",
+      "evidence_refs": [
+        "E01",
+        "E04",
+        "E10",
+        "E11",
+        "E15"
+      ],
+      "dependencies": [
+        "R04",
+        "R06",
+        "R08",
+        "R10"
+      ],
+      "considerations": [
+        "Assess open download, safeguarded/controlled access, or public code/documentation with a restricted-data statement; no option is selected.",
+        "Distinguish academic-use intentions from unrestricted GitHub audiences, licence permissions, third-party materials, derived fields and persistent copies."
+      ],
+      "evidence_needed": [
+        "Explicit use/access/licensing conditions and evidence of authority for every included material.",
+        "If open data are not permitted, an institutionally approved transparency route and accurate journal data-availability statement; journal acceptance is not guaranteed."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "No licence is selected, no package is released, and a licence to Accion is not blanket public microdata permission."
+    },
+    {
+      "id": "R10",
+      "title": "Institutional delegation, rights and grant obligations",
+      "proposed_reviewer_role": "Authorized institutional representative with contract/data-rights competence",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What documented rights and delegated authority apply to academic analysis, publication and the proposed data/code release?",
+      "evidence_refs": [
+        "E01",
+        "E04",
+        "E11",
+        "E15"
+      ],
+      "dependencies": [
+        "R01"
+      ],
+      "considerations": [
+        "Verify executive authorization, delegation to the authors, complete grant instruments and any subsequent arrangements.",
+        "Assess advance review/comment, attribution/name use, conditional first publication, confidentiality and privacy-qualified data/material rights; distinguish funder licence from public-release authority."
+      ],
+      "evidence_needed": [
+        "A scoped institutional confirmation or authoritative instrument with date, issuing role, conditions and affected outputs.",
+        "If records remain unavailable, a reasoned institutional disposition rather than an assumed amendment or countersignature."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "This packet does not authenticate agreements, interpret their legal enforceability or assume approvals from funding support."
+    },
+    {
+      "id": "R11",
+      "title": "Coauthor and CFI publication/release checkpoints",
+      "proposed_reviewer_role": "Both authors and authorized institutional/funder representatives",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What approvals must be obtained for the final manuscript before initial journal submission and for the exact replication package?",
+      "evidence_refs": [
+        "E01",
+        "E04",
+        "E11",
+        "E15"
+      ],
+      "dependencies": [
+        "R02",
+        "R04",
+        "R09",
+        "R10"
+      ],
+      "considerations": [
+        "Preserve the author-confirmed CFI pre-initial-submission approval checkpoint and the requirement for both authors to approve the eventual public replication package.",
+        "Clarify whether any separate funder review/permission covers dataset/code release, review timing, version changes, first publication and required notices; treat support outside email as support, not final approval."
+      ],
+      "evidence_needed": [
+        "Version-specific actual approvals from the appropriate parties when later sought under separate authorization.",
+        "A clear sequence and conditions, not presumed coauthor assent or an approval email the author says does not exist."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "No draft is sent, no party contacted and no existing CFI deliverable approval is adopted as approval of the journal manuscript."
+    },
+    {
+      "id": "R12",
+      "title": "Institutional conclusion, statements and controlled adoption",
+      "proposed_reviewer_role": "Competent institutional authority, then authors and workflow owner",
+      "reviewer_assigned": false,
+      "status": "PREPARED_NOT_SENT_NO_RESPONSE",
+      "question": "What dated, use-specific conclusion and limitations can support accurate manuscript statements and any separately authorized next task?",
+      "evidence_refs": [
+        "E01",
+        "E04",
+        "E06",
+        "E07",
+        "E08"
+      ],
+      "dependencies": [
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11"
+      ],
+      "considerations": [
+        "Record supported, conditional, unsupported or outside-remit outcomes separately by use and material; missing evidence is not automatic exemption.",
+        "Verify authenticity and scope before any later adoption into the formal D1_rights response. Quantitative evidence does not determine qualitative interview, focus-group, expert quotation, audio or image permissions."
+      ],
+      "evidence_needed": [
+        "Named reviewer/role and mandate, date/reference, exact evidence/version scope, reasons, permitted/prohibited uses, conditions and unresolved limitations.",
+        "Accurate ethics/consent/funding/data-availability statements and a separate action-specific authorization if a future restricted audit, submission or release is proposed."
+      ],
+      "allowed_dispositions": [
+        "supported_for_specified_use_with_evidence",
+        "conditional_pending_named_requirements",
+        "insufficient_evidence_defer",
+        "not_permitted_for_proposed_use",
+        "outside_remit_refer"
+      ],
+      "selected_disposition": null,
+      "reviewer_name": null,
+      "reviewer_capacity": null,
+      "authority_instrument_ref": null,
+      "decision_date": null,
+      "decision_reference": null,
+      "reviewed_evidence_refs": [],
+      "rationale": null,
+      "permitted_uses": [],
+      "prohibited_uses": [],
+      "conditions": [],
+      "unresolved_limitations": [],
+      "approval_assumed": false,
+      "execution_authorized": false,
+      "contact_authorized": false,
+      "hold_statement": "Even a later documentary response does not automatically authorize participant processing, fitting, submission or release; existing gates remain unchanged."
+    }
+  ]
+}
