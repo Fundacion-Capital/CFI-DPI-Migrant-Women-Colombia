@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "status": "INITIAL_CODING_STANDARD_RECORDED_EXHAUSTIVE_SOURCE_REVIEW_INCOMPLETE",
+  "review_date": "2026-10-25",
+  "sources": [
+    {
+      "id": "C01",
+      "url": "https://dimewiki.worldbank.org/",
+      "extent": "Homepage/index discovered; targeted Stata_Coding_Practices requests403. Whole wiki not reviewed."
+    },
+    {
+      "id": "C02",
+      "url": "https://worldbank.github.io/dime-data-handbook/coding.html",
+      "extent": "Coding guide/style sections read: comments, naming, loops, conditionals, paths, line breaks and settings. Do not blindly copy examples."
+    },
+    {
+      "id": "C03",
+      "url": "https://www.povertyactionlab.org/resource/data-cleaning-and-management",
+      "extent": "Code organization, paths, body/commenting and reproducibility guidance read; no full-site review."
+    },
+    {
+      "id": "C04",
+      "url": "https://www.povertyactionlab.org/resource/coding-resources-randomized-evaluations",
+      "extent": "Resource routing, learning/reuse and repository section read. Last-updatedMay2023 on page; not current journal policy."
+    },
+    {
+      "id": "C05",
+      "url": "https://www.povertyactionlab.org/sites/default/files/research-resources/J-PAL-guide-to-publishing-research-data.pdf",
+      "extent": "January2020 guide; code-preparation sections targeted, not consent authority for this project."
+    },
+    {
+      "id": "C06",
+      "url": "https://github.com/worldbank/dime-data-handbook/blob/main/code/box-2-4-stata-master-dofile.do",
+      "extent": "77-line master template read; teaching example, not journal empirical replication."
+    },
+    {
+      "id": "C07",
+      "url": "https://github.com/worldbank/rio-safe-space/blob/WP/Reproducibility%20Package/MASTER.do",
+      "extent": "Lines1-170 read through GitHub MCP; working-paper replication example, not proof of journal publication or numerical validity.",
+      "git_blob_sha": "87465788796262da1a6d284130a80974263235d0"
+    },
+    {
+      "id": "C08",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.104.1.183",
+      "extent": "AER article/replication link verified. openICPSR112567403; replication .do contents not read; not a code-style exemplar yet."
+    },
+    {
+      "id": "C09",
+      "url": "https://link.springer.com/article/10.1057/s41308-026-00329-x",
+      "extent": "Publisher confirms2026journal version of Zotero696working paper and package DOI10.3886/E251128V1. Package fetch inaccessible; code not reviewed and Zotero not updated."
+    },
+    {
+      "id": "C10",
+      "url": "https://github.com/worldbank/rio-safe-space/blob/WP/Reproducibility%20Package/dofiles/analysis/paper/MASTER_paper_results.do",
+      "extent": "Lines1-160read through GitHub MCP; exhibit driver only, no underlying fits executed.",
+      "git_blob_sha": "6c00cc1730356cc7654e8bcf4deb86d3f38ec61e"
+    }
+  ],
+  "bibliography": {
+    "collection_id": 26,
+    "collection_name": "CFI DPI Migrant Women Colombia",
+    "library_id": 1,
+    "count": 39,
+    "coverage": "Metadata enumerated only; no full-text/software/replication-package classification inferred.",
+    "items": [
+      {
+        "id": 695,
+        "key": "RNDS9WT2",
+        "title": "DPI Map",
+        "doi": "",
+        "url": "https://dpimap.org/data",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 696,
+        "key": "5E8D3E82",
+        "title": "Drivers of Digital Payment Adoption: Lessons from Brazil, Costa Rica, and Mexico",
+        "doi": "10.3386/w34280",
+        "url": "http://www.nber.org/papers/w34280.pdf",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 739,
+        "key": "HHPB3Q6C",
+        "title": "Financial inclusion and migrant remittances in Sub-Saharan Africa: a panel VAR approach",
+        "doi": "10.1108/IJSE-10-2019-0612",
+        "url": "http://www.emerald.com/ijse/article/47/7/809-829/152821",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 740,
+        "key": "768I4GYQ",
+        "title": "Diaspora Remittances and Financial Inclusion in Kenya",
+        "doi": "10.24018/ejbmr.2020.5.2.289",
+        "url": "https://www.ejbmr.org/index.php/ejbmr/article/view/289",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 742,
+        "key": "TX7EMA6S",
+        "title": "Islamic Financial Inclusion Index in Indonesia and its Correlation to Women's Quality of Life",
+        "doi": "10.58968/eii.v6i1.479",
+        "url": "https://journals.smartinsight.id/index.php/EII/article/view/479",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 744,
+        "key": "RS5QBX4H",
+        "title": "Remittance micro‐worlds and migrant infrastructure: Circulations, disruptions, and the movement of money",
+        "doi": "10.1111/tran.12467",
+        "url": "https://rgs-ibg.onlinelibrary.wiley.com/doi/10.1111/tran.12467",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 746,
+        "key": "G8MVTEFT",
+        "title": "Digital Disruptions in the South Africa–Zimbabwe Remittance Corridor During COVID-19",
+        "doi": "10.1177/21632324231205996",
+        "url": "https://journals.sagepub.com/doi/10.1177/21632324231205996",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 747,
+        "key": "57E84GCU",
+        "title": "International Remittances and Child Welfare: A Case Study on Cali Colombia",
+        "doi": "10.13043/DYS.86.3",
+        "url": "https://revistas.uniandes.edu.co/index.php/dys/article/view/6760",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 749,
+        "key": "B29N9446",
+        "title": "Effects of International and Internal Remittances on Financial Inclusion in Ghana",
+        "doi": "10.21272/fmir.4(3).109-123.2020",
+        "url": "https://armgpublishing.com/journals/fmir/volume-4-issue-3/article-11/",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 751,
+        "key": "KKDT2DT2",
+        "title": "Benchmarking financial inclusion for women entrepreneurship – a study of Uttarakhand state of India",
+        "doi": "10.1108/BIJ-01-2018-0023",
+        "url": "http://www.emerald.com/bij/article/26/1/160-175/120826",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 752,
+        "key": "G864VXAY",
+        "title": "Do remittances promote human development? Empirical evidence from developing countries",
+        "doi": "10.1108/IJSE-12-2018-0673",
+        "url": "http://www.emerald.com/ijse/article/46/10/1173-1185/154169",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 753,
+        "key": "3HT2RV4M",
+        "title": "Impact of Female Financial Inclusion on Economic Development: Evidence from an Emerging Economy",
+        "doi": "10.7176/EJBM/13-24-07",
+        "url": "https://iiste.org/Journals/index.php/EJBM/article/view/57818",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 755,
+        "key": "GATDAMHJ",
+        "title": "International Remittances, Household Welfare, and Women Empowerment: Evidence From Bangladesh",
+        "doi": "10.4018/978-1-7998-3737-4.ch012",
+        "url": "https://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/978-1-7998-3737-4.ch012",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 756,
+        "key": "W96YIDQQ",
+        "title": "“It is easy for women to ask!”: Gender and digital finance in Kenya",
+        "doi": "10.1002/sea2.12121",
+        "url": "https://anthrosource.onlinelibrary.wiley.com/doi/10.1002/sea2.12121",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 757,
+        "key": "WF9WE4UI",
+        "title": "FINANCIAL INCLUSION AND GENDER BARRIERS FOR RURAL WOMEN",
+        "doi": "10.34218/IJM.10.5.2019.006",
+        "url": "http://iaeme.com/MasterAdmin/Journal_uploads/IJM/VOLUME_10_ISSUE_5/IJM_10_05_006.pdf",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 759,
+        "key": "5UPDBLJN",
+        "title": "Examining the influence of financial inclusion on financial well-being of marginalized street vendors: an empirical evidence from India",
+        "doi": "10.1108/IJSE-10-2020-0711",
+        "url": "http://www.emerald.com/ijse/article/48/8/1139-1158/158015",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 760,
+        "key": "KGU6H5TR",
+        "title": "Remittances and domestic violence",
+        "doi": "10.1111/rode.12907",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1111/rode.12907",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 762,
+        "key": "Q8352JNT",
+        "title": "Challenging the financialization of remittances agenda through Indigenous women’s practices in Oaxaca",
+        "doi": "10.1177/0308518X20977186",
+        "url": "https://journals.sagepub.com/doi/10.1177/0308518X20977186",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 763,
+        "key": "XVW8SGSJ",
+        "title": "Role of Digital Transformation in Closing the Financial Inclusion Disparities in West African Economic and Monetary Union and the Covid‐19 Effect",
+        "doi": "10.1002/jid.3992",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/jid.3992",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 764,
+        "key": "ESPJUK8J",
+        "title": "The Role of Digital Finance in Economic Development: A Cross Country Analysis",
+        "doi": "10.61506/02.000103",
+        "url": "https://jprpk.com/index.php/jpr/article/view/417",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 766,
+        "key": "HIMSVRZN",
+        "title": "Do Digital Finance and the Technology Acceptance Model Strengthen Financial Inclusion and SME Performance?",
+        "doi": "10.3390/info13080390",
+        "url": "https://www.mdpi.com/2078-2489/13/8/390",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 768,
+        "key": "CD58RDKQ",
+        "title": "Gender-Inclusive Development through Fintech: Studying Gender-Based Digital Financial Inclusion in a Cross-Country Setting",
+        "doi": "10.3390/su151310253",
+        "url": "https://www.mdpi.com/2071-1050/15/13/10253",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 770,
+        "key": "R9KMVIQQ",
+        "title": "Digital finance and migrant workers' urban integration: The mediation effect of the gender-earning gap",
+        "doi": "10.3389/fpubh.2022.1076783",
+        "url": "https://www.frontiersin.org/articles/10.3389/fpubh.2022.1076783/full",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 772,
+        "key": "3ULYQXBR",
+        "title": "Digital Financial Inclusion and Implications for Developing Countries Economic Growth",
+        "doi": "10.20473/jde.v8i1.38361",
+        "url": "https://e-journal.unair.ac.id/JDE/article/view/38361",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 774,
+        "key": "AWJFZ6CC",
+        "title": "Diaspora engagement policies and transnational financialisation in Colombia",
+        "doi": "10.1177/0308518X211045396",
+        "url": "https://journals.sagepub.com/doi/10.1177/0308518X211045396",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 924,
+        "key": "8AVGIQTU",
+        "title": "Digital Financial Services (FINTECH) in Latin America",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 926,
+        "key": "XXEYRRQ6",
+        "title": "Análisis de cambios metodológicos de la tasa de usura y su impacto en la inclusión financiera: un enfoque para el desarrollo económico sostenible en Colombia",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 927,
+        "key": "MPV7B8UY",
+        "title": "BRE-B: Un cambio en el ecosistema de pagos",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 929,
+        "key": "2FRLUHYX",
+        "title": "El futuro de BRE-B: el pan se quema en la puerta del horno",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 935,
+        "key": "2628TSGJ",
+        "title": "¿Las transacciones en Bre-B dejarán de ser gratis?: lo que dice realmente el proyecto del Ministerio de Hacienda",
+        "doi": "",
+        "url": "https://cambiocolombia.com/economia/articulo/2025/10/transacciones-en-breb-gratis-proyecto-ministerio-hacienda/",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 938,
+        "key": "K6UYV6DN",
+        "title": "Digital Public Infrastructure: a framework for conceptualisation and measurement",
+        "doi": "",
+        "url": "https://www.ucl.ac.uk/bartlett/public-purpose/wp2025-01",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 942,
+        "key": "WCFW5WS9",
+        "title": "La tormenta perfecta que golpeó la confianza en los pagos digitales en Colombia",
+        "doi": "",
+        "url": "https://www.elespectador.com/economia/finanzas-personales/la-tormenta-perfecta-que-golpeo-la-confianza-en-los-pagos-digitales-en-colombia/",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 945,
+        "key": "KYZ795PC",
+        "title": "Éxito inmediato: 4,4 millones de colombianos usaron Bre-B en las primeras 72 horas",
+        "doi": "",
+        "url": "https://forbes.co/2025/10/09/economia-y-finanzas/exito-inmediato-44-millones-de-colombianos-usaron-bre-b-en-las-primeras-72-horas",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 948,
+        "key": "RC2HSY96",
+        "title": "Bre-B, el sistema de pagos inmediatos en Colombia que promete revolucionar las transacciones",
+        "doi": "",
+        "url": "https://www.computerweekly.com/es/cronica/Bre-B-el-sistema-de-pagos-inmediatos-en-Colombia-que-promete-revolucionar-las-transacciones",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 951,
+        "key": "RF7JINQ9",
+        "title": "Crecen las estafas a nombre de Bre-B: Banco de la República alertó por mensaje de texto que no se debe abrir",
+        "doi": "",
+        "url": "https://www.infobae.com/colombia/2025/07/25/crecen-las-estafas-a-nombre-de-bre-b-banco-de-la-republica-alerto-por-mensaje-de-texto-que-no-se-debe-abrir/",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 954,
+        "key": "VXLZ29SS",
+        "title": "Así se alistan los bancos para migrar al nuevo sistema",
+        "doi": "",
+        "url": "https://www.larepublica.co/especiales/la-nueva-forma-de-pagar-con-la-llegada-de-bre-b/asi-se-alistan-los-bancos-para-migrar-al-nuevo-sistema-4116662",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 956,
+        "key": "7SMUJVYV",
+        "title": "A Consumer-centric Approach to Digital Public Infrastructure for Sustainable Financial Inclusion",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 959,
+        "key": "Y5A3ZS54",
+        "title": "Digital finance and its impact on financial inclusion",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      },
+      {
+        "id": 961,
+        "key": "HWYGYEBU",
+        "title": "Comparative analysis of the infrastructure basis for the transition to the digital economy of Latin America",
+        "doi": "",
+        "url": "",
+        "replication_package_status": "NOT_YET_ASSESSED"
+      }
+    ]
+  },
+  "discovery_failures": [
+    "Initial query/target call silently searched items rather than collections; no results not collection absence.",
+    "Explicit collections call without mode rejected; mode:list/view:tree recovered collection identity.",
+    "Items search call without text rejected; corrected mode:list filters:collectionId26 returned39items.",
+    "DIME Wiki targeted page403; some raw/tree webfetch requests inaccessible.",
+    "AER openICPSR112567403 and bibliography-linked E251128V1 inaccessible; code reading not claimed."
+  ],
+  "applied_code_changes": false,
+  "stata_execution": false,
+  "tool_use": "Relevant scoped tools only; no unrelated apps, installations, contacts or permission expansion.",
+  "remaining": "39item software/package census, actual top-journal script reading and complete DIME/J-PAL corpus coverage not completed; this is initial standard and source-intake only."
+}

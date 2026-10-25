@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED_NOT_AUTHORIZED_NOT_EXECUTABLE",
+  "package_id": "WP06_D2_2026-10-25",
+  "participant_processing_authorized_now": false,
+  "fits_authorized_now": 0,
+  "prerequisites": [
+    "D1 rights/institutional conditions explicitly addressed for the exact proposed use; accepted R12 is not clearance.",
+    "Owner approves D2 policy scope and separately grants participant projection/read/output authority.",
+    "Pin exact restricted carrier paths and hashes, permitted fields, staging/runtime and sealed comparison references; no latest-file fallback.",
+    "Confirm no source/artifact overwrite and define retention/output disclosure conditions; Stata MCP only for all participant/statistical checks."
+  ],
+  "carrier_path": null,
+  "carrier_sha256": null,
+  "field_allowlist": null,
+  "output_allowlist": null,
+  "operations": [
+    {
+      "id": "P1",
+      "name": "Historical membership and eligibility support",
+      "proposal": "Under separate authority compare exact retained submission-key membership to preserved423reference and manual exclusion provenance; evaluate instrument response predicates only. Keep exclusions unchanged. Migration/return/residence can be supported or indeterminate; do not infer positive status from nationality/year alone.",
+      "outputs": "Restricted aggregate mismatch/indeterminate summary; no respondent key list; no names/phones/admin matching."
+    },
+    {
+      "id": "P2",
+      "name": "Version/route/domain state audit",
+      "proposal": "Assess actualversion domains/routes, unavailable items, applicable nonresponse and parent/dummy concordance for a pinned dependency allowlist; do not recode participant values.",
+      "outputs": "Restricted item/version aggregate state ledger, disclosure-reviewed before any possible public output."
+    },
+    {
+      "id": "P3",
+      "name": "Time/geography lineage audit",
+      "proposal": "Check recorded datefield/order consistency and version-aware residence/stage grouping discrepancies without timestamp normalization, locality imputation or geographic pooling.",
+      "outputs": "Restricted aggregate discrepancy ledger; no row-level coordinates/dates or tiny joint cells in public materials."
+    },
+    {
+      "id": "P4",
+      "name": "Analysis sample/denominator accounting",
+      "proposal": "Use pinned existing recipes/outcome roles to document each permitted question/score/model denominator, distinguishing observable completeness from an actual estimator's sample. No new estimation, scores, categories or prediction.",
+      "outputs": "Restricted aggregate design/denominator map; do not claim fitted e(sample) from complete-case arithmetic."
+    }
+  ],
+  "prohibited": [
+    "Fits/refits, bootstrap, random starts or resampling",
+    "Participant exports, keys, contacts, free text or individual predictions/classes",
+    "Matching names/phones or opening administrative lists",
+    "Filtering, reinstatement, new exclusions, imputation, weighting, category/score/geography/time changes",
+    "Qualitative inspection/editing, contacts, submissions, releases, commits/pushes or live Overleaf/cloud actions"
+  ],
+  "failure_handling": "Stop on unpinned carrier/field/output, ownership mismatch, unexpected version/domain, preservation drift, missing authority or unresolved scientific choice. Preserve failed receipts; no automatic repair or alternate source.",
+  "limits": "This is a substantive validation design, not a dispatch adapter or operational acceptance. It specifies no real path/hash/field grant now and cannot execute."
+}

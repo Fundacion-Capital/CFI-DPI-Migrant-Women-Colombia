@@ -1,0 +1,520 @@
+{
+  "schema_version": 1,
+  "package_id": "WP06_D2_2026-10-25",
+  "prepared_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "status": "DOCUMENTARY_PREPARATION_COMPLETE_AUTHOR_DECISIONS_AND_EXECUTION_HELD",
+  "baseline_head": "0bbd387604ff23be61c45aa649839bb46aa90913",
+  "branch": "main",
+  "entry_worktree_clean": true,
+  "source_instruction": "Fully implement WP06–D2’s sample, version, missingness and time/geography decision package. Honor manual exclusions, preserve all packets and fully audit. No participant inspection, data/code changes or fitting. Provide commit title and description.",
+  "scope": "Existing documentary/aggregate source allowlist only. Eight new report/metadata/style files plus this final audit. No existing file edits, source-code/participant contents inspected or statistical execution. Later owner style/tool instructions recorded as future requirements and initial source-intake, not code-change authority.",
+  "subprocesses": [
+    {
+      "id": 1,
+      "status": "DOCUMENTARY_PREPARATION_COMPLETE",
+      "result": "Historical manual exclusions preserved; positive-eligibility support and academic sample adoption remain distinct."
+    },
+    {
+      "id": 2,
+      "status": "DOCUMENTARY_PREPARATION_COMPLETE",
+      "result": "Five actual versions,13lists,17texts,6absence states and15construct handoffs supplied; no harmonization or rescoring."
+    },
+    {
+      "id": 3,
+      "status": "RECOMMENDATIONS_PREPARED_NOT_ADOPTED",
+      "result": "Preserved clocks and recorded-date limits; tenure/reference-year/scaling and geography alternatives explicit/deferred, not implemented."
+    },
+    {
+      "id": 4,
+      "status": "AUTHOR_REVIEW_AND_UNAPPROVED_VALIDATION_SCOPE_PREPARED",
+      "result": "23decision rows,6bundles and4future checks; substantive choices remain null, formal D2 unchanged."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "4 Academic Submission/WP06_D2_SAMPLE_VERSION_MISSINGNESS_DECISION_PACKAGE.md",
+      "bytes": 17094,
+      "sha256": "F9FD9C8CFBC8DFEDB8B4810436929898718D59639BE5D3A5BA98CE3D74F114EB"
+    },
+    {
+      "path": "4 Academic Submission/STATA_RESEARCH_CODING_STANDARD.md",
+      "bytes": 11393,
+      "sha256": "2AC8420D620100B2FE76896849FBF58350D49F9A965127BC01E79FFB4A32DDF4"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/author_review.json",
+      "bytes": 3285,
+      "sha256": "807D76CD39A643694716F7531DC4F6AD9D656B87D62294596A9CC70CCD386CDE"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/coding_sources.json",
+      "bytes": 17203,
+      "sha256": "00BA205B7CDF3543A078BBC1D2906AAEC6FBD85841D7944A23AC4696A5E3C54D"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/decision_matrix.json",
+      "bytes": 15827,
+      "sha256": "A9F6628AFF85285066737EC832D947BD173DFE21D54D2F3EFAEAA01357E33FE9"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/evidence_manifest.json",
+      "bytes": 7325,
+      "sha256": "20D019CE81EFBD47BB6E474D4BC65E87681F737DC41A03E1B73930095CE35E80"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/proposed_validation_scope.json",
+      "bytes": 3591,
+      "sha256": "45B44718BBE98FEB88EFFEA477C95108CFC9A327F4C20A3925FCC5DFD4C30532"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/version_scope.json",
+      "bytes": 5372,
+      "sha256": "FE541C8080DD34FE87488B89D5BBA321468181387101C820CE45CD9878E312BC"
+    }
+  ],
+  "content_checks": {
+    "held_envelope": true,
+    "matrix23": true,
+    "matrix_unique_ids": true,
+    "one_prior_preservation": true,
+    "manual_exclusions_preserved": true,
+    "no_new_sample_claim": true,
+    "explicit_approval_missing": true,
+    "sources16": true,
+    "unique_source_ids": true,
+    "source_bytes_hashes": true,
+    "matrix_sources_resolve": true,
+    "five_actual_versions": true,
+    "inherited_version_counts": true,
+    "early_other_late_soacha": true,
+    "meta_only_current": true,
+    "seventeen_texts": true,
+    "thirteen_lists": true,
+    "unreferenced_q100": true,
+    "no_equivalence_deployment": true,
+    "eligibility25rows": true,
+    "design_not_membership": true,
+    "cover_all15constructs": true,
+    "six_states": true,
+    "denominators_separate": true,
+    "no_missingness_assumption": true,
+    "no_imputation_rescore": true,
+    "clock_preservation": true,
+    "date_not_closure": true,
+    "tenure_decision_deferred": true,
+    "no_latest_year": true,
+    "geography_stages_distinct": true,
+    "no_locality_imputation": true,
+    "no_pooling_applied": true,
+    "consent_correction": true,
+    "rights_pending": true,
+    "lock_not_activated": true,
+    "six_review_bundles": true,
+    "all_nonprior_decisions_in_bundles": true,
+    "four_future_operations": true,
+    "stata_mcp_only": true,
+    "simple_explicit_style": true,
+    "comments_meaningful": true,
+    "style_exact_outputs": true,
+    "essential_checks_kept": true,
+    "no_equivalence_claim": true,
+    "research_coverage_honest": true,
+    "zotero39metadata": true,
+    "no_code_or_stata": true,
+    "no_index_or_existing_diff": true,
+    "head_unchanged": true,
+    "iat_dependency_explicit": true,
+    "q115_direction_explicit": true
+  },
+  "content_checks_passed": 52,
+  "negative_controls": {
+    "authority_sample_approved": true,
+    "authority_scientific_change_approved": true,
+    "authority_participant_processing_authorized": true,
+    "authority_fit_authorized": true,
+    "authority_institutional_approval_assumed": true,
+    "authority_release_authorized": true,
+    "invent_sample_choice": true,
+    "invent_owner_acceptance": true,
+    "modify_formal_response": true,
+    "invent_carrier_path": true,
+    "invent_carrier_sha256": true,
+    "invent_field_allowlist": true,
+    "invent_output_allowlist": true,
+    "invent_input_authority": true,
+    "invent_fit_authority": true,
+    "omitted_sample_flag": true,
+    "omitted_carrier_placeholder": true
+  },
+  "negative_control_count": 17,
+  "failures": [],
+  "negative_control_method": "In-memory copies reject6invented authority flags, sample/owner-choice/formal-response mutations, invented carrier/hash/field/output grants, participant/fit authority, and omitted required flag/placeholder. No fixtures or test scripts added to repository.",
+  "independent_review": {
+    "reviewer": "/root/d2_final_review",
+    "mode": "Single independent read-only subagent source-to-claim review",
+    "verdict": "Prepared for documentary owner review; no Critical or Important defects found within scope.",
+    "critical": 0,
+    "important": 0,
+    "minor": 2,
+    "independently_checked": "All16source paths, byte lengths andSHA256; all6pre-auditJSON companions parse; exact5versions and substantive metadata checked against permitted sources.",
+    "reviewed_before_owner_corrections": true,
+    "final_audit_independently_reviewed": false,
+    "findings": [
+      {
+        "id": "R1",
+        "severity": "Minor",
+        "file": "wp06-d2-decision-package/version_scope.json",
+        "reviewed_line": 98,
+        "issue": "acceso impact too generic; name direct access_score to iat_score IAT dependency.",
+        "owner_ruling": "ACCEPTED_CORRECTED",
+        "correction": "Explicit IAT ancestry added, no source or recipe change."
+      },
+      {
+        "id": "R2",
+        "severity": "Minor",
+        "file": "wp06-d2-decision-package/version_scope.json",
+        "reviewed_line": 167,
+        "issue": "q115 first/later temporal direction ambiguous.",
+        "owner_ruling": "ACCEPTED_CORRECTED",
+        "correction": "Explicit first-version to later-version wording, no respondent mapping."
+      }
+    ],
+    "declined_behaviors": [
+      {
+        "behavior": "Participant/raw/admin/qualitative/free-text/estimate/audit-local/code-content inspection",
+        "ruling": "OUTSIDE_AUTHORITY_NOT_PERFORMED"
+      },
+      {
+        "behavior": "Manual-exclusion membership reconstruction, person/household uniqueness, actual positive-eligibility and new empirical cells",
+        "ruling": "SEPARATE_AUTHORITY_AND_WHERE_NEEDED_EVIDENCE_REQUIRED"
+      },
+      {
+        "behavior": "Blank-workbook/XML/deployment/routing/dummy respondent compliance",
+        "ruling": "NOT_CERTIFIED_DEFERRED_TO_PROPOSED_SCOPED_VALIDATION"
+      },
+      {
+        "behavior": "Filter/reinstate/recode/harmonize/normalize/rescore/weight/fit/equivalence testing",
+        "ruling": "NOT_PERFORMED_NO_SCIENTIFIC_CHANGE_AUTHORITY"
+      },
+      {
+        "behavior": "Institutional/consent/legal/exposure/anonymity/submission/release conclusions",
+        "ruling": "UNRESOLVED_NOT_ADOPTED"
+      },
+      {
+        "behavior": "Independent external research,live links or Zotero census replication",
+        "ruling": "REVIEWER_DID_NOT_REVERIFY_OWNER_SOURCE_INTAKE_COVERAGE_REMAINS_LIMITED"
+      },
+      {
+        "behavior": "Broader source/graph discovery,contacts,mutations or second reviewer",
+        "ruling": "NOT_NEEDED_NOT_PERFORMED"
+      },
+      {
+        "behavior": "Final audit record and post-correction testing/preservation",
+        "ruling": "EXECUTOR_COMPLETED_SEPARATELY_NOT_INDEPENDENT_REVIEW"
+      }
+    ],
+    "superseded_version_scope_before_owner_minor_corrections": {
+      "schema_version": 1,
+      "status": "INHERITED_VERSION_METADATA_NOT_RECOMPUTED",
+      "package_id": "WP06_D2_2026-10-25",
+      "source_ids": [
+        "S05",
+        "S06",
+        "S08",
+        "S12"
+      ],
+      "versions": [
+        {
+          "version": "2512090157",
+          "submitted": 2,
+          "historical_retained": 1,
+          "code4": "Other",
+          "code5": "not offered",
+          "later17text": "unavailable",
+          "scope": "earliest used"
+        },
+        {
+          "version": "2512091719",
+          "submitted": 2,
+          "historical_retained": 1,
+          "code4": "Other",
+          "code5": "not offered",
+          "later17text": "unavailable",
+          "scope": "second used"
+        },
+        {
+          "version": "2512111044",
+          "submitted": 7,
+          "historical_retained": 7,
+          "code4": "Soacha",
+          "code5": "not offered",
+          "later17text": "defined",
+          "scope": "third used"
+        },
+        {
+          "version": "2512121811",
+          "submitted": 474,
+          "historical_retained": 409,
+          "code4": "Soacha",
+          "code5": "not offered",
+          "later17text": "defined",
+          "scope": "dominant used"
+        },
+        {
+          "version": "2602120658",
+          "submitted": 5,
+          "historical_retained": 5,
+          "code4": "Soacha",
+          "code5": "Meta",
+          "later17text": "defined",
+          "scope": "current supplied used"
+        }
+      ],
+      "counts_status": "Inherited submitted/retained version counts from S05/S12; no participants newly tabulated. Small version counts are planning metadata, not a version-effect estimate or approved public table.",
+      "not_submitted_authority": [
+        "2602160713",
+        "2511101752"
+      ],
+      "eligibility_design": "All five supplied definitions use consent1, q1 Woman1, q4>=18 and q5 respondent-or-household received-remittances1; q4 constraint18to100. This does not test migrant history or3month residence, nor certify individual compliance. Exact expressions remain in S08.",
+      "later_text_fields": [
+        "q3_6_otro",
+        "q4_1_otro",
+        "q4_3_otro",
+        "q4_11_otro",
+        "q4_23_otro",
+        "q5_1_otro",
+        "q5_2_otro",
+        "q5_10_otro",
+        "q5_12_otro",
+        "q5_13_otro",
+        "q6_4_otro",
+        "q6_5_otro",
+        "q6_10_otro",
+        "q6_12_otro",
+        "q6_25_otro",
+        "q6_26_otro",
+        "q7_21_otro"
+      ],
+      "changed_lists": [
+        {
+          "list": "departamento",
+          "fields": [
+            "q3"
+          ],
+          "scope": "first2 code4 Other versus later Soacha; current used adds Meta5",
+          "impact": "geography labels, stage groupings and outputs"
+        },
+        {
+          "list": "acceso",
+          "fields": [
+            "q3_6"
+          ],
+          "scope": "first2 code6 Other becomes Other(specify), whitespace difference",
+          "impact": "text trigger and telecom/helper interpretations; not permission for a new score"
+        },
+        {
+          "list": "q37",
+          "fields": [
+            "q5_11"
+          ],
+          "scope": "first2 code6 Other(specify) removed later",
+          "impact": "pass-through metadata; no explicit score consumer found in inherited scope"
+        },
+        {
+          "list": "q82",
+          "fields": [
+            "q7_10"
+          ],
+          "scope": "first code7 Other(specify) removed later",
+          "impact": "IPCS preference component"
+        },
+        {
+          "list": "q84",
+          "fields": [
+            "q7_12"
+          ],
+          "scope": "first code7 Other(specify) removed later",
+          "impact": "complaint-channel metadata; do not rename as named channel"
+        },
+        {
+          "list": "q88",
+          "fields": [
+            "q7_16"
+          ],
+          "scope": "first code6 Other(specify) becomes None of above later",
+          "impact": "meaning changes even without explicit index consumer"
+        },
+        {
+          "list": "q93",
+          "fields": [
+            "q7_21"
+          ],
+          "scope": "first code4 Tato y empatia becomes Tacto y empatia",
+          "impact": "spelling only; later text companion separate"
+        },
+        {
+          "list": "q100",
+          "fields": [],
+          "scope": "first code7 Other becomes None of above later",
+          "impact": "unreferenced dictionary list in all5 definitions; NOT q9_5 or analytical variable"
+        },
+        {
+          "list": "q110",
+          "fields": [
+            "q9_17"
+          ],
+          "scope": "first code5 Other becomes None of above later",
+          "impact": "ICPF source/default interpretation; distinguish from IAER raw-field proximity"
+        },
+        {
+          "list": "q114",
+          "fields": [
+            "q10_1"
+          ],
+          "scope": "first code11 Other becomes Language/terms; later adds12,14,15,16,98",
+          "impact": "IBPD principal barriers and graphs"
+        },
+        {
+          "list": "q115",
+          "fields": [
+            "q10_2"
+          ],
+          "scope": "first later adds1 No own phone;16 Other becomes None; spelling changes",
+          "impact": "IBPD extra-barrier dummies; parent/dummy concordance not automatic"
+        },
+        {
+          "list": "q116",
+          "fields": [
+            "q10_3"
+          ],
+          "scope": "first2 code10 Other becomes None of above later",
+          "impact": "enabler helpers/charts; not IEH scored component"
+        },
+        {
+          "list": "q125",
+          "fields": [
+            "q10_14"
+          ],
+          "scope": "first2 code6 Other(specify) becomes Other entity later",
+          "impact": "formal/informal accompaniment helper; not IEH scored component"
+        }
+      ],
+      "cross_version_equivalence_approved": false,
+      "xml_deployment_certified": false,
+      "implementation_status": "No mappings, recodes, labels, weights or score definitions changed."
+    },
+    "review_limit": "Independent documentary scrutiny is not participant/scientific/institutional clearance. Owner corrections and final metadata/preservation verification do not constitute a second independent review."
+  },
+  "additional_style_work": {
+    "standing_requirement_recorded": true,
+    "stata_code_changed": false,
+    "analytical_equivalence_tested": false,
+    "primary_guidance_and_selected_driver_reading": true,
+    "zotero_items_enumerated": 39,
+    "bibliography_linked_replication_code_census_complete": false,
+    "all_dime_jpal_resources_reviewed": false,
+    "top_journal_script_review_complete": false,
+    "continuing_background_run_scheduled": false,
+    "discovery_errors_record": "coding_sources.json",
+    "status": "INITIAL_STANDARD_AND_SOURCE_INTAKE_ONLY_EXHAUSTIVE_RESEARCH_INCOMPLETE",
+    "zotero_full_texts_read": 0
+  },
+  "formal_state": {
+    "D2_choice_recorded": false,
+    "D2_sample_approved": false,
+    "D1_rights_approved": false,
+    "institutional_response_adopted": false,
+    "prior_records_changed": false,
+    "scientific_decisions_approved": false,
+    "execution_authorized": false,
+    "participant_processing_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "participant_inspection": false,
+    "participant_value_parsing": false,
+    "new_empirical_calculation": false,
+    "stata_execution": false,
+    "fit": false,
+    "analytical_code_content_review": false,
+    "existing_data_or_code_change": false,
+    "existing_packet_edit": false,
+    "manuscript_or_qualitative_change": false,
+    "contacts": false,
+    "library_write": false,
+    "installation": false,
+    "host_probe": false,
+    "service_change": false,
+    "cleanup": false,
+    "history_rewrite": false,
+    "commit": false,
+    "push": false,
+    "overleaf_sync": false,
+    "submission": false,
+    "release": false
+  },
+  "proposed_commit": {
+    "title": "docs: prepare WP06 D2 sample and version decision package",
+    "description": [
+      "Prepare the documentary sample/version/missingness/time-geography package from16retained sources, preserving historical423/manual exclusions and all original packets.",
+      "Add23decision rows,5version/13list/17text crosswalks,15construct denominator handoffs,6owner-review bundles and an unapproved4check protected-verification scope.",
+      "Distinguish inherited aggregate evidence, author confirmations, proposed policies and unknowns. Apply R03 consent correction in interpretation without rewriting earlier accounts.",
+      "Leave D2 choices, formal institutional response and all data/fit/release authority held; do not harmonize labels, pool geography, normalize timestamps or revise tenure/scores.",
+      "Record explicit human-reviewable Stata coding requirements and initial DIME/J-PAL/replication-source reading; retain all39Zotero item identities and clearly mark exhaustive source/package review incomplete.",
+      "Complete one independent documentary review; correct two Minor wording findings in one owner pass and retain reviewed version in the audit.",
+      "Pass52content/status checks and17negative controls, followed by final readback and full local preservation checks.",
+      "Verify unchanged preservation fingerprints for all1,273pre-existing tracked files and23,281private audit files; only9new documentary files added.",
+      "No participant inspection, empirical calculations, Stata execution, data/code/manuscript edits, contacts, library writes, installations, fitting, cleanup, synchronization or release."
+    ]
+  },
+  "completion_boundary": "D2 decision preparation complete only. Owner scientific adoption and any protected data validation remain pending; R01-R12 acceptance does not authenticate institutional clearance. Exhaustive external coding/bibliography-package research explicitly not complete. Next: owner review6bundles, then D3 and scoped WP05 evidence work; no automatic execution.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1273,
+        "bytes": 66742882,
+        "sha256": "4ECE061DCA5997EEBD7D1FB61E66836B98812AC85D98886CA48DFAE9963BB9C0"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1273,
+        "bytes": 66742882,
+        "sha256": "4ECE061DCA5997EEBD7D1FB61E66836B98812AC85D98886CA48DFAE9963BB9C0"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_owner_corrections": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1273,
+        "bytes": 66742882,
+        "sha256": "4ECE061DCA5997EEBD7D1FB61E66836B98812AC85D98886CA48DFAE9963BB9C0"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "method": "Three complete local scans. Existing absolute paths sorted case-sensitively; SHA256 of UTF8 concatenation absolute_path TAB byte_length TAB uppercase_file_SHA256 LF. Extended Windows paths for access. Counts/bytes/digests unchanged across groups.",
+    "excluded_existing_files": [],
+    "scope_limit": "Opaque local hashing only, not participant-value inspection, semantic source review, remote/cloud/history/exposure audit or anonymity certification. New8package artifacts hashed separately; audit does not self-hash. Pre-review version_scope object retained above."
+  }
+}

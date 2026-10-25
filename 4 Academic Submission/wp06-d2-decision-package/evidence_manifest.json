@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "package_id": "WP06_D2_2026-10-25",
+  "review_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "authority": "Existing retained documentary and aggregate evidence only; hashes establish file identity, not scientific validity or approval.",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "4 Academic Submission/wp06-author-dossier/D1_POPULATION_ACCEPTED_ACCOUNT_2026-10-19.md",
+      "bytes": 19235,
+      "sha256": "6F01061D1534BAA44E6BD9B5C2AE4938D70E19BDE28CD1DAE2A1E0EC6D2E7E36",
+      "reading_extent": "Accepted recruitment/population/exclusion account; selected exact timing/geography passages inspected. Contains superseded quantitative paper-consent wording; use S04 for correction, not S01.",
+      "kind": "accepted documentary account"
+    },
+    {
+      "id": "S02",
+      "path": "4 Academic Submission/wp06-author-dossier/d1_population_acceptance.json",
+      "bytes": 3524,
+      "sha256": "A6603320A70C8530CA73DC1466C7A79DCC05EFAA0CF26954C3A7C8E6F5544722",
+      "reading_extent": "Complete acceptance and limitations read.",
+      "kind": "acceptance metadata"
+    },
+    {
+      "id": "S03",
+      "path": "4 Academic Submission/wp06-institutional-rights-review/r12_documentary_acceptance_2026-10-25.json",
+      "bytes": 6663,
+      "sha256": "D2BE7C618CD1261E3626993F0FFE05B573EA4609262B5975D4E2DFA2D5456B08",
+      "reading_extent": "R12 source for institutional pending state; must be read before publication claims.",
+      "kind": "acceptance metadata"
+    },
+    {
+      "id": "S04",
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 10633,
+      "sha256": "ACC61A91E3397FB6C4998A810E552F66FDE164486477D29CA244412D22DE9B53",
+      "reading_extent": "Corrected quantitative consent: SurveyCTO only, not signed paper/audio. Read for correction authority.",
+      "kind": "accepted documentary account"
+    },
+    {
+      "id": "S05",
+      "path": "4 Academic Submission/HISTORICAL_INPUT_CONTRACT.md",
+      "bytes": 12549,
+      "sha256": "6058EDB290449FBD26814C657D10E243AD6FA391BAB4A7B85E8A8C20907C0689",
+      "reading_extent": "Source roles/order/clock/version sections read completely; dated historical controls, not fresh empirical findings.",
+      "kind": "historical aggregate report"
+    },
+    {
+      "id": "S06",
+      "path": "4 Academic Submission/VERSION_MEASUREMENT_REGISTER.md",
+      "bytes": 240459,
+      "sha256": "F636C9A80209A974BB896AEEE2B530F4A9427BD35E78DA17CB4273089BDCBBAE",
+      "reading_extent": "Only base sections 1-4 (around lines89-189) used for version semantics, geography and 17text fields; later unrelated replay handoffs not current D2 authority.",
+      "kind": "scoped historical metadata report"
+    },
+    {
+      "id": "S07",
+      "path": "4 Academic Submission/scientific-foundation/sample_filter_evidence.csv",
+      "bytes": 1370,
+      "sha256": "D11A09E390D84CD79E71E2CFD6ADD401E0A3CB24FEC1EA4A98ABBF46BE785DAC",
+      "reading_extent": "All nine aggregate receipt rows read. Not recomputed from participants.",
+      "kind": "inherited aggregate receipt"
+    },
+    {
+      "id": "S08",
+      "path": "4 Academic Submission/wp06-contract/instrument_eligibility.csv",
+      "bytes": 5886,
+      "sha256": "D0975617C190E11FDB0483E9196475E43E24D2A4D4B971D33FCEE607A52EDA02",
+      "reading_extent": "All25 design rows across five versions read; no blank workbook or respondent records newly parsed.",
+      "kind": "inherited instrument metadata"
+    },
+    {
+      "id": "S09",
+      "path": "4 Academic Submission/wp06-contract/documentary_evidence.csv",
+      "bytes": 7845,
+      "sha256": "EE79FA9F6651E57657B996A8831F1117D9D9AEE0A243ACA5ADE7359B0C8F1F59",
+      "reading_extent": "All10 excerpts/source locators read; not new full-text review of seven original documents.",
+      "kind": "document excerpt metadata"
+    },
+    {
+      "id": "S10",
+      "path": "4 Academic Submission/wp06-contract/construct_resolution_cards.csv",
+      "bytes": 15073,
+      "sha256": "D90ACE76DCA47A9249CFF7BD68399B4EE5D40BBBD7997395024D77183C658522",
+      "reading_extent": "All15 rows read for missingness/denominator/version consequences; not D3 scientific adoption.",
+      "kind": "measurement metadata"
+    },
+    {
+      "id": "S11",
+      "path": "4 Academic Submission/IVS_MEASUREMENT_AUDIT.md",
+      "bytes": 16959,
+      "sha256": "BBA5D784A15FC8B1D51F92FC587C6A12BB6304B5017EB803954D2E5AAF965EA3",
+      "reading_extent": "Component/tenure and limitation sections inspected; inheritance only, no observed-state revalidation.",
+      "kind": "historical measurement report"
+    },
+    {
+      "id": "S12",
+      "path": "4 Academic Submission/WP04_SCIENTIFIC_FOUNDATION_SYNTHESIS.md",
+      "bytes": 16458,
+      "sha256": "3F4F9B7C567DCA8334F5F141D15976D7F8A7A94739EE61467DC76DDBD9C96F9F",
+      "reading_extent": "Sample/version/time/geography/measurement sections read; historical synthesis updated in interpretation by later D1/R03/R12 accounts without overwriting it.",
+      "kind": "historical synthesis"
+    },
+    {
+      "id": "S13",
+      "path": "4 Academic Submission/WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+      "bytes": 110883,
+      "sha256": "53E3E90269875421F75AE09B9991440CBED0F2D8FC9A93D71F4DE36097013F90",
+      "reading_extent": "D2 and D3 decision briefs inspected.",
+      "kind": "planning source"
+    },
+    {
+      "id": "S14",
+      "path": "4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md",
+      "bytes": 50140,
+      "sha256": "5BE9B49993DADC7A5E4B63C6D4C4DF69625AE95A32B23E1121606EFF1C9289FF",
+      "reading_extent": "Package rules, four subprocesses, milestone and preservation boundaries inspected.",
+      "kind": "planning source"
+    },
+    {
+      "id": "S15",
+      "path": "4 Academic Submission/scientific-foundation/decision_lock.json",
+      "bytes": 1074,
+      "sha256": "C758330B13818498E893950D0B1D7516253BEB311EF83ED4A90F8CACA1EF135A",
+      "reading_extent": "Pending-material-decisions/no-execution lock to be checked; no promotion.",
+      "kind": "held-state metadata"
+    },
+    {
+      "id": "S16",
+      "path": "4 Academic Submission/wp06-institutional-rights-review/decision_register.json",
+      "bytes": 27271,
+      "sha256": "EB56E16DB7B64C5110D552CF7ED588CB7D3B872DA99B2D1DF48927B7DCFA5E8C",
+      "reading_extent": "Formal12 R dispositions checked for pending status.",
+      "kind": "held-state metadata"
+    }
+  ],
+  "excluded": [
+    "Participant datasets, data-bearing Git revisions and saved estimates",
+    "Raw blank form workbooks/XML or administrative lists",
+    "Names, phone numbers, internal keys or individual profiles",
+    "Training recordings, signed participant documents and qualitative sources",
+    "Analytical source-code contents (embedded identifiers may exist); source locators are inherited only",
+    "Remote services, public-visibility probes, contacts and legal clearance research"
+  ],
+  "known_supersession": "S01's earlier quantitative paper/audio-consent description is superseded by S04's accepted SurveyCTO-only correction; preserve both files unchanged. S05's rejected489-order diagnostic is not revived. S12 has older sample-policy wording updated in interpretation by accepted S01/S02."
+}

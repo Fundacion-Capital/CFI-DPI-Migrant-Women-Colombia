@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "package_id": "WP06_D2_2026-10-25",
+  "status": "PREPARED_FOR_AUTHOR_REVIEW_NOT_ADOPTED",
+  "research_values_recomputed": false,
+  "rows": [
+    {
+      "id": "D2-S01",
+      "domain": "sample",
+      "topic": "Preserve historical exclusions",
+      "recommendation": "Keep every existing manual test/non-official exclusion and coded restriction; never reinstate excluded records or equate all67 coded exclusions with tests.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S07"
+      ],
+      "affected_outputs": "Historical N423 reference and all historical analyses",
+      "limitation_and_next_check": "No new validation needed to honor instruction; exact manual exclusion timing/list remains unresolved.",
+      "status": "PRESERVED_PRIOR_AUTHOR_INSTRUCTION",
+      "author_choice": null
+    },
+    {
+      "id": "D2-S02",
+      "domain": "sample",
+      "topic": "Positive eligibility versus historical membership",
+      "recommendation": "Use the accepted international/return-migrant adult-women population description, approximately3months after arrival/return, as an explicit proposed academic policy. Do not assert every historical record meets it from exclusion code alone.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S13"
+      ],
+      "affected_outputs": "Academic sample claims and any future discrepancy ledger",
+      "limitation_and_next_check": "Later authorized aggregate comparison may report supported/unsupported/indeterminate criteria; no automatic filtering.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-S03",
+      "domain": "sample",
+      "topic": "Household remittance receipt",
+      "recommendation": "Use past12month receipt by respondent OR household as the instrument-screened condition; distinguish principal personal management, sending-only and expected future receipt.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S09"
+      ],
+      "affected_outputs": "Denominators, outcomes and inference",
+      "limitation_and_next_check": "Retain broader protocol wording as documentary intent, not grounds to add or reinstate participants.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-S04",
+      "domain": "sample",
+      "topic": "No invented eligibility restrictions",
+      "recommendation": "Do not introduce five-year-arrival, foreign-nationality-only, prior-program, own-phone, literacy or strict distinct-household eligibility; no retrospective exact3month boundary exclusion.",
+      "source_ids": [
+        "S01",
+        "S02"
+      ],
+      "affected_outputs": "Population definition and access-bias discussion",
+      "limitation_and_next_check": "Versioned instrument design and author reports cannot establish every individual's migration/post-return duration.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-S05",
+      "domain": "sample",
+      "topic": "Administrative validation versus key uniqueness",
+      "recommendation": "Retain author-reported cross-city/enumerator name/phone deduplication and validated-data handoff, separately from submission-key coverage/order evidence.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S05"
+      ],
+      "affected_outputs": "Unique-person claims and provenance",
+      "limitation_and_next_check": "Do not inspect names/phones/adminlists or certify person uniqueness under this package.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-S06",
+      "domain": "sample",
+      "topic": "Unit and inference",
+      "recommendation": "Individual woman, not verified unique household; nonprobability contacts/referrals, not formal RDS or nationally representative sample. No new design/calibration weights.",
+      "source_ids": [
+        "S01",
+        "S09"
+      ],
+      "affected_outputs": "Descriptive target and uncertainty/weights",
+      "limitation_and_next_check": "Household links/recruitment probabilities/refusal denominator unavailable; no cluster independence claim.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-V01",
+      "domain": "version",
+      "topic": "Bind actual submitted versions",
+      "recommendation": "Use each submission's actual form version, not latest workbook/version label, as the future interpretation key; retain unknown versions as unresolved.",
+      "source_ids": [
+        "S05",
+        "S06",
+        "S08",
+        "S12"
+      ],
+      "affected_outputs": "All item domains/routes",
+      "limitation_and_next_check": "Five archived spreadsheets do not certify XML, deployment or respondent compliance; later definitions not observed submitted versions are not authority.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-V02",
+      "domain": "version",
+      "topic": "Geography dictionary change",
+      "recommendation": "Preserve code4=Other in2512090157/2512091719 and code4=Soacha in later used versions; Meta5 added only in2602120658. Later universal labels cannot certify early meaning.",
+      "source_ids": [
+        "S05",
+        "S06"
+      ],
+      "affected_outputs": "City tables, controls, profiles and appendices",
+      "limitation_and_next_check": "Require version-aware proposal before recoding; actual localities and any unavailable counterpart remain indeterminate.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-V03",
+      "domain": "version",
+      "topic": "Unavailable text fields",
+      "recommendation": "Classify17 later-added other-specify text fields as unavailable in first2versions, not refusal/nonresponse/zero.",
+      "source_ids": [
+        "S05",
+        "S06"
+      ],
+      "affected_outputs": "Text coverage and missingness",
+      "limitation_and_next_check": "Do not read free text or infer counts beyond inherited availability receipts.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-V04",
+      "domain": "version",
+      "topic": "Same code different meaning",
+      "recommendation": "Carry all13 changed choice lists, including unreferenced q100, with exact first/first-two scope. Other-to-None changes require item-specific mapping; no universal relabel.",
+      "source_ids": [
+        "S06",
+        "S10"
+      ],
+      "affected_outputs": "IBPD/ICPF/IPCS and auxiliary interpretations",
+      "limitation_and_next_check": "No signed crosswalk or new composite scoring adopted; unreferenced q100 is not a scored item.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M01",
+      "domain": "missingness",
+      "topic": "Distinguish reasons for absence",
+      "recommendation": "Separate observed valid answer, structural skip, unavailable-in-version, applicable nonresponse, valid substantive N/A and unresolved state before numerical coding.",
+      "source_ids": [
+        "S06",
+        "S08",
+        "S10"
+      ],
+      "affected_outputs": "Every denominator and conditional score",
+      "limitation_and_next_check": "Conflicting/missing routing evidence yields unresolved, not invented zero.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M02",
+      "domain": "missingness",
+      "topic": "Item-specific sentinels",
+      "recommendation": "Interpret98/99/Other/None using that item's versioned dictionary and route. Refusal/unknown/N/A are not globally interchangeable or uniformly favorable/adverse.",
+      "source_ids": [
+        "S06",
+        "S10"
+      ],
+      "affected_outputs": "All15constructs and outcomes",
+      "limitation_and_next_check": "Record historical treatment separately; proposed change requires D3 rationale, validation and author decision.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M03",
+      "domain": "missingness",
+      "topic": "Multiselect parent and dummies",
+      "recommendation": "Distinguish offered-but-unselected option0 from unasked question, unavailable option and unanswered parent; check parent/dummy concordance only under later authority.",
+      "source_ids": [
+        "S06",
+        "S10"
+      ],
+      "affected_outputs": "Barrier/enabler/helper scores",
+      "limitation_and_next_check": "No blank-to-zero inference from a derived dummy alone.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M04",
+      "domain": "missingness",
+      "topic": "Denominator hierarchy",
+      "recommendation": "Keep exported490, historical retained423, question-applicable, valid-answer, score-contributor and fitted-model N separate. State denominator and period per exhibit.",
+      "source_ids": [
+        "S01",
+        "S07",
+        "S10",
+        "S12"
+      ],
+      "affected_outputs": "Tables, correlations, regressions and figure captions",
+      "limitation_and_next_check": "Sequential exclusions are not response rate/longitudinal attrition; no universal N423 denominator.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M05",
+      "domain": "missingness",
+      "topic": "Available-term/nested scores",
+      "recommendation": "Generated score completeness is not complete raw-response coverage; rowmean changes weights with available terms and IETR has nested denominators.",
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "affected_outputs": "All scores, standardization and LCA inputs",
+      "limitation_and_next_check": "Do not impose minimum-item thresholds, impute or rescore here; D3 owns recipe decisions.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-M06",
+      "domain": "missingness",
+      "topic": "Analysis-specific missingness",
+      "recommendation": "Do not use one blanket complete-case sample across all analyses or treat observed missingness as MCAR/MAR. Separate design, missing outcome and estimator-induced exclusions.",
+      "source_ids": [
+        "S10",
+        "S12",
+        "S13"
+      ],
+      "affected_outputs": "Model comparisons and uncertainty",
+      "limitation_and_next_check": "No imputation/calibration/selection correction chosen; exact analysis samples require later scoped validation.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-T01",
+      "domain": "time",
+      "topic": "Preserve audit clocks",
+      "recommendation": "Freeze retained historical audit/coded timestamps; keep refreshed raw separate. Approx6h36s discrepancy causal explanation remains unverified; no offset conversion or repin.",
+      "source_ids": [
+        "S05",
+        "S12"
+      ],
+      "affected_outputs": "Lineage, date labels, order and reproduction",
+      "limitation_and_next_check": "Historical export reports/settings unavailable; do not infer timezone from constant offset alone.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-T02",
+      "domain": "time",
+      "topic": "Recorded fieldwork dates",
+      "recommendation": "Describe inherited recorded-date span9Dec2025–17Feb2026, not independently verified administrative closure. EarlyDecember interviews are author-confirmed fieldwork.",
+      "source_ids": [
+        "S01",
+        "S05"
+      ],
+      "affected_outputs": "Methods chronology and fieldwork-era context",
+      "limitation_and_next_check": "Day shifts documented across raw/audit clocks; provenance/date field must be stated and exact boundaries not overinterpreted.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-T03",
+      "domain": "time",
+      "topic": "Tenure/reference year",
+      "recommendation": "Retain2026-minus-first-arrival-year and strict year<2026 only as historical recipe. Before an academic tenure variable, choose first versus return/most-recent arrival and justified fixed/interview-year basis; year-only data cannot verify3months.",
+      "source_ids": [
+        "S01",
+        "S10",
+        "S11"
+      ],
+      "affected_outputs": "IVS, cohorts and downstream regressions/LCA",
+      "limitation_and_next_check": "No automatic current-year update, no blanket2025 substitution, no negative/zero-duration or missing-high rule adopted. Defer new tenure definition pending D3_IVS decision.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-T04",
+      "domain": "time",
+      "topic": "Sample-dependent normalization",
+      "recommendation": "Freeze continuity extrema/standardization with historical reference cohort; academic sample changes require explicit reference population and zero-range/edge handling and downstream impact.",
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "affected_outputs": "IVS scaling, other zscores, empirical cutoffs and LCA",
+      "limitation_and_next_check": "No new extrema, SD, thresholds, scientific tolerance or class family computed.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-G01",
+      "domain": "geography",
+      "topic": "Separate raw interpretation from stage grouping",
+      "recommendation": "Keep raw code+version interpretation distinct from core5to1 pooling, prof_city and overlay1/4vs2/3/5 grouping. City is not itself a preferred-final H1 indicator.",
+      "source_ids": [
+        "S06",
+        "S12"
+      ],
+      "affected_outputs": "Geographic controls, profiles, overlays and appendix frequencies",
+      "limitation_and_next_check": "Geography may affect sample/interpretation; no causal effect on classes inferred from mapping alone.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-G02",
+      "domain": "geography",
+      "topic": "Do not justify pooling by sparse cells alone",
+      "recommendation": "Prefer faithful unpooled descriptive geography after version interpretation; do not automatically pool Meta with Bogota or relabel it Villavicencio. If a coarser analytical grouping is proposed, justify context and disclosure/inference limitations separately.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S06",
+        "S12"
+      ],
+      "affected_outputs": "City coefficient interpretation and disclosures",
+      "limitation_and_next_check": "Meta municipality unresolved; no new tiny-cell outputs or geography transformation. Final grouping deferred to owner after documented alternatives.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    },
+    {
+      "id": "D2-G03",
+      "domain": "geography",
+      "topic": "Claims follow achieved recruitment",
+      "recommendation": "Urban/periurban recruited cohort; do not revive rural coverage, national representation or verified quota attainment. Discuss coverage limitations without manufacturing population weights.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S09"
+      ],
+      "affected_outputs": "Academic methods, discussion and context",
+      "limitation_and_next_check": "Observed diversity is not population-proportional coverage or quota certification.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "author_choice": null
+    }
+  ],
+  "authority": {
+    "sample_approved": false,
+    "scientific_change_approved": false,
+    "participant_processing_authorized": false,
+    "fit_authorized": false,
+    "institutional_approval_assumed": false,
+    "release_authorized": false
+  }
+}

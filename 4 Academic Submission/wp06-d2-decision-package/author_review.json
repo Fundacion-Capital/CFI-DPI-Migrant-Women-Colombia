@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "PREPARED_FOR_AUTHOR_REVIEW_NO_CHOICES_ASSUMED",
+  "package_id": "WP06_D2_2026-10-25",
+  "formal_D2_response_modified": false,
+  "prior_instruction_not_reopened": "Honor historical manual/test/non-official exclusions and coded restrictions. No reinstatement or retrospective sample rewrite.",
+  "bundled_questions": [
+    {
+      "id": "Q1",
+      "topic": "Population and remittance interpretation",
+      "recommended": "Use accepted international/return-migrant adult-women description, approximately3months postarrival/return, household receipt past12months; acknowledge individual positive eligibility not fully verified.",
+      "decision_ids": [
+        "D2-S02",
+        "D2-S03",
+        "D2-S04",
+        "D2-S06"
+      ],
+      "choice": null
+    },
+    {
+      "id": "Q2",
+      "topic": "Version-aware interpretation",
+      "recommended": "Retain actual form-version authority,17 unavailable text fields and item-specific changed dictionaries; don't impose current labels universally.",
+      "decision_ids": [
+        "D2-V01",
+        "D2-V02",
+        "D2-V03",
+        "D2-V04"
+      ],
+      "choice": null
+    },
+    {
+      "id": "Q3",
+      "topic": "Missingness and denominator policy",
+      "recommended": "Approve conceptual distinctions, not numerical recoding; separate applicable/observed/contributor/model Ns, sentinels and multiselect states. Leave recipe/threshold decisions to D3.",
+      "decision_ids": [
+        "D2-M01",
+        "D2-M02",
+        "D2-M03",
+        "D2-M04",
+        "D2-M05",
+        "D2-M06"
+      ],
+      "choice": null
+    },
+    {
+      "id": "Q4",
+      "topic": "Time and migration tenure",
+      "recommended": "Preserve historical clocks and inherited recorded-date span; defer new tenure/reference-year/minmax recipe until D3_IVS, with firstarrival/return and year-only limitations explicit.",
+      "decision_ids": [
+        "D2-T01",
+        "D2-T02",
+        "D2-T03",
+        "D2-T04"
+      ],
+      "choice": null
+    },
+    {
+      "id": "Q5",
+      "topic": "Geography",
+      "recommended": "Separate version-correct residence labels from each stage's pooling. Prefer faithful unpooled descriptive geography; no automatic Meta-to-Bogota pooling or Villavicencio assumption; defer analytical grouping decision.",
+      "decision_ids": [
+        "D2-G01",
+        "D2-G02",
+        "D2-G03"
+      ],
+      "choice": null
+    },
+    {
+      "id": "Q6",
+      "topic": "Later bounded verification",
+      "recommended": "Review the proposed protected verification scope separately. It is unapproved and cannot activate until rights/input authority and exact carrier/field/output contract are supplied.",
+      "decision_ids": [
+        "D2-S05"
+      ],
+      "choice": null
+    }
+  ],
+  "acceptance_boundary": "Accepting documentary policy does not approve a sample, recode, participant access, academic model or institutional conclusion. Substantive methodological/results decisions remain with user; no blanket extra joint-author review imposed.",
+  "next_recommendation": "Owner review these six bundles once, then proceed to D3 fifteen-construct adjudication. WP05 literature/context work remains available without participant processing. Do not repeat R01-R12 interview."
+}

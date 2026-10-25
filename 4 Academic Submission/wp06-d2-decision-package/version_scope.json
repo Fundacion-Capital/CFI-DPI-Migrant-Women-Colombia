@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "INHERITED_VERSION_METADATA_NOT_RECOMPUTED",
+  "package_id": "WP06_D2_2026-10-25",
+  "source_ids": [
+    "S05",
+    "S06",
+    "S08",
+    "S12"
+  ],
+  "versions": [
+    {
+      "version": "2512090157",
+      "submitted": 2,
+      "historical_retained": 1,
+      "code4": "Other",
+      "code5": "not offered",
+      "later17text": "unavailable",
+      "scope": "earliest used"
+    },
+    {
+      "version": "2512091719",
+      "submitted": 2,
+      "historical_retained": 1,
+      "code4": "Other",
+      "code5": "not offered",
+      "later17text": "unavailable",
+      "scope": "second used"
+    },
+    {
+      "version": "2512111044",
+      "submitted": 7,
+      "historical_retained": 7,
+      "code4": "Soacha",
+      "code5": "not offered",
+      "later17text": "defined",
+      "scope": "third used"
+    },
+    {
+      "version": "2512121811",
+      "submitted": 474,
+      "historical_retained": 409,
+      "code4": "Soacha",
+      "code5": "not offered",
+      "later17text": "defined",
+      "scope": "dominant used"
+    },
+    {
+      "version": "2602120658",
+      "submitted": 5,
+      "historical_retained": 5,
+      "code4": "Soacha",
+      "code5": "Meta",
+      "later17text": "defined",
+      "scope": "current supplied used"
+    }
+  ],
+  "counts_status": "Inherited submitted/retained version counts from S05/S12; no participants newly tabulated. Small version counts are planning metadata, not a version-effect estimate or approved public table.",
+  "not_submitted_authority": [
+    "2602160713",
+    "2511101752"
+  ],
+  "eligibility_design": "All five supplied definitions use consent1, q1 Woman1, q4>=18 and q5 respondent-or-household received-remittances1; q4 constraint18to100. This does not test migrant history or3month residence, nor certify individual compliance. Exact expressions remain in S08.",
+  "later_text_fields": [
+    "q3_6_otro",
+    "q4_1_otro",
+    "q4_3_otro",
+    "q4_11_otro",
+    "q4_23_otro",
+    "q5_1_otro",
+    "q5_2_otro",
+    "q5_10_otro",
+    "q5_12_otro",
+    "q5_13_otro",
+    "q6_4_otro",
+    "q6_5_otro",
+    "q6_10_otro",
+    "q6_12_otro",
+    "q6_25_otro",
+    "q6_26_otro",
+    "q7_21_otro"
+  ],
+  "changed_lists": [
+    {
+      "list": "departamento",
+      "fields": [
+        "q3"
+      ],
+      "scope": "first2 code4 Other versus later Soacha; current used adds Meta5",
+      "impact": "geography labels, stage groupings and outputs"
+    },
+    {
+      "list": "acceso",
+      "fields": [
+        "q3_6"
+      ],
+      "scope": "first2 code6 Other becomes Other(specify), whitespace difference",
+      "impact": "text trigger plus access_score to iat_score (IAT) and downstream uses; not permission for a new score"
+    },
+    {
+      "list": "q37",
+      "fields": [
+        "q5_11"
+      ],
+      "scope": "first2 code6 Other(specify) removed later",
+      "impact": "pass-through metadata; no explicit score consumer found in inherited scope"
+    },
+    {
+      "list": "q82",
+      "fields": [
+        "q7_10"
+      ],
+      "scope": "first code7 Other(specify) removed later",
+      "impact": "IPCS preference component"
+    },
+    {
+      "list": "q84",
+      "fields": [
+        "q7_12"
+      ],
+      "scope": "first code7 Other(specify) removed later",
+      "impact": "complaint-channel metadata; do not rename as named channel"
+    },
+    {
+      "list": "q88",
+      "fields": [
+        "q7_16"
+      ],
+      "scope": "first code6 Other(specify) becomes None of above later",
+      "impact": "meaning changes even without explicit index consumer"
+    },
+    {
+      "list": "q93",
+      "fields": [
+        "q7_21"
+      ],
+      "scope": "first code4 Tato y empatia becomes Tacto y empatia",
+      "impact": "spelling only; later text companion separate"
+    },
+    {
+      "list": "q100",
+      "fields": [],
+      "scope": "first code7 Other becomes None of above later",
+      "impact": "unreferenced dictionary list in all5 definitions; NOT q9_5 or analytical variable"
+    },
+    {
+      "list": "q110",
+      "fields": [
+        "q9_17"
+      ],
+      "scope": "first code5 Other becomes None of above later",
+      "impact": "ICPF source/default interpretation; distinguish from IAER raw-field proximity"
+    },
+    {
+      "list": "q114",
+      "fields": [
+        "q10_1"
+      ],
+      "scope": "first code11 Other becomes Language/terms; later adds12,14,15,16,98",
+      "impact": "IBPD principal barriers and graphs"
+    },
+    {
+      "list": "q115",
+      "fields": [
+        "q10_2"
+      ],
+      "scope": "first-version to later-version change: code1 No own phone added; code16 Other becomes None; spelling changes",
+      "impact": "IBPD extra-barrier dummies; parent/dummy concordance not automatic"
+    },
+    {
+      "list": "q116",
+      "fields": [
+        "q10_3"
+      ],
+      "scope": "first2 code10 Other becomes None of above later",
+      "impact": "enabler helpers/charts; not IEH scored component"
+    },
+    {
+      "list": "q125",
+      "fields": [
+        "q10_14"
+      ],
+      "scope": "first2 code6 Other(specify) becomes Other entity later",
+      "impact": "formal/informal accompaniment helper; not IEH scored component"
+    }
+  ],
+  "cross_version_equivalence_approved": false,
+  "xml_deployment_certified": false,
+  "implementation_status": "No mappings, recodes, labels, weights or score definitions changed."
+}
