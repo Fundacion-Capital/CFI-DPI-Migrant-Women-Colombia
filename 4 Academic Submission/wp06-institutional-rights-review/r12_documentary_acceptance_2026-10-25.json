@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "record_id": "R12_single_author_documentary_acceptance_2026-10-25",
+  "issue_id": "R12",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_INSTITUTIONAL_CONCLUSION",
+  "status": "R12_DOCUMENTARY_REVIEW_ACCEPTED_FORMAL_INSTITUTIONAL_RESPONSE_PENDING",
+  "acceptance_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R12 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R12_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+    "bytes": 8702,
+    "sha256": "9DE3144D07EA623F8F18C132828943F1C8C3A45755CC00DC4BD7821B270DD11E",
+    "source": "Immediately preceding consolidated R12 assistant message accepted by the user's direct instruction.",
+    "source_message_id": null,
+    "original_review_wording_preserved_as_history": true
+  },
+  "author_confirmations": {
+    "oral_conclusion": "Institutional conclusion remains the oral communications previously described; no dated written statement issued.",
+    "narrowed_package": "User does not know whether Katherine considered the narrowed package; coverage unresolved.",
+    "conditions": "User recalls no specific conditions attached to oral present-use conclusion; not unrestricted permission.",
+    "truthful_reporting": "Keep evidence distinctions explicit without unsupported approval, exemption or consent wording.",
+    "controlled_adoption": "Formal institutional response remains pending; further participant processing, analysis execution, submission and release require separate authorization."
+  },
+  "synthesis_boundaries": {
+    "internal_review": "Reported individual internal review and oral pre-fieldwork authorization, not independently authenticated mandate/date/version/decision and not external committee approval.",
+    "current_uses": "Author reports direct oral present-use conclusion; not written determination or clearance of the narrowed package.",
+    "consent": "SurveyCTO-recorded agreement, retained written wording and author-reported oral explanation remain distinct. No participant inspection or record-level coverage assessment in this review.",
+    "public_package": "Participant-level data and respondent-level auxiliary outputs restricted. Selected code/documentation/non-disclosive outputs are proposed, not disclosure-cleared.",
+    "privacy_history": "Preservation is not cleanup; no finding of current exposure, completed remediation or clean repository history.",
+    "ownership_reuse": "Exclusive author ownership/delegation reported, instruments and rights compatibility unverified; R09 intended terms not a selected or applied licence.",
+    "publication": "Author-confirmed roles and planned version approvals retained; no actual manuscript/package approval inferred. CFI arrangements and publication sequence unresolved."
+  },
+  "statement_rules": [
+    "Distinguish internal institutional review from external university/committee approval; invent no name, number, written determination or exemption.",
+    "Distinguish historical decisions from later present-use conclusions; do not retrospectively date them.",
+    "Distinguish SurveyCTO-recorded agreement from orally explained uses; do not rewrite retained historical consent documents.",
+    "Distinguish author confirmations from independently corroborated evidence.",
+    "Describe actual availability, restricted inputs and no standing access offer; future package claims must match actual approved/released files.",
+    "Distinguish funding/delegation/general support from final-version approval."
+  ],
+  "scope_limits": [
+    "Quantitative survey and proposed academic uses only. No determination or change to qualitative interviews, focus groups, expert quotations, audio, images or other permissions.",
+    "Methodological/results/interpretation decisions remain with user under practical R08. Joint-author checkpoints concern versions sent, not every intermediate analytical decision.",
+    "Truthful-drafting basis only; no final statement wording, legal determination or journal acceptance guaranteed.",
+    "Earlier packets and unresolved findings preserved; documentary closure does not resolve other ethics, rights, scientific or operational gates.",
+    "Academic submission version remains non-public; new package unpublished pending exact-version approval and applicable checks.",
+    "No automatic next task. Any later work needs its own defined scope and authorization."
+  ],
+  "inherited_refs": [
+    "R01_REVIEWER_AND_ROUTE_ACCOUNT_2026-10-24.md",
+    "R02_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+    "r11_documentary_acceptance_2026-10-25.json",
+    "decision_register.json"
+  ],
+  "formal_state": {
+    "R12_selected_disposition": null,
+    "R12_reviewer_assigned": false,
+    "R12_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false,
+    "automatic_workflow_adoption": false
+  },
+  "authority": {
+    "coauthor_assent_inferred": false,
+    "institutional_conclusion_authenticated": false,
+    "formal_institutional_response_adopted": false,
+    "ethics_clearance_adopted": false,
+    "exemption_claimed": false,
+    "consent_coverage_certified": false,
+    "narrowed_package_coverage_confirmed": false,
+    "unrestricted_permission_inferred": false,
+    "ownership_authenticated": false,
+    "legal_effect_determined": false,
+    "final_statement_approved": false,
+    "disclosure_clearance_adopted": false,
+    "anonymization_certified": false,
+    "cfi_approval_adopted": false,
+    "version_approval_adopted": false,
+    "licence_selected": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "scientific_change_authorized": false,
+    "repository_remediation_authorized": false,
+    "external_data_access_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_step_boundary": "R01-R12 author documentary clarification concluded; no institutional disposition or subsequent task automatically adopted. Further work requires separate defined scope and authorization.",
+  "audit_ref": "r12_documentary_acceptance_audit_2026-10-25.json"
+}
