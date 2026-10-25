@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "record_id": "R09_single_author_documentary_acceptance_2026-10-25",
+  "issue_id": "R09",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_LICENCE_OR_RELEASE",
+  "status": "R09_ACCOUNT_ACCEPTED_BY_USER_LICENCE_AND_RIGHTS_UNVERIFIED",
+  "acceptance_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R09 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R09_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+    "bytes": 3739,
+    "sha256": "ED72384E253EE9B45F405E5F2BCC97EA14910CD727ACEE3A746267076A0F1712",
+    "source": "Immediately preceding consolidated R09 assistant message accepted by the user's direct instruction.",
+    "source_message_id": null,
+    "snapshot_created_in_this_intake": true,
+    "original_review_wording_preserved_as_history": true
+  },
+  "accepted_choices": {
+    "public_scope": "Final paper reproduction code, supporting documentation and selected non-disclosive tables, figures and appendices; subject to R08 checks, not clearance.",
+    "author_code": "Use, adaptation and redistribution for non-commercial academic research with attribution; original and adapted redistributed materials retain the same conditions.",
+    "author_supporting_materials": "Same intended conditions for author-created documentation, tables and figures; third-party materials treated separately.",
+    "dependencies": "References and installation instructions; bundle copies only after checking redistribution terms.",
+    "participant_data": "Remain restricted. No standing access offer or blanket available-upon-request statement. Future verification requests assessed separately without promising access.",
+    "scientific_decisions": "Methodological, results and interpretation decisions remain with the user; no analytical sample, methods, results or interpretation changes authorized."
+  },
+  "checks_not_performed": [
+    "No legal licence or permission statement selected or applied.",
+    "Authority and ownership over each included material not authenticated.",
+    "Embedded notices and complete third-party redistribution/compatibility terms not reviewed.",
+    "No final package-wide disclosure clearance or release-readiness assessment.",
+    "No journal acceptance or rights compatibility determination."
+  ],
+  "evidence_limits": [
+    "The prior tracked-filename check for LICENSE, LICENCE, COPYING and NOTICE found no standalone tracked file; this intake repeated that filename-only check with no matches. Not a full content, embedded-notice or rights review.",
+    "Non-commercial use and academic-only use are distinct restrictions; no standard licence is assumed to implement both.",
+    "Historical R07 privacy concerns remain unresolved; proposed restricted-data scope is not cleanup.",
+    "Restricted participant inputs limit public end-to-end reproduction; future documentation must accurately state actual availability.",
+    "Existing coauthor, institutional, funder and third-party obligations remain separate; no approval inferred or waived."
+  ],
+  "formal_state": {
+    "R09_selected_disposition": null,
+    "R09_reviewer_assigned": false,
+    "R09_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "ethics_clearance_adopted": false,
+    "licence_selected": false,
+    "licence_applied": false,
+    "ownership_authenticated": false,
+    "disclosure_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "scientific_change_authorized": false,
+    "data_access_promised": false,
+    "external_data_access_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R10 institutional delegation, rights and grant obligations, if separately requested; not automatically initiated.",
+  "audit_ref": "r09_documentary_acceptance_audit_2026-10-25.json"
+}

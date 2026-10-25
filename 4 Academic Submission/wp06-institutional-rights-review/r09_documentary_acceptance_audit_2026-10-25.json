@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "record_id": "R09_documentary_acceptance_audit_2026-10-25",
+  "prepared_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "status": "R09_USER_DOCUMENTARY_ACCEPTANCE_RECORDED_NOT_LICENCE_OR_RELEASE",
+  "baseline_head": "9c0cb68b6ff8cc669f77873e3c14a70c29e4be4b",
+  "branch": "main",
+  "entry_worktree_clean": true,
+  "scope": "Three additive documentary files only. Preserve all existing tracked files and the full private audit-local tree. No participant-value parsing or inspection, contacts or inferred approvals.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R09_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+      "bytes": 3739,
+      "sha256": "ED72384E253EE9B45F405E5F2BCC97EA14910CD727ACEE3A746267076A0F1712"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/r09_documentary_acceptance_2026-10-25.json",
+      "bytes": 4590,
+      "sha256": "6D67C8A2232DA091C63252D6BD1FE558EC59C2F4076B3C5A5F6718E557E7E3C7"
+    }
+  ],
+  "content_checks": {
+    "exact_instruction": true,
+    "user_acceptance": true,
+    "identity_boundary": true,
+    "client_date": true,
+    "snapshot_hash": true,
+    "snapshot_size": true,
+    "provenance": true,
+    "snapshot_historical_question": true,
+    "snapshot_complete_sections": true,
+    "final_scope": true,
+    "code_academic_noncommercial_attribution": true,
+    "redistribution_same_conditions": true,
+    "supporting_materials": true,
+    "third_party_separate": true,
+    "dependencies_bounded": true,
+    "restricted_data": true,
+    "no_standing_offer": true,
+    "requests_separate_no_promise": true,
+    "user_scientific_decisions": true,
+    "unperformed_checks": true,
+    "academic_not_noncommercial": true,
+    "r07_unresolved": true,
+    "reproduction_limits": true,
+    "obligations_not_waived": true,
+    "authority_and_formal_held": true,
+    "all_register_responses_pending": true,
+    "no_existing_diff": true,
+    "no_staged_change": true,
+    "head_unchanged": true,
+    "snapshot_link": true,
+    "next_topic_not_started": true
+  },
+  "content_checks_passed": 31,
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_confirmation_authenticated": true,
+    "ethics_clearance_adopted": true,
+    "licence_selected": true,
+    "licence_applied": true,
+    "ownership_authenticated": true,
+    "disclosure_clearance_adopted": true,
+    "participant_processing_authorized": true,
+    "contact_authorized": true,
+    "scientific_change_authorized": true,
+    "data_access_promised": true,
+    "external_data_access_authorized": true,
+    "deletion_authorized": true,
+    "history_rewrite_authorized": true,
+    "execution_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_D1_rights_approved": true,
+    "invent_institutional_response_adopted": true,
+    "invent_R09_reviewer_assigned": true,
+    "invent_formal_disposition": true
+  },
+  "negative_control_count": 21,
+  "failures": [],
+  "negative_control_method": "In-memory clones of the parsed acceptance JSON had each held authority flag flipped to true, then formal rights approval, institutional adoption, reviewer assignment or disposition invented one at a time. The held-state validator rejected all 21 mutations; no fixture files were created.",
+  "review_method": "Same-agent source-to-snapshot review, JSON parsing, byte/SHA-256 verification, explicit content/status checks, in-memory negative controls and repository preservation checks. Not an independent human or institutional review, legal assessment or participant-data review.",
+  "snapshot_provenance": "Full substantive immediately preceding chat account retained with historical pending-acceptance question and no-change statement explicitly framed as earlier-turn wording. No platform-authenticated export or message identifier available.",
+  "formal_state": {
+    "R09_selected_disposition": null,
+    "R09_reviewer_assigned": false,
+    "R09_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "ethics_clearance_adopted": false,
+    "licence_selected": false,
+    "licence_applied": false,
+    "ownership_authenticated": false,
+    "disclosure_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "scientific_change_authorized": false,
+    "data_access_promised": false,
+    "external_data_access_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1261,
+        "bytes": 66652918,
+        "sha256": "A01DBC200C1652E2CF4EF06D76E1942BF4A49C38F8CE01538C2409D30046D181"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1261,
+        "bytes": 66652918,
+        "sha256": "A01DBC200C1652E2CF4EF06D76E1942BF4A49C38F8CE01538C2409D30046D181"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "For each group: existing absolute file paths sorted case-sensitively; SHA-256 of UTF-8 concatenation of absolute_path TAB byte_length TAB uppercase_file_SHA256 LF. Extended Windows paths used for file access. Two complete scans returned identical count, byte total and digest.",
+    "scope_limit": "Local tracked files and existing private audit-local files only. Opaque hashing did not parse participant values; no remote copies, cloud permissions, Git history contents, third-party copies or repository exposure inspected. Untracked acceptance files outside those groups are separately hashed; the audit does not self-hash."
+  },
+  "actions_performed": {
+    "participant_record_inspection": false,
+    "participant_value_parsing": false,
+    "contact": false,
+    "transmission": false,
+    "fit": false,
+    "stata_execution": false,
+    "analysis_change": false,
+    "manuscript_change": false,
+    "licence_selection": false,
+    "licence_application": false,
+    "ownership_authentication": false,
+    "disclosure_assessment": false,
+    "cleanup": false,
+    "original_or_prior_packet_edit": false,
+    "deletion": false,
+    "history_rewrite": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "journal_submission": false,
+    "public_release": false
+  },
+  "proposed_commit": {
+    "title": "docs: record documentary acceptance of R09 reuse and access scope",
+    "description": [
+      "Preserve the consolidated R09 account and record the author's exact documentary acceptance dated 25 October 2026.",
+      "Record intended non-commercial academic use, adaptation and redistribution with attribution and the same retained conditions for author-created code and supporting materials; treat third-party materials separately.",
+      "Use dependency references and installation instructions, with bundling subject to checked redistribution terms.",
+      "Keep participant-level data restricted, make no standing access offer and assess any future verification request separately without promising access.",
+      "Keep scientific decisions with the user; distinguish accepted preferences from a selected licence, authenticated ownership, institutional/coauthor approval or release authority.",
+      "Validate 31 content/status checks and 21 negative controls; confirm unchanged fingerprints for all 1,261 pre-existing tracked files and all 23,281 prior private audit files.",
+      "No participant inspection, contacts, fitting, analysis changes, licence application, cleanup, commit, push, synchronization or release."
+    ]
+  },
+  "completion_boundary": "Completion means recording and auditing this documentary acceptance only. R09 formal response remains pending; licence selection/compatibility, rights, disclosure and release readiness remain unverified. R10 is not initiated."
+}
