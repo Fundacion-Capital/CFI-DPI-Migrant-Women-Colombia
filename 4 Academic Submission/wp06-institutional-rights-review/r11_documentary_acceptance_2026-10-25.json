@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "record_id": "R11_single_author_documentary_acceptance_2026-10-25",
+  "issue_id": "R11",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_VERSION_APPROVAL",
+  "status": "R11_ACCOUNT_ACCEPTED_BY_USER_NO_SUBMISSION_OR_RELEASE_APPROVAL",
+  "acceptance_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R11 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R11_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+    "bytes": 7429,
+    "sha256": "F06FB35C2A330FDB82A0D936B354E75FB4C36D6154E5224CDB1439A9C5CA3504",
+    "source": "Immediately preceding consolidated R11 assistant message accepted by the user's direct instruction.",
+    "source_message_id": null,
+    "original_review_wording_preserved_as_history": true
+  },
+  "author_confirmed_workflow": {
+    "roles": "User will be first author and corresponding author, handling CFI and journal correspondence. Resolves earlier undecided coordination responsibility; not separate coauthor attestation.",
+    "before_cfi": "Both authors will review and approve the exact submission-ready draft before it is sent to CFI.",
+    "cfi_checkpoint": "CFI approval required before initial journal submission; encouragement or earlier deliverable approval is not academic-manuscript approval.",
+    "after_cfi": "Both authors will approve the revised final manuscript after CFI review and before journal submission.",
+    "resubmissions": "Both authors will approve each revised manuscript before journal resubmission.",
+    "manuscript_visibility": "Academic submission version remains non-public for now; no preprint/public working-paper posting initiated.",
+    "package_release": "New package remains unpublished until both authors separately approve its exact version. Preparation is not release approval; manuscript approval does not approve package; later package changes not automatically covered."
+  },
+  "unresolved_arrangements": {
+    "cfi_recipient": "No specific recipient agreed.",
+    "cfi_review_period": "No specific period agreed; silence or elapsed time is not approval.",
+    "cfi_follow_up": "Reapproval of revisions after CFI comments not discussed; incorporation is not automatic approval and no additional round invented.",
+    "cfi_later_revisions": "CFI role in journal-driven revisions/resubmissions not established.",
+    "cfi_package_role": "Replication package not specifically discussed with CFI; neither permission nor a separate requirement inferred.",
+    "publication_sequence": "Academic-first is user intention, not agreed with CFI; R10 grant-priority limitation remains open.",
+    "version_approvals": "No actual final manuscript, resubmission or replication-package version approved by this exchange."
+  },
+  "inherited_evidence": {
+    "source_path": "R10_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+    "decision_entry": "R11 in decision_register.json",
+    "review_extent": "Retained accounts and R11 register entry checked; no fresh executed-grant authentication, legal determination or contact.",
+    "distinctions": [
+      "Author-reported submission delegation without separate Fundacion Capital sign-off.",
+      "CFI pre-initial-submission approval is distinct from grant review/comment language.",
+      "Academic-first intention does not resolve conditional first-publication provision."
+    ]
+  },
+  "continuing_boundaries": [
+    "One author's account of planned checkpoints, not separate Angelica attestation or actual CFI approval.",
+    "Author checkpoints concern versions sent, not blanket joint approval of every intermediate methodology/results/interpretation decision; those decisions remain with the user under practical R08.",
+    "Restricted R04/R08/R09 scope unchanged: participant-level data and auxiliary outputs remain restricted; no standing access offer or promise of future access.",
+    "New package hold is not existing repository cleanup, privacy remediation or visibility change.",
+    "Package release depends on exact-version author approval, actual applicable checks and resolution of relevant outstanding rights/funder conditions.",
+    "No assumption that these planned checkpoints resolve other ethics, rights, scientific or operational gates."
+  ],
+  "formal_state": {
+    "R11_selected_disposition": null,
+    "R11_reviewer_assigned": false,
+    "R11_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_attestation_obtained": false,
+    "coauthor_version_approval_adopted": false,
+    "user_version_approval_adopted": false,
+    "institutional_confirmation_authenticated": false,
+    "cfi_manuscript_approval_adopted": false,
+    "cfi_package_permission_adopted": false,
+    "cfi_extra_review_required_inferred": false,
+    "publication_sequence_agreed": false,
+    "grant_obligations_waived": false,
+    "licence_selected": false,
+    "disclosure_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "scientific_change_authorized": false,
+    "external_data_access_authorized": false,
+    "preprint_posting_authorized": false,
+    "repository_cleanup_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R12 institutional conclusion, statements and controlled adoption, if separately requested; not automatically initiated and no institutional conclusion assumed.",
+  "audit_ref": "r11_documentary_acceptance_audit_2026-10-25.json"
+}
