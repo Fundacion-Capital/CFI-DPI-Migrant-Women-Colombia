@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "record_id": "D2_six_policy_acceptance_audit_2026-10-25",
+  "prepared_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "status": "SIX_POLICY_APPROVALS_RECORDED_NO_EXECUTION_OR_INSTITUTIONAL_ADOPTION",
+  "baseline_head": "329af25dd8b8469f4aa2d381b206a14fb4feeec7",
+  "branch": "main",
+  "entry_worktree_clean": true,
+  "scope": "Three additive documentary files only; no earlier packet/form/proposal changed. Record six explicit policy approvals and prepare one source-grounded D3_IAT entry question. No substantive D3 answer inferred.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+      "bytes": 9957,
+      "sha256": "FA8EAF0B3C4090120830D243ABE810273B962C02AC37ACD32554578173D0AAF0"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/d2_policy_acceptance_2026-10-25.json",
+      "bytes": 9372,
+      "sha256": "1F558DC1698B127E9E12EC00ECA1036E01795F3EF2E42A1A677E1E63EC178B6B"
+    }
+  ],
+  "checks": {
+    "record_type": true,
+    "exact_recording_instruction": true,
+    "recording_date": true,
+    "no_invented_identity": true,
+    "snapshot_hash": true,
+    "snapshot_size": true,
+    "no_message_id": true,
+    "six_ordered_bundles": true,
+    "mapping_matches": true,
+    "all_approvals_attributed": true,
+    "no_bundle_execution": true,
+    "manual_exclusions_carried": true,
+    "numerical_remedies_deferred": true,
+    "tenure_deferred": true,
+    "analytical_geography_deferred": true,
+    "design_not_authority": true,
+    "old_proposal_preserved": true,
+    "old_scope_held": true,
+    "proposal_history_explained": true,
+    "seven_source_pins": true,
+    "source_bytes_hashes": true,
+    "formal_Rs_pending": true,
+    "formal_D2_D3_unchanged": true,
+    "d3_entry_only": true,
+    "iat_scope_correct": true,
+    "no_current_sample_validation": true,
+    "authority_held": true,
+    "link_acceptance": true,
+    "no_existing_diff": true,
+    "no_staged_diff": true,
+    "head_unchanged": true,
+    "exact_six_user_quotes": true
+  },
+  "checks_passed": 32,
+  "negative_controls": {
+    "coauthor_approval_inferred": true,
+    "institutional_response_adopted": true,
+    "ethics_clearance_adopted": true,
+    "participant_processing_authorized": true,
+    "administrative_identifier_matching_authorized": true,
+    "data_or_code_change_authorized": true,
+    "numerical_rescoring_authorized": true,
+    "fit_authorized": true,
+    "prediction_or_export_authorized": true,
+    "contact_authorized": true,
+    "repository_cleanup_authorized": true,
+    "git_mutation_authorized": true,
+    "cloud_sync_authorized": true,
+    "submission_authorized": true,
+    "release_authorized": true,
+    "invent_validated_academic_sample": true,
+    "invent_numerical_scientific_specification_approved": true,
+    "invent_actual_verification_completed": true,
+    "design_execution_overreach": true,
+    "invent_D3_answer": true,
+    "erase_real_policy_approval": true,
+    "omit_hold_flag": true
+  },
+  "negative_control_count": 22,
+  "failures": [],
+  "method": "Same-agent source/quotation-to-record review, JSON parsing, exact six-user-quote comparison, seven documentary source hashes, explicit policy/defer/authority checks, in-memory negative controls and two complete local preservation scans. Not independent scientific, institutional or participant review.",
+  "negative_control_method": "In-memory clones reject15false-to-true authority flags,3invented validation/numerical/verification states, design execution overreach, invented D3 answer, erased genuine policy approval and omitted required hold flag. No fixture files created.",
+  "source_boundary": "Six user approvals are the acceptance evidence; the latest request authorizes their recording. No blanket acceptance of assistant prose, authenticated signature, platform message ID, individual acceptance timestamp or separate coauthor assent invented.",
+  "preservation": {
+    "baseline": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1282,
+        "bytes": 66845177,
+        "sha256": "1DA0CD7F6990C0150ED61C5B0F5214D308EAF17531E83A8F3BF552BDB66F0393"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "after_preparation": [
+      {
+        "group": "all_existing_tracked",
+        "count": 1282,
+        "bytes": 66845177,
+        "sha256": "1DA0CD7F6990C0150ED61C5B0F5214D308EAF17531E83A8F3BF552BDB66F0393"
+      },
+      {
+        "group": "all_prior_audit_local",
+        "count": 23281,
+        "bytes": 2135856393,
+        "sha256": "BA258501E7D4D27928087C0A6C0868DAD64D4759A62A8AE3EE23F21D03B5142C"
+      }
+    ],
+    "all_groups_equal": true,
+    "excluded_existing_files": [],
+    "method": "Existing absolute paths sorted case-sensitively. SHA256 over UTF8 concatenation absolute_path TAB byte_length TAB uppercase_file_SHA256 LF; extended Windows paths for opaque file hashing.",
+    "scope_limit": "Local existing tracked files and full prior audit-local tree. Hashing does not parse participant values or assess semantic validity, current exposure, remote copies or legal permissions. New records separately hashed. Audit does not self-hash."
+  },
+  "policy_approval_state": {
+    "six_bundles_approved_by_user": true,
+    "interpretation_and_reporting_policies_accepted": true,
+    "future_validation_design_accepted": true,
+    "validated_academic_sample": false,
+    "numerical_scientific_specification_approved": false,
+    "actual_verification_completed": false
+  },
+  "formal_state": {
+    "original_D2_proposal_unchanged": true,
+    "formal_D2_response_not_rewritten": true,
+    "formal_D3_response_not_rewritten": true,
+    "formal_institutional_response_pending": true,
+    "institutional_response_adopted": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_response_adopted": false,
+    "ethics_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "administrative_identifier_matching_authorized": false,
+    "data_or_code_change_authorized": false,
+    "numerical_rescoring_authorized": false,
+    "fit_authorized": false,
+    "prediction_or_export_authorized": false,
+    "contact_authorized": false,
+    "repository_cleanup_authorized": false,
+    "git_mutation_authorized": false,
+    "cloud_sync_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "actions_performed": {
+    "participant_inspection": false,
+    "participant_value_parsing": false,
+    "stata_execution": false,
+    "fit": false,
+    "numerical_recalculation": false,
+    "data_or_code_change": false,
+    "original_packet_edit": false,
+    "manuscript_or_qualitative_change": false,
+    "institutional_or_coauthor_contact": false,
+    "library_write": false,
+    "installation": false,
+    "host_probe": false,
+    "service_change": false,
+    "repository_cleanup": false,
+    "deletion": false,
+    "history_rewrite": false,
+    "commit": false,
+    "push": false,
+    "cloud_sync": false,
+    "submission": false,
+    "release": false
+  },
+  "d3_handoff": {
+    "status": "IAT_INTERPRETATION_QUESTION_PREPARED_NO_ANSWER",
+    "historical_source_read_only": true,
+    "components": [
+      "Phone access",
+      "Internet frequency",
+      "Internet access location",
+      "Plan/data stability",
+      "Unaided short-message reading"
+    ],
+    "remaining": "Interpretation, content/weights, routed denominators, category precision/cutoffs, normalization and primary/continuity/auxiliary role are distinct decisions. No numerical or computational adoption."
+  },
+  "proposed_commit": {
+    "title": "docs: record six D2 policy approvals and bounded D3 handoff",
+    "description": [
+      "Record the six explicit author approvals with their exact chat wording and bounded policy scope.",
+      "Preserve the original D2 proposal, null-choice snapshots, validation design and all earlier packets; add a successor account rather than rewriting history.",
+      "Keep historical423and manual/test exclusions intact. Record population/remittance, actual-version, missingness/denominator and geography interpretation policies.",
+      "Retain deferred numerical remedies, academic tenure/reference-year/normalization and final analytical geography decisions.",
+      "Record approval of the four-check future validation design only; no participant read/output, input contract, fit or execution grant.",
+      "Leave formal institutional response pending and actual eligibility, consent coverage, rights and release checks unverified.",
+      "Prepare the first D3_IAT interpretation question from the existing measurement audit; adopt no recipe or D3 response.",
+      "Pass32content/status checks and22negative controls, then final readback and unchanged1282tracked/23281private preservation checks.",
+      "No participant inspection, data/code/manuscript edits, fitting, contacts, library writes, installations, cleanup, synchronization, submission or release."
+    ]
+  },
+  "completion_boundary": "Recording/audit of the six policy approvals complete only. No broad D2 scientific closure or empirical validity claim. D3 is ready for the first owner question; no answer, rescoring, data access or fits supplied."
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "record_id": "WP06_D2_six_policy_acceptance_2026-10-25",
+  "decision_id": "D2_sample",
+  "record_type": "DIRECT_AUTHOR_POLICY_ACCEPTANCE_WITH_DEFERRED_NUMERICAL_DECISIONS",
+  "status": "SIX_BUNDLES_APPROVED_BY_USER_IMPLEMENTATION_AND_VERIFICATION_HELD",
+  "recorded_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "recording_instruction": "fully implement the next imemdiate steps",
+  "instruction_scope": "Record and audit the six approvals identified in the immediately preceding handoff; prepare the D3 entry question. Not a blanket grant for analytical or institutional action.",
+  "accepted_by": "Project author through direct user messages in this chat",
+  "identity_independently_verified": false,
+  "coauthor_attestation_obtained": false,
+  "accepted_account": {
+    "path": "D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+    "bytes": 9957,
+    "sha256": "FA8EAF0B3C4090120830D243ABE810273B962C02AC37ACD32554578173D0AAF0",
+    "source": "Six explicit author approvals quoted in order, with bounded synthesis and D3 handoff; not a platform-authenticated export or verbatim approval of all assistant prose.",
+    "source_message_ids": null
+  },
+  "bundle_approvals": [
+    {
+      "bundle_id": "Q1",
+      "source_user_text": "Yes, I approve bundle 1’s population and household-remittance interpretation, preserving the historical sample and verification limits. Guide me through bundle 2. No packet changes, participant inspection, data/code changes or fitting.",
+      "status": "INTERPRETATION_POLICY_APPROVED",
+      "decision_refs": [
+        "D2-S02",
+        "D2-S03",
+        "D2-S04",
+        "D2-S06"
+      ],
+      "approved_scope": "Population and household receipt; historical sample/manual exclusions preserved; individual eligibility not certified.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    },
+    {
+      "bundle_id": "Q2",
+      "source_user_text": "Yes, I approve bundle 2’s version-aware interpretation policy and its limits. Guide me through bundle 3. No packet changes, participant inspection, data/code changes or fitting.",
+      "status": "INTERPRETATION_POLICY_APPROVED",
+      "decision_refs": [
+        "D2-V01",
+        "D2-V02",
+        "D2-V03",
+        "D2-V04"
+      ],
+      "approved_scope": "Actual-version authority and unavailable/changed meanings; no mapping or equivalence certified.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    },
+    {
+      "bundle_id": "Q3",
+      "source_user_text": "approved policy",
+      "status": "CONCEPTUAL_POLICY_APPROVED_NUMERICAL_RULES_DEFERRED",
+      "decision_refs": [
+        "D2-M01",
+        "D2-M02",
+        "D2-M03",
+        "D2-M04",
+        "D2-M05",
+        "D2-M06"
+      ],
+      "approved_scope": "Response states and denominators distinguished; remedies, thresholds and numerical coding undecided.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    },
+    {
+      "bundle_id": "Q4",
+      "source_user_text": "Yes, I approve bundle 4: preserve historical clocks and defer academic tenure, reference-year and normalization decisions to D3–IVS. Guide me through bundle 5. No packet changes, participant inspection, data/code changes or fitting.",
+      "status": "PRESERVATION_POLICY_APPROVED_ACADEMIC_TENURE_DEFERRED",
+      "decision_refs": [
+        "D2-T01",
+        "D2-T02",
+        "D2-T03",
+        "D2-T04"
+      ],
+      "approved_scope": "Preserve clocks/qualified chronology; no academic tenure/reference-year/scaling selection.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    },
+    {
+      "bundle_id": "Q5",
+      "source_user_text": "approved policy",
+      "status": "DESCRIPTIVE_STARTING_POLICY_APPROVED_ANALYTICAL_GROUPING_DEFERRED",
+      "decision_refs": [
+        "D2-G01",
+        "D2-G02",
+        "D2-G03"
+      ],
+      "approved_scope": "Version-correct unpooled descriptive starting point subject to disclosure checks; no Meta pooling/locality inference or final analytical grouping.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    },
+    {
+      "bundle_id": "Q6",
+      "source_user_text": "approved",
+      "status": "FUTURE_VALIDATION_DESIGN_APPROVED_EXECUTION_NOT_AUTHORIZED",
+      "decision_refs": [
+        "D2-S05"
+      ],
+      "approved_scope": "Four-check design only, not administrative uniqueness certification, participant input/output grant or execution.",
+      "approved_by_user": true,
+      "participant_processing_authorized": false,
+      "implementation_authorized": false
+    }
+  ],
+  "prior_instruction": {
+    "decision_ref": "D2-S01",
+    "status": "PRESERVED_PRIOR_INSTRUCTION_NOT_REOPENED",
+    "scope": "Keep all historical manual/test/non-official and coded exclusions; no reinstatement/new restrictions or change to historical423reference."
+  },
+  "deferred_decisions": [
+    "Numerical recodes, sentinel mappings, minimum-item rules, imputation/weighting and score recipes.",
+    "Academic tenure/first-versus-return arrival/reference year/normalization and applicable standardization policies.",
+    "Final academic geography grouping; unpooled descriptive starting point does not approve publication of small cells.",
+    "Exact participant carrier/hash, field/output allowlists, rights/use conditions and access/execution authority.",
+    "D3 indicator contents/weights/categories/normalization/roles and subsequent estimands/model/class choices."
+  ],
+  "sources": [
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/author_review.json",
+      "bytes": 3285,
+      "sha256": "807D76CD39A643694716F7531DC4F6AD9D656B87D62294596A9CC70CCD386CDE"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/decision_matrix.json",
+      "bytes": 15827,
+      "sha256": "A9F6628AFF85285066737EC832D947BD173DFE21D54D2F3EFAEAA01357E33FE9"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/proposed_validation_scope.json",
+      "bytes": 3591,
+      "sha256": "45B44718BBE98FEB88EFFEA477C95108CFC9A327F4C20A3925FCC5DFD4C30532"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/review_and_audit.json",
+      "bytes": 21205,
+      "sha256": "E02732175306A6524C75D9401EF5E8C68DCF72BC183DEEC9DB4C05B2EC821C32"
+    },
+    {
+      "path": "4 Academic Submission/IAT_MEASUREMENT_AUDIT.md",
+      "bytes": 12793,
+      "sha256": "1544B78474F282A689B4D955EE2B6E023E06DFF8A2EFF21FF5EE7EE80880D869"
+    },
+    {
+      "path": "4 Academic Submission/wp06-contract/construct_resolution_cards.csv",
+      "bytes": 15073,
+      "sha256": "D90ACE76DCA47A9249CFF7BD68399B4EE5D40BBBD7997395024D77183C658522"
+    },
+    {
+      "path": "4 Academic Submission/WP06_AUTHOR_INSTITUTIONAL_DECISION_DOSSIER.md",
+      "bytes": 110883,
+      "sha256": "53E3E90269875421F75AE09B9991440CBED0F2D8FC9A93D71F4DE36097013F90"
+    }
+  ],
+  "preserved_proposal_state": {
+    "author_review_choices_remain_null": true,
+    "decision_matrix_remains_proposal": true,
+    "proposed_validation_file_remains_non_executable": true,
+    "explanation": "Earlier files are immutable proposal snapshots. This additive successor records current policy approval; their null/pending fields are not absence of the later approvals.",
+    "formal_D2_response_not_rewritten": true,
+    "formal_D1_rights_response_not_rewritten": true
+  },
+  "current_policy_state": {
+    "six_bundles_approved_by_user": true,
+    "interpretation_and_reporting_policies_accepted": true,
+    "future_validation_design_accepted": true,
+    "validated_academic_sample": false,
+    "numerical_scientific_specification_approved": false,
+    "actual_verification_completed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_response_adopted": false,
+    "ethics_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "administrative_identifier_matching_authorized": false,
+    "data_or_code_change_authorized": false,
+    "numerical_rescoring_authorized": false,
+    "fit_authorized": false,
+    "prediction_or_export_authorized": false,
+    "contact_authorized": false,
+    "repository_cleanup_authorized": false,
+    "git_mutation_authorized": false,
+    "cloud_sync_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "d3_handoff": {
+    "decision_id": "D3_IAT",
+    "status": "READY_FOR_FIRST_CONSTRUCT_QUESTION_NOT_DECIDED",
+    "source": "IAT_MEASUREMENT_AUDIT.md and retained D3_IAT dossier/card",
+    "first_question": "Should IAT be described as a composite of telecommunications access and basic use conditions, explicitly listing phone access, Internet frequency, access location, plan/data stability and unaided short-message reading, rather than as a direct affordability or demonstrated-skill measure?",
+    "owner_answer": null,
+    "contents_weights_categories_normalization_roles_adopted": false,
+    "participants_or_code_inspected": false,
+    "execution_authorized": false
+  },
+  "audit_ref": "d2_policy_acceptance_audit_2026-10-25.json"
+}
