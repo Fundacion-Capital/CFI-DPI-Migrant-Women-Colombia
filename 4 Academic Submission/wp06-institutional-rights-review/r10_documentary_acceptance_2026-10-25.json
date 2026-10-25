@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "record_id": "R10_single_author_documentary_acceptance_2026-10-25",
+  "issue_id": "R10",
+  "record_type": "DIRECT_SINGLE_AUTHOR_DOCUMENTARY_ACCEPTANCE_NOT_AUTHENTICATED_RIGHTS_OR_APPROVAL",
+  "status": "R10_ACCOUNT_ACCEPTED_BY_USER_RIGHTS_AND_GRANT_APPLICATION_UNVERIFIED",
+  "acceptance_date": "2026-10-25",
+  "date_timezone": "Europe/Berlin",
+  "source_instruction": "I accept the R10 account for documentary purposes. Record my acceptance, preserve all packets and fully audit the update. No participant inspection, contacts or assumed approvals. Provide the commit title and description.",
+  "accepted_by": "Project author by direct user instruction in this chat",
+  "identity_independently_verified": false,
+  "documentary_accepted_by_user": true,
+  "accepted_account": {
+    "path": "R10_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+    "bytes": 7376,
+    "sha256": "80EE2F83C96A576CB531334AC2655886E85C0F7B7BF1E5585CB2B9C5494BB998",
+    "source": "Immediately preceding consolidated R10 assistant message accepted by the user's direct instruction.",
+    "source_message_id": null,
+    "original_review_wording_preserved_as_history": true
+  },
+  "author_confirmations": {
+    "delegation": "Fundacion Capital delegated academic research and reuse/licensing decisions over author-created code and supporting materials to Jorge and Angelica.",
+    "ownership": "User reports exclusive ownership by Jorge and Angelica of author-created code, documentation, tables and figures; not independently verified.",
+    "submission_delegation": "Final academic-manuscript submission decision delegated to both authors without a separate Fundacion Capital sign-off.",
+    "cfi_checkpoint": "CFI approval required before initial journal submission; general publication encouragement is not eventual manuscript approval.",
+    "later_amendments": "None known to the user; not verified absence.",
+    "report_publication": "CFI/Accion has not yet published the study report, according to the user.",
+    "publication_sequence": "Not specifically discussed with CFI. Academic publication first is the user's intention, not an agreed sequence.",
+    "attribution": "No separately supplied acknowledgement, disclaimer or institutional-name/logo instructions known; use grant wording as documentary starting point.",
+    "confidentiality": "No additional institutional or third-party restrictions known to the user; not a material-by-material permissions check.",
+    "review_arrangements": "Neither CFI approval recipient nor review period specifically agreed."
+  },
+  "retained_documentary_evidence": {
+    "source_path": "../wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+    "review_extent": "Inherited retained account and R10 register checked in the preceding guided review, not fresh grant authentication or legal interpretation.",
+    "grant_date": "2025-10-06",
+    "fundacion_capital_signature_date_as_previously_observed": "2025-10-10",
+    "accion_signature_observation": "Earlier visual review reported a blank line in the retained copy; no inference that a fully executed version does not exist elsewhere.",
+    "provisions": [
+      "Advance review/comment.",
+      "Publication, attribution and conditional first publication.",
+      "Broad non-exclusive licence to Accion/funders including project data subject to privacy qualifications.",
+      "Confidentiality.",
+      "At least two review rounds anticipated in Exhibit A."
+    ]
+  },
+  "unresolved_limitations": [
+    "Ownership/delegation instruments and precise scope not independently inspected.",
+    "Complete executed grant and additional governing documents not authenticated.",
+    "No later amendments known is not independently verified absence.",
+    "Academic-first publication sequence not agreed with CFI; relationship to conditional first-publication provision unresolved.",
+    "CFI recipient, review period and eventual manuscript approval unresolved.",
+    "Final acknowledgement/disclaimer wording and institutional name/logo permissions unverified.",
+    "Third-party reproduction/redistribution and confidentiality terms not individually checked.",
+    "R09 preferences are not a selected/applied licence; compatibility with grant obligations unverified."
+  ],
+  "continuing_boundaries": [
+    "Reported ownership and delegation do not erase CFI/Accion grant rights or obligations.",
+    "Grant review/comment language remains distinct from the author's reported pre-submission CFI approval requirement.",
+    "No extra Fundacion Capital sign-off invented; reported delegation not authenticated institutional determination.",
+    "Narrowed R04/R08/R09 package unchanged; participant-level data restricted, no standing access offer, actual public-material checks still required.",
+    "Methodological, results and interpretation decisions remain with the user.",
+    "No separate attestation from Angelica, Fundacion Capital or CFI inferred."
+  ],
+  "formal_state": {
+    "R10_selected_disposition": null,
+    "R10_reviewer_assigned": false,
+    "R10_response_status": "PREPARED_NOT_SENT_NO_RESPONSE",
+    "institutional_response_adopted": false,
+    "D1_rights_approved": false,
+    "prior_records_changed": false
+  },
+  "authority": {
+    "coauthor_approval_inferred": false,
+    "institutional_confirmation_authenticated": false,
+    "ownership_authenticated": false,
+    "delegation_authenticated": false,
+    "executed_agreement_authenticated": false,
+    "legal_effect_determined": false,
+    "cfi_manuscript_approval_adopted": false,
+    "publication_sequence_agreed": false,
+    "grant_obligations_waived": false,
+    "licence_selected": false,
+    "licence_applied": false,
+    "disclosure_clearance_adopted": false,
+    "participant_processing_authorized": false,
+    "contact_authorized": false,
+    "scientific_change_authorized": false,
+    "external_data_access_authorized": false,
+    "deletion_authorized": false,
+    "history_rewrite_authorized": false,
+    "execution_authorized": false,
+    "submission_authorized": false,
+    "release_authorized": false
+  },
+  "next_documentary_topic": "R11 coauthor and CFI publication/release checkpoints, if separately requested; not automatically initiated.",
+  "audit_ref": "r10_documentary_acceptance_audit_2026-10-25.json"
+}
