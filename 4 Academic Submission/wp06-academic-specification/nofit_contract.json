@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-26",
+  "status": "PREPARED_INHERITED_BINDINGS_ONLY_NOT_AUTHORIZED_NOT_EXECUTABLE",
+  "execution_ready": false,
+  "coauthor_approval_assumed": false,
+  "participant_processing_authorized": false,
+  "fitting_authorized": false,
+  "institutional_approval_assumed": false,
+  "release_authorized": false,
+  "max_fits": 0,
+  "new_scores_permitted": false,
+  "purpose": "First protected single-carrier sample-support, version/route/domain, time/geography and fixed-item coverage audit; discrepancy ledger, not sample correction.",
+  "carrier": {
+    "id": "TARGET33",
+    "sha256": "95E0929D4AB5F4E0808C07F9EB636C24A0EEB88F676CACE328BB064BADCAD756",
+    "source_commit": "a00115ec020d4313715b4b195168422cc126fdff",
+    "git_blob": "7132afe058718e790305f51e78a215b383d22009",
+    "historically_reported_N": 423,
+    "historically_reported_schema_variables": 439,
+    "current_bytes_verified": false,
+    "acl_verified": false,
+    "current_absolute_path": null,
+    "private_binding": "audit-local/intake/wp06-d3-d4-d6-0f2f911/restricted_carrier_binding.json",
+    "identity_qualification": "Inherited preserved regular CODED identity, not the NoPII-labelled clone; no participant contents or fresh carrier bytes inspected in this package."
+  },
+  "projection": {
+    "file": "field_allowlist.csv",
+    "literal_fields_only": true,
+    "wildcards_permitted": false,
+    "KEY_internal_only": true,
+    "open_text_permitted": false,
+    "all_source_fields_offer_sensitive_reports": true,
+    "qualification": "Field names are documentary proposals, not permission to read them. Recorded schema support is not a current dataset-schema check."
+  },
+  "operations": [
+    {
+      "id": "P1",
+      "authorized_now": false,
+      "checks": [
+        "fresh carrier byte/schema continuity under a later grant",
+        "unchanged historical cohort size and order through the diagnostic",
+        "internal KEY completeness and uniqueness without values in output",
+        "retained consent/gender/age/household-remittance support and discrepancies"
+      ],
+      "limits": "No name/phone matching, unique-person/household certification, new eligibility exclusion, reinstatement or raw490 replay."
+    },
+    {
+      "id": "P2",
+      "authorized_now": false,
+      "checks": [
+        "actual submitted-version dictionary and designed routes",
+        "six D2 response states",
+        "literal allowlisted encoded multiselect parent/dummy concordance",
+        "accepted standalone provider routes and principal-account context"
+      ],
+      "limits": "Unavailable option is not zero; response discrepancies remain reportable, not repaired. No free text or score construction."
+    },
+    {
+      "id": "P3",
+      "authorized_now": false,
+      "checks": [
+        "coded date/derived-fecha lineage",
+        "first-arrival-year limitations",
+        "version-aware raw q3 geography"
+      ],
+      "limits": "Single carrier only: no fresh raw/audit timestamp comparison, inferred timezone cause, normalization, latest-return tenure, locality imputation or pooling."
+    },
+    {
+      "id": "P4",
+      "authorized_now": false,
+      "checks": [
+        "applicable and valid item denominators",
+        "fixed accepted candidate complete-item coverage",
+        "common valid/applicable coverage sets without calculating scores"
+      ],
+      "limits": "No generated academic scores/categories, normalization, fitted e(sample), model, margins, prediction, posterior or retained row-level audit flags."
+    }
+  ],
+  "version_reference": [
+    {
+      "version": "2512090157",
+      "N": 1
+    },
+    {
+      "version": "2512091719",
+      "N": 1
+    },
+    {
+      "version": "2512111044",
+      "N": 7
+    },
+    {
+      "version": "2512121811",
+      "N": 409
+    },
+    {
+      "version": "2602120658",
+      "N": 5
+    }
+  ],
+  "geography_rules": [
+    "q3 code4 means Other in the first two forms and Soacha later",
+    "q3 code5 Meta exists only in2602120658",
+    "No Meta-to-Bogota pooling or Villavicencio inference",
+    "Do not treat overlay/regression groups as raw residence geography"
+  ],
+  "output_allowlist": [
+    {
+      "name": "carrier_and_membership_checks.csv",
+      "content": "aggregate check IDs expected/observed counts and discrepancy status"
+    },
+    {
+      "name": "version_route_domain_states.csv",
+      "content": "item/version/state aggregate counts; restricted including small cells"
+    },
+    {
+      "name": "time_geography_lineage.csv",
+      "content": "field/version lineage and aggregate discrepancies; no individual dates/locations"
+    },
+    {
+      "name": "coverage_denominators.csv",
+      "content": "question/candidate reference and applicable/valid/complete-item counts"
+    },
+    {
+      "name": "verification_readout.md",
+      "content": "supported/unsupported/indeterminate interpretation and limitations"
+    },
+    {
+      "name": "restricted_execution_receipts_and_log",
+      "content": "owned runtime/selection/stop/cleanup evidence without row values"
+    }
+  ],
+  "output_destination_currently_reserved": false,
+  "output_restrictions": [
+    "All outputs restricted; no public release follows from this package.",
+    "No KEY values, names, phones, administrative IDs, free text, coordinates, individual dates, participant lists or classifications.",
+    "No participant data export, saved modified dataset or retained row-level audit flags.",
+    "Public synopsis requires separate derivative-specific disclosure review."
+  ],
+  "proposed_limits_not_adopted": {
+    "participant_loads": 1,
+    "participant_selection_calls": 4,
+    "max_wall_seconds_per_selection": 45,
+    "max_work_seconds": 180,
+    "cleanup_seconds": 30,
+    "retries": 0,
+    "scope": "Resource proposal only. Exact runtime/stop deadlines and feasibility must be adopted and tested before execution; no latent fit/retry budget."
+  },
+  "remaining_bindings": [
+    "owner accepts exact protected-use participant projection and restricted outputs",
+    "relevant rights/use conditions explicitly addressed without invented institutional clearance",
+    "current restricted absolute path and fresh opaque-byte/hash/schema check authorized",
+    "final field/output list and collision-free packet destination with retention conditions",
+    "owned runtime/build/interface identity and sufficient read capacity",
+    "scope-specific numeric budgets and independently usable stop/cleanup path verified under separate authority",
+    "final no-retry treatment and evidence receipts adopted"
+  ],
+  "technical_stop_rules": [
+    "missing exact input/output authority",
+    "source/carrier/hash/schema mismatch",
+    "unknown submitted form version or missing required static dictionary",
+    "unallowlisted field/output or unexpected participant-bearing export",
+    "source/output collision or preservation drift",
+    "unresolved runtime ownership/deadline/stop/cleanup condition",
+    "request for correction, new score, fit, row-level output or extra input"
+  ],
+  "substantive_discrepancy_rule": "Known-domain contradictions, missing required answers and indeterminate eligibility support are valid audit findings. Record them within scope; do not demand all rows pass or automatically fix/drop cases. Stop only if evidence/authority cannot support the declared interpretation.",
+  "scope_specific_gate_rule": "Protected internal coverage work needs its own rights/input/output and no-fit operational evidence. Do not require fitted-model stripes or public-release G7 for this task; do not treat no-fit as participant-access authority.",
+  "implementation_style": "Future Stata MCP only; direct explicit commented researcher-readable commands, essential asserts, no fallback input, retry/helper framework or scientific-file process-control machinery.",
+  "prior_proposals_preserved": [
+    "wp06-d2-decision-package/proposed_validation_scope.json",
+    "wp06-gate-crosswalk/readiness.json",
+    "wp06-contract/construct_resolution_cards.csv"
+  ]
+}
