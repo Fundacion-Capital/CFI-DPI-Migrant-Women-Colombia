@@ -1,0 +1,123 @@
+{
+  "domain": "WP06_ISOLATED_LIVE_ARTIFICIAL_V1",
+  "wave": "native_postfix",
+  "entry_head": "365fea7a2ca5bd0518c0f60b6bfa05b1fbb829e4",
+  "accepted_scope": "Fixed isolated artificial Python workers on this Windows environment only",
+  "cases": [
+    {
+      "profile": "cooperative",
+      "accepted": true,
+      "classification": "SUPERVISED_EXIT",
+      "elapsed_seconds": 1.0814683,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 4,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "profile": "controller_exit",
+      "accepted": true,
+      "classification": "SUPERVISED_EXIT",
+      "elapsed_seconds": 0.9754668,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 4,
+      "exit_codes": [
+        0,
+        0,
+        93,
+        0
+      ]
+    },
+    {
+      "profile": "worker_ignore",
+      "accepted": true,
+      "classification": "SUPERVISED_EXIT",
+      "elapsed_seconds": 1.3797015,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 4,
+      "exit_codes": [
+        0,
+        0,
+        0,
+        73
+      ]
+    },
+    {
+      "profile": "supervisor_stall",
+      "accepted": true,
+      "classification": "SUPERVISOR_DEADLINE_CONTAINMENT",
+      "elapsed_seconds": 8.1090234,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 4,
+      "exit_codes": [
+        0,
+        73,
+        0,
+        73
+      ]
+    },
+    {
+      "profile": "observer_stall",
+      "accepted": true,
+      "classification": "OUTER_OBSERVER_CONTAINMENT",
+      "elapsed_seconds": 10.1117502,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 4,
+      "exit_codes": [
+        73,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "profile": "identity_reject",
+      "accepted": true,
+      "classification": "REJECTED_BEFORE_WORK",
+      "elapsed_seconds": 5.0304021,
+      "active_processes_after_cleanup": 0,
+      "owned_handles_closed": true,
+      "retained_exit_observation_count": 1,
+      "exit_codes": [
+        73
+      ]
+    }
+  ],
+  "current_wave_cases": 6,
+  "preserved_initial_wave_cases": 6,
+  "total_native_case_packets": 12,
+  "sources": {
+    "python.exe": "88b9e780cfdc38597c7f53e20f7165262befa28d9a5e9470360d349e172ecf37",
+    "live_roles.py": "c3238e610e80e50c2cf534463f085e09eae6832505d7d1caaa29b1ca14a009f6",
+    "live_windows.py": "000733162335c8be68981a8606918bda887c2fe471d43f664972a5b467205bb1",
+    "journal_protocol.py": "eca35f6fd01e3ea656f0a986f833c495302e3cfffbc2c6742fc8738f8a0c9f88",
+    "native_backend.py": "bdf19f4c79e3b2b2f1387e730764db85a9dfbc6a56d1e49582ccf7c8f7c4eae7"
+  },
+  "pure_tests_normal": 19,
+  "pure_tests_optimized": 19,
+  "inherited_artificial_tests": 148,
+  "participant_processing": false,
+  "stata_execution": false,
+  "fits": 0,
+  "shared_service_changes": false,
+  "stata_mcp_integration_verified": false,
+  "participant_execution_authorized": false,
+  "independent_postfix_review": false,
+  "initial_independent_review_corrected_by_tests": true,
+  "timing_scope": "QPC origin through native observation, evidence validation and owned-handle closure; final receipt fsync is subsequent",
+  "limits": [
+    "Not a hostile-same-user sandbox",
+    "Not a universal real-time guarantee",
+    "Not evidence of participant readiness or ethics/data-sharing clearance",
+    "Bootstrap-rejection case has one retained launcher exit witness, not four"
+  ]
+}

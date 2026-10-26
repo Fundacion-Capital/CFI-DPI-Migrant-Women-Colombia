@@ -1,0 +1,7 @@
+profile,accepted,classification,elapsed_seconds,active_processes_after_cleanup,owned_handles_closed,retained_exit_observation_count,exit_codes
+cooperative,True,SUPERVISED_EXIT,1.0814683,0,True,4,"[0,0,0,0]"
+controller_exit,True,SUPERVISED_EXIT,0.9754668,0,True,4,"[0,0,93,0]"
+worker_ignore,True,SUPERVISED_EXIT,1.3797015,0,True,4,"[0,0,0,73]"
+supervisor_stall,True,SUPERVISOR_DEADLINE_CONTAINMENT,8.1090234,0,True,4,"[0,73,0,73]"
+observer_stall,True,OUTER_OBSERVER_CONTAINMENT,10.1117502,0,True,4,"[73,0,0,0]"
+identity_reject,True,REJECTED_BEFORE_WORK,5.0304021,0,True,1,[73]
