@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-26",
+  "status": "PASS_DOCUMENTARY_ACCEPTANCE_EXECUTION_HELD",
+  "head": "34f39059f86bb8f9d1ffa8e6d0ad11412072f912",
+  "checks": {
+    "prior_paths_unchanged": 24595,
+    "prior_sealed_public_files_verified": 14,
+    "prior_sealed_private_files_verified": 15,
+    "contextual_approvals": 7,
+    "final_acceptances": 1,
+    "frozen_account_exact_match": true,
+    "negative_controls_rejected": 27,
+    "negative_control_labels": [
+      "scientific_gate_closed",
+      "empirical_validation_certified",
+      "measurement_gate_closed",
+      "method_gate_closed",
+      "replication_gate_closed",
+      "release_gate_closed",
+      "whole_WP06_complete",
+      "participant_processing_authorized",
+      "no_fit_execution_authorized",
+      "scoring_authorized",
+      "fitting_authorized",
+      "data_or_code_changes_authorized",
+      "final_fit_manifest_adopted",
+      "coauthor_approval_inferred",
+      "institutional_approval_inferred",
+      "release_authorized",
+      "runtime_activation_authorized",
+      "git_or_cloud_actions_authorized",
+      "fits_authorized",
+      "variance_method",
+      "lca_family",
+      "lca_class_count",
+      "model_nominations",
+      "primary_overall_tests",
+      "primary_families",
+      "primary_nominal_alpha",
+      "missing_F"
+    ],
+    "tracked_files_changed": 0,
+    "staged_paths": 0,
+    "participant_records_inspected": 0,
+    "stata_calls": 0,
+    "fits": 0
+  },
+  "review": "Authoring-agent source-to-record checks and artificial mutation tests; no new independent human, coauthor or institutional review.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+      "bytes": 15188,
+      "sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/d4_d6_acceptance_2026-10-26.json",
+      "bytes": 6495,
+      "sha256": "78a7eb3aa946bef84928ed6985247fdac77c23c89086e97eb7bbd3c0d03c63ff"
+    }
+  ],
+  "limits": "Documentary policy acceptance only. Empirical validation, execution, institutional clearance and release remain held."
+}

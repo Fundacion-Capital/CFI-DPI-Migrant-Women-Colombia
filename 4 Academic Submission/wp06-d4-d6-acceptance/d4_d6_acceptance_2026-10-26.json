@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-26",
+  "recording_timezone": "Europe/Berlin",
+  "status": "D4_D6_OWNER_POLICY_ACCOUNT_ACCEPTED_EXECUTION_HELD",
+  "entry_head": "34f39059f86bb8f9d1ffa8e6d0ad11412072f912",
+  "owner_policy_accepted": true,
+  "consolidated_account_accepted": true,
+  "source_user_text": "accepted",
+  "source_user_text_note": "Public normalized value; exact source text includes a trailing newline and is preserved privately.",
+  "source_kind": "Platform readback of the final account and its corresponding owner message; not independent identity verification.",
+  "source_review_text_sha256": "596b4a433321fa61c9ef17fc454a8bf06066bf0351429b733acde57b72a95f9a",
+  "source_review_text_utf8_bytes": 13212,
+  "accepted_account_file": "D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+  "accepted_account_sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137",
+  "supersession": "Additive owner-acceptance status only. The sealed preparation content and its then-pending adoption status remain unchanged.",
+  "bundles": {
+    "A": {
+      "owner_approved": true,
+      "policy": "Two primary engagement outcomes: q6_13 reported remittance disposition (five categories plus accepted binary), and q6_14 reported domestic digital participation in 60 days. Retain household eligibility, personal-wording limitation, full supporting quantitative scope and noncausal nonrepresentative interpretation."
+    },
+    "B": {
+      "owner_approved": true,
+      "policy": "Focus and conditional blueprint both approved. Main models nominate IAT three-component, IADT two-item and IAFF two-condition candidates, age, education and version-aware geography. Extensions add occupation and first-arrival calendar history after provenance/coverage checks. No automatic scoring, substitutions, collapses, exclusions, imputation, IVS/constituent coentry or extra sensitivity fits."
+    },
+    "C": {
+      "owner_approved": true,
+      "policy": "Conditional binary logit; adjusted probabilities, percentage-point differences and average marginal associations over the relevant model sample, not an ideal/at-means woman. References are support-conditional. Covariance/dependence, exact within-support contrasts and defensible numerical uncertainty remain unresolved."
+    },
+    "D": {
+      "owner_approved": true,
+      "policy": "One six-test primary family: three overall focal-block associations in each of two main outcomes; conditional Holm step-down at 0.05. Extensions are stability checks; supporting inference is exploratory unless a finite family is declared before analysis. Report all authorized results, failures and deviations; no silent shrinking or post-result shopping. Retrospective specification, not original preregistration."
+    },
+    "E": {
+      "owner_approved": true,
+      "policy": "LCA is conditional and complementary. No family, class count or budget is adopted. Assess measurement, optimization, identification, enumeration, sparse/boundary patterns, local dependence and classification uncertainty. No automatic historical composite substitution, four-class mandate, minimum entropy rule or class-defining-content external validation; qualitative component remains protected."
+    },
+    "F": {
+      "owner_approved": true,
+      "policy": "Design only: first no-fit verification wave P1 carrier/membership/order/internal-key and screen-support; P2 version-aware coverage and response states; P3 preserved clocks/first-arrival history/geography; P4 applicability and fixed-candidate complete coverage. No new score, fit, prediction, classes or row-level outputs. Source/access/output/retention/ownership and runtime bounds remain to be bound."
+    }
+  },
+  "model_nominations": 4,
+  "fits_authorized": 0,
+  "primary_inference": {
+    "outcomes": 2,
+    "focal_blocks_per_outcome": 3,
+    "overall_tests": 6,
+    "families": 1,
+    "adjustment": "Holm step-down",
+    "nominal_alpha": 0.05,
+    "scope": "main models only",
+    "conditional_on_valid_tests_and_variance": true,
+    "nonestimable_slot_rule": null
+  },
+  "conditional_reference_codes": {
+    "education": 5,
+    "residence": 1,
+    "occupation": 3
+  },
+  "variance_method": null,
+  "lca_family": null,
+  "lca_class_count": null,
+  "first_wave": {
+    "design_accepted": true,
+    "carrier": "TARGET33",
+    "historical_cohort": 423,
+    "literal_projection_fields": 163,
+    "enumerator_included": false,
+    "current_carrier_access_verified": false,
+    "execution_contract_bound": false
+  },
+  "unresolved": [
+    "Construct suitability, applicability, measurement coherence, coverage, model-specific sample and parameter support before freezing nominations.",
+    "Defensible variance/dependence method; exact numerical contrasts and pre-execution treatment of nonestimable primary slots.",
+    "LCA measurement family, class enumeration, diagnostic thresholds, identification/disposition, classification-error handling and exact future fit manifest.",
+    "Current TARGET33 path, byte/schema/access authority and approved projection; no new raw-490 or fresh-SurveyCTO fallback.",
+    "No-fit destination/retention, allowed aggregate disclosure, runtime ownership/deadline/stop/cleanup and exact bounded execution contract.",
+    "Historical correlation-provenance WP04-CORR01 and I3-REPLAY-D01 qualifications remain unchanged.",
+    "D1 institutional, consent, privacy, joint-author and CFI publication/release checkpoints remain explicit; no documentary acceptance resolves them."
+  ],
+  "limits": {
+    "scientific_gate_closed": false,
+    "empirical_validation_certified": false,
+    "measurement_gate_closed": false,
+    "method_gate_closed": false,
+    "replication_gate_closed": false,
+    "release_gate_closed": false,
+    "whole_WP06_complete": false,
+    "participant_processing_authorized": false,
+    "no_fit_execution_authorized": false,
+    "scoring_authorized": false,
+    "fitting_authorized": false,
+    "data_or_code_changes_authorized": false,
+    "final_fit_manifest_adopted": false,
+    "coauthor_approval_inferred": false,
+    "institutional_approval_inferred": false,
+    "release_authorized": false,
+    "runtime_activation_authorized": false,
+    "git_or_cloud_actions_authorized": false
+  },
+  "next_immediate_task": "Prepare and audit the exact bounded no-fit source/access/operational verification contract for the accepted P1–P4 design; no participant execution until separately authorized and all relevant preflight conditions are met."
+}
