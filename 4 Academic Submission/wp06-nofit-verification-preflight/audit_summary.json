@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-26",
+  "status": "DOCUMENTARY_CHECKS_PASS_EXECUTION_HELD",
+  "head": "bd407ffeb500188a5b8d20310c4f4195a189b356",
+  "checks": {
+    "preexisting_file_fingerprints_unchanged": 24606,
+    "source_pins_verified": 85,
+    "prior_acceptance_public_files_verified": 3,
+    "prior_acceptance_private_files_verified": 6,
+    "projection_fields": 163,
+    "numeric_dummy_fields": 56,
+    "projected_leaf_version_definitions": 505,
+    "planned_checks": 33,
+    "candidate_input_sets": 8,
+    "binding_rows": 8,
+    "future_output_schemas": 7,
+    "negative_controls_rejected": 42,
+    "focused_review_regressions_rejected": 6,
+    "tracked_files_changed": 0,
+    "staged_paths": 0,
+    "participant_records_inspected": 0,
+    "stata_calls": 0,
+    "fits": 0,
+    "live_runtime_verified": false,
+    "q3_parent_chain_bound": false
+  },
+  "qualification": "Metadata/source/preservation checks only; not participant, scientific, institutional, current-input or live-runtime validation.",
+  "review": {
+    "review_kind": "one fresh-context read-only AI whole-package review, then authoring-agent fix and tests",
+    "reviewer": "/root/p1_p4_contract_final_review",
+    "reviewer_reported": {
+      "critical": 0,
+      "important": 1,
+      "minor": 2
+    },
+    "I01": "Fixed exact coverage IDs/items, main/extension inputs, output schemas/content and held q3 flag in existing validator. Six real mutations were accepted in RED and all rejected in GREEN.",
+    "M01_ruling": "Promoted to required contract-completeness correction: ambiguous unknown counts/status could misstate stopped or unperformed checks. CSV NA, JSON null, observed-zero rule and separate execution disposition now explicit; missing serialization was reproduced RED before correction.",
+    "M02_ruling": "Promoted to required six-state consistency correction: mutually exclusive accounting requires applicable nonresponse to be missing/blank after excluding recorded sentinels. Explicit metadata condition and negative control added; no participant recoding or new scientific rule applied.",
+    "unresolved_critical_or_important": 0,
+    "deferred_minors": [],
+    "reviewer_checked_final_fix": false,
+    "second_independent_review_claimed": false,
+    "declined_scope_rulings": [
+      "Current participant/source/route evidence remains unverified; no certification inferred.",
+      "Live runtime and control readiness remains held; artificial evidence is not live proof.",
+      "Institutional/legal/scientific/release judgments remain explicit and outside this documentary closure.",
+      "Authoring agent will perform final preservation/seal and separate-process readback; reviewer did not do so."
+    ]
+  }
+}

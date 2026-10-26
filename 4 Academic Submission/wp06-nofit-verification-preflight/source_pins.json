@@ -1,0 +1,482 @@
+{
+  "scope": "Documentary/static sources only; not participant or live-runtime validation.",
+  "sources": [
+    {
+      "path": "4 Academic Submission/IADT_MEASUREMENT_AUDIT.md",
+      "bytes": 24743,
+      "sha256": "6582533b53ad37021856a841d2eedcc52296f65da875e587ba2b8f9ce7d1b6d7"
+    },
+    {
+      "path": "4 Academic Submission/IAER_MEASUREMENT_AUDIT.md",
+      "bytes": 20003,
+      "sha256": "a445b3ef319cffe50f8ef05a02f34c493f6f5c9ac8115e8bc6f355196e8bb5f1"
+    },
+    {
+      "path": "4 Academic Submission/IAFF_MEASUREMENT_AUDIT.md",
+      "bytes": 20775,
+      "sha256": "26d6b95c286c4237c70f6104172c0becaea46f188c2cef95564081d75503f491"
+    },
+    {
+      "path": "4 Academic Submission/IAT_MEASUREMENT_AUDIT.md",
+      "bytes": 12793,
+      "sha256": "1544b78474f282a689b4d955ee2b6e023e06dff8a2eff21ff5ee7ee80880d869"
+    },
+    {
+      "path": "4 Academic Submission/IBPD_MEASUREMENT_AUDIT.md",
+      "bytes": 22945,
+      "sha256": "855f8ddfcf1c79979eafb86b8b411eb0088883e256b5d1c70069cb7eded3f365"
+    },
+    {
+      "path": "4 Academic Submission/ICDP_MEASUREMENT_AUDIT.md",
+      "bytes": 19857,
+      "sha256": "1c4cf4503f775ae40f075ec1d645503ccc4ac654b268dec80ea56ab6bc765cea"
+    },
+    {
+      "path": "4 Academic Submission/ICPF_MEASUREMENT_AUDIT.md",
+      "bytes": 23223,
+      "sha256": "78bca63498b98546c4eef891fc1a524921e3c077cc63e89ec02b40c5abc7f48c"
+    },
+    {
+      "path": "4 Academic Submission/IEDF_MEASUREMENT_AUDIT.md",
+      "bytes": 18495,
+      "sha256": "36c7c4407611a949bc6f3854ec0c64e869b04e2dd8ddb9d4c0ec83cb86c016ff"
+    },
+    {
+      "path": "4 Academic Submission/IEH_MEASUREMENT_AUDIT.md",
+      "bytes": 22474,
+      "sha256": "96e56f479d6ba67f1bfc3e0431242e7d763a71f9c0fda7321e98fc27274cb8af"
+    },
+    {
+      "path": "4 Academic Submission/IETR_MEASUREMENT_AUDIT.md",
+      "bytes": 24492,
+      "sha256": "c7fe1b78c1e5c6e35b737d5f32325477c5a8faf7f45f97bac02ddda9ac23f3d4"
+    },
+    {
+      "path": "4 Academic Submission/IPCS_MEASUREMENT_AUDIT.md",
+      "bytes": 19747,
+      "sha256": "724845af9215460db55826293abdf832676d6d572f9cf2d1c67fc0b109edb0cd"
+    },
+    {
+      "path": "4 Academic Submission/IUOF_MEASUREMENT_AUDIT.md",
+      "bytes": 19144,
+      "sha256": "be7cade185a566a5a9f93e00122705865e52cb5b047bb15b2dfe867f2aafded5"
+    },
+    {
+      "path": "4 Academic Submission/IURD_MEASUREMENT_AUDIT.md",
+      "bytes": 19689,
+      "sha256": "1fddfd5891936a611b6d748dbfdc3dbc06dee9b64456f5a80f6d604bfff75d31"
+    },
+    {
+      "path": "4 Academic Submission/IVS_MEASUREMENT_AUDIT.md",
+      "bytes": 16959,
+      "sha256": "bba5d784a15fc8b1d51f92fc587c6a12bb6304b5017eb803954d2e5aaf965ea3"
+    },
+    {
+      "path": "4 Academic Submission/OQI_MEASUREMENT_AUDIT.md",
+      "bytes": 18122,
+      "sha256": "3b6d6a1be632c4ae9dedc3eb06a8b59e53bf29e6e3567e275970e65c1e088197"
+    },
+    {
+      "path": "4 Academic Submission/STATA_RESEARCH_CODING_STANDARD.md",
+      "bytes": 11393,
+      "sha256": "2ac8420d620100b2fe76896849fbf58350d49f9a965127bc01e79ffb4a32ddf4"
+    },
+    {
+      "path": "4 Academic Submission/WP03_PREFERRED_FINAL_SCIENTIFIC_PROTOCOL.md",
+      "bytes": 21968,
+      "sha256": "e9301616b7eb8ae542eb8439d98b4cd58a95ab2a6b66a365980f408bf02885c7"
+    },
+    {
+      "path": "4 Academic Submission/WP06_RETROSPECTIVE_DECISION_LOCK.md",
+      "bytes": 12167,
+      "sha256": "fc5fa3a4fb7bb5ff1c554be118bde78c96b0098ce070341cd459df8917fcb611"
+    },
+    {
+      "path": "4 Academic Submission/WP06_SCIENTIFIC_OPERATIONAL_GATE_CROSSWALK.md",
+      "bytes": 16588,
+      "sha256": "66868ba71bd8399472e4cf9106b45c71957948fdd050e3b8ab213bf9cb93d8dd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iadt-f2c99ab/choices.csv",
+      "bytes": 2915,
+      "sha256": "ba98a1ae574238f17128f75da1c8c8da5acc9bd62ffe2ca006576ffdacde7759"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iadt-f2c99ab/questionnaire.csv",
+      "bytes": 18096,
+      "sha256": "537364e9b352b9eef6da68a00c55c4452ccef9285af58c42811525b2356ae48b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iaer-891549f/choices.csv",
+      "bytes": 13068,
+      "sha256": "a0d3e3b7e424d74058002ef73f2bd5d5d136328a3d2cab62ee340fde8ad4c04c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iaer-891549f/questionnaire.csv",
+      "bytes": 32240,
+      "sha256": "3014b1a9427bcbc6e6ec74baae8c8233a01bfd6ef997ba183a32bc938fbe8a6d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iaff-a9604d3/choices.csv",
+      "bytes": 5910,
+      "sha256": "b81da94480eefa21ef23203b0a635567129c2a6fdb07683371a9effa95b70215"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iaff-a9604d3/questionnaire.csv",
+      "bytes": 18731,
+      "sha256": "d07d3ed47d308b3f90333d1e7034e62cf9a7f6175d968d1b317ca60f518a020d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iat-24f23bd/choices.csv",
+      "bytes": 5302,
+      "sha256": "240bd1cac7eb4c3c19bcd09e63712609725259ab74258f8e88822c903f677020"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iat-24f23bd/questionnaire.csv",
+      "bytes": 20001,
+      "sha256": "e4e301bf90a0f63c7f61d8553fc57ac45a6c2f11ff9b9b05f922aa4527c985df"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ibpd-c1050eb/choices.csv",
+      "bytes": 20904,
+      "sha256": "1e0aab3e3c4410a3f920134f6ab8d4a29c53f35007036e53884c0d9fc4062fd7"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ibpd-c1050eb/questionnaire.csv",
+      "bytes": 28986,
+      "sha256": "08f2d58737d83bcdb73a9366dd54d5b48d30f3e58329e8a59156f41b76866e70"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/icdp-8eb3405/choices.csv",
+      "bytes": 6556,
+      "sha256": "dd6ce4e29a5326f2610c575ef7e9a730005d5eebfe6eb2bc993758d4e8f2616f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/icdp-8eb3405/questionnaire.csv",
+      "bytes": 20316,
+      "sha256": "25d0ef644f04f941ebc6a083d334202b4433f6ab64cabe85a48e044c57f5f05d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/icpf-1a1db95/choices.csv",
+      "bytes": 13068,
+      "sha256": "a0d3e3b7e424d74058002ef73f2bd5d5d136328a3d2cab62ee340fde8ad4c04c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/icpf-1a1db95/questionnaire.csv",
+      "bytes": 32240,
+      "sha256": "3014b1a9427bcbc6e6ec74baae8c8233a01bfd6ef997ba183a32bc938fbe8a6d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iedf-4b7317e/choices.csv",
+      "bytes": 20854,
+      "sha256": "62eae7f4ce391fae51acae6a378e58cfe9ac36bc050afe6a5a19fecfbcda1172"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iedf-4b7317e/questionnaire.csv",
+      "bytes": 37078,
+      "sha256": "f63f06d735a151227ae97819d8bcf1a5dcc005d1982086cb0ebd25093800d7a1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ieh-c639bda/choices.csv",
+      "bytes": 20904,
+      "sha256": "1e0aab3e3c4410a3f920134f6ab8d4a29c53f35007036e53884c0d9fc4062fd7"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ieh-c639bda/questionnaire.csv",
+      "bytes": 28986,
+      "sha256": "08f2d58737d83bcdb73a9366dd54d5b48d30f3e58329e8a59156f41b76866e70"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ietr-0452e40/choices.csv",
+      "bytes": 26650,
+      "sha256": "0f8b2f6e8bc8d21d169be926bdbe6320908553c7b90869663c6932be07d8999e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ietr-0452e40/questionnaire.csv",
+      "bytes": 44967,
+      "sha256": "7bac28bf10c27d704d22a52316645ba8e442515481030f6dea21a5dbc6a5d1ba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/input-contract-c4be81a/restricted_preservation_matches.csv",
+      "bytes": 16928,
+      "sha256": "890ed289e8a3ecba27dcd89180b469c59e74a502899bfa16c4073b054d385008"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/input-contract-c4be81a/retained_form_versions.csv",
+      "bytes": 94,
+      "sha256": "00cbe253d38a180f72075a377112d0851c0df1e44a35169a1e63c3708a0edb8b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/input-contract-c4be81a/stata_source_schema.csv",
+      "bytes": 44542,
+      "sha256": "909a9b8029e53101d484c1ef0c61a2826fd7b4262defb164fc2661a446c2764a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ipcs-bd46bba/choices.csv",
+      "bytes": 20854,
+      "sha256": "62eae7f4ce391fae51acae6a378e58cfe9ac36bc050afe6a5a19fecfbcda1172"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ipcs-bd46bba/questionnaire.csv",
+      "bytes": 37078,
+      "sha256": "f63f06d735a151227ae97819d8bcf1a5dcc005d1982086cb0ebd25093800d7a1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iuof-8714646/choices.csv",
+      "bytes": 8375,
+      "sha256": "b893f8ee28e10346ce1ae91c413815ed8d3e33e39feb3c59ed3cb0774a393cac"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iuof-8714646/questionnaire.csv",
+      "bytes": 28306,
+      "sha256": "7335849efcea5f203fde4b025255d0311f4af13aff512010b706ebb2fda98dd0"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iurd-da6c988/choices.csv",
+      "bytes": 26650,
+      "sha256": "0f8b2f6e8bc8d21d169be926bdbe6320908553c7b90869663c6932be07d8999e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/iurd-da6c988/questionnaire.csv",
+      "bytes": 44967,
+      "sha256": "7bac28bf10c27d704d22a52316645ba8e442515481030f6dea21a5dbc6a5d1ba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ivs-4535102/choices.csv",
+      "bytes": 4705,
+      "sha256": "04e285ac6a38512f5dcad893a6621f92b41e48dc097d3b1ea7fdc52dc8b9fa63"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/ivs-4535102/questionnaire.csv",
+      "bytes": 16781,
+      "sha256": "d09e68dacd4d1481aa8e86978f3f7c15007472fb31362872d96783e6c35839df"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/oqi-4b8a2c5/choices.csv",
+      "bytes": 29977,
+      "sha256": "fe49dc97cffa48223bb0c0b6973091fab4c1265682df9cbc630b20c67e1e0a2f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/oqi-4b8a2c5/questionnaire.csv",
+      "bytes": 56726,
+      "sha256": "31807401ec4ff2b0dff42420581fc6954023d80b23873dbd699a49e14bf08517"
+    },
+    {
+      "path": "4 Academic Submission/measurement-crosswalk/consumer_summary.csv",
+      "bytes": 220,
+      "sha256": "3ab034ce1193e91e9352a03c298c924f2c08933259d674d1bd071f6e922d5896"
+    },
+    {
+      "path": "4 Academic Submission/measurement-crosswalk/instrument_routes.csv",
+      "bytes": 66004,
+      "sha256": "5d55497ce610876630fadef255fd752874ffaa0896f312e6f5f47d63caded739"
+    },
+    {
+      "path": "4 Academic Submission/measurement-crosswalk/measurement_manifest.csv",
+      "bytes": 5941,
+      "sha256": "5820804c86528a03ec4f2c1b13891bbddbb328e05ab9aedb8bea0b96e8823d64"
+    },
+    {
+      "path": "4 Academic Submission/measurement-crosswalk/overlap_pairs.csv",
+      "bytes": 13167,
+      "sha256": "aae7b6702b33e148462a6c44c56bffd4af4c0be449860ee8f8c472a48b4cd72a"
+    },
+    {
+      "path": "4 Academic Submission/scientific-foundation/core_equation_coverage.csv",
+      "bytes": 15496,
+      "sha256": "02079504080f66556cda21e5fd0af9ee65a56561761a79904556a6c6d5eb2df7"
+    },
+    {
+      "path": "4 Academic Submission/scientific-foundation/downstream_outcome_roles.csv",
+      "bytes": 28011,
+      "sha256": "51321f5e75223f5905d0a0fc881104c7901cca65da1167c0ec2923c995478151"
+    },
+    {
+      "path": "4 Academic Submission/scientific-foundation/historical_analysis_coverage.csv",
+      "bytes": 28281,
+      "sha256": "f1e316433ccd8ea55a82a7b0ad721fc1c30a842e7170cb7a7182f7bbed14c6f7"
+    },
+    {
+      "path": "4 Academic Submission/wp06-contract/construct_resolution_cards.csv",
+      "bytes": 15073,
+      "sha256": "d90ace76dca47a9249cff7bd68399b4ee5d40bbbd7997395024d77183c658522"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+      "bytes": 9957,
+      "sha256": "fa8eaf0b3c4090120830d243abe810273b962c02ac37acd32554578173d0aaf0"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/proposed_validation_scope.json",
+      "bytes": 3591,
+      "sha256": "45b44718bbe98feb88effea477c95108cfc9a327f4c20a3925fcc5dfd4c30532"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+      "bytes": 6711,
+      "sha256": "8813c35e4d5ee8f73341a42468c1b69b9fbe4bb2f9d83eeb19d03fd77d8406cd"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R07_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 9199,
+      "sha256": "7787e50b557a7b764c63d91bcbd7e3099ae269852abb990845df84f3e8bbee59"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R12_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+      "bytes": 8702,
+      "sha256": "9de3144d07ea623f8f18c132828943f1c8c3a45755cc00dc4bd7821b270dd11e"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/source_index.json",
+      "bytes": 16659,
+      "sha256": "25362b53151df6fa7a93ecd0bb668fe2433b9ce8fb5e12fa523b9bcfc5708d06"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/nofit_contract.json",
+      "bytes": 8032,
+      "sha256": "b0493f400c46ca0c2e02b239df1af98a13c857a8e5ba364bc3619aeb76271c1a"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/field_allowlist.csv",
+      "bytes": 9685,
+      "sha256": "662df36abf8abf4db038afb77eba0c64caa050654ff316015c69f50acb6168c1"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/analysis_roles.csv",
+      "bytes": 4740,
+      "sha256": "4308e09aa981d3911131d0102d506276f42cd353d3169d443667b5e0cbb2ccbf"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/dependency_crosswalk.csv",
+      "bytes": 2303,
+      "sha256": "ed0d480aebe072a796b49ccb972d09a3bda0277c3fad5bd7168f0388ba41b9c9"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md",
+      "bytes": 33091,
+      "sha256": "37b4278bab6af04b96df03802e5104148a187f0cb8242a1c5b66e5374bc8a3ec"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+      "bytes": 15188,
+      "sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/d4_d6_acceptance_2026-10-26.json",
+      "bytes": 6495,
+      "sha256": "78a7eb3aa946bef84928ed6985247fdac77c23c89086e97eb7bbd3c0d03c63ff"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/d2_policy_acceptance_2026-10-25.json",
+      "bytes": 9372,
+      "sha256": "1f558dc1698b127e9e12ec00eca1036e01795f3ef2e42a1a677e1e63ec178b6b"
+    },
+    {
+      "path": "4 Academic Submission/scientific-foundation/sample_filter_evidence.csv",
+      "bytes": 1370,
+      "sha256": "d11a09e390d84cd79e71e2cfd6add401e0a3cb24fec1ea4a98abbf46be785dac"
+    },
+    {
+      "path": "4 Academic Submission/wp06-contract/instrument_eligibility.csv",
+      "bytes": 5886,
+      "sha256": "d0975617c190e11fdb0483e9196475e43e24d2a4d4b971d33fcee607a52eda02"
+    },
+    {
+      "path": "4 Academic Submission/WP06_DEPLOYMENT_HANDOFF_EVIDENCE_CONTRACT.md",
+      "bytes": 15205,
+      "sha256": "8cc17c3cbeda961d2da43e081ad628a711b55d933fecff1891d255f89172e043"
+    },
+    {
+      "path": "4 Academic Submission/wp06-stage-b/deployment_contract.py",
+      "bytes": 10475,
+      "sha256": "f806e36d5445ac1f18c8b7ae053d95b28e4e8f8a1c8dd5b5bdfa453b290f8afd"
+    },
+    {
+      "path": "4 Academic Submission/wp06-stage-b/test_deployment_contract.py",
+      "bytes": 14728,
+      "sha256": "61bbfea9dead894fc956c72d84784d9e33b0da5cd7fa7459e445a3bfcb5d8927"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/wp06-d3-d4-d6-0f2f911/restricted_carrier_binding.json",
+      "bytes": 1119,
+      "sha256": "7d7d04288d57264a1ca9160bfd264bdb7e45e3a5fbc9ecebd11080d4a6d6c90a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/wp06-d4-d6-acceptance-34f3905/seal.json",
+      "bytes": 3453,
+      "sha256": "4dd31f65c4e11d285467319089e7e9bcc10ad1341af94e1192659f75d00c7fab"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/wp06-d4-d6-acceptance-34f3905-verification/closure.json",
+      "bytes": 1516,
+      "sha256": "6ea79ab5f1ae79f2ced112b0e6c1978a636ea7a204b616c787bd150f792de70c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/measurement-ce69fd9/questions.csv",
+      "bytes": 18380,
+      "sha256": "14a58a63ba62bc52f71f92cf5ff0781b8017cf3a67a2067bee858d1202047588"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/measurement-ce69fd9/choices.csv",
+      "bytes": 29578,
+      "sha256": "9f14272c1f86e7fc7c972eb64eded588e1bacdd03a11e7fc660c7f794e75747a"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/version_scope.json",
+      "bytes": 5372,
+      "sha256": "fe541c8080dd34fe87488b89d5bba321468181387101c820ce45cd9878e312bc"
+    }
+  ],
+  "derived_static_intake": {
+    "path": "4 Academic Submission/audit-local/intake/wp06-p1-p4-contract-bd407ff/static_intake_resolved.json",
+    "bytes": 893025,
+    "sha256": "ca1b71304b474499328090585c5f7f1dfc60123d38f3553aa152683b5fc16e89"
+  },
+  "static_coverage": {
+    "projection_fields": 163,
+    "dummies": 56,
+    "nonquestion_metadata_fields": [
+      "KEY",
+      "SubmissionDate",
+      "endtime",
+      "fecha",
+      "formdef_version",
+      "starttime"
+    ],
+    "static_question_keys": 756,
+    "static_choice_keys": 2943,
+    "conflicts": 0,
+    "projected_question_fields": 101,
+    "missing_question_version_pairs": [
+      [
+        "2512090157",
+        "q3"
+      ],
+      [
+        "2512091719",
+        "q3"
+      ],
+      [
+        "2512111044",
+        "q3"
+      ],
+      [
+        "2512121811",
+        "q3"
+      ],
+      [
+        "2602120658",
+        "q3"
+      ]
+    ],
+    "live_schema_or_routing_verified": false,
+    "base_extract_q3_gaps_supplemented": 5,
+    "all_projected_question_leaf_definitions_available": true,
+    "q3_parent_chain_bound": false
+  },
+  "geography_supplement": {
+    "path": "4 Academic Submission/audit-local/intake/wp06-p1-p4-contract-bd407ff/geography_static.json",
+    "bytes": 6784,
+    "sha256": "6241252bee6a1904e14d56098f535c04e849eb3ebf314780ee0975240705ba7b"
+  }
+}

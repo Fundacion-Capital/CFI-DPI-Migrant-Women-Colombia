@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-26",
+  "timezone": "Europe/Berlin",
+  "entry_head": "bd407ffeb500188a5b8d20310c4f4195a189b356",
+  "status": "PREPARED_SOURCE_BOUND_EXECUTION_HELD",
+  "owner_design_accepted": true,
+  "execution_ready": false,
+  "authority": {
+    "participant_processing_authorized": false,
+    "no_fit_execution_authorized": false,
+    "fitting_authorized": false,
+    "scoring_authorized": false,
+    "data_code_changes_authorized": false,
+    "runtime_activation_authorized": false,
+    "institutional_approval_inferred": false,
+    "coauthor_approval_inferred": false,
+    "release_authorized": false,
+    "git_cloud_actions_authorized": false
+  },
+  "precedence": [
+    "wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+    "wp06-d4-d6-acceptance/d4_d6_acceptance_2026-10-26.json",
+    "wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md",
+    "wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md"
+  ],
+  "purpose": "One later protected descriptive verification wave on preserved historical membership; not corrected data preparation, scoring, analysis or publication.",
+  "max_fits": 0,
+  "new_scores_permitted": false,
+  "carrier": {
+    "id": "TARGET33",
+    "sha256": "95E0929D4AB5F4E0808C07F9EB636C24A0EEB88F676CACE328BB064BADCAD756",
+    "historical_N": 423,
+    "historical_schema_variables": 439,
+    "source_commit": "a00115ec020d4313715b4b195168422cc126fdff",
+    "git_blob": "7132afe058718e790305f51e78a215b383d22009",
+    "current_absolute_path": null,
+    "current_bytes_schema_acl_verified": false,
+    "inherited_locator": "audit-local/intake/wp06-d3-d4-d6-0f2f911/restricted_carrier_binding.json",
+    "limits": "Regular CODED preserved carrier only. No NoPII clone, fresh export, raw490, administrative file or alternate dataset fallback. Hash/order identity preserves existing manual exclusions; no exclusions are rerun or changed."
+  },
+  "projection": {
+    "source": "wp06-academic-specification/field_allowlist.csv",
+    "sha256": "662df36abf8abf4db038afb77eba0c64caa050654ff316015c69f50acb6168c1",
+    "literal_fields": 163,
+    "numeric_multiselect_dummies": 56,
+    "KEY_internal_only": true,
+    "enumerator_included": false,
+    "wildcards_permitted": false,
+    "permission": "DESIGN_ONLY_NO_READ_GRANT"
+  },
+  "source_intake": {
+    "index": "source_pins.json",
+    "question_version_keys": 756,
+    "base_choice_version_keys": 2943,
+    "q3_supplement_question_versions": 5,
+    "q3_supplement_choices": 21,
+    "projected_question_or_calculation_fields": 101,
+    "projected_respondent_answer_fields": 100,
+    "six_technical_metadata_fields": [
+      "KEY",
+      "SubmissionDate",
+      "endtime",
+      "fecha",
+      "formdef_version",
+      "starttime"
+    ],
+    "shared_recorded_column_conflicts": 0,
+    "q3_parent_chain_bound": false,
+    "missing_column_resolution": "Complement choice_filter from richer pinned extracts only when every shared recorded column agrees; absent metadata is not an empty constraint.",
+    "scope": "Static dictionary availability only; no current schema, compiled-form deployment, routing compliance or participants verified."
+  },
+  "operations": [
+    {
+      "id": "P1",
+      "authorized_now": false,
+      "selection": 1,
+      "purpose": "Load the exact projected carrier once and assess unchanged membership/order, internal submission-key integrity and observable screening support.",
+      "output": "carrier_and_membership_checks.csv"
+    },
+    {
+      "id": "P2",
+      "authorized_now": false,
+      "selection": 2,
+      "purpose": "Use actual submitted versions and item-specific routes/domains to account for six response states and literal parent/dummy consistency; no repair.",
+      "output": "version_route_domain_states.csv"
+    },
+    {
+      "id": "P3",
+      "authorized_now": false,
+      "selection": 3,
+      "purpose": "Assess preserved coded clocks, date/fecha lineage, first-arrival source limits and version-correct geography without choosing a new clock or pooling.",
+      "output": "time_geography_lineage.csv"
+    },
+    {
+      "id": "P4",
+      "authorized_now": false,
+      "selection": 4,
+      "purpose": "Aggregate applicability, valid-answer and fixed-candidate/common-input completeness; no score construction or fitted sample.",
+      "output": "coverage_denominators.csv"
+    }
+  ],
+  "check_catalogue": "verification_checks.csv",
+  "outcomes": ["supported", "unsupported", "indeterminate"],
+  "response_states": [
+    "observed_valid",
+    "structural_skip",
+    "unavailable_in_version",
+    "applicable_nonresponse",
+    "substantive_NA_or_sentinel",
+    "unresolved"
+  ],
+  "state_conflict_rule": "unresolved_not_forced_into_zero_or_structural_skip",
+  "state_nonresponse_requires_missing_or_blank_after_excluding_recorded_sentinels": true,
+  "state_rules": {
+    "observed_valid": "Observed substantive response fits that version's domain and the accepted item-specific interpretation; exclude sentinel/N/A from scorable coverage.",
+    "structural_skip": "All required parent and own relevance conditions are known, and the item was unasked by design. A response outside route is not silently relabelled a valid skip.",
+    "unavailable_in_version": "The actual form never offered that field/option. Not a negative answer or respondent nonresponse.",
+    "applicable_nonresponse": "Known applicable and available item has a missing or blank response, after excluding recorded item-specific refusal, uncertainty, nonuse and N/A sentinel states; not a structural skip.",
+    "substantive_NA_or_sentinel": "Preserve original N/A, refusal, uncertainty and nonuse distinctions in item-specific subtypes; never apply a blanket 98/99 rule.",
+    "unresolved": "Conflicting routes, missing source context or uninterpretable response remain unresolved. Unknown state has no score and is never filled with zero."
+  },
+  "version_reference": {
+    "versions": [
+      "2512090157",
+      "2512091719",
+      "2512111044",
+      "2512121811",
+      "2602120658"
+    ],
+    "counts_source": "audit-local/intake/input-contract-c4be81a/retained_form_versions.csv",
+    "counts_status": "Historical expectations only; no new participant tabulation. Do not reproduce small version counts in a public synopsis."
+  },
+  "dummy_parents": [
+    "q10_2",
+    "q4_12",
+    "q4_1",
+    "q5_13",
+    "q5_2",
+    "q9_17",
+    "q9_21"
+  ],
+  "coverage_sets": [
+    {
+      "id": "IAT3",
+      "fields": [
+        "q3_1",
+        "q3_5",
+        "q3_8"
+      ],
+      "rule": "All three valid/applicable under accepted maps; runout has a phone route. No-phone is valid phone information, not a complete candidate."
+    },
+    {
+      "id": "IVS2_RAW_INPUTS",
+      "fields": [
+        "q2_1",
+        "q2_2"
+      ],
+      "rule": "Report raw-item availability and date-source coverage separately. Calendar-year source/bounds remain unadopted; do not certify a computable normalized candidate."
+    },
+    {
+      "id": "IADT2",
+      "fields": [
+        "q3_16",
+        "q3_17"
+      ],
+      "rule": "All two valid/applicable; phone transfer gate retained; confidence alone does not imply phone access."
+    },
+    {
+      "id": "IADT3",
+      "fields": [
+        "q3_15",
+        "q3_16",
+        "q3_17"
+      ],
+      "rule": "All three valid/applicable; app installation smartphone-only. Compare IADT2/IADT3 common applicability without claiming cross-phone equivalence."
+    },
+    {
+      "id": "ICDP2",
+      "fields": [
+        "q3_21",
+        "q3_22"
+      ],
+      "rule": "OTP familiarity and financial-app nonuse remain distinct unscored states; both phone-gated."
+    },
+    {
+      "id": "IAFF2",
+      "fields": [
+        "q4_5",
+        "q4_6"
+      ],
+      "rule": "Address proof in process/refusal and unknown phone registration unscored; no own line is the accepted zero condition, not nonresponse."
+    },
+    {
+      "id": "IUOF3",
+      "fields": [
+        "q4_15",
+        "q4_24",
+        "q4_25"
+      ],
+      "rule": "Three activity items, not q4_16/q4_17; N/A unscored; preserve mixed 60/90-day wording and unresolved account-context conflicts."
+    },
+    {
+      "id": "OQI2",
+      "fields": [
+        "q5_14",
+        "q5_23"
+      ],
+      "rule": "Both registration-ease/support items valid/applicable; no activation-time component; uncertainty unscored."
+    }
+  ],
+  "model_input_coverage": {
+    "outcomes": [
+      "q6_13",
+      "q6_14"
+    ],
+    "main_inputs": [
+      "q3_1",
+      "q3_5",
+      "q3_8",
+      "q3_16",
+      "q3_17",
+      "q4_5",
+      "q4_6",
+      "q4",
+      "q2_2",
+      "q3",
+      "formdef_version"
+    ],
+    "extension_extra_raw_inputs": [
+      "q2_3",
+      "q2_1"
+    ],
+    "calendar_source_selected": false,
+    "labels": "Potential applicable/valid input sets only. No computed outcome binary, candidate score, design-matrix encoding, automatic complete-case restriction or e(sample). Extension computability remains indeterminate without the date decision."
+  },
+  "outputs": {
+    "all_restricted": true,
+    "destination_reserved": false,
+    "exact_destination": null,
+    "proposed_pattern": "audit-local/intake/wp06-p1-p4-execution-<new-checkpoint>-<fresh-run-id>/",
+    "retention_adopted": false,
+    "retention_proposal": "Keep the complete restricted audit packet with research authors until an applicable institutional policy is confirmed; do not delete originals or infer a legal retention period.",
+    "row_level_exports_permitted": false,
+    "empirical_results_supplied_now": false,
+    "count_serialization": {
+      "csv_uncomputed": "NA",
+      "json_uncomputed": null,
+      "observed_zero_requires_completed_count": true,
+      "expected_zero_may_be_predeclared": true,
+      "interpretive_statuses": ["supported", "unsupported", "indeterminate"],
+      "execution_dispositions": ["completed", "not_executed", "technical_stop"],
+      "csv_status_rule": "Use an interpretive status for completed checks; use not_executed or technical_stop otherwise, with NA for uncomputed observed/discrepancy counts."
+    },
+    "files": [
+      {
+        "name": "carrier_and_membership_checks.csv",
+        "columns": [
+          "check_id",
+          "expected_n",
+          "observed_n",
+          "discrepancy_n",
+          "status",
+          "limitation"
+        ]
+      },
+      {
+        "name": "version_route_domain_states.csv",
+        "columns": [
+          "check_id",
+          "field",
+          "form_version",
+          "state",
+          "state_subtype",
+          "checked_n",
+          "observed_n",
+          "discrepancy_n",
+          "status"
+        ]
+      },
+      {
+        "name": "time_geography_lineage.csv",
+        "columns": [
+          "check_id",
+          "field",
+          "form_version",
+          "rule_id",
+          "checked_n",
+          "discrepancy_n",
+          "status",
+          "limitation"
+        ]
+      },
+      {
+        "name": "coverage_denominators.csv",
+        "columns": [
+          "coverage_id",
+          "question_or_candidate",
+          "applicable_n",
+          "valid_n",
+          "complete_input_n",
+          "reference_scope",
+          "status",
+          "limitation"
+        ]
+      },
+      {
+        "name": "verification_readout.md",
+        "content": "Interpret aggregate evidence as supported/unsupported/indeterminate with source/denominator limits; include every planned check and unavailable result."
+      },
+      {
+        "name": "execution_receipt.json",
+        "content": "Exact approved source/projection/adapter/output hashes, owner grant, owned runtime/build/control references, actual call/load/fit/time counts and stop/cleanup disposition; no secrets or participant values."
+      },
+      {
+        "name": "stata_full.log",
+        "content": "Complete restricted command/aggregate log by construction; no list/browse/tabulation displaying identifiers, participant rows, raw date/location values, free text or error-driven row dumps."
+      }
+    ],
+    "banned": "KEY values, names, telephones, contact/admin/enumerator identifiers, raw multiselect strings, coordinates, individual dates, row-level flags/datasets, participant lists, scores, predictions or classes. Runtime control identity is separate restricted operational evidence, not a respondent identifier. No public result table is produced."
+  },
+  "budget_proposal": {
+    "adopted": false,
+    "participant_loads": 1,
+    "participant_selection_calls": 4,
+    "max_seconds_per_selection": 45,
+    "max_work_seconds": 180,
+    "cleanup_seconds": 30,
+    "max_total_seconds": 210,
+    "retries": 0,
+    "max_fits": 0
+  },
+  "runtime": {
+    "Stata_MCP_only": true,
+    "live_verified": false,
+    "production_independent_stop_verified": false,
+    "installed_build": null,
+    "scope": "Artificial Stage-A/B/bootstrap/deployment tests are inherited design evidence only; no current PID/build/capacity/stop/deadline proof. No actor launch or service change in this task.",
+    "requirements": [
+      "Bind exact future adapter text/hash, single owned session/build and read capacity for projected fields plus explicitly planned temporary checks.",
+      "Bind independent cancellation, enforce absolute/per-selection work deadlines and cleanup allowance; late or uncertain completion quarantines the packet, not a retry.",
+      "Reserve an empty restricted destination and verify source/output noncollision before the single load.",
+      "No model fitting or fitted b/V stripes; no maxvar/runtime mutation or fallback library to rescue the wave.",
+      "Remove transient in-memory diagnostic flags and owned participant state during separately authorized cleanup; retain only permitted aggregate evidence."
+    ]
+  },
+  "technical_failure": "STOP_PRESERVE_NO_RETRY_NO_FALLBACK",
+  "substantive_discrepancy": "RECORD_WITHOUT_CORRECTION_OR_EXCLUSION",
+  "scope_gate_rule": "NO_PUBLIC_RELEASE_OR_FITTED_MODEL_GATE_REQUIRED_FOR_THIS_INTERNAL_NOFIT_TASK",
+  "binding_ledger": "binding_status.csv",
+  "variance_method": null,
+  "lca_selection": null,
+  "scientific_holds_unchanged": [
+    "Measurement suitability and final score construction",
+    "Variance/dependence, exact contrasts and nonestimable-slot treatment",
+    "LCA family/class count/identification/uncertainty and any fit manifest",
+    "WP04-CORR01 and I3-REPLAY-D01",
+    "D1 institutional/consent/privacy and exact joint-author/CFI publication checkpoints"
+  ],
+  "completion_rule": "Complete source-bound documentary preparation and audit, not passed live preflight or completed P1-P4. Unsupported/indeterminate empirical evidence would be valid later outcomes; technical/source/authority failure stops.",
+  "next_immediate_task": "Owner-authorized current restricted-input resolution, missing static q3 parent-chain validation and owned empty-runtime/control preflight; no participant load/count until exact access, output, retention, budget and execution conditions are separately bound."
+}
