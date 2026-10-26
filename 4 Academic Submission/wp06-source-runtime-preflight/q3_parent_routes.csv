@@ -1,0 +1,6 @@
+"form_version","q3_excel_row","field_type","own_relevance","required","parent_group","parent_begin_row","parent_end_row","parent_relevance","participant_compliance_verified"
+"2512090157","18","select_one departamento","","yes","Elegibilidad","15","25","selected(${consent}, '1')","false"
+"2512091719","18","select_one departamento","","yes","Elegibilidad","15","25","selected(${consent}, '1')","false"
+"2512111044","18","select_one departamento","","yes","Elegibilidad","15","25","selected(${consent}, '1')","false"
+"2512121811","18","select_one departamento","","yes","Elegibilidad","15","25","selected(${consent}, '1')","false"
+"2602120658","18","select_one departamento","","yes","Elegibilidad","15","25","selected(${consent}, '1')","false"

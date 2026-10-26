@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "entry_head": "3143a88b6f8ed7f346a639b6bd235c2d93e8440c",
+  "status": "SCOPED_ASSESSMENT_CHECKS_PASS_P1_P4_EXECUTION_HELD",
+  "checks": {
+    "prior_file_fingerprints_unchanged": 24642,
+    "prior_public_seal_files_verified": 6,
+    "prior_private_seal_files_verified": 28,
+    "external_sources_unchanged": 10,
+    "projected_storage_types_matched": 163,
+    "q3_static_parent_chains_verified": 5,
+    "negative_claims_rejected": 30,
+    "stata_selection_calls_in_preflight": 5,
+    "participant_loads": 0,
+    "participant_records_inspected": 0,
+    "participant_records_counted": 0,
+    "participant_exports": 0,
+    "fits": 0,
+    "live_stop_endpoint_calls": 0,
+    "os_kill_calls": 0,
+    "service_changes": 0,
+    "tracked_files_changed": 0,
+    "staged_paths": 0,
+    "source_metadata_pass": true,
+    "independent_control_deadline_verified": false,
+    "execution_ready": false
+  },
+  "qualification": "Actual source/header/static-form/empty-runtime evidence; not participant, scientific, institutional, cloud-roster or independent-deadline validation.",
+  "review": {
+    "kind": "one fresh-context read-only AI whole-package review",
+    "reviewer": "/root/source_runtime_final_review",
+    "critical": 0,
+    "important": 0,
+    "minor_requiring_action": 0,
+    "unresolved_critical_or_important": 0,
+    "validator_freshly_run_by_reviewer": true,
+    "negative_claims_rejected_by_reviewer": 30,
+    "postreview_fix_pass_required": false,
+    "second_review_claimed": false,
+    "human_or_institutional_review_claimed": false,
+    "declined_scope_rulings": [
+      "No participant/current response-value validation is inferred from header/static evidence.",
+      "No new live probes or cancellation trial was needed to review retained evidence; independent control remains held.",
+      "External-source rehash and final seal/readback are authoring-agent verification, not reviewer work.",
+      "Compiled deployment, actual routes, scientific suitability and approval/release conditions remain unverified or outside scope.",
+      "No Git/cloud or original file mutation is implied by documentary readiness."
+    ],
+    "execution_ready": false
+  }
+}

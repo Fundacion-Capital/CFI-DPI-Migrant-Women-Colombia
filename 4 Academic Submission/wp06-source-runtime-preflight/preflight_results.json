@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-26",
+  "entry_head": "3143a88b6f8ed7f346a639b6bd235c2d93e8440c",
+  "status": "METADATA_SOURCE_CHECKS_PASS_INDEPENDENT_CONTROL_NOT_ESTABLISHED",
+  "scope": "Current source/header/static-form and owned empty-runtime preflight, not participant verification or P1-P4 execution.",
+  "source": {
+    "carrier": "TARGET33",
+    "local_sha256_matches": true,
+    "bytes": 1292059,
+    "header_reported_observations": 423,
+    "header_reported_variables": 439,
+    "projected_fields_present": 163,
+    "projected_storage_types_matched": 163,
+    "current_absolute_path_bound_privately": true,
+    "windows_acl_observed": true,
+    "dropbox_file_metadata_resolved": true,
+    "dropbox_size_matches_local": true,
+    "dropbox_remote_content_hash_verified": false,
+    "shared_link_queries": 8,
+    "shared_link_pages_complete": true,
+    "links_returned": 0,
+    "cloud_member_roster_verified": false,
+    "cloud_inherited_access_certified": false
+  },
+  "q3": {
+    "definition_versions": [
+      "2512090157",
+      "2512091719",
+      "2512111044",
+      "2512121811",
+      "2602120658"
+    ],
+    "own_relevance": "",
+    "required": "yes",
+    "excel_row": 18,
+    "parent_group": "Elegibilidad",
+    "parent_begin_row": 15,
+    "parent_end_row": 25,
+    "parent_relevance": "selected(${consent}, '1')",
+    "static_parent_chains_verified": 5,
+    "eligible_flag_added_as_q3_gate": false,
+    "compiled_deployment_verified": false,
+    "participant_routing_compliance_verified": false,
+    "full_future_route_adapter_bound": false
+  },
+  "runtime": {
+    "unique_owned_empty_session_verified": true,
+    "native_stata_version": 19,
+    "MP": true,
+    "maxvar_observed": 5000,
+    "capacity_setting_changed": false,
+    "build_date": "07 Oct 2026",
+    "same_worker_epoch_verified": true,
+    "loaded_dll_path_and_disk_hash_observed": true,
+    "memory_image_attestation": false,
+    "owned_idle_cleanup_succeeded": true,
+    "registry_absence_and_pid_exit_observed": true,
+    "busy_cancellation_test_performed": false,
+    "independent_hard_deadline_verified": false,
+    "production_control_path_adopted": false,
+    "qualification": "Cooperative stop source exists; exposed MCP control and successful short/idle calls do not establish independent interruption/deadline enforcement."
+  },
+  "activity": {
+    "stata_selection_calls": 5,
+    "nominal_timeout_seconds_per_call": 20,
+    "calls": [
+      {
+        "receipt": "empty_runtime_response.json",
+        "elapsed_ms": 2955,
+        "nominal_timeout_seconds": 20,
+        "scope": "empty-runtime/header/static-form metadata only"
+      },
+      {
+        "receipt": "identity_readback_response.json",
+        "elapsed_ms": 85,
+        "nominal_timeout_seconds": 20,
+        "scope": "empty-runtime/header/static-form metadata only"
+      },
+      {
+        "receipt": "header_schema_response.json",
+        "elapsed_ms": 92,
+        "nominal_timeout_seconds": 20,
+        "scope": "empty-runtime/header/static-form metadata only"
+      },
+      {
+        "receipt": "form_routes_response.json",
+        "elapsed_ms": 671,
+        "nominal_timeout_seconds": 20,
+        "scope": "empty-runtime/header/static-form metadata only"
+      },
+      {
+        "receipt": "final_empty_state_response.json",
+        "elapsed_ms": 83,
+        "nominal_timeout_seconds": 20,
+        "scope": "empty-runtime/header/static-form metadata only"
+      }
+    ],
+    "static_settings_imports": 5,
+    "static_survey_head_imports": 5,
+    "header_only_describe_calls": 2,
+    "projected_description_commands": 1,
+    "header_note": "Two describe commands in one selection: quiet file header then projected variable descriptions; neither loads observations.",
+    "owned_idle_session_destroy_calls": 1,
+    "registry_reads_issued": 3,
+    "registry_snapshots_retained": 2,
+    "participant_loads": 0,
+    "participant_records_inspected": 0,
+    "participant_records_counted": 0,
+    "participant_exports": 0,
+    "fits": 0,
+    "live_stop_endpoint_calls": 0,
+    "os_kill_calls": 0,
+    "service_changes": 0,
+    "note": "Static instrument imports/exports and metadata calls are separate from the unadopted future participant envelope; initial discovery registry read remains in the conversation, while before-creation/final snapshots are retained here."
+  },
+  "authority": {
+    "current_metadata_preflight_authorized": true,
+    "participant_processing_authorized": false,
+    "P1_P4_execution_authorized": false,
+    "fitting_authorized": false,
+    "scoring_authorized": false,
+    "scientific_code_or_data_changes_authorized": false,
+    "institutional_approval_inferred": false,
+    "coauthor_approval_inferred": false,
+    "release_authorized": false,
+    "service_or_deployment_changes_authorized": false,
+    "git_cloud_writes_authorized": false
+  },
+  "execution_ready": false,
+  "participant_budget_adopted": false,
+  "participant_output_destination_reserved": false,
+  "participant_retention_adopted": false,
+  "remaining": [
+    "Unverified cloud roster/inherited access; retain prior owner account separately.",
+    "Relevant protected-use conditions and exact participant-access/output permission remain separate.",
+    "Production independent control/deadline path is not bound or tested; do not start a participant wave.",
+    "Exact direct no-fit adapter, output destination/retention and numerical-budget adoption remain held.",
+    "Scientific/institutional/publication/release holds are unchanged."
+  ],
+  "next_decision": "A separately authorized isolated live-control integration/acceptance stage on empty/artificial workers is needed before claiming the proposed deadline contract; no shared-service changes, participants or fits are authorized by this packet."
+}
