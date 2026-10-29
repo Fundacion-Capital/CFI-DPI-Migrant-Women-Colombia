@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "status": "PASS_DOCUMENTARY_STATIC_PREFLIGHT_ONLY",
+  "entry_files_checked": 26887,
+  "external_files_checked": 4,
+  "differences": [],
+  "errors": [],
+  "prior_seals": {
+    "live_control": {
+      "files": 270,
+      "differences": []
+    },
+    "qualified_graphify": {
+      "files": 1900,
+      "differences": []
+    }
+  },
+  "protected_file_set_unchanged": true,
+  "pure_tests_normal": 23,
+  "review_regressions": 10,
+  "independent_read_only_review": true,
+  "independent_postfix_review": false,
+  "execution_ready": false,
+  "protected_stata_execution_gate": "CLOSED",
+  "stata_calls": 0,
+  "worker_launches": 0,
+  "host_probes": 0,
+  "participant_records_inspected": false,
+  "fitting": false,
+  "service_changes": false,
+  "config_changes": false,
+  "git_head": "f912000bfe31a3c19d02a338b3c3da9cc339f996"
+}

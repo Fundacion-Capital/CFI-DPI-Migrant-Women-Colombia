@@ -1,0 +1,17 @@
+id,stage,criterion,evidence_required,current_state
+E01,no_execution,Source and dependency identity,Exact source hashes callable signatures startup and dependency manifest,PARTIAL_STATIC_ONLY
+E02,no_execution,Isolated MCP deployment definition,Separate endpoint and source-bound launcher with no shared service changes,NOT_IMPLEMENTED
+E03,no_execution,Ownership before initialization,Suspended owned creation and retained handles before Stata initialization,NOT_BOUND_TO_STATA
+E04,no_execution,No replacement or recovery,Every admission timeout death error and health-check path rejects replacement,CONTRADICTED_BY_CURRENT_SOURCE
+E05,no_execution,Run actor session and physical epoch,Authenticated role handoff bound to run session worker creation identity,NOT_BOUND_TO_STATA
+E06,no_execution,Bounded independent control,One native monotonic clock with independent containment at all ceilings,ARTIFICIAL_ONLY_PRIOR_EVIDENCE
+E07,no_execution,Literal empty payload and wrapper boundary,Exactly two fixed active-frame-only selections plus audited startup seed log and hidden-object boundaries,PROPOSED_NOT_EXECUTED
+E08,no_execution,Paths and retained outputs,All private logs temporary paths history and evidence retained in reserved packet,CURRENT_PATHS_NOT_ACCEPTED
+E09,no_execution,Fresh source and configuration identity,Fresh hashes before implementation acceptance and before execution,OBSERVED_ONLY_FOR_THIS_STATIC_TASK
+E10,separately_authorized_empty_execution,One session one epoch two selections,Native observations and exact calls rejecting disabled multi-session absent-manager single-session fallback default or foreign session,NOT_AUTHORIZED
+E11,separately_authorized_empty_execution,Empty state and metadata,Zero rows and variables both times with native version build edition and capacity output,NOT_EXECUTED
+E12,separately_authorized_empty_execution,Same worker identity,Retained-handle creation identity and loaded module path plus disk hash across both calls,NOT_EXECUTED
+E13,separately_authorized_empty_execution,Strict cumulative timing,Initialization commands control evidence and cleanup within one proposed envelope,NOT_EXECUTED
+E14,separately_authorized_empty_execution,No retries replacements or hidden commands,Full epoch and admission ledger with wrapper and all commands accounted,NOT_EXECUTED
+E15,separately_authorized_empty_execution,Cleanup and preservation,Native exit witnesses zero owned descendants successful handle closure and artifact readback,NOT_EXECUTED
+E16,interpretation,Bounded claim only,Empty integration cannot prove busy cancellation participant safety scientific validity or release approval,REQUIRED_LIMIT

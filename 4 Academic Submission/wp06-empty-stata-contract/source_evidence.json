@@ -1,0 +1,1305 @@
+{
+  "scope": "installed_disk_source_and_project_source_only",
+  "loaded_runtime_observed": false,
+  "signatures_from_ast_not_imports": true,
+  "sources": [
+    {
+      "bytes": 46935,
+      "sha256": "5f9b427ffbd0d01afc51542a47f2652aff02a084c7c08cc73700ad9b8fda2308",
+      "kind": "installed",
+      "name": "session_manager.py",
+      "relative_path": null,
+      "functions": [
+        {
+          "name": "join_stata_line_continuations",
+          "line": 53,
+          "end_line": 85,
+          "signature": "code: str"
+        },
+        {
+          "name": "safe_log_session_suffix",
+          "line": 88,
+          "end_line": 98,
+          "signature": "session_id: Optional[str]"
+        },
+        {
+          "name": "get_session_manager",
+          "line": 1157,
+          "end_line": 1159,
+          "signature": ""
+        },
+        {
+          "name": "init_session_manager",
+          "line": 1162,
+          "end_line": 1184,
+          "signature": "stata_path: str, stata_edition: str='mp', **kwargs"
+        },
+        {
+          "name": "to_dict",
+          "line": 128,
+          "end_line": 138,
+          "signature": "self"
+        },
+        {
+          "name": "__init__",
+          "line": 154,
+          "end_line": 200,
+          "signature": "self, stata_path: str, stata_edition: str='mp', max_sessions: int=100, session_timeout: int=3600, worker_start_timeout: int=60, command_timeout: int=600, enabled: bool=True, graphs_dir: str=None"
+        },
+        {
+          "name": "start",
+          "line": 202,
+          "end_line": 238,
+          "signature": "self"
+        },
+        {
+          "name": "stop",
+          "line": 240,
+          "end_line": 259,
+          "signature": "self"
+        },
+        {
+          "name": "create_session",
+          "line": 261,
+          "end_line": 295,
+          "signature": "self, session_id: Optional[str]=None"
+        },
+        {
+          "name": "_create_session_internal",
+          "line": 297,
+          "end_line": 374,
+          "signature": "self, session_id: str, is_default: bool=False"
+        },
+        {
+          "name": "destroy_session",
+          "line": 376,
+          "end_line": 421,
+          "signature": "self, session_id: str, force: bool=False"
+        },
+        {
+          "name": "_restart_session_with_same_id",
+          "line": 423,
+          "end_line": 520,
+          "signature": "self, session_id: str"
+        },
+        {
+          "name": "restart_default_session",
+          "line": 522,
+          "end_line": 530,
+          "signature": "self"
+        },
+        {
+          "name": "_terminate_worker",
+          "line": 532,
+          "end_line": 547,
+          "signature": "self, session: Session"
+        },
+        {
+          "name": "get_session",
+          "line": 549,
+          "end_line": 562,
+          "signature": "self, session_id: Optional[str]=None"
+        },
+        {
+          "name": "wait_for_ready",
+          "line": 564,
+          "end_line": 590,
+          "signature": "self, session: Session, timeout: float=30.0"
+        },
+        {
+          "name": "_mark_session_ready",
+          "line": 592,
+          "end_line": 600,
+          "signature": "self, session: Session"
+        },
+        {
+          "name": "_mark_session_error",
+          "line": 602,
+          "end_line": 610,
+          "signature": "self, session: Session, message: str"
+        },
+        {
+          "name": "_is_session_busy_stale",
+          "line": 612,
+          "end_line": 621,
+          "signature": "self, session: Session, current_time: Optional[float]=None"
+        },
+        {
+          "name": "_recover_session",
+          "line": 623,
+          "end_line": 632,
+          "signature": "self, session: Session, reason: str"
+        },
+        {
+          "name": "_get_or_create_session",
+          "line": 634,
+          "end_line": 658,
+          "signature": "self, session_id: Optional[str]"
+        },
+        {
+          "name": "_prepare_session_for_execution",
+          "line": 660,
+          "end_line": 759,
+          "signature": "self, session_id: Optional[str], timeout: Optional[float]"
+        },
+        {
+          "name": "list_sessions",
+          "line": 761,
+          "end_line": 773,
+          "signature": "self"
+        },
+        {
+          "name": "execute",
+          "line": 775,
+          "end_line": 812,
+          "signature": "self, code: str, session_id: Optional[str]=None, timeout: Optional[float]=None, execution_id: Optional[str]=None"
+        },
+        {
+          "name": "execute_file",
+          "line": 814,
+          "end_line": 863,
+          "signature": "self, file_path: str, session_id: Optional[str]=None, timeout: Optional[float]=None, log_file: Optional[str]=None, working_dir: Optional[str]=None, execution_id: Optional[str]=None"
+        },
+        {
+          "name": "get_data",
+          "line": 865,
+          "end_line": 919,
+          "signature": "self, session_id: Optional[str]=None, if_condition: Optional[str]=None, max_rows: int=10000, timeout: Optional[float]=None"
+        },
+        {
+          "name": "stop_execution",
+          "line": 921,
+          "end_line": 962,
+          "signature": "self, session_id: Optional[str]=None"
+        },
+        {
+          "name": "_execute_command",
+          "line": 964,
+          "end_line": 1057,
+          "signature": "self, session: Session, command_type: CommandType, payload: Dict[str, Any], timeout: float"
+        },
+        {
+          "name": "_wait_for_matching_result",
+          "line": 1059,
+          "end_line": 1087,
+          "signature": "self, session: Session, command_id: str, timeout: float"
+        },
+        {
+          "name": "_cleanup_loop",
+          "line": 1089,
+          "end_line": 1096,
+          "signature": "self"
+        },
+        {
+          "name": "_check_sessions",
+          "line": 1098,
+          "end_line": 1125,
+          "signature": "self"
+        },
+        {
+          "name": "available_slots",
+          "line": 1128,
+          "end_line": 1135,
+          "signature": "self"
+        },
+        {
+          "name": "get_stats",
+          "line": 1137,
+          "end_line": 1150,
+          "signature": "self"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "S01",
+          "start_line": 261,
+          "end_line": 350,
+          "segment_sha256": "ad7bd679561b9b211a5306627ba05053c60622fd294234497840a2d99ea355fd",
+          "interpretation": "Logical creation and multiprocessing worker start"
+        },
+        {
+          "id": "S02",
+          "start_line": 376,
+          "end_line": 420,
+          "segment_sha256": "147dc1ed06850036572fd290affeff0421a85ca7af655bda5ec36f6f2c86f9e1",
+          "interpretation": "Normal destruction and graceful/forced cleanup"
+        },
+        {
+          "id": "S03",
+          "start_line": 423,
+          "end_line": 520,
+          "segment_sha256": "1bce4c5c520488ff069528ac0e7e43e8aafb809725f839c9200c611f0aa37959",
+          "interpretation": "Same-ID restart and two creation attempts"
+        },
+        {
+          "id": "S04",
+          "start_line": 623,
+          "end_line": 759,
+          "segment_sha256": "f850b3859ce6c5705b4e246e746fdc9043944ef6cc13c14301bb2632a8e16ef7",
+          "interpretation": "On-demand creation and preparation-time recovery"
+        },
+        {
+          "id": "S05",
+          "start_line": 921,
+          "end_line": 963,
+          "segment_sha256": "5ab2eba4556666902312706107c03a6886855ed9082895123cc479236b9956ed",
+          "interpretation": "Cooperative event signal and stop-sent acknowledgement"
+        },
+        {
+          "id": "S06",
+          "start_line": 969,
+          "end_line": 1084,
+          "segment_sha256": "0cbe2885797fb119f9b14fcddea88edf875a6ced3b98727b7953dc4492171f05",
+          "interpretation": "Command timeout recovery and timeout-plus-five wall clock"
+        },
+        {
+          "id": "S07",
+          "start_line": 1098,
+          "end_line": 1125,
+          "segment_sha256": "82d5d8daa4510ea3821c53638c91cb11a978ca0b3c616e936d73eb546ccffd9f",
+          "interpretation": "Health and stale-busy recovery"
+        }
+      ]
+    },
+    {
+      "bytes": 52352,
+      "sha256": "0b5c27bdc3d2cb2b12327a2da43118cee8b124c753caf65d82af3d3c5cea088f",
+      "kind": "installed",
+      "name": "stata_worker.py",
+      "relative_path": null,
+      "functions": [
+        {
+          "name": "deduplicate_break_messages",
+          "line": 55,
+          "end_line": 60,
+          "signature": "output: str"
+        },
+        {
+          "name": "should_skip_cd",
+          "line": 76,
+          "end_line": 77,
+          "signature": "working_dir: Optional[str]"
+        },
+        {
+          "name": "is_log_close_all_command",
+          "line": 80,
+          "end_line": 85,
+          "signature": "line: str"
+        },
+        {
+          "name": "mcp_log_using_command",
+          "line": 88,
+          "end_line": 89,
+          "signature": "log_file_stata: str, mode: str='replace'"
+        },
+        {
+          "name": "protect_mcp_log_from_close_all",
+          "line": 92,
+          "end_line": 105,
+          "signature": "code: str, log_file_stata: str"
+        },
+        {
+          "name": "safe_file_token",
+          "line": 108,
+          "end_line": 114,
+          "signature": "value: Optional[str]"
+        },
+        {
+          "name": "normalize_data_viewer_max_rows",
+          "line": 117,
+          "end_line": 122,
+          "signature": "max_rows: int"
+        },
+        {
+          "name": "reset_graph_tracking",
+          "line": 218,
+          "end_line": 237,
+          "signature": "stlib"
+        },
+        {
+          "name": "detect_and_export_graphs_worker",
+          "line": 240,
+          "end_line": 349,
+          "signature": "stata, stlib, graphs_dir: str, execution_id: Optional[str]=None"
+        },
+        {
+          "name": "worker_process",
+          "line": 352,
+          "end_line": 1119,
+          "signature": "worker_id: str, command_queue, result_queue, stata_path: str, stata_edition: str='mp', init_timeout: float=60.0, stop_event=None, graphs_dir: str=None"
+        },
+        {
+          "name": "find_stata_executable",
+          "line": 1126,
+          "end_line": 1196,
+          "signature": "stata_path: str, stata_edition: str='mp'"
+        },
+        {
+          "name": "__init__",
+          "line": 172,
+          "end_line": 180,
+          "signature": "self, stream_callback=None"
+        },
+        {
+          "name": "__enter__",
+          "line": 182,
+          "end_line": 185,
+          "signature": "self"
+        },
+        {
+          "name": "__exit__",
+          "line": 187,
+          "end_line": 188,
+          "signature": "self, *args"
+        },
+        {
+          "name": "write",
+          "line": 190,
+          "end_line": 198,
+          "signature": "self, text"
+        },
+        {
+          "name": "flush",
+          "line": 200,
+          "end_line": 204,
+          "signature": "self"
+        },
+        {
+          "name": "get_output",
+          "line": 206,
+          "end_line": 208,
+          "signature": "self"
+        },
+        {
+          "name": "get_and_clear",
+          "line": 210,
+          "end_line": 215,
+          "signature": "self"
+        },
+        {
+          "name": "send_result",
+          "line": 416,
+          "end_line": 429,
+          "signature": "command_id: str, status: str, output: str='', error: str='', execution_time: float=0.0, extra: Dict=None"
+        },
+        {
+          "name": "initialize_stata",
+          "line": 431,
+          "end_line": 499,
+          "signature": ""
+        },
+        {
+          "name": "execute_stata_code",
+          "line": 504,
+          "end_line": 615,
+          "signature": "code: str, timeout: float=600.0"
+        },
+        {
+          "name": "execute_stata_file",
+          "line": 617,
+          "end_line": 734,
+          "signature": "file_path: str, timeout: float=600.0, log_file: str=None, working_dir: str=None"
+        },
+        {
+          "name": "handle_stop",
+          "line": 736,
+          "end_line": 763,
+          "signature": ""
+        },
+        {
+          "name": "stop_monitor_thread",
+          "line": 770,
+          "end_line": 796,
+          "signature": ""
+        }
+      ],
+      "anchors": [
+        {
+          "id": "S08",
+          "start_line": 352,
+          "end_line": 493,
+          "segment_sha256": "a6fc1d246bab19b384dc3b4457d75d40b122cb8ca80236387ec69732cb621381",
+          "interpretation": "Worker logging temporary directory PyStata init and initialization seed"
+        },
+        {
+          "id": "S09",
+          "start_line": 504,
+          "end_line": 559,
+          "segment_sha256": "e356510100519b612dacbcfee53ef7385781ea17f373187f5a75fcbc32095bd0",
+          "interpretation": "Event reset first-call seed and named-log wrapping"
+        },
+        {
+          "id": "S10",
+          "start_line": 739,
+          "end_line": 802,
+          "segment_sha256": "6f169df5986e3eeb98a3a8f93d790197692109a7b84c471cf621ac55bf0b9ab1",
+          "interpretation": "Cooperative StataSO_SetBreak and event monitor"
+        }
+      ]
+    },
+    {
+      "bytes": 270346,
+      "sha256": "6aa984b08a6657254804e690c77fb877a2d8e62c3b809caa14fe533d30402092",
+      "kind": "installed",
+      "name": "stata_mcp_server.py",
+      "relative_path": null,
+      "functions": [
+        {
+          "name": "should_skip_cd",
+          "line": 186,
+          "end_line": 188,
+          "signature": "working_dir: Optional[str]"
+        },
+        {
+          "name": "resolve_execution_working_dir",
+          "line": 191,
+          "end_line": 201,
+          "signature": "working_dir: Optional[str], default_dir: Optional[str]=None"
+        },
+        {
+          "name": "resolve_worker_file_working_dir",
+          "line": 204,
+          "end_line": 208,
+          "signature": "working_dir: Optional[str], default_dir: Optional[str]=None"
+        },
+        {
+          "name": "is_log_close_all_command",
+          "line": 211,
+          "end_line": 217,
+          "signature": "line: str"
+        },
+        {
+          "name": "mcp_log_using_command",
+          "line": 220,
+          "end_line": 222,
+          "signature": "log_file_stata: str, mode: str='replace'"
+        },
+        {
+          "name": "protect_mcp_log_from_close_all",
+          "line": 225,
+          "end_line": 239,
+          "signature": "code: str, log_file_stata: str"
+        },
+        {
+          "name": "log_session_suffix",
+          "line": 242,
+          "end_line": 252,
+          "signature": "session_id: Optional[str]"
+        },
+        {
+          "name": "normalize_data_viewer_max_rows",
+          "line": 255,
+          "end_line": 261,
+          "signature": "max_rows: int"
+        },
+        {
+          "name": "windows_listening_port_pids_from_netstat",
+          "line": 264,
+          "end_line": 289,
+          "signature": "output: str, port: int"
+        },
+        {
+          "name": "strip_log_file_footer",
+          "line": 292,
+          "end_line": 296,
+          "signature": "output: str"
+        },
+        {
+          "name": "strip_graph_metadata_from_stream_fallback",
+          "line": 299,
+          "end_line": 305,
+          "signature": "output: str"
+        },
+        {
+          "name": "stream_fallback_lines",
+          "line": 308,
+          "end_line": 334,
+          "signature": "output: str, selection_markers: bool=False"
+        },
+        {
+          "name": "prepend_working_dir_to_selection",
+          "line": 337,
+          "end_line": 344,
+          "signature": "selection: str, working_dir: Optional[str]"
+        },
+        {
+          "name": "get_effective_graphs_root",
+          "line": 347,
+          "end_line": 351,
+          "signature": ""
+        },
+        {
+          "name": "format_graph_info_block",
+          "line": 354,
+          "end_line": 363,
+          "signature": "graphs"
+        },
+        {
+          "name": "emit_graph_metadata_line",
+          "line": 366,
+          "end_line": 370,
+          "signature": "graphs"
+        },
+        {
+          "name": "try_init_stata",
+          "line": 383,
+          "end_line": 572,
+          "signature": "stata_path"
+        },
+        {
+          "name": "get_log_file_path",
+          "line": 577,
+          "end_line": 641,
+          "signature": "do_file_path, do_file_base, session_id=None"
+        },
+        {
+          "name": "resolve_do_file_path",
+          "line": 643,
+          "end_line": 709,
+          "signature": "file_path: str"
+        },
+        {
+          "name": "get_stata_path",
+          "line": 711,
+          "end_line": 767,
+          "signature": ""
+        },
+        {
+          "name": "check_stata_installed",
+          "line": 769,
+          "end_line": 790,
+          "signature": ""
+        },
+        {
+          "name": "_local_check_token_limit_and_save",
+          "line": 807,
+          "end_line": 815,
+          "signature": "output: str, original_log_path: str=None"
+        },
+        {
+          "name": "_local_process_mcp_output",
+          "line": 818,
+          "end_line": 829,
+          "signature": "output: str, log_path: str=None, for_mcp: bool=True, filter_command_echo: bool=False"
+        },
+        {
+          "name": "join_stata_line_continuations",
+          "line": 837,
+          "end_line": 869,
+          "signature": "code: str"
+        },
+        {
+          "name": "preprocess_do_file_for_graphs",
+          "line": 872,
+          "end_line": 959,
+          "signature": "file_path: str"
+        },
+        {
+          "name": "run_stata_command",
+          "line": 963,
+          "end_line": 1271,
+          "signature": "command: str, clear_history: bool=False, auto_detect_graphs: bool=False, execution_id: Optional[str]=None, return_graphs: bool=False"
+        },
+        {
+          "name": "detect_and_export_graphs",
+          "line": 1273,
+          "end_line": 1371,
+          "signature": "execution_id: Optional[str]=None"
+        },
+        {
+          "name": "display_graphs_interactive",
+          "line": 1373,
+          "end_line": 1502,
+          "signature": "graph_format='png', width=800, height=600, execution_id: Optional[str]=None"
+        },
+        {
+          "name": "run_stata_selection",
+          "line": 1504,
+          "end_line": 1540,
+          "signature": "selection: str, working_dir: Optional[str]=None, auto_detect_graphs: bool=False, execution_id: Optional[str]=None, return_graphs: bool=False"
+        },
+        {
+          "name": "run_stata_selection_with_timeout",
+          "line": 1543,
+          "end_line": 1577,
+          "signature": "selection: str, timeout: int=600, working_dir: Optional[str]=None, auto_detect_graphs: bool=False, execution_id: Optional[str]=None, return_graphs: bool=False"
+        },
+        {
+          "name": "run_stata_file",
+          "line": 1580,
+          "end_line": 2185,
+          "signature": "file_path: str, timeout: int=600, auto_name_graphs: bool=False, working_dir: Optional[str]=None, execution_id: Optional[str]=None, return_graphs: bool=False, log_file: Optional[str]=None"
+        },
+        {
+          "name": "kill_process_on_port",
+          "line": 2188,
+          "end_line": 2255,
+          "signature": "port"
+        },
+        {
+          "name": "find_available_port",
+          "line": 2258,
+          "end_line": 2274,
+          "signature": "start_port, max_attempts=10"
+        },
+        {
+          "name": "lifespan",
+          "line": 2281,
+          "end_line": 2299,
+          "signature": "app: FastAPI"
+        },
+        {
+          "name": "stata_run_selection_endpoint",
+          "line": 2371,
+          "end_line": 2423,
+          "signature": "selection: str, timeout: int=600, session_id: str=None, working_dir: str=None"
+        },
+        {
+          "name": "stata_run_file_stream",
+          "line": 2425,
+          "end_line": 2623,
+          "signature": "file_path: str, timeout: int=600, working_dir: str=None, session_id: str=None, execution_id: str=None"
+        },
+        {
+          "name": "stata_run_file_endpoint",
+          "line": 2633,
+          "end_line": 2716,
+          "signature": "file_path: str, timeout: int=600, session_id: str=None, working_dir: str=None"
+        },
+        {
+          "name": "stata_run_file_stream_endpoint",
+          "line": 2725,
+          "end_line": 2770,
+          "signature": "file_path: str, timeout: int=600, working_dir: str=None, session_id: str=None, execution_id: str=None"
+        },
+        {
+          "name": "stata_run_selection_stream",
+          "line": 2773,
+          "end_line": 3025,
+          "signature": "selection: str, timeout: int=600, working_dir: str=None, session_id: str=None, execution_id: str=None"
+        },
+        {
+          "name": "stata_run_selection_stream_endpoint",
+          "line": 3035,
+          "end_line": 3078,
+          "signature": "selection: str, timeout: int=600, working_dir: str=None, session_id: str=None, execution_id: str=None"
+        },
+        {
+          "name": "call_tool",
+          "line": 3085,
+          "end_line": 3363,
+          "signature": "request: ToolRequest"
+        },
+        {
+          "name": "health_check",
+          "line": 3367,
+          "end_line": 3373,
+          "signature": ""
+        },
+        {
+          "name": "stop_execution",
+          "line": 3378,
+          "end_line": 3451,
+          "signature": "session_id: str=None"
+        },
+        {
+          "name": "reload_workers",
+          "line": 3454,
+          "end_line": 3512,
+          "signature": ""
+        },
+        {
+          "name": "get_execution_status",
+          "line": 3516,
+          "end_line": 3536,
+          "signature": ""
+        },
+        {
+          "name": "create_session",
+          "line": 3543,
+          "end_line": 3577,
+          "signature": ""
+        },
+        {
+          "name": "list_sessions",
+          "line": 3581,
+          "end_line": 3613,
+          "signature": ""
+        },
+        {
+          "name": "get_session_details",
+          "line": 3617,
+          "end_line": 3644,
+          "signature": "session_id: str"
+        },
+        {
+          "name": "destroy_session",
+          "line": 3648,
+          "end_line": 3675,
+          "signature": "session_id: str"
+        },
+        {
+          "name": "stop_session_execution",
+          "line": 3679,
+          "end_line": 3697,
+          "signature": "session_id: str"
+        },
+        {
+          "name": "_single_session_restart",
+          "line": 3702,
+          "end_line": 3714,
+          "signature": ""
+        },
+        {
+          "name": "restart_session",
+          "line": 3717,
+          "end_line": 3758,
+          "signature": ""
+        },
+        {
+          "name": "help_endpoint",
+          "line": 3774,
+          "end_line": 4113,
+          "signature": "topic: str, format: str='text'"
+        },
+        {
+          "name": "_help_html",
+          "line": 4116,
+          "end_line": 4391,
+          "signature": "topic: str"
+        },
+        {
+          "name": "_serve_graph_file",
+          "line": 4394,
+          "end_line": 4403,
+          "signature": "graph_path: str"
+        },
+        {
+          "name": "get_graph_from_batch",
+          "line": 4407,
+          "end_line": 4421,
+          "signature": "batch_id: str, filename: str"
+        },
+        {
+          "name": "get_graph",
+          "line": 4427,
+          "end_line": 4449,
+          "signature": "graph_name: str"
+        },
+        {
+          "name": "clear_history_endpoint",
+          "line": 4452,
+          "end_line": 4462,
+          "signature": ""
+        },
+        {
+          "name": "view_data_endpoint",
+          "line": 4465,
+          "end_line": 4702,
+          "signature": "if_condition: str=None, session_id: str=None, max_rows: int=10000"
+        },
+        {
+          "name": "interactive_window",
+          "line": 4705,
+          "end_line": 5102,
+          "signature": "file: str=None, code: str=None"
+        },
+        {
+          "name": "main",
+          "line": 5105,
+          "end_line": 5998,
+          "signature": ""
+        },
+        {
+          "name": "finalize",
+          "line": 987,
+          "end_line": 990,
+          "signature": "result_value"
+        },
+        {
+          "name": "finalize",
+          "line": 1606,
+          "end_line": 1609,
+          "signature": "result_value"
+        },
+        {
+          "name": "run_with_progress",
+          "line": 2480,
+          "end_line": 2526,
+          "signature": ""
+        },
+        {
+          "name": "run_with_progress",
+          "line": 2848,
+          "end_line": 2899,
+          "signature": ""
+        },
+        {
+          "name": "process_line",
+          "line": 2908,
+          "end_line": 2932,
+          "signature": "line: str"
+        },
+        {
+          "name": "_run_help",
+          "line": 3891,
+          "end_line": 3984,
+          "signature": ""
+        },
+        {
+          "name": "_run_find",
+          "line": 4205,
+          "end_line": 4271,
+          "signature": ""
+        },
+        {
+          "name": "include_resolver",
+          "line": 4328,
+          "end_line": 4368,
+          "signature": "include_name"
+        },
+        {
+          "name": "list_tools_http",
+          "line": 5461,
+          "end_line": 5520,
+          "signature": ""
+        },
+        {
+          "name": "call_tool_http",
+          "line": 5524,
+          "end_line": 5562,
+          "signature": "name: str, arguments: dict"
+        },
+        {
+          "name": "handle_mcp_streamable",
+          "line": 5600,
+          "end_line": 5608,
+          "signature": "request: Request"
+        },
+        {
+          "name": "_start_http_session_manager",
+          "line": 5615,
+          "end_line": 5625,
+          "signature": ""
+        },
+        {
+          "name": "_stop_http_session_manager",
+          "line": 5628,
+          "end_line": 5636,
+          "signature": ""
+        },
+        {
+          "name": "handle_set_logging_level",
+          "line": 5660,
+          "end_line": 5671,
+          "signature": "level: str"
+        },
+        {
+          "name": "execute_with_streaming",
+          "line": 5676,
+          "end_line": 5896,
+          "signature": "*call_args, **call_kwargs"
+        },
+        {
+          "name": "__init__",
+          "line": 5578,
+          "end_line": 5586,
+          "signature": "self, asgi_handler, scope, receive"
+        },
+        {
+          "name": "__call__",
+          "line": 5588,
+          "end_line": 5592,
+          "signature": "self, scope, receive, send"
+        },
+        {
+          "name": "send_log",
+          "line": 5794,
+          "end_line": 5808,
+          "signature": "level: str, message: str"
+        },
+        {
+          "name": "send_progress",
+          "line": 5810,
+          "end_line": 5822,
+          "signature": "elapsed: float, message: str | None=None"
+        },
+        {
+          "name": "run_stata_thread",
+          "line": 1850,
+          "end_line": 1876,
+          "signature": ""
+        },
+        {
+          "name": "windows_exception_handler",
+          "line": 5932,
+          "end_line": 5959,
+          "signature": "loop, context"
+        },
+        {
+          "name": "run_server_windows",
+          "line": 5961,
+          "end_line": 5971,
+          "signature": ""
+        }
+      ],
+      "anchors": [
+        {
+          "id": "S11",
+          "start_line": 3104,
+          "end_line": 3161,
+          "segment_sha256": "cca991f379b0cea18d77d236186aa306277a0e5b6e5346a33c285545630f334b",
+          "interpretation": "MCP selection dispatch timeout defaults and single-session direct fallback"
+        },
+        {
+          "id": "S12",
+          "start_line": 3275,
+          "end_line": 3335,
+          "segment_sha256": "8b73a71e5db6cfd79b54bc8e33ac02415a26b993791831cec5344fe3d359a8a9",
+          "interpretation": "MCP list/destroy session interface"
+        },
+        {
+          "id": "S13",
+          "start_line": 3377,
+          "end_line": 3425,
+          "segment_sha256": "2370faaff119a291e4e171bcf9d37a79f5904d85fe213fc15b5b8886888a607e",
+          "interpretation": "Hidden stop endpoint through same session manager"
+        },
+        {
+          "id": "S14",
+          "start_line": 5466,
+          "end_line": 5519,
+          "segment_sha256": "1a80a292d684f907823028cc23fd9d41660e8432dbb7c19392d43e348809ba8e",
+          "interpretation": "Advertised MCP argument schemas"
+        }
+      ]
+    },
+    {
+      "bytes": 11124,
+      "sha256": "000733162335c8be68981a8606918bda887c2fe471d43f664972a5b467205bb1",
+      "kind": "project",
+      "name": "live_windows.py",
+      "relative_path": "4 Academic Submission/wp06-live-control/live_windows.py",
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 38,
+          "end_line": 67,
+          "signature": "self"
+        },
+        {
+          "name": "ok",
+          "line": 69,
+          "end_line": 72,
+          "signature": "self, value"
+        },
+        {
+          "name": "own",
+          "line": 74,
+          "end_line": 77,
+          "signature": "self, handle"
+        },
+        {
+          "name": "close",
+          "line": 79,
+          "end_line": 82,
+          "signature": "self, handle"
+        },
+        {
+          "name": "close_all",
+          "line": 84,
+          "end_line": 92,
+          "signature": "self"
+        },
+        {
+          "name": "now",
+          "line": 94,
+          "end_line": 97,
+          "signature": "self"
+        },
+        {
+          "name": "milliseconds",
+          "line": 99,
+          "end_line": 101,
+          "signature": "self, deadline"
+        },
+        {
+          "name": "event",
+          "line": 103,
+          "end_line": 104,
+          "signature": "self"
+        },
+        {
+          "name": "duplicate",
+          "line": 106,
+          "end_line": 110,
+          "signature": "self, handle, access"
+        },
+        {
+          "name": "signal",
+          "line": 112,
+          "end_line": 113,
+          "signature": "self, handle"
+        },
+        {
+          "name": "wait",
+          "line": 115,
+          "end_line": 119,
+          "signature": "self, handle, deadline"
+        },
+        {
+          "name": "identity",
+          "line": 121,
+          "end_line": 126,
+          "signature": "self, handle"
+        },
+        {
+          "name": "open_identity",
+          "line": 128,
+          "end_line": 140,
+          "signature": "self, expected, job"
+        },
+        {
+          "name": "job",
+          "line": 142,
+          "end_line": 147,
+          "signature": "self"
+        },
+        {
+          "name": "active",
+          "line": 149,
+          "end_line": 152,
+          "signature": "self, job"
+        },
+        {
+          "name": "stop_job",
+          "line": 154,
+          "end_line": 157,
+          "signature": "self, job"
+        },
+        {
+          "name": "stop_process",
+          "line": 159,
+          "end_line": 162,
+          "signature": "self, handle, expected"
+        },
+        {
+          "name": "exit_code",
+          "line": 164,
+          "end_line": 169,
+          "signature": "self, handle"
+        },
+        {
+          "name": "spawn",
+          "line": 171,
+          "end_line": 226,
+          "signature": "self, role, bootstrap, script, job, capabilities=()"
+        },
+        {
+          "name": "read_bootstrap",
+          "line": 228,
+          "end_line": 243,
+          "signature": "self, handle"
+        },
+        {
+          "name": "exact",
+          "line": 230,
+          "end_line": 236,
+          "signature": "count"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "S15",
+          "start_line": 154,
+          "end_line": 225,
+          "segment_sha256": "110e90c5b1a2fc185e95521404095d9b2ca6a32aa2d14733f76cfc0c7010720b",
+          "interpretation": "Owned process/job containment and fixed artificial-script launch"
+        }
+      ]
+    },
+    {
+      "bytes": 23343,
+      "sha256": "c3238e610e80e50c2cf534463f085e09eae6832505d7d1caaa29b1ca14a009f6",
+      "kind": "project",
+      "name": "live_roles.py",
+      "relative_path": "4 Academic Submission/wp06-live-control/live_roles.py",
+      "functions": [
+        {
+          "name": "validate_profile",
+          "line": 21,
+          "end_line": 24,
+          "signature": "profile"
+        },
+        {
+          "name": "before",
+          "line": 26,
+          "end_line": 28,
+          "signature": "deadline, now"
+        },
+        {
+          "name": "identity_matches",
+          "line": 30,
+          "end_line": 32,
+          "signature": "expected, actual"
+        },
+        {
+          "name": "encode",
+          "line": 34,
+          "end_line": 40,
+          "signature": "body, key"
+        },
+        {
+          "name": "decode",
+          "line": 42,
+          "end_line": 57,
+          "signature": "wire, key"
+        },
+        {
+          "name": "sources",
+          "line": 59,
+          "end_line": 61,
+          "signature": ""
+        },
+        {
+          "name": "publish",
+          "line": 63,
+          "end_line": 72,
+          "signature": "path, wire"
+        },
+        {
+          "name": "check_evidence",
+          "line": 158,
+          "end_line": 215,
+          "signature": "ctx, identities, exits"
+        },
+        {
+          "name": "worker",
+          "line": 217,
+          "end_line": 236,
+          "signature": "ctx"
+        },
+        {
+          "name": "controller",
+          "line": 238,
+          "end_line": 248,
+          "signature": "ctx"
+        },
+        {
+          "name": "supervisor",
+          "line": 250,
+          "end_line": 277,
+          "signature": "ctx"
+        },
+        {
+          "name": "observer",
+          "line": 279,
+          "end_line": 310,
+          "signature": "ctx"
+        },
+        {
+          "name": "run_case",
+          "line": 312,
+          "end_line": 329,
+          "signature": "directory, profile"
+        },
+        {
+          "name": "run_owned_case",
+          "line": 331,
+          "end_line": 431,
+          "signature": "n, directory, profile"
+        },
+        {
+          "name": "role_main",
+          "line": 433,
+          "end_line": 450,
+          "signature": "role, bootstrap_handle"
+        },
+        {
+          "name": "main",
+          "line": 452,
+          "end_line": 473,
+          "signature": "argv"
+        },
+        {
+          "name": "unique",
+          "line": 45,
+          "end_line": 51,
+          "signature": "pairs"
+        },
+        {
+          "name": "__init__",
+          "line": 75,
+          "end_line": 104,
+          "signature": "self, native, packet"
+        },
+        {
+          "name": "admit",
+          "line": 106,
+          "end_line": 108,
+          "signature": "self"
+        },
+        {
+          "name": "write",
+          "line": 110,
+          "end_line": 114,
+          "signature": "self, kind, payload"
+        },
+        {
+          "name": "read",
+          "line": 116,
+          "end_line": 129,
+          "signature": "self, role, kind"
+        },
+        {
+          "name": "await_report",
+          "line": 131,
+          "end_line": 138,
+          "signature": "self, role, kind"
+        },
+        {
+          "name": "child",
+          "line": 140,
+          "end_line": 150,
+          "signature": "self, role, job, caps"
+        },
+        {
+          "name": "gate",
+          "line": 152,
+          "end_line": 156,
+          "signature": "self"
+        },
+        {
+          "name": "report",
+          "line": 172,
+          "end_line": 179,
+          "signature": "role, kind, payload"
+        }
+      ],
+      "anchors": [
+        {
+          "id": "S16",
+          "start_line": 140,
+          "end_line": 150,
+          "segment_sha256": "2ec09ec94289e4f767356c0cd403aa6de4b7b7175f7d3a8c31efce3d2cff24f5",
+          "interpretation": "Child launch fixed to live_roles.py"
+        },
+        {
+          "id": "S17",
+          "start_line": 217,
+          "end_line": 237,
+          "segment_sha256": "d567c0f59d1f8a7db25eba2a3b6d0c8d14c35b3ff915d1ab7aa01a64cdcd84ab",
+          "interpretation": "Artificial waiting worker is not a Stata runtime"
+        },
+        {
+          "id": "S18",
+          "start_line": 312,
+          "end_line": 340,
+          "segment_sha256": "aa5dd58fcf260b50e56a6596380aff3a39ae9ee683f01ceafe64e3178be9f61b",
+          "interpretation": "Artificial domain native QPC and inherited 5/8/10/12 envelope"
+        }
+      ]
+    }
+  ],
+  "entry_head": "f912000bfe31a3c19d02a338b3c3da9cc339f996"
+}

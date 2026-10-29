@@ -1,0 +1,1042 @@
+{
+  "schema": "WP06_ISOLATED_STATA_MANIFEST_V1",
+  "domain": "ARTIFICIAL",
+  "runtime_ready": false,
+  "manager_sha256": "5f9b427ffbd0d01afc51542a47f2652aff02a084c7c08cc73700ad9b8fda2308",
+  "contract_sha256": "80905ca792aa9056c7673bd6b24444fa5990e5756295828fab62ed6b57d12ef1",
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "bounds": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "startup_review": "UNBOUND",
+  "deployment": "NOT_DEPLOYED",
+  "extension_source_files": [
+    {
+      "file": "src/api_models.py",
+      "bytes": 4837,
+      "sha256": "d3c6d40e3d95a198c8f7b82669d8a3d0fabef77aeb673310342f40dcce3e3f3b",
+      "imports": [
+        {
+          "module": "typing",
+          "line": 10,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pydantic",
+          "line": 11,
+          "classification": "external_unbound",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/graph_artifacts.py",
+      "bytes": 6283,
+      "sha256": "83f389ea48157eedda81da13ec18d9ac69edfdc087cdcced86210f1154f26891",
+      "imports": [
+        {
+          "module": "json",
+          "line": 5,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 6,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "os",
+          "line": 7,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "shutil",
+          "line": 8,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 9,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 10,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "uuid",
+          "line": 11,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "typing",
+          "line": 12,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/output_filter.py",
+      "bytes": 15902,
+      "sha256": "b47b473ce1a1b3a783d38c20c9326799e936ddad2df5ee3b95f1c70371de2424",
+      "imports": [
+        {
+          "module": "os",
+          "line": 17,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "re",
+          "line": 18,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 19,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 20,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 21,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "typing",
+          "line": 22,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/session_manager.py",
+      "bytes": 46935,
+      "sha256": "5f9b427ffbd0d01afc51542a47f2652aff02a084c7c08cc73700ad9b8fda2308",
+      "imports": [
+        {
+          "module": "os",
+          "line": 24,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "sys",
+          "line": 25,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 26,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "uuid",
+          "line": 27,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "queue",
+          "line": 28,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "re",
+          "line": 29,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 30,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 31,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 32,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "multiprocessing",
+          "line": 33,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "typing",
+          "line": 34,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "dataclasses",
+          "line": 35,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "enum",
+          "line": 36,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "datetime",
+          "line": 37,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "stata_worker",
+          "line": 44,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "sys",
+          "line": 1189,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/smcl_parser.py",
+      "bytes": 42597,
+      "sha256": "e6e17c8bee999211796caaa9125c7932dfe37b4bf7a3586d82f4d7080627a283",
+      "imports": [
+        {
+          "module": "re",
+          "line": 7,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "os",
+          "line": 8,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 9,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/stata_mcp_server.py",
+      "bytes": 270346,
+      "sha256": "6aa984b08a6657254804e690c77fb877a2d8e62c3b809caa14fe533d30402092",
+      "imports": [
+        {
+          "module": "os",
+          "line": 8,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 9,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "json",
+          "line": 10,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "sys",
+          "line": 11,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 12,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "uuid",
+          "line": 13,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "argparse",
+          "line": 14,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 15,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "platform",
+          "line": 16,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "signal",
+          "line": 17,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "subprocess",
+          "line": 18,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "traceback",
+          "line": 19,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "socket",
+          "line": 20,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "asyncio",
+          "line": 21,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 22,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "typing",
+          "line": 23,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "urllib.parse",
+          "line": 24,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "warnings",
+          "line": 25,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "re",
+          "line": 26,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "utils",
+          "line": 34,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "smcl_parser",
+          "line": 35,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "graph_artifacts",
+          "line": 36,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "api_models",
+          "line": 51,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 179,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "output_filter",
+          "line": 800,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "io",
+          "line": 61,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "fastapi",
+          "line": 101,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "fastapi.responses",
+          "line": 102,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "fastapi_mcp",
+          "line": 103,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pydantic",
+          "line": 104,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "contextlib",
+          "line": 105,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "httpx",
+          "line": 106,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pandas",
+          "line": 374,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 2446,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "queue",
+          "line": 2447,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 2797,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "queue",
+          "line": 2798,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 2799,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "AppKit",
+          "line": 74,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 1286,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1287,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 1397,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1398,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "importlib",
+          "line": 3480,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "stata_worker",
+          "line": 3481,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "session_manager",
+          "line": 3486,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "session_manager",
+          "line": 3488,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 4527,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "mcp.server",
+          "line": 5452,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "mcp.server.streamable_http_manager",
+          "line": 5453,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "starlette.responses",
+          "line": 5454,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "types",
+          "line": 5898,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata",
+          "line": 423,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 3417,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "mcp.types",
+          "line": 5464,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "mcp.types",
+          "line": 5526,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "asyncio",
+          "line": 5791,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 5792,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "uvicorn",
+          "line": 5927,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "asyncio",
+          "line": 5928,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata",
+          "line": 462,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1044,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1567,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "traceback",
+          "line": 1788,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 1878,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "session_manager",
+          "line": 5385,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "io",
+          "line": 456,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 482,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 483,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "stata_setup",
+          "line": 522,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1240,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1829,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 537,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1870,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 1913,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "ctypes",
+          "line": 1928,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": [
+        {
+          "line": 3487,
+          "expression": "__import__"
+        }
+      ]
+    },
+    {
+      "file": "src/stata_worker.py",
+      "bytes": 52352,
+      "sha256": "0b5c27bdc3d2cb2b12327a2da43118cee8b124c753caf65d82af3d3c5cea088f",
+      "imports": [
+        {
+          "module": "os",
+          "line": 24,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "sys",
+          "line": 25,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "io",
+          "line": 26,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "re",
+          "line": 27,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "time",
+          "line": 28,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "uuid",
+          "line": 29,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "queue",
+          "line": 30,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 31,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "logging",
+          "line": 32,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "platform",
+          "line": 33,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "traceback",
+          "line": 34,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "threading",
+          "line": 35,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "tempfile",
+          "line": 36,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "shutil",
+          "line": 37,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "typing",
+          "line": 38,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "enum",
+          "line": 39,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "graph_artifacts",
+          "line": 46,
+          "classification": "extension_local",
+          "relative_level": 0
+        },
+        {
+          "module": "contextlib",
+          "line": 63,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "dataclasses",
+          "line": 64,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "multiprocessing",
+          "line": 1201,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 231,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 265,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 266,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 662,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata",
+          "line": 464,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata",
+          "line": 468,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "pystata.config",
+          "line": 472,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 485,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "hashlib",
+          "line": 535,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "traceback",
+          "line": 794,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "sfi",
+          "line": 945,
+          "classification": "external_unbound",
+          "relative_level": 0
+        },
+        {
+          "module": "numpy",
+          "line": 946,
+          "classification": "external_unbound",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    },
+    {
+      "file": "src/utils.py",
+      "bytes": 3987,
+      "sha256": "73f1f9557e2e31211884abd9579659a0d5220a3105896c2fb670b055ae5fbcae",
+      "imports": [
+        {
+          "module": "os",
+          "line": 10,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        },
+        {
+          "module": "platform",
+          "line": 11,
+          "classification": "stdlib_name_only",
+          "relative_level": 0
+        }
+      ],
+      "dynamic_import_sites": []
+    }
+  ],
+  "extension_package": {
+    "bytes": 12498,
+    "sha256": "a69894238d3d3de11894f3206d4fff63ce2c5f18a0d2bd911a3499d977901e0a"
+  },
+  "artificial_test_interpreter": {
+    "bytes": 262144,
+    "sha256": "0a864203aee170314ece97beaad6e50e226e76f0a3d73380a93ec472ed74f040"
+  },
+  "implementation_sources": {
+    "boundary.py": {
+      "bytes": 14878,
+      "sha256": "014cefeac197090f86a10543b31377df4e889b91013443b961a1e238cf4e7454"
+    },
+    "source_manifest.py": {
+      "bytes": 5695,
+      "sha256": "3355f6b9f83bb9a9e30471a086908c37739acec73fb88fd43a998644e3466d0d"
+    },
+    "test_boundary.py": {
+      "bytes": 14929,
+      "sha256": "cdc2259660af6d90a8165d941441f1dee44e4298bc8509b879ff95a101f3dd61"
+    },
+    "test_manifest.py": {
+      "bytes": 2803,
+      "sha256": "ff5d5114a1e735eab7fb4d7845a0f836001f758dc2de0cbd0ac572f615ddac29"
+    },
+    "test_support.py": {
+      "bytes": 5861,
+      "sha256": "2f181b18cda631783a6cd37aa61fa7aadff075d847abddc84c542b127a71b69c"
+    }
+  },
+  "proposed_deployment": {
+    "dispatcher_factory": "boundary.bind_dispatcher(manager)",
+    "manager_factory": "boundary.isolated_manager",
+    "parameters": [
+      "selection",
+      "session_id",
+      "timeout"
+    ],
+    "endpoint": null,
+    "credentials": null,
+    "shared_service_changes": false,
+    "actual_native_provider": null,
+    "live_launch_entrypoint": null
+  },
+  "startup": {
+    "required": [
+      "owned suspended allocation",
+      "job assignment before initialization",
+      "explicit nondefault session and epoch",
+      "audit engine/PyStata/profile dependencies",
+      "exclude hidden data loads and populated other frames",
+      "record all seed/log wrappers"
+    ],
+    "actual_verified": false
+  },
+  "outputs": {
+    "required": [
+      "new restricted per-run evidence directory",
+      "exclusive create-only receipts",
+      "private worker/debug/selection logs",
+      "isolated cwd/temp/graph/history paths",
+      "retention and final inventory"
+    ],
+    "actual_paths_bound": false
+  },
+  "runtime_unbound": [
+    "actual server/worker epoch",
+    "actual worker interpreter and environment",
+    "third-party package versions and transitive code",
+    "Stata engine/PyStata and startup profiles",
+    "native owned creation/control/cleanup provider",
+    "endpoint credentials and private output paths"
+  ],
+  "closure_limit": "All extension-local Python bytes are pinned; import declarations include conditional imports. Dynamic imports and external/stdlib transitive runtime code are not resolved or certified."
+}

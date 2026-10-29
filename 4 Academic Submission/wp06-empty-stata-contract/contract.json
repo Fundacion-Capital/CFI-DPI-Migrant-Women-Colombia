@@ -1,0 +1,78 @@
+{
+  "schema": "WP06_EMPTY_STATA_NOEXEC_V1",
+  "status": "STATIC_CONTRACT_COMPLETE_EXECUTION_HELD",
+  "execution_ready": false,
+  "single_session_fallback": "reject_before_dispatch",
+  "empty_observation_scope": "active_frame_only",
+  "startup_object_boundary": "The two selections observe only active-frame dimensions. A separately audited startup/dependency boundary must exclude hidden data loads, other populated frames and stored participant objects. No whole-session absence is certified by these payloads and no additional inspection is authorized.",
+  "authority": {
+    "stata_execution": false,
+    "process_launch": false,
+    "host_probe": false,
+    "live_control": false,
+    "service_change": false,
+    "participant_processing": false,
+    "fitting": false,
+    "release": false,
+    "commit": false,
+    "push": false,
+    "institutional_approval": false,
+    "owner_runtime_adoption": false
+  },
+  "route": {
+    "as_is_compatible": false,
+    "selected_live_route": null,
+    "future_candidate": "isolated_owned_stata_mcp",
+    "shared_current_service": "not_compatible_with_this_no_replacement_contract",
+    "substitute_stata_for_artificial_python_worker": "not_compatible_and_not_implemented",
+    "future_candidate_state": "requires_separate_source_bound_implementation_and_authority"
+  },
+  "proposed_bounds": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "budget_semantics": "Unadopted design ceilings, not measured Stata performance. One monotonic native clock origin precedes first owned process launch. Admission requires strictly less than the relevant deadline. The second dispatch must precede t=80 and have at least its nominal 10 seconds before t=90. All initialization, commands, control and cleanup share the same envelope. A nominal tool timeout is not independent containment.",
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "required_identity": [
+    "run_id", "session_id", "worker_epoch", "pid", "creation_time",
+    "retained_process_handle", "owned_job", "source_hashes",
+    "loaded_module_path", "loaded_module_disk_hash", "clock_domain"
+  ],
+  "required_before_execution": [
+    "fresh_explicit_authority", "source_bound_isolated_mcp_implementation",
+    "no_replacement_guard", "independent_ownership_before_stata_init",
+    "bounded_control_and_cleanup", "isolated_outputs_and_startup_audit",
+    "current_source_config_recheck", "fresh_noexecution_preflight"
+  ],
+  "required_success_evidence": [
+    "one_new_nondefault_logical_session_one_worker_epoch",
+    "independent_ownership_before_stata_initialization_and_command_admission",
+    "exact_two_selection_payloads_and_order",
+    "N_and_K_zero_before_and_after",
+    "same_physical_worker_identity_for_both_calls_and_cleanup",
+    "source_and_loaded_module_disk_identity_with_limits",
+    "no_recovery_retry_or_replacement",
+    "native_exit_witnesses_and_zero_active_owned_descendants",
+    "all_owned_handles_closed_and_all_output_paths_accounted",
+    "elapsed_time_below_all_relevant_design_ceilings"
+  ],
+  "transport_contract": "Future execution must use an explicitly bound isolated Stata-MCP selection interface, not shell Stata, a batch do-file, direct PyStata substitution or the shared default session. Admission must reject before dispatch if multi_session_enabled is false or the exact bound session manager is unavailable; it must never enter the current single-session direct-execution branch. This document supplies neither endpoint nor executable launcher. Existing exposed schemas do not provide a worker-epoch, no-replacement or independent-control capability.",
+  "wrapper_allowance": "Only after separate source-bound review: the exact initialized engine, dependency/startup behavior, first-call seed prefix, MCP named-log wrapper and isolated infrastructure metadata. No arbitrary extra selection, data viewer, graph export, help execution or file runner. Current temporary/shared paths are not approved output destinations.",
+  "busy_stata_cancellation_proven": false,
+  "historical_failures_preserved": true,
+  "participant_execution_gate": "CLOSED",
+  "institutional_and_release_gates": "UNCHANGED_AND_UNRESOLVED_WHERE_PREVIOUSLY_UNRESOLVED"
+}
