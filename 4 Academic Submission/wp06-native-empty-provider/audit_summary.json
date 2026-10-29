@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "status": "QUALIFIED_ARTIFACT_ONLY_CONFIG_DRIFT_UNADOPTED",
+  "full_preservation_contract_passed": false,
+  "artifact_integrity_accepted": true,
+  "config_drift_detected": true,
+  "config_written_by_workflow": false,
+  "owner_config_adoption": false,
+  "project_files_checked": 27009,
+  "runtime_inputs_checked": 11145,
+  "supplemental_inputs_checked": 587,
+  "runtime_catalog_files": 11778,
+  "source_scripts_checked": 16,
+  "differences": [
+    "C:\\Users\\jzava\\.codex\\config.toml"
+  ],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    }
+  ],
+  "own_tests": 82,
+  "normal_and_optimized": true,
+  "inherited_pure_tests": 235,
+  "policy_port_verified": true,
+  "independent_review_corrected_findings": 6,
+  "independent_postfix_review": false,
+  "activation_allowed": false,
+  "runtime_ready": false,
+  "activation_holds": [
+    "NO_EXECUTION_AUTHORITY",
+    "STARTUP_PROFILE_SCOPE_NOT_CLEARED",
+    "NATIVE_AND_MCP_ACCEPTANCE_NOT_EXECUTED",
+    "GLOBAL_CONFIG_DRIFT_UNRESOLVED"
+  ],
+  "protected_stata_execution_gate": "CLOSED",
+  "stata_calls": 0,
+  "worker_launches": 0,
+  "native_calls": 0,
+  "participant_processing": false,
+  "shared_service_changes": false,
+  "git_head": "61dc0a83fbd925983f1cc8200a0f2f2b7f0a9f6b",
+  "git_commit": false,
+  "git_push": false
+}

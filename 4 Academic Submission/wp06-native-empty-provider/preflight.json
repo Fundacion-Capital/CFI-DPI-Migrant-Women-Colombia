@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "status": "PASS_STATIC_PREPARATION_ONLY",
+  "bound_files": 11778,
+  "syntax_checked": 16,
+  "syntax_target": "Python 3.11 grammar only",
+  "differences": [],
+  "activation_allowed": false,
+  "activation_holds": [
+    "NO_EXECUTION_AUTHORITY",
+    "STARTUP_PROFILE_SCOPE_NOT_CLEARED",
+    "NATIVE_AND_MCP_ACCEPTANCE_NOT_EXECUTED",
+    "GLOBAL_CONFIG_DRIFT_UNRESOLVED"
+  ],
+  "native_calls": 0,
+  "worker_launches": 0,
+  "stata_calls": 0,
+  "participant_processing": false,
+  "loaded_runtime_verified": false,
+  "mcp_interoperability_executed": false
+}
