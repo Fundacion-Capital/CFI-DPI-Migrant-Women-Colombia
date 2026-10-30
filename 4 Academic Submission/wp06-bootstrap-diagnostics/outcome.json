@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_ONLY_SERENA_CACHE_DRIFT_UNADOPTED",
+  "full_preservation_contract_passed": false,
+  "owner_cache_adoption": false,
+  "cleanup_result_ownership_defect_reproduced": true,
+  "primary_bootstrap_operand_identified": false,
+  "static_packet_format_defect_established": false,
+  "actual_bootstrap_packet_retained": false,
+  "source_repair_applied": false,
+  "future_repair_acceptance_tests_passed": false,
+  "authority_consumed": true,
+  "native_launches": 0,
+  "new_execution_grants": 0,
+  "native_acceptance": false,
+  "current_native_cleanup_independently_established": false,
+  "participant_processing": false,
+  "fitting": false,
+  "global_settings_changes": false,
+  "shared_service_changes": false,
+  "historical_settings_exception_resolved": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

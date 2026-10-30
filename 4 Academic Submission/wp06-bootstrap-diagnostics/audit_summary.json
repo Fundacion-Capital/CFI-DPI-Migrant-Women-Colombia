@@ -1,0 +1,28 @@
+{
+  "qualification": "ARTIFACT_ONLY_SERENA_CACHE_DRIFT_UNADOPTED",
+  "qualified_artifact_checks_passed": true,
+  "full_preservation_contract_passed": false,
+  "original_failed_audit_sha256": "81f0af25e43d41c49a883f0499133af58b9868452d95bbc849a33ab862ab92da",
+  "project_files_checked": 27343,
+  "external_files_checked": 11734,
+  "known_differences": [
+    ".serena/cache/python/document_symbols.pkl",
+    ".serena/cache/python/raw_document_symbols.pkl"
+  ],
+  "exception_scope": "Semantic inspection cache writes; baseline not changed, restored or adopted",
+  "owner_cache_adoption": false,
+  "prior_seals_checked": 10,
+  "prior_seal_differences": 0,
+  "failed_run_files_checked": 12,
+  "settings_unchanged": true,
+  "native_launches": 0,
+  "live_probes": 0,
+  "source_repair_applied": false,
+  "new_execution_grants": 0,
+  "authority_consumed": true,
+  "native_acceptance": false,
+  "participant_processing": false,
+  "fitting": false,
+  "current_native_cleanup_independently_established": false,
+  "protected_stata_execution_gate": "CLOSED"
+}
