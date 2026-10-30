@@ -1,0 +1,79 @@
+{
+  "schema": "WP06_EXACT_SUCCESSOR_TRIAL_REQUEST_V1",
+  "status": "PROPOSED_UNAPPROVED_NOT_A_GRANT",
+  "approved": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "scope": "ONE_EMPTY_NATIVE_RUN",
+  "proposal": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-successor-refresh-ed9b546-20261030\\proposal.json",
+    "bytes": 4894,
+    "sha256": "fae415ece069d7417b27c43a451fe0e8b1da7c9b7d74d743aa420db3cc5d7eb3"
+  },
+  "candidate": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-successor-refresh-ed9b546-20261030\\candidate_binding.json",
+    "bytes": 7344,
+    "sha256": "c8ba5c1972e6e2a839a5751cab980280d063f9ec7b547d89446306779185ac2e"
+  },
+  "candidate_binding_sha256": "cbd2b4183098bcf85aba78823f36242a221a26975b401d13635fa97f778586e9",
+  "proposed_execution_binding_sha256": "2cf2b63ec509ea38f8790bc71b24d310a66e6c8cd61daed11b47927899472dfe",
+  "activation_delta": {
+    "activation_allowed": true,
+    "activation_holds": [],
+    "stdio_enabled": true,
+    "client_enabled": true
+  },
+  "proposed_run_id": "wp06-empty-refresh-20261030-ae2faf4ec4e4",
+  "proposed_private_root": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-refresh-20261030-ae2faf4ec4e4",
+  "source_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-startup-remediation\\deployment.json",
+    "bytes": 6911,
+    "sha256": "0d960d72116cec694cc1f1afcd24f1ab8221a52b68e47d5f219c2178db61c266"
+  },
+  "runtime_inventory": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-startup-remediation-faf9715-20261029\\runtime_inventory_v3.json",
+    "bytes": 3241377,
+    "sha256": "41e45d57812aa60a8d3edb10db90616759e1c55d24f201c945eb7441cf77b5f6"
+  },
+  "settings_observation": {
+    "path": "C:\\Users\\jzava\\.codex\\config.toml",
+    "bytes": 12734,
+    "sha256": "61e2d707d1b9dd8cf832bfeacdb167cdf576424d8b16cefcd6311e14bb47c9a5"
+  },
+  "settings_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "required_owner_decisions": [
+    "Accept the exact current settings fingerprint only as this isolated trial observation, not historical/global adoption",
+    "Accept the unmeasured native startup, licensing, SDK and timing risks solely for this empty trial",
+    "Authorize exactly one source-bound isolated trial with these IDs, paths, activation delta, two selections and unchanged bounds; no retries"
+  ],
+  "limits": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "proposed_grant_scope": "ONE_EMPTY_NATIVE_RUN",
+  "proposed_grant_validity_seconds": 900,
+  "approval_reference": null,
+  "expires_utc": null,
+  "proposed_execution_binding_written": false,
+  "prepared_run_created": false,
+  "participant_authority": false,
+  "fitting_authority": false,
+  "institutional_or_release_approval": false,
+  "native_acceptance": false,
+  "invalidation": "Any source, inventory, settings, scope, selection, bound or path drift; any occupied run root; denial, expiry or failed attempt. No repair/retry under the same grant."
+}

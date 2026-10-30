@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "scope": "FRESH_DOCUMENTARY_CHECKPOINT_NO_EXECUTION_AUTHORITY",
+  "current_checkpoint_preservation_passed": true,
+  "project_files_checked": 27277,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 75,
+      "differences": []
+    },
+    {
+      "files": 41,
+      "differences": []
+    }
+  ],
+  "settings_stability_initial_samples": 4,
+  "settings_stability_initial_seconds": 60.084776,
+  "settings_unchanged_at_final_check": true,
+  "current_settings": {
+    "path": "C:\\Users\\jzava\\.codex\\config.toml",
+    "bytes": 12734,
+    "sha256": "61e2d707d1b9dd8cf832bfeacdb167cdf576424d8b16cefcd6311e14bb47c9a5",
+    "mtime_ns": "1793342176859827100"
+  },
+  "settings_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_failed_audits_unchanged": true,
+  "source_bound_tests_normal": 122,
+  "source_bound_tests_optimized": 122,
+  "unchanged_successor_tests": 113,
+  "bound_files": 11782,
+  "syntax_checked": 20,
+  "offline_preflight_seconds": 15.59399999998277,
+  "native_capacity_validated": false,
+  "ready_for_owner_decision": true,
+  "execution_authorized": false,
+  "activation_ready": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "native_acceptance": false,
+  "participant_processing": false,
+  "stata_calls": 0,
+  "native_workers_started": 0,
+  "native_control_calls": 0,
+  "global_settings_edits": false,
+  "shared_service_changes": false,
+  "sealed_source_changes": false,
+  "git_head": "ed9b546b61677dde7a9c63de182ad2db62321eb8",
+  "git_commit": false,
+  "git_push": false,
+  "protected_stata_execution_gate": "CLOSED"
+}
