@@ -1,0 +1,78 @@
+{
+  "passed": false,
+  "scope": "DOCUMENTARY_ARTIFACT_ONLY_SETTINGS_DRIFT_UNADOPTED",
+  "documentary_artifact_qualification_passed": true,
+  "full_preservation_contract_passed": false,
+  "project_files_checked": 27234,
+  "external_files_checked": 11734,
+  "differences": [
+    "C:\\Users\\jzava\\.codex\\config.toml"
+  ],
+  "errors": [
+    "settings_identity",
+    "settings_changed_during_checkpoint"
+  ],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 75,
+      "differences": []
+    }
+  ],
+  "source_bound_tests_normal": 123,
+  "source_bound_tests_optimized": 123,
+  "unchanged_successor_tests": 113,
+  "bound_files": 11782,
+  "syntax_checked": 20,
+  "final_static_seconds": 18.828999999997905,
+  "earlier_concurrent_static_seconds": 144.68799999999464,
+  "earlier_serial_static_seconds": 25.40600000001723,
+  "offline_timing_is_native_acceptance": false,
+  "current_settings_preserved": false,
+  "settings_drift_observed_during_checkpoint": true,
+  "request_invalidated": true,
+  "current_settings_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_full_preservation_contract_passed": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "client_launched": false,
+  "native_acceptance": false,
+  "participant_processing": false,
+  "stata_calls": 0,
+  "native_workers_started": 0,
+  "native_control_calls": 0,
+  "global_settings_changed_during_checkpoint": true,
+  "global_settings_changes_by_this_workflow": false,
+  "shared_service_changes": false,
+  "sealed_successor_source_changes": false,
+  "git_head": "24c5588f4bd96e5f309ed71a0089bb2863f22dd6",
+  "git_commit": false,
+  "git_push": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

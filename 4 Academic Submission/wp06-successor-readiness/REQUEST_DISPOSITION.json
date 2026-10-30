@@ -1,0 +1,24 @@
+{
+  "status": "INVALIDATED_SETTINGS_CHANGED_AFTER_ENTRY",
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-successor-readiness\\TRIAL_REQUEST.json",
+    "bytes": 4262,
+    "sha256": "afcb11a60b648c50481d23c18316ff32ea7f9abc2140197fb9389c1d6a9687ad"
+  },
+  "entry_settings": {
+    "path": "C:\\Users\\jzava\\.codex\\config.toml",
+    "bytes": 12731,
+    "sha256": "c91ae9511a77d762cf1a21bb4cfd4eb2b80ff9a52d75d0ce97af01c309d3ea02"
+  },
+  "later_settings": {
+    "path": "C:\\Users\\jzava\\.codex\\config.toml",
+    "bytes": 12734,
+    "sha256": "61e2d707d1b9dd8cf832bfeacdb167cdf576424d8b16cefcd6311e14bb47c9a5"
+  },
+  "execution_authorized": false,
+  "activation_ready": false,
+  "settings_adopted": false,
+  "fresh_stable_checkpoint_required": true,
+  "original_request_preserved": true,
+  "reason": "The exact settings identity in the proposed request no longer matches live settings. Returning to an older fingerprint does not repair entry-to-final preservation."
+}
