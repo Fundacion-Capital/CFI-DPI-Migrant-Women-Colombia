@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "scope": "FAILED_SINGLE_TRIAL_PRESERVATION_AND_SAVED_STATE_AUDIT_ONLY",
+  "trial_success": false,
+  "native_acceptance": false,
+  "native_exit_cleanup_independently_established": false,
+  "client_launches": 1,
+  "retries": 0,
+  "replacements": 0,
+  "authority_consumed": true,
+  "project_files_checked": 27305,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 75,
+      "differences": []
+    },
+    {
+      "files": 41,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    }
+  ],
+  "native_run_files_checked": 12,
+  "settings_unchanged": true,
+  "historical_settings_exception_resolved": false,
+  "participant_processing": false,
+  "fitting": false,
+  "provider_or_analysis_source_changed": false,
+  "global_settings_edits": false,
+  "shared_service_changes": false,
+  "git_head": "a4aa04eae844ebec1b1890bd59534b8ad6973aca",
+  "git_commit": false,
+  "git_push": false,
+  "protected_stata_execution_gate": "CLOSED"
+}
