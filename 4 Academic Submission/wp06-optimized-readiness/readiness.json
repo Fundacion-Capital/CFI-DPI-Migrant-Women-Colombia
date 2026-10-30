@@ -1,0 +1,92 @@
+{
+  "status": "READY_FOR_OWNER_DECISION_NOT_EXECUTION_SETTINGS_DRIFT_UNADOPTED",
+  "ready_for_owner_decision": true,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "client_launched": false,
+  "native_acceptance": false,
+  "native_capacity_validated": false,
+  "current_settings_observation_adopted": false,
+  "current_cache_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_cache_exception_resolved": false,
+  "historical_settings_continuity_established": false,
+  "full_historical_preservation_contract_passed": false,
+  "participant_processing_authorized": false,
+  "fitting_authorized": false,
+  "institutional_or_release_approval": false,
+  "bounds_changed": false,
+  "retry_or_replacement_allowed": false,
+  "global_configuration_or_shared_service_changes": false,
+  "source_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\deployment.json",
+    "bytes": 7098,
+    "sha256": "94912b2c3540768bc3ba7996b0adfba0bda837ae7d4807fa521aeb7a41bc9c88"
+  },
+  "source_package_seal": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\seal.json",
+    "bytes": 44468,
+    "sha256": "e1e2f0102c880529b02a48377d91b3ea3e4a32f7ea7b479cb688e46b3ae07059"
+  },
+  "source_package_readback": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\readback.json",
+    "bytes": 419,
+    "sha256": "5f3812852838eafbe90129d9ce574319ab43a2cf521d3c72b8ee9730d9274184"
+  },
+  "source_version": 2,
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-optimized-readiness\\TRIAL_REQUEST.json",
+    "bytes": 8712,
+    "sha256": "1e311440537e11f748c10d484a63aa8c8698dc7458e6c251741f6b3c03a74201"
+  },
+  "candidate_binding_sha256": "8bb7044c71b1c6147a0a455e2192cbdecf3368f10822a4e87f585784095b5767",
+  "proposed_execution_binding_sha256": "802f9ebcc1564f7d7ee585dfe2ebce8de354081de428d57425f3997e6e80c1e5",
+  "proposed_run_id": "wp06-empty-optimized-20261030-70e785c3246c",
+  "proposed_root_absent": true,
+  "current_settings_gate": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-optimized-readiness-2de351c-20261030\\settings_final_gate.json",
+    "bytes": 1748,
+    "sha256": "ce662ef95bc622c09b5f79911453946629643044d834ba5350d98fe2a7249c88"
+  },
+  "settings_stable": true,
+  "settings_stability_samples": 4,
+  "settings_first_observed_utc": "2026-10-30T21:08:59.168045+00:00",
+  "settings_last_observed_utc": "2026-10-30T21:09:59.477705+00:00",
+  "settings_changed_since_entry": true,
+  "failed_documentary_preparations": 2,
+  "native_trial_attempts": 0,
+  "new_execution_grants": 0,
+  "source_preflight": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-optimized-readiness-2de351c-20261030\\preflight_final.json",
+    "bytes": 21569,
+    "sha256": "91fbf9b6363d222885230d0216d289fdc37a4ad4c124d243b94ddfc4962145f7"
+  },
+  "bound_files": 11786,
+  "syntax_checked": 24,
+  "offline_preflight_seconds": 16.203,
+  "offline_timing_proves_native_capacity": false,
+  "initial_offline_preflight_seconds": 146.797,
+  "report": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-optimized-readiness\\REPORT.md",
+    "bytes": 9526,
+    "sha256": "4f82ed6ab2f0153031536aa4c561c69a010ff7daf6484bfb3c3f162be9db55f5"
+  },
+  "checklist": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-optimized-readiness\\AUTHORIZATION_CHECKLIST.md",
+    "bytes": 2705,
+    "sha256": "eb60480ad929bc0222e4539e5729f78f11892fe4813546002537764849d34998"
+  },
+  "remaining_owner_decisions": [
+    "limited_exact_settings_and_cache_acknowledgment",
+    "empty_trial_only_runtime_risk_acceptance",
+    "single_exact_expiring_trial_authority"
+  ],
+  "decision_status": {
+    "limited_observations_acknowledged": false,
+    "empty_only_risks_accepted": false,
+    "single_trial_authorized": false
+  },
+  "protected_stata_execution_gate": "CLOSED"
+}

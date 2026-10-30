@@ -1,0 +1,13 @@
+# Exact owner checkpoint — unapproved
+
+Read REPORT.md, TRIAL_REQUEST.json, readiness.json and the final audit/readback together. **No box is accepted by creating this package.** All three decision_status fields remain false; approval_reference and expires_utc remain null. Do not launch from this checklist.
+
+1. **Limited observation acknowledgment:** explicitly acknowledge only the final settings/cache identities pinned in this exact package for one isolated empty trial. The settings changed during preparation; the cause is unknown. The last four-sample interval was stable, but neither historical/global adoption nor uninterrupted settings preservation is established.
+2. **Empty-trial-only risk acceptance:** explicitly accept the unresolved startup, licensing, SDK, capacity, containment and terminal-evidence risks for this exact empty trial only. The fresh complete offline inventory/syntax check took **146.797 seconds**, exceeding the 60-second bootstrap allowance even though offline timing is not a native timing proof. Earlier faster measurements do not remove this warning. No deadline extension or retry is proposed.
+3. **Exact single-trial authority:** separately authorize the exact new run `wp06-empty-optimized-20261030-70e785c3246c`, source/candidate/request identities, prospective four-field activation digest, two literal selections and unchanged limits. A later grant must have a real approval reference, an actual issuance/expiry window of 900 seconds and independent freshness checks. One attempt only; no retries, replacement, participant processing, fitting, settings/service changes, Git actions or release authority.
+
+Before any separately authorized implementation: recheck the sealed package and all source/inventory/settings/cache identities, the absent proposed root, exact selection payload and clocks, and current authority scope. Any drift, denial, expiry, occupied root or consumed attempt invalidates the checkpoint. Do not substitute old approvals or silently regenerate a changed request. If evidence is missing, stop and preserve it as a failure.
+
+Expected later evidence: owned process/target/job identities; watchdog/worker readiness; runtime proof; both exact markers and active-frame N=0/K=0; observed owned exit/inventory before disposal; recorded closure failures and terminal cleanup publication. No live evidence has been obtained in this preparation stage.
+
+The separately retained post-review complete offline preflight took 16.203 seconds. Its faster result does not erase the initial 146.797-second observation or establish a native upper bound. Any future risk acceptance must acknowledge both observations and the unchanged execution deadlines.
