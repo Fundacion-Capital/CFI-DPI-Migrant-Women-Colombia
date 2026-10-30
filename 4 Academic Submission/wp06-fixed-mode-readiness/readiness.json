@@ -1,0 +1,104 @@
+{
+  "status": "READY_FOR_OWNER_DECISION_NOT_EXECUTION_FIXED_MODE",
+  "fixed_mode": "STEPS_COMMANDS",
+  "mode_choice_approved": true,
+  "owner_mode_checkpoint": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-fixed-mode-readiness-37bee08-20261030\\OWNER_MODE_CHECKPOINT.json",
+    "bytes": 863,
+    "sha256": "4cc312da15c7ea67a710c2086bfa0d827f5f995f0ce189f8027670751930e82f"
+  },
+  "effective_client_mode_verified": false,
+  "mode_policy": "RAW_CONFIG_AND_METADATA_STILL_PINNED",
+  "ready_for_owner_decision": true,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "client_launched": false,
+  "native_acceptance": false,
+  "native_capacity_validated": false,
+  "current_settings_observation_adopted": false,
+  "current_cache_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_cache_exception_resolved": false,
+  "historical_settings_continuity_established": false,
+  "full_historical_preservation_contract_passed": false,
+  "participant_processing_authorized": false,
+  "fitting_authorized": false,
+  "institutional_or_release_approval": false,
+  "bounds_changed": false,
+  "retry_or_replacement_allowed": false,
+  "global_configuration_or_shared_service_changes": false,
+  "source_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\deployment.json",
+    "bytes": 7098,
+    "sha256": "94912b2c3540768bc3ba7996b0adfba0bda837ae7d4807fa521aeb7a41bc9c88"
+  },
+  "source_package_seal": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\seal.json",
+    "bytes": 44468,
+    "sha256": "e1e2f0102c880529b02a48377d91b3ea3e4a32f7ea7b479cb688e46b3ae07059"
+  },
+  "source_package_readback": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\readback.json",
+    "bytes": 419,
+    "sha256": "5f3812852838eafbe90129d9ce574319ab43a2cf521d3c72b8ee9730d9274184"
+  },
+  "source_version": 2,
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-fixed-mode-readiness\\TRIAL_REQUEST.json",
+    "bytes": 9513,
+    "sha256": "022d1ab6c3c86739bcd4ca9f8b22fb0e68c86034db898db17aa2b233e2a36eda"
+  },
+  "candidate_binding_sha256": "c5fbd35867871cd2c627ac79cb33bf4efa9fc00507996d1d9c4aba923054d16e",
+  "proposed_execution_binding_sha256": "a857a3bcc3b8eb4b7129f45c4d662319a074e6d6984c45ac58a6503ea25249ee",
+  "proposed_run_id": "wp06-empty-fixed-mode-20261030-bdc424bd9b7f",
+  "proposed_root_absent": true,
+  "current_settings_gate": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-fixed-mode-readiness-37bee08-20261030\\settings_final_gate.json",
+    "bytes": 2209,
+    "sha256": "141f837d9426efddf240bd7289d9c93659252e71ef178e56d9143a278c58fcd3"
+  },
+  "settings_stable": true,
+  "settings_stability_samples": 4,
+  "settings_first_observed_utc": "2026-10-30T23:04:27.844101+00:00",
+  "settings_last_observed_utc": "2026-10-30T23:05:28.158629+00:00",
+  "settings_changed_since_entry": false,
+  "failed_documentary_preparations": 0,
+  "native_trial_attempts": 0,
+  "new_execution_grants": 0,
+  "source_preflight": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-fixed-mode-readiness-37bee08-20261030\\preflight_reviewed.json",
+    "bytes": 22842,
+    "sha256": "a8a3d8f5bec9d5c18a37fa404a3f3befb1392f10a6b757c38bea696e3f50ba9e"
+  },
+  "bound_files": 11786,
+  "syntax_checked": 24,
+  "offline_preflight_seconds": 117.562,
+  "offline_timing_proves_native_capacity": false,
+  "historical_offline_preflight_seconds": [
+    146.797,
+    16.203
+  ],
+  "report": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-fixed-mode-readiness\\REPORT.md",
+    "bytes": 9410,
+    "sha256": "f1af3443b133914000a1b5f2152f275e08667cd09d3f345321359645eb2b19f1"
+  },
+  "checklist": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-fixed-mode-readiness\\AUTHORIZATION_CHECKLIST.md",
+    "bytes": 2835,
+    "sha256": "df50562652e70a013f1ae609d9dbf2f2e886e55f8d40c17b9ac9f3d541e9dc63"
+  },
+  "remaining_owner_decisions": [
+    "limited_exact_settings_and_cache_acknowledgment",
+    "empty_trial_only_runtime_risk_acceptance",
+    "single_exact_expiring_trial_authority"
+  ],
+  "decision_status": {
+    "limited_observations_acknowledged": false,
+    "empty_only_risks_accepted": false,
+    "single_trial_authorized": false
+  },
+  "protected_stata_execution_gate": "CLOSED"
+}

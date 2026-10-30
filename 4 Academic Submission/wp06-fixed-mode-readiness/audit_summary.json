@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "scope": "FIXED_MODE_DOCUMENTARY_READINESS_ONLY",
+  "status": "COMPLETE_FIXED_MODE_OWNER_CHECKPOINT_NOT_EXECUTION",
+  "project_files_checked": 27853,
+  "external_files_checked": 11734,
+  "differences": [],
+  "unexpected_differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-live-control-365fea7\\seal.json",
+      "files": 270,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\graphify-project-20261028\\qualified_index_seal.json",
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-stata-contract-f912000-20261029\\seal.json",
+      "files": 31,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-isolated-stata-boundary-f912000-20261029\\seal.json",
+      "files": 78,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-native-empty-provider-61dc0a8-20261029\\seal.json",
+      "files": 118,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-activation-readiness-91fd20a-20261029\\seal.json",
+      "files": 26,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-startup-remediation-faf9715-20261029\\seal.json",
+      "files": 75,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-successor-readiness-24c5588-20261030\\seal.json",
+      "files": 41,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-successor-refresh-ed9b546-20261030\\seal.json",
+      "files": 26,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-trial-a4aa04e-20261030\\seal.json",
+      "files": 36,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-bootstrap-diagnostics-5aa8091-20261030\\seal.json",
+      "files": 38,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-remediation-42bc9be-20261030\\seal.json",
+      "files": 108,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-readiness-424e076-20261030\\seal.json",
+      "files": 66,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-startup-cost-d7a0ee0-20261030\\seal.json",
+      "files": 50,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\seal.json",
+      "files": 141,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-optimized-readiness-2de351c-20261030\\failure_seal.json",
+      "files": 82,
+      "differences": []
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-settings-investigation-6772d06-20261030\\seal.json",
+      "files": 11,
+      "differences": []
+    }
+  ],
+  "normal_tests": 199,
+  "optimized_tests": 199,
+  "distinct_tests": 199,
+  "tested_input_fingerprints": 385,
+  "source_bound_files": 11786,
+  "offline_preflight_seconds": 117.562,
+  "historical_offline_preflight_seconds": [
+    146.797,
+    16.203
+  ],
+  "settings_changed_during_checkpoint": false,
+  "settings_changes_by_this_workflow": false,
+  "fixed_mode": "STEPS_COMMANDS",
+  "mode_choice_approved": true,
+  "effective_client_mode_verified": false,
+  "settings_stable_at_final_boundary": true,
+  "current_checkpoint_preservation_passed": true,
+  "full_historical_preservation_contract_passed": false,
+  "historical_settings_continuity_established": false,
+  "historical_settings_adoption": false,
+  "historical_cache_adoption": false,
+  "original_source_changed": false,
+  "analysis_changed": false,
+  "activation_allowed": false,
+  "activation_ready": false,
+  "runtime_ready": false,
+  "execution_authorized": false,
+  "native_acceptance": false,
+  "native_capacity_validated": false,
+  "native_launches": 0,
+  "new_execution_grants": 0,
+  "active_binding_created": false,
+  "participant_processing": false,
+  "fitting": false,
+  "deadline_extensions": false,
+  "shared_service_changes": false,
+  "live_probes": 0,
+  "git_head": "37bee084901f5f0dc1a39fdedc925284bb6e76b3",
+  "git_commit": false,
+  "git_push": false,
+  "publication": false,
+  "protected_stata_execution_gate": "CLOSED"
+}
