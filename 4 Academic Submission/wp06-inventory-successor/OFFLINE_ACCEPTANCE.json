@@ -1,0 +1,273 @@
+{
+  "schema": "WP06_DISABLED_INVENTORY_OPTIMIZATION_V1",
+  "scope": "OFFLINE_CANDIDATE_NOT_NATIVE_ACCEPTANCE",
+  "observations": [
+    {
+      "label": "predecessor_3",
+      "receipt": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_predecessor_3.json",
+        "bytes": 15693,
+        "sha256": "f3c2a67dc9a1bf9b4b2de8d5ed8171fe4af4e2a60ef1522a9f75acd370fed553"
+      },
+      "started_utc": "2026-10-30T19:48:39.692359+00:00",
+      "ended_utc": "2026-10-30T19:51:10.087101+00:00",
+      "seconds": 150.39533709996613,
+      "files": 11785,
+      "path_resolutions": 23619
+    },
+    {
+      "label": "successor_3",
+      "receipt": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_successor_3.json",
+        "bytes": 16191,
+        "sha256": "90e6ad3a39c6093c634ec3136234de1a1053708110878751a2a5b77355579760"
+      },
+      "started_utc": "2026-10-30T19:51:10.944586+00:00",
+      "ended_utc": "2026-10-30T19:51:30.849821+00:00",
+      "seconds": 19.90478040004382,
+      "files": 11786,
+      "path_resolutions": 11836
+    },
+    {
+      "label": "successor_4",
+      "receipt": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_successor_4.json",
+        "bytes": 16189,
+        "sha256": "8ac792766a04975cffaad53ea81826a0de721fdc470e77879d0084aa2a4cfac6"
+      },
+      "started_utc": "2026-10-30T19:51:31.523927+00:00",
+      "ended_utc": "2026-10-30T19:51:47.360800+00:00",
+      "seconds": 15.836696700018365,
+      "files": 11786,
+      "path_resolutions": 11836
+    },
+    {
+      "label": "predecessor_4",
+      "receipt": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_predecessor_4.json",
+        "bytes": 15693,
+        "sha256": "8ac66ad0f980e15d98a45b034e878810ad244d0cc4068847a48c194bab34e313"
+      },
+      "started_utc": "2026-10-30T19:51:48.056977+00:00",
+      "ended_utc": "2026-10-30T19:52:11.836391+00:00",
+      "seconds": 23.779267099977005,
+      "files": 11785,
+      "path_resolutions": 23619
+    }
+  ],
+  "predecessor_median_seconds": 87.08730209997157,
+  "successor_median_seconds": 17.870738550031092,
+  "descriptive_median_reduction_percent": 79.47951294952685,
+  "timing_not_controlled_or_native": true,
+  "all_observations_retained": true,
+  "changed_original_modules": [
+    "deployment.py"
+  ],
+  "added_provider_modules": [
+    "test_inventory.py"
+  ],
+  "predecessor_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.json",
+    "bytes": 7008,
+    "sha256": "7529bd78733cb01eeb6b59fdd205faed378a34523cf41c261408978f75ec1645"
+  },
+  "successor_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\deployment.json",
+    "bytes": 7098,
+    "sha256": "94912b2c3540768bc3ba7996b0adfba0bda837ae7d4807fa521aeb7a41bc9c88"
+  },
+  "successor_inventory": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\runtime_inventory_v2.json",
+    "bytes": 3242363,
+    "sha256": "4a591d21c59f58d2a2ef7fca9e4c379f5487814fd71033ac68286bfec9c98c5a"
+  },
+  "source_modules": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\deployment.py",
+      "bytes": 9072,
+      "sha256": "23ae823f221992cd44e736ee7629813b02e92f1cacd3d5423269d032747bd9b2"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\empty_client.py",
+      "bytes": 5015,
+      "sha256": "f6ffdce34c23db84c7029e1b9a2256f946bca33465a32b8d8ae4a72175d2e351"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\mcp_adapter.py",
+      "bytes": 6012,
+      "sha256": "372789a1674c100f9b9535257f9389e776c9217942748f8db1fb47af4007644a"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\native_provider.py",
+      "bytes": 18039,
+      "sha256": "71e2b8063b57401c4d80aa9ef17d97302198c98f1f872c3980fae85a4e39ccec"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\native_session.py",
+      "bytes": 17445,
+      "sha256": "0d26175278ac03a24df85aca7031cb909a823e76040ba8eca00872f19d007c88"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\preflight.py",
+      "bytes": 1404,
+      "sha256": "c7cd2c213449009e264ee88dbb709b5b0b8fad8e0a319920052750133344247c"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\private_channel.py",
+      "bytes": 4772,
+      "sha256": "41b66dda15f72218923c0858e5e103d5c50de6301a9048a1ea4faa42b225653b"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\runtime_roles.py",
+      "bytes": 11946,
+      "sha256": "8423aac5de9ad0ef7a7eb04b6c685b96086fa07b12f79649493d57ce1ad92a8c"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\startup_guard.py",
+      "bytes": 6901,
+      "sha256": "5ad938d95f8f19d431d55fab560135c27994356c4e863dcedb450afba3e40d61"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_abi.py",
+      "bytes": 4756,
+      "sha256": "dc46fd2fa7036debb05e456ced83e629f3929f3927f48a3ad5941fe6ae63ac91"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_adapter.py",
+      "bytes": 2529,
+      "sha256": "b6bc5aee45967bf4ac7eeabaf7455d4c22740aa8cda2ee2a7419d951d6ffeb1e"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_bootstrap.py",
+      "bytes": 9253,
+      "sha256": "4de9af72b337be1d58af52861d01fbddf60c4191dc17691d5fded97590b088a0"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_client.py",
+      "bytes": 9852,
+      "sha256": "2562c52197a51eee43de2b9d5c82f9a9eec3ee8df37383d5785eafc073725d43"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_identity.py",
+      "bytes": 3477,
+      "sha256": "631a308885a935e61bbca53a265d795716c7826d7116312f6cae4c01593919a4"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_inventory.py",
+      "bytes": 8291,
+      "sha256": "e21f32b04f8a86608da2d0a9f606920e4d84ab1dccfeb3462a1cb8d2a5474424"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_lifecycle.py",
+      "bytes": 14321,
+      "sha256": "606ed02969b9b62fe71c32d10c78fb522c139ac0c054a573f073e9583a968dfc"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_native.py",
+      "bytes": 6562,
+      "sha256": "5612130f0d408fc59e42602d4b683b38a92f6b2b78ca3cda5776269771ddede2"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_port.py",
+      "bytes": 1970,
+      "sha256": "76ad1ec12dc6c5b11ef71b7b7c3e086011923d8371d3ed507ef28266229df90e"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_review.py",
+      "bytes": 6268,
+      "sha256": "b8c2153c1fa94aef77be4741972ccc59bb77ea5ce81ddb353ef672398ca96e68"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_review_fixes.py",
+      "bytes": 7765,
+      "sha256": "004072e0b95af0d78ae6717acb1e1497c0577aaa3668a4961a00d31e707f7327"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_roles.py",
+      "bytes": 3137,
+      "sha256": "0161a36c3ea942a6722da4a41fc8a0bd38643ce92b409e20c06e234eb830e8ed"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_startup.py",
+      "bytes": 10814,
+      "sha256": "b29ef894797fc89deb4e0599c4c6b1f8f8967264967257c7a51a7ddbb2fee671"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\test_support.py",
+      "bytes": 6531,
+      "sha256": "f4cba9a90aed35c1e08dc66154db3e606b189bff7907b8ee20c4319b604eb935"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\win32_owner.py",
+      "bytes": 9450,
+      "sha256": "2919917e0e2dd813dbbc630345ed25840411bdac315dda872a59d4c06b2ab2c9"
+    }
+  ],
+  "fixed_bounds": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "selections_unchanged": true,
+  "conditional_full_checks": 5,
+  "serial_role_checks_under_shared_bootstrap": 2,
+  "bootstrap_seconds": 60,
+  "illustrative_role_cost_seconds": 19.90478040004382,
+  "illustrative_bootstrap_headroom_seconds": 20.190439199912362,
+  "illustration_is_not_a_prediction": true,
+  "run_root_absent": true,
+  "run_scope": null,
+  "activation_allowed": false,
+  "runtime_ready": false,
+  "stdio_enabled": false,
+  "client_enabled": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "native_capacity_validated": false,
+  "new_execution_grants": 0,
+  "native_operations": 0,
+  "participant_processing": false,
+  "fitting": false,
+  "settings_changes": false,
+  "deadline_extensions": false,
+  "historical_settings_adoption": false,
+  "historical_cache_adoption": false,
+  "institutional_or_release_approval": false,
+  "source_version": 2,
+  "retired_version_1_manifest": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\v1_archive_manifest.json",
+    "bytes": 12480,
+    "sha256": "968db33761b8f3b1368bf69d3c34480f48a3baa86ff41399e63b2546e9d536b8"
+  },
+  "retired_observations": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_predecessor_1.json",
+      "bytes": 15694,
+      "sha256": "0264816f8b7cfabc50023b01f9dce291948e13aeb520360ab07230f75a998490"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_successor_1.json",
+      "bytes": 16189,
+      "sha256": "6d98b5b99b1420a372b7a3f9bcc725b58eb8005fe440378394ffe220438a8a58"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_successor_2.json",
+      "bytes": 16191,
+      "sha256": "fcd18c4d519e307ed80bbef8d247e2e260ad449541afde5c17baea9531a0820a"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\profile_predecessor_2.json",
+      "bytes": 15691,
+      "sha256": "b3557395e462905a8dd955a12108b4a23e2e0ad0686ea1fb06caa4daf3c90a35"
+    }
+  ]
+}

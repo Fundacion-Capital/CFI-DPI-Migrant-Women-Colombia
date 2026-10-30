@@ -1,0 +1,157 @@
+{
+  "schema": "WP06_NATIVE_EMPTY_V1",
+  "domain": "NATIVE_EMPTY",
+  "runtime_ready": false,
+  "activation_allowed": false,
+  "activation_holds": [
+    "NO_EXECUTION_AUTHORITY",
+    "GLOBAL_CONFIG_DRIFT_UNRESOLVED",
+    "STARTUP_PROFILE_SCOPE_NOT_CLEARED",
+    "NO_PREPARED_ASSIGNED_RUN",
+    "NATIVE_AND_MCP_ACCEPTANCE_NOT_EXECUTED",
+    "LIFECYCLE_REMEDIATION_ARTIFICIAL_ONLY",
+    "HISTORICAL_CACHE_DRIFT_UNADOPTED",
+    "INVENTORY_OPTIMIZATION_OFFLINE_ONLY"
+  ],
+  "manager_sha256": "5f9b427ffbd0d01afc51542a47f2652aff02a084c7c08cc73700ad9b8fda2308",
+  "manager_source": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\src\\session_manager.py",
+  "contract_sha256": "80905ca792aa9056c7673bd6b24444fa5990e5756295828fab62ed6b57d12ef1",
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "bounds": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "python": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+  "entry": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\runtime_roles.py",
+  "source_root": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor",
+  "site_packages": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Lib\\site-packages",
+  "stata_home": "C:\\Program Files\\Stata19",
+  "private_root": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\UNASSIGNED_NOT_PREPARED",
+  "run_scope": null,
+  "runtime_inventory": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-inventory-successor-5443f23-20261030\\runtime_inventory_v2.json",
+  "runtime_inventory_sha256": "4a591d21c59f58d2a2ef7fca9e4c379f5487814fd71033ac68286bfec9c98c5a",
+  "stdio": {
+    "enabled": false,
+    "command": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+    "args": [
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\mcp_adapter.py",
+      "<exact-authorized-prepared-active-binding>"
+    ],
+    "tools": [
+      "stata_run_selection",
+      "stata_session"
+    ],
+    "shared_http_endpoint_used": false
+  },
+  "startup": {
+    "bytecode_writes": false,
+    "implicit_site_and_pth": false,
+    "user_site": false,
+    "child_userprofile": "private run/home",
+    "cwd": "private run",
+    "engine_edition": "mp",
+    "named_log_wrapper": "wp06native",
+    "arbitrary_code": false,
+    "profile_execution_cleared": false,
+    "profile_guard_implemented": true,
+    "fresh_root_guard_implemented": true,
+    "effective_adopath_or_registry_observed": false
+  },
+  "interpreter_evidence": "Existing virtual-environment redirector and Python 3.11 base/stdlib are on-disk pins only; no interpreter was launched.",
+  "evidence_scope": "SOURCE_AND_FAKE_NATIVE_TESTS_ONLY",
+  "python_base_root": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none",
+  "runtime_identity_files": {
+    "engine": [
+      {
+        "path": "C:\\Program Files\\Stata19\\mp-64.dll",
+        "bytes": 58497232,
+        "sha256": "537e53362edb257c4a0d3df57c4c41d30c64040e54a690413904e6d4e0d73058"
+      }
+    ],
+    "python_image": [
+      {
+        "path": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+        "bytes": 45568,
+        "sha256": "023574470d2cf8a3bd40ae9ead59e7d49608b0065675de00b83b57caf1060af0"
+      },
+      {
+        "path": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+        "bytes": 91648,
+        "sha256": "ae7e969410d751d010c2ca03394fe5c53230fbf48ca7d368b897e455eca14fba"
+      }
+    ],
+    "pystata_config": [
+      {
+        "path": "C:\\Program Files\\Stata19\\utilities\\pystata\\config.py",
+        "bytes": 31341,
+        "sha256": "4d17928dce23ee66194b95bf1272a7d55334e077ff94a9a020a9b8cb80cb8de4"
+      }
+    ],
+    "pystata_stata": [
+      {
+        "path": "C:\\Program Files\\Stata19\\utilities\\pystata\\stata.py",
+        "bytes": 35876,
+        "sha256": "503751e5de332feb96b02aba9bc0aa3998ccbb3967289e261fada26bf68d3405"
+      }
+    ]
+  },
+  "startup_contract": {
+    "schema": "WP06_FIXED_STARTUP_V1",
+    "windows_root": "C:\\Windows",
+    "profiles": {
+      "sysprofile.do": {
+        "bytes": 69,
+        "sha256": "71642f2a2fc2e3d674c4ef14cd57d2cc459cfdbbda766804a8b156f3e69897c3"
+      },
+      "profile.do": {
+        "bytes": 69,
+        "sha256": "71642f2a2fc2e3d674c4ef14cd57d2cc459cfdbbda766804a8b156f3e69897c3"
+      }
+    },
+    "directories": [
+      "home",
+      "temp"
+    ]
+  },
+  "sdk_bootstrap": {
+    "import_paths": [
+      "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Lib\\site-packages",
+      "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Lib\\site-packages\\win32",
+      "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Lib\\site-packages\\win32\\lib"
+    ],
+    "dll_directory": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Lib\\site-packages\\pywin32_system32",
+    "pth_executed": false,
+    "directory_handle_scope": "authorized SDK context only",
+    "actual_dll_binding_tested": false
+  },
+  "client": {
+    "entry": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-inventory-successor\\empty_client.py",
+    "enabled": false,
+    "selection_calls": 2,
+    "selection_timeout_seconds": 10,
+    "transport_includes_bootstrap": true,
+    "overall_async_budget_seconds": 120,
+    "async_budget_is_independent_native_containment": false,
+    "retries": 0,
+    "shared_url_used": false,
+    "sdk_default_parent_environment_may_be_merged": true
+  }
+}
