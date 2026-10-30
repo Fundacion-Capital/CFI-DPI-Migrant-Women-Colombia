@@ -1,0 +1,3000 @@
+{
+  "schema": "WP06_OFFLINE_COST_RECONCILIATION_V1",
+  "evidence_type": "EXTRACTED_STATIC_CALLS_WITH_EXPLICIT_INTERPRETATION",
+  "source_unchanged": true,
+  "sources": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.py",
+      "bytes": 8915,
+      "sha256": "fa18765c0cbd4d9d6c5cf9e20032aec3468ef498b714323ef85a0ce203949eda"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\empty_client.py",
+      "bytes": 5015,
+      "sha256": "f6ffdce34c23db84c7029e1b9a2256f946bca33465a32b8d8ae4a72175d2e351"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\mcp_adapter.py",
+      "bytes": 6012,
+      "sha256": "372789a1674c100f9b9535257f9389e776c9217942748f8db1fb47af4007644a"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_provider.py",
+      "bytes": 18039,
+      "sha256": "71e2b8063b57401c4d80aa9ef17d97302198c98f1f872c3980fae85a4e39ccec"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_session.py",
+      "bytes": 17445,
+      "sha256": "0d26175278ac03a24df85aca7031cb909a823e76040ba8eca00872f19d007c88"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\preflight.py",
+      "bytes": 1404,
+      "sha256": "c7cd2c213449009e264ee88dbb709b5b0b8fad8e0a319920052750133344247c"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\private_channel.py",
+      "bytes": 4772,
+      "sha256": "41b66dda15f72218923c0858e5e103d5c50de6301a9048a1ea4faa42b225653b"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\runtime_roles.py",
+      "bytes": 11946,
+      "sha256": "8423aac5de9ad0ef7a7eb04b6c685b96086fa07b12f79649493d57ce1ad92a8c"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\startup_guard.py",
+      "bytes": 6901,
+      "sha256": "5ad938d95f8f19d431d55fab560135c27994356c4e863dcedb450afba3e40d61"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_abi.py",
+      "bytes": 4756,
+      "sha256": "dc46fd2fa7036debb05e456ced83e629f3929f3927f48a3ad5941fe6ae63ac91"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_adapter.py",
+      "bytes": 2529,
+      "sha256": "b6bc5aee45967bf4ac7eeabaf7455d4c22740aa8cda2ee2a7419d951d6ffeb1e"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_bootstrap.py",
+      "bytes": 9253,
+      "sha256": "4de9af72b337be1d58af52861d01fbddf60c4191dc17691d5fded97590b088a0"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_client.py",
+      "bytes": 9852,
+      "sha256": "2562c52197a51eee43de2b9d5c82f9a9eec3ee8df37383d5785eafc073725d43"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_identity.py",
+      "bytes": 3477,
+      "sha256": "631a308885a935e61bbca53a265d795716c7826d7116312f6cae4c01593919a4"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_lifecycle.py",
+      "bytes": 14321,
+      "sha256": "606ed02969b9b62fe71c32d10c78fb522c139ac0c054a573f073e9583a968dfc"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_native.py",
+      "bytes": 6562,
+      "sha256": "5612130f0d408fc59e42602d4b683b38a92f6b2b78ca3cda5776269771ddede2"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_port.py",
+      "bytes": 1970,
+      "sha256": "76ad1ec12dc6c5b11ef71b7b7c3e086011923d8371d3ed507ef28266229df90e"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_review.py",
+      "bytes": 6268,
+      "sha256": "b8c2153c1fa94aef77be4741972ccc59bb77ea5ce81ddb353ef672398ca96e68"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_review_fixes.py",
+      "bytes": 7765,
+      "sha256": "004072e0b95af0d78ae6717acb1e1497c0577aaa3668a4961a00d31e707f7327"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_roles.py",
+      "bytes": 3137,
+      "sha256": "0161a36c3ea942a6722da4a41fc8a0bd38643ce92b409e20c06e234eb830e8ed"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_startup.py",
+      "bytes": 10814,
+      "sha256": "b29ef894797fc89deb4e0599c4c6b1f8f8967264967257c7a51a7ddbb2fee671"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\test_support.py",
+      "bytes": 6531,
+      "sha256": "f4cba9a90aed35c1e08dc66154db3e606b189bff7907b8ee20c4319b604eb935"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\win32_owner.py",
+      "bytes": 9450,
+      "sha256": "2919917e0e2dd813dbbc630345ed25840411bdac315dda872a59d4c06b2ab2c9"
+    }
+  ],
+  "functions": [
+    {
+      "file": "preflight.py",
+      "symbol": "inspect",
+      "line_start": 12,
+      "line_end": 28,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\preflight.py",
+        "bytes": 1404,
+        "sha256": "c7cd2c213449009e264ee88dbb709b5b0b8fad8e0a319920052750133344247c"
+      },
+      "calls": [
+        {
+          "line": 13,
+          "expression": "validate",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 14,
+          "expression": "binding.get",
+          "arguments": [
+            "'activation_allowed'"
+          ]
+        },
+        {
+          "line": 14,
+          "expression": "binding.get",
+          "arguments": [
+            "'activation_holds'"
+          ]
+        },
+        {
+          "line": 15,
+          "expression": "ValueError",
+          "arguments": [
+            "'This preparation artifact must remain disabled'"
+          ]
+        },
+        {
+          "line": 16,
+          "expression": "verify_inventory",
+          "arguments": [
+            "binding['runtime_inventory']",
+            "binding['runtime_inventory_sha256']",
+            "binding"
+          ]
+        },
+        {
+          "line": 17,
+          "expression": "check_identity_spec",
+          "arguments": [
+            "binding",
+            "catalog"
+          ]
+        },
+        {
+          "line": 18,
+          "expression": "check_spec",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 19,
+          "expression": "installation_clear",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 21,
+          "expression": "sorted",
+          "arguments": [
+            "HERE.glob('*.py')"
+          ]
+        },
+        {
+          "line": 21,
+          "expression": "HERE.glob",
+          "arguments": [
+            "'*.py'"
+          ]
+        },
+        {
+          "line": 23,
+          "expression": "ast.parse",
+          "arguments": [
+            "path.read_text(encoding='utf-8')"
+          ]
+        },
+        {
+          "line": 23,
+          "expression": "path.read_text",
+          "arguments": []
+        },
+        {
+          "line": 23,
+          "expression": "str",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 24,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 25,
+          "expression": "len",
+          "arguments": [
+            "catalog['files']"
+          ]
+        },
+        {
+          "line": 25,
+          "expression": "len",
+          "arguments": [
+            "scripts"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "deployment.py",
+      "symbol": "check_catalog",
+      "line_start": 106,
+      "line_end": 125,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.py",
+        "bytes": 8915,
+        "sha256": "fa18765c0cbd4d9d6c5cf9e20032aec3468ef498b714323ef85a0ce203949eda"
+      },
+      "calls": [
+        {
+          "line": 107,
+          "expression": "type",
+          "arguments": [
+            "catalog"
+          ]
+        },
+        {
+          "line": 107,
+          "expression": "catalog.get",
+          "arguments": [
+            "'schema'"
+          ]
+        },
+        {
+          "line": 108,
+          "expression": "catalog.get",
+          "arguments": [
+            "'roots'"
+          ]
+        },
+        {
+          "line": 108,
+          "expression": "catalog.get",
+          "arguments": [
+            "'required'"
+          ]
+        },
+        {
+          "line": 109,
+          "expression": "type",
+          "arguments": [
+            "catalog.get('files')"
+          ]
+        },
+        {
+          "line": 109,
+          "expression": "catalog.get",
+          "arguments": [
+            "'files'"
+          ]
+        },
+        {
+          "line": 110,
+          "expression": "ValueError",
+          "arguments": [
+            "'Runtime inventory schema, roots or required pins are incomplete'"
+          ]
+        },
+        {
+          "line": 112,
+          "expression": "str",
+          "arguments": [
+            "Path(r['path']).resolve()"
+          ]
+        },
+        {
+          "line": 112,
+          "expression": "Path(r['path']).resolve",
+          "arguments": []
+        },
+        {
+          "line": 112,
+          "expression": "Path",
+          "arguments": [
+            "r['path']"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "len",
+          "arguments": [
+            "paths"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "len",
+          "arguments": [
+            "set(paths)"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "set(required).issubset",
+          "arguments": [
+            "paths"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "set",
+          "arguments": [
+            "paths"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "set",
+          "arguments": [
+            "required"
+          ]
+        },
+        {
+          "line": 114,
+          "expression": "ValueError",
+          "arguments": [
+            "'Duplicate inventory entries or missing critical pins'"
+          ]
+        },
+        {
+          "line": 115,
+          "expression": "set",
+          "arguments": [
+            "required"
+          ]
+        },
+        {
+          "line": 115,
+          "expression": "str",
+          "arguments": [
+            "p"
+          ]
+        },
+        {
+          "line": 115,
+          "expression": "scan_roots",
+          "arguments": [
+            "roots"
+          ]
+        },
+        {
+          "line": 116,
+          "expression": "set",
+          "arguments": [
+            "paths"
+          ]
+        },
+        {
+          "line": 118,
+          "expression": "Path",
+          "arguments": [
+            "row['path']"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "candidate.is_file",
+          "arguments": []
+        },
+        {
+          "line": 119,
+          "expression": "candidate.stat",
+          "arguments": []
+        },
+        {
+          "line": 120,
+          "expression": "errors.append",
+          "arguments": [
+            "row['path']"
+          ]
+        },
+        {
+          "line": 122,
+          "expression": "candidate.open",
+          "arguments": [
+            "'rb'"
+          ]
+        },
+        {
+          "line": 123,
+          "expression": "hashlib.file_digest(stream, 'sha256').hexdigest",
+          "arguments": []
+        },
+        {
+          "line": 123,
+          "expression": "hashlib.file_digest",
+          "arguments": [
+            "stream",
+            "'sha256'"
+          ]
+        },
+        {
+          "line": 124,
+          "expression": "errors.append",
+          "arguments": [
+            "row['path']"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "deployment.py",
+      "symbol": "verify_inventory",
+      "line_start": 128,
+      "line_end": 136,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.py",
+        "bytes": 8915,
+        "sha256": "fa18765c0cbd4d9d6c5cf9e20032aec3468ef498b714323ef85a0ce203949eda"
+      },
+      "calls": [
+        {
+          "line": 129,
+          "expression": "Path(path).read_bytes",
+          "arguments": []
+        },
+        {
+          "line": 129,
+          "expression": "Path",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 130,
+          "expression": "hashlib.sha256(raw).hexdigest",
+          "arguments": []
+        },
+        {
+          "line": 130,
+          "expression": "hashlib.sha256",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 131,
+          "expression": "ValueError",
+          "arguments": [
+            "'Runtime inventory digest changed'"
+          ]
+        },
+        {
+          "line": 132,
+          "expression": "json.loads",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 133,
+          "expression": "inventory_contract",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 134,
+          "expression": "check_catalog",
+          "arguments": [
+            "catalog",
+            "roots",
+            "required"
+          ]
+        },
+        {
+          "line": 135,
+          "expression": "ValueError",
+          "arguments": [
+            "'Bound runtime/source bytes or file set changed'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "deployment.py",
+      "symbol": "load_active",
+      "line_start": 162,
+      "line_end": 173,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.py",
+        "bytes": 8915,
+        "sha256": "fa18765c0cbd4d9d6c5cf9e20032aec3468ef498b714323ef85a0ce203949eda"
+      },
+      "calls": [
+        {
+          "line": 163,
+          "expression": "Path(path).resolve",
+          "arguments": []
+        },
+        {
+          "line": 163,
+          "expression": "Path",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 164,
+          "expression": "json.loads",
+          "arguments": [
+            "path.read_text(encoding='utf-8')"
+          ]
+        },
+        {
+          "line": 164,
+          "expression": "path.read_text",
+          "arguments": []
+        },
+        {
+          "line": 165,
+          "expression": "Path(binding['private_root']).resolve",
+          "arguments": []
+        },
+        {
+          "line": 165,
+          "expression": "Path",
+          "arguments": [
+            "binding['private_root']"
+          ]
+        },
+        {
+          "line": 166,
+          "expression": "ValueError",
+          "arguments": [
+            "'Active binding must live in its exact reserved run directory'"
+          ]
+        },
+        {
+          "line": 167,
+          "expression": "json.loads",
+          "arguments": [
+            "path.with_name('execution_grant.json').read_text(encoding='utf-8')"
+          ]
+        },
+        {
+          "line": 167,
+          "expression": "path.with_name('execution_grant.json').read_text",
+          "arguments": []
+        },
+        {
+          "line": 167,
+          "expression": "path.with_name",
+          "arguments": [
+            "'execution_grant.json'"
+          ]
+        },
+        {
+          "line": 168,
+          "expression": "require_execution",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 169,
+          "expression": "verify_inventory",
+          "arguments": [
+            "binding['runtime_inventory']",
+            "binding['runtime_inventory_sha256']",
+            "binding"
+          ]
+        },
+        {
+          "line": 170,
+          "expression": "check_identity_spec",
+          "arguments": [
+            "binding",
+            "catalog"
+          ]
+        },
+        {
+          "line": 172,
+          "expression": "verify",
+          "arguments": [
+            "binding"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "startup_guard.py",
+      "symbol": "prepare_authorized",
+      "line_start": 123,
+      "line_end": 132,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\startup_guard.py",
+        "bytes": 6901,
+        "sha256": "5ad938d95f8f19d431d55fab560135c27994356c4e863dcedb450afba3e40d61"
+      },
+      "calls": [
+        {
+          "line": 124,
+          "expression": "require_execution",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 125,
+          "expression": "verify_inventory",
+          "arguments": [
+            "binding['runtime_inventory']",
+            "binding['runtime_inventory_sha256']",
+            "binding"
+          ]
+        },
+        {
+          "line": 126,
+          "expression": "check_identity_spec",
+          "arguments": [
+            "binding",
+            "catalog"
+          ]
+        },
+        {
+          "line": 127,
+          "expression": "reserve",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 128,
+          "expression": "Path",
+          "arguments": [
+            "binding['private_root']"
+          ]
+        },
+        {
+          "line": 130,
+          "expression": "(root / name).open",
+          "arguments": [
+            "'x'"
+          ]
+        },
+        {
+          "line": 131,
+          "expression": "json.dump",
+          "arguments": [
+            "value",
+            "stream"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "startup_guard.py",
+      "symbol": "verify",
+      "line_start": 89,
+      "line_end": 120,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\startup_guard.py",
+        "bytes": 6901,
+        "sha256": "5ad938d95f8f19d431d55fab560135c27994356c4e863dcedb450afba3e40d61"
+      },
+      "calls": [
+        {
+          "line": 90,
+          "expression": "check_spec",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 91,
+          "expression": "installation_clear",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 92,
+          "expression": "Path",
+          "arguments": [
+            "binding['private_root']"
+          ]
+        },
+        {
+          "line": 93,
+          "expression": "root.resolve",
+          "arguments": []
+        },
+        {
+          "line": 94,
+          "expression": "ValueError",
+          "arguments": [
+            "'Run root has an unresolved alias or reparse ancestor'"
+          ]
+        },
+        {
+          "line": 96,
+          "expression": "_plain",
+          "arguments": [
+            "folder",
+            "True"
+          ]
+        },
+        {
+          "line": 97,
+          "expression": "set",
+          "arguments": [
+            "PROFILE_NAMES"
+          ]
+        },
+        {
+          "line": 100,
+          "expression": "allowed.update",
+          "arguments": [
+            "('parent.' + name + '.json' for name in ('ownership', 'runtime', 'exit', 'closure'))"
+          ]
+        },
+        {
+          "line": 101,
+          "expression": "allowed.update",
+          "arguments": [
+            "(f'{role}.{kind}.{n}.{suffix}' for role in ('worker', 'watchdog') for kind in ('ready', 'command', 'result', 'shutdown', 'exit') for n in (0, 1, 2) for suffix in ('json', 'pending'))"
+          ]
+        },
+        {
+          "line": 103,
+          "expression": "any",
+          "arguments": [
+            "(path.name not in allowed for path in root.iterdir())"
+          ]
+        },
+        {
+          "line": 103,
+          "expression": "root.iterdir",
+          "arguments": []
+        },
+        {
+          "line": 104,
+          "expression": "ValueError",
+          "arguments": [
+            "'Unaccounted run-root input is held without reading its contents'"
+          ]
+        },
+        {
+          "line": 105,
+          "expression": "list",
+          "arguments": [
+            "(root / 'home').iterdir()"
+          ]
+        },
+        {
+          "line": 105,
+          "expression": "(root / 'home').iterdir",
+          "arguments": []
+        },
+        {
+          "line": 106,
+          "expression": "ValueError",
+          "arguments": [
+            "'Private home is not empty; unexpected startup preferences are held'"
+          ]
+        },
+        {
+          "line": 108,
+          "expression": "list",
+          "arguments": [
+            "(root / 'temp').iterdir()"
+          ]
+        },
+        {
+          "line": 108,
+          "expression": "(root / 'temp').iterdir",
+          "arguments": []
+        },
+        {
+          "line": 109,
+          "expression": "ValueError",
+          "arguments": [
+            "'Private temp is not empty; unexpected startup inputs are held'"
+          ]
+        },
+        {
+          "line": 112,
+          "expression": "_plain",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 113,
+          "expression": "path.read_bytes",
+          "arguments": []
+        },
+        {
+          "line": 114,
+          "expression": "ValueError",
+          "arguments": [
+            "'Private startup profile differs from the fixed inert bytes'"
+          ]
+        },
+        {
+          "line": 116,
+          "expression": "_plain",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 117,
+          "expression": "path.open",
+          "arguments": [
+            "'rb'"
+          ]
+        },
+        {
+          "line": 118,
+          "expression": "stream.read",
+          "arguments": [
+            "8193"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "len",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "json.loads",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "_receipt",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 120,
+          "expression": "ValueError",
+          "arguments": [
+            "'Startup reservation is foreign, changed or oversized'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "startup_guard.py",
+      "symbol": "sdk_environment",
+      "line_start": 136,
+      "line_end": 149,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\startup_guard.py",
+        "bytes": 6901,
+        "sha256": "5ad938d95f8f19d431d55fab560135c27994356c4e863dcedb450afba3e40d61"
+      },
+      "calls": [
+        {
+          "line": 137,
+          "expression": "require_execution",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 138,
+          "expression": "Path",
+          "arguments": [
+            "binding['site_packages']"
+          ]
+        },
+        {
+          "line": 139,
+          "expression": "str",
+          "arguments": [
+            "site"
+          ]
+        },
+        {
+          "line": 139,
+          "expression": "str",
+          "arguments": [
+            "site / 'win32'"
+          ]
+        },
+        {
+          "line": 139,
+          "expression": "str",
+          "arguments": [
+            "site / 'win32/lib'"
+          ]
+        },
+        {
+          "line": 140,
+          "expression": "Path",
+          "arguments": [
+            "p"
+          ]
+        },
+        {
+          "line": 141,
+          "expression": "_plain",
+          "arguments": [
+            "path",
+            "True"
+          ]
+        },
+        {
+          "line": 142,
+          "expression": "list",
+          "arguments": [
+            "sys.path"
+          ]
+        },
+        {
+          "line": 146,
+          "expression": "os.add_dll_directory",
+          "arguments": [
+            "str(site / 'pywin32_system32')"
+          ]
+        },
+        {
+          "line": 146,
+          "expression": "str",
+          "arguments": [
+            "site / 'pywin32_system32'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "empty_client.py",
+      "symbol": "main",
+      "line_start": 88,
+      "line_end": 100,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\empty_client.py",
+        "bytes": 5015,
+        "sha256": "f6ffdce34c23db84c7029e1b9a2256f946bca33465a32b8d8ae4a72175d2e351"
+      },
+      "calls": [
+        {
+          "line": 89,
+          "expression": "load_active",
+          "arguments": [
+            "path"
+          ]
+        },
+        {
+          "line": 90,
+          "expression": "reserve_client",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 91,
+          "expression": "Path",
+          "arguments": [
+            "binding['private_root']"
+          ]
+        },
+        {
+          "line": 93,
+          "expression": "(root / 'client.stderr.log').open",
+          "arguments": [
+            "'x'"
+          ]
+        },
+        {
+          "line": 94,
+          "expression": "asyncio.run",
+          "arguments": [
+            "_connect(binding, grant, errlog)"
+          ]
+        },
+        {
+          "line": 94,
+          "expression": "_connect",
+          "arguments": [
+            "binding",
+            "grant",
+            "errlog"
+          ]
+        },
+        {
+          "line": 96,
+          "expression": "(root / 'client_receipt.json').open",
+          "arguments": [
+            "'x'"
+          ]
+        },
+        {
+          "line": 97,
+          "expression": "json.dump",
+          "arguments": [
+            "dict(recipe_completed=False, failure_type=type(error).__name__, retry=False)",
+            "stream"
+          ]
+        },
+        {
+          "line": 97,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 97,
+          "expression": "type",
+          "arguments": [
+            "error"
+          ]
+        },
+        {
+          "line": 99,
+          "expression": "(root / 'client_receipt.json').open",
+          "arguments": [
+            "'x'"
+          ]
+        },
+        {
+          "line": 100,
+          "expression": "json.dump",
+          "arguments": [
+            "result",
+            "stream"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "empty_client.py",
+      "symbol": "_connect",
+      "line_start": 74,
+      "line_end": 85,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\empty_client.py",
+        "bytes": 5015,
+        "sha256": "f6ffdce34c23db84c7029e1b9a2256f946bca33465a32b8d8ae4a72175d2e351"
+      },
+      "calls": [
+        {
+          "line": 75,
+          "expression": "require_execution",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 76,
+          "expression": "verify",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 77,
+          "expression": "sdk_environment",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 80,
+          "expression": "StdioServerParameters",
+          "arguments": []
+        },
+        {
+          "line": 80,
+          "expression": "contract",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 82,
+          "expression": "asyncio.timeout",
+          "arguments": [
+            "binding['bounds']['final_evidence_seconds']"
+          ]
+        },
+        {
+          "line": 83,
+          "expression": "stdio_client",
+          "arguments": [
+            "parameters"
+          ]
+        },
+        {
+          "line": 84,
+          "expression": "ClientSession",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        },
+        {
+          "line": 85,
+          "expression": "exchange",
+          "arguments": [
+            "binding",
+            "grant",
+            "session"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "empty_client.py",
+      "symbol": "exchange",
+      "line_start": 46,
+      "line_end": 71,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\empty_client.py",
+        "bytes": 5015,
+        "sha256": "f6ffdce34c23db84c7029e1b9a2256f946bca33465a32b8d8ae4a72175d2e351"
+      },
+      "calls": [
+        {
+          "line": 47,
+          "expression": "require_execution",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 48,
+          "expression": "verify",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 49,
+          "expression": "contract",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 52,
+          "expression": "timedelta",
+          "arguments": []
+        },
+        {
+          "line": 53,
+          "expression": "session.initialize",
+          "arguments": []
+        },
+        {
+          "line": 54,
+          "expression": "ast.literal_eval",
+          "arguments": [
+            "_text(await session.call_tool('stata_session', dict(action='list', session_id=sid), read_timeout_seconds=read_budget))"
+          ]
+        },
+        {
+          "line": 54,
+          "expression": "_text",
+          "arguments": [
+            "await session.call_tool('stata_session', dict(action='list', session_id=sid), read_timeout_seconds=read_budget)"
+          ]
+        },
+        {
+          "line": 54,
+          "expression": "session.call_tool",
+          "arguments": [
+            "'stata_session'",
+            "dict(action='list', session_id=sid)"
+          ]
+        },
+        {
+          "line": 55,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 56,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 57,
+          "expression": "ValueError",
+          "arguments": [
+            "'The initial isolated session is foreign or already used'"
+          ]
+        },
+        {
+          "line": 59,
+          "expression": "zip",
+          "arguments": [
+            "binding['literal_selections']",
+            "('WP06_EMPTY_BEGIN', 'WP06_EMPTY_END')"
+          ]
+        },
+        {
+          "line": 60,
+          "expression": "_text",
+          "arguments": [
+            "await session.call_tool('stata_run_selection', dict(selection=code, session_id=sid, timeout=10), read_timeout_seconds=read_budget)"
+          ]
+        },
+        {
+          "line": 60,
+          "expression": "session.call_tool",
+          "arguments": [
+            "'stata_run_selection'",
+            "dict(selection=code, session_id=sid, timeout=10)"
+          ]
+        },
+        {
+          "line": 61,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 62,
+          "expression": "line.strip",
+          "arguments": []
+        },
+        {
+          "line": 62,
+          "expression": "text.splitlines",
+          "arguments": []
+        },
+        {
+          "line": 63,
+          "expression": "any",
+          "arguments": [
+            "(re.fullmatch('N=\\\\s*0\\\\s+K=\\\\s*0', line) for line in lines)"
+          ]
+        },
+        {
+          "line": 63,
+          "expression": "re.fullmatch",
+          "arguments": [
+            "'N=\\\\s*0\\\\s+K=\\\\s*0'",
+            "line"
+          ]
+        },
+        {
+          "line": 64,
+          "expression": "ValueError",
+          "arguments": [
+            "'Empty-session marker or zero dimensions were not established'"
+          ]
+        },
+        {
+          "line": 65,
+          "expression": "outputs.append",
+          "arguments": [
+            "text"
+          ]
+        },
+        {
+          "line": 66,
+          "expression": "ast.literal_eval",
+          "arguments": [
+            "_text(await session.call_tool('stata_session', dict(action='list', session_id=sid), read_timeout_seconds=read_budget))"
+          ]
+        },
+        {
+          "line": 66,
+          "expression": "_text",
+          "arguments": [
+            "await session.call_tool('stata_session', dict(action='list', session_id=sid), read_timeout_seconds=read_budget)"
+          ]
+        },
+        {
+          "line": 66,
+          "expression": "session.call_tool",
+          "arguments": [
+            "'stata_session'",
+            "dict(action='list', session_id=sid)"
+          ]
+        },
+        {
+          "line": 67,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 68,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 69,
+          "expression": "ValueError",
+          "arguments": [
+            "'The exact session did not report completed closure'"
+          ]
+        },
+        {
+          "line": 70,
+          "expression": "dict",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "file": "mcp_adapter.py",
+      "symbol": "main",
+      "line_start": 109,
+      "line_end": 134,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\mcp_adapter.py",
+        "bytes": 6012,
+        "sha256": "372789a1674c100f9b9535257f9389e776c9217942748f8db1fb47af4007644a"
+      },
+      "calls": [
+        {
+          "line": 110,
+          "expression": "load_active",
+          "arguments": [
+            "binding_path"
+          ]
+        },
+        {
+          "line": 115,
+          "expression": "Kernel",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 117,
+          "expression": "sdk_environment",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "NativeOwner",
+          "arguments": [
+            "kernel",
+            "Channel(kernel)",
+            "binding",
+            "binding['run_scope']"
+          ]
+        },
+        {
+          "line": 119,
+          "expression": "Channel",
+          "arguments": [
+            "kernel"
+          ]
+        },
+        {
+          "line": 120,
+          "expression": "isolated_manager",
+          "arguments": [
+            "source_manager(binding)",
+            "owner",
+            "binding['run_scope']",
+            "binding"
+          ]
+        },
+        {
+          "line": 120,
+          "expression": "source_manager",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 121,
+          "expression": "build_server",
+          "arguments": [
+            "manager",
+            "FastMCP"
+          ]
+        },
+        {
+          "line": 122,
+          "expression": "threading.Event",
+          "arguments": []
+        },
+        {
+          "line": 123,
+          "expression": "threading.Thread",
+          "arguments": []
+        },
+        {
+          "line": 124,
+          "expression": "supervisor.start",
+          "arguments": []
+        },
+        {
+          "line": 126,
+          "expression": "server.run",
+          "arguments": []
+        },
+        {
+          "line": 129,
+          "expression": "close",
+          "arguments": []
+        },
+        {
+          "line": 131,
+          "expression": "done.set",
+          "arguments": []
+        },
+        {
+          "line": 132,
+          "expression": "supervisor.join",
+          "arguments": [
+            "1"
+          ]
+        },
+        {
+          "line": 133,
+          "expression": "supervisor.is_alive",
+          "arguments": []
+        },
+        {
+          "line": 134,
+          "expression": "ValueError",
+          "arguments": [
+            "'Parent lifecycle supervisor did not close'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mcp_adapter.py",
+      "symbol": "build_server",
+      "line_start": 40,
+      "line_end": 80,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\mcp_adapter.py",
+        "bytes": 6012,
+        "sha256": "372789a1674c100f9b9535257f9389e776c9217942748f8db1fb47af4007644a"
+      },
+      "calls": [
+        {
+          "line": 42,
+          "expression": "bind_dispatcher",
+          "arguments": [
+            "manager"
+          ]
+        },
+        {
+          "line": 43,
+          "expression": "sdk_factory",
+          "arguments": [
+            "'WP06 isolated native empty Stata'"
+          ]
+        },
+        {
+          "line": 46,
+          "expression": "manager.close",
+          "arguments": []
+        },
+        {
+          "line": 47,
+          "expression": "result.get",
+          "arguments": [
+            "'cleanup_pending'",
+            "False"
+          ]
+        },
+        {
+          "line": 51,
+          "expression": "server.tool",
+          "arguments": []
+        },
+        {
+          "line": 55,
+          "expression": "ValueError",
+          "arguments": [
+            "'This one-run MCP session is closed'"
+          ]
+        },
+        {
+          "line": 56,
+          "expression": "type",
+          "arguments": [
+            "timeout"
+          ]
+        },
+        {
+          "line": 58,
+          "expression": "manager._forbidden",
+          "arguments": []
+        },
+        {
+          "line": 60,
+          "expression": "manager.open",
+          "arguments": []
+        },
+        {
+          "line": 62,
+          "expression": "route",
+          "arguments": [
+            "dict(selection=selection, session_id=session_id, timeout=timeout)",
+            "True"
+          ]
+        },
+        {
+          "line": 62,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 64,
+          "expression": "close",
+          "arguments": []
+        },
+        {
+          "line": 65,
+          "expression": "ValueError",
+          "arguments": [
+            "'Final native output cannot pass before successful cleanup'"
+          ]
+        },
+        {
+          "line": 68,
+          "expression": "getattr",
+          "arguments": [
+            "manager",
+            "'_close_started'",
+            "False"
+          ]
+        },
+        {
+          "line": 69,
+          "expression": "close",
+          "arguments": []
+        },
+        {
+          "line": 72,
+          "expression": "server.tool",
+          "arguments": []
+        },
+        {
+          "line": 75,
+          "expression": "str",
+          "arguments": [
+            "{'session_id': manager._scope['session_id'], 'opened': state['opened'], 'closed': state['closed']}"
+          ]
+        },
+        {
+          "line": 77,
+          "expression": "str",
+          "arguments": [
+            "close()"
+          ]
+        },
+        {
+          "line": 77,
+          "expression": "close",
+          "arguments": []
+        },
+        {
+          "line": 78,
+          "expression": "ValueError",
+          "arguments": [
+            "'Only this bound session can be listed or destroyed'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "mcp_adapter.py",
+      "symbol": "lifecycle_step",
+      "line_start": 83,
+      "line_end": 95,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\mcp_adapter.py",
+        "bytes": 6012,
+        "sha256": "372789a1674c100f9b9535257f9389e776c9217942748f8db1fb47af4007644a"
+      },
+      "calls": [
+        {
+          "line": 87,
+          "expression": "manager.control_tick",
+          "arguments": []
+        },
+        {
+          "line": 88,
+          "expression": "kernel.now",
+          "arguments": []
+        },
+        {
+          "line": 90,
+          "expression": "close",
+          "arguments": []
+        },
+        {
+          "line": 92,
+          "expression": "manager._fail",
+          "arguments": [
+            "'Native final lifecycle deadline exceeded'"
+          ]
+        },
+        {
+          "line": 93,
+          "expression": "manager._owner._rollback",
+          "arguments": []
+        },
+        {
+          "line": 94,
+          "expression": "result.get",
+          "arguments": [
+            "'cleanup_pending'",
+            "False"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "native_provider.py",
+      "symbol": "NativeOwner.__init__",
+      "line_start": 15,
+      "line_end": 38,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_provider.py",
+        "bytes": 18039,
+        "sha256": "71e2b8063b57401c4d80aa9ef17d97302198c98f1f872c3980fae85a4e39ccec"
+      },
+      "calls": [
+        {
+          "line": 16,
+          "expression": "validate",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 18,
+          "expression": "ValueError",
+          "arguments": [
+            "'Unknown native-effect evidence scope'"
+          ]
+        },
+        {
+          "line": 20,
+          "expression": "copy.deepcopy",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 20,
+          "expression": "copy.deepcopy",
+          "arguments": [
+            "scope"
+          ]
+        },
+        {
+          "line": 24,
+          "expression": "secrets.token_bytes",
+          "arguments": [
+            "32"
+          ]
+        },
+        {
+          "line": 25,
+          "expression": "self.channel.prepare",
+          "arguments": [
+            "binding",
+            "scope",
+            "self.keys"
+          ]
+        },
+        {
+          "line": 26,
+          "expression": "kernel.now",
+          "arguments": []
+        },
+        {
+          "line": 34,
+          "expression": "threading.Lock",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "file": "native_provider.py",
+      "symbol": "NativeOwner.initialize",
+      "line_start": 211,
+      "line_end": 261,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_provider.py",
+        "bytes": 18039,
+        "sha256": "71e2b8063b57401c4d80aa9ef17d97302198c98f1f872c3980fae85a4e39ccec"
+      },
+      "calls": [
+        {
+          "line": 212,
+          "expression": "self._exact",
+          "arguments": [
+            "resource"
+          ]
+        },
+        {
+          "line": 214,
+          "expression": "ValueError",
+          "arguments": [
+            "'Native initialization cannot repeat or precede ownership'"
+          ]
+        },
+        {
+          "line": 217,
+          "expression": "ValueError",
+          "arguments": [
+            "'Native initialization admission was closed'"
+          ]
+        },
+        {
+          "line": 220,
+          "expression": "self._keep",
+          "arguments": [
+            "self.kernel.duplicate(self.inner, JOB_CONTROL)"
+          ]
+        },
+        {
+          "line": 220,
+          "expression": "self.kernel.duplicate",
+          "arguments": [
+            "self.inner",
+            "JOB_CONTROL"
+          ]
+        },
+        {
+          "line": 221,
+          "expression": "self._keep",
+          "arguments": [
+            "self.kernel.duplicate(self.worker, SYNC_QUERY)"
+          ]
+        },
+        {
+          "line": 221,
+          "expression": "self.kernel.duplicate",
+          "arguments": [
+            "self.worker",
+            "SYNC_QUERY"
+          ]
+        },
+        {
+          "line": 222,
+          "expression": "self._keep",
+          "arguments": [
+            "self.kernel.duplicate(self.stop, EVENT_SIGNAL)"
+          ]
+        },
+        {
+          "line": 222,
+          "expression": "self.kernel.duplicate",
+          "arguments": [
+            "self.stop",
+            "EVENT_SIGNAL"
+          ]
+        },
+        {
+          "line": 223,
+          "expression": "self._keep",
+          "arguments": [
+            "self.kernel.duplicate(self.ready, 1048576)"
+          ]
+        },
+        {
+          "line": 223,
+          "expression": "self.kernel.duplicate",
+          "arguments": [
+            "self.ready",
+            "1048576"
+          ]
+        },
+        {
+          "line": 224,
+          "expression": "self._check_creation",
+          "arguments": []
+        },
+        {
+          "line": 225,
+          "expression": "self._keep",
+          "arguments": [
+            "self.kernel.spawn_suspended('watchdog', self.binding, dict(inner_job=inner_copy, worker=worker_copy, stop_event=stop_copy, ready_event=ready_copy))"
+          ]
+        },
+        {
+          "line": 225,
+          "expression": "self.kernel.spawn_suspended",
+          "arguments": [
+            "'watchdog'",
+            "self.binding",
+            "dict(inner_job=inner_copy, worker=worker_copy, stop_event=stop_copy, ready_event=ready_copy)"
+          ]
+        },
+        {
+          "line": 226,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 227,
+          "expression": "self.kernel.identity",
+          "arguments": [
+            "self.watchdog"
+          ]
+        },
+        {
+          "line": 228,
+          "expression": "self._check_creation",
+          "arguments": []
+        },
+        {
+          "line": 229,
+          "expression": "self.kernel.assign",
+          "arguments": [
+            "self.outer",
+            "self.watchdog"
+          ]
+        },
+        {
+          "line": 230,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 231,
+          "expression": "digest",
+          "arguments": [
+            "self.binding"
+          ]
+        },
+        {
+          "line": 231,
+          "expression": "self.kernel.identity",
+          "arguments": [
+            "self.worker"
+          ]
+        },
+        {
+          "line": 232,
+          "expression": "self.kernel.bootstrap",
+          "arguments": [
+            "self.watchdog",
+            "{**common, 'role': 'watchdog', 'key': self.keys['watchdog'].hex()}"
+          ]
+        },
+        {
+          "line": 233,
+          "expression": "self.keys['watchdog'].hex",
+          "arguments": []
+        },
+        {
+          "line": 234,
+          "expression": "self.kernel.resume",
+          "arguments": [
+            "self.watchdog"
+          ]
+        },
+        {
+          "line": 235,
+          "expression": "self.channel.wait",
+          "arguments": [
+            "'watchdog'",
+            "'ready'",
+            "0",
+            "self.origin + 60 * self.frequency_hz"
+          ]
+        },
+        {
+          "line": 237,
+          "expression": "ValueError",
+          "arguments": [
+            "'Independent watchdog readiness not established'"
+          ]
+        },
+        {
+          "line": 238,
+          "expression": "self._check_creation",
+          "arguments": []
+        },
+        {
+          "line": 239,
+          "expression": "self.kernel.bootstrap",
+          "arguments": [
+            "self.worker",
+            "{**common, 'role': 'worker', 'key': self.keys['worker'].hex()}"
+          ]
+        },
+        {
+          "line": 240,
+          "expression": "self.keys['worker'].hex",
+          "arguments": []
+        },
+        {
+          "line": 241,
+          "expression": "self.kernel.resume",
+          "arguments": [
+            "self.worker"
+          ]
+        },
+        {
+          "line": 242,
+          "expression": "self.channel.wait",
+          "arguments": [
+            "'worker'",
+            "'ready'",
+            "0",
+            "self.origin + 60 * self.frequency_hz"
+          ]
+        },
+        {
+          "line": 243,
+          "expression": "type",
+          "arguments": [
+            "ready"
+          ]
+        },
+        {
+          "line": 243,
+          "expression": "set",
+          "arguments": [
+            "ready"
+          ]
+        },
+        {
+          "line": 244,
+          "expression": "ValueError",
+          "arguments": [
+            "'Worker initialization readiness not established'"
+          ]
+        },
+        {
+          "line": 245,
+          "expression": "check_runtime_identity",
+          "arguments": [
+            "self.binding",
+            "ready['runtime_identity']"
+          ]
+        },
+        {
+          "line": 246,
+          "expression": "self.channel.record_parent",
+          "arguments": [
+            "'runtime'",
+            "ready['runtime_identity']"
+          ]
+        },
+        {
+          "line": 252,
+          "expression": "self._rollback",
+          "arguments": []
+        },
+        {
+          "line": 254,
+          "expression": "BaseExceptionGroup",
+          "arguments": [
+            "type(primary).__name__ + ': ' + str(primary) + '; initialization rollback also failed'",
+            "[primary, cleanup]"
+          ]
+        },
+        {
+          "line": 254,
+          "expression": "str",
+          "arguments": [
+            "primary"
+          ]
+        },
+        {
+          "line": 254,
+          "expression": "type",
+          "arguments": [
+            "primary"
+          ]
+        },
+        {
+          "line": 261,
+          "expression": "self._rollback",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "file": "native_session.py",
+      "symbol": "OwnedBoundary.open",
+      "line_start": 81,
+      "line_end": 129,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_session.py",
+        "bytes": 17445,
+        "sha256": "0d26175278ac03a24df85aca7031cb909a823e76040ba8eca00872f19d007c88"
+      },
+      "calls": [
+        {
+          "line": 84,
+          "expression": "self._fail",
+          "arguments": [
+            "'Creation reservation already consumed'"
+          ]
+        },
+        {
+          "line": 85,
+          "expression": "ValueError",
+          "arguments": [
+            "'No second creation or replacement'"
+          ]
+        },
+        {
+          "line": 89,
+          "expression": "self._before",
+          "arguments": [
+            "60"
+          ]
+        },
+        {
+          "line": 92,
+          "expression": "ValueError",
+          "arguments": [
+            "'Creation admission was closed before allocation'"
+          ]
+        },
+        {
+          "line": 93,
+          "expression": "self._owner.allocate_suspended",
+          "arguments": [
+            "copy.deepcopy(self._scope)"
+          ]
+        },
+        {
+          "line": 93,
+          "expression": "copy.deepcopy",
+          "arguments": [
+            "self._scope"
+          ]
+        },
+        {
+          "line": 95,
+          "expression": "MappingProxyType",
+          "arguments": [
+            "copy.deepcopy(allocated)"
+          ]
+        },
+        {
+          "line": 95,
+          "expression": "copy.deepcopy",
+          "arguments": [
+            "allocated"
+          ]
+        },
+        {
+          "line": 97,
+          "expression": "ValueError",
+          "arguments": [
+            "'Creation returned after closure was requested'"
+          ]
+        },
+        {
+          "line": 98,
+          "expression": "set",
+          "arguments": [
+            "self._resource"
+          ]
+        },
+        {
+          "line": 98,
+          "expression": "all",
+          "arguments": [
+            "self._resource.values()"
+          ]
+        },
+        {
+          "line": 98,
+          "expression": "self._resource.values",
+          "arguments": []
+        },
+        {
+          "line": 99,
+          "expression": "ValueError",
+          "arguments": [
+            "'No exact owned resource capabilities'"
+          ]
+        },
+        {
+          "line": 100,
+          "expression": "self._owner.assign_job",
+          "arguments": [
+            "self._resource"
+          ]
+        },
+        {
+          "line": 103,
+          "expression": "ValueError",
+          "arguments": [
+            "'Ownership assignment returned after closure'"
+          ]
+        },
+        {
+          "line": 104,
+          "expression": "self._observe",
+          "arguments": []
+        },
+        {
+          "line": 106,
+          "expression": "ValueError",
+          "arguments": [
+            "'Initialization must follow suspended ownership'"
+          ]
+        },
+        {
+          "line": 107,
+          "expression": "self._before",
+          "arguments": [
+            "60"
+          ]
+        },
+        {
+          "line": 109,
+          "expression": "ValueError",
+          "arguments": [
+            "'Initialization admission was closed'"
+          ]
+        },
+        {
+          "line": 110,
+          "expression": "self._owner.initialize",
+          "arguments": [
+            "self._resource"
+          ]
+        },
+        {
+          "line": 111,
+          "expression": "self._before",
+          "arguments": [
+            "60"
+          ]
+        },
+        {
+          "line": 112,
+          "expression": "self._observe",
+          "arguments": []
+        },
+        {
+          "line": 114,
+          "expression": "ValueError",
+          "arguments": [
+            "'Artificial initialization incomplete'"
+          ]
+        },
+        {
+          "line": 118,
+          "expression": "ValueError",
+          "arguments": [
+            "'Admission was closed during initialization'"
+          ]
+        },
+        {
+          "line": 124,
+          "expression": "self._fail",
+          "arguments": [
+            "error"
+          ]
+        },
+        {
+          "line": 127,
+          "expression": "self.close",
+          "arguments": []
+        },
+        {
+          "line": 128,
+          "expression": "ValueError",
+          "arguments": [
+            "'Owned bootstrap failed; reservation consumed'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "native_session.py",
+      "symbol": "OwnedBoundary.execute",
+      "line_start": 131,
+      "line_end": 167,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\native_session.py",
+        "bytes": 17445,
+        "sha256": "0d26175278ac03a24df85aca7031cb909a823e76040ba8eca00872f19d007c88"
+      },
+      "calls": [
+        {
+          "line": 135,
+          "expression": "ValueError",
+          "arguments": [
+            "'Run is not open for admission'"
+          ]
+        },
+        {
+          "line": 136,
+          "expression": "self._before",
+          "arguments": [
+            "80"
+          ]
+        },
+        {
+          "line": 137,
+          "expression": "self._observe",
+          "arguments": []
+        },
+        {
+          "line": 138,
+          "expression": "type",
+          "arguments": [
+            "timeout"
+          ]
+        },
+        {
+          "line": 140,
+          "expression": "ValueError",
+          "arguments": [
+            "'Only the next literal bound selection is permitted'"
+          ]
+        },
+        {
+          "line": 142,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 143,
+          "expression": "code.removesuffix",
+          "arguments": [
+            "'\\n'"
+          ]
+        },
+        {
+          "line": 145,
+          "expression": "self._now",
+          "arguments": []
+        },
+        {
+          "line": 147,
+          "expression": "self._source_execute",
+          "arguments": [
+            "self",
+            "code"
+          ]
+        },
+        {
+          "line": 150,
+          "expression": "self._observe",
+          "arguments": []
+        },
+        {
+          "line": 152,
+          "expression": "ValueError",
+          "arguments": [
+            "'Result arrived after admission closed'"
+          ]
+        },
+        {
+          "line": 153,
+          "expression": "self._now",
+          "arguments": []
+        },
+        {
+          "line": 154,
+          "expression": "ValueError",
+          "arguments": [
+            "'Late result; no retry'"
+          ]
+        },
+        {
+          "line": 155,
+          "expression": "self._before",
+          "arguments": [
+            "90"
+          ]
+        },
+        {
+          "line": 156,
+          "expression": "type",
+          "arguments": [
+            "result"
+          ]
+        },
+        {
+          "line": 156,
+          "expression": "set",
+          "arguments": [
+            "result"
+          ]
+        },
+        {
+          "line": 158,
+          "expression": "type",
+          "arguments": [
+            "result['output']"
+          ]
+        },
+        {
+          "line": 160,
+          "expression": "ValueError",
+          "arguments": [
+            "'Malformed, failed, recovered or auxiliary result'"
+          ]
+        },
+        {
+          "line": 164,
+          "expression": "copy.deepcopy",
+          "arguments": [
+            "result"
+          ]
+        },
+        {
+          "line": 166,
+          "expression": "self._fail",
+          "arguments": [
+            "error"
+          ]
+        },
+        {
+          "line": 167,
+          "expression": "ValueError",
+          "arguments": [
+            "'Selection rejected; run consumed without recovery'"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "runtime_roles.py",
+      "symbol": "main",
+      "line_start": 202,
+      "line_end": 238,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\runtime_roles.py",
+        "bytes": 11946,
+        "sha256": "8423aac5de9ad0ef7a7eb04b6c685b96086fa07b12f79649493d57ce1ad92a8c"
+      },
+      "calls": [
+        {
+          "line": 203,
+          "expression": "load_active",
+          "arguments": [
+            "binding_path"
+          ]
+        },
+        {
+          "line": 205,
+          "expression": "Kernel",
+          "arguments": [
+            "binding",
+            "grant"
+          ]
+        },
+        {
+          "line": 206,
+          "expression": "kernel.read_private_bootstrap",
+          "arguments": [
+            "reader"
+          ]
+        },
+        {
+          "line": 207,
+          "expression": "check_bootstrap",
+          "arguments": [
+            "role",
+            "packet",
+            "binding",
+            "kernel"
+          ]
+        },
+        {
+          "line": 208,
+          "expression": "packet['inherited'].values",
+          "arguments": []
+        },
+        {
+          "line": 209,
+          "expression": "kernel.own",
+          "arguments": [
+            "handle"
+          ]
+        },
+        {
+          "line": 210,
+          "expression": "Channel",
+          "arguments": [
+            "kernel"
+          ]
+        },
+        {
+          "line": 211,
+          "expression": "wire.prepare",
+          "arguments": [
+            "binding",
+            "packet['scope']",
+            "{role: bytes.fromhex(packet['key'])}"
+          ]
+        },
+        {
+          "line": 211,
+          "expression": "bytes.fromhex",
+          "arguments": [
+            "packet['key']"
+          ]
+        },
+        {
+          "line": 216,
+          "expression": "kernel.identity",
+          "arguments": [
+            "caps['worker']"
+          ]
+        },
+        {
+          "line": 216,
+          "expression": "kernel.member",
+          "arguments": [
+            "caps['worker']",
+            "caps['inner_job']"
+          ]
+        },
+        {
+          "line": 217,
+          "expression": "ValueError",
+          "arguments": [
+            "'Watchdog cannot bind the retained worker'"
+          ]
+        },
+        {
+          "line": 218,
+          "expression": "wire.publish",
+          "arguments": [
+            "'watchdog'",
+            "'ready'",
+            "0",
+            "{'ready': True}"
+          ]
+        },
+        {
+          "line": 219,
+          "expression": "watchdog_loop",
+          "arguments": [
+            "kernel",
+            "wire",
+            "packet"
+          ]
+        },
+        {
+          "line": 221,
+          "expression": "kernel.identity",
+          "arguments": [
+            "kernel.api.GetCurrentProcess()"
+          ]
+        },
+        {
+          "line": 221,
+          "expression": "kernel.api.GetCurrentProcess",
+          "arguments": []
+        },
+        {
+          "line": 222,
+          "expression": "ValueError",
+          "arguments": [
+            "'Wrong worker epoch'"
+          ]
+        },
+        {
+          "line": 223,
+          "expression": "StataEngine",
+          "arguments": [
+            "binding",
+            "kernel",
+            "packet['inherited']['stop_event']"
+          ]
+        },
+        {
+          "line": 224,
+          "expression": "kernel.now",
+          "arguments": []
+        },
+        {
+          "line": 225,
+          "expression": "TimeoutError",
+          "arguments": [
+            "'Engine initialized after bootstrap deadline'"
+          ]
+        },
+        {
+          "line": 226,
+          "expression": "wire.publish",
+          "arguments": [
+            "'worker'",
+            "'ready'",
+            "0",
+            "{'ready': True, 'runtime_identity': engine.identity}"
+          ]
+        },
+        {
+          "line": 227,
+          "expression": "kernel.signal",
+          "arguments": [
+            "packet['inherited']['ready_event']"
+          ]
+        },
+        {
+          "line": 228,
+          "expression": "worker_loop",
+          "arguments": [
+            "engine",
+            "kernel",
+            "wire",
+            "binding",
+            "packet['scope']",
+            "packet['origin']"
+          ]
+        },
+        {
+          "line": 230,
+          "expression": "wire.read",
+          "arguments": [
+            "'worker'",
+            "'shutdown'",
+            "0"
+          ]
+        },
+        {
+          "line": 231,
+          "expression": "kernel.signaled",
+          "arguments": [
+            "packet['inherited']['stop_event']"
+          ]
+        },
+        {
+          "line": 232,
+          "expression": "kernel.now",
+          "arguments": []
+        },
+        {
+          "line": 233,
+          "expression": "TimeoutError",
+          "arguments": [
+            "'Post-result shutdown deadline expired'"
+          ]
+        },
+        {
+          "line": 234,
+          "expression": "kernel.pause",
+          "arguments": []
+        },
+        {
+          "line": 237,
+          "expression": "engine.close",
+          "arguments": []
+        },
+        {
+          "line": 238,
+          "expression": "kernel.close_all",
+          "arguments": []
+        }
+      ]
+    },
+    {
+      "file": "runtime_roles.py",
+      "symbol": "check_bootstrap",
+      "line_start": 137,
+      "line_end": 199,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\runtime_roles.py",
+        "bytes": 11946,
+        "sha256": "8423aac5de9ad0ef7a7eb04b6c685b96086fa07b12f79649493d57ce1ad92a8c"
+      },
+      "calls": [
+        {
+          "line": 139,
+          "expression": "dict.fromkeys",
+          "arguments": [
+            "names",
+            "'NOT_EVALUATED'"
+          ]
+        },
+        {
+          "line": 141,
+          "expression": "ValueError",
+          "arguments": [
+            "'Foreign, late or mismatched native bootstrap'"
+          ]
+        },
+        {
+          "line": 143,
+          "expression": "type",
+          "arguments": [
+            "packet"
+          ]
+        },
+        {
+          "line": 143,
+          "expression": "set",
+          "arguments": [
+            "packet"
+          ]
+        },
+        {
+          "line": 152,
+          "expression": "digest",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 153,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 157,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 158,
+          "expression": "type",
+          "arguments": [
+            "packet['frequency']"
+          ]
+        },
+        {
+          "line": 162,
+          "expression": "kernel.identity",
+          "arguments": [
+            "kernel.api.GetCurrentProcess()"
+          ]
+        },
+        {
+          "line": 162,
+          "expression": "kernel.api.GetCurrentProcess",
+          "arguments": []
+        },
+        {
+          "line": 164,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 165,
+          "expression": "type",
+          "arguments": [
+            "reported"
+          ]
+        },
+        {
+          "line": 165,
+          "expression": "set",
+          "arguments": [
+            "reported"
+          ]
+        },
+        {
+          "line": 166,
+          "expression": "all",
+          "arguments": [
+            "(type(reported[k]) is int for k in reported)"
+          ]
+        },
+        {
+          "line": 166,
+          "expression": "type",
+          "arguments": [
+            "reported[k]"
+          ]
+        },
+        {
+          "line": 176,
+          "expression": "kernel.now",
+          "arguments": []
+        },
+        {
+          "line": 178,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 183,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 183,
+          "expression": "type",
+          "arguments": [
+            "packet['origin']"
+          ]
+        },
+        {
+          "line": 187,
+          "expression": "type",
+          "arguments": [
+            "role"
+          ]
+        },
+        {
+          "line": 189,
+          "expression": "dict",
+          "arguments": []
+        },
+        {
+          "line": 190,
+          "expression": "hashlib.sha256(Path(__file__).read_bytes()).hexdigest",
+          "arguments": []
+        },
+        {
+          "line": 190,
+          "expression": "hashlib.sha256",
+          "arguments": [
+            "Path(__file__).read_bytes()"
+          ]
+        },
+        {
+          "line": 190,
+          "expression": "Path(__file__).read_bytes",
+          "arguments": []
+        },
+        {
+          "line": 190,
+          "expression": "Path",
+          "arguments": [
+            "__file__"
+          ]
+        },
+        {
+          "line": 192,
+          "expression": "json.dumps(row, sort_keys=True, separators=(',', ':'), ensure_ascii=True).encode",
+          "arguments": [
+            "'utf-8'"
+          ]
+        },
+        {
+          "line": 192,
+          "expression": "json.dumps",
+          "arguments": [
+            "row"
+          ]
+        },
+        {
+          "line": 193,
+          "expression": "len",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 193,
+          "expression": "ValueError",
+          "arguments": [
+            "'Bootstrap diagnostic exceeds fixed bound'"
+          ]
+        },
+        {
+          "line": 194,
+          "expression": "(Path(binding['private_root']) / ('bootstrap.' + safe_role + '.rejection.json')).open",
+          "arguments": [
+            "'xb'"
+          ]
+        },
+        {
+          "line": 194,
+          "expression": "Path",
+          "arguments": [
+            "binding['private_root']"
+          ]
+        },
+        {
+          "line": 195,
+          "expression": "stream.write",
+          "arguments": [
+            "raw"
+          ]
+        },
+        {
+          "line": 196,
+          "expression": "stream.flush",
+          "arguments": []
+        },
+        {
+          "line": 198,
+          "expression": "ExceptionGroup",
+          "arguments": [
+            "'Bootstrap rejected; diagnostic write failed'",
+            "[primary, error]"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "runtime_roles.py",
+      "symbol": "StataEngine.__init__",
+      "line_start": 83,
+      "line_end": 100,
+      "source": {
+        "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\runtime_roles.py",
+        "bytes": 11946,
+        "sha256": "8423aac5de9ad0ef7a7eb04b6c685b96086fa07b12f79649493d57ce1ad92a8c"
+      },
+      "calls": [
+        {
+          "line": 84,
+          "expression": "verify_startup",
+          "arguments": [
+            "binding"
+          ]
+        },
+        {
+          "line": 88,
+          "expression": "threading.Event",
+          "arguments": []
+        },
+        {
+          "line": 91,
+          "expression": "sys.path.insert",
+          "arguments": [
+            "0",
+            "binding['site_packages']"
+          ]
+        },
+        {
+          "line": 92,
+          "expression": "sys.path.insert",
+          "arguments": [
+            "0",
+            "str(Path(binding['stata_home']) / 'utilities')"
+          ]
+        },
+        {
+          "line": 92,
+          "expression": "str",
+          "arguments": [
+            "Path(binding['stata_home']) / 'utilities'"
+          ]
+        },
+        {
+          "line": 92,
+          "expression": "Path",
+          "arguments": [
+            "binding['stata_home']"
+          ]
+        },
+        {
+          "line": 95,
+          "expression": "config.init",
+          "arguments": [
+            "'mp'"
+          ]
+        },
+        {
+          "line": 98,
+          "expression": "capture_runtime_identity",
+          "arguments": [
+            "binding",
+            "kernel",
+            "config",
+            "stata"
+          ]
+        },
+        {
+          "line": 99,
+          "expression": "threading.Thread",
+          "arguments": []
+        },
+        {
+          "line": 100,
+          "expression": "self.thread.start",
+          "arguments": []
+        }
+      ]
+    }
+  ],
+  "conditional_success_path": {
+    "stages": [
+      {
+        "id": "preparation",
+        "function": "startup_guard.prepare_authorized",
+        "mechanism": "verify_inventory",
+        "before_client_timeout": true,
+        "before_owner_origin": true
+      },
+      {
+        "id": "client",
+        "function": "empty_client.main",
+        "mechanism": "load_active",
+        "before_client_timeout": true,
+        "before_owner_origin": true
+      },
+      {
+        "id": "server",
+        "function": "mcp_adapter.main",
+        "mechanism": "load_active",
+        "before_client_timeout": false,
+        "before_owner_origin": true
+      },
+      {
+        "id": "watchdog",
+        "function": "runtime_roles.main",
+        "mechanism": "load_active",
+        "before_client_timeout": false,
+        "before_owner_origin": false
+      },
+      {
+        "id": "worker",
+        "function": "runtime_roles.main",
+        "mechanism": "load_active",
+        "before_client_timeout": false,
+        "before_owner_origin": false
+      }
+    ],
+    "full_inventory_checks": 5,
+    "serial_role_checks_after_owner_origin": 2,
+    "full_checks_in_client_timeout_scope": 3,
+    "actual_native_execution_observed": false,
+    "condition": "Authorized preparation and each prior stage succeeds; early failure can prevent later stages"
+  },
+  "clock_interpretation": {
+    "client": "empty_client._connect asyncio.timeout; after client load_active and sdk_environment entry",
+    "owner": "NativeOwner.__init__: self.origin = kernel.now(); after server load_active, Kernel, SDK import and channel.prepare",
+    "bootstrap": "Both role admissions and engine readiness must precede owner origin + 60 seconds",
+    "dispatch": "Each selection starts before origin + 80 seconds, uses its own nominal 10-second result deadline, and result precedes origin + 90 seconds",
+    "final": "Owner final-evidence origin + 120 differs from client asyncio timeout origin; neither is a measured hard-containment guarantee"
+  },
+  "graph": {
+    "mode": "Read-only JSON vocabulary and one-hop navigation; no refresh or writes",
+    "vocabulary": [
+      "deadline",
+      "inventory",
+      "lifecycle",
+      "preflight",
+      "runtime",
+      "startup",
+      "verification"
+    ],
+    "current_successor_nodes": 0,
+    "graph": {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\graphify-out\\graph.json",
+      "bytes": 39636413,
+      "sha256": "b1260004a46a85c806bfae2cabf38772906936431b9dc2143e86e7ef21288792"
+    }
+  },
+  "native_capacity_validated": false,
+  "execution_authorized": false
+}
