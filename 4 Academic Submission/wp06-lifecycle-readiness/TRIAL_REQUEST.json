@@ -1,0 +1,131 @@
+{
+  "schema": "WP06_EXACT_SUCCESSOR_TRIAL_REQUEST_V1",
+  "status": "PROPOSED_UNAPPROVED_NOT_A_GRANT",
+  "approved": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "scope": "ONE_EMPTY_NATIVE_RUN",
+  "proposal": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-readiness-424e076-20261030\\proposal.json",
+    "bytes": 1874,
+    "sha256": "216e936e87eae13824d81c7beff95c3555561d82c78826c8162e10ebd5a22624"
+  },
+  "candidate": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-readiness-424e076-20261030\\candidate_binding.json",
+    "bytes": 7449,
+    "sha256": "3a3432a44d0cb995c7e1f9695500cd014f45abd8a948af85b2723331f81956e7"
+  },
+  "candidate_binding_sha256": "e1c3f439dbc5453ab556f12f7676d9f35daaebb4966c6358a01725ea426c4676",
+  "proposed_execution_binding_sha256": "3454b95f72201084464e6d1467a2519e1e33dde98d7632d3926c5f010140906d",
+  "activation_delta": {
+    "activation_allowed": true,
+    "activation_holds": [],
+    "stdio_enabled": true,
+    "client_enabled": true
+  },
+  "proposed_run_id": "wp06-empty-lifecycle-20261030-b7d78e164aa8",
+  "proposed_private_root": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-lifecycle-20261030-b7d78e164aa8",
+  "source_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.json",
+    "bytes": 7008,
+    "sha256": "7529bd78733cb01eeb6b59fdd205faed378a34523cf41c261408978f75ec1645"
+  },
+  "runtime_inventory": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-remediation-42bc9be-20261030\\runtime_inventory_v3.json",
+    "bytes": 3242144,
+    "sha256": "67d4aa91680890e1b3f5ecdc6e34322d48675c02f3b58aa6220455fad887ec6e"
+  },
+  "source_client_contract": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\CLIENT_CONTRACT.json",
+    "bytes": 2246,
+    "sha256": "32c3cf6e4d34e523e0f77d80ca6e44571c8d0e8678225017908715094765b044"
+  },
+  "settings_observation": {
+    "path": "C:\\Users\\jzava\\.codex\\config.toml",
+    "bytes": 12734,
+    "sha256": "61e2d707d1b9dd8cf832bfeacdb167cdf576424d8b16cefcd6311e14bb47c9a5"
+  },
+  "cache_observation": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\.serena\\cache\\python\\document_symbols.pkl",
+      "bytes": 574180,
+      "sha256": "18b1c4f0c3030d231a6adf1647c4e4f6833be890583f59aa8e72893931de25da",
+      "mtime_ns": "1793354354876314100"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\.serena\\cache\\python\\raw_document_symbols.pkl",
+      "bytes": 134977,
+      "sha256": "8c11cf3b9d16a689802fdc46fa02ba3268bc6c28a5e2d95707f616de8632163d",
+      "mtime_ns": "1793354354869322100"
+    }
+  ],
+  "settings_observation_adopted": false,
+  "current_cache_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_cache_exception_resolved": false,
+  "required_owner_decisions": [
+    "Acknowledge the exact current settings/cache observations only for this isolated trial, without historical/global adoption",
+    "Accept unmeasured native startup, licensing, SDK, capacity, independent containment and evidence-publication risks solely for the empty trial",
+    "Authorize one exact source-bound isolated trial with these IDs, paths, four-field activation delta, two unchanged selections and bounds; no retry or replacement"
+  ],
+  "decision_status": {
+    "limited_observations_acknowledged": false,
+    "empty_only_risks_accepted": false,
+    "single_trial_authorized": false
+  },
+  "limits": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "proposed_grant_scope": "ONE_EMPTY_NATIVE_RUN",
+  "proposed_grant_validity_seconds": 900,
+  "approval_reference": null,
+  "expires_utc": null,
+  "proposed_execution_binding_written": false,
+  "prepared_run_created": false,
+  "participant_authority": false,
+  "fitting_authority": false,
+  "institutional_or_release_approval": false,
+  "native_acceptance": false,
+  "selected_client_command": [
+    "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\empty_client.py",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-lifecycle-20261030-b7d78e164aa8\\active_binding.json"
+  ],
+  "selected_client_cwd": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-empty-lifecycle-20261030-b7d78e164aa8",
+  "source_head_provenance": "424e076fa1602f11049546135d5adaac5330126a",
+  "invalidation": "Any source, client contract, runtime inventory, settings/cache identity, scope, selection, bound or path drift; occupied root; denial, expiry or failed attempt. No repair/retry under the same grant. HEAD is provenance; exact file pins govern source identity.",
+  "evidence_requirements": [
+    "Exact native ownership/identity and job membership",
+    "Watchdog and worker readiness plus runtime identity",
+    "Both exact owned empty-session selections and markers with zero active-frame observations/variables",
+    "Observed exit and owned inventory before disposal, closure failures and terminal cleanup publication",
+    "Failed diagnostics/pending candidates retained; missing evidence is not success"
+  ],
+  "forbidden": [
+    "participant files or outputs",
+    "fitting or arbitrary Stata code",
+    "shared/default endpoints or global registration",
+    "manual stop/probes outside separately authorized scope",
+    "retry, replacement or reuse of any prior run/grant"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "scope": "READINESS_AND_UNAPPROVED_TRIAL_CONTRACT_ONLY",
+  "project_files_checked": 27493,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 75,
+      "differences": []
+    },
+    {
+      "files": 41,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 36,
+      "differences": []
+    },
+    {
+      "files": 38,
+      "differences": []
+    },
+    {
+      "files": 108,
+      "differences": []
+    }
+  ],
+  "settings_unchanged": true,
+  "source_changed": false,
+  "historical_cache_adoption": false,
+  "historical_settings_exception_resolved": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "prepared_run_created": false,
+  "new_execution_grants": 0,
+  "native_launches": 0,
+  "native_acceptance": false,
+  "live_probes": 0,
+  "participant_processing": false,
+  "fitting": false,
+  "global_settings_changes": false,
+  "shared_service_changes": false,
+  "git_head": "424e076fa1602f11049546135d5adaac5330126a",
+  "git_commit": false,
+  "git_push": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

@@ -1,0 +1,68 @@
+{
+  "status": "READY_FOR_OWNER_DECISION_NOT_EXECUTION",
+  "ready_for_owner_decision": true,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "client_launched": false,
+  "native_acceptance": false,
+  "native_capacity_validated": false,
+  "current_settings_observation_adopted": false,
+  "current_cache_observation_adopted": false,
+  "historical_settings_exception_resolved": false,
+  "historical_cache_exception_resolved": false,
+  "participant_processing_authorized": false,
+  "fitting_authorized": false,
+  "institutional_or_release_approval": false,
+  "bounds_changed": false,
+  "retry_or_replacement_allowed": false,
+  "global_configuration_or_shared_service_changes": false,
+  "source_binding": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-remediation\\deployment.json",
+    "bytes": 7008,
+    "sha256": "7529bd78733cb01eeb6b59fdd205faed378a34523cf41c261408978f75ec1645"
+  },
+  "source_package_seal": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-remediation-42bc9be-20261030\\seal.json",
+    "bytes": 33870,
+    "sha256": "47a80a10189c1c74ff189eae89412fa5069097ff102e42e84cc6012633553fca"
+  },
+  "source_package_readback": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-lifecycle-remediation-42bc9be-20261030\\readback.json",
+    "bytes": 367,
+    "sha256": "654077e7004065d6f54beeac2245434a7aff64c24f3b58fe874c6828a43d9a6d"
+  },
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-lifecycle-readiness\\TRIAL_REQUEST.json",
+    "bytes": 7156,
+    "sha256": "523d797c1e8c64a484fe129da9f8100513c49a85e06da9e92820d0924be51714"
+  },
+  "candidate_binding_sha256": "e1c3f439dbc5453ab556f12f7676d9f35daaebb4966c6358a01725ea426c4676",
+  "proposed_execution_binding_sha256": "3454b95f72201084464e6d1467a2519e1e33dde98d7632d3926c5f010140906d",
+  "proposed_run_id": "wp06-empty-lifecycle-20261030-b7d78e164aa8",
+  "proposed_root_absent": true,
+  "settings_stability_samples": 4,
+  "settings_stable": true,
+  "settings_first_observed_utc": "2026-10-30T12:19:04.218317+00:00",
+  "settings_last_observed_utc": "2026-10-30T12:20:04.524417+00:00",
+  "settings_match_previous_source_packet": true,
+  "prior_source_suite": {
+    "normal": 151,
+    "optimized": 151,
+    "post_fix_independent_review": false
+  },
+  "offline_source_preflight": {
+    "bound_files": 11785,
+    "syntax_checked": 23,
+    "seconds": 137.469
+  },
+  "no_execution_trials_launched": 0,
+  "new_execution_grants": 0,
+  "remaining_owner_decisions": [
+    "limited_exact_settings_and_cache_acknowledgment",
+    "empty_trial_only_runtime_risk_acceptance",
+    "single_exact_expiring_trial_authority"
+  ],
+  "protected_stata_execution_gate": "CLOSED"
+}
