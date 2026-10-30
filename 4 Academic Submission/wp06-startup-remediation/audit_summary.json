@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "scope": "ADDITIVE_SOURCE_AND_ARTIFICIAL_NO_EXECUTION_ONLY",
+  "project_files_checked": 27157,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    }
+  ],
+  "successor_tests": 113,
+  "normal_and_optimized": true,
+  "unchanged_predecessor_tests": 82,
+  "bound_files": 11782,
+  "syntax_checked": 20,
+  "offline_single_verification_seconds": 18.54700000002049,
+  "offline_timing_is_not_native_acceptance": true,
+  "changed_predecessor_copies": [
+    "deployment.py",
+    "mcp_adapter.py",
+    "preflight.py",
+    "private_channel.py",
+    "runtime_roles.py",
+    "test_abi.py",
+    "test_native.py",
+    "test_review.py",
+    "test_support.py",
+    "win32_owner.py"
+  ],
+  "original_sources_unchanged": true,
+  "original_policy_and_provider_byte_exact": true,
+  "server_dispatcher_ast_exact": true,
+  "activation_allowed": false,
+  "runtime_ready": false,
+  "real_run_prepared": false,
+  "client_launched": false,
+  "prior_config_exception_adopted": false,
+  "historical_full_preservation_contract_passed": false,
+  "participant_processing": false,
+  "stata_calls": 0,
+  "native_workers_started": 0,
+  "native_control_calls": 0,
+  "global_settings_changes": false,
+  "shared_service_changes": false,
+  "git_head": "faf97153cc22bca0a319e2839a8a64bf72f2dcc2",
+  "git_commit": false,
+  "git_push": false,
+  "independent_postfix_review": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

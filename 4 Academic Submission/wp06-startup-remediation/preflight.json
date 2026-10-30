@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "status": "PASS_STATIC_PREPARATION_ONLY",
+  "bound_files": 11782,
+  "syntax_checked": 20,
+  "syntax_target": "Python 3.11 grammar only",
+  "differences": [],
+  "activation_allowed": false,
+  "activation_holds": [
+    "NO_EXECUTION_AUTHORITY",
+    "GLOBAL_CONFIG_DRIFT_UNRESOLVED",
+    "STARTUP_PROFILE_SCOPE_NOT_CLEARED",
+    "NO_PREPARED_ASSIGNED_RUN",
+    "NATIVE_AND_MCP_ACCEPTANCE_NOT_EXECUTED"
+  ],
+  "native_calls": 0,
+  "worker_launches": 0,
+  "stata_calls": 0,
+  "participant_processing": false,
+  "loaded_runtime_verified": false,
+  "mcp_interoperability_executed": false,
+  "startup_guard_implemented": true,
+  "fresh_run_prepared": false,
+  "client_recipe": {
+    "command": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+    "args": [
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-startup-remediation\\mcp_adapter.py",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED\\active_binding.json"
+    ],
+    "cwd": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED",
+    "env": {
+      "SYSTEMROOT": "C:\\Windows",
+      "PATH": "C:\\Windows\\System32;C:\\Windows",
+      "USERPROFILE": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED\\home",
+      "TEMP": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED\\temp",
+      "TMP": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED\\temp",
+      "STATATMP": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\UNASSIGNED\\temp"
+    }
+  },
+  "client_launched": false,
+  "current_settings_adopted": false,
+  "offline_build_and_verification_seconds": 104.78099999998813,
+  "elapsed_is_not_native_startup_acceptance": true
+}
