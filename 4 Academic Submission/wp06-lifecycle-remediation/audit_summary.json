@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "scope": "CURRENT_TASK_SOURCE_ARTIFICIAL_AND_PRESERVATION_ONLY",
+  "project_files_checked": 27383,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 75,
+      "differences": []
+    },
+    {
+      "files": 41,
+      "differences": []
+    },
+    {
+      "files": 26,
+      "differences": []
+    },
+    {
+      "files": 36,
+      "differences": []
+    },
+    {
+      "files": 38,
+      "differences": []
+    }
+  ],
+  "settings_unchanged": true,
+  "historical_cache_adoption": false,
+  "historical_settings_exception_resolved": false,
+  "native_launches": 0,
+  "live_probes": 0,
+  "participant_processing": false,
+  "fitting": false,
+  "new_execution_grants": 0,
+  "native_acceptance": false,
+  "activation_allowed": false,
+  "git_head": "42bc9be1871047bb3c43e717641f4bfbadcb4144",
+  "git_commit": false,
+  "git_push": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

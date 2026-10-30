@@ -1,0 +1,28 @@
+{
+  "schema": "WP06_EXACT_EMPTY_CLIENT_V1",
+  "enabled": false,
+  "assigned_run": null,
+  "preparation": "A separately approved binding/grant and unchanged complete inventory must pass before exclusive run-root/profile preparation. Existing roots and all failed attempts are retained, never reused or deleted.",
+  "entry": "empty_client.py with the exact prepared active_binding.json path",
+  "transport": "isolated SDK stdio only; fixed command, source, cwd and explicit overrides; no shared URL or global registration",
+  "sdk_environment": "Explicit pinned site-packages/win32/win32-lib paths and scoped pywin32_system32 DLL search; no .pth execution. SDK default safe variables may also be inherited by the parent; target roles receive the explicit six-field environment.",
+  "steps": [
+    {"step": 1, "operation": "MCP initialize", "stata_execution": false},
+    {"step": 2, "tool": "stata_session", "action": "list", "require": "exact assigned session; opened=false; closed=false"},
+    {"step": 3, "tool": "stata_run_selection", "selection_source": "deployment.literal_selections[0]", "timeout": 10, "require": "WP06_EMPTY_BEGIN and zero active-frame observations/variables"},
+    {"step": 4, "tool": "stata_run_selection", "selection_source": "deployment.literal_selections[1]", "timeout": 10, "require": "WP06_EMPTY_END and zero active-frame observations/variables"},
+    {"step": 5, "tool": "stata_session", "action": "list", "require": "same session; opened=true; closed=true"}
+  ],
+  "selection_calls": 2,
+  "selection_timeout_seconds": 10,
+  "transport_timeout_includes_bootstrap": true,
+  "overall_async_client_budget_seconds": 120,
+  "async_timeout_is_independent_native_containment": false,
+  "native_target_controls": "Preserved owned worker/watchdog/job controls and 60/80/90/95/100/110/120-second contract; not measured here.",
+  "retries": 0,
+  "replacement_workers": 0,
+  "failure_policy": "Stop on authority, startup, protocol, marker, nonzero-dimension or closure error. Preserve reservation, logs and failure receipt. No second selection after a first-call error and no automatic retry.",
+  "current_execution_authorized": false,
+  "independent_native_acceptance": false,
+  "participant_or_scientific_authority": false
+}
