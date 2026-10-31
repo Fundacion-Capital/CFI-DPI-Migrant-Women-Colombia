@@ -1,0 +1,20 @@
+{
+  "status": "FAILED_BOOTSTRAP_CONFIG_DRIFT_UNADOPTED",
+  "trial_success": false,
+  "authority_consumed": true,
+  "client_launches": 1,
+  "retries": 0,
+  "replacements": 0,
+  "completed_selection_calls": 0,
+  "native_acceptance": false,
+  "native_capacity_validated": false,
+  "cleanup_complete": false,
+  "full_preservation_contract_passed": false,
+  "settings_continuity_established": false,
+  "historical_settings_adopted": false,
+  "historical_cache_adopted": false,
+  "settings_changes_by_this_workflow": false,
+  "participant_processing": false,
+  "fitting": false,
+  "protected_stata_execution_gate": "CLOSED"
+}

@@ -1,0 +1,132 @@
+--- a/win32_owner.py
++++ b/win32_owner.py
+@@ -66,6 +66,29 @@
+             raise OSError('Native wait failed')
+         return status == 0
+ 
++    def stop_process(self, handle, expected):
++        if handle not in self.handles or self.identity(handle) != expected:
++            raise ValueError('No retained physical process identity')
++        if self.signaled(handle):
++            return dict(result='already_exited')
++        try:
++            self.ok(self.api.TerminateProcess(handle, 73))
++        except OSError as error:
++            if getattr(error, 'winerror', None) != 5:
++                raise
++            try:
++                if self.identity(handle) != expected:
++                    raise ValueError('Retained identity changed after access denied')
++                exited = self.signaled(handle)
++            except BaseException as observation:
++                error.add_note('Post-denial verification failed: '+type(observation).__name__+': '+str(observation))
++                raise error from observation
++            if not exited:
++                raise
++            # A denied call is not hidden: the parent must retain this receipt.
++            return dict(result='exit_observed_after_access_denied', winerror=5)
++        return dict(result='termination_requested')
++
+     def pause(self):
+         self.api.Sleep(5)
+ 
+@@ -81,6 +104,11 @@
+         if role not in {'worker', 'watchdog'} or Path(binding['entry']).resolve() != HERE / 'runtime_roles.py':
+             raise ValueError('Only fixed native-empty role entry points may launch')
+         verify_startup(binding)
++        # The venv executable is a trampoline; the role must own its own PID.
++        role_python = str(Path(binding['python_base_root']) / 'python.exe')
++        if Path(role_python).resolve() not in {Path(row['path']).resolve()
++                for row in binding['runtime_identity_files']['python_image']}:
++            raise ValueError('Direct role interpreter is not in the bound image inventory')
+         before = set(self.handles)
+         reader, writer = H(), H()
+         security = legacy.SECURITY_ATTRIBUTES(c.sizeof(legacy.SECURITY_ATTRIBUTES), None, True)
+@@ -112,11 +140,11 @@
+             startup.StartupInfo.hStdOutput = output
+             startup.StartupInfo.hStdError = output
+             startup.lpAttributeList = c.cast(attributes, H).value
+-            command = c.create_unicode_buffer(subprocess.list2cmdline([binding['python'], '-I', '-S', '-B', '-X', 'utf8',
++            command = c.create_unicode_buffer(subprocess.list2cmdline([role_python, '-I', '-S', '-B', '-X', 'utf8',
+                 binding['entry'], role, str(reader.value), str(root / 'active_binding.json')]))
+             environment = startup_environment(binding)
+             block = c.create_unicode_buffer('\0'.join(k + '=' + v for k, v in sorted(environment.items())) + '\0\0')
+-            self.ok(self.api.CreateProcessW(binding['python'], command, None, None, True,
++            self.ok(self.api.CreateProcessW(role_python, command, None, None, True,
+                 0x80000 | 0x400 | 0x4 | 0x8000000, block, str(root), c.byref(startup), c.byref(process)))
+             self.own(process.hProcess); self.own(process.hThread)
+             self.pending[process.hProcess] = dict(writer=writer.value, thread=process.hThread,
+--- a/native_provider.py
++++ b/native_provider.py
+@@ -31,6 +31,7 @@
+         self.worker = self.watchdog = self.inner = self.outer = self.stop = self.ready = None
+         self.commands = 0
+         self.identities = {}
++        self.termination_observations = []
+         self._rollback_lock = threading.Lock()
+         self._rollback_started = False
+         self._rollback_result = None
+@@ -72,13 +73,18 @@
+                 return copy.deepcopy(self._rollback_result)
+             self._rollback_started = True
+         failures = []
+-        for job in (self.inner, self.outer):
++        for role, job in (('inner', self.inner), ('outer', self.outer)):
+             if job is not None:
+                 try:
+                     if job not in self.handles:
+                         raise ValueError('No retained job capability for rollback')
+                     self.kernel.stop_job(job)
++                    self.termination_observations.append(dict(role=role,
++                        operation='TerminateJobObject', result='termination_requested'))
+                 except BaseException as error:
++                    self.termination_observations.append(dict(role=role,
++                        operation='TerminateJobObject', result='failed',
++                        winerror=getattr(error, 'winerror', None), error=type(error).__name__+': '+str(error)))
+                     failures.append(error)
+         failures.extend(self._stop_retained())
+         ceiling = self.origin + 110 * self.frequency_hz
+@@ -114,7 +120,7 @@
+         try:
+             self.channel.record_parent('exit', dict(evidence_scope=self.evidence_scope, rollback=True,
+                 processes=observations, exit_observed=exit_observed, identity=identity,
+-                active_owned=active_owned, failures=[type(e).__name__+': '+str(e) for e in failures], tick=self.kernel.now()))
++                active_owned=active_owned, termination_observations=copy.deepcopy(self.termination_observations), failures=[type(e).__name__+': '+str(e) for e in failures], tick=self.kernel.now()))
+         except BaseException as error:
+             failures.append(error)
+         for handle in list(dict.fromkeys(self.handles)):
+@@ -179,12 +185,22 @@
+ 
+     def _stop_retained(self):
+         failures = []
+-        for process in (self.worker, self.watchdog):
++        for role, process in (('worker', self.worker), ('watchdog', self.watchdog)):
+             if process is not None and process in self.handles:
+                 try:
+-                    if not self.kernel.signaled(process):
+-                        self.kernel.stop_process(process, self.identities[process])
++                    receipt = self.kernel.stop_process(process, self.identities[process])
++                    if type(receipt) is not dict or receipt not in (
++                            dict(result='already_exited'), dict(result='termination_requested'),
++                            dict(result='exit_observed_after_access_denied', winerror=5)) or (
++                            'winerror' in receipt and type(receipt['winerror']) is not int):
++                        raise ValueError('Missing retained-process termination receipt')
++                    self.termination_observations.append(dict(role=role,
++                        operation='TerminateProcess', **receipt))
+                 except BaseException as error:
++                    self.termination_observations.append(dict(role=role,
++                        operation='TerminateProcess', result='failed',
++                        winerror=getattr(error, 'winerror', None), error=type(error).__name__+': '+str(error),
++                        verification_notes=list(getattr(error, '__notes__', ()))))
+                     failures.append(error)
+         return failures
+ 
+@@ -328,7 +344,7 @@
+         self.channel.record_parent('exit', dict(evidence_scope=self.evidence_scope,
+             worker=self.kernel.identity(self.worker), worker_exit=self.kernel.exit_code(self.worker) if self.kernel.signaled(self.worker) else None,
+             watchdog_exit=self.kernel.exit_code(self.watchdog) if self.watchdog is not None and self.kernel.signaled(self.watchdog) else None,
+-            active_owned=result['active_owned'], tick=self.kernel.now()))
++            active_owned=result['active_owned'], termination_observations=copy.deepcopy(self.termination_observations), tick=self.kernel.now()))
+         return result
+ 
+     def close_handle(self, token):
