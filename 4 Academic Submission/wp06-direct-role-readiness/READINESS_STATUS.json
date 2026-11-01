@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "status": "QUALIFIED_REQUEST_PENDING_OWNER",
+  "ready_for_owner_authorization": true,
+  "execution_authorized": false,
+  "activation_ready": false,
+  "preserved_inputs": 305,
+  "preserved_references": 3393,
+  "tests_each_mode": 252,
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-direct-role-readiness\\TRIAL_REQUEST.json",
+    "bytes": 7160,
+    "sha256": "fba33384f23632482f35b73b3c8d90499174f1201c957a76f07e2a410a0605b4"
+  },
+  "limitations": "Endpoint snapshots only; no native capacity, effective UI mode, historical/global adoption or institutional/scientific clearance",
+  "native_launches": 0,
+  "participant_processing": false,
+  "new_grants": 0
+}
