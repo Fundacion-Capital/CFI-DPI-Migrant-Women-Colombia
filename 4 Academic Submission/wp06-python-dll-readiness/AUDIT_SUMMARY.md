@@ -1,0 +1,15 @@
+# No-launch readiness audit — evidence and limits
+
+Entry was clean at `578fe8d04a8bdc66117ab33c108b739dab86e9b7`. The settings-first observation matched the sealed source endpoint: 12,716 bytes, SHA-256 `d4035c5568cc8def9b379ee3fd3291990fa5f2fed4c9959c80ee8cd79cf941bf`, stored mode `STEPS_COMMANDS`. Both opaque project cache fingerprints also matched. Repeated endpoints are not continuous monitoring or effective-client-mode verification.
+
+The complete explicit historical catalogue contains **30 preceding seals, 3,907 member references and 3,962 inherited protected pins**. Initial filename-only enumeration missed descriptive seal filenames; the original entry remains intact and `entry_complete.json` records the full checked catalogue. No source bytes, settings/cache baseline or previous packet was changed.
+
+The sealed source qualification consists of six exact, current-source receipts: 217 successor tests, 16 package tests and 192 predecessor tests, each in normal and optimized Python. The fresh checkpoint additionally runs the 217 successor tests and 20 request/finalization tests in both modes. Mandatory final receipts require complete current Python/helper/finalizer/binding/catalogue membership, current interpreter/source bytes, integer counters, zero failures/errors/skips, no blocked effects and no native launches. Final accepted receipts and actual counts are listed in the private final audit and public readiness status; earlier RED/GREEN receipts remain historical.
+
+The static preflight checks 10,025 strict files, 29 successor Python scripts, nine inventory roots and 24 critical inputs. Source-backed caches are recorded as observations under the existing V2 policy, not added as immutable execution pins. None of these file checks loads a DLL, imports the real SDK/vendor runtime or launches Stata.
+
+The new request uses `WP06_PYTHON_DLL_TRIAL_REQUEST_V1`, not a normalized/reused legacy request. Tests cover exact false/pending authority, source-exact disabled candidate, scope reuse, drift, unchanged bounds and selections, raw evidence identities and the new DLL/SFI requirements. Only a hypothetical activation digest is calculated; the assigned proposal remains disabled and its run root absent.
+
+One fresh read-only review found no Critical or Important issues and one minor direct isolated-CLI import issue. The minor issue was fixed with one line and checked by primary before/after non-preparing CLI evidence, not an independent rereview. A primary final audit governs closure; the private review report/disposition retains findings and all out-of-scope rulings. Completion requires a passed final audit, exact snapshot/seal and separate readback. The request is for an owner decision only. Native DLL/SFI/plugin/MCP success, independent containment, scientific validity, institutional clearance and release are not established.
+
+No participant file was inspected; no sample, data/code, model, manuscript, settings or service was changed. No contact, commit, push, cloud sync, prepared run, grant, expiry or launch was performed. Existing failed trials and all prior packets remain preserved.
