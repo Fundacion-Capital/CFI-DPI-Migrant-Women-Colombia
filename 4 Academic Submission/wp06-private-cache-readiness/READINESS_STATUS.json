@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "status": "QUALIFIED_REQUEST_PENDING_OWNER",
+  "ready_for_owner_authorization": true,
+  "execution_authorized": false,
+  "activation_ready": false,
+  "preserved_inputs": 399,
+  "preserved_references": 3618,
+  "tests_each_mode": 295,
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-private-cache-readiness\\TRIAL_REQUEST.json",
+    "bytes": 13174,
+    "sha256": "d9f2a14df686bc6f8f2fb636e8b7003eb56a4f7f2a7acfbff71c3bd18a734afb"
+  },
+  "limitations": "Endpoint snapshots only; no native capacity, effective UI mode, historical/global adoption or institutional/scientific clearance",
+  "native_launches": 0,
+  "participant_processing": false,
+  "new_grants": 0
+}
