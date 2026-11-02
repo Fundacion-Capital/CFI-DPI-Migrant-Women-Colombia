@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE_SINGLE_EMPTY_TRIAL_AUDIT",
+  "artifact_audit_passed": true,
+  "native_empty_trial_accepted": false,
+  "trial_outcome": "FAILED_TRIAL_NOT_ACCEPTED",
+  "client_exit_code": 1,
+  "client_launches": 1,
+  "retries": 0,
+  "replacements": 0,
+  "authority_consumed": true,
+  "new_execution_authority_remaining": false,
+  "participant_processing": false,
+  "fitting": false,
+  "settings_changes": false,
+  "shared_service_changes": false,
+  "independent_host_cleanup_verified": false,
+  "native_capacity_validated": false,
+  "scientific_acceptance": false,
+  "institutional_approval_assumed": false,
+  "release_ready": false,
+  "protected_participant_execution_gate": "CLOSED",
+  "prior_seals": 31,
+  "prior_references": 3961,
+  "protected_inputs": 4018,
+  "artificial_tests_each_mode": 227,
+  "request": {
+    "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-python-dll-readiness\\TRIAL_REQUEST.json",
+    "bytes": 19418,
+    "sha256": "77e24c82f1c5a0a1ab3ee27bd4fa6b549dea7f5443264d4bccbfbe0464d111b5"
+  }
+}
