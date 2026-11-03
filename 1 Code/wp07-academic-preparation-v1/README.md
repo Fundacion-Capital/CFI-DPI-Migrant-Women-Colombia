@@ -1,0 +1,17 @@
+# WP07 academic preparation v1 — disabled source draft
+
+This is a separate preparation layer, not a replacement for either the historical scripts or the style-only copies. The first Stata command is `exit`. Do not remove it under this approval. There is no master call, input load, cohort filter, sort, save, export, or model fit. The draft is written for the documented TARGET33 projection, not an authorized or freshly validated input.
+
+| Decision | Change in the draft |
+| --- | --- |
+| D2 — versions and residence | Recognize the five documented submitted versions. Preserve the original fields. Keep early code 4 (Other) distinct from later code 4 (Soacha); recognize Meta only on the version that offered it, without assigning a municipality or pooling it. |
+| D2 — sample, routes and missingness | Do not change membership, manual exclusions, clocks or original codes. New score terms require a documented version, positive recorded instrument gate, and the applicable route and valid item code. A route inferred from selected account-type tokens is not verification of actual routing. Unknown, inapplicable and unscored values do not become zero. |
+| D3 — IVS | Draft only the ten-level education term. Keep occupation nominal and hold the calendar gap and composite pending the date-source and fixed-bound decisions. |
+| D3 — IAT, IADT, ICDP | Draft the three-term IAT, both IADT definitions, and OTP/PIN ICDP with the accepted phone gates. Leave location, reading, QR use and suspicious-message responses separate. |
+| D3 — IAFF, IUOF, OQI | Draft the two administrative conditions, the three activity items and its two declared alternatives, and the two onboarding items and historical ease-spacing comparison. No available-item reweighting, inherited cutoffs, standardization or automated substitution. |
+| D3 IURD and D4 engagement | Keep five remittance-disposition categories, the optional any-digital contrast, domestic participation in 60 days, and the conditional operation bins with uncertainty retained. Do not treat disposition as a measured amount or the latest channel. Receipt channel and receipt frequency remain in the original items. |
+| D3 remaining separate domains; D4/D6 | Preserve the source items for separate reporting; no replacement pooled scores, automatic optional indicators, regression inputs promoted to primary status, or LCA class inputs. Any additional derived indicators belong in a later exact, reviewed manifest. |
+
+The source does not execute P1–P4 or create a general response-state map. Before scoring, the protected no-fit check must verify input identity, types, version-specific domains and availability, route/parent/dummy consistency, clocks and denominator coverage. Do not silently promote unsupported or indeterminate cases, reconcile conflicting responses, or filter the sample. After separate authorization, validate the candidate formulas and common-sample coverage against the historical benchmarks before adoption.
+
+Decision sources: [D2 accepted policies](../../4%20Academic%20Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md), [D3 accepted accounts](../../4%20Academic%20Submission/wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md), [D4/D6 accepted account](../../4%20Academic%20Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md), and the existing [instrument-route crosswalk](../../4%20Academic%20Submission/measurement-crosswalk/instrument_routes.csv).
