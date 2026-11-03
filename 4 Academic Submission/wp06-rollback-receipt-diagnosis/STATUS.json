@@ -1,0 +1,16 @@
+{
+  "status": "PASS_READ_ONLY_DIAGNOSIS_ONLY",
+  "native_return_observed": -7100,
+  "native_discovery_cause_proven": false,
+  "watchdog_winerror": 5,
+  "watchdog_denial_cause_proven": false,
+  "cleanup_complete": false,
+  "bootstrap_receipt_mismatch_reproduced_artificially": true,
+  "bootstrap_receipt_mismatch_reached_in_trial": false,
+  "artificial_checks": 6,
+  "native_launches": 0,
+  "source_changed": false,
+  "settings_changed": false,
+  "participant_processing": false,
+  "new_execution_authority": false
+}
