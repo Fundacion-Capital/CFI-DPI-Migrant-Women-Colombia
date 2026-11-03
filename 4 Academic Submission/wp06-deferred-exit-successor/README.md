@@ -1,0 +1,9 @@
+# WP06 — disabled deferred-watchdog and bootstrap-receipt successor
+
+This additive V5 candidate is disabled, unassigned and offline-qualified only. It does not modify or reinterpret the consumed V4 trial, change the loader, or authorize another run.
+
+**Deferred watchdog verification.** The retained-handle stop operation still attempts termination at most once. Only an original WinError 5 with a matching retained identity and an immediately nonsignaled handle can become eligible for deferred verification. Rollback uses its existing wait and 110-second containment deadline. A separate receipt disposition retains the denial text and records the verified identity and observation tick only after both roles are observed exited, the owned job is empty, all retained handles close, and no other error occurred. The strict reader requires complete rollback-role, identity, deadline, and closure evidence. A missing, foreign, late, ambiguous or failed observation is not cleared. Receipt publication or clock failure still fails cleanup. The failed bootstrap never becomes a successful trial.
+
+**Bootstrap receipt.** The real parent writer now admits the one previously missing fixed kind, validates positive SFI against the bound source, and retains bounded create-only semantics. The reader requires the exact scoped receipt and positive proof. Duplicate publication cannot initialize the provider. No general-purpose allowlist or startup allowance was added; startup verification happens before the receipt is written.
+
+The previous trial's observed −7100 and SFI import failure remain unresolved at the native discovery layer. V5 retains the two empty selections, executable/runtime pins, startup policies and deadlines. Participant execution remains closed. A future native run requires a separate decision, fresh source-exact checkpoint and new authority; this candidate is not evidence that another run would succeed.
