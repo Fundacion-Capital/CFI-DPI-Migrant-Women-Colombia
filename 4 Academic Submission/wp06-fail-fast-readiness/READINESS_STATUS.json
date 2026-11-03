@@ -1,0 +1,21 @@
+{
+  "status": "PASS_SOURCE_EXACT_OWNER_CHECKPOINT_ONLY",
+  "request_sha256": "f9883624c536bcf43a5cedbb686cbe590f5a4ede3698226bb80848eb1d2850b5",
+  "proposed_run_id": "wp06-empty-fail-fast-20261103-18dd0796a8224681",
+  "strict_inventory_files_verified": 10026,
+  "source_backed_cache_observations_not_strict_pins": 1770,
+  "inherited_seals_checked": 33,
+  "inherited_resolved_pins_checked": 4143,
+  "source_seal_members_checked": 62,
+  "request_mutations_rejected": 9,
+  "limited_observations_acknowledged": false,
+  "empty_only_risks_accepted": false,
+  "single_trial_authorized": false,
+  "grant_created": false,
+  "run_prepared": false,
+  "active_binding_written": false,
+  "runtime_ready": false,
+  "native_launches": 0,
+  "participant_processing": false,
+  "settings_changed": false
+}
