@@ -1,0 +1,14 @@
+# TARGET33 four-selection offline dispatcher
+
+**Artificial-only; cannot dispatch Stata.** This package reads the sealed P1–P4 source and documentary binding metadata, not the TARGET33 carrier. Its only transport is a single-use in-memory fixture. It does not create the proposed restricted output root or write any output CSVs, participant artifacts, or synthetic copies of the carrier.
+
+The controller reserves the exact P1 → P2 → P3 → P4 order once, admits one simulated load in P1, and tests the proposed 45-second selection, 180-second work, 30-second cleanup and 210-second overall ceilings on a synthetic clock. A malformed, foreign or late receipt stops later selections and calls the separate fake cancellation path once. Missing, late or failed cleanup or cancellation quarantines the packet. Prior completed checks, stopped checks and unexecuted checks remain distinct; fixture dispositions are not empirical evidence. No retry or fallback is implemented.
+
+The preflight rehashes both prior packets, the check catalogue and all four source bodies. It binds the CSV headers and ordered rows to the exact sealed output statements, checks that runtime substitutions can contain only bounded counts and approved statuses, and reconciles the five version totals, 500 field/version partitions of the six response states, screening totals and coverage inequalities. The Markdown produced by P4 is an index, not a scientific readout. Real receipts, timeouts, cancellation, Stata syntax, payload transport and performance are not verified. The largest pinned selection is about 956 kB, so fit within the proposed runtime limits must not be inferred from fixture timing.
+
+## Decisions still required
+
+- **Who can run or read:** Confirm named author-authorized operators and readers for the internal wave, including those who may see restricted logs and version-specific small cells. Do not infer broader institutional or cloud access from local ACL metadata.
+- **Where outputs can live:** Approve the exact absent, ignored destination, then verify effective and inherited access, sync behavior, aliasing and noncollision before provisioning. No output folder was created here.
+- **How long to keep outputs:** Adopt a retention, custody and handover rule covering complete, failed and partial results, logs and cancellation evidence. Pending that decision, preserve existing packets; do not publish, transfer, delete or invent a legal retention period.
+- **What can execute:** A separately qualified owned runtime and independently usable control path must pass a real artificial Stata preflight, with exact command source, payload size, cleanup and logging checked. Then bind the approved budget, protected dispatcher and output contract. This module deliberately provides no live adapter or grant. Prior failed SFI evidence does not support activation, and the two-call empty client is not this dispatcher.
