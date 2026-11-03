@@ -1,0 +1,19 @@
+{
+  "status": "FAILED_BOOTSTRAP_VERIFIED_ROLLBACK_NOT_ACCEPTED",
+  "request_sha256": "fd556c614bba6515c71f05d4ff38404b4527fab74044f877c7ae101193aba522",
+  "client_attempts": 1,
+  "client_exit_code": 1,
+  "selection_calls": 0,
+  "retries": 0,
+  "replacements": 0,
+  "authority_consumed": true,
+  "canonical_forwarded_verified": true,
+  "native_return": -7100,
+  "strict_rollback_readback_passed": true,
+  "cleanup_complete": true,
+  "native_trial_accepted": false,
+  "native_discovery_cause_proven": false,
+  "participant_processing": false,
+  "settings_changed": false,
+  "new_execution_authority": false
+}
