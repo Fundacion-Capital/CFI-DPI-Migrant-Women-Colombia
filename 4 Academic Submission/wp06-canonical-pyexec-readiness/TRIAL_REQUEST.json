@@ -1,0 +1,250 @@
+{
+  "schema": "WP06_CANONICAL_PYEXEC_TRIAL_REQUEST_V1",
+  "status": "PROPOSED_UNAPPROVED_NOT_A_GRANT",
+  "scope": "ONE_EMPTY_NATIVE_RUN",
+  "source_pins": [
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\deployment.json",
+      "bytes": 10752,
+      "sha256": "4dfedfcb20d0486464e4ec2c4e949f75e966a8778598dd82a34314371b774060"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\CLIENT_CONTRACT.json",
+      "bytes": 5147,
+      "sha256": "0291ef87da5fe11b22d76e942f0011a02dd2fe6f4c6015bd029cbad7742f5e35"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\STATUS.json",
+      "bytes": 586,
+      "sha256": "faec12718ddd54f9104b26ce720dcf6edf0e02ddc76317314824a3dd2e1aa7bd"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\runtime_inventory.json",
+      "bytes": 2718778,
+      "sha256": "ca0e2ae0d2e9a43150cfe669d27d4b77d2e96f5463fda1dbee1af05519ae1bed"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-readiness-13ba267-20261103\\candidate_binding.json",
+      "bytes": 11272,
+      "sha256": "db917f8032263646382c206c51edc43dcd2e0e467252b40abdbd0ed75adbca12"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-readiness-13ba267-20261103\\baseline.json",
+      "bytes": 881,
+      "sha256": "66abc80cba239731daba7955050372874220ea79e89cd1ea7af077a02e14fdd2"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\seal.json",
+      "bytes": 14903,
+      "sha256": "0edff1119aa058a9e05f2bf99dcbe2b225af5664aa6971b1b4d4682bb531d7a9"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\readback.json",
+      "bytes": 351,
+      "sha256": "3b9230ad04745c75d11ed61a47f546a448c6b0eeba260ef49b710afa46ca3a1f"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\final_normal.json",
+      "bytes": 9187,
+      "sha256": "ffe957a31301e7f3fb4f0505dc929dbf1b4bcf37edaa9e96035f87883d7f04c8"
+    },
+    {
+      "path": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\final_optimized.json",
+      "bytes": 9186,
+      "sha256": "4f25af92aacc9810fc0cd4ef2ade2256925e210d488e65121416acf584f3a806"
+    }
+  ],
+  "proposed_scope": {
+    "run_id": "wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db",
+    "session_id": "wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db-session",
+    "worker_epoch": "epoch-acceb16677acfe67",
+    "owner_nonce": "98fef4c3c26641dbacceb16677acfe67",
+    "clock_domain": "qpc-98fef4c3c26641db"
+  },
+  "proposed_private_root": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db",
+  "selected_client_cwd": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db",
+  "candidate_binding_sha256": "4936b52ca4ff2606a92eef8001e7a63cad2655343a3c98a171bad6f7154bda51",
+  "proposed_execution_binding_sha256": "4371968501f2ca81dcc850ea23654616f4c17c80616b7a5f0a0ae0f664067411",
+  "activation_delta": {
+    "activation_allowed": true,
+    "activation_holds": [],
+    "client_enabled": true,
+    "stdio_enabled": true
+  },
+  "bounds": {
+    "new_sessions": 1,
+    "selection_calls": 2,
+    "nominal_call_seconds": 10,
+    "retries": 0,
+    "replacements": 0,
+    "bootstrap_seconds": 60,
+    "last_dispatch_seconds": 80,
+    "cooperative_stop_seconds": 90,
+    "supervisor_containment_seconds": 95,
+    "observer_containment_seconds": 100,
+    "outer_containment_seconds": 110,
+    "final_evidence_seconds": 120
+  },
+  "literal_selections": [
+    "* Verify a newly owned session; do not clear unexpected data.\ndisplay \"WP06_EMPTY_BEGIN\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\ndisplay \"STATA=\" c(stata_version)\ndisplay \"FLAVOR=\" c(flavor)\ndisplay \"BUILD=\" c(born_date)\ndisplay \"MAXVAR=\" c(maxvar)\n",
+    "* Confirm that the same owned session remains empty.\ndisplay \"WP06_EMPTY_END\"\ndisplay \"N=\" c(N) \" K=\" c(k)\nif (c(N) != 0 | c(k) != 0) {\n    error 459\n}\n"
+  ],
+  "cache_policy": {
+    "schema": "WP06_PRIVATE_CACHE_PREFIX_V1",
+    "directory": "pycache",
+    "cache_tag": "cpython-311",
+    "source_backed_only": true
+  },
+  "fixed_mode": "STEPS_COMMANDS",
+  "interpreter_commands": {
+    "client": [
+      "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "-X",
+      "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\pycache",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\empty_client.py",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\active_binding.json"
+    ],
+    "adapter": [
+      "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "-X",
+      "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\pycache",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\mcp_adapter.py",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\active_binding.json"
+    ],
+    "worker": [
+      "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "-X",
+      "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\pycache",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\runtime_roles.py",
+      "worker",
+      "<private-inherited-bootstrap-reader>",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\active_binding.json"
+    ],
+    "watchdog": [
+      "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+      "-I",
+      "-S",
+      "-B",
+      "-X",
+      "utf8",
+      "-X",
+      "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\pycache",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\runtime_roles.py",
+      "watchdog",
+      "<private-inherited-bootstrap-reader>",
+      "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\active_binding.json"
+    ]
+  },
+  "expected_cache_proof": {
+    "pycache_prefix": "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\wp06-empty-canonical-pyexec-20261103-98fef4c3c26641db\\pycache",
+    "dont_write_bytecode": true,
+    "cache_tag": "cpython-311",
+    "isolated": true,
+    "no_site": true
+  },
+  "runtime_identity_files": {
+    "engine": [
+      {
+        "path": "C:\\Program Files\\Stata19\\mp-64.dll",
+        "bytes": 58497232,
+        "sha256": "537e53362edb257c4a0d3df57c4c41d30c64040e54a690413904e6d4e0d73058"
+      }
+    ],
+    "python_image": [
+      {
+        "path": "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+        "bytes": 45568,
+        "sha256": "023574470d2cf8a3bd40ae9ead59e7d49608b0065675de00b83b57caf1060af0"
+      },
+      {
+        "path": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+        "bytes": 91648,
+        "sha256": "ae7e969410d751d010c2ca03394fe5c53230fbf48ca7d368b897e455eca14fba"
+      }
+    ],
+    "pystata_config": [
+      {
+        "path": "C:\\Program Files\\Stata19\\utilities\\pystata\\config.py",
+        "bytes": 31341,
+        "sha256": "4d17928dce23ee66194b95bf1272a7d55334e077ff94a9a020a9b8cb80cb8de4"
+      }
+    ],
+    "pystata_stata": [
+      {
+        "path": "C:\\Program Files\\Stata19\\utilities\\pystata\\stata.py",
+        "bytes": 35876,
+        "sha256": "503751e5de332feb96b02aba9bc0aa3998ccbb3967289e261fada26bf68d3405"
+      }
+    ],
+    "python_shared_library": [
+      {
+        "path": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python311.dll",
+        "bytes": 5842944,
+        "sha256": "e1b53c741751563eca9eac70378de5be36994adac8c27e8ec375971579e23b50"
+      }
+    ],
+    "sfi_module": [
+      {
+        "path": "C:\\Program Files\\Stata19\\ado\\base\\py\\sfi.py",
+        "bytes": 208265,
+        "sha256": "571012cce10b28114d4b33481662e9614dc44c6902a2f77f4bc4fc8acdbfcb29"
+      }
+    ]
+  },
+  "required_success_evidence": [
+    "startup_receipt.json",
+    "client_receipt.json",
+    "parent.cache.json",
+    "worker.ready.0.json",
+    "watchdog.ready.0.json",
+    "parent.ownership.json",
+    "parent.runtime.json",
+    "parent.exit.json",
+    "parent.closure.json",
+    "parent.cleanup.json",
+    "selection.1.log",
+    "selection.2.log",
+    "python-bootstrap.preinit.json",
+    "python-bootstrap.result.json",
+    "parent.python_bootstrap.json",
+    "python-bootstrap.native_return.json"
+  ],
+  "expected_bootstrap_return": {
+    "schema": "WP06_BOOTSTRAP_RETURN_V2",
+    "limit_bytes": 8192,
+    "raw_executable": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe",
+    "resolved_executable": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+    "forwarded_executable": "C:\\Users\\jzava\\AppData\\Roaming\\uv\\python\\cpython-3.11.15-windows-x86_64-none\\python.exe",
+    "success": "Exact scoped RETURNED record with nonnegative integer code; not positive SFI proof.",
+    "repeat_minus_7100": "Preserve failure and stop; no retry or additional loader tweak without discovery evidence."
+  },
+  "positive_sfi_schema": "WP06_POSITIVE_SFI_V1",
+  "rollback_evidence": "V5 strict deferred same-handle watchdog exit and closure readback; failed startup never becomes accepted.",
+  "proposed_grant_validity_seconds": 900,
+  "approval_reference": null,
+  "expires_utc": null,
+  "limited_observations_acknowledged": false,
+  "empty_only_risks_accepted": false,
+  "single_trial_authorized": false,
+  "grant_created": false,
+  "active_binding_written": false,
+  "run_prepared": false,
+  "native_accepted": false,
+  "participant_authority": false,
+  "fitting_authority": false
+}
