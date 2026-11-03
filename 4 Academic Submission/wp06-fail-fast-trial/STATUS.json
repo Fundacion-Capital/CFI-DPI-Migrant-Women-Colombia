@@ -1,0 +1,18 @@
+{
+  "status": "FAILED_TRIAL_NOT_ACCEPTED",
+  "artifact_audit_passed": true,
+  "client_attempts": 1,
+  "client_exit_code": 1,
+  "selection_calls": 0,
+  "retries": 0,
+  "replacements": 0,
+  "authority_consumed": true,
+  "native_return_code": -7100,
+  "early_worker_exit_reported": true,
+  "watchdog_termination_winerror": 5,
+  "cleanup_complete": false,
+  "native_acceptance": false,
+  "protected_participant_execution_gate": "CLOSED",
+  "participant_processing": false,
+  "settings_changed": false
+}
