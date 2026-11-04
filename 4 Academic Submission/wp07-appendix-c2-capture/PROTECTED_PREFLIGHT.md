@@ -1,0 +1,15 @@
+# WP07 block 05 — protected comparison binding (R01)
+
+**Documentary binding complete; protected dispatch held.** This is the one-run contract for Appendix Table C2 only. The frozen private request binds the sealed final-segment carrier, the exact 15-field projection, the fixture-tested emitter, the original CSV target and one reserved output location. It is not authorization, and the guarded emitter is unchanged.
+
+| Item | Bound scope and preflight evidence |
+| --- | --- |
+| Carrier | Only the exact restricted file identified by the parent seal, with a previously recorded SHA-256 and 423 expected rows. Current locator and 1,824,317-byte size checked by metadata only. Windows reports a reparse point; provider identity and stable read access are not established by the size check. No participant payload was opened, hydrated, hashed or loaded in this preflight. |
+| Stata | One future MCP selection and at most one selected-variable load, in a fresh owned worker; one unweighted listwise matrix and two complete-case N witnesses. The dormant emitter is only assembled in memory for a static fingerprint; no executable file was created. No fitting, row-level outputs, fallback inputs or retries. |
+| Destination | One exact off-repository Windows local directory reserved by name and verified absent. No directory, permissions or results were created there. The existing parent has additional allow entries, so inherited ACLs are not acceptable. Require a dedicated non-inherited ACL and verification of effective access, device protections and non-sync status before load. |
+| Outputs | Only a local native C2 receipt, comparison JSON and run-audit JSON, with fixed names in the private contract. Retain failures without overwriting them; no full command transcript or participant values outside the restricted route. The old artificial MCP response did carry matrix values and is not evidence of protected output confinement. |
+| Comparison | Original archived CSV and the existing token-precision reader. A complete receipt must contain exactly 243 records and agree on N. Even if all 225 cells match at archived precision, no historical complete-case N or native matrix is available for independent equality testing. |
+
+Before a protected dispatch, confirm the named operator and readers, exact destination, at-rest protections and retention; provision and verify the destination only under that approval. In a separate artificial-only qualification, demonstrate the exact selected-variable loading route, local-only receipt persistence without aggregate payload in chat or unrestricted logs, and independent cancellation and terminal ownership evidence. A fresh named session and MCP timeout alone do not establish these controls. After a new explicit one-run grant, verify the carrier bytes under a stable local read guard before Stata opens it. Stop on any drift, access or receipt failure, or unproven closure; no substitute route or retry.
+
+No Stata tool was called and nothing was staged, committed, pushed or released. The exact machine paths and restricted binding are kept in the ignored local packet. No empirical comparison has been made.
