@@ -1,0 +1,13 @@
+# WP07 block 05 — isolated stdio route qualification (R04)
+
+**Protected dispatch remains held.** The isolated MCP control plane passed its handshake and command-admission check, but the Stata worker failed initialization. The busy selection was not dispatched; native exit without replacement was not verified.
+
+- The disposable stdio bridge exposed only the Stata selection and named-session tools. It reused the installed manager and worker without starting the stock HTTP launcher or creating a default session. Its controller and bridge used a new off-repository local root with protected Windows access rules; the existing protected output reservation was not created. The physical root was verified after Windows app-local redirection.
+- A pre-launch path check and then an initial stdio-client setup failed before any Stata selection. Both failures were retained. Isolated no-selection probes then completed the MCP handshake and tool listing. The final bridge rejected the altered smoke command while its session list remained empty.
+- The one admitted Stata smoke request (`display 2+2`) returned **Failed to create worker process**. The manager log records **init timeout** at the 15-second worker-start bound. Stdio teardown records destruction of that named session. There was no second native smoke, shared-service fallback, or busy stop. Postflight found no scoped live process candidate, but there was no retained native worker handle or native exit witness. The underlying startup failure is not diagnosed by the timeout.
+- The bridge, stderr, event and selection logs observed in this attempt were in the new local root. A scoped search found no trial identifier in the shared request log or global temporary filenames. Worker debug and Stata capture logs were not produced, so their confinement under successful native execution or abrupt termination was **not tested**.
+- The staged busy fixture would allow 12 seconds for a closed marker and same-worker busy observation, versus 4 seconds in R03. The 25-second artificial sleep, one-stop limit and original-process witness remained unchanged as acceptance requirements. None was exercised in R04.
+
+The ignored R04 packet seals the local runner, failure evidence and off-repository log inventory. The historical emitter, inputs and existing packets were not modified. No participant data were opened, loaded or hashed; no fitting, global settings changes, shared-service changes, staging, commit or push occurred.
+
+**Next step:** Diagnose the isolated worker's pre-readiness startup path with bounded, empty-only evidence of Windows child creation, child stderr and the startup terminal status. Do not repeat the busy trial until the empty smoke and native log boundary both pass.
