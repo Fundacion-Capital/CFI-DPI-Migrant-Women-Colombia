@@ -1,0 +1,10 @@
+WP07: Review and revise historical regression code without execution
+
+Add four disabled, researcher-readable regression drafts covering the historical
+setup, 45 main specifications, four interactions and seven supplementary logits.
+Expand control macros, preserve scientific commands and output settings, and
+make input fields, sample rules and historical non-equivalences explicit.
+
+Add the 56-model source/exhibit register, source and aggregate-target fingerprints,
+static verification, review disposition and audit record. Preserve all original
+and prior revised files. Keep Appendix C2 and empirical execution on hold.

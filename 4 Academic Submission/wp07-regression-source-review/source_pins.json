@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-05",
+  "git_head": "60c3b94d1d03ed224f3c18d78a6b86420fc61085",
+  "status_before": [
+    "?? \"4 Academic Submission/wp05-literature-context/\""
+  ],
+  "scope": "source text only; no Stata, data loads, manuscript changes or Appendix C2 execution",
+  "files": [
+    {
+      "path": "1 Code/0 Master Code_CFI DPI Migrant Women Colombia.do",
+      "sha256": "d2ec519440281bfd0316ec9cd7de1bdf64afadff5e7959e43a774f33323c7b39"
+    },
+    {
+      "path": "1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do",
+      "sha256": "e6a9e542dcff1067dcda7a37a19b5cff542b65b54622f198c240a419dc0ed449"
+    },
+    {
+      "path": "1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do",
+      "sha256": "714377ca31de2b6d70db0994e3c7ef6a38374165d7b1fb7c7abeb3b3f56549c9"
+    },
+    {
+      "path": "1 Code/style-only-v1/0 Master Code_CFI DPI Migrant Women Colombia.do",
+      "sha256": "6cc48708952e1ccdbcf51920d5e77a8bf01642dc720644a9f9ab6d3a0366e0d9"
+    },
+    {
+      "path": "1 Code/style-only-v1/1 Data Preparation_CFI DPI Migrant Women Colombia.do",
+      "sha256": "b004a263e6593d3e83dab7e3d5d3a8ff381ccf53a8ef757ba11dcdf5fa5ea252"
+    },
+    {
+      "path": "1 Code/style-only-v1/2 Analysis_CFI DPI Migrant Women Colombia.do",
+      "sha256": "5483ae5cdba059ecf868b89270aeb125da5920a2fd0965885095cd355e76a2bb"
+    },
+    {
+      "path": "1 Code/wp07-academic-analysis-v1/00 Master.do",
+      "sha256": "5767297449ae698e695258f7397493c3f0448aa93a9295c183040e3a0e97f1dc"
+    },
+    {
+      "path": "1 Code/wp07-academic-analysis-v1/02 Engagement descriptives.do",
+      "sha256": "45ff3512a605ebe0b4562182c81b0df1032735cdb17ff6fc942e6ef5b138d327"
+    },
+    {
+      "path": "1 Code/wp07-academic-preparation-v1/01 Approved preparation draft.do",
+      "sha256": "1e2862817eeddbcb9f93f46d1093ef6ba71851dcb4c83fcfc650986b2fe4831f"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/01 Historical main descriptives.do",
+      "sha256": "26a1d376191bf6904023cf1443ff2bd7558a3a1175701f5cfd0489dd5b794a57"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/02 Historical appendix descriptives.do",
+      "sha256": "c3226c65bda14a9e03a52fb6fdbd39ac002f165fe25f5deab5556c47d54fe3c1"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/03 Academic descriptives.do",
+      "sha256": "bec01887e138b8a8c892cccd772288c5b16ca7651b6b809459555073863f82e6"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/04 Historical IAT IADT pair.do",
+      "sha256": "3b32c4add8b7e3055f425f3a03c0b20d4b7f62c4bbee873202881ec39153ad7e"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/05 Historical appendix C2 matrix.do",
+      "sha256": "4e7814e1b4f5a052cca1e45eb2d45cfc86c162cec0337f7bf04e073df24f4938"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/06 Historical F5 associations.do",
+      "sha256": "a03a862240ecad1f55e44cf7e91f92f169e20ef70aadce4bcdda3fb348417b29"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/07 Academic IAT IADT comparison.do",
+      "sha256": "98f7852dcb876a74f7562477f876d99539a45fafb4ee15b7f09a0f4f30bcaf3c"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/08 Historical Table 2 and Figures 6–10.do",
+      "sha256": "98ae836a395511876f044b861b01577210ed4b1f8e8f7e6476619a6560f8607a"
+    },
+    {
+      "path": "4 Academic Submission/main.tex",
+      "sha256": "236724e46345ca795b1482a5801ea3b3c29a87dfd8f989de89b1d114ca27bc60"
+    },
+    {
+      "path": "4 Academic Submission/STATA_RESEARCH_CODING_STANDARD.md",
+      "sha256": "2ac8420d620100b2fe76896849fbf58350d49f9a965127bc01e79ffb4a32ddf4"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+      "sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137"
+    },
+    {
+      "path": "4 Academic Submission/wp07-appendix-c2-capture/05 C2 capture.do",
+      "sha256": "10eafee857834fd7188667edf4343ae62888c7ee00efe481e9125c2c8692e84e"
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "sha256": "b1260004a46a85c806bfae2cabf38772906936431b9dc2143e86e7ef21288792"
+    }
+  ]
+}
