@@ -1,0 +1,955 @@
+{
+  "date": "2026-11-05",
+  "origin": "Hand-authored artificial inputs only; no respondent values copied or loaded",
+  "barrier_rows": [
+    {
+      "id": "B01",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Substantive code4 in each version"
+    },
+    {
+      "id": "B02",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 4,
+      "additional": "2 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Code4 can accompany a named barrier"
+    },
+    {
+      "id": "B03",
+      "version": 2512091719,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Substantive code4 in each version"
+    },
+    {
+      "id": "B04",
+      "version": 2512091719,
+      "eligible": 1,
+      "main": 4,
+      "additional": "2 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Code4 can accompany a named barrier"
+    },
+    {
+      "id": "B05",
+      "version": 2512111044,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Substantive code4 in each version"
+    },
+    {
+      "id": "B06",
+      "version": 2512111044,
+      "eligible": 1,
+      "main": 4,
+      "additional": "2 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Code4 can accompany a named barrier"
+    },
+    {
+      "id": "B07",
+      "version": 2512121811,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Substantive code4 in each version"
+    },
+    {
+      "id": "B08",
+      "version": 2512121811,
+      "eligible": 1,
+      "main": 4,
+      "additional": "2 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Code4 can accompany a named barrier"
+    },
+    {
+      "id": "B09",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Substantive code4 in each version"
+    },
+    {
+      "id": "B10",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "2 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Code4 can accompany a named barrier"
+    },
+    {
+      "id": "B11",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 16,
+      "additional": "1",
+      "expected_main": 6,
+      "expected_additional": 6,
+      "purpose": "Unavailable early main16 and additional1"
+    },
+    {
+      "id": "B12",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 16,
+      "additional": "1",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Later mainNone/additional named is a separate semantic check"
+    },
+    {
+      "id": "B13",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 11,
+      "additional": "16 4",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Early Other can accompany named barriers"
+    },
+    {
+      "id": "B14",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 16,
+      "additional": "16 4",
+      "expected_main": 1,
+      "expected_additional": 6,
+      "purpose": "Later None plus named remains unresolved"
+    },
+    {
+      "id": "B15",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 98,
+      "additional": "98",
+      "expected_main": 5,
+      "expected_additional": 5,
+      "purpose": "Refusal is not zero"
+    },
+    {
+      "id": "B16",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 98,
+      "additional": "98",
+      "expected_main": 6,
+      "expected_additional": 5,
+      "purpose": "Early main refusal unavailable; additional refusal offered"
+    },
+    {
+      "id": "B17",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "98 4",
+      "expected_main": 1,
+      "expected_additional": 6,
+      "purpose": "Refusal combination unresolved"
+    },
+    {
+      "id": "B18",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4 4",
+      "expected_main": 1,
+      "expected_additional": 6,
+      "purpose": "Duplicate parent token unresolved"
+    },
+    {
+      "id": "B19",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 13,
+      "additional": "13",
+      "expected_main": 6,
+      "expected_additional": 6,
+      "purpose": "Undeclared code13 unresolved"
+    },
+    {
+      "id": "B20",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "04",
+      "expected_main": 1,
+      "expected_additional": 6,
+      "purpose": "No leading-zero repair"
+    },
+    {
+      "id": "B21",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": " 4  2 ",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Whitespace tolerance is inherited, not token duplication"
+    },
+    {
+      "id": "B22",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": null,
+      "additional": "",
+      "expected_main": 4,
+      "expected_additional": 4,
+      "purpose": "Applicable nonresponse"
+    },
+    {
+      "id": "B23",
+      "version": 2602120658,
+      "eligible": 0,
+      "main": null,
+      "additional": "",
+      "expected_main": 2,
+      "expected_additional": 2,
+      "purpose": "Closed route with absent answers"
+    },
+    {
+      "id": "B24",
+      "version": 2602120658,
+      "eligible": 0,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 6,
+      "expected_additional": 6,
+      "purpose": "Observed answers outside closed route unresolved"
+    },
+    {
+      "id": "B25",
+      "version": 2602120658,
+      "eligible": null,
+      "main": null,
+      "additional": "",
+      "expected_main": 6,
+      "expected_additional": 6,
+      "purpose": "Unknown parent is not structural skip"
+    },
+    {
+      "id": "B26",
+      "version": 9999999999,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4",
+      "expected_main": 6,
+      "expected_additional": 6,
+      "purpose": "Unknown version remains unresolved"
+    },
+    {
+      "id": "B27",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4.5,
+      "additional": "4",
+      "expected_main": 6,
+      "expected_additional": 1,
+      "purpose": "Fractional scalar code invalid"
+    },
+    {
+      "id": "B28",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 4,
+      "additional": "4x",
+      "expected_main": 1,
+      "expected_additional": 6,
+      "purpose": "Malformed token unresolved"
+    },
+    {
+      "id": "B29",
+      "version": 2602120658,
+      "eligible": 1,
+      "main": 16,
+      "additional": "16",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Later None alone remains substantive"
+    },
+    {
+      "id": "B30",
+      "version": 2512090157,
+      "eligible": 1,
+      "main": 11,
+      "additional": "16",
+      "expected_main": 1,
+      "expected_additional": 1,
+      "purpose": "Early Other alone is not later None"
+    }
+  ],
+  "route_families": [
+    {
+      "f": "q3",
+      "schema": "double formdef_version byte eligible_flag double q3 byte expected",
+      "rows": [
+        [
+          2512090157,
+          1,
+          4,
+          1
+        ],
+        [
+          2512111044,
+          1,
+          4,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          5,
+          1
+        ],
+        [
+          2512090157,
+          1,
+          5,
+          6
+        ],
+        [
+          9999999999,
+          1,
+          4,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          4
+        ]
+      ]
+    },
+    {
+      "f": "q3_15",
+      "schema": "double formdef_version byte eligible_flag double q3_1 double q3_15 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          3,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          2,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          3,
+          3,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          null,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          null,
+          4
+        ]
+      ]
+    },
+    {
+      "f": "q6_15",
+      "schema": "double formdef_version byte eligible_flag double q6_14 double q6_15 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          98,
+          5
+        ],
+        [
+          2602120658,
+          1,
+          0,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          0,
+          1,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          98,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          null,
+          6
+        ]
+      ]
+    },
+    {
+      "f": "q7_2",
+      "schema": "double formdef_version byte eligible_flag double q7_1 double q7_2 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          2,
+          5,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          3,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          4,
+          1,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          null,
+          6
+        ]
+      ]
+    },
+    {
+      "f": "q7_13",
+      "schema": "double formdef_version byte eligible_flag double q7_11 double q7_12 double q7_13 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          6,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          null,
+          null,
+          6
+        ],
+        [
+          2512090157,
+          1,
+          1,
+          7,
+          2,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          7,
+          2,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          0,
+          1,
+          null,
+          2
+        ]
+      ]
+    },
+    {
+      "f": "q9_21",
+      "schema": "double formdef_version byte eligible_flag double q9_20 str15 q9_21 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          "1 2",
+          1
+        ],
+        [
+          2602120658,
+          1,
+          0,
+          "",
+          2
+        ],
+        [
+          2602120658,
+          1,
+          98,
+          "",
+          2
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          "98",
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          "",
+          6
+        ]
+      ]
+    },
+    {
+      "f": "q10_12",
+      "schema": "double formdef_version byte eligible_flag double q10_10 double q10_12 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1,
+          3,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          2,
+          5,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          3,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          98,
+          null,
+          2
+        ],
+        [
+          2602120658,
+          1,
+          1,
+          null,
+          4
+        ]
+      ]
+    },
+    {
+      "f": "q2_1",
+      "schema": "double formdef_version byte eligible_flag double q2_1 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          1950,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          2026,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          2027,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          2025.5,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          4
+        ]
+      ]
+    },
+    {
+      "f": "q4",
+      "schema": "double formdef_version byte consent double q4 byte expected",
+      "rows": [
+        [
+          2602120658,
+          1,
+          18,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          100,
+          1
+        ],
+        [
+          2602120658,
+          1,
+          17,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          18.5,
+          6
+        ],
+        [
+          2602120658,
+          1,
+          null,
+          4
+        ]
+      ]
+    }
+  ],
+  "report_cases": [
+    {
+      "field": "q3",
+      "schema": "double formdef_version byte eligible_flag double q3",
+      "rows": [
+        [
+          2512090157,
+          1,
+          4
+        ],
+        [
+          2512111044,
+          1,
+          4
+        ],
+        [
+          2602120658,
+          1,
+          5
+        ],
+        [
+          2512090157,
+          1,
+          5
+        ],
+        [
+          9999999999,
+          1,
+          4
+        ],
+        [
+          2602120658,
+          1,
+          null
+        ]
+      ],
+      "expected": {
+        "applicable_n": 2,
+        "regular_n": 1,
+        "sentinel_n": 0,
+        "recorded_n": 1
+      },
+      "note": "Mixed version rows; early code4 Other vs later Soacha; Meta only latest; unknown retained."
+    },
+    {
+      "field": "q5_13",
+      "schema": "double formdef_version byte eligible_flag str8 q4_12 str20 q5_13",
+      "rows": [
+        [
+          2602120658,
+          1,
+          "1",
+          "1"
+        ],
+        [
+          2602120658,
+          1,
+          "1",
+          "1 2"
+        ],
+        [
+          2602120658,
+          1,
+          "1",
+          "98"
+        ],
+        [
+          2602120658,
+          1,
+          "1",
+          ""
+        ],
+        [
+          2602120658,
+          1,
+          "1",
+          "98 1"
+        ]
+      ],
+      "expected": {
+        "applicable_n": 5,
+        "regular_n": 2,
+        "sentinel_n": 1,
+        "recorded_n": 3,
+        "uncertainty_n": 1
+      },
+      "note": "Code98 uncertainty, not refusal; uncertainty combination unresolved; nonresponse kept."
+    },
+    {
+      "field": "q4_13",
+      "schema": "double formdef_version byte eligible_flag str8 q4_12 double q4_13",
+      "rows": [
+        [
+          2602120658,
+          1,
+          "1",
+          5
+        ],
+        [
+          2602120658,
+          1,
+          "1",
+          2
+        ],
+        [
+          2602120658,
+          1,
+          "1 2",
+          2
+        ],
+        [
+          2602120658,
+          1,
+          "1 1",
+          1
+        ]
+      ],
+      "expected": {
+        "applicable_n": 3,
+        "regular_n": 3,
+        "sentinel_n": 0,
+        "recorded_n": 3
+      },
+      "note": "No account after positive selection; missing principal product; duplicate selection remains unresolved."
+    },
+    {
+      "field": "q10_2",
+      "schema": "double formdef_version byte eligible_flag double q10_1 str20 q10_2",
+      "rows": [
+        [
+          2602120658,
+          1,
+          16,
+          "4"
+        ],
+        [
+          2602120658,
+          1,
+          4,
+          "2 4"
+        ],
+        [
+          2602120658,
+          1,
+          4,
+          "98"
+        ],
+        [
+          2602120658,
+          1,
+          4,
+          "16"
+        ],
+        [
+          2602120658,
+          1,
+          4,
+          "16 4"
+        ]
+      ],
+      "expected": {
+        "applicable_n": 5,
+        "regular_n": 3,
+        "sentinel_n": 1,
+        "recorded_n": 4,
+        "refusal_n": 1
+      },
+      "note": "Substantive code4 including combinations; later None conflict; separate main-None semantic count."
+    }
+  ],
+  "prepared_cases": {
+    "n": 4,
+    "candidate_fields": [
+      "wp07_ivs_educ",
+      "wp07_iat3",
+      "wp07_iat_phone",
+      "wp07_iat_internet",
+      "wp07_iat_runout",
+      "wp07_iadt2",
+      "wp07_iadt_transfer",
+      "wp07_iadt_confidence",
+      "wp07_iadt3",
+      "wp07_iadt_app",
+      "wp07_icdp2",
+      "wp07_icdp_otp",
+      "wp07_icdp_pin",
+      "wp07_iaff2",
+      "wp07_iaff_address",
+      "wp07_iaff_phone",
+      "wp07_iuof3",
+      "wp07_iuof_frequency",
+      "wp07_iuof_merchant",
+      "wp07_iuof_saving",
+      "wp07_iuof3_oldmap",
+      "wp07_iuof_frequency_oldmap",
+      "wp07_iuof2_no_frequency",
+      "wp07_oqi2",
+      "wp07_oqi_ease",
+      "wp07_oqi_support",
+      "wp07_oqi2_oldmap",
+      "wp07_oqi_ease_oldmap"
+    ],
+    "case_1": "Literal1 in every candidate/component",
+    "case_2": "Literal0 in every candidate/component",
+    "case_3_literals": {
+      "wp07_ivs_educ": 0.4444444444444444,
+      "wp07_iadt_transfer": 0.5,
+      "wp07_iadt_confidence": 0.5,
+      "wp07_iadt2": 0.5,
+      "wp07_iuof_merchant": 0.5,
+      "wp07_iuof_saving": 0.5,
+      "wp07_iuof2_no_frequency": 0.5,
+      "wp07_oqi_ease": 0.3333333333333333,
+      "wp07_oqi_support": 1,
+      "wp07_oqi2": 0.6666666666666666
+    },
+    "case_4": "Missing candidate/components except wp07_iat3=1; deliberately inconsistent reporting input",
+    "expected_own_n": {
+      "wp07_ivs_educ": 3,
+      "wp07_iat3": 3,
+      "wp07_iadt2": 3,
+      "wp07_iadt3": 2,
+      "wp07_icdp2": 2,
+      "wp07_iaff2": 2,
+      "wp07_iuof3": 2,
+      "wp07_iuof3_oldmap": 2,
+      "wp07_iuof2_no_frequency": 3,
+      "wp07_oqi2": 3,
+      "wp07_oqi2_oldmap": 2
+    },
+    "expected_common_n": {
+      "IADT_TWO_VS_THREE": 2,
+      "IUOF_FREQUENCY_DEFINITIONS": 2,
+      "OQI_EASE_SPACING": 2
+    },
+    "expected_iat_present_despite_missing_component": 1
+  },
+  "output_expectations": [
+    {
+      "field": "q5_13",
+      "text": "Percent all recorded parents uncertain",
+      "numerator": 1,
+      "denominator": 3
+    },
+    {
+      "field": "q4_13",
+      "text": "No account after positive account selection",
+      "n": 1
+    },
+    {
+      "field": "q4_13",
+      "text": "Principal product absent from selected accounts",
+      "product": 2,
+      "n": 1
+    },
+    {
+      "field": "q10_2",
+      "text": "Main None with valid additional named barriers",
+      "n": 1
+    },
+    {
+      "field": "q5_13_EMPTY",
+      "text": "percentages undefined",
+      "percentages_permitted": false
+    }
+  ],
+  "native_result": "NOT_RUN"
+}

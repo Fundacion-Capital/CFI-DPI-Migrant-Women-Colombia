@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "files": [
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/01 Barrier state cases.do",
+      "purpose": "30 literal barrier state rows",
+      "activation_expected_exit": 0,
+      "as_saved_expected_exit": 198,
+      "native_result": "NOT_RUN",
+      "current_execution_authority": false,
+      "participant_inputs": false
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/02 Version and route cases.do",
+      "purpose": "48 literal rows across nine state/route families",
+      "activation_expected_exit": 0,
+      "as_saved_expected_exit": 198,
+      "native_result": "NOT_RUN",
+      "current_execution_authority": false,
+      "participant_inputs": false
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/03 Reporting denominator cases.do",
+      "purpose": "Four exact reporting blocks plus an empty-base repeat",
+      "activation_expected_exit": 0,
+      "as_saved_expected_exit": 198,
+      "native_result": "NOT_RUN",
+      "current_execution_authority": false,
+      "participant_inputs": false
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/04 Prepared coverage cases.do",
+      "purpose": "Exact full prepared reporting body on four literal rows, then zero rows",
+      "activation_expected_exit": 0,
+      "as_saved_expected_exit": 198,
+      "native_result": "NOT_RUN",
+      "current_execution_authority": false,
+      "participant_inputs": false
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/05 Expected range rejection.do",
+      "purpose": "Deliberate out-of-range value must fail the exact production assertion",
+      "activation_expected_exit": 9,
+      "as_saved_expected_exit": 198,
+      "native_result": "NOT_RUN",
+      "current_execution_authority": false,
+      "participant_inputs": false
+    }
+  ]
+}
