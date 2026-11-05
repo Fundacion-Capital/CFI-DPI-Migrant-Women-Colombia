@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-05",
+  "status": "BOUNDED_DISABLED_SOURCE_PASS_COMPLETE_EMPIRICAL_AND_SCIENTIFIC_HOLDS_RETAINED",
+  "head": "d783ce9cd5e1470985ab436bb8052d1d3d7d75a6",
+  "source_lines": 17401,
+  "stages": 16,
+  "gsem_source_sites": 33,
+  "grid_candidates": 32,
+  "inherited_downstream_conditional_slots": 88,
+  "total_conditional_slots": 120,
+  "comment_only_revisions": 19,
+  "alias_declaration_lines": 64,
+  "aliases": 26,
+  "selected_io_sites": 325,
+  "disabled_erase_sites": 14,
+  "source_tests_passed": 9,
+  "artificial_tests_passed": 6,
+  "tests_failed": 0,
+  "preserved_entry_files": 51,
+  "supporting_text_pins": 4,
+  "stata_calls": 0,
+  "participant_files_read": 0,
+  "fits": 0,
+  "assignments_or_relabelings": 0,
+  "deletions": 0,
+  "appendix_c2": "HOLD",
+  "scientific_adoption": false,
+  "commit_or_push": false,
+  "output_files": [
+    {
+      "path": "1 Code/wp07-lca-downstream-v1/01 Historical LCA and downstream.do",
+      "bytes": 539204,
+      "sha256": "752c647510eb226f478955860c98ad1ee31bdfc1552d53718a36f6022c3e1b8d"
+    },
+    {
+      "path": "1 Code/wp07-lca-downstream-v1/README.md",
+      "bytes": 5029,
+      "sha256": "edd210e75d99a6dab90f85bb005d9ca3574e56c40b80c83f95f7379d5b3ef106"
+    },
+    {
+      "path": "4 Academic Submission/WP07_LCA_DOWNSTREAM_SOURCE_REVIEW.md",
+      "bytes": 12275,
+      "sha256": "9dda5a65a3b805f2edb86a36f737c8b7b18c82e76ce1547ba9aa39792051d22d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/ALIAS_LINEAGE.csv",
+      "bytes": 9246,
+      "sha256": "155bb966f4b47dac410f4f6333f34f0474d2c3d8cdd7568004c2eec8cd30f8ea"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/AUDIT.md",
+      "bytes": 4618,
+      "sha256": "71a784af5467dde19b9b0deafce446f67cd8361e4296e46ba5879ff4f5ba7c2e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/CANDIDATES.csv",
+      "bytes": 16644,
+      "sha256": "b016216034e33aa73a54b9d1a6ee939f07e73ef1ac57b758b36961d5a096e15c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/COMMENT_REVISIONS.json",
+      "bytes": 3969,
+      "sha256": "171645f8db047cc36a9648819b252a9fde25a5f8ca294521315f9653281edc03"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/COMMIT_MESSAGE.txt",
+      "bytes": 852,
+      "sha256": "9f1b03b88aa83bc84cd44a6e156e0072957cef841dff33b0ae2ee3db868bf981"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/DATAFLOW.csv",
+      "bytes": 64940,
+      "sha256": "dce26021abcaa62afb083fc477e0d4863ac1f49f030de79f77a595a50aadfea5"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/OUTCOME_DEPENDENCIES.csv",
+      "bytes": 2806,
+      "sha256": "e8a1b2ae79798cf5f4ce26272a8187dd7eda793610f88e30790343dfbbf454f1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/PLAN.md",
+      "bytes": 1614,
+      "sha256": "57c4a64c9079feb5cb89852904cff30bf3bbe118060aaac7754ace4c8a501fc7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/REMEDIATION.md",
+      "bytes": 3367,
+      "sha256": "2e546079a5a285890a096607f7292bee037d0a4ca91ce0a49ea2734d7ba0cec9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/REMOVAL_SITES.csv",
+      "bytes": 2401,
+      "sha256": "5d8cd80b9074223e177d06ba4ccc4a45d09fd1a3d4b35be2e96459b88df5d787"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/REVIEW.md",
+      "bytes": 1936,
+      "sha256": "ed945397682266a5014d22d2f5c4d425338715db7f23196c7ce2b741451a4ac8"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/source_pins.json",
+      "bytes": 10080,
+      "sha256": "8cf2d120819c416b8bcd86c67c682285548a07a9da6a08be470f52843c6b020a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/STAGES.csv",
+      "bytes": 3115,
+      "sha256": "791b85ca4a7d0974a6113ac4328460e667a0c8f6f82760e8cb05e8de69ca471f"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/STATIC_CHECK_OUTPUT.txt",
+      "bytes": 2409,
+      "sha256": "1322e82704330167a02ff86489eac7caa7005d33008cad074e9d2094f2658d36"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/supporting_pins.json",
+      "bytes": 786,
+      "sha256": "51415b2eaa92ce8b3f4ba90b5d3ec6d142118e1f4c689f908524c47dfccbf86c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/test_artificial_classification.py",
+      "bytes": 2503,
+      "sha256": "4f66f37bb5c0967e24721210838c02240c600c6ae75ab98e09fa94555fefb149"
+    },
+    {
+      "path": "4 Academic Submission/wp07-lca-downstream-source-review/verify_sources.py",
+      "bytes": 9508,
+      "sha256": "cf6ed22048fdb2a940cb46d83f53755ec79e01081244755172bfc7aaa3c3ff53"
+    }
+  ]
+}

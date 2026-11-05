@@ -1,0 +1,14 @@
+WP07: Audit and annotate historical LCA-to-downstream code
+
+Add a separate disabled shared-scope review copy covering historical analysis
+lines 1900-19300. Preserve all executable scientific commands, local scope,
+delimiters, RNG/order, candidate settings, assignment rules and output writers.
+Correct 19 interpretive comment lines without changing estimates or results.
+
+Add stage, 33-candidate, alias-lineage, outcome-dependency and selected read/write
+registers, including a separate inventory of 14 disabled erase sites. Document
+tie-priority, second-best-posterior, missing-metric screen and metadata limitations.
+
+Record file-preservation checks, source audits, artificial arithmetic cases and
+the independent read-only review. Keep Appendix C2, scientific adoption and
+empirical execution on hold. No Stata execution or participant-data access.

@@ -1,0 +1,97 @@
+[
+  {
+    "source_line": 6172,
+    "before": "**##\t6. LCA AND BENCHMARK CLUSTERING: STABLE SEGMENTATION WORKFLOW\t\t*",
+    "after": "**##\t6. HISTORICAL LCA CANDIDATE GRID AND BENCHMARK CLUSTERING\t\t*"
+  },
+  {
+    "source_line": 6177,
+    "before": "    Implement the final quantitative segmentation workflow after diagnostics showed",
+    "after": "    Reproduce the historical segmentation workflow following the recorded diagnostics;"
+  },
+  {
+    "source_line": 6178,
+    "before": "    that high-dimensional categorical-index LCA models were unstable for k >= 3.",
+    "after": "    their reported instability is not a newly verified result of this source pass."
+  },
+  {
+    "source_line": 6180,
+    "before": "    Core decision:",
+    "after": "    Historical design choice:"
+  },
+  {
+    "source_line": 6181,
+    "before": "    Use smaller, theory-driven binary LCA feature sets to reduce response-pattern",
+    "after": "    Smaller binary feature sets were intended to reduce response-pattern"
+  },
+  {
+    "source_line": 6182,
+    "before": "    sparsity and local dependence. Then compare with benchmark k-means and",
+    "after": "    sparsity; fewer indicators do not by themselves establish local independence."
+  },
+  {
+    "source_line": 6183,
+    "before": "    hierarchical clustering on continuous standardized indices.",
+    "after": "    The continuous-index clustering benchmarks are distinct comparison methods."
+  },
+  {
+    "source_line": 8728,
+    "before": "    Preferred specification:",
+    "after": "    Historical specification (academic suitability remains on hold):"
+  },
+  {
+    "source_line": 8731,
+    "before": "    Selected model:",
+    "after": "    Historical selected label, not an automated class-enumeration result:"
+  },
+  {
+    "source_line": 8804,
+    "before": "* 9.2 Estimate final preferred H1_k4 hybrid LCA model - reproducibility locked",
+    "after": "* 9.2 Distinct historical H1_k4 refit with recorded sort and seed settings"
+  },
+  {
+    "source_line": 9891,
+    "before": "            Probability of each response category within each latent segment,",
+    "after": "            Posterior-weighted descriptive response share for a latent segment,"
+  },
+  {
+    "source_line": 9898,
+    "before": "    The posterior-weighted version is the preferred interpretation table.",
+    "after": "    Posterior weighting does not validate local independence or correct downstream SEs."
+  },
+  {
+    "source_line": 11060,
+    "before": "          higher values consistently indicate stronger inclusion or protection.",
+    "after": "          higher plotted values follow the stated orientation, not verified protection."
+  },
+  {
+    "source_line": 11943,
+    "before": "    were not directly used to construct the preferred latent classes.",
+    "after": "    were not direct class inputs; shared items/routes still require an overlap check."
+  },
+  {
+    "source_line": 13775,
+    "before": "        These variables did not define the preferred H1_k4 solution and therefore",
+    "after": "        These variables were not direct indicators of the preferred H1_k4 fit;"
+  },
+  {
+    "source_line": 13776,
+    "before": "        provide stronger external evidence of the typology's substantive meaning.",
+    "after": "        same-survey comparisons are not independent external validation."
+  },
+  {
+    "source_line": 15121,
+    "before": "* 14.7.7 Sheet: external validation outcomes only",
+    "after": "* 14.7.7 Sheet: historical non-direct-indicator outcome comparisons"
+  },
+  {
+    "source_line": 16031,
+    "before": "        - External outcomes and mechanisms provide the stronger validation of",
+    "after": "        - Non-direct-indicator outcomes can add descriptive context, but"
+  },
+  {
+    "source_line": 16032,
+    "before": "          whether the segmentation has broader substantive meaning.",
+    "after": "          shared survey content and classification uncertainty remain relevant."
+  }
+]

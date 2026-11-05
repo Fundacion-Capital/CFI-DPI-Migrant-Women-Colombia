@@ -1,0 +1,22 @@
+[
+  {
+    "path": "4 Academic Submission/measurement-crosswalk/measurement_manifest.csv",
+    "bytes": 5941,
+    "sha256": "5820804c86528a03ec4f2c1b13891bbddbb328e05ab9aedb8bea0b96e8823d64"
+  },
+  {
+    "path": "4 Academic Submission/wp06-academic-specification/dependency_crosswalk.csv",
+    "bytes": 2303,
+    "sha256": "ed0d480aebe072a796b49ccb972d09a3bda0277c3fad5bd7168f0388ba41b9c9"
+  },
+  {
+    "path": "4 Academic Submission/wp06-academic-specification/analysis_roles.csv",
+    "bytes": 4740,
+    "sha256": "4308e09aa981d3911131d0102d506276f42cd353d3169d443667b5e0cbb2ccbf"
+  },
+  {
+    "path": "4 Academic Submission/scientific-foundation/downstream_outcome_roles.csv",
+    "bytes": 28011,
+    "sha256": "51321f5e75223f5905d0a0fc881104c7901cca65da1167c0ec2923c995478151"
+  }
+]
