@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-05",
+  "status": "PASS_DOCUMENTARY_MAP_ONLY",
+  "head": "3e33f054da48a5c9f4f643f00271c22ccd87143b",
+  "scope": "Academic LCA/downstream replacement and retirement map; code/document/metadata checks only.",
+  "counts": {
+    "source_stages": 16,
+    "grid_candidates": 32,
+    "inherited_downstream_conditional_slots": 88,
+    "unique_operation_slots": 120,
+    "substantive_domains": 15,
+    "pending_scientific_choices": 5,
+    "planned_no_fit_subprocesses": 6,
+    "preserved_existing_files": 81,
+    "inherited_target33_fields": 163
+  },
+  "validation": {
+    "command": "C:/Users/jzava/AppData/Roaming/uv/python/cpython-3.11.15-windows-x86_64-none/python.exe -I -B \"4 Academic Submission/wp07-academic-lca-map/verify_map.py\"",
+    "implementer_final_exit_code": 0,
+    "tests_passed": 9,
+    "tests_failed": 0,
+    "independent_review": "Two important verifier findings resolved; independent rerun passed nine tests in 0.109 seconds.",
+    "new_artifact_hash_readback": "Performed separately after saving this manifest; excludes this file to avoid a self-reference.",
+    "expected_tracked_and_staged_diff": "Empty; only this new report and new directory are added."
+  },
+  "authority": {
+    "stata_execution": false,
+    "participant_processing": false,
+    "new_scoring": false,
+    "fitting": false,
+    "applied_relabeling": false,
+    "scientific_adoption": false,
+    "release": false,
+    "settings_changes": false,
+    "service_changes": false,
+    "contacts": false,
+    "git_commit": false,
+    "git_push": false,
+    "cloud_sync": false,
+    "appendix_c2": "HOLD"
+  },
+  "pending": [
+    "ML01 typology role",
+    "ML02 indicator representations, applicability and population",
+    "ML03 finite estimation/enumeration and runtime contract",
+    "ML04 classification, probability rules and uncertainty method",
+    "ML05 selected downstream claims, inference, dependence and reporting family"
+  ],
+  "limits": [
+    "This is not empirical or whole-project validation.",
+    "No participant dataset, saved posterior or native model payload was read.",
+    "No current worker/runtime qualification or execution authority is established.",
+    "No institutional, coauthor or release approval is inferred.",
+    "Retirement is prospective and non-destructive; original files and prior packets are not deleted.",
+    "The 81-file check does not claim a fresh hash audit of every private packet."
+  ],
+  "next_substantive_task": "Separate disabled academic item/domain reporting layer mapped to accepted preparation fields; no inferred aliases, execution grant or automatic LCA adoption.",
+  "artifacts": [
+    {
+      "path": "4 Academic Submission/WP07_ACADEMIC_LCA_DOWNSTREAM_REPLACEMENT_MAP.md",
+      "bytes": 12150,
+      "sha256": "9defa2f9d08e069c8d76e97f0e606a0d88c72e435e716dd8c38ddb0c7a6c6ace"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/AUDIT.md",
+      "bytes": 5723,
+      "sha256": "1546f1c90e05ff888f6a12281b3432aa1b183c0ef9b215e336401d33748bbae3"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/COMMIT_MESSAGE.txt",
+      "bytes": 1284,
+      "sha256": "02b3ad260a2581a20031126d4f75436c483038739ad5b365a9a76dc25534e5bc"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/DECISIONS.csv",
+      "bytes": 3341,
+      "sha256": "cf0689b07f77d107a9ac3fd8ef3ee9657af56f0818170d1af96b6607f782a9f7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/DOMAIN_DESTINATIONS.csv",
+      "bytes": 4314,
+      "sha256": "2d8e0c2ab826f14e33f52b9fdf5a2052d7bf350e3dea19dd8cc1c1ec7c167a35"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/map_state.json",
+      "bytes": 1540,
+      "sha256": "3d4911cf7c41ea3fe1bc6deccb34042b20ed0adcc699812bc3ddf163ff4f6e80"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/NOFIT_WAVE.csv",
+      "bytes": 2110,
+      "sha256": "3e3d828ccc3900514276a9b2725f2d819dd6e638d84a87dd8d2439d5a7ea6da0"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/OPERATION_MAP.csv",
+      "bytes": 33886,
+      "sha256": "484051424bf931242632fe873d5971763e1d28488af8f80458d0bb2bc9929405"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/README.md",
+      "bytes": 1903,
+      "sha256": "2d0e219ce3e0150de818933addede708c57a5a1aabb58cecf6f71ab9a8e1205c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/REVIEW.md",
+      "bytes": 1957,
+      "sha256": "e9a9c64a147e217be0238fd138d90883d79e35a7899c57fb97af95ded3953c81"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/source_pins.json",
+      "bytes": 16230,
+      "sha256": "955d0b12782f5ce86c2ba47e654811ddb4c22dafacaf8abbf12fc10d763d4248"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/STAGE_MAP.csv",
+      "bytes": 5799,
+      "sha256": "b076b6dad5176612855576be9959531bfdd4b1d17d8b30250737dbd1b8659657"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/verify_map.py",
+      "bytes": 8592,
+      "sha256": "51adac8664809c307c60e195367423024d6fced7b12047fafa956093b4544a23"
+    }
+  ]
+}
