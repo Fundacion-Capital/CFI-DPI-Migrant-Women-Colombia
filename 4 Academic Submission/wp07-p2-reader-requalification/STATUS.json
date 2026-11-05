@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "status": "OFFLINE_REQUALIFICATION_PACKAGE_PREPARED_NOT_RUNTIME_QUALIFIED",
+  "appendix_c2": "HOLD",
+  "native_result": "NOT_RUN",
+  "actual_stata_calls": 0,
+  "actual_participant_loads": 0,
+  "activation_authorized": false,
+  "dispatcher_installed": false,
+  "reader_installed": false,
+  "unheld_source_files_written": false,
+  "output_root_provisioned": false,
+  "scientific_adoption": false,
+  "release": false,
+  "service_or_settings_changes": false,
+  "participant_track": "FOUR_STAGE_PROPOSAL_NOT_DISPATCHED",
+  "artificial_track": "FIVE_INDEPENDENT_FRESH_EMPTY_CASES_NOT_RUN",
+  "real_native_log_extraction": "UNQUALIFIED",
+  "independent_native_provenance": "UNQUALIFIED"
+}

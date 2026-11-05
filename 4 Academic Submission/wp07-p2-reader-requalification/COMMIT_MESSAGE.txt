@@ -1,0 +1,22 @@
+WP07: Prepare disabled P2 reader and dispatcher requalification package
+
+Add source-exact offline bindings for the held P2 barrier successor and five
+independent artificial cases, preserving all historical files and prior packets.
+
+Separate held-source and prospective in-memory payload fingerprints; record the
+P2 receipt change from 4,139 to 4,129 rows with unchanged nine-column schema and
+500 six-state field/version groups.
+
+Verify the preserved pure reader against corrected artificial receipts and prove
+that the legacy dispatcher rejects the new source before simulated selection.
+Document the seven exact loader, admission, transport, readout and control deltas
+without modifying or activating the preserved reader, dispatcher or harness.
+
+Require fresh N=0/K=0 admission for each artificial case, 62 named readout facts,
+exact source/outcome/phase checks, and distinct held and expected-negative states.
+Keep artificial metadata consistency separate from authenticated native evidence.
+
+Audit 16 new offline tests plus 37 predecessor checks and verify 176 preserved
+source/documentation fingerprints. Keep Appendix C2 on hold and native results
+NOT_RUN. No Stata execution, participant/model loads, fitting, settings/service
+changes, publication, synchronization or prior-packet modifications.
