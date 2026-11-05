@@ -1,0 +1,71 @@
+{
+  "scope": "PYTHON_SOURCE_AND_ARTIFICIAL_RECEIPTS_ONLY",
+  "actual_stata_calls": 0,
+  "participant_loads": 0,
+  "runs": [
+    {
+      "stage": "red1",
+      "chunk_id": "79e926",
+      "wall_time_seconds": 0.8708728,
+      "exit_code": 1,
+      "original_token_count": 256,
+      "output": "======================================================================\r\nFAIL: test_exact_preparation_and_single_use_same_buffer_handoff (__main__.SuccessorChecks.test_exact_preparation_and_single_use_same_buffer_handoff)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 26, in test_exact_preparation_and_single_use_same_buffer_handoff\r\n    m = self.module()\r\n        ^^^^^^^^^^^^^\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 17, in module\r\n    self.assertTrue(path.is_file(), \"Disabled successor is not implemented\")\r\nAssertionError: False is not true : Disabled successor is not implemented\r\n\r\n----------------------------------------------------------------------\r\nRan 1 test in 0.001s\r\n\r\nFAILED (failures=1)\r\n"
+    },
+    {
+      "stage": "green1",
+      "chunk_id": "ee5619",
+      "wall_time_seconds": 1.2055581,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "----------------------------------------------------------------------\r\nRan 4 tests in 0.667s\r\n\r\nOK\r\n"
+    },
+    {
+      "stage": "red2",
+      "chunk_id": "773a31",
+      "wall_time_seconds": 1.5755479000000001,
+      "exit_code": 1,
+      "original_token_count": 1682,
+      "output": "======================================================================\r\nFAIL: test_aggregate_dispatch_reads_all_corrected_receipts_and_closes (__main__.SuccessorChecks.test_aggregate_dispatch_reads_all_corrected_receipts_and_closes)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 119, in test_aggregate_dispatch_reads_all_corrected_receipts_and_closes\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_aggregate\"),\"Aggregate successor not implemented\")\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true : Aggregate successor not implemented\r\n\r\n======================================================================\r\nFAIL: test_artificial_deadline_and_cleanup_failures_do_not_pass (__main__.SuccessorChecks.test_artificial_deadline_and_cleanup_failures_do_not_pass)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 149, in test_artificial_deadline_and_cleanup_failures_do_not_pass\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_aggregate\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n======================================================================\r\nFAIL: test_bad_aggregate_receipt_stops_at_p2_without_retry (__main__.SuccessorChecks.test_bad_aggregate_receipt_stops_at_p2_without_retry)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 137, in test_bad_aggregate_receipt_stops_at_p2_without_retry\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_aggregate\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n======================================================================\r\nFAIL: test_case_entry_hold_does_not_pass_and_later_cases_are_not_selected (__main__.SuccessorChecks.test_case_entry_hold_does_not_pass_and_later_cases_are_not_selected)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 183, in test_case_entry_hold_does_not_pass_and_later_cases_are_not_selected\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_cases\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n======================================================================\r\nFAIL: test_cases_dispatch_all_literal_readouts_but_never_native_success (__main__.SuccessorChecks.test_cases_dispatch_all_literal_readouts_but_never_native_success)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 169, in test_cases_dispatch_all_literal_readouts_but_never_native_success\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_cases\"),\"Case successor not implemented\")\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true : Case successor not implemented\r\n\r\n======================================================================\r\nFAIL: test_cross_fixture_reference_is_not_transferable (__main__.SuccessorChecks.test_cross_fixture_reference_is_not_transferable)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 104, in test_cross_fixture_reference_is_not_transferable\r\n    with self.assertRaises(ValueError):\r\nAssertionError: ValueError not raised\r\n\r\n======================================================================\r\nFAIL: test_live_or_foreign_transport_and_cross_track_are_rejected (__main__.SuccessorChecks.test_live_or_foreign_transport_and_cross_track_are_rejected)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 159, in test_live_or_foreign_transport_and_cross_track_are_rejected\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_aggregate\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n======================================================================\r\nFAIL: test_malformed_or_nonempty_case_stops_without_retry (__main__.SuccessorChecks.test_malformed_or_nonempty_case_stops_without_retry)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 193, in test_malformed_or_nonempty_case_stops_without_retry\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_cases\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n======================================================================\r\nFAIL: test_missing_or_extra_case_record_rejected_before_selection (__main__.SuccessorChecks.test_missing_or_extra_case_record_rejected_before_selection)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 208, in test_missing_or_extra_case_record_rejected_before_selection\r\n    m=self.module(); self.assertTrue(hasattr(m,\"dispatch_cases\"))\r\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: False is not true\r\n\r\n----------------------------------------------------------------------\r\nRan 14 tests in 0.745s\r\n\r\nFAILED (failures=9)\r\n"
+    },
+    {
+      "stage": "green2",
+      "chunk_id": "8bc848",
+      "wall_time_seconds": 4.5075214,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "----------------------------------------------------------------------\r\nRan 14 tests in 3.678s\r\n\r\nOK\r\n"
+    },
+    {
+      "stage": "red3",
+      "chunk_id": "a78457",
+      "wall_time_seconds": 5.8988744,
+      "exit_code": 1,
+      "original_token_count": 402,
+      "output": "======================================================================\r\nERROR: test_replaced_inner_transport_rejected_before_any_method_call (__main__.SuccessorChecks.test_replaced_inner_transport_rejected_before_any_method_call)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 223, in test_replaced_inner_transport_rejected_before_any_method_call\r\n    m.dispatch_aggregate(prepared,fixture)\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\successor.py\", line 151, in dispatch_aggregate\r\n    origin = clock.tick\r\n             ^^^^^^^^^^\r\nAttributeError: 'object' object has no attribute 'tick'\r\n\r\n======================================================================\r\nFAIL: test_case_track_rejects_a_four_stage_clock_budget (__main__.SuccessorChecks.test_case_track_rejects_a_four_stage_clock_budget)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp07-p2-disabled-dispatcher\\test_successor.py\", line 228, in test_case_track_rejects_a_four_stage_clock_budget\r\n    with self.assertRaises(ValueError):\r\nAssertionError: ValueError not raised\r\n\r\n----------------------------------------------------------------------\r\nRan 20 tests in 4.971s\r\n\r\nFAILED (failures=1, errors=1)\r\n"
+    },
+    {
+      "stage": "green3",
+      "chunk_id": "ef0ab0",
+      "wall_time_seconds": 5.5556487,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "----------------------------------------------------------------------\r\nRan 20 tests in 4.663s\r\n\r\nOK\r\n"
+    },
+    {
+      "stage": "green4",
+      "chunk_id": "85bbc3",
+      "wall_time_seconds": 8.3622362,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "----------------------------------------------------------------------\r\nRan 22 tests in 7.396s\r\n\r\nOK\r\n"
+    },
+    {
+      "stage": "green5",
+      "chunk_id": "c30755",
+      "wall_time_seconds": 6.5087015,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "----------------------------------------------------------------------\r\nRan 23 tests in 5.571s\r\n\r\nOK\r\n"
+    }
+  ]
+}

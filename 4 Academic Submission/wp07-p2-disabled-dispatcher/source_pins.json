@@ -1,0 +1,69 @@
+{
+  "baseline_head": "9cebebd534e2231be3f14b78651fc9bc41c66440",
+  "previous_manifest": "4 Academic Submission/wp07-p2-reader-requalification/source_pins.json",
+  "previous_manifest_sha256": "c9d386319c8485d14ac8e217d5fa8e49a0227288bb2f68c10aa03dc1f9601ae4",
+  "previous_count": 176,
+  "total_preserved": 188,
+  "additional_files": [
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/AUDIT.md",
+      "bytes": 4557,
+      "sha256": "00a4fd6322d881b188ad9cfc3bf3bc9fd5c9c17b22a958e4d5e1f295090b8425"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/BINDINGS.json",
+      "bytes": 10950,
+      "sha256": "95cadb261d01a6e46db5cfc3aa9e5acdb4b1c6e0f41631046b9e9dbbbc6497d4"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/COMMIT_MESSAGE.txt",
+      "bytes": 1304,
+      "sha256": "a6585ee26e4684ae8400985bc12294754a3a2122f94090a16994886eb20392e2"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/MIGRATION_MAP.csv",
+      "bytes": 2378,
+      "sha256": "471c024a34a57f8c9cabaa4f7887758beb26a4d00a69f4f4df8b47897e770bc5"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/offline_contract.py",
+      "bytes": 8419,
+      "sha256": "9b4756f3af7d5944c3ed8a1ae1a0c11e4290d1458744b1b6057b3d0913866e54"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/PLAN.md",
+      "bytes": 1714,
+      "sha256": "67f786709faf9210b180988a5189fa991e22b197f32aa1df3bcc87533ba18297"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/README.md",
+      "bytes": 5886,
+      "sha256": "aaca13653e062b35268ed65c656d46e7014826cfbd535e57881d3180cc44efd2"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/REVIEW.md",
+      "bytes": 2178,
+      "sha256": "effba5c42a553dd51b7ae73a824cd1a9901e3d0cabbb40728ebca8db5148704a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/source_pins.json",
+      "bytes": 35190,
+      "sha256": "c9d386319c8485d14ac8e217d5fa8e49a0227288bb2f68c10aa03dc1f9601ae4"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/STATUS.json",
+      "bytes": 710,
+      "sha256": "e7bb725d2fdc8658ebc7abe390ea0364d9270e6a035377ce8ae522d0e0f92cc1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/test_requalification.py",
+      "bytes": 11893,
+      "sha256": "ca90b5b70d3c569ccdc31473a8d7955c02ff62609bddb85717ca2ec76f8a9ab9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/VALIDATION.json",
+      "bytes": 4117,
+      "sha256": "cb5721f1611daae1bfaf5f3591739e0c5defcedbab05f84f878247e78dd47700"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-05",
+  "baseline_head": "9cebebd534e2231be3f14b78651fc9bc41c66440",
+  "status": "DISABLED_OFFLINE_SUCCESSOR_IMPLEMENTED_AND_AUDITED_NOT_RUNTIME_QUALIFIED",
+  "scope": "SOURCE_METADATA_AND_IN_MEMORY_ARTIFICIAL_ONLY",
+  "appendix_c2": "HOLD",
+  "native_result": "NOT_RUN",
+  "actual_stata_calls": 0,
+  "actual_participant_loads": 0,
+  "actual_model_loads": 0,
+  "activation_authorized": false,
+  "shared_integration_installed": false,
+  "unheld_stata_files_written": false,
+  "runtime_root_provisioned": false,
+  "settings_or_service_changes": false,
+  "scientific_adoption": false,
+  "release": false,
+  "tests": [
+    {
+      "name": "successor",
+      "path": "4 Academic Submission/wp07-p2-disabled-dispatcher/test_successor.py",
+      "count": 28,
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\r\nRan 28 tests in 6.787s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "reader",
+      "path": "4 Academic Submission/wp07-p2-reader-requalification/test_requalification.py",
+      "count": 16,
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\r\nRan 16 tests in 1.466s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "barrier",
+      "path": "4 Academic Submission/wp07-p2-barrier-successor/verify_successor.py",
+      "count": 13,
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\r\nRan 13 tests in 0.504s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "reporting",
+      "path": "4 Academic Submission/wp07-academic-reporting/verify_reporting.py",
+      "count": 15,
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\r\nRan 15 tests in 4.731s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "lca_map",
+      "path": "4 Academic Submission/wp07-academic-lca-map/verify_map.py",
+      "count": 9,
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\r\nRan 9 tests in 0.265s\r\n\r\nOK\r\n"
+    }
+  ],
+  "total_tests": 81,
+  "preservation": {
+    "total_unique_existing_files": 188,
+    "previous_count": 176,
+    "additional_requalification_files": 12,
+    "result": "ALL_SIZE_AND_SHA256_CHECKS_PASS",
+    "manifest_sha256": "44b3474c9b7094132cea286e512ae944da74d9b7d9d530faa2a81f447e45e7fc"
+  },
+  "review": {
+    "independent_findings": {
+      "critical": 0,
+      "important": 3,
+      "minor": 0
+    },
+    "important_findings": "ALL_FIXED_WITH_RED_GREEN_REGRESSIONS",
+    "final_fix_validation": "PARENT_FRESH_SUITE_NO_SECOND_REVIEWER_APPROVAL_CLAIMED",
+    "limits": "SEE_REVIEW.md"
+  },
+  "tracked_diff_exit": 0,
+  "index_diff_exit": 0,
+  "diff_check_exit": 0,
+  "only_untracked_directory": "4 Academic Submission/wp07-p2-disabled-dispatcher/",
+  "artifacts": [
+    {
+      "name": "AUDIT.md",
+      "bytes": 4704,
+      "sha256": "ebc9cd837996b45d69ec32383f1b0a6296c0c931324a53c79e26fa84f9c35725"
+    },
+    {
+      "name": "COMMIT_MESSAGE.txt",
+      "bytes": 1544,
+      "sha256": "6b0408f9b9262d2e23bce8daee74f6c19f95d59fcf1d8e67fe009ca269d221d9"
+    },
+    {
+      "name": "DEVELOPMENT_TESTS.json",
+      "bytes": 11877,
+      "sha256": "33762bdda8620dcd7245ba57d5227fceb10ea53aa47e336c57f837f806523eb2"
+    },
+    {
+      "name": "PLAN.md",
+      "bytes": 5041,
+      "sha256": "7d29849515f2a64feaaee3ea8f59c0a0894fbe58ff20940a09217ed763bcce62"
+    },
+    {
+      "name": "README.md",
+      "bytes": 4619,
+      "sha256": "13f249d4d2fc23e111d058f5ecbe8b3b89702dd6102db70bc1ed5561be7077dc"
+    },
+    {
+      "name": "REVIEW_FIX_TESTS.json",
+      "bytes": 6981,
+      "sha256": "c163469c1c1a77607b604cb8503a5ff5f701b972336cfc3110d08e776311e627"
+    },
+    {
+      "name": "REVIEW.md",
+      "bytes": 3312,
+      "sha256": "c8e01288c349dc3e98dcadb5e8fa6924c7a23e3292dd007adac9711d0e157463"
+    },
+    {
+      "name": "source_pins.json",
+      "bytes": 2762,
+      "sha256": "44b3474c9b7094132cea286e512ae944da74d9b7d9d530faa2a81f447e45e7fc"
+    },
+    {
+      "name": "STATUS.json",
+      "bytes": 757,
+      "sha256": "4634d6a42516af3db540f091081b2069fc14b885707018f15999dd9eec166dfa"
+    },
+    {
+      "name": "successor.py",
+      "bytes": 14201,
+      "sha256": "fa3f906f641541afe53d27f13e6b8aa9c329141f62bb290ad61b33d4047e1d7d"
+    },
+    {
+      "name": "test_successor.py",
+      "bytes": 21339,
+      "sha256": "b09b70f7075fd3d2a7312e1d67fe2ed656921ec61f5c8aecaf65f33a82b4169e"
+    }
+  ],
+  "self_hash_policy": "VALIDATION.json excludes itself; listed artifacts verified after saving.",
+  "trailing_whitespace": [],
+  "pycache_exists": false,
+  "unqualified": [
+    "native Stata or participant semantics",
+    "real worker identity/empty admission/isolation",
+    "native log extraction and independent provenance",
+    "real cancellation/exit/cleanup",
+    "actual runtime output/access/retention and execution budgets",
+    "scientific/institutional/coauthor adoption or release"
+  ]
+}

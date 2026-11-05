@@ -1,0 +1,25 @@
+WP07: Implement disabled P2 reader and fixed-file dispatcher successor
+
+Add the artificial-only exact-source loader, compact single-use fixed-file
+transport, aggregate dispatcher and separate five-case metadata reader using the
+accepted P2 requalification bindings. Preserve all original Stata files, fixtures,
+legacy readers, dispatchers, harnesses and prior packets.
+
+Verify held-source and prospective payload fingerprints, retain checked code
+buffers in memory, and hand off those same buffers without reopening Stata
+sources. Bind channel, track, sequence, stage, size and digest in compact references.
+Reuse the preserved receipt grammar for corrected P2's 4,129-row inventory and
+validate the 33 aggregate checks separately from the 62 artificial-case facts.
+
+Stop on malformed, held or wrong-phase records without retries. Simulate only
+the preserved aggregate deadlines/cancellation/cleanup; do not apply that budget
+to the five independent case slots or claim real worker evidence.
+
+Resolve independent-review findings with failing-then-passing regressions:
+execute pinned Python dependencies from their verified buffers, reject mutable
+prepared containers, and enforce plain record/simulation inputs without hooks.
+
+Preserve failed development/review attempts, audit 28 new and 53 predecessor
+source/artificial checks, and verify 188 existing source/documentation pins.
+Keep C2 on hold and native results NOT_RUN. No Stata execution, participant/model
+loads, fitting, live integration, settings/service changes, publication or sync.
