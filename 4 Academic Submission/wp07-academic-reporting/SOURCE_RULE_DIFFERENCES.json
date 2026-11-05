@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-05",
+  "scope": "New disabled layer only; original P2 unchanged",
+  "removed_rules": [
+    {
+      "field": "q10_1",
+      "source_rule": "replace _p24_q10_1 = 5 if _p24_q10_1 == 1 & (q10_1 == 4)",
+      "versions": [
+        "2512090157",
+        "2512091719",
+        "2512111044",
+        "2512121811",
+        "2602120658"
+      ],
+      "action": "NOT_INHERITED_IN_NEW_LAYER",
+      "reason": "Accepted IBPD account and retained choices: option 4 is substantive lack of know-how, not uncertainty or an exclusive singleton."
+    },
+    {
+      "field": "q10_2",
+      "source_rule": "replace _p24_q10_2 = 6 if _p24_q10_2 == 1 & (strpos(\" \" + itrim(strtrim(q10_2)) + \" \", \" 4 \") > 0) & wordcount(q10_2) > 1",
+      "versions": [
+        "2512090157",
+        "2512091719",
+        "2512111044",
+        "2512121811",
+        "2602120658"
+      ],
+      "action": "NOT_INHERITED_IN_NEW_LAYER",
+      "reason": "Accepted IBPD account and retained choices: option 4 is substantive lack of know-how, not uncertainty or an exclusive singleton."
+    },
+    {
+      "field": "q10_2",
+      "source_rule": "replace _p24_q10_2 = 5 if _p24_q10_2 == 1 & (strtrim(q10_2) == \"4\")",
+      "versions": [
+        "2512090157",
+        "2512091719",
+        "2512111044",
+        "2512121811",
+        "2602120658"
+      ],
+      "action": "NOT_INHERITED_IN_NEW_LAYER",
+      "reason": "Accepted IBPD account and retained choices: option 4 is substantive lack of know-how, not uncertainty or an exclusive singleton."
+    }
+  ],
+  "downstream_hold": "Original P2 uncertainty/combination rules for q10_1/q10_2 need a separately scoped correction and requalification before future participant use."
+}
