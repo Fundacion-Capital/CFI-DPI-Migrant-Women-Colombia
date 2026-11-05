@@ -1,0 +1,21 @@
+source_id,path_scope,path,role,inspection_limit
+LEGACY_A,ONEDRIVE_PROJECT,"6 Working paper/Cardozo & Zavala - 2026 - Digital bridges for financial inclusion, DPI in migrant women empowerment in Colombia.docx",Selected full legacy foundation; exact hash in preservation record,Fresh hash and targeted XML method paragraphs P390-P399 P620-P628 P787-P793; not full page review
+D1,REPOSITORY,4 Academic Submission/wp06-author-dossier/D1_POPULATION_ACCEPTED_ACCOUNT_2026-10-19.md,Population recruitment historical exclusions and prior aggregate/date evidence,Author-confirmed statements not new participant verification; consent superseded by R03
+D2,REPOSITORY,4 Academic Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md,Accepted six policy bundles,No new eligibility certification or numerical execution
+D3,REPOSITORY,4 Academic Submission/wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md,Accepted fifteen measurement accounts,Policies and validation plans not empirical validation
+D4D6,REPOSITORY,4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md,Accepted current outcome and model/inference/typology policy,Conditional nominations and explicit unresolved choices
+R03,REPOSITORY,4 Academic Submission/wp06-institutional-rights-review/R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md,Later quantitative-consent correction,No participant records; documentary acceptance not institutional clearance
+R12,REPOSITORY,4 Academic Submission/wp06-institutional-rights-review/R12_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md,Unresolved institutional conclusion and controlled adoption,No formal clearance inferred
+PREP,REPOSITORY,1 Code/wp07-academic-preparation-v1/01 Approved preparation draft.do,Actual prepared names and component definitions,Source inspection only; hold unchanged
+ENGAGEMENT,REPOSITORY,1 Code/wp07-academic-analysis-v1/02 Engagement descriptives.do,Existing two-outcome block reused,Source inspection only; hold unchanged
+ITEMS,REPOSITORY,4 Academic Submission/wp07-academic-reporting/ITEMS.csv,Unique item/domain denominator and role catalogue,Metadata not observed values
+CODEBOOK,REPOSITORY,4 Academic Submission/wp07-academic-reporting/CODEBOOK.csv,Offered option/version dictionaries and reference labels,Questionnaire metadata only
+CANDIDATES,REPOSITORY,4 Academic Submission/wp07-academic-reporting/CANDIDATES.csv,Eleven existing provisional candidate fields and components,No candidate recomputation
+ITEM_CODE,REPOSITORY,1 Code/wp07-academic-reporting-v1/01 Item and domain reports.do,Raw-stage reporting dependency,Held source and prior audit; not rerun or loaded here
+CANDIDATE_CODE,REPOSITORY,1 Code/wp07-academic-reporting-v1/02 Prepared candidate reports.do,Full prepared-stage reporting dependency,Held source and prior audit; not auto-called on fourteen-field review projection
+LCA_MAP,REPOSITORY,4 Academic Submission/WP07_ACADEMIC_LCA_DOWNSTREAM_REPLACEMENT_MAP.md,Historical versus academic profiling boundary,No family or class-count selection
+ML_DECISIONS,REPOSITORY,4 Academic Submission/wp07-academic-lca-map/DECISIONS.csv,ML01-ML05 pending scientific choices,No answers assumed
+P2_SUCCESSOR,REPOSITORY,4 Academic Submission/wp07-p2-disabled-dispatcher/STATUS.json,Current disabled technical implementation status,Prior receipts preserved; no tests or native route rerun now
+PLAN,REPOSITORY,4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md,Scientific milestone sequence and outcome-based packages,Dated historical handoffs not blanket current authority
+WP05,REPOSITORY,4 Academic Submission/wp05-literature-context/README.md,Wider existing literature/context foundation,Not a fresh Zotero/NotebookLM corpus audit
+COMPARISONS,REPOSITORY,4 Academic Submission/wp06-academic-specification/comparison_register.csv,Preserved nineteen comparison entries with later policy handoff,Not nineteen significance tests or fit permissions

@@ -1,0 +1,92 @@
+{
+  "scope": "STATIC_SOURCE_DOCUMENT_AND_CUSTODY_ONLY",
+  "result": "PASS",
+  "repository_sources_verified": 206,
+  "legacy_documents_verified": 2,
+  "new_do_sources": [
+    {
+      "file": "00 Prepared academic review.do",
+      "first_command": "exit 198",
+      "active_verbs": [
+        "do",
+        "exit",
+        "set",
+        "version"
+      ],
+      "stata_parse": "NOT_RUN",
+      "execution": "NOT_RUN"
+    },
+    {
+      "file": "01 Model input readiness.do",
+      "first_command": "exit 198",
+      "active_verbs": [
+        "assert",
+        "confirm",
+        "count",
+        "display",
+        "exit",
+        "set",
+        "tabulate",
+        "version"
+      ],
+      "stata_parse": "NOT_RUN",
+      "execution": "NOT_RUN"
+    }
+  ],
+  "prepared_fields": [
+    "formdef_version",
+    "eligible_flag",
+    "wp07_known_form",
+    "q4",
+    "q2_2",
+    "q2_3",
+    "q2_1",
+    "wp07_residence",
+    "wp07_iat3",
+    "wp07_iadt2",
+    "wp07_iaff2",
+    "wp07_remit_disposition",
+    "wp07_remit_any_digital",
+    "wp07_domestic_60d"
+  ],
+  "raw_fields_checked_against_existing_allowlist": [
+    "formdef_version",
+    "eligible_flag",
+    "q4",
+    "q2_2",
+    "q2_3",
+    "q2_1"
+  ],
+  "master_callees": [
+    "1 Code/wp07-academic-core-v1/01 Model input readiness.do",
+    "1 Code/wp07-academic-analysis-v1/02 Engagement descriptives.do"
+  ],
+  "models": 4,
+  "primary_slots": 6,
+  "comparison_entries": 19,
+  "items": 93,
+  "domains": [
+    "IADT",
+    "IAER",
+    "IAFF",
+    "IAT",
+    "IBPD",
+    "ICDP",
+    "ICPF",
+    "IEDF",
+    "IEH",
+    "IETR",
+    "IPCS",
+    "IUOF",
+    "IURD",
+    "IVS",
+    "OQI"
+  ],
+  "exhibits": 19,
+  "source_index_entries": 20,
+  "crosswalk_entries": 18,
+  "methods_words": 2704,
+  "stata_or_analytical_execution": "NOT_RUN",
+  "participant_loads": 0,
+  "compiler": "NOT_RUN"
+}

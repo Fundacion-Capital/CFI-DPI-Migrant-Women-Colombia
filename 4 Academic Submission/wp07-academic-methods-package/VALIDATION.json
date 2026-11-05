@@ -1,0 +1,262 @@
+{
+  "date": "2026-11-05",
+  "baseline_head": "4bbaa04092190f1694b7448e005e09aa04250f86",
+  "status": "FOUR_PART_SOURCE_PACKAGE_COMPLETE_EMPIRICAL_AND_RUNTIME_VALIDATION_HELD",
+  "validation_mode": "STATIC_SOURCE_DOCUMENT_AND_CUSTODY_ONLY",
+  "parts": {
+    "accepted_specification": "DELIVERED",
+    "model_readiness_and_inference": "DELIVERED_WITH_EXPLICIT_CONDITIONS",
+    "disabled_code_consolidation": "DELIVERED_RESOLVED_COMPONENTS_ONLY",
+    "methods_and_exhibit_architecture": "DELIVERED"
+  },
+  "appendix_c2": "HOLD",
+  "stata_calls": 0,
+  "participant_loads": 0,
+  "saved_model_loads": 0,
+  "fits": 0,
+  "score_computations": 0,
+  "analytical_fixture_or_python_test_runs": 0,
+  "stata_parse": "NOT_RUN",
+  "compilation": "NOT_RUN",
+  "scientific_adoption": false,
+  "release": false,
+  "main_manuscript_edited": false,
+  "qualitative_material_edited": false,
+  "git_mutations": false,
+  "settings_service_or_cloud_changes": false,
+  "static_scope": {
+    "scope": "STATIC_SOURCE_DOCUMENT_AND_CUSTODY_ONLY",
+    "result": "PASS",
+    "repository_sources_verified": 206,
+    "legacy_documents_verified": 2,
+    "new_do_sources": [
+      {
+        "file": "00 Prepared academic review.do",
+        "first_command": "exit 198",
+        "active_verbs": [
+          "do",
+          "exit",
+          "set",
+          "version"
+        ],
+        "stata_parse": "NOT_RUN",
+        "execution": "NOT_RUN"
+      },
+      {
+        "file": "01 Model input readiness.do",
+        "first_command": "exit 198",
+        "active_verbs": [
+          "assert",
+          "confirm",
+          "count",
+          "display",
+          "exit",
+          "set",
+          "tabulate",
+          "version"
+        ],
+        "stata_parse": "NOT_RUN",
+        "execution": "NOT_RUN"
+      }
+    ],
+    "prepared_fields": [
+      "formdef_version",
+      "eligible_flag",
+      "wp07_known_form",
+      "q4",
+      "q2_2",
+      "q2_3",
+      "q2_1",
+      "wp07_residence",
+      "wp07_iat3",
+      "wp07_iadt2",
+      "wp07_iaff2",
+      "wp07_remit_disposition",
+      "wp07_remit_any_digital",
+      "wp07_domestic_60d"
+    ],
+    "raw_fields_checked_against_existing_allowlist": [
+      "formdef_version",
+      "eligible_flag",
+      "q4",
+      "q2_2",
+      "q2_3",
+      "q2_1"
+    ],
+    "master_callees": [
+      "1 Code/wp07-academic-core-v1/01 Model input readiness.do",
+      "1 Code/wp07-academic-analysis-v1/02 Engagement descriptives.do"
+    ],
+    "models": 4,
+    "primary_slots": 6,
+    "comparison_entries": 19,
+    "items": 93,
+    "domains": [
+      "IADT",
+      "IAER",
+      "IAFF",
+      "IAT",
+      "IBPD",
+      "ICDP",
+      "ICPF",
+      "IEDF",
+      "IEH",
+      "IETR",
+      "IPCS",
+      "IUOF",
+      "IURD",
+      "IVS",
+      "OQI"
+    ],
+    "exhibits": 19,
+    "source_index_entries": 20,
+    "crosswalk_entries": 18,
+    "methods_words": 2704,
+    "stata_or_analytical_execution": "NOT_RUN",
+    "participant_loads": 0,
+    "compiler": "NOT_RUN"
+  },
+  "preservation": {
+    "repository_sources": 206,
+    "legacy_word_documents": 2,
+    "all_size_and_sha256": "PASS",
+    "main_tex_included": true,
+    "existing_tracked_changes": [],
+    "existing_index_changes": []
+  },
+  "review": {
+    "independent": true,
+    "critical": 0,
+    "important": 1,
+    "important_resolution": "MIXED_TYPE_UPSTREAM_INPUT_DESCRIPTION_CORRECTED_AND_INDEPENDENTLY_READ_BACK",
+    "outstanding_important": 0,
+    "actionable_minor": 0,
+    "limits": "See REVIEW.md; original manuscript extraction and final custody were parent checks."
+  },
+  "source_inspection_notes": [
+    "LEGACY-A exact selected hash reverified; targeted method paragraphs only, no full-document fresh review",
+    "D1 physical-quantitative-consent wording superseded by accepted R03 correction",
+    "Older pending proposal statuses preserved; current D4/D6 nominations remain conditional",
+    "Raw preparation/reporting is mixed-type; new prepared readiness view is14 numeric fields",
+    "No previous numerical or artificial execution suite was rerun"
+  ],
+  "tracked_diff_exit": 0,
+  "index_diff_exit": 0,
+  "diff_check_exit": 0,
+  "untracked_directories": [
+    "1 Code/wp07-academic-core-v1/",
+    "4 Academic Submission/wp07-academic-methods-package/"
+  ],
+  "new_artifacts_excluding_this_receipt": [
+    {
+      "path": "1 Code/wp07-academic-core-v1/00 Prepared academic review.do",
+      "bytes": 1037,
+      "sha256": "541c7e8578619b7e266dc77189813759e3a7a8d8a6bddaf4a6611fe750f65061"
+    },
+    {
+      "path": "1 Code/wp07-academic-core-v1/01 Model input readiness.do",
+      "bytes": 4279,
+      "sha256": "08ab8a748513a113397bd212aeb5b81548384b17c607b64e3b55a1a5e5f87159"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/ACADEMIC_SPECIFICATION.md",
+      "bytes": 13939,
+      "sha256": "b7e04836acb04982121e873d5bb1637fd8cd1315ab92c49a5817d18f8e8ed0f2"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/AUDIT.md",
+      "bytes": 6211,
+      "sha256": "afcf568713663779311d07b205bcd4e65618236eaffb4c16296174ec5b2cb5d1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/CITATIONS.md",
+      "bytes": 2756,
+      "sha256": "ff410091cde467a29d4c35544e8f7a06760fb647e28e73cbb8387c23f4ddf6bd"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/CODE_CROSSWALK.csv",
+      "bytes": 4641,
+      "sha256": "7fd82e3edd68bb896959f54a1033062dd9b1178f1aaa570e84dbdac553e368fa"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/COMMIT_MESSAGE.txt",
+      "bytes": 1632,
+      "sha256": "8a11ae1f9a60ff0033f5b1b7303895728075da3675dbe74f951cff642a5d8b2d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/COMPARISON_HANDOFF.csv",
+      "bytes": 2782,
+      "sha256": "a656c353d461edb4aa68e9c076fb5d24b727d94307667afa0b2fa232a16123b9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/EXHIBIT_PLAN.csv",
+      "bytes": 5409,
+      "sha256": "eeefa83096378e1aff6e1d1d5891e4aa70da7d4ed6ce383fd596493b8f76a07c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/IMPLEMENTATION_GAPS.md",
+      "bytes": 3570,
+      "sha256": "1e793b2c7400cecbcba3b5d3ebbe4264baae195722a74455ea1e9702df1d5518"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/INFERENCE_AND_DECISIONS.md",
+      "bytes": 7495,
+      "sha256": "3c5ca60056b9ea2334d04d45c6f574bad4a3f979a0c5d0c83cc99272f67525b3"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/METHODS_DRAFT.md",
+      "bytes": 21328,
+      "sha256": "5298f145dc32c973ab085345b0523b2a6914edc1b847d44782701f63e81a1850"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/MODEL_READINESS.csv",
+      "bytes": 2332,
+      "sha256": "7832fca63ec874bd9e2ec0101eac34aca82f815a9b857d05a409c498c7973f1a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/PRIMARY_TEST_FAMILY.csv",
+      "bytes": 1374,
+      "sha256": "a93759670e212caa6e775ee6a8b3602baba0d0cc32923a7921b2df392bc453e7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/README.md",
+      "bytes": 4393,
+      "sha256": "d1e0ade5b88c55b027c49b138bf6464a463b0b95d135ed9a06b433bcb79e4429"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/REVIEW.md",
+      "bytes": 3241,
+      "sha256": "a2c7bccd485752ed79378c7cacaf56c2b5918c545b794c34f38300b931102074"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/SOURCE_INDEX.csv",
+      "bytes": 3943,
+      "sha256": "d71642249e3e7c9af506267000681267bf499ca41ac7891e566900607d977d33"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/source_pins.json",
+      "bytes": 41904,
+      "sha256": "7431730d3c1048641113eac9237f8144d910b0727db8e3785db9fff75af9c09f"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/STATIC_AUDIT.json",
+      "bytes": 1836,
+      "sha256": "f58013c55f315f48dfc6675d28152c039e2ac5925952677640794aade1ee4e32"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/STATUS.json",
+      "bytes": 1062,
+      "sha256": "8f9b43b41f162fe241c42e02d22c19ed6eb3d758763c034275a278d9b05dd7ed"
+    }
+  ],
+  "self_hash_policy": "VALIDATION.json excludes itself; all listed new artifact bytes/hashes read back after saving.",
+  "trailing_whitespace": [],
+  "unresolved": [
+    "actual model sample/component coverage and measure suitability",
+    "variance/dependence and supported probability contrasts",
+    "unavailable primary-test implementation and extension calendar/geography choices",
+    "optional LCA family/count/stability/uncertainty and downstream choices",
+    "current exact participant/input/output/retention/runtime authority",
+    "institutional/coauthor/CFI and derivative disclosure/release conditions"
+  ]
+}
