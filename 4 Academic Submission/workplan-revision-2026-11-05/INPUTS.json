@@ -1,0 +1,109 @@
+{
+  "recorded_on": "2026-11-05",
+  "mode": "EXISTING_DOCUMENT_AND_SOURCE_METADATA_ONLY",
+  "baseline_head": "078584f5cd66538fecf6183b36487b28d1149773",
+  "tracked_diff_names": [],
+  "input_count": 20,
+  "inputs": [
+    {
+      "path": "4 Academic Submission/ACADEMIC_SUBMISSION_WORKPLAN.md",
+      "bytes": 362186,
+      "sha256": "2186bbdbad35a35d1c95397121c7a2cf23b042d38583e6cd036cf14c98acaa4c"
+    },
+    {
+      "path": "4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md",
+      "bytes": 51104,
+      "sha256": "f59105099804ab78c33859d827c29da1820d551810706a66c0a47a7cd2c2115a"
+    },
+    {
+      "path": "4 Academic Submission/README.md",
+      "bytes": 242032,
+      "sha256": "9a28577c58e50a316caf9d57fef68121555d6990ab4efb3164bb215380537ce8"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/workflow_state.json",
+      "bytes": 358623,
+      "sha256": "c53cd9606eebd6a5915006c55ea0e171835f027700228186e6d04c2ac58172c3"
+    },
+    {
+      "path": "1 Code/0 Master Code_CFI DPI Migrant Women Colombia.do",
+      "bytes": 2852,
+      "sha256": "d2ec519440281bfd0316ec9cd7de1bdf64afadff5e7959e43a774f33323c7b39"
+    },
+    {
+      "path": "1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do",
+      "bytes": 114768,
+      "sha256": "e6a9e542dcff1067dcda7a37a19b5cff542b65b54622f198c240a419dc0ed449"
+    },
+    {
+      "path": "1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do",
+      "bytes": 646092,
+      "sha256": "714377ca31de2b6d70db0994e3c7ef6a38374165d7b1fb7c7abeb3b3f56549c9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/README.md",
+      "bytes": 4393,
+      "sha256": "d1e0ade5b88c55b027c49b138bf6464a463b0b95d135ed9a06b433bcb79e4429"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/STATUS.json",
+      "bytes": 1062,
+      "sha256": "8f9b43b41f162fe241c42e02d22c19ed6eb3d758763c034275a278d9b05dd7ed"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/ACADEMIC_SPECIFICATION.md",
+      "bytes": 13939,
+      "sha256": "b7e04836acb04982121e873d5bb1637fd8cd1315ab92c49a5817d18f8e8ed0f2"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+      "bytes": 9957,
+      "sha256": "fa8eaf0b3c4090120830d243abe810273b962c02ac37acd32554578173d0aaf0"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md",
+      "bytes": 33091,
+      "sha256": "37b4278bab6af04b96df03802e5104148a187f0cb8242a1c5b66e5374bc8a3ec"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+      "bytes": 15188,
+      "sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R03_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "bytes": 10633,
+      "sha256": "acc61a91e3397fb6c4998a810e552f66fde164486477d29ca244412d22de9b53"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+      "bytes": 6711,
+      "sha256": "8813c35e4d5ee8f73341a42468c1b69b9fbe4bb2f9d83eeb19d03fd77d8406cd"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R11_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+      "bytes": 7429,
+      "sha256": "f06fb35c2a330fdb82a0d936b354e75fb4c36d6154e5224cdb1439a9c5ca3504"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/R12_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+      "bytes": 8702,
+      "sha256": "9de3144d07ea623f8f18c132828943f1c8c3a45755cc00dc4bd7821b270dd11e"
+    },
+    {
+      "path": "4 Academic Submission/wp05-literature-context/README.md",
+      "bytes": 3003,
+      "sha256": "a4bcedcbf570b81cedf04f83733a94417e654cf86a8041e24e4e1dd58b27eb3f"
+    },
+    {
+      "path": "4 Academic Submission/wp05-literature-context/SOURCE_LEDGER.csv",
+      "bytes": 16237,
+      "sha256": "6604114774ae1c1be85eb7ec827d2f2405730b1f9e3a2fcbbf9017d916d480b7"
+    },
+    {
+      "path": "4 Academic Submission/main.tex",
+      "bytes": 201053,
+      "sha256": "236724e46345ca795b1482a5801ea3b3c29a87dfd8f989de89b1d114ca27bc60"
+    }
+  ]
+}
