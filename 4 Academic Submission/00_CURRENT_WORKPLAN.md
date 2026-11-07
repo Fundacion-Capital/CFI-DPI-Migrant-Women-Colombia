@@ -1,5 +1,14 @@
 # Current academic research revision workplan
 
+**Current implementation checkpoint — 7 November 2026:** A.1–A.6 are implemented
+as a source-only candidate in `1 Code/academic`. Start with
+`wp07-integrated-stata/README.md` and its current task register. All originals and
+accepted decisions remain preserved; native parsing, numerical validation and
+execution/release authority are not implied. The next quantitative stage is
+E.1–E.3 under separate current scope, while B/C/D/G.1 source work can proceed.
+C2 remains HOLD. The dated next-A instructions below record the 5 November plan;
+this checkpoint and `00_meta/current_workplan.json` identify the actual successor.
+
 **Version:** 5 November 2026. **Planning baseline:** clean main at
 078584f5cd66538fecf6183b36487b28d1149773.
 **Current objective:** produce the complete, defensible academic paper and

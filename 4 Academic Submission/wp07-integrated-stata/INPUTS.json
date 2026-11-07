@@ -1,0 +1,262 @@
+{
+  "date": "2026-11-07",
+  "baseline_head": "01613242380550e7c6971293eddff8f420631f2b",
+  "baseline_status": [],
+  "planned_mutable_files": [
+    "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+    "4 Academic Submission/00_meta/current_workplan.json"
+  ],
+  "source_count": 50,
+  "sources": [
+    {
+      "path": "1 Code/0 Master Code_CFI DPI Migrant Women Colombia.do",
+      "bytes": 2852,
+      "sha256": "d2ec519440281bfd0316ec9cd7de1bdf64afadff5e7959e43a774f33323c7b39"
+    },
+    {
+      "path": "1 Code/1 Data Preparation_CFI DPI Migrant Women Colombia.do",
+      "bytes": 114768,
+      "sha256": "e6a9e542dcff1067dcda7a37a19b5cff542b65b54622f198c240a419dc0ed449"
+    },
+    {
+      "path": "1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do",
+      "bytes": 646092,
+      "sha256": "714377ca31de2b6d70db0994e3c7ef6a38374165d7b1fb7c7abeb3b3f56549c9"
+    },
+    {
+      "path": "1 Code/style-only-v1/0 Master Code_CFI DPI Migrant Women Colombia.do",
+      "bytes": 3302,
+      "sha256": "6cc48708952e1ccdbcf51920d5e77a8bf01642dc720644a9f9ab6d3a0366e0d9"
+    },
+    {
+      "path": "1 Code/style-only-v1/1 Data Preparation_CFI DPI Migrant Women Colombia.do",
+      "bytes": 115648,
+      "sha256": "b004a263e6593d3e83dab7e3d5d3a8ff381ccf53a8ef757ba11dcdf5fa5ea252"
+    },
+    {
+      "path": "1 Code/style-only-v1/2 Analysis_CFI DPI Migrant Women Colombia.do",
+      "bytes": 648154,
+      "sha256": "5483ae5cdba059ecf868b89270aeb125da5920a2fd0965885095cd355e76a2bb"
+    },
+    {
+      "path": "1 Code/wp07-academic-analysis-v1/00 Master.do",
+      "bytes": 625,
+      "sha256": "5767297449ae698e695258f7397493c3f0448aa93a9295c183040e3a0e97f1dc"
+    },
+    {
+      "path": "1 Code/wp07-academic-analysis-v1/02 Engagement descriptives.do",
+      "bytes": 1006,
+      "sha256": "45ff3512a605ebe0b4562182c81b0df1032735cdb17ff6fc942e6ef5b138d327"
+    },
+    {
+      "path": "1 Code/wp07-academic-core-v1/00 Prepared academic review.do",
+      "bytes": 1037,
+      "sha256": "541c7e8578619b7e266dc77189813759e3a7a8d8a6bddaf4a6611fe750f65061"
+    },
+    {
+      "path": "1 Code/wp07-academic-core-v1/01 Model input readiness.do",
+      "bytes": 4279,
+      "sha256": "08ab8a748513a113397bd212aeb5b81548384b17c607b64e3b55a1a5e5f87159"
+    },
+    {
+      "path": "1 Code/wp07-academic-preparation-v1/01 Approved preparation draft.do",
+      "bytes": 9940,
+      "sha256": "1e2862817eeddbcb9f93f46d1093ef6ba71851dcb4c83fcfc650986b2fe4831f"
+    },
+    {
+      "path": "1 Code/wp07-academic-reporting-v1/01 Item and domain reports.do",
+      "bytes": 358513,
+      "sha256": "813f2e3bd767f57f91b6b59f88eb377b3b88fd02c5b457139faa923237a1c25c"
+    },
+    {
+      "path": "1 Code/wp07-academic-reporting-v1/02 Prepared candidate reports.do",
+      "bytes": 18408,
+      "sha256": "ed64793622c662eb25a93c405b259b4c03728df3b70462696b97a38f8cff16ec"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/01 Historical main descriptives.do",
+      "bytes": 4350,
+      "sha256": "26a1d376191bf6904023cf1443ff2bd7558a3a1175701f5cfd0489dd5b794a57"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/02 Historical appendix descriptives.do",
+      "bytes": 1697,
+      "sha256": "c3226c65bda14a9e03a52fb6fdbd39ac002f165fe25f5deab5556c47d54fe3c1"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/03 Academic descriptives.do",
+      "bytes": 3214,
+      "sha256": "bec01887e138b8a8c892cccd772288c5b16ca7651b6b809459555073863f82e6"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/04 Historical IAT IADT pair.do",
+      "bytes": 306,
+      "sha256": "3b32c4add8b7e3055f425f3a03c0b20d4b7f62c4bbee873202881ec39153ad7e"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/05 Historical appendix C2 matrix.do",
+      "bytes": 495,
+      "sha256": "4e7814e1b4f5a052cca1e45eb2d45cfc86c162cec0337f7bf04e073df24f4938"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/06 Historical F5 associations.do",
+      "bytes": 3637,
+      "sha256": "a03a862240ecad1f55e44cf7e91f92f169e20ef70aadce4bcdda3fb348417b29"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/07 Academic IAT IADT comparison.do",
+      "bytes": 1008,
+      "sha256": "98f7852dcb876a74f7562477f876d99539a45fafb4ee15b7f09a0f4f30bcaf3c"
+    },
+    {
+      "path": "1 Code/wp07-descriptive-correlation-v1/08 Historical Table 2 and Figures 6–10.do",
+      "bytes": 1184,
+      "sha256": "98ae836a395511876f044b861b01577210ed4b1f8e8f7e6476619a6560f8607a"
+    },
+    {
+      "path": "1 Code/wp07-lca-downstream-v1/01 Historical LCA and downstream.do",
+      "bytes": 539204,
+      "sha256": "752c647510eb226f478955860c98ad1ee31bdfc1552d53718a36f6022c3e1b8d"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/P2 Barrier-corrected draft.do",
+      "bytes": 952852,
+      "sha256": "e8feea9f79a3e8596c9f4450f4bc14c7e9a87c5df8e2a630e7904b54ee2d9b29"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/01 Barrier state cases.do",
+      "bytes": 21855,
+      "sha256": "1c26841ceba6dbe7bd752d31006cb791135c310a568e2e7e2694b0d0f1e897df"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/02 Version and route cases.do",
+      "bytes": 15122,
+      "sha256": "5854ab75518c0e8eff594e9a27f21a7d121e853930eaec7e90b80e41f9a0b258"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/03 Reporting denominator cases.do",
+      "bytes": 36459,
+      "sha256": "61906651545aa1d5c97b81c2ea67d744cebb165b47ac811822f89db19d524585"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/04 Prepared coverage cases.do",
+      "bytes": 42153,
+      "sha256": "c4085521414e0ccc0ff1ae4a87084f7d5b7583817d875cd5e22faed9d563e2eb"
+    },
+    {
+      "path": "1 Code/wp07-p2-barrier-v1/artificial/05 Expected range rejection.do",
+      "bytes": 449,
+      "sha256": "2c9bdb9d417462badb30ad2513a6b4914abf362210868166d1c6e92b274ae045"
+    },
+    {
+      "path": "1 Code/wp07-regression-v1/01 Historical regression setup.do",
+      "bytes": 4975,
+      "sha256": "a94d350608f025f668328f70002e32c1d27538bf3b4a16bec9d0a6b48d70ed98"
+    },
+    {
+      "path": "1 Code/wp07-regression-v1/02 Historical main regressions.do",
+      "bytes": 19369,
+      "sha256": "65d62286a6e982ad25a1d2c6e6141cd20e35e8c9d04d3dadd2387e327a768b7b"
+    },
+    {
+      "path": "1 Code/wp07-regression-v1/03 Historical interactions.do",
+      "bytes": 6046,
+      "sha256": "470dc52d18f2dc9f96eaa290a9524e6e343254e05f7e0eebdc9cc6a3117ab8e2"
+    },
+    {
+      "path": "1 Code/wp07-regression-v1/04 Historical supplementary regressions.do",
+      "bytes": 3905,
+      "sha256": "b13b8ea7776fa7299d67de64727ceb9e490bbf7e4e18a3fa7f210e829873baba"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2727,
+      "sha256": "6bd26a79bc9017bdfdc289c8ee14a6184e65b46f42683b8cf6ae8395474c5922"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 40089,
+      "sha256": "be5a4f5679e6f75bec52532a6ba7e0254c652eecad54a2ac079fa9aeffd4adce"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 1972,
+      "sha256": "f065909f30047eab30ee94043d67f268141f0e1a68bacd297516bee874266245"
+    },
+    {
+      "path": "4 Academic Submission/workplan-revision-2026-11-05/TASK_REGISTER.csv",
+      "bytes": 9228,
+      "sha256": "07baaf885f5cc74ac42fe33d2be9c1758de1231a9bc035e8f4bb28139abbc5b5"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+      "bytes": 9957,
+      "sha256": "fa8eaf0b3c4090120830d243abe810273b962c02ac37acd32554578173d0aaf0"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/D3_ACCEPTED_ACCOUNTS_2026-10-26.md",
+      "bytes": 33091,
+      "sha256": "37b4278bab6af04b96df03802e5104148a187f0cb8242a1c5b66e5374bc8a3ec"
+    },
+    {
+      "path": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+      "bytes": 15188,
+      "sha256": "01b3839c72197418b6024ba53f441592137c770a51ac3bf405029ae359ece137"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/ACADEMIC_SPECIFICATION.md",
+      "bytes": 13939,
+      "sha256": "b7e04836acb04982121e873d5bb1637fd8cd1315ab92c49a5817d18f8e8ed0f2"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/COMPARISON_HANDOFF.csv",
+      "bytes": 2782,
+      "sha256": "a656c353d461edb4aa68e9c076fb5d24b727d94307667afa0b2fa232a16123b9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/MODEL_READINESS.csv",
+      "bytes": 2332,
+      "sha256": "7832fca63ec874bd9e2ec0101eac34aca82f815a9b857d05a409c498c7973f1a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/PRIMARY_TEST_FAMILY.csv",
+      "bytes": 1374,
+      "sha256": "a93759670e212caa6e775ee6a8b3602baba0d0cc32923a7921b2df392bc453e7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-methods-package/EXHIBIT_PLAN.csv",
+      "bytes": 5409,
+      "sha256": "eeefa83096378e1aff6e1d1d5891e4aa70da7d4ed6ce383fd596493b8f76a07c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-reporting/ITEMS.csv",
+      "bytes": 26914,
+      "sha256": "8141d737b5782a313a29fa417d6b8fd6ac12658791500d668f91333ee7767e94"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-reporting/CODEBOOK.csv",
+      "bytes": 277833,
+      "sha256": "64d5b56e609226ac3031270de9384b47a4ba67103c74e54fbf044b22eb55be16"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-reporting/CANDIDATES.csv",
+      "bytes": 3161,
+      "sha256": "f1ddefb327a9e2c08f818d412692820b4dae314262dc8118a86980aa03e603b3"
+    },
+    {
+      "path": "4 Academic Submission/wp06-academic-specification/field_allowlist.csv",
+      "bytes": 9685,
+      "sha256": "662df36abf8abf4db038afb77eba0c64caa050654ff316015c69f50acb6168c1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-academic-lca-map/DECISIONS.csv",
+      "bytes": 3341,
+      "sha256": "cf0689b07f77d107a9ac3fd8ef3ee9657af56f0818170d1af96b6607f782a9f7"
+    },
+    {
+      "path": "4 Academic Submission/main.tex",
+      "bytes": 201053,
+      "sha256": "236724e46345ca795b1482a5801ea3b3c29a87dfd8f989de89b1d114ca27bc60"
+    }
+  ]
+}
