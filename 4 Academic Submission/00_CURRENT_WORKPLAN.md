@@ -1,4 +1,27 @@
 # Current academic research revision workplan
+**Current E.4 restricted execution checkpoint — 8 November 2026:** The exact
+owner-authorized single Stata MCP selection completed: one 98-field load,
+accepted preparation in memory, five model attempts and no retries. All five
+passed their programmed working-model support/sample/convergence/rank gates.
+Six primary slots and fifteen fixed probability comparisons are available;
+the native aggregate ledgers and five E3 denominator matches were audited.
+Detailed numbers remain restricted. Start with
+`wp07-e4-restricted-execution/README.md`, CASE_STATUS.csv and VALIDATION.json.
+Raw values/N/order assertions passed and original/carrier/source bytes remain
+unchanged. All 336 entry fingerprints matched before this checkpoint; 334
+immutable predecessors and two exact navigation before-images stay preserved.
+Final native data state is N0/K0 with the owned session ready/nonbusy; this is
+not an OS-exit or hard-cancellation guarantee. The quiet log is empty as
+allowed; no extra provider path was returned, not a promise of containment.
+All canonical holds and the separate estimation stop remain. This is bounded
+empirical working-model evidence, not full-pipeline, scientific adoption,
+institutional/publication or release approval. The grant is consumed; no
+additional load, fit, diagnostic selection, retry or export is authorized.
+Next: E.5 restricted exhibit/results mapping from these native ledgers, with
+no new fits or participant loads and any further native export separately
+scoped. C2 HOLD and unresolved dossier conditions remain; B/C/D/G continue
+the complete academic-paper objective. Earlier checkpoints retain their
+original dated meanings.
 **Current E.4 restricted-scope checkpoint — 8 November 2026:** The exact next
 participant scope is prepared and source-audited, NOT authorized or executed.
 It binds one inherited 98-field carrier load, exact accepted in-memory

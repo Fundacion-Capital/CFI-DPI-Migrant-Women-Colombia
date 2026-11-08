@@ -1,0 +1,372 @@
+{
+  "date": "2026-11-08",
+  "package": "E.4 exact single restricted native run and output audit",
+  "result": "PASS_SINGLE_RESTRICTED_E4_EXECUTION_AND_AGGREGATE_OUTPUT_AUDIT_ONLY",
+  "completion_scope": "BOUNDED_EMPIRICAL_WORKING_MODEL_EVIDENCE_NOT_SCIENTIFIC_INSTITUTIONAL_OR_RELEASE_APPROVAL",
+  "baseline_head": "4e1d60b1ba0c7d257f1c391365fbda4321c86349",
+  "authorization": "AUTHORIZATION.json",
+  "frozen_pre_dispatch_binding": "RUN_CONTRACT.json",
+  "authorized_scope_sha256": "2f60981c3303091bb11442a801b537c8c8fd869efcbfda76556eb8d7beff4471",
+  "selection_sha256": "832a702e1430abe0fd267c5068ef63e25e4daba9fdd8e5378d9a0b4c41ae8fd4",
+  "selection_bytes": 521,
+  "actual_counts": {
+    "native_selections": 1,
+    "participant_projection_loads": 1,
+    "fields": 98,
+    "accepted_memory_preparation": 1,
+    "model_attempts": 5,
+    "native_working_models_accepted": 5,
+    "prefit_blocks": 0,
+    "postfit_holds": 0,
+    "fit_errors": 0,
+    "primary_Wald_tests": 6,
+    "primary_test_slots_available": 6,
+    "margins_calls": 15,
+    "available_probability_comparisons": 15,
+    "probability_rows": 45,
+    "Holm_passes": 1,
+    "retries": 0,
+    "reloads": 0,
+    "additional_native_selections": 0,
+    "metadata_inventory_queries": 2,
+    "participant_dataset_prediction_saved_model_exports": 0
+  },
+  "native_result": {
+    "actual_completion_lines": 1,
+    "actual_STOP_lines": 0,
+    "echoed_STOP_text_not_a_failure": true,
+    "rc": 0,
+    "N": 0,
+    "K": 0,
+    "session_id": "cfi_e4_restricted_20261108",
+    "manager_state": "ready",
+    "is_busy": false,
+    "manager_error": null,
+    "OS_process_exit_not_claimed": true,
+    "native_version_or_flavor_not_requeried": true,
+    "timeout_argument": 60,
+    "timeout_reported": false,
+    "hard_cancellation_guaranteed": false,
+    "external_wallclock_not_independently_instrumented": true
+  },
+  "model_dispositions": [
+    {
+      "model": "R0_E4",
+      "attempts": 1,
+      "fit_rc": 0,
+      "status": "ACCEPTED_WORKING_MODEL",
+      "sample_match": true,
+      "convergence": true,
+      "expected_rank_met": true
+    },
+    {
+      "model": "D0_E4",
+      "attempts": 1,
+      "fit_rc": 0,
+      "status": "ACCEPTED_WORKING_MODEL",
+      "sample_match": true,
+      "convergence": true,
+      "expected_rank_met": true
+    },
+    {
+      "model": "R1_E4",
+      "attempts": 1,
+      "fit_rc": 0,
+      "status": "ACCEPTED_WORKING_MODEL",
+      "sample_match": true,
+      "convergence": true,
+      "expected_rank_met": true
+    },
+    {
+      "model": "D1_E4",
+      "attempts": 1,
+      "fit_rc": 0,
+      "status": "ACCEPTED_WORKING_MODEL",
+      "sample_match": true,
+      "convergence": true,
+      "expected_rank_met": true
+    },
+    {
+      "model": "R0C_E4",
+      "attempts": 1,
+      "fit_rc": 0,
+      "status": "ACCEPTED_WORKING_MODEL",
+      "sample_match": true,
+      "convergence": true,
+      "expected_rank_met": true
+    }
+  ],
+  "root_output_audit": {
+    "aggregate_only": true,
+    "new_participant_record_processing": 0,
+    "source_of_all_statistical_results": "single authorized native Stata run",
+    "all_five_schemas_and_fixed_row_counts_pass": true,
+    "grouped_support_partition_and_reference_checks_pass": true,
+    "native_fit_matrix_geometry_finiteness_symmetry_focal_variance_checks_pass": true,
+    "primary_slot_mapping_and_native_Holm_arithmetic_pass": true,
+    "probability_entries_match_native_matrix_cells_and_units": true,
+    "denominator_reference": "all five intended_n match pinned prior observed_n selectors; not base_n/historical estimator target",
+    "native_values_or_outputs_modified": false,
+    "full_precision_source_preserved": true,
+    "native_missing_unused_return_cells_preserved": true,
+    "pointwise_intervals_not_clipped_or_claimed_simultaneous": true,
+    "real_native_memory_roundtrip_after_cleanup": false,
+    "issues": []
+  },
+  "restricted_results": {
+    "public_numeric_study_results": false,
+    "directory": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run",
+    "detailed_audit": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/AGGREGATE_OUTPUT_AUDIT.json"
+  },
+  "logging": {
+    "controlled_log_bytes": 0,
+    "quiet_no_model_table_in_returned_response": true,
+    "ordinary_log_not_command_trace": true,
+    "full_available_response_preserved": true,
+    "extra_provider_or_spill_path_returned": false,
+    "hidden_provider_capture_debug_destinations_not_bound": true,
+    "universal_containment_not_claimed": true
+  },
+  "audit_clarifications": {
+    "pre_dispatch_transient_orchestration_error_not_native_retry": true,
+    "anchored_result_not_STOP_substring": true,
+    "reviewer_ephemeral_integer_Min_overload_QA_false_alarm_resolved_with_double_constants": true,
+    "no_native_or_approved_scientific_condition_failed": true,
+    "no_result_request_or_scientific_source_changed": true
+  },
+  "preservation": {
+    "entry_fingerprints_checked": 336,
+    "immutable_predecessors_unchanged": 334,
+    "expected_mutable_files": [
+      "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "4 Academic Submission/00_meta/current_workplan.json"
+    ],
+    "beforeimages_exact": 2,
+    "opaque_carrier_before_after_fingerprints_match": true,
+    "canonical_entry_holds": 3,
+    "independent_estimation_stop_preserved": true,
+    "canonical_or_scientific_sources_changed": 0,
+    "old_failed_successful_and_prepared_packets_preserved": true,
+    "seven_native_outputs_ignored_and_allowed_ACL": true,
+    "source_or_parent_ACL_changes": false,
+    "task_rows": 41,
+    "changed_tasks": [
+      "E.4"
+    ]
+  },
+  "authority_closure": {
+    "grant_consumed": true,
+    "remaining_native_selections": 0,
+    "remaining_participant_loads": 0,
+    "remaining_fits": 0,
+    "scientific_adoption_or_validity_certification": false,
+    "institutional_coauthor_publication_release_approval": false,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "cloud_changes": 0,
+    "live_Overleaf_sync": 0,
+    "persistent_settings_service_changes": 0,
+    "C2": "HOLD"
+  },
+  "independent_review": {
+    "status": "PASS_RESTRICTED_EXECUTION_AND_AGGREGATE_OUTPUT_AUDIT_ONLY",
+    "critical": 0,
+    "important_unresolved": 0,
+    "receipt_sha256": "9d16f33122ec7bd3dd9453c27a7dbe6f8bacdd028bc1e3fb7d420e15337d68f9",
+    "no_study_estimates_or_sample_Ns_in_public_review": true,
+    "not_independent_reproduction_or_scientific_release_approval": true,
+    "clerical_finalization_complete": true
+  },
+  "next": "E.5 restricted publication-exhibit/results map from exact native ledgers; no new fits or participant loads; any native export or release separately scoped",
+  "git": {
+    "baseline_head": "4e1d60b1ba0c7d257f1c391365fbda4321c86349",
+    "final_head": "4e1d60b1ba0c7d257f1c391365fbda4321c86349",
+    "index": [],
+    "diff_check_exit": 0,
+    "line_ending_warning": "Two navigation files use LF; Git warns future checkout may replace them with CRLF. No Git setting was changed; seals describe current bytes."
+  },
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/AUDIT.md",
+      "bytes": 7040,
+      "sha256": "f49097a23dc5210f4230691040b99edee10a2b2232b052997e07ad5e9386e1e6"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/AUTHORIZATION.json",
+      "bytes": 757,
+      "sha256": "f8baa440adc39863e79a1f9686aae2f0c6eb7d239b4eb3acf8c8f547876b9df6"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/CASE_STATUS.csv",
+      "bytes": 214,
+      "sha256": "bfc66aeafe63a6784e85a34da327114b58c675f9fdf667a87d803d8cbe1bbc78"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/COMMIT_MESSAGE.txt",
+      "bytes": 1286,
+      "sha256": "7c0b990c78c98212087536cb15ee43cc8d06088dd3bd113c6efd15ff7469b7b0"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/INPUTS.json",
+      "bytes": 77341,
+      "sha256": "3856cc1edd95dc7e9405f507a34e1907d74aeaf84842c4d737ebe2f50f41b61c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/README.md",
+      "bytes": 5356,
+      "sha256": "dd8498db4298b66f64205584884fc6f46b0c675608691ecb0897f5f58a2cb64d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/RUN_CONTRACT.json",
+      "bytes": 1319,
+      "sha256": "5de880117701ab7636098d27840e2f42c29ad45a1ab746b4aeef748a7f0b848b"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution/TASK_REGISTER.csv",
+      "bytes": 11276,
+      "sha256": "47aba569c24f18dbf56c15ee14d7075df69293b2b95d4a0c7a7b36f738cee523"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 51904,
+      "sha256": "85a4e2c1a4d44cf60a647d7bb7455e44a452b32f60243b2540dda4dc6418da87"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 10627,
+      "sha256": "ec79a5558808493104bb5ac2055c56d927da01a3f060fbd6e64889968881afb0"
+    }
+  ],
+  "protected_execution_evidence": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/00_CURRENT_WORKPLAN.md",
+      "bytes": 50241,
+      "sha256": "1c88736a5e9a8c2a8c5e7f725db5d8dc337a9aa68c960d8d2e6d346ec11db4c7"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/AGGREGATE_OUTPUT_AUDIT.json",
+      "bytes": 6532,
+      "sha256": "a70ef9a6bd4f175419179d7e241583ceb83194c26589320ef61be1b6950ee061"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/AUDIT_NOTES.json",
+      "bytes": 664,
+      "sha256": "912a74da06329c0405e14183af7b2388d03624c16bb81071069b7171f35c560e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/AUTHORIZATION.json",
+      "bytes": 757,
+      "sha256": "f8baa440adc39863e79a1f9686aae2f0c6eb7d239b4eb3acf8c8f547876b9df6"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/current_workplan.json",
+      "bytes": 8785,
+      "sha256": "4bdc5637caf5952c80866817eb4c5fb2624472fa25d4ef071494c42d9f2bc15b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/FINAL_REVIEW_RECEIPT.json",
+      "bytes": 2031,
+      "sha256": "9d16f33122ec7bd3dd9453c27a7dbe6f8bacdd028bc1e3fb7d420e15337d68f9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/INTENT.json",
+      "bytes": 1525,
+      "sha256": "ffaf93d8c2807423eb3cca87cfcb8188c87dd9808e7a3d5233bcd90f74d28b0d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/MCP_RESPONSE.json",
+      "bytes": 1201,
+      "sha256": "02695deec635bf6b3ddf0b9c4da04c649b3b01c953cc812798b75f2ff49c963c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 1057,
+      "sha256": "5d34c31ae09c362cff52f90ea25bff62225fd4db3fc1a16d1f7cc9e0b989e35a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/OUTCOME.json",
+      "bytes": 2960,
+      "sha256": "b6ce87f69370f9ff92158c1779f0583d1aeb94b90906e950d8baee7bcca9b061"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/PREFLIGHT.json",
+      "bytes": 739,
+      "sha256": "3f76a1c43509128d99b4652e841832536ef68215d05ff2f0a68cca143de17bba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/PRESERVATION_CHECK.json",
+      "bytes": 360,
+      "sha256": "4bde7577e0fac3ab20ea854c72cd50f9c5a3f3d4879875dce3943158dd25cfcf"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/RESULTS_INDEX.md",
+      "bytes": 2015,
+      "sha256": "7e5dc472e7abc0f265b74f87e9f9db4aef930a77f9a75b6b5eaa5c85af8e9a7d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/RUN_CONTRACT.json",
+      "bytes": 1319,
+      "sha256": "5de880117701ab7636098d27840e2f42c29ad45a1ab746b4aeef748a7f0b848b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/SESSION_LIST_AFTER.json",
+      "bytes": 1060,
+      "sha256": "5e76edb7ec2b5b83bcda94e32476a02797559e3697d2d074f779a4a08d67bc56"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/SESSION_LIST_AFTER_EXPANDED.txt",
+      "bytes": 860,
+      "sha256": "ee5f03f7dfcb15e3dcd1d409570138aafecacf9bcce627f9f9ed0a0b35e3270d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/SESSION_LIST_BEFORE.json",
+      "bytes": 768,
+      "sha256": "576bd1abf64271a411a7724052987a0826ab319d4b9063ca7115241ddf7a02e4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-execution-4e1d60b/SESSION_LIST_BEFORE_EXPANDED.txt",
+      "bytes": 599,
+      "sha256": "8f77e6e572712f5407c114504d1f1302edab0e603ba85584260abf43a6245073"
+    }
+  ],
+  "restricted_native_outputs": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_model_status.csv",
+      "bytes": 415,
+      "sha256": "881cb3df006579c008145fc07e19a9bc38ba85ea7f92fba98a790e8a5b034a0f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_support.csv",
+      "bytes": 7871,
+      "sha256": "4f32b722f3b94c2352ac4a06abc6c656631c87cc98b56d47a2883128fc8e2c95"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_native_matrices.csv",
+      "bytes": 206609,
+      "sha256": "3df1bcb80cbc72efc38e8133bffcb7cccffbe5b08b1c009e5379412bd85f8ae5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_probabilities.csv",
+      "bytes": 7978,
+      "sha256": "d5c867b5b837940b39b1282ef9613c8903984344c226ca30591053368dfcfacb"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_primary_tests.csv",
+      "bytes": 584,
+      "sha256": "439624592eb97cc715bf74cf08c065233d7d508c7685e6139787263d0da58e0f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/e4_restricted.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/scope_complete.txt",
+      "bytes": 71,
+      "sha256": "113bbf9f1a70c0e9d6794a868fbcf7d492e00892f4a778efa271724a36cba129"
+    }
+  ],
+  "interim_evidence_note": "Private OUTCOME.json preserves the native/root pre-independent-review checkpoint; its pending-review label is historical. This final receipt and FINAL_REVIEW_RECEIPT govern final closure.",
+  "actual_operations_scope_note": "All statistical results produced by the single native selection. Subsequent aggregate ledger schema/identity/arithmetic audit is not another estimator or participant-record processing."
+}

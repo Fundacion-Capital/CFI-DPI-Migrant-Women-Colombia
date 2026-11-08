@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-08",
+  "exact_user_request": "I authorize the exact E.4 restricted run: one Stata MCP selection, one 98-field load, at most five model attempts, 60 seconds total, no retries. Fully audit",
+  "scope_file": "4 Academic Submission/wp07-e4-restricted-execution-scope/EXECUTION_SCOPE.json",
+  "scope_sha256": "2f60981c3303091bb11442a801b537c8c8fd869efcbfda76556eb8d7beff4471",
+  "native_selection_ceiling": 1,
+  "participant_load_ceiling": 1,
+  "field_projection": 98,
+  "model_attempt_ceiling": 5,
+  "timeout_seconds_total": 60,
+  "retries": 0,
+  "no_new_scientific_or_canonical_edits": true,
+  "C2": "HOLD",
+  "release": false,
+  "contacts": false,
+  "Git_cloud_actions": false,
+  "grant_not_institutional_or_publication_approval": true
+}

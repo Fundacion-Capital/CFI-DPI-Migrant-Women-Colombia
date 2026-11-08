@@ -1,0 +1,24 @@
+WP07: Audit the single restricted E4 five-model run
+
+Record the exact authorized Stata MCP execution: one 98-field carrier load,
+accepted preparation in memory, five single-attempt named models and no
+retries, with the 60-second timeout supplied once.
+
+Preserve authorization, intent, response and session evidence. Audit the
+five native working-model dispositions, grouped support, sample equality,
+denominator references, covariance matrices, six primary test slots,
+fixed-six Holm values and fifteen probability comparisons.
+
+Keep all detailed ledgers and numeric study findings in restricted custody.
+Reconcile native aggregate output without refitting or changing any value;
+retain source/QA clarifications and preserve all original and prior packets.
+
+Verify carrier/source fingerprints, raw-field/N/order guards, successful
+owned-memory cleanup, canonical execution holds and final artifact seals.
+Update only E.4 in the 41-task register and hand off the E.5 exhibit/results
+mapping task.
+
+No canonical/scientific source edits, extra participant loads or fits,
+participant dataset/prediction/model exports, persistent settings/service
+changes, contacts or release. C2 and institutional/publication holds remain.
+The single-run grant is consumed; no further execution is implied.
