@@ -1,0 +1,267 @@
+{
+  "date": "2026-11-08",
+  "package": "Exact restricted E.4 grouped-support/five-model scope preparation",
+  "result": "PASS_EXACT_RESTRICTED_SCOPE_PREPARATION_AND_SOURCE_AUDIT_ONLY",
+  "completion_scope": "SCOPE_PREPARATION_ONLY_NOT_AUTHORIZATION_OR_EXECUTION",
+  "baseline_head": "c49b157319072c0c7c5a9fe3e8f0d52f371056f0",
+  "current_authority": {
+    "Stata_native_selections": 0,
+    "participant_loads": 0,
+    "participant_model_loads": 0,
+    "participant_fits": 0,
+    "artificial_fits": 0,
+    "release": false,
+    "Git_cloud_actions": false,
+    "C2": "HOLD"
+  },
+  "actual_operations": {
+    "metadata_inventory_queries": 1,
+    "native_selections": 0,
+    "native_launches": 0,
+    "participant_record_inspections": 0,
+    "participant_loads": 0,
+    "model_loads": 0,
+    "fits": 0,
+    "opaque_carrier_fingerprint_checks": 1,
+    "canonical_source_changes": 0,
+    "scientific_changes": 0,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "Overleaf_sync": 0,
+    "persistent_settings_service_changes": 0
+  },
+  "prepared_contract": {
+    "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/EXECUTION_SCOPE.json",
+    "sha256": "2f60981c3303091bb11442a801b537c8c8fd869efcbfda76556eb8d7beff4471",
+    "private_manifest": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/EXECUTION_MANIFEST.json",
+    "private_manifest_sha256": "c2a5063b6d9a4a9cf064c4453e7f18890daa7422a18bfbc96282d97a57e0c589",
+    "private_manifest_diff": "only adds exact inherited carrier.path",
+    "proposed_selection_sha256": "832a702e1430abe0fd267c5068ef63e25e4daba9fdd8e5378d9a0b4c41ae8fd4",
+    "proposed_participant_loads": 1,
+    "projection_count": 98,
+    "strings": 6,
+    "groupings_once": true,
+    "proposed_native_selections": 1,
+    "proposed_named_model_attempt_ceiling": 5,
+    "retries": 0,
+    "timeout_seconds_total": 60,
+    "primary_slots": 6,
+    "margins_ceiling": 15,
+    "Holm_family": 6,
+    "whole_wrapper_native_validation": false,
+    "all_canonical_holds_preserved": true
+  },
+  "source_validation": {
+    "scope_checker": "PASS_SCOPE_SOURCE_ONLY",
+    "component_checker": "PASS_SOURCE_ONLY",
+    "all_five_command_texts_match_canonical": true,
+    "preparation_copy_exact": true,
+    "model_args_plus_body_exact": true,
+    "quiet_do_boundary_source": "https://www.stata.com/manuals/pquietly.pdf p3",
+    "not_a_native_test": true,
+    "opaque_carrier_fingerprint_matches": true,
+    "no_record_reader_used": true,
+    "denominator_reference": {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/outcome_model_input_support.csv",
+      "sha256": "85ddb157dd20740568fd5f2e7426b846a23112992a0d8231364b250d705085bc",
+      "value_column": "observed_n",
+      "not_value_column": "base_n",
+      "target": "e4_model_status.csv:intended_n",
+      "selectors": 5,
+      "expected_reference_records_each": 1,
+      "no_numeric_count_values_inspected": true,
+      "no_force_equality_or_repair": true
+    },
+    "current_offline_receipt_sha256": "6ad499ed500a5c55315f366152297b3d4276c2d267c331766167856e4fbf47d5",
+    "preliminary_checker_preserved_and_hash_matched": true
+  },
+  "custody": {
+    "private_root": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157",
+    "Git_ignored": true,
+    "inherited_principals": [
+      "JorgeThinkpad\\jzava",
+      "NT AUTHORITY\\SYSTEM",
+      "BUILTIN\\Administrators"
+    ],
+    "no_parent_or_carrier_ACL_change": true,
+    "output_csvs_logs_completion_absent": true,
+    "retention": "preserve all originals/successful/partial/failed files; no institutional term/handover invented"
+  },
+  "preservation": {
+    "entry_fingerprints_checked": 313,
+    "immutable_predecessors_unchanged": 311,
+    "expected_mutable_navigation": [
+      "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "4 Academic Submission/00_meta/current_workplan.json"
+    ],
+    "beforeimages_exact": 2,
+    "prior_native_receipt_and_failed_packets_preserved": true,
+    "task_rows": 41,
+    "changed_tasks": [
+      "E.4"
+    ]
+  },
+  "independent_review": {
+    "status": "PASS_EXACT_RESTRICTED_SCOPE_PREPARATION_AND_SOURCE_AUDIT_ONLY",
+    "critical": 0,
+    "important_unresolved": 0,
+    "receipt_sha256": "634a35a456f3bc13803972a0e638d0a0a564694496ade5f685a1c2a934a4b6ad",
+    "denominator_observed_n_and_cardinality_resolved": true,
+    "late_completion_RAM_limit_resolved": true,
+    "clerical_reseal_complete": true
+  },
+  "limits": [
+    "No participant authority from this preparation",
+    "Whole composed caller not natively executed",
+    "Candidate inventory absent is not native memory/log admission or reservation",
+    "Actual grouped support/finite MLE/dependence/measurement adequacy unverified",
+    "Quiet do suppresses terminal output per official documentation but provider command/capture/spill paths can remain outside working_dir",
+    "Soft timeout is not native exit or hard cancellation",
+    "A captured named-model failure can coexist with other independently gated nominees; global error stops entire call",
+    "Partial execution may require an attempt-count range",
+    "Institutional/consent/privacy/coauthor/release matters unpromoted",
+    "C2 HOLD"
+  ],
+  "next": "Separate exact grant and fresh preflight, then single bounded restricted run and full disposition/output audit; no participant work now",
+  "git": {
+    "baseline_head": "c49b157319072c0c7c5a9fe3e8f0d52f371056f0",
+    "final_head": "c49b157319072c0c7c5a9fe3e8f0d52f371056f0",
+    "index": [],
+    "diff_check_exit": 0,
+    "line_ending_warning": "Two navigation files use LF; Git warns future checkout may replace with CRLF. No Git setting changed; seals describe current working bytes."
+  },
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/AUDIT.md",
+      "bytes": 8890,
+      "sha256": "4051b6d4fed4915512626731a5141ed874c3ddedbfd3522053b559dbe8784102"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/CHECK_SCOPE.ps1",
+      "bytes": 6257,
+      "sha256": "0f5623fffa5136a649cc044164b8aa354093d88c629a6fcb0e27b3d8bee4a6ec"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/COMMIT_MESSAGE.txt",
+      "bytes": 1257,
+      "sha256": "efda83fb6b168bc8b850a0d652a2f1381846ef05d104b7108cdbe3b4ef1f650a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/EXECUTION_SCOPE.json",
+      "bytes": 33834,
+      "sha256": "2f60981c3303091bb11442a801b537c8c8fd869efcbfda76556eb8d7beff4471"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/INPUTS.json",
+      "bytes": 71982,
+      "sha256": "57c1bbfea40c9850526e3093743a25af1a619b0d780096b57adfd25af96f9fb4"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/README.md",
+      "bytes": 9084,
+      "sha256": "803dcd0c5187653a981e583aace2bd68226f6f016cd1418a04d683d35b231d4a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/TASK_REGISTER.csv",
+      "bytes": 11299,
+      "sha256": "2b2359aa015076c4b1b1fb78e0c8bff7811c84d6578ea211071c9fdcd47f4982"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 50241,
+      "sha256": "1c88736a5e9a8c2a8c5e7f725db5d8dc337a9aa68c960d8d2e6d346ec11db4c7"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 8785,
+      "sha256": "4bdc5637caf5952c80866817eb4c5fb2624472fa25d4ef071494c42d9f2bc15b"
+    }
+  ],
+  "protected_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/00_CURRENT_WORKPLAN.md",
+      "bytes": 48504,
+      "sha256": "9512b52ae5890c00561ba48152e1805051fb893392d25ca756b800d67c092717"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/CHECK_SCOPE.initial.ps1",
+      "bytes": 5507,
+      "sha256": "00e41e9eaacabe41d4e7c9f9a56cf97af74189df4fde0d9f04f53b3fb8f79962"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/current_workplan.json",
+      "bytes": 7709,
+      "sha256": "7cd165a81e286466b7bcc2028e63c257dda575a697230295f0902361106b53d9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/EXECUTION_MANIFEST.json",
+      "bytes": 34073,
+      "sha256": "c2a5063b6d9a4a9cf064c4453e7f18890daa7422a18bfbc96282d97a57e0c589"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/FINAL_OFFLINE_CHECK_RECEIPT.json",
+      "bytes": 1241,
+      "sha256": "6ad499ed500a5c55315f366152297b3d4276c2d267c331766167856e4fbf47d5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/FINAL_REVIEW_RECEIPT.json",
+      "bytes": 1870,
+      "sha256": "634a35a456f3bc13803972a0e638d0a0a564694496ade5f685a1c2a934a4b6ad"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/OFFLINE_CHECK_RECEIPT.json",
+      "bytes": 767,
+      "sha256": "2ff21311be7e5bcd6d9b0e76910666b351a927ef04fe56c656e3927f96d313c3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/REFERENCE_SELECTOR_AUDIT.json",
+      "bytes": 1420,
+      "sha256": "4f7c96a0d2ffd7ed6e392392444cd5e6075472d2bde7c4460e04bdc5741a9f2d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/run/PREPARATION_NOTE.txt",
+      "bytes": 266,
+      "sha256": "47ff597a40100208f57ed59ce7d0d9038cc9acf226cf005540e1507f387dcce1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/Run restricted E4.do",
+      "bytes": 4793,
+      "sha256": "b8a8364690d752ec19cc881dae08ef0c367ce08f60f17813b7921a217c41f188"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/selection.do",
+      "bytes": 521,
+      "sha256": "832a702e1430abe0fd267c5068ef63e25e4daba9fdd8e5378d9a0b4c41ae8fd4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/sources/E4 estimation.do",
+      "bytes": 24317,
+      "sha256": "f5f848567807e454d95a232e2b509856a9a827dc9364c3a2fb4255adee59d0b5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/sources/Preparation body.do",
+      "bytes": 129677,
+      "sha256": "db4b6e2ad6ff7c83e0cb0a29bd9c7e0c0b7f5ca97a1eb8d8e45731fe4d1e854e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/VERIFICATION_SEAT_METADATA_RECEIPT.json",
+      "bytes": 5815,
+      "sha256": "0a2168c96ba4311b9382887e694ffb161db8b76e623d5886497a3b82a26f8576"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-restricted-scope-c49b157/VERIFICATION_SEAT_SESSION_LIST.json",
+      "bytes": 1047,
+      "sha256": "a72dc9164a01033186705f60d4ad437dc9c2d64f7bb965013e9939690a305ab7"
+    }
+  ],
+  "metadata_preflight": {
+    "inventory_calls": 1,
+    "native_selections": 0,
+    "candidate_absent": true,
+    "candidate_reserved": false,
+    "native_admission": false,
+    "receipt_sha256": "0a2168c96ba4311b9382887e694ffb161db8b76e623d5886497a3b82a26f8576",
+    "future_refresh_required": true
+  }
+}

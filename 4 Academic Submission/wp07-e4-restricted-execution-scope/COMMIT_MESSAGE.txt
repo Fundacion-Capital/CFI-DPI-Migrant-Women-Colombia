@@ -1,0 +1,23 @@
+WP07: Bind the exact restricted E4 five-model execution scope
+
+Prepare one source-exact Stata MCP selection for one inherited 98-field
+carrier projection load, accepted in-memory preparation and at most five
+named model attempts, with no retries and a 60-second total timeout.
+
+Bind the approved grouping/reference/mask/VCE/contrast/six-slot Holm policy
+to the current canonical sources. Include groupings only once and pass the
+canonical output argument explicitly across the quiet do-file boundary.
+
+Preserve raw values, admitted cohort and row order; specify model-specific
+holds versus global stops, unavailable results, full-precision restricted
+output schemas, provider-log limits and failure-state preservation.
+
+Add an offline scope checker, private pinned source copies/caller/transport,
+fresh output binding, metadata-only preflight and independent documentary
+audit. Preserve predecessor packets and navigation before-images; update
+only E.4 in the 41-task register.
+
+No native selections, participant/model loads or fits, scientific/canonical
+source changes, persistent settings/service changes, contacts or release.
+Keep C2 and institutional/participant/release holds intact.
+Preparation is not execution, scientific or institutional approval.

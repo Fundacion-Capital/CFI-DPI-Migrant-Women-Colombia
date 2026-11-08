@@ -1,4 +1,27 @@
 # Current academic research revision workplan
+**Current E.4 restricted-scope checkpoint — 8 November 2026:** The exact next
+participant scope is prepared and source-audited, NOT authorized or executed.
+It binds one inherited 98-field carrier load, exact accepted in-memory
+preparation (including context groups once), the canonical model argument
+line and validated five-model body, one short quiet MCP selection and fresh
+restricted outputs. Proposed ceilings: five named attempts, six primary Wald
+slots, fifteen margins calls, fixed-six Holm, 60 seconds total, no retries.
+Start with `wp07-e4-restricted-execution-scope/README.md`, EXECUTION_SCOPE.json
+and VALIDATION.json. All 313 entry fingerprints matched before this checkpoint;
+311 immutable entries and two exact navigation before-images stay preserved.
+One read-only session inventory found the candidate name absent; no native
+selection, memory/log admission, participant/model load, fit or session action
+occurred. Actual grouped support and the newly composed caller remain unrun.
+Captured model-specific holds/errors may coexist with independently gated
+nominees; global custody/cohort/assertion/I-O or uncertain execution stops the
+call. Late completion-marker I/O failure after cleanup may leave empty RAM;
+all original and partial files remain preserved, and a marker alone is not
+success. Previous ten-case artificial acceptance remains recorded, not renewed
+participant authority. Next is a separately authorized exact single restricted
+run and full disposition/output audit. No canonical/scientific source edits,
+release or Git/cloud action. C2 HOLD and unresolved institutional/privacy
+limits remain; B/C/D/G.1 continue the full-paper objective.
+Earlier checkpoints below retain their original dated meanings.
 **Current E.4 renewed native checkpoint — 8 November 2026:** The caller-only
 `_all` correction and fresh restricted output bindings were resealed in a new
 batch; all scientific blocks and canonical holds are unchanged. Ten exact
