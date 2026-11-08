@@ -1,0 +1,317 @@
+{
+  "date": "2026-11-08",
+  "package": "E.4 held source integration and native-validation preparation",
+  "result": "IMPLEMENTED_AND_AUDITED_SOURCE_ONLY_NATIVE_NOT_RUN",
+  "baseline_head": "68f531f0d4d49b486892a73a20092498350f94e9",
+  "final_head": "68f531f0d4d49b486892a73a20092498350f94e9",
+  "baseline_worktree_clean": true,
+  "owner_approval": {
+    "analytical_decisions": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "status": "RECORDED_EXACT_MESSAGE_AND_APPLIED_TO_HELD_SOURCE",
+    "source": "OWNER_ACCEPTANCE.json",
+    "not_assumed": [
+      "coauthor_or_institutional_approval",
+      "execution",
+      "publication_or_release"
+    ]
+  },
+  "actual_operations": {
+    "canonical_scripts_revised": 3,
+    "canonical_README_and_navigation_updated": true,
+    "Stata_calls": 0,
+    "native_launches": 0,
+    "participant_loads": 0,
+    "saved_model_loads": 0,
+    "artificial_fits": 0,
+    "participant_fits": 0,
+    "participant_recodes": 0,
+    "participant_exports": 0,
+    "C2": "HOLD",
+    "hold_removals": 0,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "live_Overleaf_or_cloud_sync": 0,
+    "settings_or_service_changes": 0
+  },
+  "source_checks": {
+    "result": "PASS_SOURCE_ONLY",
+    "guards": 3,
+    "estimation_stop": true,
+    "mapping_source_codes": 25,
+    "estimator_commands": 5,
+    "probability_commands": 3,
+    "maximum_probability_calls": 15,
+    "primary_slots": 6,
+    "native_executions": 0,
+    "participant_loads": 0,
+    "native_syntax_tested": false
+  },
+  "fixture_holds": {
+    "fixture_holds": 3,
+    "all_retained": true
+  },
+  "algorithm_continuity": {
+    "preparation_prior_executable_prefix_unchanged": true,
+    "analysis_prior_executable_prefix_unchanged_except_two_display_labels": true,
+    "master_executable_differences": [
+      {
+        "old": "    do \"`repository'/1 Code/academic/2 Analysis.do\"",
+        "new": "    do \"`repository'/1 Code/academic/2 Analysis.do\" \"`restricted_output'\""
+      }
+    ],
+    "comparison": "comment-stripped executable text with normalized line endings; two stated analysis display strings replaced for comparison",
+    "original_full_sources_preserved_byte_exact": true
+  },
+  "native_preparation": {
+    "status": "PREPARED_NOT_AUTHORIZED_NOT_RUN",
+    "source_blocks": 9,
+    "selections": 10,
+    "proposed_synthetic_fit_ceiling": 7,
+    "currently_authorized_synthetic_fits": 0,
+    "real_data_fit_ceiling_separately_proposed": 5,
+    "currently_authorized_participant_loads": 0,
+    "currently_authorized_real_fits": 0,
+    "retries": 0,
+    "fixture_model_N": "55296 entirely artificial; not a study count",
+    "precision_assertions_prepared": [
+      "NV02_asdouble_emitted_p_CSV_exact_long_raw_p_equality",
+      "NV03_asdouble_native_matrix_CSV_exact_all_last_R0C_covariance_cells"
+    ],
+    "native_parsing_or_return_contracts_qualified": false,
+    "actual_operational_route_and_logs_qualified": false,
+    "hard_cancellation_guarantee": false,
+    "real_grouped_support_or_model_validity_verified": false
+  },
+  "independent_review": {
+    "status": "PASS_HELD_SOURCE_AND_VALIDATION_PREPARATION_REVIEW_ONLY",
+    "critical_unresolved": 0,
+    "important_unresolved": 0,
+    "resolved_important": 1,
+    "resolutions": [
+      "determined_counts_diagnostic_not_automatic_rejection",
+      "native_CSV_precision_readbacks_prepared",
+      "current_code_README_and_pointer_corrected"
+    ],
+    "postreview_cosmetic_edit": "3EOF_blank_lines_removed; normalized_block_hashes_unchanged; whole-file_bindings_refreshed_and_checked",
+    "receipt": "protected_e4-source-integration-68f531f/REVIEW_RECEIPT.json"
+  },
+  "preservation": {
+    "entry_fingerprints": 157,
+    "immutable_fingerprints_checked": 151,
+    "immutable_changes": [],
+    "before_images": [
+      {
+        "original": "1 Code/academic/0 Master.do",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\0 Master.do",
+        "sha256": "1ac56656631e50630f0046f2e84fe8c289f7d9c319ed28986927682443e6fc40",
+        "matches": true
+      },
+      {
+        "original": "1 Code/academic/1 Data preparation.do",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\1 Data preparation.do",
+        "sha256": "6c1039931a8d4ca1b23c6bdb612524a5909f196ad0e7de551f4c3168d5baf104",
+        "matches": true
+      },
+      {
+        "original": "1 Code/academic/2 Analysis.do",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\2 Analysis.do",
+        "sha256": "2fff54a5817d1d00139415f965606684c1e4d7e49a5862981a3ea7ca45c293d3",
+        "matches": true
+      },
+      {
+        "original": "1 Code/academic/README.md",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\README.md",
+        "sha256": "ab0d6aa97841129ef2ddacde7495a5ce01b266d3f962be318c1e0d9758232a8c",
+        "matches": true
+      },
+      {
+        "original": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\00_CURRENT_WORKPLAN.md",
+        "sha256": "882cd0be1b2edb122c06d3a904181f711e236fc22a516375a39b2af9e6de8bfe",
+        "matches": true
+      },
+      {
+        "original": "4 Academic Submission/00_meta/current_workplan.json",
+        "copy": "4 Academic Submission\\audit-local\\intake\\package-e-restricted-20261108\\e4-source-integration-68f531f\\current_workplan.json",
+        "sha256": "944d39d41ac9ec22b013164eb425527119349c232dcb0ce0f8eab8f4d9852ab6",
+        "matches": true
+      }
+    ],
+    "earlier_packets_unmodified": true,
+    "entry_exit198_guards_retained": true,
+    "independent_prefit_exit198_retained": true,
+    "register_rows": 41,
+    "register_changed_tasks": [
+      "E.4"
+    ],
+    "index": [],
+    "git_diff_check_exit": 0,
+    "original_raw_carrier": "not_opened_or_rehashed_this_source_only_package"
+  },
+  "custody": {
+    "before_images_and_review": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-source-integration-68f531f",
+    "private_ignored": true,
+    "principals": [
+      "BUILTIN\\Administrators",
+      "JorgeThinkpad\\jzava",
+      "NT AUTHORITY\\SYSTEM"
+    ],
+    "source_or_parent_ACL_changed": false,
+    "unpublished_coverage_tables_publicly_copied": false,
+    "retention_or_handover_assumed": false,
+    "no_packet_deleted": true
+  },
+  "limits": [
+    "Stata_native_parsing_and_execution_not_performed",
+    "source_only_Powershell_checks_are_not_a_Stata_interpreter",
+    "grouped_actual_support_estimability_and_dependence_adequacy_remain_unverified",
+    "CSV_and_matrix_precision_assertions_prepared_not_passed",
+    "not_every_matrix_class_independently_roundtripped_in_prepared_test",
+    "no_empirical_scientific_institutional_or_release_gate_promoted"
+  ],
+  "next": "separately_authorized_ten-selection_artificial_only_Stata_MCP_validation; no_real_data_or_C2",
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/AUDIT.md",
+      "bytes": 5927,
+      "sha256": "62e47aed1800dc810971b4faf8057e5684917d0d4e87d2fb90e26bc091095265"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/CHECK_SOURCE.ps1",
+      "bytes": 6175,
+      "sha256": "0f047258dc7ce0904ee5853402fb53b7835802d091d0cb93f49d3e1b90c2823c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/COMMIT_MESSAGE.txt",
+      "bytes": 1202,
+      "sha256": "5ce8e0152ebaed3bd1287c4fea522e0482041daf3a2afe50395862bf1c6b1c2b"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/INPUTS.json",
+      "bytes": 33319,
+      "sha256": "b4826fb19d304069a514c2ef6758697bf4d14876f0bb66c99129fe2ed339b58e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/NATIVE_VALIDATION_PLAN.json",
+      "bytes": 11083,
+      "sha256": "a09ed5ae081ae2a62a75a61f0d9d25dc880a444d1abc3305b05c6c41a6e19406"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/NV01 Grouping fixture.do",
+      "bytes": 2214,
+      "sha256": "e985561f3fb75064adffcc3fb0203f437dcee1a82be13277d320b626a51d7b92"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/NV02 Holm fixtures.do",
+      "bytes": 2897,
+      "sha256": "6cb8893c670aa47bb332abbfee30da84d0338ba0c5954336cf1dabfd0d7dbb45"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/NV03 Model fixtures.do",
+      "bytes": 5962,
+      "sha256": "66e6577501dea5bd96cabc1e3408ec68f71a0798ecbc39398ca23d856bbc08d8"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/OWNER_ACCEPTANCE.json",
+      "bytes": 1428,
+      "sha256": "3539f8c23c8dbc5e796ca71ab07b08a32a7ef385bd1ee1dff163d8e92ed87c87"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/README.md",
+      "bytes": 7356,
+      "sha256": "66d011273a62ca49916cd227201b3250a4ae5bb799200b874b5222e1385f8122"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-source-integration/TASK_REGISTER.csv",
+      "bytes": 11235,
+      "sha256": "7e515d430df1a62942513e1d611e5b642410e999f903b7f36c08360fe8773433"
+    },
+    {
+      "path": "1 Code/academic/0 Master.do",
+      "bytes": 3340,
+      "sha256": "620447a09174158f9f394a33a55ef0b2acae384653e2b562cf2a2e8a84b48049"
+    },
+    {
+      "path": "1 Code/academic/1 Data preparation.do",
+      "bytes": 129964,
+      "sha256": "03c4c58f931bf60e5d74dd214e5b0469ef7a683b4432be45cff456ba64136a29"
+    },
+    {
+      "path": "1 Code/academic/2 Analysis.do",
+      "bytes": 231453,
+      "sha256": "bb15a6549ab986b53f1766ff4043dd4fed1dd1efd606701dab1af7f1b8b4d4f9"
+    },
+    {
+      "path": "1 Code/academic/README.md",
+      "bytes": 4447,
+      "sha256": "e22e92def34fca8601843883e761d371f9151038e7a414efb0fe511482e5e596"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 45895,
+      "sha256": "0dcd50713419d6940ab0e936b7f6e28ada2d4250760efd73eb084877621f71ce"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 5980,
+      "sha256": "afc1fa5ad87f10e8c31b1dfc694622c3aab85c98fde95559b6989bf46bde5f4e"
+    }
+  ],
+  "protected_evidence": [
+    {
+      "file": "0 Master.do",
+      "bytes": 3121,
+      "sha256": "1ac56656631e50630f0046f2e84fe8c289f7d9c319ed28986927682443e6fc40"
+    },
+    {
+      "file": "00_CURRENT_WORKPLAN.md",
+      "bytes": 44710,
+      "sha256": "882cd0be1b2edb122c06d3a904181f711e236fc22a516375a39b2af9e6de8bfe"
+    },
+    {
+      "file": "1 Data preparation.do",
+      "bytes": 127332,
+      "sha256": "6c1039931a8d4ca1b23c6bdb612524a5909f196ad0e7de551f4c3168d5baf104"
+    },
+    {
+      "file": "2 Analysis.do",
+      "bytes": 208308,
+      "sha256": "2fff54a5817d1d00139415f965606684c1e4d7e49a5862981a3ea7ca45c293d3"
+    },
+    {
+      "file": "CHECK_SOURCE.before-whitespace-fix.ps1",
+      "bytes": 5027,
+      "sha256": "18110232423633757bba1378caa8015529c934a751706c649d996382de5b33ea"
+    },
+    {
+      "file": "current_workplan.json",
+      "bytes": 5004,
+      "sha256": "944d39d41ac9ec22b013164eb425527119349c232dcb0ce0f8eab8f4d9852ab6"
+    },
+    {
+      "file": "README.md",
+      "bytes": 5579,
+      "sha256": "ab0d6aa97841129ef2ddacde7495a5ce01b266d3f962be318c1e0d9758232a8c"
+    },
+    {
+      "file": "REVIEW_RECEIPT.json",
+      "bytes": 1314,
+      "sha256": "fb9d250daadd81b2e29f4f68b5acb905283b910f4cedaa76d796eda61dd0d289"
+    }
+  ],
+  "git_status": [
+    " M \"1 Code/academic/0 Master.do\"",
+    " M \"1 Code/academic/1 Data preparation.do\"",
+    " M \"1 Code/academic/2 Analysis.do\"",
+    " M \"1 Code/academic/README.md\"",
+    " M \"4 Academic Submission/00_CURRENT_WORKPLAN.md\"",
+    " M \"4 Academic Submission/00_meta/current_workplan.json\"",
+    "?? \"4 Academic Submission/wp07-e4-source-integration/\""
+  ]
+}

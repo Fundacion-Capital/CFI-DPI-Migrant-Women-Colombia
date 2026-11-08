@@ -1,0 +1,358 @@
+{
+  "date": "2026-11-08",
+  "package": "E.4 artificial-only native validation execution",
+  "result": "STOPPED_ADMISSION_FAILURE_AUDITED_NOT_NATIVE_ACCEPTANCE",
+  "completion_scope": "one_authorized_attempt_and_complete_preservation_diagnosis_handoff;ten-case_validation_NOT_completed",
+  "baseline_head": "68f531f0d4d49b486892a73a20092498350f94e9",
+  "final_head": "68f531f0d4d49b486892a73a20092498350f94e9",
+  "baseline_status": [
+    " M \"1 Code/academic/0 Master.do\"",
+    " M \"1 Code/academic/1 Data preparation.do\"",
+    " M \"1 Code/academic/2 Analysis.do\"",
+    " M \"1 Code/academic/README.md\"",
+    " M \"4 Academic Submission/00_CURRENT_WORKPLAN.md\"",
+    " M \"4 Academic Submission/00_meta/current_workplan.json\"",
+    "?? \"4 Academic Submission/wp07-e4-source-integration/\""
+  ],
+  "authorization": "AUTHORIZATION.json",
+  "bound_contract": "RUN_CONTRACT.json",
+  "actual_counts": {
+    "authorized_selections": 10,
+    "dispatched": 1,
+    "successful_cases": 0,
+    "failed_cases": 1,
+    "not_dispatched": 9,
+    "synthetic_fits_lower": 0,
+    "synthetic_fits_upper": 0,
+    "participant_loads": 0,
+    "participant_fits": 0,
+    "retries": 0,
+    "extra_native_probes": 0
+  },
+  "native_outcome": {
+    "case": "NV01",
+    "request_bytes": 5797,
+    "request_sha256": "6f9864c87ee57c4bc7e94e48cb7565767efbd11bb2bfecc9a4844631e3c555c9",
+    "admission_observed": {
+      "N": 0,
+      "K": 0,
+      "Stata": 19
+    },
+    "failed_command": "quietly log query all",
+    "native_message": "log all not found",
+    "native_return_code": 111,
+    "failure_before": [
+      "case_native_log_open",
+      "fixture_creation",
+      "any_estimator",
+      "success_cleanup"
+    ],
+    "MCP_isError": false,
+    "MCP_isError_does_not_establish_native_success": true,
+    "duplicate_printed_rc_is_not_two_dispatches": true,
+    "case_native_log_created": false,
+    "any_model_or_result_CSV_created": false,
+    "source_correction_or_retry": false
+  },
+  "root_cause": {
+    "classification": "caller_operational_envelope_syntax_not_a_scientific_source_or_data_finding",
+    "reserved_token": "_all",
+    "source_supported": true,
+    "installed_help": "C:/Program Files/Stata19/ado/base/l/log.sthlp",
+    "help_sha256": "48abbc35320ff5095d226701788884fe967f2e80c4663163c62bec096357bbe5",
+    "exact_grammar_verified": true,
+    "exact_example_verified": true,
+    "invalid_wrapper_occurrences": 20,
+    "proposed_corrections": [
+      "quietly log query _all",
+      "log query _all"
+    ],
+    "applied": false,
+    "corrected_native_execution_tested": false
+  },
+  "runtime": {
+    "owned_session": "cfi_e4_nv_20261108_a",
+    "final_readonly_inventory": {
+      "session_id": "cfi_e4_nv_20261108_a",
+      "state": "ready",
+      "created_at": "2026-11-08T15:23:15.939801",
+      "last_activity": "2026-11-08T15:23:20.1727",
+      "is_busy": false,
+      "is_default": false,
+      "error": null
+    },
+    "postfailure_memory_log_query": "NOT_PERFORMED",
+    "N_K_evidence": "admission_only_before_nonmutating_failed_query",
+    "cleanup_reset_replacement_requested": false,
+    "timeouts_observed": 0,
+    "other_sessions_touched": false,
+    "hard_cancellation_guarantee": false,
+    "live_provider_launch_configuration_bound": false
+  },
+  "logging": {
+    "ordinary_case_native_log": "NV01/native.log",
+    "ordinary_case_native_log_created": false,
+    "raw_response": "NV01/MCP_RESPONSE.json",
+    "expanded_native_error_response": "NV01/MCP_RESPONSE_EXPANDED.txt",
+    "intent": "NV01/INTENT.json",
+    "observed_provider_capture_path": "C:/Users/jzava/AppData/Local/Temp/stata_run_cfi_e4_nv_20261108_a_4e10fd28b5_68cc20a089_1794147800153.log",
+    "provider_capture_outside_case_working_dir": true,
+    "provider_capture_file_post_failure_hash": "UNAVAILABLE; attempted filesystem digest did not yield qualified metadata and no further probe or cleanup was performed",
+    "provider_output_spill_path_reported": false,
+    "live_provider_configuration_bound": false,
+    "no_log_containment_or_hard_cancellation_guarantee": true
+  },
+  "actual_other_operations": {
+    "canonical_or_prepared_source_edits": 0,
+    "existing_participant_or_model_file_loads": 0,
+    "shell_Stata_or_Python_R_estimates": 0,
+    "extra_native_test_or_probe_selections": 0,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "live_Overleaf_or_release": 0,
+    "persistent_provider_configuration_or_service_changes": 0,
+    "process_local_settings_observed": [
+      "provider seed1664083109",
+      "version16",
+      "set varabbrev off",
+      "set more off"
+    ]
+  },
+  "preservation": {
+    "entry_source_fingerprints": 177,
+    "immutable_predecessors_checked": 175,
+    "immutable_changes": [],
+    "all_ten_request_byte_seals_match": true,
+    "original_failed_and_unrun_packets_preserved": true,
+    "navigation_before_images_checked": 2,
+    "canonical_entry_holds_preserved": 3,
+    "independent_estimation_stop_preserved": true,
+    "source_and_old_packets_unmodified": true,
+    "no_packet_deleted": true,
+    "source_carrier": "not_opened_or_rehashed;onepreexisting_artificial_DTA_opaque_hash_does_not_load_records",
+    "task_register": {
+      "rows": 41,
+      "changed_tasks": [
+        "E.4"
+      ]
+    },
+    "index": [],
+    "git_diff_check_exit": 0
+  },
+  "custody": {
+    "root": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108",
+    "git_ignored": true,
+    "principals": [
+      "BUILTIN\\Administrators",
+      "JorgeThinkpad\\jzava",
+      "NT AUTHORITY\\SYSTEM"
+    ],
+    "inherited_from_existing_protected_parent": true,
+    "parent_or_source_ACL_changed": false,
+    "public_participant_results": false,
+    "retention_or_handover_assumed": false
+  },
+  "independent_audits": {
+    "native_execution_receipt": "protected_INDEPENDENT_EXECUTION_RECEIPT.json",
+    "documentary_verdict": "PASS_STOPPED_ATTEMPT_DOCUMENTARY_AUDIT_ONLY",
+    "unresolved_documentary_discrepancies": 0,
+    "known_important_native_caller_bug_unresolved": true,
+    "full175_parent_reseal": true,
+    "reviewer_subset_reseal": 9,
+    "not_scientific_or_institutional_approval": true
+  },
+  "current_authority": {
+    "batch_closed_on_first_unexpected_failure": true,
+    "unused_slots_reused": false,
+    "native_retry_authorized": false,
+    "participant_loads": 0,
+    "participant_fits": 0,
+    "C2": "HOLD",
+    "scientific_or_release_gates_promoted": false
+  },
+  "next": "minimal_additive_caller_only_underscore_all_successor_and_renewed_ten_case_artificial_scope; no_infrastructure_or_scientific_redesign",
+  "limits": [
+    "zero_artificial_fixtures_passed",
+    "nine_successors_not_dispatched",
+    "zero_models_fitted",
+    "corrected_caller_not_applied_or_tested",
+    "final_N_K_logclosure_not_independently_queried",
+    "provider_capture_postfailure_hash_unavailable",
+    "actual_grouped_support_and_inference_adequacy_not_tested"
+  ],
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/AUDIT.md",
+      "bytes": 4842,
+      "sha256": "861927fe3e8ed60ab6e61fd8f68b93aab58e57f15d10b7c711ab2919a2d30c44"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/AUTHORIZATION.json",
+      "bytes": 954,
+      "sha256": "3843b881a8ef02e799158fc4d40199b4c5b8c368c855f1d3a8d441f52d33a632"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/CASE_STATUS.csv",
+      "bytes": 711,
+      "sha256": "0e14f66ca0127ad91c4e8b92ae047c5384ed31aa312eed82c688d33b4f6b5ba2"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/COMMIT_MESSAGE.txt",
+      "bytes": 1119,
+      "sha256": "35ba74add1af2d9b609b79023dacc9bb26e6ec3766af850f8e78823973b40b48"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/INPUTS.json",
+      "bytes": 37879,
+      "sha256": "db3f3480865af91d4358559ab74632b300ecd3089c386e63443c16b2bcc1d2de"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/README.md",
+      "bytes": 3928,
+      "sha256": "4ccbf7a8208e8d68ad9816df0b03baa36ade2416c7ffa7b5addb878710030e0a"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/ROOT_CAUSE.md",
+      "bytes": 3499,
+      "sha256": "0394e470e52c0175823a26227a520e019bfd3f154b5dc974ec7e487eeb89c9e6"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/RUN_CONTRACT.json",
+      "bytes": 10282,
+      "sha256": "fe80e4fb51be2ae5fd6a0b4f44fa02c9aa57c37fb5d0e55d60c62beaf6c5b46f"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-execution/TASK_REGISTER.csv",
+      "bytes": 11225,
+      "sha256": "6aa315c3d0aa35c099be233958b36558e3239aba60297c315e880314f2c559bb"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 47017,
+      "sha256": "366a7f9901b056ca9d7a39b2b58ced2bd2267e29cc47f1b137441ce8e8c78817"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 6704,
+      "sha256": "b291336123359ef4f6ab0ea0eb501db59cc255d0d715d49a48273b35a056fae2"
+    }
+  ],
+  "protected_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/00_CURRENT_WORKPLAN.md",
+      "bytes": 45895,
+      "sha256": "0dcd50713419d6940ab0e936b7f6e28ada2d4250760efd73eb084877621f71ce"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/current_workplan.json",
+      "bytes": 5980,
+      "sha256": "afc1fa5ad87f10e8c31b1dfc694622c3aab85c98fde95559b6989bf46bde5f4e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/EXECUTION_MANIFEST.json",
+      "bytes": 10282,
+      "sha256": "fe80e4fb51be2ae5fd6a0b4f44fa02c9aa57c37fb5d0e55d60c62beaf6c5b46f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/FINAL_REVIEW_RECEIPT.json",
+      "bytes": 1356,
+      "sha256": "48e844c37934524f9489b38b83177da0eb523b74ba2ef92cf271342c76a078e2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/INDEPENDENT_EXECUTION_RECEIPT.json",
+      "bytes": 8849,
+      "sha256": "c9f2f5281a52cba096a75e9a44f76afd5ca8ea0ba5d31aae1419ea7d270d3a31"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/READ_ONLY_ROOT_CAUSE.json",
+      "bytes": 5887,
+      "sha256": "caa0aed822c6da67dd4433785318e53990fe224028607b25f30cf4063d1e1fec"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/SESSION_LIST_AFTER_FAILURE.json",
+      "bytes": 1330,
+      "sha256": "0418fad38426ec738d0ff562d13765feec247c7374af0700ae4950dfda261f4e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV01/INTENT.json",
+      "bytes": 864,
+      "sha256": "e54ec56737f2188b9eceac8d53244bdd6dfb1d22dabcc6caf6fb55bc3a49ffce"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV01/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 1134,
+      "sha256": "e7e2af05bc0c3e7b7437d591d053103184587bf474db641c7cf647d4149572a1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV01/MCP_RESPONSE.json",
+      "bytes": 1285,
+      "sha256": "c5264644663803b9b31f4d59212b588a4b900e6cb6b752741d370ff01df6e547"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV01/OUTCOME.json",
+      "bytes": 1357,
+      "sha256": "366573754a0514bc5c410a6a1a6cd3d05c11c22b3ae6c8b0b4a56057d7355993"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV01/selection.do",
+      "bytes": 5797,
+      "sha256": "6f9864c87ee57c4bc7e94e48cb7565767efbd11bb2bfecc9a4844631e3c555c9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV02a/selection.do",
+      "bytes": 4762,
+      "sha256": "c17783250169187749a9df829994ecfc5822838ce7d2c1153f7181186e225d1b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV02b/selection.do",
+      "bytes": 4762,
+      "sha256": "d4b9a631fc9bc92295df3a6f7e119a19f8e709385105d12d76d1cb9be074f4d9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV02c/selection.do",
+      "bytes": 4762,
+      "sha256": "b73d6a3165f6cf9ce5819c20e4c318a9985e3e26400eef58122ad56f4dfb7108"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV02d/selection.do",
+      "bytes": 4762,
+      "sha256": "309c3ff04f3fc7110a65985ad984455856dbfd1dad3d64b161f1c74157dda069"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV02e/selection.do",
+      "bytes": 4762,
+      "sha256": "697e06a2d2951bec2a5d751ae112c19a294e5e8da2c57507e42aad86bb7fe6af"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV03/selection.do",
+      "bytes": 33852,
+      "sha256": "a339abcb405ccce156eea29a02bdfde5731563980596283130f817c135483e97"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV04/selection.do",
+      "bytes": 33850,
+      "sha256": "c235dee68c4a9b8136d45acef27b46422761decc40180f4acec945aaeb2987bf"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV05/selection.do",
+      "bytes": 33847,
+      "sha256": "7d2045b2e8f965cb8de1e58083f71a6707daaec4d7299632a2fedd70db485361"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108/NV06/selection.do",
+      "bytes": 33853,
+      "sha256": "fbc877438e36f07630992c1f302363d5b0a840858af6cc24beeb7c87b4b9a249"
+    }
+  ],
+  "git_status": [
+    " M \"1 Code/academic/0 Master.do\"",
+    " M \"1 Code/academic/1 Data preparation.do\"",
+    " M \"1 Code/academic/2 Analysis.do\"",
+    " M \"1 Code/academic/README.md\"",
+    " M \"4 Academic Submission/00_CURRENT_WORKPLAN.md\"",
+    " M \"4 Academic Submission/00_meta/current_workplan.json\"",
+    "?? \"4 Academic Submission/wp07-e4-native-validation-execution/\"",
+    "?? \"4 Academic Submission/wp07-e4-source-integration/\""
+  ]
+}

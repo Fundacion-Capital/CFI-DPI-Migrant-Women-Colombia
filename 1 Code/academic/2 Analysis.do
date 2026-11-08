@@ -1,7 +1,7 @@
 /*
 CFI DPI — academic quantitative analysis
 Authors: Jorge E. Zavala and Angélica Cardozo Cadavid
-Integrated source revision: 7 November 2026. Exact form labels: 8 November 2026. Stata 16 syntax.
+Integrated source: 7 November 2026; form labels and held E.4 models: 8 November 2026. Stata 16 syntax.
 */
 * Source-review candidate only. No execution is authorized by this code revision.
 exit 198
@@ -3730,7 +3730,7 @@ forvalues category = 1/5 {
 * No change to scores, labels, rows, historical outputs or Appendix C2.
 
 * ============================================================================
-* NOMINATED MODEL INPUTS: nonmissing screens, not estimated model samples
+* ORIGINAL INPUT SCREENS: descriptive continuity, not estimated model samples
 
 * Exact prepared input in memory. No loading, scoring, filtering or output file.
 confirm numeric variable formdef_version eligible_flag wp07_known_form, exact
@@ -3775,10 +3775,10 @@ count if !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
 display as text "Domestic core nomination, nonmissing inputs only: " r(N)
 count if !missing(wp07_remit_any_digital, wp07_iat3, wp07_iadt2, ///
     wp07_iaff2, q4, q2_2, wp07_residence, q2_3, q2_1)
-display as text "Remittance extension, calendar input not yet resolved: " r(N)
+display as text "Remittance extension, raw calendar input observed: " r(N)
 count if !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
     wp07_iaff2, q4, q2_2, wp07_residence, q2_3, q2_1)
-display as text "Domestic extension, calendar input not yet resolved: " r(N)
+display as text "Domestic extension, raw calendar input observed: " r(N)
 
 * Check raw covariate domains explicitly; never repair or drop an answer here.
 count if !missing(q4) & (!inrange(q4, 18, 100) | q4 != floor(q4))
@@ -3811,8 +3811,8 @@ tabulate q2_3, missing
 count if missing(q2_1)
 display as text "Missing first-arrival calendar input: " r(N)
 
-* No VCE, logit, margins, p-values, weights or LCA choices are made here.
-* Joint support and covariate-domain review must precede any fit manifest.
+* This descriptive block does not fit. Approved E.4 code is held separately below.
+* Raw first-arrival year is a calendar term, not an adopted tenure clock.
 
 * ============================================================================
 * ASSOCIATION COMPARISON: declared IAT/IADT candidates only, not all-domain Pearson
@@ -3868,34 +3868,506 @@ else {
 }
 
 * ============================================================================ 
-* REGRESSION SPECIFICATIONS — nominated, not executable until remaining choices close
-*
-* R0: binary logit for wp07_remit_any_digital.
-* D0: binary logit for wp07_domestic_60d.
-* Both nominate c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ///
-*     ib5.q2_2 ib1.wp07_residence, each with its own valid joint observations.
-* R1 and D1 add ib3.q2_3 and first-arrival calendar history.
-* Calendar representation is unresolved; raw q2_1 is not an adopted tenure measure.
-*
-* Before a fit: observed support, separation, variance/dependence method,
-* exact probability contrasts and nonestimable-test treatment must be resolved.
-* No executable logit or margins call silently adopts those choices.
-* Probability summaries would average over the stated model sample, not at means.
-* IAFF's supported values are 0, .5 and 1; no automatic .1 transition is assumed.
-*
-* PRIMARY FAMILY: exactly six overall focal tests, three candidates x two core outcomes.
-* Holm adjustment is accepted conditionally at 5%; no p-values are computed here.
-* Retain all six planned slots if a test is unavailable; do not silently shrink the family.
-* Pointwise 95% intervals are not simultaneous family-wise intervals.
-*
+* APPROVED E.4 MODELS — source integrated; native validation and execution still held.
+* Working robust VCE is NOT a correction for unrecorded referral/household dependence.
+* Associations concern each recruited-cohort model sample, not a causal/national effect.
+* Keep the full-script entry hold and this independent stop before any estimation.
+exit 198
+* BEGIN E4 ESTIMATION
+args e4_output
+* BEGIN E4 BODY
+version 16
+set varabbrev off
+* A bounded caller supplies one fresh, restricted output directory. No directory is created.
+if "`e4_output'" == "" {
+    exit 198
+}
+foreach filename in e4_model_status.csv e4_support.csv e4_native_matrices.csv ///
+    e4_probabilities.csv e4_primary_tests.csv {
+    confirm new file "`e4_output'/`filename'"
+}
+confirm numeric variable wp07_iat3 wp07_iadt2 wp07_iaff2 q4 q2_2 q2_3 q2_1 ///
+    wp07_residence e4_education3 e4_residence4 e4_occupation6 ///
+    wp07_remit_any_digital wp07_domestic_60d, exact
+assert missing(wp07_iat3) | inrange(wp07_iat3, 0, 1)
+assert missing(wp07_iadt2) | inrange(wp07_iadt2, 0, 1)
+assert missing(wp07_iaff2) | inlist(wp07_iaff2, 0, .5, 1)
+assert missing(wp07_remit_any_digital) | inlist(wp07_remit_any_digital, 0, 1)
+assert missing(wp07_domestic_60d) | inlist(wp07_domestic_60d, 0, 1)
+
+* These are model-specific masks, not exclusions from the admitted cohort.
+local e4_admitted_n = _N
+local e4_raw "q4 q2_2 q2_3 q2_1 wp07_residence wp07_iat3 wp07_iadt2 wp07_iaff2 wp07_remit_any_digital wp07_domestic_60d"
+_datasignature `e4_raw'
+local e4_signature "`r(datasignature)'"
+gen long e4_row_order = _n
+gen byte e4_mask_r0 = !missing(wp07_remit_any_digital, wp07_iat3, wp07_iadt2, ///
+    wp07_iaff2, q4, q2_2, wp07_residence) & inrange(q4, 18, 100) & ///
+    q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
+gen byte e4_mask_d0 = !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
+    wp07_iaff2, q4, q2_2, wp07_residence) & inrange(q4, 18, 100) & ///
+    q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
+gen byte e4_mask_r1 = e4_mask_r0 & !missing(q2_3, q2_1) & ///
+    inrange(q2_3, 1, 9) & q2_3 == floor(q2_3) & ///
+    inrange(q2_1, 1950, 2026) & q2_1 == floor(q2_1)
+gen byte e4_mask_d1 = e4_mask_d0 & !missing(q2_3, q2_1) & ///
+    inrange(q2_3, 1, 9) & q2_3 == floor(q2_3) & ///
+    inrange(q2_1, 1950, 2026) & q2_1 == floor(q2_1)
+gen byte e4_mask_common = e4_mask_r0 & e4_mask_d0
+* The existing coverage evidence supports omitting a redundant domestic common fit.
+* If exact equality fails, stop and amend the manifest; do not add a sixth fit.
+assert e4_mask_common == e4_mask_d0
+assert !missing(e4_education3, e4_residence4) if e4_mask_r0 | e4_mask_d0
+assert !missing(e4_occupation6) if e4_mask_r1 | e4_mask_d1
+
+tempname modelout supportout matrixout probabilityout primary
+local e4_open ""
+capture noisily {
+    file open `modelout' using "`e4_output'/e4_model_status.csv", write text
+    local e4_open "`modelout'"
+    file write `modelout' "model,intended_n,attempted,fit_rc,estimator_n,converged,rank,expected_rank,sample_mismatch,determined_successes,determined_failures,status" _n
+    file open `supportout' using "`e4_output'/e4_support.csv", write text
+    local e4_open "`e4_open' `supportout'"
+    file write `supportout' "model,check,field,level,outcome,n,minimum,maximum" _n
+    file open `matrixout' using "`e4_output'/e4_native_matrices.csv", write text
+    local e4_open "`e4_open' `matrixout'"
+    file write `matrixout' "model,operation,matrix,row,column,row_name,column_name,value" _n
+    file open `probabilityout' using "`e4_output'/e4_probabilities.csv", write text
+    local e4_open "`e4_open' `probabilityout'"
+    file write `probabilityout' "model,focal,record,endpoint,estimate,se,ll,ul,units,status" _n
+    * Only six aggregate hypothesis records enter this temporary frame, never participants.
+    frame create `primary' str8 slot str8 model str32 field double p_raw str40 status
+
+    foreach model in R0_E4 D0_E4 R1_E4 D1_E4 R0C_E4 {
+        local outcome "wp07_remit_any_digital"
+        local mask "e4_mask_r0"
+        if "`model'" == "D0_E4" {
+            local outcome "wp07_domestic_60d"
+            local mask "e4_mask_d0"
+        }
+        if "`model'" == "R1_E4" {
+            local mask "e4_mask_r1"
+        }
+        if "`model'" == "D1_E4" {
+            local outcome "wp07_domestic_60d"
+            local mask "e4_mask_d1"
+        }
+        if "`model'" == "R0C_E4" {
+            local mask "e4_mask_common"
+        }
+        quietly count if `mask'
+        local intended_n = r(N)
+        local prefit_ok = (`intended_n' > 0)
+        local factors "e4_education3 e4_residence4"
+        local continuous "wp07_iat3 wp07_iadt2 wp07_iaff2 q4"
+        * Intercept plus four continuous terms; the extensions add original arrival year.
+        local expected_rank = 5
+        if inlist("`model'", "R1_E4", "D1_E4") {
+            local factors "`factors' e4_occupation6"
+            local continuous "`continuous' q2_1"
+            local expected_rank = 6
+        }
+
+        * Both outcomes and each present categorical level must support both responses.
+        foreach response in 0 1 {
+            quietly count if `mask' & `outcome' == `response'
+            file write `supportout' "`model',outcome,`outcome',,`response'," (r(N)) ",," _n
+            if r(N) == 0 {
+                local prefit_ok = 0
+            }
+        }
+        if `intended_n' > 0 {
+            foreach factor of local factors {
+                local reference = 1
+                if "`factor'" == "e4_education3" {
+                    local reference = 2
+                }
+                if "`factor'" == "e4_occupation6" {
+                    local reference = 3
+                }
+                quietly count if `mask' & `factor' == `reference'
+                if r(N) == 0 {
+                    local prefit_ok = 0
+                }
+                quietly levelsof `factor' if `mask', local(levels)
+                local nlevels : word count `levels'
+                local expected_rank = `expected_rank' + `nlevels' - 1
+                foreach level of local levels {
+                    foreach response in 0 1 {
+                        quietly count if `mask' & `factor' == `level' & `outcome' == `response'
+                        file write `supportout' "`model',factor,`factor',`level',`response'," (r(N)) ",," _n
+                        if r(N) == 0 {
+                            local prefit_ok = 0
+                        }
+                    }
+                }
+            }
+            foreach field of local continuous {
+                quietly summarize `field' if `mask', meanonly
+                file write `supportout' "`model',continuous,`field',,," (r(N)) "," ///
+                    %24.17g (r(min)) "," %24.17g (r(max)) _n
+                if missing(r(min), r(max)) | r(min) == r(max) {
+                    local prefit_ok = 0
+                }
+            }
+        }
+        if `intended_n' <= `expected_rank' {
+            local prefit_ok = 0
+        }
+
+        * Endpoint counts are fixed and recorded before fitting, never chosen from p-values.
+        * A missing endpoint blocks only its probability comparison, not the coefficient test.
+        foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
+            local lower = 0.5
+            local higher = 0.75
+            if "`focal'" == "wp07_iaff2" {
+                local higher = 1
+            }
+            local endpoint_ok = 1
+            foreach endpoint in `lower' `higher' {
+                quietly count if `mask' & `focal' == `endpoint'
+                if r(N) == 0 {
+                    local endpoint_ok = 0
+                }
+                foreach response in 0 1 {
+                    quietly count if `mask' & `focal' == `endpoint' & `outcome' == `response'
+                    file write `supportout' "`model',endpoint,`focal',`endpoint',`response'," (r(N)) ",," _n
+                }
+            }
+            if "`focal'" == "wp07_iat3" {
+                local iat_endpoint_ok = `endpoint_ok'
+            }
+            if "`focal'" == "wp07_iadt2" {
+                local iadt_endpoint_ok = `endpoint_ok'
+            }
+            if "`focal'" == "wp07_iaff2" {
+                local iaff_endpoint_ok = `endpoint_ok'
+            }
+        }
+
+        * At most one of these five explicit commands is attempted in this iteration.
+        local attempted = 0
+        local fit_rc = .
+        local estimator_n = .
+        local converged = .
+        local model_rank = .
+        local mismatch = .
+        local determined_successes = .
+        local determined_failures = .
+        local model_ok = 0
+        local model_status "PREFIT_SUPPORT_BLOCKED"
+        if `prefit_ok' {
+            local attempted = 1
+            if "`model'" == "R0_E4" {
+                capture noisily logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 ///
+                    c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_r0, vce(robust) iterate(100) level(95)
+                local fit_rc = _rc
+            }
+            if "`model'" == "D0_E4" {
+                capture noisily logit wp07_domestic_60d c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 ///
+                    c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_d0, vce(robust) iterate(100) level(95)
+                local fit_rc = _rc
+            }
+            if "`model'" == "R1_E4" {
+                capture noisily logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 ///
+                    c.q4 ib2.e4_education3 ib1.e4_residence4 ib3.e4_occupation6 c.q2_1 ///
+                    if e4_mask_r1, vce(robust) iterate(100) level(95)
+                local fit_rc = _rc
+            }
+            if "`model'" == "D1_E4" {
+                capture noisily logit wp07_domestic_60d c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 ///
+                    c.q4 ib2.e4_education3 ib1.e4_residence4 ib3.e4_occupation6 c.q2_1 ///
+                    if e4_mask_d1, vce(robust) iterate(100) level(95)
+                local fit_rc = _rc
+            }
+            if "`model'" == "R0C_E4" {
+                capture noisily logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 ///
+                    c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_common, vce(robust) iterate(100) level(95)
+                local fit_rc = _rc
+            }
+            local model_status "FIT_ERROR"
+            if `fit_rc' == 0 {
+                local estimator_n = e(N)
+                local converged = e(converged)
+                local model_rank = e(rank)
+                * These counts can reflect numerical extremes, not only nonfinite MLEs.
+                local determined_successes = e(N_cds)
+                local determined_failures = e(N_cdf)
+                local model_ok = (e(converged) == 1 & e(rank) == `expected_rank')
+                if "`e(cmd)'" != "logit" | "`e(depvar)'" != "`outcome'" | "`e(vce)'" != "robust" {
+                    local model_ok = 0
+                }
+                quietly count if e(sample) != `mask'
+                local mismatch = r(N)
+                if `mismatch' != 0 | e(N) != `intended_n' {
+                    local model_ok = 0
+                }
+                matrix e4_B = e(b)
+                matrix e4_V = e(V)
+                local native_matrices "e4_B e4_V"
+                * Retain a perfect-predictor rules matrix if Stata supplies one.
+                capture matrix e4_RULES = e(rules)
+                if _rc == 0 {
+                    local native_matrices "`native_matrices' e4_RULES"
+                    forvalues i = 1/`=rowsof(e4_RULES)' {
+                        forvalues j = 1/`=colsof(e4_RULES)' {
+                            if !missing(e4_RULES[`i',`j']) & e4_RULES[`i',`j'] != 0 {
+                                local model_ok = 0
+                            }
+                        }
+                    }
+                }
+                * All coefficients/covariances must be finite; focal SEs must be positive.
+                forvalues j = 1/`=colsof(e4_B)' {
+                    if missing(e4_B[1,`j']) {
+                        local model_ok = 0
+                    }
+                }
+                forvalues i = 1/`=rowsof(e4_V)' {
+                    forvalues j = 1/`=colsof(e4_V)' {
+                        if missing(e4_V[`i',`j']) {
+                            local model_ok = 0
+                        }
+                    }
+                }
+                foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
+                    if missing(_se[`focal']) | _se[`focal'] <= 0 {
+                        local model_ok = 0
+                    }
+                }
+                * Native matrix cells retain full precision, including unsuccessful fits.
+                foreach matrix of local native_matrices {
+                    local rows : rowfullnames `matrix'
+                    local columns : colfullnames `matrix'
+                    forvalues i = 1/`=rowsof(`matrix')' {
+                        local rowname : word `i' of `rows'
+                        forvalues j = 1/`=colsof(`matrix')' {
+                            local colname : word `j' of `columns'
+                            file write `matrixout' "`model',fit,`matrix',`i',`j',`rowname',`colname'," ///
+                                %24.17g (`matrix'[`i',`j']) _n
+                        }
+                    }
+                }
+                local model_status "POSTFIT_REVIEW_BLOCKED"
+                if `model_ok' {
+                    estimates store `model'
+                    local model_status "ACCEPTED_WORKING_MODEL"
+                }
+            }
+        }
+        file write `modelout' "`model'," (`intended_n') "," (`attempted') "," (`fit_rc') "," ///
+            (`estimator_n') "," (`converged') "," (`model_rank') "," (`expected_rank') "," ///
+            (`mismatch') "," (`determined_successes') "," (`determined_failures') ",`model_status'" _n
+
+        * Six primary slots: three coefficient-null Wald tests in each core, never extensions.
+        if inlist("`model'", "R0_E4", "D0_E4") {
+            foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
+                local family_prefix "R"
+                if "`model'" == "D0_E4" {
+                    local family_prefix "D"
+                }
+                local construct "IAT"
+                if "`focal'" == "wp07_iadt2" {
+                    local construct "IADT"
+                }
+                if "`focal'" == "wp07_iaff2" {
+                    local construct "IAFF"
+                }
+                local p_raw = .
+                local test_status "MODEL_UNAVAILABLE"
+                if `model_ok' {
+                    capture test `focal'
+                    local test_rc = _rc
+                    local test_status "TEST_UNAVAILABLE"
+                    if `test_rc' == 0 {
+                        local test_p : display %24.17g r(p)
+                        local test_df = r(df)
+                        if `test_df' == 1 & !missing(`test_p') & inrange(`test_p', 0, 1) {
+                            local p_raw "`test_p'"
+                            local test_status "AVAILABLE_CONDITIONAL_WORKING_VCE"
+                        }
+                    }
+                }
+                frame post `primary' ("`family_prefix'_`construct'") ("`model'") ///
+                    ("`focal'") (`p_raw') ("`test_status'")
+            }
+        }
+
+        * Model state is restored for each declared probability comparison.
+        foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
+            local lower = 0.5
+            local higher = 0.75
+            local endpoint_ok = `iat_endpoint_ok'
+            if "`focal'" == "wp07_iadt2" {
+                local endpoint_ok = `iadt_endpoint_ok'
+            }
+            if "`focal'" == "wp07_iaff2" {
+                local higher = 1
+                local endpoint_ok = `iaff_endpoint_ok'
+            }
+            local contrast_status "MODEL_UNAVAILABLE"
+            local probability_ok = 0
+            if `model_ok' {
+                local contrast_status "ENDPOINT_UNAVAILABLE"
+                if `endpoint_ok' {
+                    estimates restore `model'
+                    if "`focal'" == "wp07_iat3" {
+                        capture noisily margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) ///
+                            level(95) pwcompare(effects) mcompare(noadjust)
+                        local margins_rc = _rc
+                    }
+                    if "`focal'" == "wp07_iadt2" {
+                        capture noisily margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) ///
+                            level(95) pwcompare(effects) mcompare(noadjust)
+                        local margins_rc = _rc
+                    }
+                    if "`focal'" == "wp07_iaff2" {
+                        capture noisily margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) ///
+                            level(95) pwcompare(effects) mcompare(noadjust)
+                        local margins_rc = _rc
+                    }
+                    local contrast_status "MARGINS_UNAVAILABLE"
+                    if `margins_rc' == 0 {
+                        * Copy all declared returns before another r-class command can replace them.
+                        capture {
+                            matrix e4_AT = r(at)
+                            matrix e4_MB = r(b)
+                            matrix e4_MV = r(V)
+                            matrix e4_ME = r(error)
+                            matrix e4_MT = r(table)
+                            matrix e4_DB = r(b_vs)
+                            matrix e4_DV = r(V_vs)
+                            matrix e4_DE = r(error_vs)
+                            matrix e4_DT = r(table_vs)
+                            matrix e4_L = r(L)
+                        }
+                        local return_rc = _rc
+                        local contrast_status "MATRIX_CAPTURE_UNAVAILABLE"
+                        if `return_rc' == 0 {
+                            foreach matrix in e4_AT e4_MB e4_MV e4_ME e4_MT ///
+                                e4_DB e4_DV e4_DE e4_DT e4_L {
+                                local rows : rowfullnames `matrix'
+                                local columns : colfullnames `matrix'
+                                forvalues i = 1/`=rowsof(`matrix')' {
+                                    local rowname : word `i' of `rows'
+                                    forvalues j = 1/`=colsof(`matrix')' {
+                                        local colname : word `j' of `columns'
+                                        file write `matrixout' "`model',`focal',`matrix',`i',`j',`rowname',`colname'," ///
+                                            %24.17g (`matrix'[`i',`j']) _n
+                                    }
+                                }
+                            }
+                            * Do not assume a positional difference or override Stata's estimability.
+                            local at_column = colnumb(e4_AT, "`focal'")
+                            local b_row = rownumb(e4_MT, "b")
+                            local se_row = rownumb(e4_MT, "se")
+                            local ll_row = rownumb(e4_MT, "ll")
+                            local ul_row = rownumb(e4_MT, "ul")
+                            local db_row = rownumb(e4_DT, "b")
+                            local dse_row = rownumb(e4_DT, "se")
+                            local dll_row = rownumb(e4_DT, "ll")
+                            local dul_row = rownumb(e4_DT, "ul")
+                            local contrast_status "MATRIX_LAYOUT_OR_ESTIMABILITY_HOLD"
+                            local layout_ok = !missing(`at_column', `b_row', `se_row', `ll_row', ///
+                                `ul_row', `db_row', `dse_row', `dll_row', `dul_row')
+                            if rowsof(e4_AT) != 2 | colsof(e4_MB) != 2 | colsof(e4_MT) != 2 | ///
+                                colsof(e4_ME) != 2 | rowsof(e4_L) != 1 | colsof(e4_L) != 2 | ///
+                                colsof(e4_DT) != 1 | colsof(e4_DE) != 1 {
+                                local layout_ok = 0
+                            }
+                            if `layout_ok' {
+                                if e4_AT[1,`at_column'] != `lower' | e4_AT[2,`at_column'] != `higher' | ///
+                                    e4_L[1,1] != -1 | e4_L[1,2] != 1 | ///
+                                    e4_ME[1,1] != 0 | e4_ME[1,2] != 0 | e4_DE[1,1] != 0 {
+                                    local layout_ok = 0
+                                }
+                            }
+                            if `layout_ok' {
+                                local probability_ok = 1
+                                foreach row in `b_row' `se_row' `ll_row' `ul_row' {
+                                    if missing(e4_MT[`row',1], e4_MT[`row',2]) {
+                                        local probability_ok = 0
+                                    }
+                                }
+                                foreach row in `db_row' `dse_row' `dll_row' `dul_row' {
+                                    if missing(e4_DT[`row',1]) {
+                                        local probability_ok = 0
+                                    }
+                                }
+                                if e4_MT[`se_row',1] < 0 | e4_MT[`se_row',2] < 0 | ///
+                                    e4_DT[`dse_row',1] < 0 {
+                                    local probability_ok = 0
+                                }
+                                if `probability_ok' {
+                                    local contrast_status "AVAILABLE_POINTWISE_WORKING_VCE"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if `probability_ok' {
+                file write `probabilityout' "`model',`focal',lower,`lower'," ///
+                    %24.17g (e4_MT[`b_row',1]) "," %24.17g (e4_MT[`se_row',1]) "," ///
+                    %24.17g (e4_MT[`ll_row',1]) "," %24.17g (e4_MT[`ul_row',1]) ///
+                    ",probability,`contrast_status'" _n
+                file write `probabilityout' "`model',`focal',higher,`higher'," ///
+                    %24.17g (e4_MT[`b_row',2]) "," %24.17g (e4_MT[`se_row',2]) "," ///
+                    %24.17g (e4_MT[`ll_row',2]) "," %24.17g (e4_MT[`ul_row',2]) ///
+                    ",probability,`contrast_status'" _n
+                * Delta-method bounds are not clipped; these are pointwise, not Holm intervals.
+                file write `probabilityout' "`model',`focal',higher_minus_lower,," ///
+                    %24.17g (100*e4_DT[`db_row',1]) "," %24.17g (100*e4_DT[`dse_row',1]) "," ///
+                    %24.17g (100*e4_DT[`dll_row',1]) "," %24.17g (100*e4_DT[`dul_row',1]) ///
+                    ",percentage_points,`contrast_status'" _n
+            }
+            else {
+                file write `probabilityout' "`model',`focal',lower,`lower',.,.,.,.,probability,`contrast_status'" _n
+                file write `probabilityout' "`model',`focal',higher,`higher',.,.,.,.,probability,`contrast_status'" _n
+                file write `probabilityout' "`model',`focal',higher_minus_lower,,.,.,.,.,percentage_points,`contrast_status'" _n
+            }
+        }
+    }
+
+    * BEGIN E4 HOLM
+    * Missing tests reserve unrejected slots: family size stays six, not observed k.
+    frame `primary': assert _N == 6
+    frame `primary': isid slot
+    frame `primary': assert missing(p_raw) | inrange(p_raw, 0, 1)
+    frame `primary': sort p_raw slot
+    frame `primary': gen byte rank = _n if !missing(p_raw)
+    frame `primary': gen double p_holm = min(1, (7 - rank)*p_raw) if !missing(p_raw)
+    frame `primary': replace p_holm = max(p_holm, p_holm[_n - 1]) if _n > 1 & !missing(p_raw)
+    frame `primary': assert missing(p_holm) == missing(p_raw)
+    frame `primary': sort slot
+    frame `primary': format p_raw p_holm %24.17g
+    frame `primary': export delimited using "`e4_output'/e4_primary_tests.csv", datafmt
+    * END E4 HOLM
+
+    * Signatures cover named source inputs; masks/results never remove or reorder women.
+    assert _N == `e4_admitted_n'
+    assert e4_row_order == _n
+    _datasignature `e4_raw'
+    assert "`r(datasignature)'" == "`e4_signature'"
+}
+local e4_run_rc = _rc
+* Close only this block's opened files, retaining partial output on every failure.
+foreach handle of local e4_open {
+    capture file close `handle'
+    local e4_close_rc = _rc
+    if `e4_run_rc' == 0 & `e4_close_rc' != 0 {
+        local e4_run_rc = `e4_close_rc'
+    }
+}
+capture frame drop `primary'
+if `e4_run_rc' != 0 {
+    exit `e4_run_rc'
+}
+* END E4 BODY
+* END E4 ESTIMATION
+
 * HISTORICAL REGRESSION/LCA RETIREMENT
-* Do not call the old five-model, interaction, supplementary or class-regression grids.
-* Preserve their evidence as historical comparisons, not current academic results.
-* No automatic 15-score correlation matrix or Appendix C2 execution.
-* ML01-ML05 still govern whether LCA is retained and its family, population,
-* finite fit plan, identification and uncertainty-aware downstream interpretation.
-* No alias for retired IURD/IEDF scores or default historical H1/k4 is constructed.
-*
-* No charts, fitted effects or statistical tables are exported without verified results.
-* The actual exhibit producers are completed in Package E after numerical validation.
+* No old model/interaction/supplementary grid, H1/k4 default or class assignment.
+* No replacement IURD/IEDF score, survey/RDS weight or all-index Pearson matrix.
+* Appendix C2 remains on hold. Working model results are not release approval.
 

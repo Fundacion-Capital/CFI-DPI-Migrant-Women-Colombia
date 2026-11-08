@@ -1,4 +1,34 @@
 # Current academic research revision workplan
+**Current E.4 native-attempt checkpoint — 8 November 2026:** The owner authorized
+ten artificial-only selections, at most seven synthetic fits, no retries.
+Exactly one request, NV01, was dispatched through Stata MCP. Empty N0/K0
+admission was observed, then the caller's literal `log query all` failed r111
+before its log, fixture or estimator. The batch stopped:0passed,1failed,
+9not dispatched,0synthetic fits,0participants. Start with
+`wp07-e4-native-validation-execution/README.md` and its case/task ledgers.
+All requests, responses and old packets are preserved; no source correction,
+retry, cleanup probe or successor dispatch occurred. Read-only installed help
+supports `log query _all`; a minimal new caller-only successor and renewed
+execution authority are next, not a methodological or infrastructure redesign.
+Native/grouped/estimation acceptance remains unachieved. The owned session is
+listed ready/nonbusy, but final memory/log closure was not independently queried.
+C2 HOLD, participant/release holds and B/C/D/G.1 whole-paper work remain.
+Earlier checkpoints below retain their original dated meanings.
+**Current E.4 source checkpoint — 8 November 2026:** The owner approved decisions
+A–D. Their explicit context groupings, five named models, conditional working
+VCE, fixed probability comparisons and six-slot Holm policy are integrated into
+the actual canonical Stata scripts, with all entry holds and a separate pre-fit
+stop retained. No Stata execution, participant/model load, empirical recode or
+fit occurred. Start with `wp07-e4-source-integration/README.md` and its register.
+Ten exact artificial-only native selections are prepared, not authorized or run;
+their proposed ceiling is seven synthetic fits across distinct fixtures, with
+no retries. They do not authorize any real-data fit. The next quantitative task
+is separately authorized native artificial validation after source/route/log/
+restricted-output binding. Actual grouped support, model samples, numerical
+validity, dependence adequacy and institutional/release gates remain unverified.
+C2 HOLD and B/C/D/G.1 full-paper work remain. The original E.4 proposal below
+retains its then-pending wording as frozen history, superseded only by the exact
+owner acceptance and source checkpoint recorded in this successor.
 **Current E.4 design checkpoint — 8 November 2026:** The consolidated scientific-
 decision memo, exact proposed grouping map, five-fit/no-retry manifest and offline
 verification package are prepared in `wp07-estimation-design`. Existing restricted

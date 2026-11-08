@@ -1,7 +1,7 @@
 /*
 CFI DPI — academic quantitative analysis
 Authors: Jorge E. Zavala and Angélica Cardozo Cadavid
-Integrated source revision: 7 November 2026. Stata 16 syntax.
+Integrated source: 7 November 2026; held E.4 groupings: 8 November 2026. Stata 16 syntax.
 */
 * Source-review candidate only. No execution is authorized by this code revision.
 exit 198
@@ -1725,5 +1725,50 @@ label variable wp07_iuof2_no_frequency "Merchant/saving: declared frequency-omis
 label variable wp07_oqi2 "Registration ease/offered support: two-item candidate"
 label variable wp07_oqi2_oldmap "Registration/support: historical ease-spacing comparison"
 * Their accepted item-level representations use the unchanged original fields.
-* No D4 estimators or D6 class inputs are constructed here.
+* No D6 class inputs or new pooled outcome indices are constructed here.
+
+* ============================================================================
+* BEGIN E4 GROUPINGS
+* Approved 8 November 2026: context groupings for models, not new raw answers.
+* All detailed education, residence and occupation categories stay in descriptions.
+gen byte e4_education3 = .
+replace e4_education3 = 1 if inrange(q2_2, 1, 4) & wp07_state_q2_2 == 1
+replace e4_education3 = 2 if q2_2 == 5 & wp07_state_q2_2 == 1
+replace e4_education3 = 3 if inrange(q2_2, 6, 10) & wp07_state_q2_2 == 1
+label define e4_education_lbl 1 "Below completed secondary" ///
+    2 "Completed secondary" 3 "Any reported postsecondary study"
+label values e4_education3 e4_education_lbl
+label variable e4_education3 "Model context: education; incomplete postsecondary retained"
+
+* The residual combines recorded responses; it is not one municipality or cluster.
+gen byte e4_residence4 = .
+replace e4_residence4 = wp07_residence if inlist(wp07_residence, 1, 2, 3)
+replace e4_residence4 = 4 if inlist(wp07_residence, 4, 5, 6)
+label define e4_residence_lbl 1 "Bogota" 2 "Cali" 3 "Medellin" ///
+    4 "Other recorded residence responses: Other/Soacha/Meta"
+label values e4_residence4 e4_residence_lbl
+label variable e4_residence4 "Model context: residence; detailed version meanings preserved"
+
+* Nominal main-occupation groups do not establish verified labour-force status.
+gen byte e4_occupation6 = .
+replace e4_occupation6 = 1 if inlist(q2_3, 1, 2) & wp07_state_q2_3 == 1
+replace e4_occupation6 = 3 if q2_3 == 3 & wp07_state_q2_3 == 1
+replace e4_occupation6 = 4 if q2_3 == 4 & wp07_state_q2_3 == 1
+replace e4_occupation6 = 5 if inlist(q2_3, 5, 6, 8) & wp07_state_q2_3 == 1
+replace e4_occupation6 = 7 if q2_3 == 7 & wp07_state_q2_3 == 1
+replace e4_occupation6 = 9 if q2_3 == 9 & wp07_state_q2_3 == 1
+label define e4_occupation_lbl 1 "Employer or independent" 3 "Employee or worker" ///
+    4 "Paid domestic worker" 5 "Student/pensioner/not currently working" ///
+    7 "Unpaid family worker" 9 "Other occupation"
+label values e4_occupation6 e4_occupation_lbl
+label variable e4_occupation6 "Model context: six nominal occupation-response groups"
+
+* An unscored/unresolved source value never acquires a model category.
+assert missing(e4_education3) == (wp07_state_q2_2 != 1)
+assert missing(e4_residence4) == missing(wp07_residence)
+assert missing(e4_occupation6) == (wp07_state_q2_3 != 1)
+assert missing(e4_education3) | inlist(e4_education3, 1, 2, 3)
+assert missing(e4_residence4) | inlist(e4_residence4, 1, 2, 3, 4)
+assert missing(e4_occupation6) | inlist(e4_occupation6, 1, 3, 4, 5, 7, 9)
+* END E4 GROUPINGS
 

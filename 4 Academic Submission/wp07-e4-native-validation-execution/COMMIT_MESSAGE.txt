@@ -1,0 +1,19 @@
+WP07: Audit E4 native admission failure and preserve batch
+
+- Record authorization for ten artificial-only selections and a seven-fit
+  ceiling, then preserve the exact source-bound request/output contract.
+- Record NV01's single native dispatch: empty-memory admission followed by
+  log-query r(111), before fixture construction or any estimator.
+- Enforce the first-unexpected-failure stop: no retries, no successor
+  dispatches, zero synthetic fits and zero participant processing.
+- Retain all ten request pins, intent, expanded native response, outcome,
+  runtime inventory and independent execution/preservation evidence.
+- Diagnose the caller's literal all versus reserved _all syntax from exact
+  installed help; propose the two wrapper corrections without applying or
+  running them.
+- Update current workplan/ledger to the failed-admission checkpoint, not
+  native acceptance. Preserve all canonical sources, holds and prior packets.
+- Keep C2, participant estimation and release held; make no commit, push,
+  contact, persistent/provider configuration or service change, or live
+  Overleaf synchronization.
+

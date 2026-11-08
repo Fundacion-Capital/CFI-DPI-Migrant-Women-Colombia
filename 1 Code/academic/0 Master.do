@@ -1,7 +1,7 @@
 /*
 CFI DPI — academic quantitative analysis
 Authors: Jorge E. Zavala and Angélica Cardozo Cadavid
-Integrated source revision: 7 November 2026. Stata 16 syntax.
+Integrated source: 7 November 2026; held E.4 integration: 8 November 2026. Stata 16 syntax.
 */
 * Source-review candidate only. No execution is authorized by this code revision.
 exit 198
@@ -52,7 +52,9 @@ capture noisily {
     * One preparation stage and one analysis stage; neither calls a historical script.
     do "`repository'/1 Code/academic/1 Data preparation.do"
     save "`restricted_output'/academic_prepared.dta"
-    do "`repository'/1 Code/academic/2 Analysis.do"
+    * E.4 is approved in source only; the analysis retains a separate pre-fit stop.
+    * Its bounded native validation/estimation must not dispatch this full master.
+    do "`repository'/1 Code/academic/2 Analysis.do" "`restricted_output'"
 }
 local run_rc = _rc
 capture log close academic_review
