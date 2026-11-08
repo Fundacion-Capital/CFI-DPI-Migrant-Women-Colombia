@@ -1,7 +1,7 @@
 /*
 CFI DPI — academic quantitative analysis
 Authors: Jorge E. Zavala and Angélica Cardozo Cadavid
-Integrated source revision: 7 November 2026. Stata 16 syntax.
+Integrated source revision: 7 November 2026. Exact form labels: 8 November 2026. Stata 16 syntax.
 */
 * Source-review candidate only. No execution is authorized by this code revision.
 exit 198
@@ -49,7 +49,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_1, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_1 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -84,7 +84,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_5, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_5 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -119,7 +119,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -154,7 +154,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_7, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_7 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -189,7 +189,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_8, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_8 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -224,7 +224,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_12, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_12 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -275,7 +275,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q2_2, 1, 5)
     local recorded_n = r(N)
-    display as text "q2_2 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q2_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -310,7 +310,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q2_3, 1, 5)
     local recorded_n = r(N)
-    display as text "q2_3 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q2_3 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -369,7 +369,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3, 1, 5)
     local recorded_n = r(N)
-    display as text "q3 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -408,7 +408,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -443,7 +443,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -478,7 +478,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_17, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_17 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -517,7 +517,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_20, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_20 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -552,7 +552,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_21, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_21 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -587,7 +587,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_22, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_22 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -622,7 +622,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q3_23, 1, 5)
     local recorded_n = r(N)
-    display as text "q3_23 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q3_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -661,7 +661,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_1, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_1 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
@@ -709,7 +709,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_5, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_5 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -744,7 +744,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -779,7 +779,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_12, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_12 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
@@ -819,7 +819,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -863,7 +863,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -898,7 +898,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -933,7 +933,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_17, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_17 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -968,7 +968,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_24, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_24 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_24 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1003,7 +1003,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_25, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_25 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_25 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1038,7 +1038,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_26, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_26 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_26 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1073,7 +1073,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q4_27, 1, 5)
     local recorded_n = r(N)
-    display as text "q4_27 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q4_27 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1112,7 +1112,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
@@ -1160,7 +1160,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_14, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_14 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1195,7 +1195,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1230,7 +1230,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1265,7 +1265,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_21, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_21 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1300,7 +1300,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_22, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_22 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1335,7 +1335,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q5_23, 1, 5)
     local recorded_n = r(N)
-    display as text "q5_23 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q5_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1374,7 +1374,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_2, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_2 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1409,7 +1409,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_4, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_4 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1444,7 +1444,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1479,7 +1479,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_14, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_14 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1514,7 +1514,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1553,7 +1553,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1588,7 +1588,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_9, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_9 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1623,7 +1623,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_11, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_11 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1658,7 +1658,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1693,7 +1693,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_17, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_17 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1728,7 +1728,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_18, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_18 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_18 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1763,7 +1763,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_20, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_20 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1798,7 +1798,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_21, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_21 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1833,7 +1833,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_22, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_22 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1868,7 +1868,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_23, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_23 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1903,7 +1903,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q6_24, 1, 5)
     local recorded_n = r(N)
-    display as text "q6_24 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q6_24 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1942,7 +1942,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_1, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_1 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -1977,7 +1977,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_2, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_2 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2012,7 +2012,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2047,7 +2047,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_7, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_7 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2082,7 +2082,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_8, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_8 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2117,7 +2117,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_9, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_9 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2155,7 +2155,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_10, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_10 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_10 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2196,7 +2196,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_5, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_5 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2231,7 +2231,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_11, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_11 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2269,7 +2269,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_12, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_12 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2304,7 +2304,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2339,7 +2339,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_14, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_14 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2374,7 +2374,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q7_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q7_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q7_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2413,7 +2413,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_4, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_4 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2448,7 +2448,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_5, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_5 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2483,7 +2483,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2518,7 +2518,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_7, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_7 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2553,7 +2553,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_8, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_8 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2588,7 +2588,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_9, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_9 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2623,7 +2623,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_11, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_11 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2658,7 +2658,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2693,7 +2693,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2728,7 +2728,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_18, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_18 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_18 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2763,7 +2763,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_19, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_19 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_19 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2798,7 +2798,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_20, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_20 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2837,7 +2837,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_1, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_1 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2872,7 +2872,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_15, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_15 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -2907,7 +2907,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_17, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_17 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
@@ -2955,7 +2955,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_21, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_21 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
@@ -2991,7 +2991,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q9_22, 1, 5)
     local recorded_n = r(N)
-    display as text "q9_22 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q9_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3030,7 +3030,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_4, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_4 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3065,7 +3065,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_6, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_6 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3100,7 +3100,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_10, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_10 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_10 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3135,7 +3135,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_11, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_11 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3170,7 +3170,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_12, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_12 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3205,7 +3205,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_13, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_13 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3240,7 +3240,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_14, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_14 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3275,7 +3275,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_16, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_16 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3319,7 +3319,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_1, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_1 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Recorded-answer percentages retain offered sentinels as explicit categories.
     * They are not percentages of all sampled women or estimates of population prevalence.
@@ -3357,7 +3357,7 @@ foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
     local sentinel_n = r(N)
     quietly count if formdef_version == `fv' & inlist(wp07_state_q10_2, 1, 5)
     local recorded_n = r(N)
-    display as text "q10_2 version " `fv' ": applicable / ordinary / sentinel / recorded" as result " " ///
+    display as text "q10_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
         `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
     * Percent selecting an offered option uses ordinary valid parent responses.
     * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.

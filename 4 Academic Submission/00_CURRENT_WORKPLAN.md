@@ -1,4 +1,58 @@
 # Current academic research revision workplan
+**Current E.4 design checkpoint — 8 November 2026:** The consolidated scientific-
+decision memo, exact proposed grouping map, five-fit/no-retry manifest and offline
+verification package are prepared in `wp07-estimation-design`. Existing restricted
+E.2/E.3 category evidence implies that the original full-factor nominations have
+singleton perfect-predictor problems; input coverage is not finite-MLE readiness.
+Model-only context groupings, conditional robust-error interpretation, fixed
+probability contrasts and raw first-arrival-year extensions are PROPOSED, not
+adopted or applied. Start with the new README and successor task register. One
+consolidated owner decision precedes held source integration and separately
+authorized native tests/estimation. No participant/model load, fit or canonical
+source change occurred. Current load/fit allowance remains0/0; grouped native
+support, variance adequacy and scientific/institutional/release gates are not
+certified. C2 HOLD remains. B/C/D/G.1 continue the complete-paper work in parallel.
+All preceding checkpoints remain preserved dated history.
+**Current restricted-coverage checkpoint — 8 November 2026:** The separately
+authorised E.2 raw102-field and E.3 prepared98-field checks have both run once
+through Stata MCP and passed their scoped continuity/construction/coverage
+audits. No row filtering, data repair, original-code change, genuine dataset
+export, correlation, model fit or C2 execution occurred. All participant-derived
+tables/findings are protected and Git-ignored; public handoff metadata contains
+no unpublished coverage tables. Start with `wp07-restricted-coverage/README.md`
+and its successor register. The two load permissions are consumed, not renewed
+by this checkpoint. Next is one consolidated E.4 scientific-decision and exact
+bounded-estimation design package, without fitting until separately authorised.
+Covariance/dependence, supported contrasts, extension calendar and unavailable-
+test rules remain explicit. Scientific/institutional/release gates are not
+promoted. Canonical entry holds and C2 HOLD remain; B/C/D/G.1 continue in parallel.
+All earlier checkpoints below remain preserved dated history.
+
+**Current native-validation checkpoint — 8 November 2026:** The E.1 artificial
+checks now ran successfully through Stata MCP in a dedicated verification
+session: fourteen planned case groups, with the declared unavailable-state and
+mid-save limits. One display-only correction makes all91 categorical-parent
+version labels exact; a separate native check verified455 headers and unchanged
+checked percentages. Source before-images, synthetic data and complete logs are
+preserved. Start with `wp07-native-validation-execution/README.md` and its
+successor register. E.2 raw102-field and E.3 prepared98-field participant scopes
+still need separate authority and actual source/output/access/retention bindings,
+including observed MCP spill logs outside the ignored harness folder. No study
+participant/model load, fit, scientific/institutional promotion or release
+occurred. Canonical entry holds and C2 HOLD remain. B/C/D/G.1 can proceed in
+parallel. The unavailable-tool and Package A checkpoints below remain dated history.
+
+**Current validation checkpoint — 8 November 2026:** Package E source scope,
+two native artificial test selections and separate E.2/E.3 proposals are prepared
+in `wp07-native-validation`. Artificial testing is authorized by the current
+request but **NOT_RUN: no Stata MCP tool is exposed in the primary session**. No
+participant processing, empirical scoring, fit, entry-hold removal or new
+scientific clearance occurred. Use the successor register/pointer; run the
+bounded native artificial checks when the route is available, then obtain
+separate raw/prepared authorization and custody bindings. Do not build another
+worker/bootstrap route. B/C/D/G.1 source research can continue; C2 remains HOLD.
+The dated Package A checkpoint and 5 November plan below remain history.
+
 
 **Current implementation checkpoint — 7 November 2026:** A.1–A.6 are implemented
 as a source-only candidate in `1 Code/academic`. Start with

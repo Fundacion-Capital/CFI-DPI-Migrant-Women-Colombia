@@ -1,0 +1,775 @@
+{
+  "package": "E.4",
+  "date": "2026-11-08",
+  "status": "DESIGN_PREPARED_OWNER_ADOPTION_PENDING",
+  "scientific_adoption": false,
+  "current_authority": {
+    "participant_loads": 0,
+    "model_loads": 0,
+    "artificial_fits": 0,
+    "participant_fits": 0,
+    "source_candidate_integration": false,
+    "release": false,
+    "contacts": false,
+    "commit": false,
+    "push": false,
+    "overleaf_sync": false
+  },
+  "source_bindings": {
+    "canonical": [
+      {
+        "path": "1 Code/academic/0 Master.do",
+        "bytes": 3121,
+        "sha256": "1ac56656631e50630f0046f2e84fe8c289f7d9c319ed28986927682443e6fc40"
+      },
+      {
+        "path": "1 Code/academic/1 Data preparation.do",
+        "bytes": 127332,
+        "sha256": "6c1039931a8d4ca1b23c6bdb612524a5909f196ad0e7de551f4c3168d5baf104"
+      },
+      {
+        "path": "1 Code/academic/2 Analysis.do",
+        "bytes": 208308,
+        "sha256": "2fff54a5817d1d00139415f965606684c1e4d7e49a5862981a3ea7ca45c293d3"
+      }
+    ],
+    "accepted_account": "4 Academic Submission/wp06-d4-d6-acceptance/D4_D6_ACCEPTED_ACCOUNT_2026-10-26.md",
+    "source_codebook": "4 Academic Submission/wp07-academic-reporting/CODEBOOK.csv",
+    "previous_scope": {
+      "path": "4 Academic Submission/wp07-restricted-coverage/SCOPE.json",
+      "sha256": "70d748e8a526f6a967c0ba326824423a766c24905780716afd9bb322f465ae97",
+      "inherit_projection": "exact_E3_98_raw_fields_only",
+      "previous_load_grants": "CONSUMED"
+    },
+    "carrier": {
+      "sha256": "95e0929d4ab5f4e0808c07f9eb636c24a0eeb88f676cace328bb064badcad756",
+      "bytes": 1292059,
+      "location": "exact_private_location_in_inherited_E3_SCOPE",
+      "fingerprint_status": "inherited_sealed_identity_not_rehashed_this_package"
+    },
+    "retained_evidence": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108",
+    "future_preparation": "canonical_preparation_body_excluding_only_unconditional_entry_hold; no scoring changes; no master or full analysis call"
+  },
+  "amendments": [
+    {
+      "id": "A1",
+      "kind": "SCIENTIFIC_CONTEXT_GROUPING",
+      "status": "PROPOSED",
+      "mapping": "FIELD_GROUPINGS.csv",
+      "source_responses_and_descriptives_preserved": true,
+      "raw_missingness_preserved": true,
+      "model_only": true
+    },
+    {
+      "id": "A2",
+      "kind": "WORKING_COVARIANCE_AND_INFERENTIAL_LIMITS",
+      "status": "PROPOSED",
+      "vce": "robust",
+      "assumption": "independent_record_working_approximation",
+      "network_correction": false,
+      "population_error_guarantee": false,
+      "discovery_stars": false
+    },
+    {
+      "id": "B",
+      "kind": "FIXED_PROBABILITY_CONTRASTS",
+      "status": "PROPOSED",
+      "averaging": "own_unchanged_e_sample_observed_other_covariates",
+      "margins_vce": "delta_conditional_on_covariate_distribution",
+      "level": 95,
+      "causal": false
+    },
+    {
+      "id": "C",
+      "kind": "EXTENSION_LINEAR_FIRST_ARRIVAL_YEAR",
+      "status": "PROPOSED",
+      "field": "q2_1",
+      "term": "c.q2_1",
+      "tenure": false,
+      "reference_year_created": false
+    },
+    {
+      "id": "D",
+      "kind": "FINITE_BUDGET_AND_UNAVAILABLE_TEST_RULES",
+      "status": "PROPOSED"
+    }
+  ],
+  "groupings_file": "FIELD_GROUPINGS.csv",
+  "mask_expressions": {
+    "e4_mask_r0": "!missing(wp07_remit_any_digital,wp07_iat3,wp07_iadt2,wp07_iaff2,q4,q2_2,wp07_residence) & inrange(q4,18,100) & q4 == floor(q4) & inrange(q2_2,1,10) & q2_2 == floor(q2_2)",
+    "e4_mask_d0": "!missing(wp07_domestic_60d,wp07_iat3,wp07_iadt2,wp07_iaff2,q4,q2_2,wp07_residence) & inrange(q4,18,100) & q4 == floor(q4) & inrange(q2_2,1,10) & q2_2 == floor(q2_2)",
+    "e4_mask_r1": "e4_mask_r0 & !missing(q2_3,q2_1) & inrange(q2_3,1,9) & q2_3 == floor(q2_3) & inrange(q2_1,1950,2026) & q2_1 == floor(q2_1)",
+    "e4_mask_d1": "e4_mask_d0 & !missing(q2_3,q2_1) & inrange(q2_3,1,9) & q2_3 == floor(q2_3) & inrange(q2_1,1950,2026) & q2_1 == floor(q2_1)",
+    "e4_mask_common": "e4_mask_r0 & e4_mask_d0"
+  },
+  "mask_rules": [
+    "original_admitted_cohort_is_preserved",
+    "masks_not_global_filters",
+    "domain_failures_reported_not_repaired",
+    "grouping_does_not_change_missingness_or_mask_membership",
+    "expected_counts_private_compare_to_E3_not_literal_estimator_N",
+    "assert_domestic_mask_equals_core_intersection_before_suppressing_redundant_domestic_common_fit"
+  ],
+  "design_rules": {
+    "continuous_terms_core": 4,
+    "continuous_terms_extension": 5,
+    "include_intercept": true,
+    "reference_levels": {
+      "e4_education3": 2,
+      "e4_residence4": 1,
+      "e4_occupation6": 3
+    },
+    "present_levels_only": true,
+    "pre_fit_no_single_outcome_present_factor_level": true,
+    "joint_and_continuous_separation_not_ruled_out_by_marginal_tables": true,
+    "original_full_category_MLE_nominees": "NOT_FINITE_ON_INTENDED_MASKS_SINGLETON_INDICATOR_ARGUMENT",
+    "grouped_design": "UNRUN_AND_NOT_CERTIFIED_FIT_READY"
+  },
+  "models": [
+    {
+      "id": "R0_E4",
+      "nomination": "R0",
+      "outcome": "wp07_remit_any_digital",
+      "mask": "e4_mask_r0",
+      "extension": false,
+      "primary": true,
+      "role": "core",
+      "command": "logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_r0, vce(robust) iterate(100) level(95)",
+      "maximum_attempts": 1,
+      "retries": 0,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "support_checks": [
+        "both_outcome_levels",
+        "adopted_references",
+        "each_present_factor_level_has_both_outcomes",
+        "expected_design_columns_and_rank",
+        "original_and_grouped_missingness_parity"
+      ],
+      "after_fit_acceptance": [
+        "e_sample_equals_intended_mask",
+        "e_converged_is_one",
+        "all_coefficients_and_covariance_finite",
+        "positive_focal_standard_errors",
+        "full_expected_rank_present_levels_only",
+        "no_unexpected_omissions_or_perfect_prediction_rules"
+      ]
+    },
+    {
+      "id": "D0_E4",
+      "nomination": "D0",
+      "outcome": "wp07_domestic_60d",
+      "mask": "e4_mask_d0",
+      "extension": false,
+      "primary": true,
+      "role": "core",
+      "command": "logit wp07_domestic_60d c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_d0, vce(robust) iterate(100) level(95)",
+      "maximum_attempts": 1,
+      "retries": 0,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "support_checks": [
+        "both_outcome_levels",
+        "adopted_references",
+        "each_present_factor_level_has_both_outcomes",
+        "expected_design_columns_and_rank",
+        "original_and_grouped_missingness_parity"
+      ],
+      "after_fit_acceptance": [
+        "e_sample_equals_intended_mask",
+        "e_converged_is_one",
+        "all_coefficients_and_covariance_finite",
+        "positive_focal_standard_errors",
+        "full_expected_rank_present_levels_only",
+        "no_unexpected_omissions_or_perfect_prediction_rules"
+      ]
+    },
+    {
+      "id": "R1_E4",
+      "nomination": "R1",
+      "outcome": "wp07_remit_any_digital",
+      "mask": "e4_mask_r1",
+      "extension": true,
+      "primary": false,
+      "role": "supporting_extension",
+      "command": "logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ib2.e4_education3 ib1.e4_residence4 ib3.e4_occupation6 c.q2_1 if e4_mask_r1, vce(robust) iterate(100) level(95)",
+      "maximum_attempts": 1,
+      "retries": 0,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "support_checks": [
+        "both_outcome_levels",
+        "adopted_references",
+        "each_present_factor_level_has_both_outcomes",
+        "expected_design_columns_and_rank",
+        "original_and_grouped_missingness_parity"
+      ],
+      "after_fit_acceptance": [
+        "e_sample_equals_intended_mask",
+        "e_converged_is_one",
+        "all_coefficients_and_covariance_finite",
+        "positive_focal_standard_errors",
+        "full_expected_rank_present_levels_only",
+        "no_unexpected_omissions_or_perfect_prediction_rules"
+      ]
+    },
+    {
+      "id": "D1_E4",
+      "nomination": "D1",
+      "outcome": "wp07_domestic_60d",
+      "mask": "e4_mask_d1",
+      "extension": true,
+      "primary": false,
+      "role": "supporting_extension",
+      "command": "logit wp07_domestic_60d c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ib2.e4_education3 ib1.e4_residence4 ib3.e4_occupation6 c.q2_1 if e4_mask_d1, vce(robust) iterate(100) level(95)",
+      "maximum_attempts": 1,
+      "retries": 0,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "support_checks": [
+        "both_outcome_levels",
+        "adopted_references",
+        "each_present_factor_level_has_both_outcomes",
+        "expected_design_columns_and_rank",
+        "original_and_grouped_missingness_parity"
+      ],
+      "after_fit_acceptance": [
+        "e_sample_equals_intended_mask",
+        "e_converged_is_one",
+        "all_coefficients_and_covariance_finite",
+        "positive_focal_standard_errors",
+        "full_expected_rank_present_levels_only",
+        "no_unexpected_omissions_or_perfect_prediction_rules"
+      ]
+    },
+    {
+      "id": "R0C_E4",
+      "nomination": "R0",
+      "outcome": "wp07_remit_any_digital",
+      "mask": "e4_mask_common",
+      "extension": false,
+      "primary": false,
+      "role": "common_observation_sensitivity",
+      "command": "logit wp07_remit_any_digital c.wp07_iat3 c.wp07_iadt2 c.wp07_iaff2 c.q4 ib2.e4_education3 ib1.e4_residence4 if e4_mask_common, vce(robust) iterate(100) level(95)",
+      "maximum_attempts": 1,
+      "retries": 0,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "support_checks": [
+        "both_outcome_levels",
+        "adopted_references",
+        "each_present_factor_level_has_both_outcomes",
+        "expected_design_columns_and_rank",
+        "original_and_grouped_missingness_parity"
+      ],
+      "after_fit_acceptance": [
+        "e_sample_equals_intended_mask",
+        "e_converged_is_one",
+        "all_coefficients_and_covariance_finite",
+        "positive_focal_standard_errors",
+        "full_expected_rank_present_levels_only",
+        "no_unexpected_omissions_or_perfect_prediction_rules"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "IAT",
+      "field": "wp07_iat3",
+      "lower": 0.5,
+      "higher": 0.75
+    },
+    {
+      "id": "IADT",
+      "field": "wp07_iadt2",
+      "lower": 0.5,
+      "higher": 0.75
+    },
+    {
+      "id": "IAFF",
+      "field": "wp07_iaff2",
+      "lower": 0.5,
+      "higher": 1
+    }
+  ],
+  "primary_slots": [
+    {
+      "slot_id": "R_IAT",
+      "model_id": "R0_E4",
+      "field": "wp07_iat3",
+      "null": "_b[wp07_iat3] = 0",
+      "command": "test wp07_iat3",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    },
+    {
+      "slot_id": "R_IADT",
+      "model_id": "R0_E4",
+      "field": "wp07_iadt2",
+      "null": "_b[wp07_iadt2] = 0",
+      "command": "test wp07_iadt2",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    },
+    {
+      "slot_id": "R_IAFF",
+      "model_id": "R0_E4",
+      "field": "wp07_iaff2",
+      "null": "_b[wp07_iaff2] = 0",
+      "command": "test wp07_iaff2",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    },
+    {
+      "slot_id": "D_IAT",
+      "model_id": "D0_E4",
+      "field": "wp07_iat3",
+      "null": "_b[wp07_iat3] = 0",
+      "command": "test wp07_iat3",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    },
+    {
+      "slot_id": "D_IADT",
+      "model_id": "D0_E4",
+      "field": "wp07_iadt2",
+      "null": "_b[wp07_iadt2] = 0",
+      "command": "test wp07_iadt2",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    },
+    {
+      "slot_id": "D_IAFF",
+      "model_id": "D0_E4",
+      "field": "wp07_iaff2",
+      "null": "_b[wp07_iaff2] = 0",
+      "command": "test wp07_iaff2",
+      "raw_p": null,
+      "adjusted_p": null,
+      "status": "NOT_COMPUTED"
+    }
+  ],
+  "probability_operations": [
+    {
+      "operation_id": "R0_E4_IAT_PR",
+      "model_id": "R0_E4",
+      "contrast_id": "IAT",
+      "restore": "estimates restore R0_E4",
+      "command": "margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R0_E4_IADT_PR",
+      "model_id": "R0_E4",
+      "contrast_id": "IADT",
+      "restore": "estimates restore R0_E4",
+      "command": "margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R0_E4_IAFF_PR",
+      "model_id": "R0_E4",
+      "contrast_id": "IAFF",
+      "restore": "estimates restore R0_E4",
+      "command": "margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D0_E4_IAT_PR",
+      "model_id": "D0_E4",
+      "contrast_id": "IAT",
+      "restore": "estimates restore D0_E4",
+      "command": "margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D0_E4_IADT_PR",
+      "model_id": "D0_E4",
+      "contrast_id": "IADT",
+      "restore": "estimates restore D0_E4",
+      "command": "margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D0_E4_IAFF_PR",
+      "model_id": "D0_E4",
+      "contrast_id": "IAFF",
+      "restore": "estimates restore D0_E4",
+      "command": "margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R1_E4_IAT_PR",
+      "model_id": "R1_E4",
+      "contrast_id": "IAT",
+      "restore": "estimates restore R1_E4",
+      "command": "margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R1_E4_IADT_PR",
+      "model_id": "R1_E4",
+      "contrast_id": "IADT",
+      "restore": "estimates restore R1_E4",
+      "command": "margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R1_E4_IAFF_PR",
+      "model_id": "R1_E4",
+      "contrast_id": "IAFF",
+      "restore": "estimates restore R1_E4",
+      "command": "margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D1_E4_IAT_PR",
+      "model_id": "D1_E4",
+      "contrast_id": "IAT",
+      "restore": "estimates restore D1_E4",
+      "command": "margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D1_E4_IADT_PR",
+      "model_id": "D1_E4",
+      "contrast_id": "IADT",
+      "restore": "estimates restore D1_E4",
+      "command": "margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "D1_E4_IAFF_PR",
+      "model_id": "D1_E4",
+      "contrast_id": "IAFF",
+      "restore": "estimates restore D1_E4",
+      "command": "margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R0C_E4_IAT_PR",
+      "model_id": "R0C_E4",
+      "contrast_id": "IAT",
+      "restore": "estimates restore R0C_E4",
+      "command": "margins, at(wp07_iat3=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R0C_E4_IADT_PR",
+      "model_id": "R0C_E4",
+      "contrast_id": "IADT",
+      "restore": "estimates restore R0C_E4",
+      "command": "margins, at(wp07_iadt2=(0.5 0.75)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    },
+    {
+      "operation_id": "R0C_E4_IAFF_PR",
+      "model_id": "R0C_E4",
+      "contrast_id": "IAFF",
+      "restore": "estimates restore R0C_E4",
+      "command": "margins, at(wp07_iaff2=(0.5 1)) predict(pr) vce(delta) level(95) pwcompare(effects) mcompare(noadjust)",
+      "captures": [
+        "r(at)",
+        "r(b)",
+        "r(V)",
+        "r(error)",
+        "r(table)",
+        "r(b_vs)",
+        "r(V_vs)",
+        "r(error_vs)",
+        "r(table_vs)",
+        "r(L)"
+      ],
+      "difference_orientation": "higher_minus_lower_verify_against_r_at_and_r_L_not_positional_assumption",
+      "output_units": "probabilities_0_to_1_and_differences_times_100_percentage_points",
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    }
+  ],
+  "multiplicity": {
+    "family_id": "PRIMARY_SIX",
+    "m": 6,
+    "nominal_alpha": 0.05,
+    "method": "Holm_step_down",
+    "test_type": "one_coefficient_Wald_null_in_core_model",
+    "formula": "min(1,max_{j<=i}((6-j+1)*p_(j)))",
+    "missing_slots": "retain_null_raw_and_adjusted_p_with_reason; reserve_unrejected_slots; never_reduce_m",
+    "tie_order": "raw_p_then_slot_id",
+    "conditional_on_underlying_tests": true,
+    "network_validity_claim": false,
+    "intervals_simultaneous": false
+  },
+  "operation_ceiling": {
+    "fits": 5,
+    "attempts_per_fit": 1,
+    "retries": 0,
+    "primary_Wald_tests": 6,
+    "margins_calls": 15,
+    "probability_endpoints": 30,
+    "probability_differences": 15,
+    "Holm_passes": 1,
+    "iteration_limit_per_fit": 100,
+    "postestimation_retries": 0
+  },
+  "failure_rules": [
+    "pre_fit_block_skips_named_fit_with_reason",
+    "fit_failure_or_sample_mismatch_invalidates_that_model_no_replacement",
+    "stop_whole_run_on_source_custody_or_cohort_failure",
+    "independent_named_model_may_proceed_only_with_its_own_pre_fit_gates",
+    "margins_unavailable_does_not_erase_estimable_coefficient_test",
+    "raw_test_p_must_be_finite_in_0_to_1_and_Wald_df_one_else_unavailable",
+    "coefficient_test_unavailable_never_filled_from_extensions",
+    "no_automatic_pooling_or_releveling_beyond_adopted_mapping",
+    "no_automatic_Firth_probit_LPM_bootstrap_or_LCA",
+    "preserve_failed_partial_and_successful_packets"
+  ],
+  "execution_envelope": {
+    "present_status": "NOT_AUTHORIZED_NOT_OPERATIONALLY_BOUND",
+    "required_new_authority": "exact_held_source_candidate_then_separately_bounded_native_artificial_test_and_restricted_participant_scope",
+    "route": "Stata_MCP_only_no_shell_Stata_or_Python_R_estimates",
+    "maximum_future_carrier_loads_proposed": 1,
+    "memory_only_preparation": true,
+    "participant_dataset_exports": false,
+    "participant_predictions": false,
+    "KEY_or_identifiers": false,
+    "output_location": "fresh_leaf_beneath_existing_restricted_local_custody_after_exact_path_acl_ignore_and_retention_binding",
+    "outputs": [
+      "restricted_support_checks.csv",
+      "model_status.csv",
+      "coefficient_covariance_matrices_native_full_precision",
+      "primary_six_tests.csv",
+      "probability_contrasts.csv",
+      "deviations_and_native_receipts"
+    ],
+    "logs": "inspect_ordinary_and_MCP_spill_destinations_before_dispatch",
+    "soft_timeout": "bind_to_actual_MCP_capability_in_future_scope; not_a_native_exit_guarantee",
+    "hard_kill_guarantee": false,
+    "on_busy_or_timeout": "no_replacement_or_retry; inspect_owned_status_and_preserve_evidence; stop_further_dispatch",
+    "no_deadline_extension_by_this_design": true
+  },
+  "reporting": {
+    "coefficient_precision": "retain_native_double_matrices_do_not_round_before_comparison",
+    "probability_CI": "pointwise_95_conditional_delta_not_simultaneous",
+    "model_comparisons": "probability_summaries_not_raw_logit_coefficient_change_as_causal_or_pure_adjustment_effect",
+    "extensions": "supporting_not_additional_primary_discoveries",
+    "common_sample": "R0C_vs_R0_changes_sample;R0C_vs_D0_compares_different_outcomes_not_causal_difference",
+    "all_outputs_restricted_until_exact_release_review": true,
+    "delta_intervals": "unclipped_nominal_delta_limits_can_extend_beyond_probability_bounds; no_silent_clipping"
+  },
+  "excluded": [
+    "C2",
+    "correlation_execution",
+    "historical_fit_grids",
+    "LCA_and_class_assignments",
+    "new_identifiers",
+    "new_filters",
+    "data_repair",
+    "qualitative_recoding",
+    "global_settings",
+    "worker_or_bootstrap_development"
+  ],
+  "contrast_support": {
+    "scope": "each_intended_model_mask_before_fitting",
+    "exact_endpoint_minimum_observed_n": 1,
+    "requires_both_named_endpoints": true,
+    "retain_endpoint_by_outcome_counts": "restricted_only",
+    "marginal_presence_not_joint_overlap_or_precision_certificate": true,
+    "on_missing_endpoint": "mark_only_affected_contrast_unavailable_with_reason; do_not_block_otherwise_estimable_coefficient_test",
+    "automatic_endpoint_substitution": false
+  }
+}
