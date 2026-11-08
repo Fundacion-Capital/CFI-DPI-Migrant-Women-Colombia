@@ -1,4 +1,24 @@
 # Current academic research revision workplan
+**Current E.4 renewed native checkpoint — 8 November 2026:** The caller-only
+`_all` correction and fresh restricted output bindings were resealed in a new
+batch; all scientific blocks and canonical holds are unchanged. Ten exact
+Stata MCP artificial cases passed in ten dispatches, using seven synthetic
+estimation attempts: five accepted working models, one deliberate rank hold
+and one captured separation error. No native retries, participant loads/fits,
+timeouts or C2 execution occurred. Start with
+`wp07-e4-native-validation-renewed/README.md`, CASE_STATUS.csv and VALIDATION.json.
+All208 entry fingerprints were checked;206 immutable entries and two exact
+checkpoint before-images remain preserved after this navigation update.
+The earlier failed batch stays unchanged. NV04 had a preserved offline-checker
+false alarm about blank versus dot missing tokens; no native or approved
+test condition failed, no output was changed and no case was rerun.
+Final sealed native state is N0/K0 with ordinary logs closed; read-only session
+inventory is ready/nonbusy. Artificial acceptance is not actual participant
+support, a full-pipeline run, scientific/institutional approval or release
+clearance. Next: prepare the exact restricted grouped-support/five-nomination
+execution scope, seeking separate authority before any participant load or fit.
+C2 HOLD, institutional/release limits and B/C/D/G.1 whole-paper work remain.
+Earlier checkpoints below retain their original dated meanings.
 **Current E.4 native-attempt checkpoint — 8 November 2026:** The owner authorized
 ten artificial-only selections, at most seven synthetic fits, no retries.
 Exactly one request, NV01, was dispatched through Stata MCP. Empty N0/K0

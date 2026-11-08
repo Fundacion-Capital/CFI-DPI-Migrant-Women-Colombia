@@ -1,0 +1,11 @@
+case_id,status,dispatches,synthetic_fits_lower,synthetic_fits_upper,retries
+NV01,PASS,1,0,0,0
+NV02a,PASS,1,0,0,0
+NV02b,PASS,1,0,0,0
+NV02c,PASS,1,0,0,0
+NV02d,PASS,1,0,0,0
+NV02e,PASS,1,0,0,0
+NV03,PASS,1,5,5,0
+NV04,PASS,1,0,0,0
+NV05,PASS,1,1,1,0
+NV06,PASS,1,1,1,0

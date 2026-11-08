@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-08",
+  "status": "RENEWED_CALLER_ONLY_SOURCE_EXACT_AUTHORIZED_NOT_DISPATCHED",
+  "authorization": "AUTHORIZATION.json",
+  "prior_scope": "4 Academic Submission/wp07-e4-source-integration/NATIVE_VALIDATION_PLAN.json",
+  "session_id": "cfi_e4_nv_20261108_b",
+  "owned_session": "name_absent_at_read_only_precheck; first_NV01_call_may_initialize_empty_runtime; no separate_probe_case",
+  "maximum_test_selections": 10,
+  "maximum_synthetic_fits": 7,
+  "retries": 0,
+  "participant_loads": 0,
+  "participant_fits": 0,
+  "C2": "HOLD",
+  "cases": [
+    {
+      "id": "NV01",
+      "case": "GROUPINGS",
+      "maximum_fits": 0,
+      "nv_case": null,
+      "assembly": [
+        "NV01_prefix",
+        "groupings",
+        "NV01_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 5802,
+      "sha256": "f9f6f51cd0e111e0435d83b89b78ad717502913b44349f22bb2d2584b179bcee"
+    },
+    {
+      "id": "NV02a",
+      "case": "HOLM_1",
+      "maximum_fits": 0,
+      "nv_case": 1,
+      "assembly": [
+        "NV02_prefix",
+        "holm",
+        "NV02_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 4767,
+      "sha256": "d4f04021ab76145798ff8368feecd0b1ecee385d48b675f4a5632ab6b99b7cf9"
+    },
+    {
+      "id": "NV02b",
+      "case": "HOLM_2",
+      "maximum_fits": 0,
+      "nv_case": 2,
+      "assembly": [
+        "NV02_prefix",
+        "holm",
+        "NV02_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 4767,
+      "sha256": "0d9022dad7f63bff03cbb51f216458fff4a2c51afe1f190c642a7c69bf939ade"
+    },
+    {
+      "id": "NV02c",
+      "case": "HOLM_3",
+      "maximum_fits": 0,
+      "nv_case": 3,
+      "assembly": [
+        "NV02_prefix",
+        "holm",
+        "NV02_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 4767,
+      "sha256": "e8b24b548108894d3011fc33e06b341063e8d8c06235e4c73af683f1b4c15830"
+    },
+    {
+      "id": "NV02d",
+      "case": "HOLM_4",
+      "maximum_fits": 0,
+      "nv_case": 4,
+      "assembly": [
+        "NV02_prefix",
+        "holm",
+        "NV02_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 4767,
+      "sha256": "c52af8851e4e0ba3bc2c717ad8e54839f4d5b5fe42929b23bf812e12113112a8"
+    },
+    {
+      "id": "NV02e",
+      "case": "HOLM_5",
+      "maximum_fits": 0,
+      "nv_case": 5,
+      "assembly": [
+        "NV02_prefix",
+        "holm",
+        "NV02_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 4767,
+      "sha256": "621f73a7cb8bc3ec67a75b5552b62fae59a38de5f32f26c9035651871059cc30"
+    },
+    {
+      "id": "NV03",
+      "case": "SUPPORTED",
+      "maximum_fits": 5,
+      "nv_case": "SUPPORTED",
+      "assembly": [
+        "NV_MODEL_prefix",
+        "groupings",
+        "estimation_body",
+        "NV_MODEL_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 33857,
+      "sha256": "c8b5e91365f3b0ae35bf3835c283cf4e2e3f2a87f26af72516ccc7914c8b267c"
+    },
+    {
+      "id": "NV04",
+      "case": "BLOCKED",
+      "maximum_fits": 0,
+      "nv_case": "BLOCKED",
+      "assembly": [
+        "NV_MODEL_prefix",
+        "groupings",
+        "estimation_body",
+        "NV_MODEL_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 33855,
+      "sha256": "2ce9f4b11b85a64ed1d7be09b69b015b192756e1cea0d127fdf1f0f05470c08c"
+    },
+    {
+      "id": "NV05",
+      "case": "RANK",
+      "maximum_fits": 1,
+      "nv_case": "RANK",
+      "assembly": [
+        "NV_MODEL_prefix",
+        "groupings",
+        "estimation_body",
+        "NV_MODEL_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 33852,
+      "sha256": "b3879d66bf4c9723125e3722e4076445f9da25f7663be0c249981d0cd6254e10"
+    },
+    {
+      "id": "NV06",
+      "case": "SEPARATION",
+      "maximum_fits": 1,
+      "nv_case": "SEPARATION",
+      "assembly": [
+        "NV_MODEL_prefix",
+        "groupings",
+        "estimation_body",
+        "NV_MODEL_suffix"
+      ],
+      "selection_path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/selection.do",
+      "working_dir": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06",
+      "timeout": 60,
+      "session_id": "cfi_e4_nv_20261108_b",
+      "status": "AUTHORIZED_NOT_DISPATCHED",
+      "attempts": 0,
+      "bytes": 33858,
+      "sha256": "dc85d723b20d2d9624e5af5b6051f6df07101b9442841c174f04a73ffa81ec21"
+    }
+  ],
+  "execution_controls": {
+    "only_tool": "Stata MCP stata_run_selection",
+    "never": "stata_run_file,shell_Stata,Python_R_estimates,full_master,full_analysis",
+    "timeout_per_case_seconds": 60,
+    "working_dir": "each_absolute_restricted_case_directory",
+    "ordinary_log": "absolute_case_directory/native.log",
+    "admission": "empty_memory_no_active_cmdlog; preexisting ordinary logs allowed only for recognized provider capture filename; otherwise fail_without_clearing",
+    "success_cleanup": "only newly owned artificial memory and stored artificial estimates, within same test selection; no packet deletion",
+    "failure": "first unexpected error/failed assertion/timeout stops whole batch; retain state and packets, do not repair/retry or dispatch successors",
+    "current_host_binding": "callable MCP endpoint, exact host launch/temp/log configuration not independently established; not inferred from installed extension source",
+    "provider_logs": "may be outside working_dir: installed-source temp captures/debug and extension logs spill; audit actual returned paths separately",
+    "provider_timeout_recovery": "installed source can recover/recreate worker on timeout; live implementation not bound; no hard-stop or no-provider-reset guarantee",
+    "caller_recovery_or_replacement_authorized": false,
+    "all_payloads_and_outputs_artificial_only": true
+  },
+  "preservation": {
+    "source_files_and_canonical_holds_unchanged": true,
+    "no_global_settings_or_services_changes": true,
+    "keep_all_requests_responses_logs_partial_successful_failed_and_undispatched_packets": true,
+    "interim_retention": "retain_without_deletion_or_handover; no institutional period invented"
+  },
+  "not_approval": "Artificial technical validation is not real support, scientific/institutional or release clearance",
+  "prior_failed_contract": "4 Academic Submission/wp07-e4-native-validation-execution/RUN_CONTRACT.json",
+  "caller_change": "Exactly two log query all -> log query _all commands per request, plus fresh output-directory bindings; no scientific block changes"
+}

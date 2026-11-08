@@ -1,0 +1,794 @@
+{
+  "date": "2026-11-08",
+  "package": "E.4 caller-only correction and renewed artificial batch",
+  "result": "PASS_TEN_CASE_ARTIFICIAL_NATIVE_ACCEPTANCE_ONLY",
+  "baseline_head": "02daa75b4631d9a1ad7b107d88e7a2d0867fd64c",
+  "authorization": "AUTHORIZATION.json",
+  "immutable_contract": "RUN_CONTRACT.json",
+  "contract_sha256": "876ea21e109ebd1704a0ff375dcd2255d87dc6a9fe3a8fba4b706d05a4389f71",
+  "actual_counts": {
+    "authorized_selections": 10,
+    "dispatched": 10,
+    "passed": 10,
+    "unexpected_native_or_contract_failures": 0,
+    "not_dispatched": 0,
+    "synthetic_estimation_attempts_lower": 7,
+    "synthetic_estimation_attempts_upper": 7,
+    "native_completed_logistic_results": 6,
+    "accepted_supported_working_models": 5,
+    "deliberate_postfit_rank_holds": 1,
+    "expected_captured_native_fit_errors": 1,
+    "retries": 0,
+    "extra_native_probes": 0,
+    "participant_loads": 0,
+    "participant_fits": 0,
+    "participant_exports": 0
+  },
+  "cases": [
+    {
+      "id": "NV01",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV02a",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV02b",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV02c",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV02d",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV02e",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV03",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 5,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV04",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 0,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV05",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 1,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    },
+    {
+      "id": "NV06",
+      "status": "PASS",
+      "dispatches": 1,
+      "retries": 0,
+      "synthetic_attempts": 1,
+      "rc": 0,
+      "final_N": 0,
+      "final_K": 0
+    }
+  ],
+  "caller_change": {
+    "corrected_commands": 20,
+    "requests": 10,
+    "only_other_change": "fresh restricted output-directory bindings",
+    "source_blocks_changed": 0,
+    "canonical_scripts_changed": 0,
+    "canonical_entry_holds": 3,
+    "independent_estimation_stop_preserved": true
+  },
+  "root_checks": {
+    "entry_fingerprints_checked": 208,
+    "immutable_predecessors_unchanged": 206,
+    "expected_navigation_changes": [
+      "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "4 Academic Submission/00_meta/current_workplan.json"
+    ],
+    "beforeimages_exact": 2,
+    "all_ten_requests_and_ordinary_log_seals_match": true,
+    "task_rows": 41,
+    "changed_tasks": [
+      "E.4"
+    ],
+    "native_source_checker": "PASS_SOURCE_ONLY; not used as native proof",
+    "source_blocks_unchanged": 9
+  },
+  "native_runtime": {
+    "tool": "Stata MCP stata_run_selection",
+    "session_id": "cfi_e4_nv_20261108_b",
+    "timeout_per_case_seconds": 60,
+    "timeouts_observed": 0,
+    "caller_worker_resets_or_replacements": 0,
+    "final_inventory": {
+      "session_id": "cfi_e4_nv_20261108_b",
+      "state": "ready",
+      "created_at": "2026-11-08T16:03:25.010870",
+      "last_activity": "2026-11-08T16:12:39.544801",
+      "is_busy": false,
+      "is_default": false,
+      "error": null
+    },
+    "final_native_data_state": {
+      "N": 0,
+      "K": 0,
+      "evidence": "NV06 sealed success-only epilogue, not an extra probe"
+    },
+    "final_ordinary_logs": "Each sealed case's final log query _all reported (closed)",
+    "stored_artificial_estimates": "Success-only epilogue estimates drop _all and ereturn clear ran in each completed case",
+    "native_version_observed": 19,
+    "flavor_or_username_requeried_in_this_batch": false,
+    "hard_cancellation_guarantee": false
+  },
+  "provider_logging": {
+    "outside_case_temp_capture_paths_observed": true,
+    "one_full_response_spill": true,
+    "short_NV03_MCP_response_truncated": true,
+    "full_spill_original_bytes": 51091,
+    "full_spill_original_sha256": "bcd75d5c2466f9d5b969bc6327b469692b4a429b7aed2d0adb07dea6bc350545",
+    "original_preserved_in_place": true,
+    "private_complete_copy_normalization": [
+      "CRLF_to_LF",
+      "one_final_LF_added"
+    ],
+    "copy_exact_after_only_declared_normalization": true,
+    "logs_universally_contained": false,
+    "hard_cancellation_guaranteed": false
+  },
+  "offline_audit_exception": {
+    "case": "NV04",
+    "preserved_original": "NV04/ARTIFACT_AUDIT_FAILURE.txt",
+    "cause": "offline verifier expected literal dot; export delimited wrote empty numericmissing fields",
+    "native_or_approved_contract_condition_failed": false,
+    "sealed_native_missing_assertions_passed": true,
+    "read_only_adjudication": true,
+    "source_or_output_edit": false,
+    "native_retry": false,
+    "resumed_only_undispatched_cases": [
+      "NV05",
+      "NV06"
+    ]
+  },
+  "evidence": {
+    "private_root": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1",
+    "independent_execution_receipt_sha256": "75f1a78e4f1f532dde5c208341b109b9fed2bab240700e3ac4a9edd39b314531",
+    "receipt_counts_are_estimation_attempts_not_all_successful_models": true
+  },
+  "independent_review": {
+    "pre_dispatch": "PASS_PRE_DISPATCH_SOURCE_REVIEW_ONLY",
+    "final": "PASS_ARTIFICIAL_NATIVE_EXECUTION_AND_DOCUMENTARY_AUDIT_ONLY",
+    "critical": 0,
+    "important_unresolved": 0,
+    "receipt_sha256": "51073525d9d07d44a83fbbe5aa44c9d11a6626c28d93497fccde6267912215db",
+    "final_clerical_reseal_completed": true
+  },
+  "scope_limits": {
+    "participant_loads": 0,
+    "participant_model_loads": 0,
+    "participant_fits": 0,
+    "participant_exports": 0,
+    "scientific_gates_promoted": false,
+    "full_master_preparation_pipeline_validated": false,
+    "actual_grouped_support_verified": false,
+    "dependence_adequacy_verified": false,
+    "institutional_or_release_approval": false,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "live_Overleaf_sync": 0,
+    "C2": "HOLD",
+    "future_native_authority_remaining": 0,
+    "persistent_settings_or_service_changes": 0
+  },
+  "next": "Prepare exact restricted grouped-support/five-nomination scope; obtain separate participant-load/fit authorization before execution",
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/AUDIT.md",
+      "bytes": 5979,
+      "sha256": "5a230cf2991efbf361ce8eaf3ddb57e62014dff049d3f3a7eba47ed972fa4a59"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/AUTHORIZATION.json",
+      "bytes": 484,
+      "sha256": "1573238673a49901aa1048142580b4e60c7b1e5e8c30542339ce4de4cf81de68"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/CALLER_DIFF.json",
+      "bytes": 2949,
+      "sha256": "3a854bf9fd3e9a995846815631293ad9b42ebc4883be5ee9f55fea8eeecde2b8"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/CASE_STATUS.csv",
+      "bytes": 261,
+      "sha256": "6436fa25dafbf1a41ee9788180ec23fd3f9306a954a045b0f893af76f2237648"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/COMMIT_MESSAGE.txt",
+      "bytes": 1298,
+      "sha256": "0d5971260958b1abfc3a38727e0053bfe17a0215da470b387fc9234d31daaadd"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/INPUTS.json",
+      "bytes": 44954,
+      "sha256": "4209d2b345b884b5efd18e717e76bc55100b7c346eafb83464b2d546148fe2a7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/README.md",
+      "bytes": 5082,
+      "sha256": "5871d46808efd904375193bc516c097902eee4de85cfc953d20610356ec41151"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/RUN_CONTRACT.json",
+      "bytes": 10612,
+      "sha256": "876ea21e109ebd1704a0ff375dcd2255d87dc6a9fe3a8fba4b706d05a4389f71"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e4-native-validation-renewed/TASK_REGISTER.csv",
+      "bytes": 11277,
+      "sha256": "60a70c8caa45a3eea4f4279f50c795432f5e0544acd85026d547c4ab96f4282d"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 48504,
+      "sha256": "9512b52ae5890c00561ba48152e1805051fb893392d25ca756b800d67c092717"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 7709,
+      "sha256": "7cd165a81e286466b7bcc2028e63c257dda575a697230295f0902361106b53d9"
+    }
+  ],
+  "protected_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/00_CURRENT_WORKPLAN.md",
+      "bytes": 47017,
+      "sha256": "366a7f9901b056ca9d7a39b2b58ced2bd2267e29cc47f1b137441ce8e8c78817"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/ARTIFACT_MANIFEST.json",
+      "bytes": 30899,
+      "sha256": "fdb9099877b5240e38d576f8045d44c36b272d662f01734031ee887e66ea5eff"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/current_workplan.json",
+      "bytes": 6704,
+      "sha256": "b291336123359ef4f6ab0ea0eb501db59cc255d0d715d49a48273b35a056fae2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/EXECUTION_MANIFEST.json",
+      "bytes": 10612,
+      "sha256": "876ea21e109ebd1704a0ff375dcd2255d87dc6a9fe3a8fba4b706d05a4389f71"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/FINAL_REVIEW_RECEIPT.json",
+      "bytes": 1691,
+      "sha256": "51073525d9d07d44a83fbbe5aa44c9d11a6626c28d93497fccde6267912215db"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/INDEPENDENT_EXECUTION_RECEIPT.json",
+      "bytes": 76453,
+      "sha256": "75f1a78e4f1f532dde5c208341b109b9fed2bab240700e3ac4a9edd39b314531"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/INTENT.json",
+      "bytes": 818,
+      "sha256": "29be130a5b8d36fed9dee66668d8816c9ff1059d08667ab813fd51715a077b70"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/MCP_RESPONSE.json",
+      "bytes": 6995,
+      "sha256": "f4e482b812a005c9ac84fc0c4fd4cc489a03d4004be6f1e77fcb568b82995523"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 6645,
+      "sha256": "6cbae850f979aa303a6407085ee1436ca092b83095d18f5de1b1580ba8f10b85"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/native.log",
+      "bytes": 5732,
+      "sha256": "0923119780c0acfe5065811eb32a613d270b8273c2297c80f17a9d961a3f793d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/OUTCOME.json",
+      "bytes": 1658,
+      "sha256": "7427c53eb91303a7e3fa0636e3158772608c82b3433cc4df8a04266ddd993fb6"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV01/selection.do",
+      "bytes": 5802,
+      "sha256": "f9f6f51cd0e111e0435d83b89b78ad717502913b44349f22bb2d2584b179bcee"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/e4_primary_tests.csv",
+      "bytes": 460,
+      "sha256": "1861eaad3b0facbc12d3a44e511e55efa8bd2ccedf832118a86dc84cd9d7135d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/INTENT.json",
+      "bytes": 675,
+      "sha256": "7daf96deb9fe803872050c2f5b161c35e4bdaf7e5135445dff9b6f9e4e937e22"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/MCP_RESPONSE.json",
+      "bytes": 5373,
+      "sha256": "2b6c9bd93afaad90ae69e23c78b05020d51ec152f1bef2fac093f75c9f9edf7b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 5062,
+      "sha256": "511d24a4d2457b52fce91fb52eed8f47b601ff82910f3c2d3b0f683b153ccbf0"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/native.log",
+      "bytes": 4180,
+      "sha256": "d00265647aa3e6729d66a4f7f516dcdc4550093c08326d1ba4c3395ca2e35678"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/OUTCOME.json",
+      "bytes": 2210,
+      "sha256": "989c15367a40e9099201747b240010b8ad9fa8c39218a183685cf09f5dd6ef45"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02a/selection.do",
+      "bytes": 4767,
+      "sha256": "d4f04021ab76145798ff8368feecd0b1ecee385d48b675f4a5632ab6b99b7cf9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/e4_primary_tests.csv",
+      "bytes": 420,
+      "sha256": "909568627eabed33d05f9a8bf4ca73631d9691c6555137f6e792ec9e0ad4f68a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/INTENT.json",
+      "bytes": 675,
+      "sha256": "0e93173df4d18ef40395d769c580e2cd278b26f98a192656179e21b11ed6de44"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/MCP_RESPONSE.json",
+      "bytes": 5373,
+      "sha256": "313211adad9452d5038ce4815886e74a384a494de5834092d4e093a311468c3f"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 5062,
+      "sha256": "16ba7cd88b7b1b2c71596057581369070ba537db86c07cbfd0903452392e9d70"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/native.log",
+      "bytes": 4236,
+      "sha256": "87cb6128079147a799e9cdd4d3ee5b42c6decfedf859e7952d1d17f9a27a78bd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/OUTCOME.json",
+      "bytes": 2170,
+      "sha256": "d5b387ab860d77bff50b0b5d5b671e49a502e0fb540d22ec8dbcbd857aad36fd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02b/selection.do",
+      "bytes": 4767,
+      "sha256": "0d9022dad7f63bff03cbb51f216458fff4a2c51afe1f190c642a7c69bf939ade"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/e4_primary_tests.csv",
+      "bytes": 388,
+      "sha256": "947e53dd6a69e0b0696dd330595c8dbc68e46af2356207b26e25ced82030caab"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/INTENT.json",
+      "bytes": 675,
+      "sha256": "d7df43ede180d4d44e4dda6c009198345d90a09cf85bbfd40e1902bbcc815199"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/MCP_RESPONSE.json",
+      "bytes": 5373,
+      "sha256": "946cacd5133e376a1797aaf05aab686cf42657e58636a61d910cd0a58fe0bfbe"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 5062,
+      "sha256": "b7bec7eb69c4033a629cd35c1635686677668726adbdea37478ed15a454eaac9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/native.log",
+      "bytes": 4180,
+      "sha256": "1f007f10b471321b6e4c12110d4aa17be032b3516de71974e05c10c7d8fc40fd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/OUTCOME.json",
+      "bytes": 2138,
+      "sha256": "d3838e5de5d33d87f3657569c01836f53cfc594e1b1d96f0f22a4329c4ec2e64"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02c/selection.do",
+      "bytes": 4767,
+      "sha256": "e8b24b548108894d3011fc33e06b341063e8d8c06235e4c73af683f1b4c15830"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/e4_primary_tests.csv",
+      "bytes": 292,
+      "sha256": "54eaaa654a0339d22e41d0107b616470c5e965e98789278f0b326aa8ef5209b8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/INTENT.json",
+      "bytes": 675,
+      "sha256": "9ede9c2c1d5dd5c9aa9798a290aac4b7059638441e38320e812d6dfc236c6b0c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/MCP_RESPONSE.json",
+      "bytes": 5373,
+      "sha256": "799eddde5bf59b787d734eb48db560c7c28e43392661dd31067b55933e5a2e14"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 5062,
+      "sha256": "2da85c54b57de7e3d27cbd46978c1b64c02d1188b03cfe2368e3032553d4cea6"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/native.log",
+      "bytes": 4238,
+      "sha256": "a9ea6ac5784aafca05d7ac13201247f29a6624194861517653b014f4aba0a8db"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/OUTCOME.json",
+      "bytes": 2042,
+      "sha256": "5ad3a20f81e809cae0885afcbb4e26b27bfc9042882ead47fffbb3bdabe54dbe"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02d/selection.do",
+      "bytes": 4767,
+      "sha256": "c52af8851e4e0ba3bc2c717ad8e54839f4d5b5fe42929b23bf812e12113112a8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/e4_primary_tests.csv",
+      "bytes": 298,
+      "sha256": "877d3bd65cce9460ae5aacd37247b010c900e02c2a2d3ca1c59995fd5df6e838"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/INTENT.json",
+      "bytes": 675,
+      "sha256": "ba176e9247337ec24a064a80bd798827e1a97b858bed97c9af52f2da586e6783"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/MCP_RESPONSE.json",
+      "bytes": 5373,
+      "sha256": "4f6b0bc298b712e946af59ecb72cbd653a241e16bf6b6778df8613aa4fb26f77"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 5062,
+      "sha256": "473508db933f5e6841f60bfac4c030fa72a50788d1bc524d3952445a7f79385b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/native.log",
+      "bytes": 4238,
+      "sha256": "236d73fd7700a64033c9a451f25e576886c9a52cc28534797cea43edba124ac2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/OUTCOME.json",
+      "bytes": 2048,
+      "sha256": "62520df0ff29817d5a8174b82709804bd687c6c3fd0372d3d660d7fe6d321833"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV02e/selection.do",
+      "bytes": 4767,
+      "sha256": "621f73a7cb8bc3ec67a75b5552b62fae59a38de5f32f26c9035651871059cc30"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/e4_model_status.csv",
+      "bytes": 435,
+      "sha256": "6da16229b2f7b674c85ad689775d3b1eeea89c84931d84c36dcb1164eb8d661c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/e4_native_matrices.csv",
+      "bytes": 193262,
+      "sha256": "438274e1e510d42d93ec7f0145d3757d6bba4a5eb79b03bc011c019300434bef"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/e4_primary_tests.csv",
+      "bytes": 422,
+      "sha256": "b210ab5f641f2836f8f7485fe2adeb8844ccb5c55f6815ee93efaf14f5511015"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/e4_probabilities.csv",
+      "bytes": 7051,
+      "sha256": "54da43b6e6fc892c93fbae4fb8004f30f5a8a6105444ea572b17a6d805d08247"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/e4_support.csv",
+      "bytes": 8225,
+      "sha256": "4b0af85bee3f7c979bf4e647b58d311676e14f5bb1ce1c537f04afc39a4aea0a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/INTENT.json",
+      "bytes": 706,
+      "sha256": "e3aa6caeec02bc321a89a7f0152cf2725f210243996ba9af4e0db7c28c8a9290"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/MCP_RESPONSE.json",
+      "bytes": 1489,
+      "sha256": "1587e2056354fe0e35801fc85b28afc3c506c29f8f20eacdf6fa622663caf9c9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 1327,
+      "sha256": "15019ea95289a60c11187d72ca7f88e214788951d24119d3d84b400c50171b26"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/native.log",
+      "bytes": 54598,
+      "sha256": "bf8f518bbaf4728d4d333db1aa549871cb1a48344fc73773172c3fa9481a146b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/OUTCOME.json",
+      "bytes": 5262,
+      "sha256": "87c97b2dcc67556327befa658883b69acb422e26044c99974e9a7b1e6c23f26c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/PROVIDER_SPILL_COMPLETE.txt",
+      "bytes": 50009,
+      "sha256": "05740082618b7af7621fcc7bb678d2406feeb4cb91ff3f591aaef2a92c2551e3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV03/selection.do",
+      "bytes": 33857,
+      "sha256": "c8b5e91365f3b0ae35bf3835c283cf4e2e3f2a87f26af72516ccc7914c8b267c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/ARTIFACT_AUDIT_FAILURE.txt",
+      "bytes": 226,
+      "sha256": "fd6a0c054c5b50e196e7f910a8663608ac61554c409be4880d8622cede5d8644"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/e4_model_status.csv",
+      "bytes": 410,
+      "sha256": "7fc305394bb0973a47272f725c4efbe0d70f6e111af263e521ff8aa42d11cca1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/e4_native_matrices.csv",
+      "bytes": 61,
+      "sha256": "426e0ca3480728752d3d253e82dbebbb9d5c80315cb124dca02ed2300aec50ba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/e4_primary_tests.csv",
+      "bytes": 308,
+      "sha256": "b7018b60fce702c120909aa0bc73fa8bc8713628d894868b8a17bd6eb1798d01"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/e4_probabilities.csv",
+      "bytes": 3208,
+      "sha256": "c3948fa64cde4103dd12a3585c17c650e4fa0d9edb2937c620126cb62d1f7d39"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/e4_support.csv",
+      "bytes": 8225,
+      "sha256": "1e7754103947f0f6ea65c14e56204e3d2b232c7fa79e558eb69ed7fc3b2d443b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/INTENT.json",
+      "bytes": 706,
+      "sha256": "b50b9b9acfa7565e2b1ac1b7202c08f096fa55c0b1539a2040aedeb4582d5924"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/MCP_RESPONSE.json",
+      "bytes": 32942,
+      "sha256": "e9132414dd9f16f410895c303930f6c8237c644ea56cb7e621594259e3113a81"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 31660,
+      "sha256": "c1063f12526c7fb8259039187e1f95fcdea9764dbeba4e662fac020cfd213c60"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/native.log",
+      "bytes": 36336,
+      "sha256": "bb6f0afdecae87f43b113b7ebca9de88fce51b1433eaa21c47d40a735ad402a5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/OUTCOME.json",
+      "bytes": 5092,
+      "sha256": "9667e802c2d85ec017981cce97d05e44beb11bc66225c44b78335ee8f881ac49"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV04/selection.do",
+      "bytes": 33855,
+      "sha256": "2ce9f4b11b85a64ed1d7be09b69b015b192756e1cea0d127fdf1f0f05470c08c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/e4_model_status.csv",
+      "bytes": 394,
+      "sha256": "6725fbfc0132d93cbd910af2d44897a1ad764f54534a163fe84ba35fa194c6d6"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/e4_native_matrices.csv",
+      "bytes": 18077,
+      "sha256": "bd06350c5eee911a608f82897488acf2d62910e74b1d86d6cb901b25992634b5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/e4_primary_tests.csv",
+      "bytes": 308,
+      "sha256": "b7018b60fce702c120909aa0bc73fa8bc8713628d894868b8a17bd6eb1798d01"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/e4_probabilities.csv",
+      "bytes": 3208,
+      "sha256": "c3948fa64cde4103dd12a3585c17c650e4fa0d9edb2937c620126cb62d1f7d39"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/e4_support.csv",
+      "bytes": 3485,
+      "sha256": "b340ea0cc3b6cdf80b39f01b5c4cd28875cb700e26cc3d57e7e8b55ed30d9e4d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/INTENT.json",
+      "bytes": 706,
+      "sha256": "a2dd18012b412dd524b80039336baf9af43aa31f944703e78cbafb22431e8221"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/MCP_RESPONSE.json",
+      "bytes": 34714,
+      "sha256": "9474d8fd494cd5c472d64b7abbf885f36d7cbed336be18702589cc0ca67ce1f4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 33399,
+      "sha256": "42ad3299af781024c34a9775a2849f23706359c180b45c3c00289eda56b9639c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/native.log",
+      "bytes": 38078,
+      "sha256": "c6fa802802ed694b7732d908ea1f9d385406340da61006c3eef42a068200b1af"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/OUTCOME.json",
+      "bytes": 4463,
+      "sha256": "7e0aef3f790706f3e5fa8ac7ab2be8f77fe5bb072dbe4a51b0dbcad360b076da"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV05/selection.do",
+      "bytes": 33852,
+      "sha256": "b3879d66bf4c9723125e3722e4076445f9da25f7663be0c249981d0cd6254e10"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/e4_model_status.csv",
+      "bytes": 380,
+      "sha256": "8f46720790a05d3cb19e695966e9983ea79c7e32e28b146ddbf953d59b1e8cea"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/e4_native_matrices.csv",
+      "bytes": 61,
+      "sha256": "426e0ca3480728752d3d253e82dbebbb9d5c80315cb124dca02ed2300aec50ba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/e4_primary_tests.csv",
+      "bytes": 308,
+      "sha256": "b7018b60fce702c120909aa0bc73fa8bc8713628d894868b8a17bd6eb1798d01"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/e4_probabilities.csv",
+      "bytes": 3208,
+      "sha256": "c3948fa64cde4103dd12a3585c17c650e4fa0d9edb2937c620126cb62d1f7d39"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/e4_support.csv",
+      "bytes": 3481,
+      "sha256": "cc0ebc188a7c540670beb37c9b38ac654c95b6f8a086bf9de051056a9052b8a5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/INTENT.json",
+      "bytes": 707,
+      "sha256": "15405c30579bdf8f1a8500781aafec5b4a4dc889c7882558bbd81be70996e39b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/MCP_RESPONSE.json",
+      "bytes": 33112,
+      "sha256": "8d1c817ec88edd48f5051c2bd482589099510002d545dc3a70dcfb5fd1b12bd7"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/MCP_RESPONSE_EXPANDED.txt",
+      "bytes": 31825,
+      "sha256": "8bb1fe69c31b49f220e80aae5ba2c177106a3557f2d83362021cad38c25d0659"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/native.log",
+      "bytes": 36498,
+      "sha256": "0382052c040fdeb2a89a7cabaea1c6cd8301a64794309f969b41ea83d28217f8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/OUTCOME.json",
+      "bytes": 4450,
+      "sha256": "527d1f315b137ee4c4007a36972f8cb9ae410a5c081f086fed469d0ca8808bd5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/NV06/selection.do",
+      "bytes": 33858,
+      "sha256": "dc85d723b20d2d9624e5af5b6051f6df07101b9442841c174f04a73ffa81ec21"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/PRE_DISPATCH_REVIEW.json",
+      "bytes": 813,
+      "sha256": "6385574572d07c5d62e4a9250bc758a54cf2edbd5f949d1e741722719fbd5f21"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e4-native-validation-20261108-r1/SESSION_LIST_AFTER_BATCH.json",
+      "bytes": 1333,
+      "sha256": "94f51b606020b407ff9cbc3d1ab7b187a96a13280781831cd2ba15e2b2a862d7"
+    }
+  ],
+  "completion_scope": "RENEWED_EXACT_BATCH_COMPLETED_AND_AUDITED_NOT_PARTICIPANT_ESTIMATION",
+  "process_local_settings_observed": [
+    "version 16",
+    "set varabbrev off",
+    "set more off",
+    "automatic provider seed command"
+  ],
+  "git": {
+    "baseline_head": "02daa75b4631d9a1ad7b107d88e7a2d0867fd64c",
+    "final_head": "02daa75b4631d9a1ad7b107d88e7a2d0867fd64c",
+    "index": [],
+    "diff_check_exit": 0,
+    "only_worktree_changes": [
+      "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "4 Academic Submission/00_meta/current_workplan.json",
+      "4 Academic Submission/wp07-e4-native-validation-renewed/"
+    ],
+    "existing_autocrlf_warning": "two navigation files now LF; Git warns future checkout may replace with CRLF; no Git settings edited; seals describe current working bytes"
+  }
+}

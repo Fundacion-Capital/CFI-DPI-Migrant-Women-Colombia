@@ -1,0 +1,21 @@
+WP07: Validate E4 artificial cases after caller-only _all correction
+
+Preserve the complete prior failed batch and create a separately authorized
+renewal with only20 all-to-_all caller corrections and fresh restricted output
+bindings; keep scientific blocks and all canonical entry/estimation holds intact.
+
+Record ten single-dispatch Stata MCP artificial cases and exactly seven
+estimation attempts: five supported working models, one deliberate rank hold
+and one captured separation error. Verify group mappings, fixed-six Holm
+missing/tie/boundary handling, masks/ranks, probability availability, native
+matrices, double-precision CSV readback and expected negative-case disposition.
+
+Preserve requests, intents, complete responses, logs, CSVs, external-spill
+evidence and the adjudicated offline missing-token false alarm. Reseal208
+entry artifacts, retain two checkpoint before-images and update only E.4 in
+the41-task register. Record independent source and final documentary audits.
+
+No participant data/model loads or fits, canonical/scientific changes, native
+retries, persistent settings/service changes, contacts, release or cloud synchronization.
+Keep Appendix C2 and all participant/institutional/release holds unchanged.
+Artificial acceptance does not authorize real-data estimation.
