@@ -1,0 +1,17 @@
+WP07: Map restricted E4 exhibits and quantitative interpretation
+
+Bind the six proposed main-paper/supplement exhibit slots to the unchanged
+native E4 aggregate ledgers, model masks, denominators and exact field selectors.
+Preserve all six primary tests, fixed-six Holm reporting and all fifteen fixed
+probability comparisons without significance-based selection.
+
+Keep numerical claim maps, results prose and perception-review findings in the
+Git-ignored restricted companion; tracked coordination files contain no new
+study estimates or small-cell tables. Distinguish academic measurement changes
+from historical replication and route the findings to B/C/D/G manuscript work.
+
+Audit source preservation, mapping coverage, units, rounding boundaries and
+current-checkpoint consistency. Advance E5 only to restricted map/draft completion,
+not rendered exhibits, scientific approval or publication clearance.
+No Stata calls, participant/model loads, fits, original-script changes, C2 run,
+contacts, commits, pushes or Overleaf synchronization.

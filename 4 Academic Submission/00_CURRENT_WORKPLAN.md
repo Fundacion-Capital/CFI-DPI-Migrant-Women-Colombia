@@ -1,4 +1,25 @@
 # Current academic research revision workplan
+**Current E.5 restricted map checkpoint — 8 November 2026:** The five completed
+E.4 native working models now have a source-exact six-slot exhibit specification
+and restricted quantitative-results draft. Every model N, six primary tests,
+45 endpoint/comparison records and all fitted coefficients are traceable to
+the unchanged native ledgers. The conditional working covariance, fixed-six
+Holm family and pointwise probability intervals remain distinct; all fifteen
+comparisons are retained without significance-based selection. Detailed results
+and interpretation stay in the Git-ignored restricted companion. Start with
+`wp07-e5-restricted-exhibit-map/README.md`, EXHIBIT_SPEC.md and VALIDATION.json.
+This closes the mapping/drafting subpackage, not all of E.5: native statistical
+rendering, wider descriptive/correlation reconciliation and full-paper integration
+remain pending. No new Stata call, participant/model load, fit or canonical script
+edit occurred. All 370 entry fingerprints were checked; 368 immutable predecessors
+and two exact navigation before-images remain preserved. New-document transfer
+and checker-expectation failures were corrected and retained; E.4 outputs were
+not altered. Original source/entry holds, C2 HOLD and unresolved institutional/
+release conditions remain. Next: implement the finite native Stata aggregate-
+ledger exhibit producer and prepare its artificial/no-fit validation scope,
+without treating this checkpoint as execution authority. B/C/D/G continue the
+full-paper literature, qualitative, institutional, benchmark and discussion work.
+Earlier checkpoints retain their original dated meanings.
 **Current E.4 restricted execution checkpoint — 8 November 2026:** The exact
 owner-authorized single Stata MCP selection completed: one 98-field load,
 accepted preparation in memory, five model attempts and no retries. All five
