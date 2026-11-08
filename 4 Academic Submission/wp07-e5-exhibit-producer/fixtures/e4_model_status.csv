@@ -1,0 +1,7 @@
+model,intended_n,attempted,fit_rc,estimator_n,converged,rank,expected_rank,sample_mismatch,determined_successes,determined_failures,status
+R0_E4,120,1,0,120,1,10,10,0,0,0,ACCEPTED_WORKING_MODEL
+D0_E4,108,1,0,108,1,10,10,0,0,0,ACCEPTED_WORKING_MODEL
+R1_E4,108,1,0,108,1,16,16,0,0,0,ACCEPTED_WORKING_MODEL
+D1_E4,96,1,0,96,1,16,16,0,0,0,ACCEPTED_WORKING_MODEL
+R0C_E4,108,1,0,108,1,10,10,0,0,0,ACCEPTED_WORKING_MODEL
+

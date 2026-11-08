@@ -1,4 +1,27 @@
 # Current academic research revision workplan
+**Current E.5 producer checkpoint — 8 November 2026:** The held native Stata
+six-slot exhibit producer, five wholly artificial aggregate fixtures, twelve
+disabled case requests and no-fit validation contract are implemented and
+source-audited. Start with `wp07-e5-exhibit-producer/README.md`, its contract and
+VALIDATION.json. The seventeen prospective outputs retain model-specific Ns,
+all six primary raw/Holm pairs, fifteen comparisons, thirty endpoints and the
+coefficient/covariance record. Native Stata alone derives technical coefficient
+SEs/normal intervals from saved V cells; no new p-values or fits are designed.
+An independent source review found defects; root corrected row escaping,
+definition coverage, zero-bound notes, precision, numeric keys, support checks
+and test coverage. Its reviewed-snapshot verdict remains changes-required;
+fresh offline guards/auditor tests pass, not native parsing or rendering.
+All 390 entry fingerprints were checked: 388 immutable predecessors and two
+exact navigation before-images remain preserved. The three old academic scripts
+are unchanged; the new producer and caller retain line-7 entry holds. No native
+call, participant/model load, fit, rendered artifact, settings/service action,
+Git action or cloud sync occurred. Next: separately authorize the exact twelve
+artificial-only Stata MCP selections (zero fits/participants, no retries, finite
+soft timeouts), then audit real native files and negative outcomes before any
+study-ledger rendering. Runtime ownership/log paths and actual output quality
+remain future checks. E.5 is partial; C2 HOLD and institutional/disclosure/release
+conditions remain, while B/C/D/G continue the full-paper objective. Earlier
+checkpoints retain their original dated meanings.
 **Current E.5 restricted map checkpoint — 8 November 2026:** The five completed
 E.4 native working models now have a source-exact six-slot exhibit specification
 and restricted quantitative-results draft. Every model N, six primary tests,
