@@ -1,0 +1,11 @@
+WP07 E.5: preserve stopped artificial validation and audit AT01
+
+- Record the exact twelve-case artificial-only authorization and fresh preflight.
+- Preserve AT01's single native attempt, seventeen outputs and complete readback.
+- Stop before AT02–AT12 after QT1 ordering and rendered-layout acceptance fail.
+- Audit artificial numeric records, TeX content, figure/table layout and log limits.
+- Preserve source pins, originals, failed evidence and exact navigation before-images.
+- Update only E.5's checkpoint; require a source-only presentation successor and
+  fresh no-fit validation contract before renewed native authorization.
+- Keep Appendix C2 on hold; no fitting, participant/model loads, source changes,
+  scientific adoption, release, Git actions or cloud synchronization.

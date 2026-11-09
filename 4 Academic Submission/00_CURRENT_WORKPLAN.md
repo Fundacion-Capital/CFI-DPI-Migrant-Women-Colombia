@@ -1,4 +1,27 @@
 # Current academic research revision workplan
+**Current E.5 artificial execution checkpoint — 8 November 2026:** The owner-
+authorized batch was stopped after AT01. Its one exact Stata MCP selection
+completed (rc0, terminal N0/K0; 23-second recorded interval within the60-second
+soft timeout), but artifact acceptance failed. All17 artificial output files
+were audited: QT1 CSV/TeX order differs from the contract; QF1 tick labels
+overlap/clip; compiled tables expose width, repeated-label and spacing issues.
+Keyed Ns and the six raw/Holm pairs, fifteen comparisons, thirty endpoints,
+74coefficients/12references,1154covariance cells and186support records pass
+the bounded numeric checks. Root inspected all7table pages and both figure
+formats; independent source/text review says CHANGES_REQUIRED. AT02–AT12 were
+NOT dispatched. No retries, fits, participant/model loads, source/output edits,
+settings/service actions, Git actions or cloud sync occurred. The owned manager
+state is ready/nonbusy, not proof of OS exit or hard cancellation. The returned
+provider Temp log was absent at readback; ordinary log and expanded response
+are retained. Start with wp07-e5-native-validation-execution/README.md,
+AUDIT.md, CASE_STATUS.csv and VALIDATION.json. All433 entry fingerprints were
+rechecked as431 immutable predecessors plus2 exact navigation before-images.
+This closes the stopped-attempt audit, NOT E.5 or the twelve-case validation.
+Next: a separate source-only presentation-correction successor, fresh paths
+and sealed artificial/no-fit contract; no resumption or new execution authority.
+C2 HOLD and unresolved institutional/disclosure/release gates remain explicit.
+B/C/D/G continue the complete academic-paper objective. Earlier checkpoints
+retain their original dated meanings.
 **Current E.5 producer checkpoint — 8 November 2026:** The held native Stata
 six-slot exhibit producer, five wholly artificial aggregate fixtures, twelve
 disabled case requests and no-fit validation contract are implemented and

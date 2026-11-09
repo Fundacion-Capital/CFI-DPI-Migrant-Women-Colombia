@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-08",
+  "owner_request": "I authorize the12 exact artificial-only Stata MCP selections, with60-second soft timeouts and no fits, participant/model loads or retries. Recheck preflight, audit all outputs, preserve all packets and keep C2 on hold.",
+  "authorization_scope": "Twelve exact prepared requests only, one attempt each, stop whole batch on unexpected error/timeout/output discrepancy; no source correction or replacement",
+  "source_contract": {
+    "path": "4 Academic Submission/wp07-e5-exhibit-producer/VALIDATION_CONTRACT.json",
+    "bytes": 17832,
+    "sha256": "479f6a0b7993719745cf9f22c8056f90438386827b415b6bfa58719a787d8d10"
+  },
+  "max_selections": 12,
+  "timeout_per_selection": 60,
+  "soft_timeout_only": true,
+  "fits": 0,
+  "participant_or_model_loads": 0,
+  "retries": 0,
+  "contacts": 0,
+  "release": false,
+  "Git_actions": false,
+  "C2": "HOLD"
+}
