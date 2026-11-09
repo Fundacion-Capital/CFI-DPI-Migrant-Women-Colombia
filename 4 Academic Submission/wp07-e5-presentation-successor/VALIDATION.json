@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-09",
+  "package": "E.5 source-only presentation successor and fresh artificial no-fit contract",
+  "result": "PASS_SOURCE_ONLY_SUCCESSOR_AND_FRESH_CONTRACT_NOT_NATIVE_OR_VISUAL_VALIDATION",
+  "baseline_head": "0d931f09d069a2edfaef98411450658d318d7acc",
+  "completion_scope": "BOUNDED_SOURCE_IMPLEMENTATION_OFFLINE_AUDIT_AND_FRESH_CONTRACT_ONLY_E5_STILL_PARTIAL",
+  "implementation": {
+    "successor": {
+      "path": "1 Code/academic/3 E4 exhibits v2.do",
+      "bytes": 28253,
+      "sha256": "0ab1e06bd119e8712bbb124dcd08a24d9ac0e1ff5a809a8ecbb503bea1962c42"
+    },
+    "original_unchanged": {
+      "path": "1 Code/academic/3 E4 exhibits.do",
+      "bytes": 27425,
+      "sha256": "4c9b351c1f6fb26876a4ed292cbc280bb7151679710541796eda44c705fd3a03"
+    },
+    "source_entry_hold_line": 7,
+    "held": true,
+    "changes": [
+      "Final QT1 emission sort only",
+      "Compact tick formatting in both QF1 panels while preserving export precision",
+      "Longtable first/repeated heads and last-footer notes",
+      "Model column spacing, table widths and compact QS3 heading"
+    ],
+    "scientific_arithmetic_changed": false,
+    "master_preparation_analysis_changed": false,
+    "master_promoted_to_successor": false,
+    "CSV_export_command_blocks_unchanged": 8,
+    "CSV_completion_receipt_unchanged": true,
+    "five_TeX_data_row_writers_unchanged": true,
+    "three_note_wordings_preserved": true,
+    "no_helper_program_or_dependency_added": true
+  },
+  "contract": {
+    "pin": {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/VALIDATION_CONTRACT.json",
+      "bytes": 20720,
+      "sha256": "ca7137f14b5f5d1701ddd359992774c6f12a56bc6ded6db1c6ef205974448910"
+    },
+    "source_checker": {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/verify_source.mjs",
+      "bytes": 8845,
+      "sha256": "ff4a8b9c781c93ed3343e538cfb3a209e37c8b2a0767e4f19736299f32d42765"
+    },
+    "new_presentation_auditor": {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/audit_presentation.mjs",
+      "bytes": 5157,
+      "sha256": "0dfa77be06f5e812b6da485eade36964983efd6d3ec16e6a42865fd51bb4494e"
+    },
+    "frozen_numeric_auditor": {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/verify_artificial_outputs.mjs",
+      "bytes": 12568,
+      "sha256": "1392f90cd96568758a3409600fbfc96aed1a6e4ffeb716c14eebacdbce7be3e4"
+    },
+    "fixture_sets_reused": 1,
+    "fixture_files": 5,
+    "exact_marked_bodies": 2,
+    "requests": 12,
+    "cases": "Two positives and ten negatives; original case definitions retained",
+    "new_owned_candidate_session": "cfi_e5_present_0d931f0",
+    "proposed_timeout_seconds_per_selection": 60,
+    "soft_timeout_only": true,
+    "hard_cancellation_guaranteed": false,
+    "expected_inner_and_outer_rc_distinct": true,
+    "execution_authorized": false
+  },
+  "actual_operations": {
+    "Stata_MCP_calls": 0,
+    "native_session_inventories": 0,
+    "participant_or_saved_model_loads": 0,
+    "model_restores": 0,
+    "fits": 0,
+    "native_outputs_created": 0,
+    "LaTeX_compiles": 0,
+    "original_or_failed_output_edits": 0,
+    "settings_service_changes": 0,
+    "contacts": 0,
+    "commits": 0,
+    "pushes": 0,
+    "cloud_Overleaf_sync": 0
+  },
+  "verification": {
+    "both_JS_syntax_checks": "PASS",
+    "source_binding_and_custody_checker": "PASS",
+    "inherited_numeric_row_negative_controls": 7,
+    "presentation_valid_cases": 2,
+    "presentation_rejected_mutations": 7,
+    "all_successor_directories_empty": true,
+    "successor_native_logs_absent": 12,
+    "requests_hash_and_size_verified": 12,
+    "scientific_source_checks": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/FINAL_AUDIT.json",
+    "preserved_prior_AT01_still_rejected": true,
+    "preserved_prior_QS3_still_rejected": true,
+    "native_parsing_validated": false,
+    "rendered_layout_validated": false,
+    "scientific_validity_or_adoption_claimed": false
+  },
+  "preservation": {
+    "entry_fingerprints": 496,
+    "immutable_predecessors": 494,
+    "exact_navigation_beforeimages": 2,
+    "mismatches": 0,
+    "chain": "4 Academic Submission/wp07-e5-presentation-successor/INPUTS.json",
+    "raw_participant_carrier_opened_or_rehashed": false,
+    "inherited_synthetic_DTA_hashed_opaque_only": true,
+    "all_previous_packets_preserved": true,
+    "previous_failed_batch": "4 Academic Submission/wp07-e5-native-validation-execution/VALIDATION.json",
+    "new_private_companion": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0",
+    "all_twelve_fresh_case_inputs_and_outputs_empty": true
+  },
+  "review": {
+    "initial": "ONE_IMPORTANT_NEW_CHECKER_FALSE_REJECTION",
+    "correction": "Allow in-table precision notes; guard detached notes after table end; add valid precision and missing-end regressions; reseal",
+    "red_and_stale_pin_failures_preserved": true,
+    "correction_review": "RESOLVED_NO_NEW_IMMEDIATE_BLOCKER_SOURCE_ONLY_SUITABLE_FOR_SEALING",
+    "independent_scope": "Source/contract/request bindings and limited checker correction; no broader custody or native/visual evidence",
+    "root_scope": "Full496 predecessor closure plus exact source invariants and fresh path checks",
+    "receipt": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/INDEPENDENT_REVIEW.json"
+  },
+  "limits": [
+    "No Stata parsing, positive successor output, input-order invariance or negative native return behavior tested",
+    "No new figure/PDF/TeX layout rendered; widths, fonts, pagination and notes must be reviewed after separately authorized native output",
+    "No current runtime, session admission, hard cancellation or provider-log retention/containment assertion",
+    "No scientific, institutional, disclosure, author publication or release approval",
+    "C2 remains HOLD"
+  ],
+  "next": "Separate authorization and fresh preflight before twelve exact successor artificial-only Stata MCP selections, no fits/participants/saved models/retries; numeric and visual acceptance before any study-ledger rendering",
+  "boundaries": {
+    "C2": "HOLD",
+    "source_only": true,
+    "numerical_analysis_authorized": false,
+    "participant_loads_authorized": false,
+    "fits_authorized": 0,
+    "release_authorized": false,
+    "Git_or_cloud_actions_authorized": false
+  },
+  "git": {
+    "entry_and_exit_HEAD": "0d931f09d069a2edfaef98411450658d318d7acc",
+    "index_unchanged": true,
+    "modified_predecessors": [
+      "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "4 Academic Submission/00_meta/current_workplan.json"
+    ],
+    "new_source": "1 Code/academic/3 E4 exhibits v2.do",
+    "new_package": "4 Academic Submission/wp07-e5-presentation-successor",
+    "private_companion_ignored": true,
+    "proposed_commit": "4 Academic Submission/wp07-e5-presentation-successor/COMMIT_MESSAGE.txt"
+  },
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "1 Code/academic/3 E4 exhibits v2.do",
+      "bytes": 28253,
+      "sha256": "0ab1e06bd119e8712bbb124dcd08a24d9ac0e1ff5a809a8ecbb503bea1962c42"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/AUDIT.md",
+      "bytes": 6930,
+      "sha256": "158338ea18409413a463c1a01a5929694325dd682a54fe62fb7f32845d76244f"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/COMMIT_MESSAGE.txt",
+      "bytes": 780,
+      "sha256": "093c7d5f2951e85bb84187bc4a4c42faddd4ef7c03d4db20992ad80cfbb02621"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/INPUTS.json",
+      "bytes": 1579,
+      "sha256": "ec8868f68ebb1fed2fe5368bdd0412cf10012c92d3999717f3b1df3631edbf00"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/README.md",
+      "bytes": 3957,
+      "sha256": "af688900f3bb64721bca4a8cf46314eb646352580828c81c6c9aa540d17dd5cb"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/TASK_REGISTER.csv",
+      "bytes": 11506,
+      "sha256": "13adf2379fd4f9e01ae34742f32a5b83936fe53c4145e9b2c716fd0124aa8675"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/VALIDATION_CONTRACT.json",
+      "bytes": 20720,
+      "sha256": "ca7137f14b5f5d1701ddd359992774c6f12a56bc6ded6db1c6ef205974448910"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/audit_presentation.mjs",
+      "bytes": 5157,
+      "sha256": "0dfa77be06f5e812b6da485eade36964983efd6d3ec16e6a42865fd51bb4494e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-presentation-successor/verify_source.mjs",
+      "bytes": 8845,
+      "sha256": "ff4a8b9c781c93ed3343e538cfb3a209e37c8b2a0767e4f19736299f32d42765"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 58566,
+      "sha256": "2e36cd958cbc75a70e4505a0b21ce702f5d6d841a623306c5ea8a8ff11c3e2a9"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 13694,
+      "sha256": "6d6d6496a06a043e831919a74176249fcc1bfe5e5d5f71ea1abf8e25b3d4b38c"
+    }
+  ],
+  "restricted_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/00_CURRENT_WORKPLAN.md",
+      "bytes": 57061,
+      "sha256": "100d6acb331089e1db21dc7b684f9f4076c2e5e7b50a4761a9ae8653b3790aef"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/AUDITOR_PRE_REVIEW.mjs",
+      "bytes": 4756,
+      "sha256": "395503ffedb66082001c7dcb76558a945c66582677fab32fff67fbbbae5f7b14"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/CONTRACT_PRE_REVIEW.json",
+      "bytes": 19253,
+      "sha256": "0ec92519e4d86a7f52693a12ffc89a8dd441212b5761e70afd6d1144afccde05"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/FINAL_AUDIT.json",
+      "bytes": 4302,
+      "sha256": "75e4411553ba66d4fd34c0ad7fa68d0e6afebb3f5b2057b60ff6ea0c181f9860"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/INDEPENDENT_REVIEW.json",
+      "bytes": 1380,
+      "sha256": "d9c1ec0acd52a560f440a41ea70f1a6ae8fccac418e38aa92dfe98fa53e88765"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/OFFLINE_CHECKS.txt",
+      "bytes": 762,
+      "sha256": "22f668525ba4933699627944b7636ede446d9c413743746eed108266aebe53fc"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/PRECISION_NOTE_REGRESSION_RED.txt",
+      "bytes": 797,
+      "sha256": "74f4b30faf32c94bb03931397f29558431fc39c4d0f550f6d8951ea4f74844aa"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/PRESERVED_AT01_REJECTION.txt",
+      "bytes": 1329,
+      "sha256": "6aecdfe8c44f58986cb3027b9874b39d2f124025ea2b48af85611359a4729f21"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/STALE_CHECKER_PIN_REJECTION.txt",
+      "bytes": 1247,
+      "sha256": "7d9e98173c86141e8717f11202c906d0ec1c4f47926df63b67a0ae6a3c703050"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/current_workplan.json",
+      "bytes": 12895,
+      "sha256": "7f9d76632a14fc6d6e8045dc32e4e7b933661868226479bcf1a9ab362ec7b7fc"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/producer_body.do",
+      "bytes": 27762,
+      "sha256": "78f937d952dbd4fcc61616acc9f19f39729b8238281b3e8293799f56fa9f0413"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/selection.do",
+      "bytes": 2037,
+      "sha256": "487660a94ff2673821bf61c5830257a97ac6f3c8837f9b3662a0ecb5b23cf5f5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT02/selection.do",
+      "bytes": 2038,
+      "sha256": "16c7a5c6cd74deccb8aff5060cf3780dd88a0fb431ddc49a510ba1782aa92fa6"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT03/selection.do",
+      "bytes": 2050,
+      "sha256": "33fa903233495d9f3b75f5caf096a722bfcd0e1b515346f422b5b7cf3ab099b9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT04/selection.do",
+      "bytes": 2048,
+      "sha256": "a2a5d60766fbfddfbe40441dfa1666b91cc3efa8cda51b9b023113efdc40b3a2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT05/selection.do",
+      "bytes": 2040,
+      "sha256": "e92668f69883cb48937616dd46ec9595b35a127996aaa504afe982326dfe373e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT06/selection.do",
+      "bytes": 2043,
+      "sha256": "34376e20be5603ad01042e09fc509f77b18c48c4ed6f622f2faff3fb8c7d45ea"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT07/selection.do",
+      "bytes": 2042,
+      "sha256": "a0edd9e69af3c01188398514a902a6d397a04324332112e13ceac753a6921e87"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT08/selection.do",
+      "bytes": 2047,
+      "sha256": "6acc5a23228b47c9d84de9a1c52c6ccf4cf8fd20fb148692aebbbce07e0b70db"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT09/selection.do",
+      "bytes": 2047,
+      "sha256": "59680601224e4fd39e1a7b7a79532fd5d775992ab7373e9a57e2a4d48519709d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT10/selection.do",
+      "bytes": 2045,
+      "sha256": "4247b0c48bfbb430cb256023abf9968b942300507320a5f31f881ab47dd7a454"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT11/selection.do",
+      "bytes": 2042,
+      "sha256": "849103cf3f8082ed110fa29ff001abaed188b67a079473dfc0f6b934c8178113"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT12/selection.do",
+      "bytes": 2044,
+      "sha256": "9307d356d700ad4739e964793d36cff41e684c4b384fd1348dd3be05711bc900"
+    }
+  ]
+}

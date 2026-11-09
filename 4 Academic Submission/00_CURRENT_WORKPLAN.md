@@ -1,4 +1,24 @@
 # Current academic research revision workplan
+**Current E.5 presentation-successor checkpoint — 9 November 2026:** A separate
+held3 E4 exhibits v2.do restores QT1 emission order, applies compact QF1 axis
+ticks independently of full-precision exports, and corrects longtable first/
+repeated heads, widths and final-footer notes. The original producer and all
+failed/unused native packets are unchanged. All pre-output scientific code,
+eight CSV export commands and completion receipt retain their original logic.
+Start with wp07-e5-presentation-successor/README.md, AUDIT.md and its fresh
+VALIDATION_CONTRACT.json. Twelve exact requests bind fresh empty paths,
+unchanged artificial fixtures/caller and the frozen numeric auditor; no
+Stata execution, participant/model load or fit is authorized or performed.
+Offline guards and presentation-auditor unit cases are not native parsing or
+rendered acceptance. The old AT01 outputs still fail as preserved regressions.
+All496 entry fingerprints are preserved as494 immutable predecessors and2
+exact navigation before-images. Next: separate owner authorization and fresh
+preflight before the successor artificial-only native batch, with60-second
+soft timeouts, no fits/participants/saved models/retries, and numeric plus
+visual acceptance before continuing. Old execution authority is not reusable.
+E.5 remains incomplete; C2 HOLD and institutional/disclosure/release conditions
+remain explicit. B/C/D/G continue the full academic-paper objective. Earlier
+checkpoints retain their original dated meanings.
 **Current E.5 artificial execution checkpoint — 8 November 2026:** The owner-
 authorized batch was stopped after AT01. Its one exact Stata MCP selection
 completed (rc0, terminal N0/K0; 23-second recorded interval within the60-second

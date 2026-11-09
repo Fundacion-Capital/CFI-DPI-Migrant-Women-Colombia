@@ -1,0 +1,393 @@
+{
+  "date": "2026-11-09",
+  "scope": "SOURCE_ONLY_PRESENTATION_SUCCESSOR_FRESH_ARTIFICIAL_CONTRACT_NOT_EXECUTION_AUTHORITY",
+  "execution_authorized": false,
+  "native_status": "NOT_RUN",
+  "Stata_tool": "stata_run_selection",
+  "producer": {
+    "path": "1 Code/academic/3 E4 exhibits v2.do",
+    "bytes": 28253,
+    "sha256": "0ab1e06bd119e8712bbb124dcd08a24d9ac0e1ff5a809a8ecbb503bea1962c42"
+  },
+  "caller": {
+    "path": "4 Academic Submission/wp07-e5-exhibit-producer/Artificial validation.do",
+    "bytes": 5703,
+    "sha256": "33b2c2940f959b79cb617dadfbca6fdf15a9ae7181aca7c822678d1c0ac1401e"
+  },
+  "producer_markers": [
+    "* BEGIN E5 PRODUCER",
+    "* END E5 PRODUCER"
+  ],
+  "caller_markers": [
+    "* BEGIN E5 ARTIFICIAL CALLER",
+    "* END E5 ARTIFICIAL CALLER"
+  ],
+  "inputs": [
+    "e4_model_status.csv",
+    "e4_probabilities.csv",
+    "e4_primary_tests.csv",
+    "e4_native_matrices.csv",
+    "e4_support.csv"
+  ],
+  "fixture_pins": [
+    {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures/e4_model_status.csv",
+      "bytes": 414,
+      "sha256": "ca99a4ae6ed8cc4d5b996ba106a59f8637aa900cd841eb8b43e58a81f5bf22ff"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures/e4_probabilities.csv",
+      "bytes": 4182,
+      "sha256": "b75b9700110bad6984c09854f85539cc933324ba3336b07c2554357f0bb2ab53"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures/e4_primary_tests.csv",
+      "bytes": 444,
+      "sha256": "9381eceac2f0d1f9af438e94b29a0465780455befe1eba73d1f88b684b18d24d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures/e4_native_matrices.csv",
+      "bytes": 155554,
+      "sha256": "597ec1bbbabdf375d01fb1f442c7cb4bf072d985d4a71695e63b59deffccac5b"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures/e4_support.csv",
+      "bytes": 6782,
+      "sha256": "8859d6277214bf5e6e9505b2670ebd4244bb9d36a755e0a58345044922f6576b"
+    }
+  ],
+  "output_files": [
+    "QT1_models.tex",
+    "QT1_models.csv",
+    "QF1_core.pdf",
+    "QF1_core.png",
+    "QF1_core.csv",
+    "QT2_primary.tex",
+    "QT2_primary.csv",
+    "QS1_comparisons.tex",
+    "QS1_comparisons.csv",
+    "QS2_endpoints.tex",
+    "QS2_endpoints.csv",
+    "QS3_coefficients.tex",
+    "QS3_coefficients.csv",
+    "QS3_covariance.csv",
+    "QS3_support.csv",
+    "CAPTIONS.txt",
+    "e5_complete.csv"
+  ],
+  "output_rows": {
+    "QT1_models.csv": 5,
+    "QF1_core.csv": 6,
+    "QT2_primary.csv": 6,
+    "QS1_comparisons.csv": 15,
+    "QS2_endpoints.csv": 30,
+    "QS3_coefficients.csv": 74,
+    "QS3_covariance.csv": 1154,
+    "QS3_support.csv": 186,
+    "e5_complete.csv": 6
+  },
+  "cases": "4 Academic Submission/wp07-e5-exhibit-producer/CASES.json",
+  "proposed_native_selections": 12,
+  "selection_per_case": 1,
+  "fits": 0,
+  "participant_or_model_loads": 0,
+  "model_restores": 0,
+  "tests_or_margins_recomputed": 0,
+  "coefficient_reporting_arithmetic": "Native Stata sqrt(saved V diagonal); coefficient +/- invnormal(.975)*SE for nonreference columns only. No coefficient/control p-values are created.",
+  "retries": 0,
+  "timeout_seconds_per_selection": 60,
+  "soft_timeout_not_hard_kill_guarantee": true,
+  "independent_cancellation_guaranteed": false,
+  "route_preconditions": [
+    "Fresh owner authorization and source/fixture/body/caller/numeric-auditor/presentation-auditor/request hashes must match",
+    "All twelve successor input/output directories must remain empty, all case logs absent; never clear or replace a used path",
+    "Future read-only session inventory, fresh owned admission and runtime/log-path observations are pending; none was made in this source-only package",
+    "On any unexpected rc, output discrepancy, timeout, numeric or layout failure stop the whole batch; preserve all files and responses; no retry",
+    "No participant or saved-model load/restore, fit, recomputed Wald/margins result, settings/service change, worker development or C2 execution",
+    "Ordinary native logs use the prebound private per-case paths; provider Temp spill/retention is not guaranteed and must be observed at execution",
+    "Prior AT01 and all unused predecessor cases stay preserved; successor requests are not continuation authority"
+  ],
+  "expected_end_state": "N0/K0, only owned report resources cleaned, no participant/model state; future manager inventory is not proof of OS exit",
+  "actual_restricted_rendering": {
+    "authorized": false,
+    "status": "HOLD_UNTIL_ALL_ARTIFICIAL_CASES_AND_LAYOUT_PASS_AND_SEPARATE_SCOPE_IS_APPROVED",
+    "input_scope_expanded": false,
+    "output_destination": null,
+    "participant_loads": 0,
+    "model_loads": 0,
+    "fits": 0,
+    "release_authorized": false
+  },
+  "C2": "HOLD",
+  "staged_bodies": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/producer_body.do",
+      "bytes": 27762,
+      "sha256": "78f937d952dbd4fcc61616acc9f19f39729b8238281b3e8293799f56fa9f0413"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261108/e5-producer-f6e4faa/artificial_caller_body.do",
+      "bytes": 5174,
+      "sha256": "dde28f0fd088b70655de1e53bcf023241eb7a065a3353797d9afa6b991dc61ca"
+    }
+  ],
+  "body_extraction": "Bytes strictly between named marker lines, excluding the marker lines; preserve internal bytes and one source terminal newline",
+  "prepared_requests": [
+    {
+      "id": "AT01",
+      "case": "complete",
+      "expected_rc": 0,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/native.log",
+      "sha256": "487660a94ff2673821bf61c5830257a97ac6f3c8837f9b3662a0ecb5b23cf5f5",
+      "bytes": 2037,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 0,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT02",
+      "case": "reordered",
+      "expected_rc": 0,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT02/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT02/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT02/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT02/native.log",
+      "sha256": "16c7a5c6cd74deccb8aff5060cf3780dd88a0fb431ddc49a510ba1782aa92fa6",
+      "bytes": 2038,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 0,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT03",
+      "case": "duplicate_probability",
+      "expected_rc": 459,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT03/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT03/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT03/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT03/native.log",
+      "sha256": "33fa903233495d9f3b75f5caf096a722bfcd0e1b515346f422b5b7cf3ab099b9",
+      "bytes": 2050,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 459,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT04",
+      "case": "missing_probability",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT04/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT04/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT04/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT04/native.log",
+      "sha256": "a2a5d60766fbfddfbe40441dfa1666b91cc3efa8cda51b9b023113efdc40b3a2",
+      "bytes": 2048,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT05",
+      "case": "wrong_units",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT05/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT05/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT05/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT05/native.log",
+      "sha256": "e92668f69883cb48937616dd46ec9595b35a127996aaa504afe982326dfe373e",
+      "bytes": 2040,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT06",
+      "case": "wrong_endpoint",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT06/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT06/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT06/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT06/native.log",
+      "sha256": "34376e20be5603ad01042e09fc509f77b18c48c4ed6f622f2faff3fb8c7d45ea",
+      "bytes": 2043,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT07",
+      "case": "invalid_model",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT07/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT07/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT07/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT07/native.log",
+      "sha256": "a0edd9e69af3c01188398514a902a6d397a04324332112e13ceac753a6921e87",
+      "bytes": 2042,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT08",
+      "case": "reference_variance",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT08/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT08/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT08/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT08/native.log",
+      "sha256": "6acc5a23228b47c9d84de9a1c52c6ccf4cf8fd20fb148692aebbbce07e0b70db",
+      "bytes": 2047,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT09",
+      "case": "missing_covariance",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT09/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT09/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT09/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT09/native.log",
+      "sha256": "59680601224e4fd39e1a7b7a79532fd5d775992ab7373e9a57e2a4d48519709d",
+      "bytes": 2047,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT10",
+      "case": "output_collision",
+      "expected_rc": 602,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT10/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT10/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT10/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT10/native.log",
+      "sha256": "4247b0c48bfbb430cb256023abf9968b942300507320a5f31f881ab47dd7a454",
+      "bytes": 2045,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 602,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT11",
+      "case": "numeric_alias",
+      "expected_rc": 459,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT11/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT11/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT11/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT11/native.log",
+      "sha256": "849103cf3f8082ed110fa29ff001abaed188b67a079473dfc0f6b934c8178113",
+      "bytes": 2042,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 459,
+      "expected_outer_selection_rc": 0
+    },
+    {
+      "id": "AT12",
+      "case": "invalid_support",
+      "expected_rc": 9,
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT12/selection.do",
+      "input_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT12/input",
+      "output_dir": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT12/out",
+      "log": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT12/native.log",
+      "sha256": "9307d356d700ad4739e964793d36cff41e684c4b384fd1348dd3be05711bc900",
+      "bytes": 2044,
+      "session_id": "cfi_e5_present_0d931f0",
+      "timeout": 60,
+      "status": "PREPARED_NOT_AUTHORIZED_NOT_DISPATCHED",
+      "expected_inner_producer_rc": 9,
+      "expected_outer_selection_rc": 0
+    }
+  ],
+  "current_execution_authority": 0,
+  "native_output_auditor": "4 Academic Submission/wp07-e5-presentation-successor/audit_presentation.mjs",
+  "postrun_acceptance": "Audit native positive AT01 before any next dispatch. Run numeric plus longtable-structure auditor on AT01/AT02 and compare nine CSV/five TeX texts. Inspect both native figures and every page of privately compiled unchanged TeX. All ten negatives must satisfy the caller-asserted exact inner producer rc and successful outer rc0/completion marker and zero outputs except unchanged collision sentinel. Any mismatch stops the batch; never change expectations or source during an exact grant.",
+  "rendering_dependencies": "Native Stata16+; standard LaTeX longtable for eventual manuscript use; no new add-on/worker/runtime dependencies",
+  "sources_verified_from_official_docs": [
+    "https://www.stata.com/manuals/dfrlink.pdf",
+    "https://www.stata.com/manuals/dfrget.pdf",
+    "https://www.stata.com/manuals/dframeput.pdf",
+    "https://www.stata.com/manuals/pfile.pdf",
+    "https://www.stata.com/manuals/dformat.pdf",
+    "https://www.stata.com/support/faqs/programming/backslashes-and-macros/",
+    "https://www.stata.com/manuals/g-3axis_label_options.pdf",
+    "https://ctan.math.illinois.edu/macros/latex/required/tools/longtable.pdf"
+  ],
+  "native_output_auditor_pin": {
+    "path": "4 Academic Submission/wp07-e5-presentation-successor/audit_presentation.mjs",
+    "bytes": 5157,
+    "sha256": "0dfa77be06f5e812b6da485eade36964983efd6d3ec16e6a42865fd51bb4494e"
+  },
+  "fixture_directory": "4 Academic Submission/wp07-e5-exhibit-producer/fixtures",
+  "native_numeric_auditor_pin": {
+    "path": "4 Academic Submission/wp07-e5-exhibit-producer/verify_artificial_outputs.mjs",
+    "bytes": 12568,
+    "sha256": "1392f90cd96568758a3409600fbfc96aed1a6e4ffeb716c14eebacdbce7be3e4"
+  },
+  "source_preflight": "4 Academic Submission/wp07-e5-presentation-successor/verify_source.mjs",
+  "prior_failed_execution": "4 Academic Submission/wp07-e5-native-validation-execution/VALIDATION.json",
+  "supersedes_original_execution_authority": false,
+  "presentation_acceptance": {
+    "QT1_order": [
+      "R0_E4",
+      "D0_E4",
+      "R1_E4",
+      "D1_E4",
+      "R0C_E4"
+    ],
+    "numeric": "Reuse frozen original auditRows/auditTex/auditDirectory with unchanged artificial fixtures, all counts, exact precision and zero/interval rules",
+    "QF1": "Both native PNG and PDF must have compact nonoverlapping unclipped x ticks; retain shared axes, zero reference, all six points/intervals and percentage-point units",
+    "longtables": "One caption/label in first head, repeated column headings only, complete last-page notes inside lastfoot, all130 data rows retained",
+    "offline_auditor_self_tests": {
+      "valid": 2,
+      "rejected_mutations": 7,
+      "not_native_execution": true
+    },
+    "future_LaTeX_audit": {
+      "private_wrapper_only": true,
+      "format": "11pt article, one-inch margins, T1 fontenc and longtable, all five native fragments unchanged",
+      "compile_until_auxiliary_widths_stable": true,
+      "maximum_standard_passes": 3,
+      "stop_on_compile_error_or_unresolved_warning": true,
+      "no_duplicate_labels_or_overfull_tables": true,
+      "view_all_pages": true,
+      "no_orphaned_notes_only_page": true,
+      "main_manuscript_unchanged": true
+    },
+    "AT01_AT02": "Compare all nine CSV and five TeX files as normalized text; native PDF/PNG visual review is separate, not byte equality",
+    "no_native_or_visual_acceptance_claimed_in_this_package": true
+  },
+  "return_code_semantics": {
+    "expected_rc": "Inner producer result, checked by the preserved artificial caller",
+    "outer_selection_rc": 0,
+    "correct_negative": "Caller verifies the expected inner 9/459/602 result and no outputs (collision sentinel excepted), then outer selection succeeds with rc0 and exact completion marker",
+    "unexpected_rc_or_assertion": "Outer selection stops; preserve all partial outputs; no retry"
+  }
+}
