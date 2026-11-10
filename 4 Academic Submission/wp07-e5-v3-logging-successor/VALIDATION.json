@@ -1,0 +1,300 @@
+{
+  "date": "2026-11-11",
+  "baseline_head": "65309c516838b34471ff6bc9a02df60986f99b20",
+  "result": "PASS_LOGGING_ONLY_SOURCE_AND_UNUSED_PATHS_NOT_NATIVE_VALIDATION",
+  "completion_scope": "OFFLINE_SUCCESSOR_PREPARATION_RECEIPT_AND_OUTPUT_PLAN_AUDIT_ONLY",
+  "source_contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION_CONTRACT.json",
+    "bytes": 29206,
+    "sha256": "a004ab798fb50e0cdde8551a3a1f68c535eb68f60047bf0d6ca7f214a90d86a1"
+  },
+  "prior_hold": {
+    "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/VALIDATION.json",
+    "bytes": 8146,
+    "sha256": "dc150c23b38b0659ddc01f020dfaa56d0dcfcb375233f226dbe4742c0310b74c"
+  },
+  "preflight": {
+    "prepared_requests": 12,
+    "prepared_envelopes": 12,
+    "unused_case_directories": 24,
+    "absent_native_logs": 12,
+    "source_only_latex_wrappers": 2,
+    "staged_source_and_fixture_pins": 9,
+    "session_readiness": "NOT_QUERIED",
+    "receipt_tests_passed": 22,
+    "presentation_self_test_valid_cases": 2,
+    "presentation_self_test_rejected_mutations": 7,
+    "saved_artifact_table_rows_preserved": 130,
+    "saved_artifact_check_scope": "STRUCTURE_AND_NUMERICAL_ONLY_NOT_NATIVE_OR_NEW_VISUAL_VALIDATION"
+  },
+  "execution": {
+    "current_authorized_selections": 0,
+    "Stata_calls": 0,
+    "manager_inventory_calls": 0,
+    "dispatched": 0,
+    "accepted_native_cases": 0,
+    "retries": 0,
+    "participant_or_model_loads": 0,
+    "study_ledger_loads": 0,
+    "fits": 0,
+    "latex_compiles": 0,
+    "native_artifacts_created": 0
+  },
+  "preservation": {
+    "entry_fingerprints": 997,
+    "immutable_paths": 995,
+    "exact_navigation_beforeimages": 2,
+    "predecessor_drift": 0,
+    "previous_grant_not_reused": true,
+    "git_head_unchanged": true,
+    "staged_paths": 0
+  },
+  "output_plan": {
+    "plan": "4 Academic Submission/wp07-e5-v3-logging-successor/ANALYTICAL_OUTPUT_PLAN.md",
+    "register": "4 Academic Submission/wp07-e5-v3-logging-successor/OUTPUT_REGISTER.csv",
+    "rows": 38,
+    "predecessor_exhibit_ids": 19,
+    "bound_restricted_exhibit_slots": 6,
+    "planned_bundle_files": 17,
+    "new_exhibits_created": 0
+  },
+  "independent_review": "Two important findings corrected and retested; offline preparation only",
+  "next": "Fresh exact authorization for at most 12 artificial-only Stata MCP selections at 60-second soft timeout per case, no retries; stop on first failure. Restricted render separate.",
+  "native_v3_validated": false,
+  "full_E5_complete": false,
+  "C2": "HOLD",
+  "institutional_disclosure_release_promoted": false,
+  "contacts": 0,
+  "settings_service_changes": 0,
+  "git_or_cloud_mutations": 0,
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/ANALYTICAL_OUTPUT_PLAN.md",
+      "bytes": 11226,
+      "sha256": "a5c3b94b1434e2f7d3569d93582d6cdd15fa65bac781c402546df6944728c146"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/AUDIT.md",
+      "bytes": 2997,
+      "sha256": "6282b0894874477ba20738eef39f0e87edf9747b014e13c175300fdff4c6cd3d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/CASE_STATUS.csv",
+      "bytes": 935,
+      "sha256": "30b336603826d8afd9d71125209e3c3cef1229dfe1b87c46606f6093de5f4335"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/COMMIT_MESSAGE.txt",
+      "bytes": 728,
+      "sha256": "ca3a088ad229cab0a2d13b08ff10db2db121edb74bb1e74280482dbeecaa7853"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/EXECUTION_CHECKLIST.md",
+      "bytes": 4616,
+      "sha256": "3bad42c64268a7f0c4bc2beeac91db6c05f537dbf1927c340e7fd7b43921da31"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/INPUTS.json",
+      "bytes": 1314,
+      "sha256": "9f97fd0d4cb777b14b39a297ed605c17a03d2a69a644cdf12a2eadd85db339ce"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/OUTPUT_REGISTER.csv",
+      "bytes": 12442,
+      "sha256": "edae961a6b30abcc4db9b2efa6b1c567527acbf6e1fe8d3ce38ee004a3e644f4"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/README.md",
+      "bytes": 1848,
+      "sha256": "72683d430d85c4abedb7f7c3cda76573b21e9060e6e9e90578d6e7f0fbdfa939"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/TASK_REGISTER.csv",
+      "bytes": 11470,
+      "sha256": "2f926cf7672869c9497e969a072f103853afe343dcd11b35ace1731064e143f7"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION_CONTRACT.json",
+      "bytes": 29206,
+      "sha256": "a004ab798fb50e0cdde8551a3a1f68c535eb68f60047bf0d6ca7f214a90d86a1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/verify_receipts.mjs",
+      "bytes": 2323,
+      "sha256": "557b6f69e73ee677f1b0f2afba69c86ed0020d01c258c890a5d0d46a9e134c1e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/verify_receipts.test.mjs",
+      "bytes": 4119,
+      "sha256": "4b3b94d6a9ac69ec2aa17944a137fc64ab26d48b8d948e5ded616cc3c64b7685"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-successor/verify_source.mjs",
+      "bytes": 12535,
+      "sha256": "c09679c3caa789a737803f7c81ede1ea83d80b9ffbc770473364a81b59b52652"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 66549,
+      "sha256": "5487ed4697bcb0e1cd86e5f75e0a145d7f9e611632b4b98a3ce4b634d585eb4a"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 18458,
+      "sha256": "42eb63c6005d107e237251aba31f8e39d4f74ca783e9df18ddfc011e4950c313"
+    }
+  ],
+  "restricted_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/00_CURRENT_WORKPLAN.md",
+      "bytes": 65613,
+      "sha256": "49dba99a011758c0d2082a8bcd24475375ca20af7c4955ff3c580681f42d3eb9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/ENTRY_FINGERPRINTS.json",
+      "bytes": 231637,
+      "sha256": "1fa2118dbfd01ce86d977cca387ff81a68e20a4d204fa2516b1c68756d2a7420"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/OFFLINE_CHECKS.json",
+      "bytes": 2942,
+      "sha256": "f9b81bd7ad1a688613e5b2e35acd38c0cff1f4d4dfa5e54ae23d6e91fef614ed"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/current_workplan.json",
+      "bytes": 17466,
+      "sha256": "c566903653045b458193f295df5aae219eea9eb7e053debf1b8853fc4e090b98"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/latex-audit/AT01/tables.tex",
+      "bytes": 1302,
+      "sha256": "559329fb3e793ebb0ee41d0bbddb45b8345d7c6696fcbb25535e0782ec2a4020"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/latex-audit/AT02/tables.tex",
+      "bytes": 1302,
+      "sha256": "47a12f7ce890c2a813216bbf2bde6baf55a9dd09d457e5342996d318e8f2aa10"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/mcp_request.json",
+      "bytes": 2265,
+      "sha256": "7d7728376068e739076c064fffcbdd27bdb17dc132ab118c3c5cfda3c18afb61"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/selection.do",
+      "bytes": 2035,
+      "sha256": "f254856c228962097aabb734bd5c813ab96de11105b283122751edf7f3c80b17"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/mcp_request.json",
+      "bytes": 2266,
+      "sha256": "0cdb638ea754cd8736d4cbb8554fb959ec8948224b6a78b111fbf6b8bdad668b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/selection.do",
+      "bytes": 2036,
+      "sha256": "18f95bcedc2f7aa8a6b51d8ecbe397cc4405bd75ad7f6d7a2b4c5dce71885520"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT03/mcp_request.json",
+      "bytes": 2278,
+      "sha256": "4066d37e55ce86b9380d76dfc94cb0566eef7190e3671a76e8319976ea95a9d2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT03/selection.do",
+      "bytes": 2048,
+      "sha256": "6bd3259922c8d39e0f0121b19d979650c201c4cc77ff729e745f39c3a347dbe3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT04/mcp_request.json",
+      "bytes": 2276,
+      "sha256": "8121794ab5e4f82437173b22b09e024319b67f9f0b73409993bf5097093718e2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT04/selection.do",
+      "bytes": 2046,
+      "sha256": "c0c93668c3034d5a80171bab51412216244a860a1e4c4928031664cb914fefba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT05/mcp_request.json",
+      "bytes": 2268,
+      "sha256": "f7c75e38b31fdb44179a6a6cf1395911250adf7afbb2919bb71289aad27b67a3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT05/selection.do",
+      "bytes": 2038,
+      "sha256": "99bd99105c2f8367120677368c1fa84228a0fe74239af999438276a65720e132"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT06/mcp_request.json",
+      "bytes": 2271,
+      "sha256": "cf24398ed867993cf28ddbca6939b62c165d52f6eaae563223c5ad44758f8ce8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT06/selection.do",
+      "bytes": 2041,
+      "sha256": "141722783e62e0e05297ebd025372ba2e06b49b777192656c42e9566ff777eee"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT07/mcp_request.json",
+      "bytes": 2270,
+      "sha256": "073a21f986898332e7dbabda7c3fb12d6372411dc936287e4797342259710b2a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT07/selection.do",
+      "bytes": 2040,
+      "sha256": "0544231da8c16e838c3cf81b908291beeae1f15678a451f7c9a6cbe4247fbdfd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT08/mcp_request.json",
+      "bytes": 2275,
+      "sha256": "d39078c21c95a286155d47a1dea66ed20951cab5ea84a72c8b94a9319c14b6e1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT08/selection.do",
+      "bytes": 2045,
+      "sha256": "99cd855ee48feae8e08ef08315a4f7955b8cd2f29db7f83fa1107821912128f7"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT09/mcp_request.json",
+      "bytes": 2275,
+      "sha256": "4fdc3e79720fd878cba63a87b3961d5226eb7eb74a588760bd4cb02aa48a7abd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT09/selection.do",
+      "bytes": 2045,
+      "sha256": "0079b42bd1b21aa1b76463c6e69cd121f82dc1faa81319bc348410455158539d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT10/mcp_request.json",
+      "bytes": 2273,
+      "sha256": "217b75de227d7709f58b565564def21f21846f2c447e24cec5249fdea57f436c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT10/selection.do",
+      "bytes": 2043,
+      "sha256": "5d4a07825a20ca21e92c23a9bd1f15ae22ceb450fa001b1109d7ba28c6b3fa33"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT11/mcp_request.json",
+      "bytes": 2270,
+      "sha256": "94ee8e281105eca266c6ec990800c0fb819851b9962b870b3a63407cde302049"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT11/selection.do",
+      "bytes": 2040,
+      "sha256": "2c80a6ca81712c3b01315d57db6ac9ceb12dd7ff3a836df58accca840248b4c4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT12/mcp_request.json",
+      "bytes": 2272,
+      "sha256": "bf28abb80c10bf0ff2a99955663063133c51d31e252129b34431691a345bd202"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT12/selection.do",
+      "bytes": 2042,
+      "sha256": "5e14f53fbaa21c29fc6a88a888d191ea3230e839063120ef1572c5e78908ada9"
+    }
+  ],
+  "native_artifacts": []
+}

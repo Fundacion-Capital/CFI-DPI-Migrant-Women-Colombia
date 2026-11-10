@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-11",
+  "baseline_head": "65309c516838b34471ff6bc9a02df60986f99b20",
+  "scope": "LOGGING_ONLY_PREPARATION_AND_ANALYTICAL_OUTPUT_PLANNING",
+  "predecessor_contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/VALIDATION_CONTRACT.json",
+    "bytes": 28182,
+    "sha256": "811e89a56621f8d19fc66174d2b27228fd7ddfe46754029e62038a37e033ae10"
+  },
+  "hold_receipt": {
+    "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/VALIDATION.json",
+    "bytes": 8146,
+    "sha256": "dc150c23b38b0659ddc01f020dfaa56d0dcfcb375233f226dbe4742c0310b74c"
+  },
+  "entry_snapshot": {
+    "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/ENTRY_FINGERPRINTS.json",
+    "bytes": 231637,
+    "sha256": "1fa2118dbfd01ce86d977cca387ff81a68e20a4d204fa2516b1c68756d2a7420"
+  },
+  "entry_fingerprints_checked": 997,
+  "planned_mutable_files": [
+    "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+    "4 Academic Submission/00_meta/current_workplan.json"
+  ],
+  "preservation_beforeimages": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5",
+  "prepared_requests": 12,
+  "execution_authorized": false,
+  "Stata_calls": 0,
+  "participant_or_model_loads": 0,
+  "fits": 0,
+  "C2": "HOLD"
+}

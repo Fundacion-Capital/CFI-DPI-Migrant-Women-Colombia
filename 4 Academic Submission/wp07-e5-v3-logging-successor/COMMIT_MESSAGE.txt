@@ -1,0 +1,13 @@
+WP07 E.5: Prepare logging-only v3 successor and analytical output plan
+
+Rebind the twelve artificial Stata MCP requests to unused case paths and
+make only the outer caller invocation noisy while preserving captured return
+codes. Pin the unchanged producer, caller, fixtures and exhibit contract;
+add offline checks for actual dual receipts, contradictory diagnostics and
+prior-packet custody.
+
+Document the staged validation and construction of the model exhibits,
+descriptive tables and figures, measurement supplements, historical
+crosswalk and full-manuscript outputs. Record zero execution, loads or fits,
+preserve all prior attempts, and keep Appendix C2 and the restricted E.5
+render on hold pending their separate gates.

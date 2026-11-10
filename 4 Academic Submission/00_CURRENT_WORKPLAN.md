@@ -1,4 +1,19 @@
 # Current academic research revision workplan
+
+**Current E.5 v3 logging-only successor — 11 November 2026:** Twelve fresh
+artificial-only requests staged with unused paths. The only command change
+is the outer `capture noisily do`; producer, caller, fixtures and analysis
+are unchanged. The offline audit requires both actual native completion
+receipts. Zero calls, loads, fits, retries or compiles; no execution authority.
+The prior stop remains preserved. Appendix C2 stays **HOLD**.
+
+Start at [the successor handoff](wp07-e5-v3-logging-successor/README.md).
+Next gated task: fresh authorization for the exact twelve-case artificial
+batch, 60-second soft timeouts, stop on first failure, no retries. Restricted
+E.5 rendering needs a separate later contract. In parallel continue source
+and manuscript work from the [analytical output plan](wp07-e5-v3-logging-successor/ANALYTICAL_OUTPUT_PLAN.md)
+and [38-row exhibit register](wp07-e5-v3-logging-successor/OUTPUT_REGISTER.csv).
+
 **Current E.5 v3 pre-dispatch hold — 10 November 2026:** Owner authorized
 twelve exact artificial-only MCP selections,60-second soft timeouts, no
 retries/fits/participants/saved models, stop on failure. Full byte/source/
