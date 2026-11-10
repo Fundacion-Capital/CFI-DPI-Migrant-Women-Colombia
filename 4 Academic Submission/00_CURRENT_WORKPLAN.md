@@ -1,4 +1,28 @@
 # Current academic research revision workplan
+**Current E.5 v3 validation-preparation checkpoint — 10 November 2026:**
+The held v3 QS2 repair is bound to twelve fresh artificial-only selections
+and exact MCP JSON envelopes, two source-exact staged bodies and unused
+per-case paths. All24 input/output directories are empty and all12 native logs
+absent; two pinned future native-table wrappers remain uncompiled. The caller,
+five fixtures, case design and numeric/presentation auditors are unchanged.
+Expected negative producer rc9/459/602 must be checked by the caller before
+outer rc0; the collision sentinel is the sole negative-output exception.
+Start with wp07-e5-v3-native-validation-preparation/README.md, the contract,
+EXECUTION_CHECKLIST.md and VALIDATION.json. No Stata call, participant/model
+load or fit is authorized or performed. Source/body/request/custody checks
+are offline preparation, not native parsing, runtime admission or rendered
+acceptance of v3. The old v2 stop remains preserved and its grant consumed.
+The full all-empty checker is for before first dispatch only; later accepted
+outputs must never be erased to restore that condition. Next: separate exact
+twelve-selection authorization, fresh source preflight and safe owned admission,
+then artificial-only validation with60second soft timeouts, no retries/fits/
+participants/saved models, first-unexpected-failure stop and actual numeric
+plus visual acceptance before proceeding. Soft timeout is not hard exit or
+independent cancellation. Native readiness/log containment remain unobserved.
+E.5 stays partial; C2 HOLD and all institutional/disclosure/release gates remain.
+B/C/D/G continue the complete academic-paper objective; no infrastructure
+development or Git/cloud/settings actions are authorized by this preparation.
+Earlier checkpoints retain their dated meanings.
 **Current E.5 QS2 layout checkpoint — 10 November 2026:** A separate held
 v3 producer repairs only the QS2 footer-space/depth accounting; line-seven
 exit198 stays intact. Original/v2 producers and all prior native packets remain
