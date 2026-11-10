@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-10",
+  "baseline_head": "6c2e58f9d769a7ae36628d715dde10ce918a5b78",
+  "result": "STOPPED_BEFORE_DISPATCH_DUAL_COMPLETION_RECEIPT_PREFLIGHT_CONFLICT",
+  "completion_scope": "PASS_CUSTODY_AND_HOLD_AUDIT_NOT_NATIVE_V3_VALIDATION",
+  "authorization": {
+    "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/AUTHORIZATION.json",
+    "bytes": 887,
+    "sha256": "1ffbf1cb270e0bdc4b816ecbcd59a8569fec0b129bf333cde2635eb211cd140c"
+  },
+  "source_contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/VALIDATION_CONTRACT.json",
+    "bytes": 28182,
+    "sha256": "811e89a56621f8d19fc66174d2b27228fd7ddfe46754029e62038a37e033ae10"
+  },
+  "preparation_receipt": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/VALIDATION.json",
+    "bytes": 14918,
+    "sha256": "27218af6603669b3f06d4a2984044911a2a65cef3e6af1253a18455fb4ff3351"
+  },
+  "preflight": {
+    "source_fixture_body_request_custody": "PASS",
+    "all_empty_preparation_verifier": "PASS_AT_PREPARATION_CHECKPOINT_BEFORE_HOLD_NAVIGATION_UPDATE",
+    "read_only_manager_inventory_calls": 1,
+    "proposed_session_absent": true,
+    "available_slots_observed": 95,
+    "live_native_admission_attempted": false,
+    "semantic_receipt_gate": "FAIL_CHECKLIST_REQUIRES_CALLER_MARKER_SUPPRESSED_BY_EXACT_QUIET_INVOCATION"
+  },
+  "execution": {
+    "authorized_ceiling": 12,
+    "actual_Stata_selections": 0,
+    "not_dispatched": 12,
+    "native_cases_accepted": 0,
+    "retries": 0,
+    "soft_timeout_seconds": 60,
+    "participant_or_model_loads": 0,
+    "fits": 0,
+    "LaTeX_compiles": 0,
+    "actual_v3_native_error_observed": false,
+    "actual_v3_output_or_render_observed": false,
+    "remaining_usable_execution_authority": 0
+  },
+  "evidence": {
+    "saved_v2_exact_caller_body_sha256": "dde28f0fd088b70655de1e53bcf023241eb7a065a3353797d9afa6b991dc61ca",
+    "prior_expanded_response": {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-successor-native-390a1be/AT01_RESPONSE_EXPANDED.txt",
+      "bytes": 2313,
+      "sha256": "faeb52aebf6274137b20239811cc6731fc10a2a792fc6bd42c569c16bcc1b7c1"
+    },
+    "prior_ordinary_log": {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/native.log",
+      "bytes": 954,
+      "sha256": "475ea0b4ff9077af8dd89a691bc95e3154daeb8dc4293eec4f22cb0a20ebc55f"
+    },
+    "prior_actual_markers": {
+      "expanded_has_caller_line": false,
+      "ordinary_log_has_caller_line": false,
+      "expanded_has_outer_line": true,
+      "ordinary_log_has_outer_line": false,
+      "prior_documented_native_rc": 0
+    },
+    "exact_quiet_v3_requests": 12,
+    "receipt_visibility_record": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/MARKER_VISIBILITY.json",
+    "official_references": [
+      "https://www.stata.com/manuals/pquietly.pdf",
+      "https://www.stata.com/manuals/pcapture.pdf"
+    ]
+  },
+  "preservation": {
+    "entry_fingerprints": 981,
+    "immutable_predecessors": 979,
+    "exact_navigation_beforeimages": 2,
+    "mismatches": 0,
+    "unused_input_output_directories": 24,
+    "absent_native_logs": 12,
+    "uncompiled_future_table_wrappers": 2,
+    "only_task_row_changed": "E.5",
+    "unchanged_non_E5_rows": 40,
+    "prior_packets_preserved": true,
+    "source_requests_outputs_edited": false
+  },
+  "independent_review": {
+    "result": "HOLD_WARRANTED_NOT_A_NATIVE_FAILURE",
+    "record": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/INDEPENDENT_REVIEW.json",
+    "scope": "Source contract and prior saved trace read-only corroboration; root owns full custody closure"
+  },
+  "next": "Separately scoped fresh request-logging-only successor with capture noisily do at the outer call; preserve caller and producer; bind fresh requests and paths, audit receipt observability, then obtain new execution authority",
+  "successor_applied_or_tested": false,
+  "full_E5_complete": false,
+  "C2": "HOLD",
+  "institutional_disclosure_release_promoted": false,
+  "contacts": 0,
+  "settings_service_changes": 0,
+  "git_or_cloud_mutations": 0,
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/AUDIT.md",
+      "bytes": 5798,
+      "sha256": "02710062817523bfcda7c11d9254ad16efaba97bf5400fcdae597dc25c027765"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/AUTHORIZATION.json",
+      "bytes": 887,
+      "sha256": "1ffbf1cb270e0bdc4b816ecbcd59a8569fec0b129bf333cde2635eb211cd140c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/CASE_STATUS.csv",
+      "bytes": 888,
+      "sha256": "90127b06209ec0169c856c9adab3cb8c5afef7afcf50b2c79e639fdcb7e12f55"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/COMMIT_MESSAGE.txt",
+      "bytes": 985,
+      "sha256": "6dd2d81a95fd52ffe64c398b1a6fbe0316f2ae7cd7f3cd2f6d7911331f0aade0"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/INPUTS.json",
+      "bytes": 3072,
+      "sha256": "37b69ff895e44f2929a0c47c63c367f9693ad33696587c9787bffab37ed05040"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/README.md",
+      "bytes": 4398,
+      "sha256": "83a1250848f5d518098d2f6195723735f3b91206efec4c8f4db4dd8533c4393e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-preflight-hold/TASK_REGISTER.csv",
+      "bytes": 11450,
+      "sha256": "762a7377c49c2fb32ea3385286244f9547fa018dd204ac964346000424658840"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 65613,
+      "sha256": "49dba99a011758c0d2082a8bcd24475375ca20af7c4955ff3c580681f42d3eb9"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 17466,
+      "sha256": "c566903653045b458193f295df5aae219eea9eb7e053debf1b8853fc4e090b98"
+    }
+  ],
+  "restricted_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/00_CURRENT_WORKPLAN.md",
+      "bytes": 63781,
+      "sha256": "c6527e2f471c273fa85179651eaf544ffe9b13f5785e22858dfb558ee1685877"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/CUSTODY_CLOSURE.json",
+      "bytes": 296968,
+      "sha256": "f232cccf8b5ce7507662a5e6615da4526ea97a41b3e9d6241680e7e6d5be31eb"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/ENTRY_FINGERPRINTS.json",
+      "bytes": 228169,
+      "sha256": "aac485a677e11d9da611c413a0fb01818cb96b81508b0a2ce0a08eabf8201a43"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/INDEPENDENT_REVIEW.json",
+      "bytes": 1007,
+      "sha256": "6beca67c5f83d73dc44aae76c1462a44db496046bf955fc8b02a316841660275"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/MARKER_VISIBILITY.json",
+      "bytes": 4405,
+      "sha256": "33b853afa686244bc7b0f21196b038c131240a924f78c9fab2a36b7b0df214e1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/PREFLIGHT.json",
+      "bytes": 1014,
+      "sha256": "6818127eeb995c002b1af7f52d4d5963fa5ca265da84e22ffcd58d20c949d324"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/SESSION_LIST_BEFORE.json",
+      "bytes": 1658,
+      "sha256": "035b5cba87542ec7135065c1434683fc01727ed228febb59029fe497cfba0bcd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/current_workplan.json",
+      "bytes": 16118,
+      "sha256": "4c40d76473e3ada244fb024ace5920c1bfc770ba7b29ffb9b03c47a27cba2e20"
+    }
+  ],
+  "native_artifacts": []
+}

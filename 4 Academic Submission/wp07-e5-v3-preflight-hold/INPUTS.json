@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-10",
+  "baseline_head": "6c2e58f9d769a7ae36628d715dde10ce918a5b78",
+  "scope": "EXACT_V3_PREFLIGHT_STOP_NO_NATIVE_DISPATCH",
+  "source_contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/VALIDATION_CONTRACT.json",
+    "bytes": 28182,
+    "sha256": "811e89a56621f8d19fc66174d2b27228fd7ddfe46754029e62038a37e033ae10"
+  },
+  "preparation_receipt": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/VALIDATION.json",
+    "bytes": 14918,
+    "sha256": "27218af6603669b3f06d4a2984044911a2a65cef3e6af1253a18455fb4ff3351"
+  },
+  "preparation_checklist": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/EXECUTION_CHECKLIST.md",
+    "bytes": 4170,
+    "sha256": "629e43cb48feced879a02274ae1f07d3da0c57e0d7971ca4f9ce45455e0fcfa2"
+  },
+  "preparation_readme": {
+    "path": "4 Academic Submission/wp07-e5-v3-native-validation-preparation/README.md",
+    "bytes": 5992,
+    "sha256": "dc3964c909348bf1c090538d4f1065834a3e1e7c5b97db665b3c59b6f35bab46"
+  },
+  "source_exact_caller": {
+    "path": "4 Academic Submission/wp07-e5-exhibit-producer/Artificial validation.do",
+    "bytes": 5703,
+    "sha256": "33b2c2940f959b79cb617dadfbca6fdf15a9ae7181aca7c822678d1c0ac1401e"
+  },
+  "staged_caller": {
+    "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-validation-3b1e3e1/artificial_caller_body.do",
+    "bytes": 5174,
+    "sha256": "dde28f0fd088b70655de1e53bcf023241eb7a065a3353797d9afa6b991dc61ca"
+  },
+  "producer": {
+    "path": "1 Code/academic/3 E4 exhibits v3.do",
+    "bytes": 28795,
+    "sha256": "b82f1bc9f8545e1cc9b50855d4d50d9c27fb02aa901d5c0ddfd3210945a5910a"
+  },
+  "prior_saved_response": {
+    "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-successor-native-390a1be/AT01_RESPONSE_EXPANDED.txt",
+    "bytes": 2313,
+    "sha256": "faeb52aebf6274137b20239811cc6731fc10a2a792fc6bd42c569c16bcc1b7c1"
+  },
+  "prior_ordinary_log": {
+    "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261109/e5-presentation-0d931f0/trial/AT01/native.log",
+    "bytes": 954,
+    "sha256": "475ea0b4ff9077af8dd89a691bc95e3154daeb8dc4293eec4f22cb0a20ebc55f"
+  },
+  "prior_native_stop_receipt": {
+    "path": "4 Academic Submission/wp07-e5-successor-native-execution/VALIDATION.json",
+    "bytes": 24702,
+    "sha256": "4e645046ced6b433fe10c04927688c48c7d74bd7d0a1a4ac2c9f5ab4ed9dc40d"
+  },
+  "entry_snapshot": {
+    "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f/ENTRY_FINGERPRINTS.json",
+    "bytes": 228169,
+    "sha256": "aac485a677e11d9da611c413a0fb01818cb96b81508b0a2ce0a08eabf8201a43"
+  },
+  "entry_fingerprints": 981,
+  "planned_mutable_navigation_files": [
+    "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+    "4 Academic Submission/00_meta/current_workplan.json"
+  ],
+  "private_companion": "4 Academic Submission/audit-local/intake/package-e-restricted-20261110/e5-v3-preflight-hold-6c2e58f",
+  "C2": "HOLD"
+}

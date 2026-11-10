@@ -1,4 +1,28 @@
 # Current academic research revision workplan
+**Current E.5 v3 pre-dispatch hold — 10 November 2026:** Owner authorized
+twelve exact artificial-only MCP selections,60-second soft timeouts, no
+retries/fits/participants/saved models, stop on failure. Full byte/source/
+fixture/request/unused-path preflight passed; all981 entry pins matched.
+One read-only manager inventory found the declared session absent and95slots;
+no worker was admitted or created. Semantic receipt gate FAILED before AT01:
+the sealed checklist/README require both caller and outer completion lines,
+but all12 requests invoke the caller with capture quietly do. The byte-identical
+caller and same quiet call in preserved v2 AT01 show rc0 and outer N0/K0
+receipt, with no printed caller receipt in its expanded response or log.
+The JSON states caller-asserted inner rc plus outer completion; do not silently
+waive the more explicit sealed checklist. This is not a native v3 failure.
+Zero selections dispatched,12unused,0accepted,0retries/loads/fits/compiles.
+No old source/request/expectation edits or continuation authority. All24 case
+directories remain empty and all12 native logs absent; prior packets intact.
+Start with wp07-e5-v3-preflight-hold/README.md, AUDIT.md and VALIDATION.json.
+Preserve979 immutable predecessors plus two exact navigation before-images.
+Next: additive request-logging-only successor and no-execution preflight: use
+capture noisily do at the outer caller invocation, unchanged producer/caller
+science/fixtures/expected returns, fresh request paths and later fresh grant.
+Keep true caller/outer evidence and numeric/rendered stop gates; no new
+infrastructure, settings/service/Git/cloud actions. E.5 remains partial; C2
+HOLD and all institutional/disclosure/release matters remain. B/C/D/G continue
+the full academic-paper objective. Earlier checkpoints retain dated meanings.
 **Current E.5 v3 validation-preparation checkpoint — 10 November 2026:**
 The held v3 QS2 repair is bound to twelve fresh artificial-only selections
 and exact MCP JSON envelopes, two source-exact staged bodies and unused
