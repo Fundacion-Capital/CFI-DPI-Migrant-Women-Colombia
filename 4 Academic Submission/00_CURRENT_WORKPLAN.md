@@ -1,4 +1,26 @@
 # Current academic research revision workplan
+**Current E.5 QS2 layout checkpoint — 10 November 2026:** A separate held
+v3 producer repairs only the QS2 footer-space/depth accounting; line-seven
+exit198 stays intact. Original/v2 producers and all prior native packets remain
+unchanged. The saved-artifact baseline reproduces the missing header; the final
+repair passes full/isolated/five-inch/3.5-inch wrappers in three standard passes
+each (7/2/2/4 pages). Every QS2 page has headings and data, all thirty endpoints
+remain, and notes print once on the final page. All fifteen final pages were
+visually reviewed; no final Warning entries or overfull boxes occurred; existing
+underfull diagnostics remain (40 full/10 each other). Sixteen of seventeen
+saved files and all130 table data rows remain exact; the frozen numeric and
+longtable auditor passes. Independent source/pin/file/row/log review found no
+blocker, not independent visual or native verification. Start with
+wp07-e5-qs2-layout-repair/README.md, AUDIT.md, CHECKS.json and VALIDATION.json.
+All601 inherited fingerprints remain as599 immutable predecessors plus two
+exact navigation before-images. No Stata calls, participant/model loads, fits,
+contacts, settings/service changes, Git mutations or cloud sync occurred.
+This completes the scoped repair and saved-artifact verification, NOT native
+v3 generation, the twelve-case batch or E.5. Next: fresh v3 artificial-only
+contract/caller/request binding and separate execution authorization; never
+resume/repoint the stopped v2 requests. Native authority remains zero. C2 HOLD
+and institutional/disclosure/release gates remain; B/C/D/G continue the full
+academic-paper objective. Earlier checkpoints retain their dated meanings.
 **Current E.5 successor-native checkpoint — 10 November 2026:** The exact
 authorized batch stopped after AT01. Its one Stata MCP selection completed
 with rc0/N0/K0 in a recorded 22 seconds within the 60-second soft timeout.
