@@ -1,4 +1,26 @@
 # Current academic research revision workplan
+**Current E.5 successor-native checkpoint — 10 November 2026:** The exact
+authorized batch stopped after AT01. Its one Stata MCP selection completed
+with rc0/N0/K0 in a recorded 22 seconds within the 60-second soft timeout.
+All 17 numeric/file/longtable-structure checks pass; QT1 ordering and QF1 ticks
+are corrected. Three standard private LaTeX passes stabilized with zero Warning
+entries/overfull boxes and 40 underfull paragraph diagnostics. All seven final
+pages and both figure formats were inspected. QS2 page5 has its final row and
+notes but no repeated column headings: visual acceptance FAIL. Independent
+review confirms the defect while all 130 table data rows/labels/Ns and numeric
+records pass. AT02–AT12 were NOT dispatched; no retries, fits, participant/model
+loads, source/output edits or Git/cloud/settings actions occurred. Start with
+wp07-e5-successor-native-execution/README.md, AUDIT.md and VALIDATION.json.
+All 529 entry fingerprints remain as 527 unchanged predecessors plus two exact
+navigation before-images. The owned manager is ready/nonbusy, not proof of OS
+exit or hard cancellation. Provider Temp log was absent at readback; ordinary
+log and raw/expanded response remain. This closes the stopped-attempt audit,
+not E.5 or the twelve-case validation. Next: a separately scoped combined
+saved-artifact QS2 final-footer pagination diagnosis, minimal layout-only
+correction and LaTeX verification. No new Stata run is needed for that diagnosis;
+no native retry/continuation or study-ledger rendering is authorized here.
+C2 HOLD and institutional/disclosure/release gates remain. B/C/D/G continue the
+full academic-paper objective. Earlier checkpoints retain their dated meanings.
 **Current E.5 presentation-successor checkpoint — 9 November 2026:** A separate
 held3 E4 exhibits v2.do restores QT1 emission order, applies compact QF1 axis
 ticks independently of full-precision exports, and corrects longtable first/

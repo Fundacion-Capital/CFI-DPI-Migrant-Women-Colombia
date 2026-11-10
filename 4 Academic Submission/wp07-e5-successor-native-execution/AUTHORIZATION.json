@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-10",
+  "owner_request": "I authorize the 12 exact E.5 successor artificial-only Stata MCP selections, with 60-second soft timeouts and no fits, participant/model loads or retries. Recheck preflight, preserve all packets, fully audit and keep C2 on hold.",
+  "source_contract": {
+    "path": "4 Academic Submission/wp07-e5-presentation-successor/VALIDATION_CONTRACT.json",
+    "bytes": 20720,
+    "sha256": "ca7137f14b5f5d1701ddd359992774c6f12a56bc6ded6db1c6ef205974448910"
+  },
+  "max_selections": 12,
+  "timeout_seconds_per_selection": 60,
+  "soft_timeout_only": true,
+  "fits": 0,
+  "participant_or_model_loads": 0,
+  "retries": 0,
+  "scope": "Exact successor requests only; stop whole batch on unexpected rc, timeout, file/numeric/layout failure; no source/checker/fixture/request change or replacement",
+  "C2": "HOLD",
+  "no_release_Git_settings_or_cloud_authority": true
+}
