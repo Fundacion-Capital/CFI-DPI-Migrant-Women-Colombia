@@ -1,0 +1,555 @@
+{
+  "date": "2026-11-11",
+  "baseline_head": "7f817013868aeb0cd4f81f6d1ab822c1610d22b0",
+  "result": "PASS_STOPPED_BATCH_AUDIT_ONLY",
+  "disposition": "AT01_ACCEPTED_AT02_PREVIEW_STOP_SPILL_RECOVERED_VISUAL_PENDING",
+  "preparation_receipt": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION.json",
+    "bytes": 13359,
+    "sha256": "7c9d36948ead0dcad2d288f66813f7cba518347d37fdad8b7d28cfa2b999d204"
+  },
+  "authorization": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/AUTHORIZATION.json",
+    "bytes": 4305,
+    "sha256": "678dbd3f1fdbfdba7db25df3e50c4f07994d53c6f0afc0b02c09b9b9e573babc"
+  },
+  "contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION_CONTRACT.json",
+    "bytes": 29206,
+    "sha256": "a004ab798fb50e0cdde8551a3a1f68c535eb68f60047bf0d6ca7f214a90d86a1"
+  },
+  "execution": {
+    "authorized_ceiling": 12,
+    "soft_timeout_seconds": 60,
+    "dispatched": 2,
+    "accepted": 1,
+    "not_dispatched": 10,
+    "closed_grant_remaining_authorized": 0,
+    "retries": 0,
+    "manager_read_only_calls": 2,
+    "participant_or_saved_model_loads": 0,
+    "study_ledger_loads": 0,
+    "fits": 0,
+    "restricted_renders": 0
+  },
+  "evidence": {
+    "AT01": "PASS_BOTH_RECEIPTS_17_OUTPUTS_AND_7_RENDERED_PAGES",
+    "AT02_delivered_preview_gate": "STOP_OUTER_NOT_IN_PREVIEW",
+    "AT02_spill": {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_MCP_FULL_OUTPUT.log",
+      "bytes": 41515,
+      "sha256": "bd858acd3074c19625e777cab183371cc07da766afd65c57c979054cc750c373"
+    },
+    "AT02_recovered": "PREVIEW_PREFIX_MATCH_GENUINE_INNER_AND_TERMINAL_OUTER",
+    "AT02_numerical_and_structure": "PASS_OFFLINE_17_FILES",
+    "AT02_cross_case_parity": "PASS_OFFLINE_9_CSV_5_TEX",
+    "AT02_layout": "NOT_RUN",
+    "separate_numeric_outer_rc": null,
+    "AT01_provider_temp_log": "ABSENT_AT_READBACK",
+    "AT02_provider_temp_log": "ABSENT_AT_READBACK",
+    "operator_ruling": "The named exact spill was recovered only after the recorded stop; it confirms the missing receipt in the saved evidence without retroactive visual acceptance or restored authority."
+  },
+  "preservation": {
+    "inherited": 1041,
+    "unchanged_paths": 1039,
+    "exact_current_navigation_beforeimages": 2,
+    "drift": 0,
+    "dispatched": 2,
+    "accepted": 1,
+    "not_dispatched": 10,
+    "unused_input_output_dirs": 20,
+    "absent_unused_case_logs": 10,
+    "AT02_latex_output_exists": false,
+    "native_artifacts": 49,
+    "git_index_staged": 0,
+    "git_head": "7f817013868aeb0cd4f81f6d1ab822c1610d22b0"
+  },
+  "preflight": {
+    "inherited_from_source_check": 997,
+    "entry_manifest_pins": 45,
+    "receipt_tests_passed": 22,
+    "initial_admission": "NAMED_SESSION_ABSENT_AND_MULTI_SESSION_97_SLOTS"
+  },
+  "documentary_outputs": {
+    "result": "PASS_METADATA_AND_STOP_DISPOSITIONS_ONLY",
+    "legacy_objects": 95,
+    "captioned": 81,
+    "images": 57,
+    "unique_media": 56,
+    "tables": 38,
+    "items": 93,
+    "domains": 15,
+    "versions": 5,
+    "offer_rows": 2287,
+    "candidates": 11,
+    "barrier_bindings": 10,
+    "cases": 12,
+    "dispatched": 2,
+    "native_fits": 0,
+    "C2": "HOLD"
+  },
+  "independent_review": "Read-only reviewer confirmed spill and its terminal receipt, both numeric audits and parity, AT01 QS2 pages, unused cases, and all 95 legacy object bindings. All documentary corrections addressed.",
+  "next": "4 Academic Submission/wp07-e5-v3-logging-native-validation/NEXT_TASK.md",
+  "full_E5_complete": false,
+  "C2": "HOLD",
+  "institutional_disclosure_release_promoted": false,
+  "contacts": 0,
+  "settings_service_changes": 0,
+  "git_or_cloud_mutations": 0,
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/AUTHORIZATION.json",
+      "bytes": 4305,
+      "sha256": "678dbd3f1fdbfdba7db25df3e50c4f07994d53c6f0afc0b02c09b9b9e573babc"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/CASE_STATUS.csv",
+      "bytes": 1014,
+      "sha256": "7726df47dd2a221a44e0a0382865ced154c2327592d1f599481833edbeee66d3"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/COMMIT_MESSAGE.txt",
+      "bytes": 655,
+      "sha256": "4772d19a97dc7a3b4b241c36a261619dea93faef0834969b09942b1e88b8cd41"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/CONTEXT_AND_BENCHMARK.md",
+      "bytes": 6332,
+      "sha256": "6080cf3dc915ed10fd3b92c7841db2c2f9c3cbfcc9b81ab928e75e7749ae4b6c"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/DESCRIPTIVE_BUILD.md",
+      "bytes": 6878,
+      "sha256": "6cb835a6b18bc27e69279aa6ccdb0cbe06e0351e356092d69efddc3c0c6cf72d"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/LEGACY_A_INVENTORY_SUMMARY.json",
+      "bytes": 1081,
+      "sha256": "e8fa86313d26c6216a81edebde3ceb7aaeea3865edb030eaeebc422a1f47f268"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/MIXED_EVIDENCE.md",
+      "bytes": 4634,
+      "sha256": "07afaaeacad09e1c11f6d59df3bd7230b1946527c38e12def07bc093e6def02b"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/NEXT_TASK.md",
+      "bytes": 1781,
+      "sha256": "7cc6620be69da133b5e0b30a398e98ad9ba38a5ae11475a4b71d9c11f80e5c93"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/OUTPUT_PLAN_PROGRESS.md",
+      "bytes": 3864,
+      "sha256": "2395a013a178387325d03eaa9216466b371ff1993b2d8740efc270aa8707de02"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/README.md",
+      "bytes": 2855,
+      "sha256": "3fe4cdc2f5dbdfabde0159c9a92e10a966f773bb0522b2b79ce1687dca8dc13f"
+    },
+    {
+      "path": "4 Academic Submission/wp07-e5-v3-logging-native-validation/TASK_REGISTER.csv",
+      "bytes": 11397,
+      "sha256": "9f2ae50b0ab865eca061c8241f8b07cfe60a5bca092fee27ca0e6e10722d6a05"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 67572,
+      "sha256": "4010af417a05b7854cb739023defc2712048f12f3512fb3fcee8dfa74dd2e473"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 19794,
+      "sha256": "7f5ef1dce2de77324dcc303385bb5b2db68a2023af1484494b2ab58daf7c8ff5"
+    }
+  ],
+  "restricted_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/00_CURRENT_WORKPLAN.md",
+      "bytes": 66549,
+      "sha256": "5487ed4697bcb0e1cd86e5f75e0a145d7f9e611632b4b98a3ce4b634d585eb4a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT01_ACCEPTANCE.json",
+      "bytes": 2248,
+      "sha256": "a94a7b1e88f96f995f0458835c7b8e2fc01ca3678dbd4779b02f75b91b50cce0"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT01_DISPATCH.json",
+      "bytes": 239,
+      "sha256": "c3d3eb1213292a34c48918b4a6415019bee62b34fbbd6043892eddf5f2f2dc17"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT01_MCP_RESPONSE.json",
+      "bytes": 41606,
+      "sha256": "a2e5a37404e3549410276f9fa3aca0436de6a7527c0e2dfcf982cf0ca836017d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_DISPATCH.json",
+      "bytes": 182,
+      "sha256": "1a647ab8b1ed2d3ee3f965a2879df02f60409e33c98d88cc20980e9be626de6e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_MCP_FULL_OUTPUT.log",
+      "bytes": 41515,
+      "sha256": "bd858acd3074c19625e777cab183371cc07da766afd65c57c979054cc750c373"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_MCP_RESPONSE.json",
+      "bytes": 1589,
+      "sha256": "82bedcf3ada0f378aa7a4c741b2e7d1968052673c2781241027c567b565fee9e"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_SPILL_READBACK.json",
+      "bytes": 1171,
+      "sha256": "78b54402ca61b9cce8e779ce6e4c13e9962ce0923a40ff1b117497411ef18e96"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/AT02_STOP.json",
+      "bytes": 7791,
+      "sha256": "54963539e65bbdd8fec17ac77066a2462ad12fbddb078b4eba5d8c7d39495558"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/ENTRY_CHECKS.json",
+      "bytes": 683,
+      "sha256": "4c8fead9481713cd7f602f7c1462be75d664e5cf3951010786ba933bd2d58f4d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/LEGACY_A_EXHIBIT_REGISTER.csv",
+      "bytes": 51387,
+      "sha256": "d83c37a587fd26c870d10b1af4222ec22041f0041c17c44efa938d2c4d211859"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/MANAGER_ADMISSION.json",
+      "bytes": 1066,
+      "sha256": "6e1a2b9007a1b4728b996056cd9e610bd5914fddf9f15645c4201ecd0a740f3a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/MANAGER_CLOSURE.json",
+      "bytes": 1353,
+      "sha256": "79eb57ef822e4d01d3089fee31bac359cc8d5382298dd91f2929d09af2715d7a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/current_workplan.json",
+      "bytes": 18458,
+      "sha256": "42eb63c6005d107e237251aba31f8e39d4f74ca783e9df18ddfc011e4950c313"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-1.aux",
+      "bytes": 1626,
+      "sha256": "097c93bd2f3792064ab3abcc5dc6a4e301c2a95e63ba1c272b3e0831259de85c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-1.log",
+      "bytes": 11548,
+      "sha256": "b612f8cbc07a8bee1b3667b4fffe31cf2cc9a2c140dc31f333c194bac8e517c4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-2.aux",
+      "bytes": 1625,
+      "sha256": "5bbbeb90bf39a84b158c425ec1a19fd99dc68048c85153132f51dbc630e51481"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-2.log",
+      "bytes": 11462,
+      "sha256": "41ec5af6f64994dc5bc2cfd2cb8b6affa3635cbef46eb940bac82a20070275ec"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-3.aux",
+      "bytes": 1625,
+      "sha256": "5bbbeb90bf39a84b158c425ec1a19fd99dc68048c85153132f51dbc630e51481"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/pass-3.log",
+      "bytes": 11057,
+      "sha256": "48eaf40bb13c9f69b7f07b3239f3ea5009a0060962b37f246fd8a3b9f63a816b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/qf1-pdf.png",
+      "bytes": 45314,
+      "sha256": "2a7d22016d76f9a1e25b034311902f29ef2bdbd80c823baaafb1fc72c67c9066"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-1.png",
+      "bytes": 94005,
+      "sha256": "c6cb9fecddcda59f6c9169e681f4d93d0e4e101b22d690c2f0218314d28a24d4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-2.png",
+      "bytes": 45660,
+      "sha256": "0da7d27f7b9c7085102e1363c6bde2dab5ace4b96a3d9c04e915447be36ee82c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-3.png",
+      "bytes": 119136,
+      "sha256": "4edf1d42d9b6859d434055efcc7e454a1dd2eefac96f1e87c8dd3708608438d8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-4.png",
+      "bytes": 143417,
+      "sha256": "93fd3ed83a03db7fee02a627817df1b38b9999ba21d2400491a29eaf1aadaac4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-5.png",
+      "bytes": 26283,
+      "sha256": "303250cea55eae8879a5e3988a79dfe0f260c7ef99c4e25ebe92c74dd2cbd018"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-6.png",
+      "bytes": 162886,
+      "sha256": "4db8015d4b74fe3cb291208def6a1f1a4b047e85505055590f176dbfd4f33f1a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-native-7f81701/render-AT01/table-7.png",
+      "bytes": 135104,
+      "sha256": "aa422b21ec9ba86e7665719f4fc5294633549c7039e5666680cf048bdfee41c4"
+    }
+  ],
+  "native_artifacts": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/input/e4_model_status.csv",
+      "bytes": 414,
+      "sha256": "ca99a4ae6ed8cc4d5b996ba106a59f8637aa900cd841eb8b43e58a81f5bf22ff"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/input/e4_native_matrices.csv",
+      "bytes": 155554,
+      "sha256": "597ec1bbbabdf375d01fb1f442c7cb4bf072d985d4a71695e63b59deffccac5b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/input/e4_primary_tests.csv",
+      "bytes": 444,
+      "sha256": "9381eceac2f0d1f9af438e94b29a0465780455befe1eba73d1f88b684b18d24d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/input/e4_probabilities.csv",
+      "bytes": 4182,
+      "sha256": "b75b9700110bad6984c09854f85539cc933324ba3336b07c2554357f0bb2ab53"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/input/e4_support.csv",
+      "bytes": 6782,
+      "sha256": "8859d6277214bf5e6e9505b2670ebd4244bb9d36a755e0a58345044922f6576b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/CAPTIONS.txt",
+      "bytes": 1732,
+      "sha256": "7af2a4405f09e98a3ba1bacde474a3ee3f70db7db7ce06040ffa5331b6d88071"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QF1_core.csv",
+      "bytes": 900,
+      "sha256": "f1182196d305c6a4221489a74a65c33a2ecfda60cc535a894b681ea3ca9f2552"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QF1_core.pdf",
+      "bytes": 2668,
+      "sha256": "319b163c573f1b36fb839491a22b1fbb435a948e86f0f37ec7e197eed422e830"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QF1_core.png",
+      "bytes": 153410,
+      "sha256": "d7c6ae62ed2b6a905a0dd9d0250dd3b1170dda71e3373f6e52ac2c86904652f3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS1_comparisons.csv",
+      "bytes": 2914,
+      "sha256": "c02edd817c0f3f6a3aa5b975473cc65a85fcf5608c212cd26ed5ddc8208f9f17"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS1_comparisons.tex",
+      "bytes": 3172,
+      "sha256": "f2ad80125eb250781b1fcbd591ffbae53ce9e412931ad0b0762e88b4cb40fdcc"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS2_endpoints.csv",
+      "bytes": 5657,
+      "sha256": "f124447483ea4272fe8e108fc4acf038de1264deed87063fb7f9db702ea8d39a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS2_endpoints.tex",
+      "bytes": 4518,
+      "sha256": "347ceb4acf06dc2f58e5e68f4c4e5803846ee33ddbe45d2e65f9970185d1670d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS3_coefficients.csv",
+      "bytes": 13265,
+      "sha256": "ed89234951e17027416850186dd409ce3ff865993683e0fb6548c3e1922719a0"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS3_coefficients.tex",
+      "bytes": 8144,
+      "sha256": "f16954bde647a6663fc837513e9a021664911e5946c4d03bd4056923a1f809ce"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS3_covariance.csv",
+      "bytes": 118428,
+      "sha256": "4281caa66115720311679b8d75e750ec253d36d0f784832a5f0e2d6472b3eb9a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QS3_support.csv",
+      "bytes": 7684,
+      "sha256": "e64400a8e6ebdf0e3ec79db3790dafaa7871a6adbc7ad5db0465a94991e15ce9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QT1_models.csv",
+      "bytes": 456,
+      "sha256": "390fbbb320fac51297b7e7fc2567d77116d604d78644de2de9ae0e3dcb41518c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QT1_models.tex",
+      "bytes": 2183,
+      "sha256": "71560f80768fe115cabb4f9d52d9cc537cef0f5d8f98a310fe6dc57ce2a129dd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QT2_primary.csv",
+      "bytes": 693,
+      "sha256": "350e21221ec490b3eb169b97ac2519fe0df750199ac3d839e90cfeb188f36240"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/QT2_primary.tex",
+      "bytes": 1098,
+      "sha256": "df2c7fa8050fdb8dcec72c8a54786f1839adf8e3d0fceed7f412f9b0c99c25f4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/out/e5_complete.csv",
+      "bytes": 110,
+      "sha256": "52bafc62699d9bf8c299b30df573629ca8ddbd6d505c77ac98661605c426e033"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/native.log",
+      "bytes": 41925,
+      "sha256": "af56efe9d56945663c834fe1b0814e95ba3208c943008a068b2592fa0782d7a5"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/input/e4_model_status.csv",
+      "bytes": 413,
+      "sha256": "547b7bacef1eb6f582b6d4831995c12ab47e08950585422af928f4f06967e24d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/input/e4_native_matrices.csv",
+      "bytes": 155554,
+      "sha256": "fe18533e33ed31f4e5bac346ae2f7d2052ce7d46050f5b9a64572d9bc8d985ec"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/input/e4_primary_tests.csv",
+      "bytes": 443,
+      "sha256": "cd141e2d65b05aaf754f2a998e272c6f411e4ed6764ca317218475b732873f4d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/input/e4_probabilities.csv",
+      "bytes": 4181,
+      "sha256": "1286c92bcfd3be3b240c7724938cf8702c1082d7fe87ede97b4542a286ecfed9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/input/e4_support.csv",
+      "bytes": 6782,
+      "sha256": "d75d733319b6d2c3e467e87d047139630e17abd81c519f4506bf2d0c5ccef3c8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/CAPTIONS.txt",
+      "bytes": 1732,
+      "sha256": "7af2a4405f09e98a3ba1bacde474a3ee3f70db7db7ce06040ffa5331b6d88071"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QF1_core.csv",
+      "bytes": 900,
+      "sha256": "f1182196d305c6a4221489a74a65c33a2ecfda60cc535a894b681ea3ca9f2552"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QF1_core.pdf",
+      "bytes": 2668,
+      "sha256": "319b163c573f1b36fb839491a22b1fbb435a948e86f0f37ec7e197eed422e830"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QF1_core.png",
+      "bytes": 153410,
+      "sha256": "d7c6ae62ed2b6a905a0dd9d0250dd3b1170dda71e3373f6e52ac2c86904652f3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS1_comparisons.csv",
+      "bytes": 2914,
+      "sha256": "c02edd817c0f3f6a3aa5b975473cc65a85fcf5608c212cd26ed5ddc8208f9f17"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS1_comparisons.tex",
+      "bytes": 3172,
+      "sha256": "f2ad80125eb250781b1fcbd591ffbae53ce9e412931ad0b0762e88b4cb40fdcc"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS2_endpoints.csv",
+      "bytes": 5657,
+      "sha256": "f124447483ea4272fe8e108fc4acf038de1264deed87063fb7f9db702ea8d39a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS2_endpoints.tex",
+      "bytes": 4518,
+      "sha256": "347ceb4acf06dc2f58e5e68f4c4e5803846ee33ddbe45d2e65f9970185d1670d"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS3_coefficients.csv",
+      "bytes": 13265,
+      "sha256": "ed89234951e17027416850186dd409ce3ff865993683e0fb6548c3e1922719a0"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS3_coefficients.tex",
+      "bytes": 8144,
+      "sha256": "f16954bde647a6663fc837513e9a021664911e5946c4d03bd4056923a1f809ce"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS3_covariance.csv",
+      "bytes": 118428,
+      "sha256": "4281caa66115720311679b8d75e750ec253d36d0f784832a5f0e2d6472b3eb9a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QS3_support.csv",
+      "bytes": 7684,
+      "sha256": "e64400a8e6ebdf0e3ec79db3790dafaa7871a6adbc7ad5db0465a94991e15ce9"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QT1_models.csv",
+      "bytes": 456,
+      "sha256": "390fbbb320fac51297b7e7fc2567d77116d604d78644de2de9ae0e3dcb41518c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QT1_models.tex",
+      "bytes": 2183,
+      "sha256": "71560f80768fe115cabb4f9d52d9cc537cef0f5d8f98a310fe6dc57ce2a129dd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QT2_primary.csv",
+      "bytes": 693,
+      "sha256": "350e21221ec490b3eb169b97ac2519fe0df750199ac3d839e90cfeb188f36240"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/QT2_primary.tex",
+      "bytes": 1098,
+      "sha256": "df2c7fa8050fdb8dcec72c8a54786f1839adf8e3d0fceed7f412f9b0c99c25f4"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/out/e5_complete.csv",
+      "bytes": 110,
+      "sha256": "52bafc62699d9bf8c299b30df573629ca8ddbd6d505c77ac98661605c426e033"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/native.log",
+      "bytes": 43066,
+      "sha256": "fd4b17a81fca0a6d8cb282ac4b06047c6a9dacc26dc801b575a79827a2586314"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/latex-audit/AT01/tables.aux",
+      "bytes": 1625,
+      "sha256": "5bbbeb90bf39a84b158c425ec1a19fd99dc68048c85153132f51dbc630e51481"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/latex-audit/AT01/tables.log",
+      "bytes": 11057,
+      "sha256": "48eaf40bb13c9f69b7f07b3239f3ea5009a0060962b37f246fd8a3b9f63a816b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/latex-audit/AT01/tables.pdf",
+      "bytes": 80801,
+      "sha256": "fc016e59008f54701bfb776b37b4e3e535506aefd25abe32adaeed1856973798"
+    }
+  ]
+}

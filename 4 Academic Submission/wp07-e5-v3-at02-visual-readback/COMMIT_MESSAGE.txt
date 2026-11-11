@@ -1,0 +1,9 @@
+WP07 E.5: Accept saved AT02 visuals and bind readback-first negative cases
+
+Preserve the stopped native packet and validate AT02 from its pinned
+saved artifacts, including QS2 pagination and both QF1 formats. Add
+an offline full-output readback gate ahead of the frozen receipt
+checker, test against synthetic failures and the exact archived spill,
+and bind AT03–AT12 to a proposed fresh session without changing their
+Stata selections or granting execution. Keep restricted rendering
+and Appendix C2 on hold.

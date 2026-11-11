@@ -1,0 +1,100 @@
+{
+  "owner_grant": "I authorize the 12 exact E.5 v3 logging-only artificial Stata MCP selections, with 60s soft timeouts. Recheck preflight, stop on failure, preserve all packets and fully audit. Implement absolutely everything in the analytical output plan as well",
+  "received_date_local": "2026-11-11",
+  "entry_head": "7f817013868aeb0cd4f81f6d1ab822c1610d22b0",
+  "preparation_receipt": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION.json",
+    "bytes": 13359,
+    "sha256": "7c9d36948ead0dcad2d288f66813f7cba518347d37fdad8b7d28cfa2b999d204"
+  },
+  "contract": {
+    "path": "4 Academic Submission/wp07-e5-v3-logging-successor/VALIDATION_CONTRACT.json",
+    "bytes": 29206,
+    "sha256": "a004ab798fb50e0cdde8551a3a1f68c535eb68f60047bf0d6ca7f214a90d86a1"
+  },
+  "max_selections": 12,
+  "timeout_seconds_soft": 60,
+  "retries": 0,
+  "order": [
+    "AT01",
+    "AT02",
+    "AT03",
+    "AT04",
+    "AT05",
+    "AT06",
+    "AT07",
+    "AT08",
+    "AT09",
+    "AT10",
+    "AT11",
+    "AT12"
+  ],
+  "requests": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT01/mcp_request.json",
+      "bytes": 2265,
+      "sha256": "7d7728376068e739076c064fffcbdd27bdb17dc132ab118c3c5cfda3c18afb61"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT02/mcp_request.json",
+      "bytes": 2266,
+      "sha256": "0cdb638ea754cd8736d4cbb8554fb959ec8948224b6a78b111fbf6b8bdad668b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT03/mcp_request.json",
+      "bytes": 2278,
+      "sha256": "4066d37e55ce86b9380d76dfc94cb0566eef7190e3671a76e8319976ea95a9d2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT04/mcp_request.json",
+      "bytes": 2276,
+      "sha256": "8121794ab5e4f82437173b22b09e024319b67f9f0b73409993bf5097093718e2"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT05/mcp_request.json",
+      "bytes": 2268,
+      "sha256": "f7c75e38b31fdb44179a6a6cf1395911250adf7afbb2919bb71289aad27b67a3"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT06/mcp_request.json",
+      "bytes": 2271,
+      "sha256": "cf24398ed867993cf28ddbca6939b62c165d52f6eaae563223c5ad44758f8ce8"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT07/mcp_request.json",
+      "bytes": 2270,
+      "sha256": "073a21f986898332e7dbabda7c3fb12d6372411dc936287e4797342259710b2a"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT08/mcp_request.json",
+      "bytes": 2275,
+      "sha256": "d39078c21c95a286155d47a1dea66ed20951cab5ea84a72c8b94a9319c14b6e1"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT09/mcp_request.json",
+      "bytes": 2275,
+      "sha256": "4fdc3e79720fd878cba63a87b3961d5226eb7eb74a588760bd4cb02aa48a7abd"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT10/mcp_request.json",
+      "bytes": 2273,
+      "sha256": "217b75de227d7709f58b565564def21f21846f2c447e24cec5249fdea57f436c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT11/mcp_request.json",
+      "bytes": 2270,
+      "sha256": "94ee8e281105eca266c6ec990800c0fb819851b9962b870b3a63407cde302049"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-logging-65309c5/trial/AT12/mcp_request.json",
+      "bytes": 2272,
+      "sha256": "bf28abb80c10bf0ff2a99955663063133c51d31e252129b34431691a345bd202"
+    }
+  ],
+  "stop_on_first_failure": true,
+  "fits": 0,
+  "participant_or_saved_model_loads": 0,
+  "restricted_render_authorized": false,
+  "appendix_c2": "HOLD",
+  "unconsumed_capacity_not_renewable": true
+}

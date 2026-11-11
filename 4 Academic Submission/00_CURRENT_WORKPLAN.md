@@ -1,5 +1,35 @@
 # Current academic research revision workplan
 
+**Current E.5 v3 saved-artifact checkpoint — 11 November 2026:** AT02
+passed review of its saved seven-page diagnostic and both QF1 formats.
+QS2 has all 30 rows, a repeated header and a single final note. The
+original batch remains stopped; no AT01 or AT02 rerun. Ten remaining
+cases are bound with unchanged selections, unused paths and a proposed
+fresh session. Full-output readback and byte preservation must precede
+the receipt gate. No new Stata runs or restricted access. C2 stays **HOLD**.
+
+Start at [the accepted visual review and negative-case binding](wp07-e5-v3-at02-visual-readback/README.md).
+Next: fresh authorization for AT03–AT12 only; confirm live admission
+and unused paths under that grant. Full E.5 and restricted rendering remain open.
+
+
+**Current E.5 v3 logging-only validation — 11 November 2026:** AT01
+accepted, including both actual receipts, numeric checks and all seven table
+pages. AT02 stopped the batch on the truncated tool preview; its actual outer
+receipt was recovered later from the exact full-output spill named by the tool.
+Offline CSV/TeX parity passed. AT02 visual review remains open; AT03–AT12
+unused. No retry, participant/model load, fit, restricted render or C2.
+Appendix C2 stays **HOLD**.
+
+Start at [the audited handoff](wp07-e5-v3-logging-native-validation/README.md)
+and [output-plan progress](wp07-e5-v3-logging-native-validation/OUTPUT_PLAN_PROGRESS.md).
+Next: saved-artifact visual acceptance for AT02 without rerunning, bind full-
+output readback before the receipt gate, then obtain a fresh exact grant for
+the ten remaining cases if warranted. The source-stage deliverables include
+the 95-object LEGACY-A inventory and descriptive, mixed-evidence and
+benchmark source maps. Full E.5 and whole-paper approval remain open.
+
+
 **Current E.5 v3 logging-only successor — 11 November 2026:** Twelve fresh
 artificial-only requests staged with unused paths. The only command change
 is the outer `capture noisily do`; producer, caller, fixtures and analysis
