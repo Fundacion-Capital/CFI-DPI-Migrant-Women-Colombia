@@ -1,5 +1,20 @@
 # Current academic research revision workplan
 
+**Current E.5 v3 restricted render contract — 11 November 2026:**
+Five production E.4 input identities match both earlier seal records.
+The qualified v3 body, one quiet no-fit MCP request, 17 exact exhibit
+paths, and numerical and visual gates are bound. No ledger bytes read
+or rehashed; no Stata call, session inventory or output creation.
+The future run root is unused. The parent ACL is broader than the
+required allowlist; effective private access and the provider route
+must be verified and authorized before any ledger byte read or dispatch.
+Artificial qualification remains accepted; full E.5 and release remain
+open. C2 stays **HOLD**.
+
+Start at [the exact restricted render contract](wp07-e5-v3-restricted-render-contract/README.md).
+Next: separate exact authorization and the access-gated preflight.
+
+
 **Current E.5 v3 artificial qualification — 11 November 2026:** AT03–AT12
 accepted, ten sequential artificial selections at 60-second soft timeouts,
 no retries. All complete responses arrived inline; both actual receipt
