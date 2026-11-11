@@ -1,5 +1,20 @@
 # Current academic research revision workplan
 
+**Current E.5 v3 artificial qualification — 11 November 2026:** AT03–AT12
+accepted, ten sequential artificial selections at 60-second soft timeouts,
+no retries. All complete responses arrived inline; both actual receipt
+channels and exact synthetic fixture mutations were verified. AT10 retained
+the only sentinel; the other nine output directories were empty. AT01 and
+AT02 remain accepted without redispatch; the earlier stopped batch is preserved.
+All twelve artificial cases are now accepted. No restricted ledgers, participant
+or model data, fits, or release actions. C2 stays **HOLD**.
+
+Start at [the artificial qualification audit](wp07-e5-v3-negative-native-validation/README.md).
+Next: prepare a separate exact no-fit contract for the five sealed aggregate
+E.4 ledgers and private display checks; no restricted read or render until
+a new grant. Full E.5 and whole-paper approval remain open.
+
+
 **Current E.5 v3 saved-artifact checkpoint — 11 November 2026:** AT02
 passed review of its saved seven-page diagnostic and both QF1 formats.
 QS2 has all 30 rows, a repeated header and a single final note. The

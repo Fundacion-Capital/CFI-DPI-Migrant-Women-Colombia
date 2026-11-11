@@ -1,0 +1,8 @@
+WP07 E.5: Qualify all ten readback-first artificial negative cases
+
+Record the exact AT03–AT12 grant, unused-path admission and 10/10
+one-attempt results. Preserve complete inline responses, native logs,
+receipt evidence, exact synthetic mutations and the AT10 sentinel.
+Carry forward AT01 and AT02 acceptance without rerunning them, seal
+the full artificial qualification and leave restricted rendering and
+Appendix C2 on hold pending separate scope and authorization.

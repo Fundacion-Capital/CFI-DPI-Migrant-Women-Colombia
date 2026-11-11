@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-11",
+  "owner_message": "I authorize the ten artificial Stata MCP runs for AT03–AT12 only. Recheck preflight, read back full output before receipt checks, use 60s soft timeouts, and stop on failure with no retries. Preserve all packets, fully audit, and keep C2 on hold.",
+  "binding": {
+    "path": "4 Academic Submission/wp07-e5-v3-at02-visual-readback/AT03_AT12_BINDING.json",
+    "bytes": 22614,
+    "sha256": "3cb667e5c8f42169a1c9386f76870686e98dc249147ab16f28640e6a8bc29777"
+  },
+  "prior_visual_acceptance": {
+    "path": "4 Academic Submission/wp07-e5-v3-at02-visual-readback/VALIDATION.json",
+    "bytes": 16162,
+    "sha256": "a2904531821000d296725304ccaefeacde5782894321354ebbefe8b8d92adcf8"
+  },
+  "case_ids": [
+    "AT03",
+    "AT04",
+    "AT05",
+    "AT06",
+    "AT07",
+    "AT08",
+    "AT09",
+    "AT10",
+    "AT11",
+    "AT12"
+  ],
+  "bound_requests": [
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT03.json",
+      "bytes": 2283,
+      "sha256": "c0bcf20a3b5d33aa3183d952ab139d3e8867dc39fc73888e3870fc48703f905c"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT04.json",
+      "bytes": 2281,
+      "sha256": "9e51f4569929d2488be02ef2f154ccff5a6a18ea8bf1defeff436516c09773fc"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT05.json",
+      "bytes": 2273,
+      "sha256": "42bb1d12033e19332f99b883048951b7d4633b9c6fe28518dacfcb9725f90e2b"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT06.json",
+      "bytes": 2276,
+      "sha256": "d0a5f4363974c50bde126db7b31c9df984cb3c059151de96a2e3934eaf5b1826"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT07.json",
+      "bytes": 2275,
+      "sha256": "04c34ded4c1babcb460c27ff19c3f328a6c6645a86ef9ca2a922e33ef3f04045"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT08.json",
+      "bytes": 2280,
+      "sha256": "1e5a90414c1e8ff85a971132bc97c2a9e9189c868f8422f1aff0f146e8d255ba"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT09.json",
+      "bytes": 2280,
+      "sha256": "ea0445599d0ac04a64c437d4d52d13cbe750b10506d6bf2713c0ab4a1ec77b25"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT10.json",
+      "bytes": 2278,
+      "sha256": "14b81528d160773f0dee2d225f49f0c0bfc67976171ec555913d0492d2508630"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT11.json",
+      "bytes": 2275,
+      "sha256": "f59ea13b5c20cc776fc0ba12018aa2444ec0ddfd84b7bd6b8a672e31ae99c939"
+    },
+    {
+      "path": "4 Academic Submission/audit-local/intake/package-e-restricted-20261111/e5-v3-at02-visual-readback-7f81701/requests/AT12.json",
+      "bytes": 2277,
+      "sha256": "bd6c6c1511ceac01c3172a07c7700677134ee70a9b73241753e4c187373d0f51"
+    }
+  ],
+  "proposed_session": "cfi_e5_v3_readback_7f81701",
+  "ceiling": 10,
+  "timeout_seconds_soft": 60,
+  "retries": 0,
+  "stop_on_first_failure": true,
+  "no_AT01_AT02_redispatch": true,
+  "fits": 0,
+  "participant_or_model_loads": 0,
+  "study_ledger_reads": 0,
+  "C2": "HOLD"
+}
