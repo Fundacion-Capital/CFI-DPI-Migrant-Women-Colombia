@@ -6,8 +6,8 @@
   "scope": "COMPLETE_ACADEMIC_PAPER_AND_TECHNICAL_SUPPLEMENT",
   "orchestration": "EIGHT_SUBSTANTIVE_PACKAGES_FORTY_ONE_TASKS",
   "next_package": "E",
-  "next_task_range": "WP07 AQ01 caller visibility diagnosis; stopped batch preserved",
-  "next_objective": "Reconcile the exact Stata caller path and worker read/traverse boundary from saved evidence before any separately authorized synthetic probe or renewed qualification. No retries, carrier opens or participant saves. E.5 and C2 stay held.",
+  "next_task_range": "WP07 one synthetic AQ01 visibility probe review; no native authority",
+  "next_objective": "Review the single bound read-only comparison of the AQ01 caller and the prior working AT03 artificial caller. Fresh authorization and admission are required; AQ01 is not retried, no participant build, and E.5 and C2 stay held.",
   "parallel_source_packages": [
     "B",
     "C",
@@ -18,7 +18,7 @@
     "4 Academic Submission/ACADEMIC_SUBMISSION_WORKPLAN.md",
     "4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md"
   ],
-  "latest_source_handoff": "4 Academic Submission/wp07-preparation-only-execution/README.md",
+  "latest_source_handoff": "4 Academic Submission/wp07-aq01-visibility-diagnosis/README.md",
   "submission_readiness_roadmap": "4 Academic Submission/wp07-preparation-only-build/ROADMAP.md",
   "literature_handoff": "4 Academic Submission/wp05-literature-context/README.md",
   "historical_state_preserved": "4 Academic Submission/00_meta/workflow_state.json",
@@ -46,8 +46,8 @@
     "1 Code/academic/1 Data preparation.do",
     "1 Code/academic/2 Analysis.do"
   ],
-  "last_implemented_package": "WP07 exact artificial qualification staging and stopped AQ01 attempt",
-  "last_completion_scope": "ONE_SYNTHETIC_SELECTION_STOPPED_BEFORE_CALLER_NO_DATA_LOAD_SAVE_OR_RELEASE",
+  "last_implemented_package": "WP07 AQ01 saved-evidence visibility diagnosis and single synthetic probe binding",
+  "last_completion_scope": "SAVED_RESPONSE_AND_SOURCE_COMPARISON_ONLY_NO_NATIVE_OR_PROVIDER_CALL",
   "wp07_preparation_only_build": {
     "binding": "4 Academic Submission/wp07-preparation-only-build/BUILD_CONTRACT.json",
     "audit": "4 Academic Submission/wp07-preparation-only-build/AUDIT.md",
@@ -57,6 +57,9 @@
     "destination_provisioned": false,
     "qualification_status": "STOP_AQ01_RC601_BEFORE_FIXTURE_ELEVEN_NOT_DISPATCHED",
     "qualification_execution": "4 Academic Submission/wp07-preparation-only-execution/VALIDATION.json",
+    "visibility_diagnosis": "4 Academic Submission/wp07-aq01-visibility-diagnosis/README.md",
+    "visibility_probe": "4 Academic Submission/wp07-aq01-visibility-diagnosis/PROBE_CONTRACT.json",
+    "visibility_probe_authorized": false,
     "qualification_binding": "4 Academic Submission/wp07-preparation-only-qualification/QUALIFICATION.json",
     "qualification_audit": "4 Academic Submission/wp07-preparation-only-qualification/AUDIT.md",
     "participant_custody": "HOLD_EXPLICIT_USE_DESTINATION_WORKER_LOG_AND_RETENTION_NOT_CLEARED",

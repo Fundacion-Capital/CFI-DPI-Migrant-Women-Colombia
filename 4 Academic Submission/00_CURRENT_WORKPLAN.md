@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [AQ01 saved-evidence visibility
+diagnosis](wp07-aq01-visibility-diagnosis/README.md). Stata could not open
+the AppData caller and emitted no directory-change echo; the sealed AT03
+repository route did both. Installed source makes skipped directory setup
+plausible but does not establish the historical worker's access or exact
+cause. One synthetic text-only comparison is bound for review, not run.
+AQ01 remains stopped; participant build, **E.5 and C2 stay HOLD**.
+
 **Current checkpoint — 13 November 2026:** [WP07 artificial qualification
 attempt](wp07-preparation-only-execution/README.md) stopped at AQ01.
 The exact native selection returned `r(601)` opening the staged caller;
