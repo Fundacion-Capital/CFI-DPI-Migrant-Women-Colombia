@@ -1,5 +1,15 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 12 November 2026:** [E.5 metadata preflight and held
+dataset-build review](wp07-prepared-dataset-review/README.md). Five ledger
+lengths and local file ACLs match the required metadata; Cloud Files path
+custody, private destination and native log access are not cleared. Keep the
+exact E.5 render and Appendix C2 on hold. The held preparation and analysis
+successors add input-preservation and denominator checks; no construction,
+estimand or prior seal changed. Next quantitative task: bind a distinct
+preparation-only private build and validation contract. No native execution,
+participant load or save is authorized by this checkpoint.
+
 **Current E.5 v3 restricted render contract — 11 November 2026:**
 Five production E.4 input identities match both earlier seal records.
 The qualified v3 body, one quiet no-fit MCP request, 17 exact exhibit
