@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "9d5d65f6629764adda85ed3472615af45d9a3c0c",
+  "status": "COMPLETE_CLOSED_LOG_BLANK_STATUS_NO_FILENAME_GRANT_CONSUMED",
+  "contract": {
+    "path": "4 Academic Submission/wp07-command-log-diagnosis/PROBE_CONTRACT.json",
+    "sha256": "9f7239b63bf794f232235e5f12d48659b6c29d7db032fee618ea7d1cfcbfd6eb"
+  },
+  "private_evidence": "4 Academic Submission/audit-local/intake/package-e-restricted-20261113/wp07-cmdlog-diagnostic-fe31674",
+  "evidence_pins": [
+    {
+      "file": "before-00_CURRENT_WORKPLAN.md",
+      "bytes": 74903,
+      "sha256": "8bd7e9002c33466a415fa38ec089e1970395e1215d642c041184e2983fa5e296"
+    },
+    {
+      "file": "before-current_workplan.json",
+      "bytes": 25061,
+      "sha256": "ceb94f2f680c1ba86cd641281e6f8c66feffee88bf29870272a97dd82d7011b0"
+    },
+    {
+      "file": "intent.json",
+      "bytes": 2676,
+      "sha256": "6163e685e8dcdd4ad9565e5698c5cb7a22e31ca39a98f44882237887ee9e0add"
+    },
+    {
+      "file": "inventory-after.json",
+      "bytes": 5723,
+      "sha256": "c3b78cc774a961b4e857c6727405b36126b145b7d9255f196b60503f183edf41"
+    },
+    {
+      "file": "inventory-before.json",
+      "bytes": 5144,
+      "sha256": "76173ea52dbc92d5e6b83e9d1e0f663c4239190aabb069f208a1fb6a26637336"
+    },
+    {
+      "file": "receipt-audit.json",
+      "bytes": 1025,
+      "sha256": "cf82136b046f184f1167454896d627b1003d9c3cb4c996930354ed830ec2dfd0"
+    },
+    {
+      "file": "response.json",
+      "bytes": 2189,
+      "sha256": "c2961f05ff9bfae443f8111ee029a268b1093bea6fc22785d521507839b6d860"
+    },
+    {
+      "file": "timing.json",
+      "bytes": 86,
+      "sha256": "e449cc2535a9073457b70f3808f4a77ae7bff50a491d3c9c9f70107ac7856a72"
+    }
+  ],
+  "preflight": {
+    "source_pins": 4,
+    "predecessor_source_pins": 13,
+    "old_staging_sources": 7,
+    "old_receipts": 25,
+    "installed_source_pins": 3,
+    "session_vacant": true,
+    "available_slots": 83,
+    "old_leaf_empty": true
+  },
+  "execution": {
+    "tool": "mcp__stata_mcp__stata_run_selection",
+    "session": "cfi_wp07_cmdlog_fe31674",
+    "soft_timeout_seconds": 60,
+    "selections": 1,
+    "session_inventory_calls": 2,
+    "retries": 0,
+    "caller_executions": 0,
+    "participant_loads": 0,
+    "synthetic_data_loads": 0,
+    "model_loads": 0,
+    "fits": 0,
+    "logging_mutations": 0,
+    "sessions_destroyed": 0,
+    "old_qualification_cases_dispatched": 0,
+    "observed_wall_seconds": 3.216
+  },
+  "observation": {
+    "response_chars": 1954,
+    "response_lines": 69,
+    "positions": [
+      18,
+      35,
+      42,
+      45,
+      62,
+      66,
+      69
+    ],
+    "actual_receipts_unique": true,
+    "actual_receipts_ordered": true,
+    "bare_cmdlog_echo_count": 1,
+    "transport_error": false,
+    "native_error": false,
+    "spill_or_cap_seen": false,
+    "native_command_log": "closed",
+    "query_rc": 0,
+    "status_blank": true,
+    "status_on": false,
+    "status_off": false,
+    "filename_present": false,
+    "ordinary_logs": 1,
+    "ordinary_log_route_ok": true,
+    "ordinary_log_path_emitted": false,
+    "entry_empty": true,
+    "exit_empty": true,
+    "historical_guard_would_reject_observed_blank": true,
+    "historical_worker_state_recovered": false
+  },
+  "inventory": {
+    "ready": true,
+    "busy": false,
+    "otherNew": 2,
+    "priorMissing": 1,
+    "priorChanged": 0,
+    "oldAQPresent": 0,
+    "slotsBefore": 83,
+    "slotsAfter": 81
+  },
+  "postflight": {
+    "original_receipts": 25,
+    "stage_sources": 7,
+    "installed_source_pins": 3,
+    "new_case_artifacts": 0,
+    "old_gate_leaf_empty": true,
+    "sentinel_unchanged": true,
+    "scientific_sources_changed": false
+  },
+  "remaining_authorized_selections": 0,
+  "qualification_passed": false,
+  "repository_write_qualified": false,
+  "participant_build_authorized": false,
+  "E5": "HOLD",
+  "C2": "HOLD"
+}

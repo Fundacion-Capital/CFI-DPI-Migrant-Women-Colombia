@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 command-log diagnostic
+completed](wp07-command-log-execution/README.md). The fresh worker
+reported a closed command log, blank status and no filename. This
+reproduces a closed state the old guard rejects; the historical
+worker's state remains unknown. One selection, no retries, callers,
+data loads or fits. Next: offline correction of both guards under
+a new binding. The restricted build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 command-log guard
 diagnosis](wp07-command-log-diagnosis/README.md) traced the saved
 `r(459)` to the same exact-status test used in the text gate and
