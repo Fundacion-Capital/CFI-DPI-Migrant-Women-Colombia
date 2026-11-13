@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 command-log guard
+diagnosis](wp07-command-log-diagnosis/README.md) traced the saved
+`r(459)` to the same exact-status test used in the text gate and
+case caller. The old status and filename were not reported. One
+query-only synthetic diagnostic is bound for review, not staged,
+authorized or run. No write or participant work is cleared.
+**E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 synthetic repository
 execution stopped at the text gate](wp07-synthetic-repository-execution/README.md).
 Stata returned `r(459)` in the command-log guard before writing the
