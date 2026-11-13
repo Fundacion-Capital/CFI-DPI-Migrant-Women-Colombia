@@ -1,5 +1,12 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 offline custody and exact
+artificial qualification](wp07-preparation-only-qualification/README.md).
+Twelve synthetic selections are bound for review, not staged or run. The
+carrier, participant destination and provider route are not cleared for a
+respondent-level save. Next: exact artificial-only staging/dispatch decision
+and fresh admission; no authority carried forward. **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 preparation-only build
 contract](wp07-preparation-only-build/README.md) audited offline. Exact
 historically admitted carrier, 423-row cohort, 98-field projection,
