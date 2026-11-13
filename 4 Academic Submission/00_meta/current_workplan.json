@@ -6,8 +6,8 @@
   "scope": "COMPLETE_ACADEMIC_PAPER_AND_TECHNICAL_SUPPLEMENT",
   "orchestration": "EIGHT_SUBSTANTIVE_PACKAGES_FORTY_ONE_TASKS",
   "next_package": "E",
-  "next_task_range": "WP07 offline closed-command-log guard successor",
-  "next_objective": "Use the fresh closed/blank/no-filename evidence to prepare an additive guard correction in the text gate and case caller. The previous batch remains stopped; no native authority, participant build, E.5 or C2.",
+  "next_task_range": "WP07 closed-command-log successor review and fresh synthetic authorization",
+  "next_objective": "Review the offline guard correction and exact fresh text gate plus twelve synthetic requests. No staging or dispatch without separate authority; restricted build, E.5 and C2 remain held.",
   "parallel_source_packages": [
     "B",
     "C",
@@ -18,7 +18,7 @@
     "4 Academic Submission/ACADEMIC_SUBMISSION_WORKPLAN.md",
     "4 Academic Submission/ACADEMIC_SUBMISSION_CONSOLIDATED_WORKPLAN.md"
   ],
-  "latest_source_handoff": "4 Academic Submission/wp07-command-log-execution/README.md",
+  "latest_source_handoff": "4 Academic Submission/wp07-closed-command-log-successor/README.md",
   "submission_readiness_roadmap": "4 Academic Submission/wp07-preparation-only-build/ROADMAP.md",
   "literature_handoff": "4 Academic Submission/wp05-literature-context/README.md",
   "historical_state_preserved": "4 Academic Submission/00_meta/workflow_state.json",
@@ -46,8 +46,8 @@
     "1 Code/academic/1 Data preparation.do",
     "1 Code/academic/2 Analysis.do"
   ],
-  "last_implemented_package": "WP07 one-selection synthetic command-log diagnostic and evidence audit",
-  "last_completion_scope": "ONE_QUERY_CLOSED_BLANK_NO_FILENAME_NO_CALLER_OR_LOADS_GRANT_CONSUMED",
+  "last_implemented_package": "WP07 offline closed-command-log guard successor and binding audit",
+  "last_completion_scope": "TWO_GUARDS_CORRECTED_AND_THIRTEEN_SYNTHETIC_REQUESTS_BOUND_NO_STAGING_OR_RUNS",
   "wp07_preparation_only_build": {
     "binding": "4 Academic Submission/wp07-preparation-only-build/BUILD_CONTRACT.json",
     "audit": "4 Academic Submission/wp07-preparation-only-build/AUDIT.md",
@@ -73,6 +73,10 @@
     "command_log_probe_status": "COMPLETE_CLOSED_LOG_BLANK_STATUS_NO_FILENAME_GRANT_CONSUMED",
     "command_log_probe_authorized": false,
     "command_log_probe_remaining_authorized_selections": 0,
+    "closed_command_log_successor": "4 Academic Submission/wp07-closed-command-log-successor/RUN_CONTRACT.json",
+    "closed_command_log_successor_audit": "4 Academic Submission/wp07-closed-command-log-successor/README.md",
+    "closed_command_log_successor_status": "CLOSED_COMMAND_LOG_GUARDS_BOUND_FOR_REVIEW_NOT_STAGED_NOT_AUTHORIZED",
+    "closed_command_log_successor_authorized": false,
     "qualification_binding": "4 Academic Submission/wp07-preparation-only-qualification/QUALIFICATION.json",
     "qualification_audit": "4 Academic Submission/wp07-preparation-only-qualification/AUDIT.md",
     "participant_custody": "HOLD_EXPLICIT_USE_DESTINATION_WORKER_LOG_AND_RETENTION_NOT_CLEARED",

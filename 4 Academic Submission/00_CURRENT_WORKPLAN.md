@@ -1,5 +1,14 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 closed command-log
+successor](wp07-closed-command-log-successor/README.md) audited offline.
+Both guards now require a successful closed/no-file query, and AQ09
+has a distinct ordinary-log rejection receipt. One text gate and
+twelve fresh synthetic cases are bound for review only; not staged,
+authorized or run. Prior packets and scientific code are unchanged.
+Restricted build, **E.5 and C2 stay HOLD.**
+
+
 **Current checkpoint — 13 November 2026:** [WP07 command-log diagnostic
 completed](wp07-command-log-execution/README.md). The fresh worker
 reported a closed command log, blank status and no filename. This
