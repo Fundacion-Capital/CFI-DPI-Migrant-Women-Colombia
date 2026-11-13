@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 artificial qualification
+attempt](wp07-preparation-only-execution/README.md) stopped at AQ01.
+The exact native selection returned `r(601)` opening the staged caller;
+the same file remained present and hash-matched in the shell. No fixture,
+save or reopen; eleven requests undispatched, no retries. Next: reconcile
+the provider/file visibility boundary from saved evidence before any fresh
+authorization. Participant build, **E.5 and C2 stay HOLD**.
+
 **Current checkpoint — 13 November 2026:** [WP07 offline custody and exact
 artificial qualification](wp07-preparation-only-qualification/README.md).
 Twelve synthetic selections are bound for review, not staged or run. The
