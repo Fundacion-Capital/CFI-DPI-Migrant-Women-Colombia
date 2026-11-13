@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 synthetic repository
+successor](wp07-synthetic-repository-successor/README.md) is bound and
+audited offline: one independent text write/read gate, then twelve fresh
+qualification requests, with the positive save/reopen before negatives.
+No staging, native calls or data loads. The stopped AppData attempt and
+scientific source are unchanged. Fresh exact authority required.
+Participant build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [Single WP07 visibility probe
 executed and audited](wp07-aq01-visibility-execution/README.md). In one
 worker the AppData caller could not be opened (601), the repository
