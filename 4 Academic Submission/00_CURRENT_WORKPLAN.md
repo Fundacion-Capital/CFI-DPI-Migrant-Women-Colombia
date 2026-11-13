@@ -1,5 +1,14 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [AQ04/AQ06 stopped before
+dispatch](wp07-integrated-closure-execution/README.md). A controller
+directory-list comparison rejected identical names across Node
+contexts. Five staged source files and two empty case directories
+were independently verified and preserved. Neither case ran, and
+ten of twelve cases plus the text gate remain accepted. Next: an
+offline staging-check successor for review. Private build,
+**E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 integrated
 review](wp07-integrated-closure/README.md) binds AQ04/AQ06 for review,
 prepares the held private build, and advances the Analysis.do audit,
