@@ -1,5 +1,20 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 AQ04 saved-response
+audit and AQ05–AQ12 binding](wp07-aq05-aq12-digest-successor/README.md)
+completed offline. AQ04 remains stopped and unaccepted; the text
+gate and AQ01–AQ03 remain accepted. The digest verifier passed
+offline checks, and eight fresh requests are bound for review only.
+No staging or execution; restricted build, **E.5 and C2 stay HOLD.**
+
+**Current checkpoint — 13 November 2026:** [WP07 corrected-guard
+execution](wp07-closed-command-log-execution/README.md) accepted the text
+gate and AQ01–AQ03, including the synthetic 423 × 322 save/reopen.
+The batch stopped at AQ04's response readback equality check; AQ05–AQ12
+were not dispatched. No retries, participant loads or fits. Next:
+offline response-verifier audit; no remaining execution authority.
+Restricted build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 closed command-log
 successor](wp07-closed-command-log-successor/README.md) audited offline.
 Both guards now require a successful closed/no-file query, and AQ09

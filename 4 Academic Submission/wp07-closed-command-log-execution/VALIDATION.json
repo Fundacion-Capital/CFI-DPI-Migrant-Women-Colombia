@@ -1,0 +1,316 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "c1d0148da3c8f86471a49711803c71244dec2f59",
+  "status": "STOP_AQ04_RESPONSE_READBACK_COMPARISON_EIGHT_UNDISPATCHED",
+  "contract": {
+    "path": "4 Academic Submission/wp07-closed-command-log-successor/RUN_CONTRACT.json",
+    "sha256": "68523fcd9ac196dfde737ebafda91673b1614c038a3ab2303bd1e66e26616ca6"
+  },
+  "private_evidence": "4 Academic Submission/audit-local/intake/package-e-restricted-20261113/wp07-closed-cmdlog-successor-0207380",
+  "evidence_pins": [
+    {
+      "file": "aq01-admission.json",
+      "bytes": 4856,
+      "sha256": "64a62888165fef35a55d2503df5eef5323f544e98a6f856a52bc5fd5ed74efed"
+    },
+    {
+      "file": "aq01-audit.json",
+      "bytes": 1165,
+      "sha256": "49207564469f024b67b0881d43b80774cebd49ceadf4d56dafb1e3b331dea94a"
+    },
+    {
+      "file": "aq01-response.json",
+      "bytes": 2722,
+      "sha256": "662bac336908fa5f8bcd9c5ea3c43c7437da95400c188bd634badc69e5a48049"
+    },
+    {
+      "file": "aq02-admission.json",
+      "bytes": 5141,
+      "sha256": "c7616c39f1ae65926b5f7e7f16bbefeb192409f70d5ca54affd41c4fec16b879"
+    },
+    {
+      "file": "aq02-audit.json",
+      "bytes": 932,
+      "sha256": "2b907a277934be040f5b9005a7c6f995dacc0fdf95e9f06b6f6c6a4dd61232e0"
+    },
+    {
+      "file": "aq02-response.json",
+      "bytes": 2662,
+      "sha256": "79d9bb529657f1402369d25eddd478f78682421e2858334f2ff391a14138aec6"
+    },
+    {
+      "file": "aq03-admission.json",
+      "bytes": 5426,
+      "sha256": "42b324f76dd363df7286013f7948f501af4245a290727dd80e6a7f48b9db2148"
+    },
+    {
+      "file": "aq03-audit.json",
+      "bytes": 929,
+      "sha256": "51ccec87fb0533fd93a428d1c8aabe0c8f83d3dfa3f2f164d1946aa389cd3642"
+    },
+    {
+      "file": "aq03-response.json",
+      "bytes": 2659,
+      "sha256": "342cb1b945bcddd2c3694aaa5e1ef1af972fef71c17c72413978148b1678dfa0"
+    },
+    {
+      "file": "aq04-admission.json",
+      "bytes": 5711,
+      "sha256": "810650b00785b4ec997c499040e3d1ec41ddfcdc47f3324e83cc4c0eaba0061f"
+    },
+    {
+      "file": "aq04-response.json",
+      "bytes": 2650,
+      "sha256": "ac49bd50bd15a73bb09927b0db393d61842f3327a18e18ed0aadcd3c09fe0e48"
+    },
+    {
+      "file": "aq04-saved-review.json",
+      "bytes": 1244,
+      "sha256": "eef17cbaf4fa8fc2df0a90f898d58fe7da4ac031f914132c44140e7296fc8251"
+    },
+    {
+      "file": "aq04-stop.json",
+      "bytes": 101,
+      "sha256": "dc8a3868782fbec73f5dc5f9c455b37bada4be9b748fe88d8e8152228fc58d23"
+    },
+    {
+      "file": "before-00_CURRENT_WORKPLAN.md",
+      "bytes": 75830,
+      "sha256": "41c8b97fb7709428a70d19520d80170c719ee5a1b0555afb79ef1ce9eb2ceb27"
+    },
+    {
+      "file": "before-current_workplan.json",
+      "bytes": 25658,
+      "sha256": "6fe10033e1742efcaa6c4011f2c81f024c6c6b6e55eee2c277c97fe563379a03"
+    },
+    {
+      "file": "gate-admission.json",
+      "bytes": 4280,
+      "sha256": "b8f847a42e8756bd0afe0dcf3182e87b568da018ca941e445a71449b13e1d235"
+    },
+    {
+      "file": "gate-audit.json",
+      "bytes": 870,
+      "sha256": "384b9fc5ca2a1469786358edf698f38f2b781b1d699f3668b9f24e6be21c8646"
+    },
+    {
+      "file": "gate-response.json",
+      "bytes": 2788,
+      "sha256": "e89556cd029df4b5c682b86833252666bac8452ad917b4139a766d7abcf4b372"
+    },
+    {
+      "file": "gate-wrap-audit.json",
+      "bytes": 1100,
+      "sha256": "01f644e3b503c647fa0a512a637c39f975251102f27af4a8f398f4ef8db6a54d"
+    },
+    {
+      "file": "intent.json",
+      "bytes": 1429,
+      "sha256": "77c578a09be52db071bf345396bc73e50aa9b2ae223cba8ce9a1af18d8c72cd5"
+    },
+    {
+      "file": "inventory-after.json",
+      "bytes": 6284,
+      "sha256": "b2afa0015c39449e0e9a996beb314ce1d8fd7336649927563ea07e8df9a42dbb"
+    },
+    {
+      "file": "inventory-before.json",
+      "bytes": 4562,
+      "sha256": "dc7c6991e2c76e9717a13eabb8a043290fb255120b816bc3d9c78ad62c2010df"
+    }
+  ],
+  "preflight": {
+    "source_pins": 17,
+    "staging_pins": 7,
+    "prior_receipts": 33,
+    "unused_paths": 28,
+    "saved_initial_available_slots": 85,
+    "gate_admission_available_slots": 86
+  },
+  "execution": {
+    "tool": "mcp__stata_mcp__stata_run_selection",
+    "soft_timeout_seconds": 60,
+    "dispatched": [
+      "gate",
+      "aq01",
+      "aq02",
+      "aq03",
+      "aq04"
+    ],
+    "accepted": [
+      "gate",
+      "aq01",
+      "aq02",
+      "aq03"
+    ],
+    "undispatched": [
+      "aq05",
+      "aq06",
+      "aq07",
+      "aq08",
+      "aq09",
+      "aq10",
+      "aq11",
+      "aq12"
+    ],
+    "retries": 0,
+    "sessions_destroyed": 0,
+    "participant_loads": 0,
+    "model_loads": 0,
+    "fits": 0,
+    "synthetic_saves": 1,
+    "synthetic_reopens": 1
+  },
+  "observations": {
+    "gate_wrap": "Exact single Stata continuation reconstructs the ordinary-log path; initial first-line audit and corrected readback audit both preserved. No additional call.",
+    "accepted": [
+      {
+        "id": "gate",
+        "receipt_positions": [
+          35,
+          42,
+          45,
+          82
+        ],
+        "response_chars": 2425,
+        "artifact_count": 1,
+        "ordinary_log_count": 1,
+        "ordinary_log_state": "not present at readback"
+      },
+      {
+        "id": "aq01",
+        "receipt_positions": [
+          51,
+          52,
+          53,
+          57,
+          58,
+          84,
+          97
+        ],
+        "response_chars": 2356,
+        "artifact_count": 1,
+        "ordinary_log_count": 1,
+        "ordinary_log_state": "not present at readback"
+      },
+      {
+        "id": "aq02",
+        "receipt_positions": [
+          51,
+          52,
+          53,
+          82,
+          96
+        ],
+        "response_chars": 2297,
+        "artifact_count": 0,
+        "ordinary_log_count": 1,
+        "ordinary_log_state": "not present at readback"
+      },
+      {
+        "id": "aq03",
+        "receipt_positions": [
+          51,
+          52,
+          53,
+          82,
+          96
+        ],
+        "response_chars": 2294,
+        "artifact_count": 0,
+        "ordinary_log_count": 1,
+        "ordinary_log_state": "not present at readback"
+      }
+    ],
+    "aq04": {
+      "dispatched": true,
+      "case_accepted": false,
+      "saved_receipts_match": true,
+      "phase": "prep",
+      "rc": 9,
+      "cleanup": 0,
+      "N": 0,
+      "K": 0,
+      "response_chars": 2279,
+      "receipt_positions": [
+        51,
+        52,
+        53,
+        82,
+        96
+      ],
+      "artifacts": 0,
+      "live_comparison_operands_preserved_separately": false,
+      "readback_mismatch_cause_proved": false
+    }
+  },
+  "inventory": {
+    "complete": true,
+    "owned": [
+      {
+        "id": "cfi_wp07_r0207_gate",
+        "state": "ready",
+        "busy": false
+      },
+      {
+        "id": "cfi_wp07_r0207_aq01",
+        "state": "ready",
+        "busy": false
+      },
+      {
+        "id": "cfi_wp07_r0207_aq02",
+        "state": "ready",
+        "busy": false
+      },
+      {
+        "id": "cfi_wp07_r0207_aq03",
+        "state": "ready",
+        "busy": false
+      },
+      {
+        "id": "cfi_wp07_r0207_aq04",
+        "state": "ready",
+        "busy": false
+      }
+    ],
+    "otherNew": 4,
+    "priorMissing": 3,
+    "capacity": 79
+  },
+  "postflight": {
+    "preserved_prior_receipts": 33,
+    "prior_source_pins": 17,
+    "old_staging_pairs": 7,
+    "current_staged": 7,
+    "installed_pins": 3,
+    "new_artifacts": [
+      {
+        "case": "gate",
+        "file": "write-check.txt",
+        "bytes": 35,
+        "sha256": "e38c5f273d1f8084fa8d0410cf09c57fc5b5062d81304bbd3cd2dbd3036da715"
+      },
+      {
+        "case": "aq01",
+        "file": "candidate.dta",
+        "bytes": 729171,
+        "sha256": "194957cdfffd63a61437b4b4998cf3670483c01b45502f92fffde2829413c65e"
+      },
+      {
+        "case": "aq07",
+        "file": "candidate.dta",
+        "bytes": 39,
+        "sha256": "a2c07e6099da3fd2f1d52e722525eca56ec2d487acc6d726e4a4eecb40414d13"
+      }
+    ],
+    "production_destination_absent": true,
+    "scientific_source_changed": false
+  },
+  "remaining_authorized_selections": 0,
+  "qualification_passed": false,
+  "synthetic_repository_write_verified": true,
+  "synthetic_roundtrip_verified": true,
+  "participant_build_authorized": false,
+  "E5": "HOLD",
+  "C2": "HOLD"
+}
