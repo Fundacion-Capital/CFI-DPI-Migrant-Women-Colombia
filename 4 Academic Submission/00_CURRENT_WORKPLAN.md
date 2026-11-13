@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 local digest and
+receipt audit](wp07-aq07-aq12-local-audit/README.md) passed offline.
+AQ04 and AQ06 remain stopped and unaccepted; the gate, AQ01–AQ03
+and AQ05 remain accepted. Only AQ07–AQ12 are bound for review, with
+no staging or execution authority. The handoff also distinguishes
+measured outcomes from unmeasured welfare implications.
+Restricted build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 digest-bound
 execution](wp07-aq05-aq12-digest-execution/README.md) accepted AQ05 and
 stopped at AQ06's audit-summary parsing boundary. The independently
