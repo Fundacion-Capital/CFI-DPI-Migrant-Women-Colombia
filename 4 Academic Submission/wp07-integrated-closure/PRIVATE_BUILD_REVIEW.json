@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-13",
+  "status": "HOLD_PRIVATE_ROUTE_AND_QUALIFICATION_NO_STAGED_SELECTION",
+  "contract": {
+    "path": "4 Academic Submission/wp07-preparation-only-build/BUILD_CONTRACT.json",
+    "bytes": 9317,
+    "sha256": "5133fb74dfa6094b16d7abab383466e73942d07d3d730c7870d2283330c6c953"
+  },
+  "schema": {
+    "path": "4 Academic Submission/wp07-preparation-only-build/SCHEMA.csv",
+    "bytes": 9760,
+    "sha256": "191bcebc6784068bb204718e9a72ccbc15ce98b42d1b265278fa7a98356ee389"
+  },
+  "carrier_manifest": {
+    "path": "4 Academic Submission/wp07-restricted-coverage/SCOPE.json",
+    "bytes": 8544,
+    "sha256": "70d748e8a526f6a967c0ba326824423a766c24905780716afd9bb322f465ae97"
+  },
+  "aggregate_coverage_manifest": {
+    "path": "4 Academic Submission/wp07-restricted-coverage/VALIDATION.json",
+    "bytes": 19453,
+    "sha256": "517de153e1d9dd7667ae1aa986866a7473bec863f8a563fd139842adb874db7e"
+  },
+  "model_selector_manifest": {
+    "path": "4 Academic Submission/wp07-e4-restricted-execution-scope/EXECUTION_SCOPE.json",
+    "bytes": 33834,
+    "sha256": "2f60981c3303091bb11442a801b537c8c8fd869efcbfda76556eb8d7beff4471"
+  },
+  "prior_model_execution_manifest": {
+    "path": "4 Academic Submission/wp07-e4-restricted-execution/VALIDATION.json",
+    "bytes": 16052,
+    "sha256": "085769221f756edd2e4a6b43e57fd3011bf89f4f424baa8e15da8b7a52c5baa3"
+  },
+  "cohort": {
+    "rows": 423,
+    "columns_in": 98,
+    "columns_out": 322,
+    "numeric_in": 92,
+    "string_in": 6,
+    "derived_byte": 196,
+    "derived_double": 28,
+    "selection": "Literal projection order in original BUILD_CONTRACT; no row filter or fresh export; inherited manual/test and coded exclusions untouched.",
+    "recorded_carrier_bytes": 1292059,
+    "recorded_carrier_hash": "95e0929d4ab5f4e0808c07f9eb636c24a0eeb88f676cace328bb064badcad756"
+  },
+  "prepared_body": {
+    "path_ref": "BUILD_CONTRACT.json#preparation.source",
+    "entry_hold_preserved": "line 7: exit 198",
+    "first_line": 9,
+    "last_line": 1792,
+    "bytes": 130205,
+    "sha256": "41813986c9a3adad854137a8ae38628e8dcf8bf0f534907851c894c56ba13197",
+    "materialized": false
+  },
+  "metadata_observed": {
+    "carrier_size_matches": true,
+    "carrier_reparse_point": true,
+    "carrier_sandbox_allow_ace_present": true,
+    "carrier_bytes_opened_or_hashed": false,
+    "proposed_root_exists": false,
+    "proposed_leaf_exists": false,
+    "live_native_identity_verified": false
+  },
+  "proposed": {
+    "inherit": "BUILD_CONTRACT.json#proposed",
+    "session": "cfi_wp07_prep_20261113_dc48dbc",
+    "relative_outputs": [
+      "intent.json",
+      "wp07_prepared_candidate.dta",
+      "build_receipt.json",
+      "coverage_reconciliation.json"
+    ],
+    "synthetic_root_not_allowed": true,
+    "one_selection": true,
+    "soft_timeout_seconds": 60,
+    "carrier_loads": 1,
+    "private_saves": 1,
+    "candidate_reopens": 1,
+    "retries": 0,
+    "fits": 0,
+    "full_master_or_analysis": false
+  },
+  "reference_read_scope": {
+    "under_separate_grant_only": [
+      "prepared_item_route_state_coverage.csv",
+      "candidate_component_coverage.csv",
+      "candidate_definition_comparisons.csv",
+      "outcome_model_input_support.csv"
+    ],
+    "identity": "For each BUILD_CONTRACT.json#coverage.reference_records entry, select exactly one restricted_evidence_fingerprints entry in the pinned aggregate_coverage_manifest with identical basename, bytes and SHA-256; use its full path, not a filename search or another attempt. For the first entry this selects prepared_item_route_state_coverage.csv, not its identically sealed item_route_state_coverage.csv alias.",
+    "selector_field": "observed_n",
+    "selector_count": 5,
+    "numeric_summary_tolerance": 1e-12,
+    "E4_render_ledgers": false
+  },
+  "pending": [
+    "Fresh synthetic AQ04/AQ06 acceptance; preserve earlier outcomes.",
+    "Explicit authority for exact carrier access, opaque hash, four aggregates, one private respondent-level derivative and evidence retention.",
+    "Verified effective native writer and authorized reviewer identities; exact private path and permitted access with no-sync and no reparse substitution.",
+    "Verified command capture, ordinary/command logs, temporary paths, spill and readback custody; stop if unresolved.",
+    "Source-exact private caller and request review after these routes are bound; no route substitution."
+  ],
+  "current": {
+    "authorized": false,
+    "staged": false,
+    "carrier_byte_reads": 0,
+    "aggregate_ledger_reads": 0,
+    "stata_calls": 0,
+    "loads": 0,
+    "saves": 0,
+    "fits": 0,
+    "permissions_changed": false,
+    "E5": "HOLD",
+    "C2": "HOLD"
+  }
+}

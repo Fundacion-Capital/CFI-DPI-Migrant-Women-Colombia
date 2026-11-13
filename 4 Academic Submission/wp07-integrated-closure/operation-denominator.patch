@@ -1,0 +1,28 @@
+diff --git a/1 Code/academic/2 Analysis.do b/1 Code/academic/2 Analysis.do
+--- a/1 Code/academic/2 Analysis.do
++++ b/1 Code/academic/2 Analysis.do
+@@ -3716,8 +3716,21 @@
+ local missing_bins_n = r(N)
+ quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == 6
+ local unresolved_bins_n = r(N)
+-display as text "Affirmative users / valid bins / uncertainty / nonresponse / unresolved: " ///
+-    as result `users_n' " / " `bins_n' " / " `unknown_bins_n' " / " ///
+-    `missing_bins_n' " / " `unresolved_bins_n'
++* Reconcile operation responses to every affirmative user without recoding any answer.
++if `users_n' > 0 {
++    assert (inlist(wp07_domestic_ops_bin, 1, 2, 3, 4, 5) == (wp07_state_q6_15 == 1)) ///
++        if wp07_domestic_60d == 1
++    assert ((wp07_domestic_ops_bin == 98) == (wp07_state_q6_15 == 5)) ///
++        if wp07_domestic_60d == 1
++}
++quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == 2
++local structural_bins_n = r(N)
++quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == 3
++local unavailable_bins_n = r(N)
++assert `users_n' == `bins_n' + `unknown_bins_n' + `missing_bins_n' + `unresolved_bins_n' ///
++    + `structural_bins_n' + `unavailable_bins_n'
++display as text "Affirmative users / valid bins / uncertainty / nonresponse / unresolved / structural / unavailable: " ///
++    as result `users_n' " / " `bins_n' " / " `unknown_bins_n' " / " ///
++    `missing_bins_n' " / " `unresolved_bins_n' " / " `structural_bins_n' " / " `unavailable_bins_n'
+ forvalues category = 1/5 {
+     quietly count if wp07_domestic_60d == 1 & wp07_domestic_ops_bin == `category'
