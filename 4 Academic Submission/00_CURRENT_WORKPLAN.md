@@ -1,5 +1,12 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 digest-bound
+execution](wp07-aq05-aq12-digest-execution/README.md) accepted AQ05 and
+stopped at AQ06's audit-summary parsing boundary. The independently
+verified AQ06 response shows its expected native result; the live stop
+stands. AQ07–AQ12 undispatched. AQ04 remains unaccepted. No retries,
+participant loads or fits; restricted build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 AQ04 saved-response
 audit and AQ05–AQ12 binding](wp07-aq05-aq12-digest-successor/README.md)
 completed offline. AQ04 remains stopped and unaccepted; the text
