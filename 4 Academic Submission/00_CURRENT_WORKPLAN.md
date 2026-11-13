@@ -1,5 +1,15 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 preparation-only build
+contract](wp07-preparation-only-build/README.md) audited offline. Exact
+historically admitted carrier, 423-row cohort, 98-field projection,
+manual exclusions, 322-field expected schema and one private save/reopen
+are bound. No carrier contents opened or hashed; no Stata or data load.
+Private path, permitted use, effective access and provider custody
+remain held. Next: resolve those boundaries and bind the artificial-only
+qualification for review. E.5 and C2 stay **HOLD**. See the
+[roadmap through journal and conference readiness](wp07-preparation-only-build/ROADMAP.md).
+
 **Current checkpoint — 12 November 2026:** [E.5 metadata preflight and held
 dataset-build review](wp07-prepared-dataset-review/README.md). Five ledger
 lengths and local file ACLs match the required metadata; Cloud Files path
@@ -1052,6 +1062,10 @@ because this plan exists. Existing large workflow_state.json and old handoffs
 are retained history; this current checkpoint does not rewrite their evidence.
 
 ## 14. Next immediate implementation and delivery rule
+
+For the live next action, use the dated checkpoint at the top and its
+machine-readable pointer. The Package A start below is the original
+launch instruction retained as workplan history.
 
 **Next: Package A, A.1–A.6 together—the integrated scientific revision of the
 actual Stata master, preparation and analysis scripts.** Begin from the accepted
