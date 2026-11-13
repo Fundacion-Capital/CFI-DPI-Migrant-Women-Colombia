@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [Custodian decision
+brief](wp07-custodian-decision/CUSTODIAN_BRIEF.md) prepared and unsent.
+The [read-only Stata route review](wp07-custodian-decision/ROUTE_REVIEW.md)
+did not verify containment. No artificial qualification was bound.
+Next: obtain a recorded decision and evidence of an existing supported
+contained route; continue source and manuscript work in parallel.
+**Private build, E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [Private-build custody
 review](wp07-private-build-custody/README.md) binds an exact
 preparation-only request without staging or execution. The earlier
