@@ -1,6 +1,14 @@
 # Current academic research revision workplan
 
 **Current checkpoint — 13 November 2026:** [WP07 synthetic repository
+execution stopped at the text gate](wp07-synthetic-repository-execution/README.md).
+Stata returned `r(459)` in the command-log guard before writing the
+marker. AQ01–AQ12 were not dispatched. No new dataset, participant load,
+fit or retry. Preserve the packet; review the guard from saved evidence
+before any fresh native authorization. Participant build, **E.5 and C2
+stay HOLD.**
+
+**Current checkpoint — 13 November 2026:** [WP07 synthetic repository
 successor](wp07-synthetic-repository-successor/README.md) is bound and
 audited offline: one independent text write/read gate, then twelve fresh
 qualification requests, with the positive save/reopen before negatives.
