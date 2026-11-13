@@ -1,5 +1,27 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [Private-build custody
+review](wp07-private-build-custody/README.md) binds an exact
+preparation-only request without staging or execution. The earlier
+synthetic qualification is complete; the exact private caller is not
+qualified. Permitted use, effective access, containment of logs and
+temporary files, retention and metadata approval remain unresolved.
+**Private build, E.5 and C2 stay HOLD.**
+
+**Current checkpoint — 13 November 2026:** [AQ04 and AQ06
+accepted](wp07-aq04-aq06-stage-execution/README.md) under the fresh
+serial contract. All 12 synthetic cases and the separate text gate
+are accepted. No execution authority remains. Next: resolve private
+build custody and bind the exact preparation-only request for review.
+No participant or model loads or fits. **Private build, E.5 and C2 stay HOLD.**
+
+**Current checkpoint — 13 November 2026:** [Offline AQ04/AQ06
+staging-check successor](wp07-aq04-aq06-stage-successor/README.md)
+compares filenames by value and rejects missing or extra entries.
+The two new requests are sealed for review only, not staged or
+authorized. The stopped attempt is preserved; ten of twelve cases
+plus the text gate remain accepted. Private build, **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [AQ04/AQ06 stopped before
 dispatch](wp07-integrated-closure-execution/README.md). A controller
 directory-list comparison rejected identical names across Node

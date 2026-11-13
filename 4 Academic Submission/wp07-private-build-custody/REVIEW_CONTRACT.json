@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "85420a2a13ec280146ba77b9fcb88520172d191e",
+  "status": "EXACT_PRIVATE_REQUEST_BOUND_FOR_REVIEW_ONLY_CUSTODY_BLOCKED",
+  "source_pins": [
+    {
+      "path": "4 Academic Submission/wp07-private-build-custody/run_preparation.do",
+      "bytes": 15278,
+      "sha256": "7a78b1ec6f2ddcbf55ccd62a0aa1c8ea0cc10ef4f77f86449abb83324830b3ac"
+    },
+    {
+      "path": "4 Academic Submission/wp07-private-build-custody/coverage.do",
+      "bytes": 15707,
+      "sha256": "37310166cd14278ac1a067c8495ca86aebcc03179cbbc2761461c25957f95a7e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-preparation-only-build/BUILD_CONTRACT.json",
+      "bytes": 9317,
+      "sha256": "5133fb74dfa6094b16d7abab383466e73942d07d3d730c7870d2283330c6c953"
+    },
+    {
+      "path": "4 Academic Submission/wp07-preparation-only-build/SCHEMA.csv",
+      "bytes": 9760,
+      "sha256": "191bcebc6784068bb204718e9a72ccbc15ce98b42d1b265278fa7a98356ee389"
+    },
+    {
+      "path": "4 Academic Submission/wp07-integrated-closure/PRIVATE_BUILD_REVIEW.json",
+      "bytes": 4668,
+      "sha256": "367828b9056a8da4ed1481f8198833d49382fb26f1377a7111b20862c0cfc9f9"
+    },
+    {
+      "path": "4 Academic Submission/wp07-restricted-coverage/E3 Prepared coverage.do",
+      "bytes": 19238,
+      "sha256": "c26161235a2b77203c4dd3d47db8fcbb204ae6c3096d4587a4bc7b7502b418b1"
+    },
+    {
+      "path": "4 Academic Submission/wp07-aq04-aq06-stage-execution/VALIDATION.json",
+      "bytes": 6935,
+      "sha256": "fa9936acccd793c243a87cb6ac1a43a11068e1314520529657d69ab0d7fb8c61"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/r05_documentary_acceptance_2026-10-24.json",
+      "bytes": 5677,
+      "sha256": "594d852e3dc66680533609fcbdff9f5724a503238d0dfdccb6d17cb8623257e4"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/r06_documentary_acceptance_2026-10-24.json",
+      "bytes": 5913,
+      "sha256": "78a7d6734623ed3fabb46b41c189658c2ab136db23e4883e4dc8083841ffc68d"
+    },
+    {
+      "path": "4 Academic Submission/wp06-institutional-rights-review/r12_documentary_acceptance_2026-10-25.json",
+      "bytes": 6663,
+      "sha256": "d2be7c618cd1261e3626993f0ffe05b573ea4609262b5975d4e2dfa2d5456b08"
+    },
+    {
+      "path": "C:/Users/jzava/.cursor/extensions/deepecon.stata-mcp-0.5.3-universal/src/stata_mcp_server.py",
+      "bytes": 270346,
+      "sha256": "6aa984b08a6657254804e690c77fb877a2d8e62c3b809caa14fe533d30402092"
+    },
+    {
+      "path": "C:/Users/jzava/.cursor/extensions/deepecon.stata-mcp-0.5.3-universal/src/stata_worker.py",
+      "bytes": 52352,
+      "sha256": "0b5c27bdc3d2cb2b12327a2da43118cee8b124c753caf65d82af3d3c5cea088f"
+    },
+    {
+      "path": "C:/Users/jzava/.cursor/extensions/deepecon.stata-mcp-0.5.3-universal/src/session_manager.py",
+      "bytes": 46935,
+      "sha256": "5f9b427ffbd0d01afc51542a47f2652aff02a084c7c08cc73700ad9b8fda2308"
+    },
+    {
+      "path": "C:/Users/jzava/.cursor/extensions/deepecon.stata-mcp-0.5.3-universal/src/output_filter.py",
+      "bytes": 15902,
+      "sha256": "b47b473ce1a1b3a783d38c20c9326799e936ddad2df5ee3b95f1c70371de2424"
+    },
+    {
+      "path": "4 Academic Submission/wp07-restricted-coverage/VALIDATION.json",
+      "bytes": 19453,
+      "sha256": "517de153e1d9dd7667ae1aa986866a7473bec863f8a563fd139842adb874db7e"
+    },
+    {
+      "path": "4 Academic Submission/wp07-restricted-coverage/SCOPE.json",
+      "bytes": 8544,
+      "sha256": "70d748e8a526f6a967c0ba326824423a766c24905780716afd9bb322f465ae97"
+    }
+  ],
+  "prior_build_pins": "source_pins[2].path#evidence_bindings",
+  "request": {
+    "tool": "mcp__stata_mcp__stata_run_selection",
+    "arguments": {
+      "selection": "capture quietly do \"C:/Users/jzava/AppData/Local/CFI-DPI-WP07-Private/preparation-only-20261113-dc48dbc/run_preparation.do\"\nlocal wp07_rc = _rc\ndisplay \"WP07_PRIVATE_PREP_OUTER rc=\" `wp07_rc' \" N=\" _N \" K=\" c(k)\n",
+      "working_dir": "C:/Users/jzava/AppData/Local/CFI-DPI-WP07-Private/preparation-only-20261113-dc48dbc",
+      "session_id": "cfi_wp07_prep_20261113_dc48dbc",
+      "timeout": 60
+    },
+    "staged": false,
+    "dispatch_authorized": false,
+    "required_before_dispatch": [
+      "custodian_decision",
+      "exact_worker_and_reviewer_access",
+      "contained_provider_and_native_temp",
+      "approved_metadata_baseline",
+      "exact_caller_artificial_qualification",
+      "separate_execution_authorization"
+    ]
+  },
+  "carrier": {
+    "selector": "4 Academic Submission/wp07-restricted-coverage/SCOPE.json#carrier.path",
+    "sidecar": "carrier.path.txt",
+    "sidecar_rule": "Exactly the bound absolute path, UTF-8, no BOM, one LF, no other text. Controller verifies this and source bytes just before dispatch. No path interpolation into the MCP selection.",
+    "recorded_bytes": 1292059,
+    "recorded_sha256": "95e0929d4ab5f4e0808c07f9eb636c24a0eeb88f676cace328bb064badcad756",
+    "cohort": 423,
+    "projected_fields": 98,
+    "saved_fields": 322,
+    "manual_exclusions": "Inherit the admitted carrier unchanged; no re-filter, reload, replacement or new export."
+  },
+  "staged_source_inputs": {
+    "caller": {
+      "path": "4 Academic Submission/wp07-private-build-custody/run_preparation.do",
+      "bytes": 15278,
+      "sha256": "7a78b1ec6f2ddcbf55ccd62a0aa1c8ea0cc10ef4f77f86449abb83324830b3ac",
+      "target": "run_preparation.do"
+    },
+    "coverage": {
+      "path": "4 Academic Submission/wp07-private-build-custody/coverage.do",
+      "bytes": 15707,
+      "sha256": "37310166cd14278ac1a067c8495ca86aebcc03179cbbc2761461c25957f95a7e",
+      "target": "coverage.do"
+    },
+    "preparation": {
+      "source": "4 Academic Submission/wp07-preparation-only-build/BUILD_CONTRACT.json#preparation",
+      "target": "preparation.do",
+      "first_line": 9,
+      "last_line": 1792,
+      "bytes": 130205,
+      "sha256": "41813986c9a3adad854137a8ae38628e8dcf8bf0f534907851c894c56ba13197",
+      "normalization": "UTF-8 without BOM, LF, TrimEnd(), final LF",
+      "materialized": false
+    },
+    "controlled_inputs": [
+      "intent.json",
+      "carrier.path.txt",
+      "approved_metadata.bin"
+    ],
+    "approved_metadata": {
+      "present": false,
+      "encoding": "Exact native wp07_metadata() UTF-8 bytes, no BOM or trailing newline; at most 1 MiB.",
+      "requires": "Custodian-approved fingerprint and source-backed pre-save baseline for all retained types, formats, dataset and variable labels, every value-label definition and characteristic/note. Never self-approve the just-loaded participant metadata."
+    }
+  },
+  "custody": {
+    "permitted_use": "BLOCKED_PENDING_EXPLICIT_CURRENT_CUSTODIAN_SCOPE",
+    "review_access": "BLOCKED_EFFECTIVE_SIDS_AND_ENCRYPTION_NO_SYNC_NOT_VERIFIED",
+    "destination": "CANDIDATE_ABSENT_FIXED_NTFS_NO_REPARSE_IN_EXISTING_ANCESTORS_NOT_PROVISIONED",
+    "provider": "BLOCKED_EXISTING_PROVIDER_WRITES_OUTSIDE_WORKING_DIR_ROUTE_AND_PRINCIPAL_NOT_CLEARED",
+    "temporary": "BLOCKED_WORKER_TEMP_UNDER_SHARED_PROFILE_TEMP_IN_SAVED_RUN",
+    "retention": "PROPOSED_RESTRICTED_PRESERVATION_PENDING_CUSTODIAN_ACCEPTANCE_NO_DELETION",
+    "minimum_local_acl": [
+      "named approved owner",
+      "SYSTEM",
+      "Administrators",
+      "separately approved exact worker or reviewer SIDs only when needed"
+    ],
+    "required_native_temp_relative": "runtime",
+    "provider_log_allowance": "Zero or one exact-session capture log within runtime only; command log closed with blank status and filename. Caller guard is a backstop, not clearance of prior worker/transport writes.",
+    "expected_controller_identity_verified": false,
+    "actual_worker_identity_verified": false
+  },
+  "outputs": {
+    "persistent": [
+      "wp07_prepared_candidate.dta",
+      "native_receipt.json",
+      "build_receipt.json",
+      "coverage_reconciliation.json"
+    ],
+    "coverage": [
+      "coverage/prepared_item_route_state_coverage.csv",
+      "coverage/candidate_component_coverage.csv",
+      "coverage/candidate_definition_comparisons.csv",
+      "coverage/outcome_model_input_support.csv"
+    ],
+    "evidence_dir": "evidence",
+    "evidence_files": [
+      "request.json",
+      "response-prewrite.json",
+      "response.json"
+    ],
+    "preserve_runtime_on_stop": "Do not search unknown locations or purge; preserve known approved local evidence and any partial candidate. No automatic timeout retry."
+  },
+  "coverage": {
+    "reference_manifest": "4 Academic Submission/wp07-restricted-coverage/VALIDATION.json#restricted_evidence_fingerprints",
+    "reference_records": [
+      {
+        "file": "prepared_item_route_state_coverage.csv",
+        "bytes": 26061,
+        "sha256": "4094c0fbb829dbbc6096d8523a98a0432aebfd9e4f791598fcdc66801d4ebca7"
+      },
+      {
+        "file": "candidate_component_coverage.csv",
+        "bytes": 4420,
+        "sha256": "6d5d9c8d7bbbc23ba61f5c2b8b5caa709f08de03c1fc44f8709414e4a5555032"
+      },
+      {
+        "file": "candidate_definition_comparisons.csv",
+        "bytes": 1202,
+        "sha256": "8130668f122436086214984eda5a04819f022d118efc2e918292433ab74f3119"
+      },
+      {
+        "file": "outcome_model_input_support.csv",
+        "bytes": 13348,
+        "sha256": "85ddb157dd20740568fd5f2e7426b846a23112992a0d8231364b250d705085bc"
+      }
+    ],
+    "reference_resolution": "Exactly one match by basename, length and recorded SHA-256 per source, then use its manifest path. Do not copy, follow alternate paths or read E.4/E.5 model ledgers.",
+    "compare_after_response_seal": true,
+    "keys": [
+      [
+        "field",
+        "scope"
+      ],
+      [
+        "kind",
+        "variable"
+      ],
+      [
+        "group",
+        "definition"
+      ],
+      [
+        "nomination",
+        "check_id",
+        "field",
+        "category"
+      ]
+    ],
+    "observed_selector_column": "observed_n",
+    "selectors": [
+      "R0/domain_valid_inputs/ALL/empty",
+      "D0/domain_valid_inputs/ALL/empty",
+      "R1/domain_valid_inputs/ALL/empty",
+      "D1/domain_valid_inputs/ALL/empty",
+      "COMMON/core_common_inputs/ALL/empty"
+    ],
+    "count_comparison": "Exact; blank, zero, and Stata missing are distinct.",
+    "summary_columns": [
+      "minimum",
+      "maximum",
+      "mean",
+      "common_mean",
+      "common_min",
+      "common_max"
+    ],
+    "absolute_numeric_tolerance": 1e-12,
+    "readback": "Independently reconcile before candidate acceptance; each expected key exactly once, no missing or extra keys, identical headers, exact counts and text/status, tolerance only for finite numeric summaries. Candidate size/SHA and ACL seal only after all checks pass."
+  },
+  "limits": {
+    "selections": 1,
+    "soft_timeout_seconds": 60,
+    "carrier_projection_loads": 1,
+    "private_dta_saves": 1,
+    "candidate_reopens": 1,
+    "retries": 0,
+    "fits": 0,
+    "model_loads": 0,
+    "row_exports": 0
+  },
+  "current": {
+    "stata_calls": 0,
+    "carrier_or_reference_byte_reads": 0,
+    "participant_loads": 0,
+    "saves": 0,
+    "fits": 0,
+    "settings_or_acl_changes": 0,
+    "destination_provisioned": false,
+    "release_authorized": false,
+    "E5": "HOLD",
+    "C2": "HOLD"
+  }
+}

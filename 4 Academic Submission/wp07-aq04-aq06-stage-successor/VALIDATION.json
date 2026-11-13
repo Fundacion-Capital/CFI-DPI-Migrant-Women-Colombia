@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "85420a2a13ec280146ba77b9fcb88520172d191e",
+  "status": "OFFLINE_STAGE_COMPARATOR_VERIFIED_TWO_CASES_BOUND_NOT_STAGED_NOT_AUTHORIZED",
+  "contract": {
+    "path": "4 Academic Submission/wp07-aq04-aq06-stage-successor/RUN_CONTRACT.json",
+    "bytes": 18545,
+    "sha256": "162661f14b8efb37e44296b3434e30da3b210ff173dc6269280c6478da4c5415"
+  },
+  "root_cause": "Strict array comparison treated identical filename values as unequal across the Node REPL and filesystem module contexts.",
+  "offline_tests": {
+    "baseline_regression_failed_as_expected": true,
+    "focused_and_inherited_tests_passed": 9,
+    "failed_after_fix": 0,
+    "actual_node_repl": {
+      "prior_error_reproduced": true,
+      "exact_root_pass": true,
+      "empty_leaf_passes": 2,
+      "negative_checks_passed": 4,
+      "read_only_on_stopped_root": true
+    }
+  },
+  "postflight": {
+    "contract_bytes": 18545,
+    "contract_sha256": "162661f14b8efb37e44296b3434e30da3b210ff173dc6269280c6478da4c5415",
+    "source_pins": 41,
+    "earlier_evidence_pins": 116,
+    "stopped_evidence_pins": 6,
+    "earlier_staged_sources": 28,
+    "stopped_staged_sources": 5,
+    "fresh_bound_stage_sources": 5,
+    "fresh_ignored_roots_absent": 2,
+    "private_destination_absent": true,
+    "saved_inventory_reserved_names_absent": true,
+    "live_inventory_checked": false,
+    "exact_case_scope_unchanged": true,
+    "response_verifier_unchanged": true
+  },
+  "preserved": {
+    "stopped_attempt": "4 Academic Submission/wp07-integrated-closure-execution/VALIDATION.json",
+    "accepted_cases": 10,
+    "text_gate_accepted": true,
+    "aq04": "UNACCEPTED",
+    "aq06": "UNACCEPTED"
+  },
+  "cases": [
+    {
+      "id": "aq04",
+      "session_id": "cfi_wp07_r854s_aq04",
+      "phase": "prep",
+      "expected_rc": 9,
+      "timeout_seconds_soft": 60,
+      "bound_after": [],
+      "dispatched": false
+    },
+    {
+      "id": "aq06",
+      "session_id": "cfi_wp07_r854s_aq06",
+      "phase": "prep",
+      "expected_rc": 7,
+      "timeout_seconds_soft": 60,
+      "bound_after": [
+        "aq04"
+      ],
+      "dispatched": false
+    }
+  ],
+  "current": {
+    "fresh_roots_staged": false,
+    "execution_authorized": false,
+    "remaining_authorized_selections": 0,
+    "stata_mcp_calls": 0,
+    "participant_loads": 0,
+    "model_loads": 0,
+    "fits": 0,
+    "private_build": "HOLD",
+    "E5": "HOLD",
+    "C2": "HOLD"
+  }
+}

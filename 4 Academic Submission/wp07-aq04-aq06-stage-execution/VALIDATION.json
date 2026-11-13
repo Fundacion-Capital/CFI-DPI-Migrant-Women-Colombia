@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "85420a2a13ec280146ba77b9fcb88520172d191e",
+  "status": "AQ04_AQ06_ACCEPTED_SYNTHETIC_QUALIFICATION_COMPLETE",
+  "contract": {
+    "path": "4 Academic Submission/wp07-aq04-aq06-stage-successor/RUN_CONTRACT.json",
+    "bytes": 18545,
+    "sha256": "162661f14b8efb37e44296b3434e30da3b210ff173dc6269280c6478da4c5415"
+  },
+  "private_evidence": "4 Academic Submission/audit-local/intake/package-e-restricted-20261113/wp07-closure-aq04-aq06-85420a2",
+  "synthetic_root": "C:/Users/jzava/Documents/GitHub/CFI-DPI-Migrant-Women-Colombia/4 Academic Submission/audit-local/intake/wp07-aq-repo-aq04-aq06-85420a2",
+  "evidence_pins": [
+    {
+      "file": "aq04-acceptance.json",
+      "bytes": 439,
+      "sha256": "ead16ecc120a7c080eab543c81ca94cf9fc3b27aa7d50ffce8b961633e525823"
+    },
+    {
+      "file": "aq04-admission.json",
+      "bytes": 483,
+      "sha256": "0f84515501b9319743b4d083288bb2c3612720feba79124cb1067af5f2146e6f"
+    },
+    {
+      "file": "aq04-audit-seal.json",
+      "bytes": 99,
+      "sha256": "29c5c357622063ae5b11fc5076e2da6673a27d96f75fca46990f4c476ac9f4bb"
+    },
+    {
+      "file": "aq04-audit.json",
+      "bytes": 670,
+      "sha256": "1041a8664edd83fade92082650eecd6acddbef1be9df11339781972db65b9fd8"
+    },
+    {
+      "file": "aq04-prewrite.json",
+      "bytes": 100,
+      "sha256": "fe160c712fa5557163de27e077e416807f6c5eeb3899afc1ca70315aab8c4a84"
+    },
+    {
+      "file": "aq04-request.json",
+      "bytes": 604,
+      "sha256": "abed31f9db2bd5c0ca5e067ca00bffa75d62d2370f34d5c7d76481bd6380144a"
+    },
+    {
+      "file": "aq04-response.json",
+      "bytes": 2681,
+      "sha256": "14b56f70cec75c199112bb1007ee3a939760b9c4c8588de3697b51be7fdafe72"
+    },
+    {
+      "file": "aq04-verifier-return.json",
+      "bytes": 124,
+      "sha256": "c017f666bed373fe1a7bc3e27b2192d4e7b02d4e959c2f93056bc8fcf1d160d0"
+    },
+    {
+      "file": "aq06-acceptance.json",
+      "bytes": 439,
+      "sha256": "8341f013fddc6f0bc94da8a5434c3ac49a4625be27924b3da2221610daa6cfeb"
+    },
+    {
+      "file": "aq06-admission.json",
+      "bytes": 768,
+      "sha256": "c4d39fecf125cfbe73d931f8e83dfecd6c95bdbc1a611eab609dcc4e7d375b93"
+    },
+    {
+      "file": "aq06-audit-seal.json",
+      "bytes": 99,
+      "sha256": "488988389cdb7003182ab01a4b11e365d7b8f11827e07768616e084f09ffb299"
+    },
+    {
+      "file": "aq06-audit.json",
+      "bytes": 670,
+      "sha256": "45fbc83a8d5a3a0f243cf682af437a443307ea132fa83954660895a4a886b359"
+    },
+    {
+      "file": "aq06-prewrite.json",
+      "bytes": 100,
+      "sha256": "fcdac26b81c5dee2dd5c9f7b7f00a81c6216c2739da3421f0517bec7d911a5bf"
+    },
+    {
+      "file": "aq06-request.json",
+      "bytes": 604,
+      "sha256": "023e79210d479c0d78c5c433f25b9daae7c3ed53066a7a1c5f452952eafd73de"
+    },
+    {
+      "file": "aq06-response.json",
+      "bytes": 2681,
+      "sha256": "05bb6d004fe4b74c666cc5ec127b70178b67573ac5fc76007d22bfb64457178d"
+    },
+    {
+      "file": "aq06-verifier-return.json",
+      "bytes": 124,
+      "sha256": "a2a683471fca6d995afe63694adcd699bb25d8d201e5242d47355c6449f1819d"
+    },
+    {
+      "file": "inventory-after.json",
+      "bytes": 1053,
+      "sha256": "9a6ea98bd64beb03cd9fa55d234652d7532588ab20b1cd5a921f01f7ef437673"
+    },
+    {
+      "file": "inventory-before.json",
+      "bytes": 483,
+      "sha256": "0f84515501b9319743b4d083288bb2c3612720feba79124cb1067af5f2146e6f"
+    },
+    {
+      "file": "postflight.json",
+      "bytes": 399,
+      "sha256": "1e2bead15f2df54e759f673528b974a41990e204c9e86bc3c15cf74229b20f53"
+    },
+    {
+      "file": "preflight.json",
+      "bytes": 459,
+      "sha256": "85034c75be268e718e9c8f22fbe0de07a54f851e4982f237dcdd2c031bda1fc0"
+    },
+    {
+      "file": "stage.json",
+      "bytes": 1022,
+      "sha256": "df170c8dba10020d93a3844e702bd96e71e75b596f143f88f99adb07ac64d46a"
+    }
+  ],
+  "preflight": {
+    "source_pins": 41,
+    "prior_evidence": 122,
+    "prior_staged_sources": 33,
+    "offline_tests_passed": 9,
+    "live_slots_before": 99,
+    "reserved_names_vacant": true,
+    "new_stage_source_files": 5,
+    "case_leaves_empty": true,
+    "value_comparator_used": true
+  },
+  "execution": {
+    "method": "mcp__stata_mcp__stata_run_selection",
+    "authorized": 2,
+    "dispatched": 2,
+    "soft_timeout_seconds": 60,
+    "serial": true,
+    "aq06_after_sealed_aq04": true,
+    "retries": 0,
+    "other_selections": 0,
+    "full_response_verified_before_receipt_parse": true,
+    "rendered_shell_summary_used_for_acceptance": false
+  },
+  "cases": [
+    {
+      "id": "aq04",
+      "session_id": "cfi_wp07_r854s_aq04",
+      "started": "2026-11-13T21:22:22.4260000Z",
+      "returned": "2026-11-13T21:22:26.1390000Z",
+      "phase": "prep",
+      "rc": 9,
+      "cleanup": 0,
+      "final_n": 0,
+      "final_k": 0,
+      "synthetic_saves": 0,
+      "synthetic_reopens": 0,
+      "accepted": true,
+      "response": {
+        "bytes": 2681,
+        "sha256": "14b56f70cec75c199112bb1007ee3a939760b9c4c8588de3697b51be7fdafe72"
+      },
+      "decision_seal": {
+        "bytes": 670,
+        "sha256": "1041a8664edd83fade92082650eecd6acddbef1be9df11339781972db65b9fd8"
+      },
+      "ordinary_log_route": "matched",
+      "ordinary_log_metadata": "not present at readback"
+    },
+    {
+      "id": "aq06",
+      "session_id": "cfi_wp07_r854s_aq06",
+      "started": "2026-11-13T21:23:54.4440000Z",
+      "returned": "2026-11-13T21:23:57.9900000Z",
+      "phase": "prep",
+      "rc": 7,
+      "cleanup": 0,
+      "final_n": 0,
+      "final_k": 0,
+      "synthetic_saves": 0,
+      "synthetic_reopens": 0,
+      "accepted": true,
+      "response": {
+        "bytes": 2681,
+        "sha256": "05bb6d004fe4b74c666cc5ec127b70178b67573ac5fc76007d22bfb64457178d"
+      },
+      "decision_seal": {
+        "bytes": 670,
+        "sha256": "45fbc83a8d5a3a0f243cf682af437a443307ea132fa83954660895a4a886b359"
+      },
+      "ordinary_log_route": "matched",
+      "ordinary_log_metadata": "not present at readback"
+    }
+  ],
+  "postflight": {
+    "source_pins": 41,
+    "prior_evidence": 122,
+    "prior_staged_sources": 33,
+    "new_evidence": 21,
+    "new_staged_sources": 5,
+    "private_target_absent": true,
+    "live_slots_after": 97,
+    "owned_manager_states": [
+      {
+        "id": "cfi_wp07_r854s_aq04",
+        "state": "ready",
+        "busy": false
+      },
+      {
+        "id": "cfi_wp07_r854s_aq06",
+        "state": "ready",
+        "busy": false
+      }
+    ],
+    "owned_sessions_destroyed": 0
+  },
+  "current": {
+    "remaining_authorized_selections": 0,
+    "accepted_cases": 12,
+    "separate_text_gate_accepted": true,
+    "synthetic_qualification_passed": true,
+    "participant_build_authorized": false,
+    "participant_loads": 0,
+    "model_loads": 0,
+    "synthetic_dataset_loads": 0,
+    "synthetic_saves": 0,
+    "synthetic_reopens": 0,
+    "fits": 0,
+    "private_build": "HOLD",
+    "E5": "HOLD",
+    "C2": "HOLD"
+  }
+}
