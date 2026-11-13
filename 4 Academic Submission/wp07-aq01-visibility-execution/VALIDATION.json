@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-13",
+  "entry_head": "2f34c7178a0ef507af474b8a6bfaf55909260150",
+  "status": "PROBE_COMPLETE_APPDATA_OPEN_601_CONTROL_READABLE_CWD_NOT_APPLIED",
+  "contract": {
+    "path": "4 Academic Submission/wp07-aq01-visibility-diagnosis/PROBE_CONTRACT.json",
+    "sha256": "a48352db86506fd53da4cef0b2e81187a1525e7cc3728298179de6644314a401"
+  },
+  "private_evidence": "4 Academic Submission/audit-local/intake/package-e-restricted-20261113/wp07-aq01-visibility-execution-2f34c71",
+  "evidence_pins": [
+    {
+      "file": "AUTHORIZATION.json",
+      "bytes": 462,
+      "sha256": "6632bccb16bdb1db8522e2e88b67983227a5e81a146a19d6b8d91f4e3702ff7f"
+    },
+    {
+      "file": "before-00_CURRENT_WORKPLAN.md",
+      "bytes": 73027,
+      "sha256": "3ebaee740bf8c50b98a99b6e25c34c4882aa1c98e180b57aa3fc0b27c4365af4"
+    },
+    {
+      "file": "before-current_workplan.json",
+      "bytes": 24106,
+      "sha256": "db558238482c447b0ff18998b9c0f5fc68f96185c9aed6fa8d8c4729d4ae4842"
+    },
+    {
+      "file": "ENTRY_INVENTORY.json",
+      "bytes": 1908,
+      "sha256": "77d922fdff18047a0802972da6d4a6295dd8fdf629987ac91c104fac0387e287"
+    },
+    {
+      "file": "FINAL_INVENTORY.json",
+      "bytes": 2772,
+      "sha256": "135a33d5aa881b1d792e96d5544d2813cf09d476838b03a49cebbfda33e5f5c3"
+    },
+    {
+      "file": "FULL_RESPONSE.json",
+      "bytes": 1576,
+      "sha256": "c2abfe8fdceb881b45837864be1fb05f0edcb16ab10094324ac1e71e26f660bf"
+    },
+    {
+      "file": "INTENT.json",
+      "bytes": 1763,
+      "sha256": "c19978a5f2c8b66c7c63f30bb596d332ad0764d5077eb8ba4fcb5b18c86c090c"
+    },
+    {
+      "file": "INVENTORY_COMPARISON.json",
+      "bytes": 183,
+      "sha256": "40aaf236c9aecfecc01a33432fe093c276885cb85e17a0370ea695778affdd5a"
+    },
+    {
+      "file": "RAW_RESPONSE.json",
+      "bytes": 1619,
+      "sha256": "353bae2370a8e882502e878d4d7455cc7a23c4f27eb0b88d03b5a7c5e3408fe4"
+    },
+    {
+      "file": "RECEIPT_AUDIT.json",
+      "bytes": 637,
+      "sha256": "8e1690a24496f5c90f0e5f807eca77c020072210cffb9a910fdb1b8583a4925c"
+    }
+  ],
+  "execution": {
+    "tool": "mcp__stata_mcp__stata_run_selection",
+    "session": "cfi_wp07_aqvis_3305d8e",
+    "timeout_seconds_soft": 60,
+    "selections": 1,
+    "retries": 0,
+    "session_inventory_calls": 2,
+    "caller_executions": 0,
+    "dataset_loads": 0,
+    "synthetic_dataset_saves": 0,
+    "fits": 0,
+    "permission_or_settings_changes": 0,
+    "remaining_selection_authority": 0
+  },
+  "observed": {
+    "cwd_match": false,
+    "target": {
+      "open": 601,
+      "read": null,
+      "marker_match": null,
+      "close": null
+    },
+    "control": {
+      "open": 0,
+      "read": 0,
+      "marker_match": true,
+      "close": 0
+    },
+    "terminal": {
+      "N": 0,
+      "K": 0
+    },
+    "full_response_available": true,
+    "provider_spill_named": false,
+    "provider_temporary_path_observed": false,
+    "transport_is_error": false,
+    "owned_sessions": [
+      {
+        "session_id": "cfi_wp07_aqvis_3305d8e",
+        "state": "ready",
+        "is_busy": false,
+        "error": null
+      }
+    ],
+    "other_session_rows_unchanged": false,
+    "provider_process_exit_proven": false
+  },
+  "inventory_comparison": {
+    "all_entry_rows_unchanged": true,
+    "entry_count": 6,
+    "final_count": 9,
+    "owned_added": 1,
+    "additional_unrelated_rows": 2,
+    "no_other_session_operations_dispatched": true
+  },
+  "preservation": {
+    "source_evidence_pins": 15,
+    "prior_attempt_receipts": 8,
+    "staged_sources": 7,
+    "case_outputs_created": 0,
+    "sentinel_unchanged": true,
+    "restricted_output_leaf_absent": true
+  },
+  "disposition": {
+    "path_specific_difference_reproduced": true,
+    "worker_effective_identity_verified": false,
+    "root_cause_proved": false,
+    "original_batch": "STOPPED_AQ01_11_UNDISPATCHED",
+    "qualification_passed": false,
+    "participant_build_authorized": false,
+    "E5": "HOLD",
+    "C2": "HOLD"
+  }
+}

@@ -1,5 +1,14 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [Single WP07 visibility probe
+executed and audited](wp07-aq01-visibility-execution/README.md). In one
+worker the AppData caller could not be opened (601), the repository
+control was readable, and the requested working directory did not match.
+Neither caller ran; no dataset loaded. AQ01 and the eleven undispatched
+cases remain stopped. Next: bind a fresh, synthetic-only successor on
+the observed readable route, without assuming write or participant
+custody. **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [AQ01 saved-evidence visibility
 diagnosis](wp07-aq01-visibility-diagnosis/README.md). Stata could not open
 the AppData caller and emitted no directory-change echo; the sealed AT03
