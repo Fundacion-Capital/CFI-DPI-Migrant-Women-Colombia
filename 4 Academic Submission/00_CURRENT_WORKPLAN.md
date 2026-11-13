@@ -1,5 +1,14 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [AQ07–AQ12 passed
+with sealed local decisions](wp07-aq07-aq12-local-execution/README.md).
+Ten of twelve synthetic qualification cases and the separate text gate
+are accepted. AQ04/AQ06 remain stopped and unaccepted. The [next
+substantive package](wp07-aq07-aq12-local-execution/NEXT_PACKAGE.md)
+combines their closure preparation with private build readiness and
+parallel analysis/exhibit and manuscript work. No renewed Stata or
+participant authority. **E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [WP07 local digest and
 receipt audit](wp07-aq07-aq12-local-audit/README.md) passed offline.
 AQ04 and AQ06 remain stopped and unaccepted; the gate, AQ01–AQ03
