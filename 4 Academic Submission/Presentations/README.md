@@ -1,5 +1,0 @@
-# Presentations
-
-The reusable [starter](template/slides.tex) uses **Zavala v3**, copied from `Presentations/theme/v3/beamerthemeZavala.sty` in `peru-reparations-political-allocation`. The source theme commit is `964681814a241806540773254273bc2410bf9d64`; SHA-256 is `f161a72bc36efdea9e27d04db166d0b91ef55627d2bb86947deaa6f19a566fde`. The theme matches the one used for the 16 November Dynamics seminar. No Peru event prose, photos or research outputs were copied.
-
-Build the starter from the repository root with `pdflatex -no-shell-escape presentation.tex` or build `slides.tex` from its own directory. For a real event, copy the two starter files into `events/YYYY-MM-DD-event-slug/`; keep the theme version with that event. Record the audience, time, venue, exhibit provenance and permission. Use reviewed aggregate exhibits only. Conference, seminar and public releases are separate decisions; do not add internal paths, rare cells, case details or confidential materials. The starter carries no empirical values or invitation.

@@ -1,4 +1,10 @@
 # Local-only academic drafting, intermediate outputs, and audit packets.
 /4 Academic Submission/
+
+# Root TeX launchers depend on the local-only workspace.
+/paper.tex
+/supplement.tex
+/presentation.tex
+
 /graphify-out/
 /1 Code/graphify-out/
