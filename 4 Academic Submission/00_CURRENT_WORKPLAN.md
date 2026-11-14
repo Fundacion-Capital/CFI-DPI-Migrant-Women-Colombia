@@ -1,5 +1,13 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 13 November 2026:** [WP07 source-only
+advance](wp07-source-advance/README.md) adds a held descriptive and
+optional AS1 emitter, an exhibit handoff, and draft academic sections.
+No empirical output or adoption. The custodian brief remains unsent;
+no contained route is verified. Continue authored qualitative/expert
+and institutional evidence integration in parallel with review of
+the source package. **Private build, E.5 and C2 stay HOLD.**
+
 **Current checkpoint — 13 November 2026:** [Custodian decision
 brief](wp07-custodian-decision/CUSTODIAN_BRIEF.md) prepared and unsent.
 The [read-only Stata route review](wp07-custodian-decision/ROUTE_REVIEW.md)
