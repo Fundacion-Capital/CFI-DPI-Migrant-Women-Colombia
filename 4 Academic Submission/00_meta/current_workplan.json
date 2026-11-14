@@ -7,7 +7,7 @@
   "orchestration": "EIGHT_SUBSTANTIVE_PACKAGES_FORTY_ONE_TASKS",
   "next_package": "E",
   "next_task_range": "WP07 obtain custodian decision and evidence of an existing contained Stata MCP route",
-"next_objective": "Obtain one coauthor review of the assembled manuscript sections 3 and 5–8 and deepen the paper and supplement with verified sources. Keep quantitative slots reserved. On the empirical track, the unsent custody brief and negative route finding still govern. Private build, E.5 and C2 stay held; no artificial or participant authority is conferred.",
+"next_objective": "Complete the first integrated academic draft and reconcile the discussion and supplement to the same evidence. Use the unsent coauthor review brief for sections 3 and 5–8; do not infer approval. Keep quantitative slots reserved and defer deck drafting until a full paper draft exists. On the empirical track, the unsent custody brief and negative route finding still govern. Private build, E.5 and C2 stay held; no artificial or participant authority is conferred.",
   "parallel_source_packages": [
     "B",
     "C",
@@ -24,6 +24,13 @@
 "coauthor_review_packet_unsent": "4 Academic Submission/Paper/COAUTHOR_REVIEW.md",
 "presentation_template": "4 Academic Submission/Presentations/README.md",
 "paper_assembly_audit": "4 Academic Submission/Paper/ASSEMBLY_AUDIT.md",
+"paper_working_entry": "4 Academic Submission/Paper/main.tex",
+"paper_literature_and_context_audit": "4 Academic Submission/Paper/LITERATURE_AND_CONTEXT_AUDIT.md",
+"paper_zotero_collection": "Fundacion Capital / CFI DPI Migrant Women Colombia",
+"academic_working_files_policy": "DIRECTORY_IGNORED_EXISTING_TRACKED_ENTRIES_UNCHANGED",
+"overleaf_manuscript_snapshot": "4 Academic Submission/cfi-itd-paper-20261114.tex",
+"overleaf_supplement_snapshot": "4 Academic Submission/cfi-itd-supplement-20261114.tex",
+"presentation_drafting": "DEFER_UNTIL_FIRST_FULL_PAPER_DRAFT",
   "submission_readiness_roadmap": "4 Academic Submission/wp07-preparation-only-build/ROADMAP.md",
   "literature_handoff": "4 Academic Submission/wp05-literature-context/README.md",
   "historical_state_preserved": "4 Academic Submission/00_meta/workflow_state.json",
@@ -51,8 +58,8 @@
     "1 Code/academic/1 Data preparation.do",
     "1 Code/academic/2 Analysis.do"
   ],
-"last_implemented_package": "WP07/G early TeX article and technical supplement, unsent coauthor review packet, journal profile and reusable presentation template",
-"last_completion_scope": "DOCUMENTARY_ASSEMBLY_AND_LOCAL_TYPESETTING_CHECK_ONLY_EMPIRICAL_COAUTHOR_AND_RELEASE_GATES_PENDING",
+"last_implemented_package": "WP05/G literature and Colombia DPI text, native Zotero BibTeX, local paper workspace and dated Overleaf review snapshots",
+"last_completion_scope": "SOURCE_AND_TYPESETTING_ONLY_EMPIRICAL_COAUTHOR_AND_RELEASE_GATES_PENDING",
   "mixed_evidence_integration_audit": "4 Academic Submission/wp07-mixed-benchmark-integration/VALIDATION.json",
   "source_only_exhibit_advance_audit": "4 Academic Submission/wp07-source-advance/VALIDATION.json",
   "wp07_preparation_only_build": {

@@ -1,4 +1,18 @@
 # Current academic research revision workplan
+**Latest checkpoint — 14 November 2026: literature, Colombia/DPI context
+and local paper workspace.** [Paper/main.tex](Paper/main.tex) assembles
+the early ITD draft; its bibliography is generated from the scoped Zotero
+export and verified supplementary records. The [audit](Paper/LITERATURE_AND_CONTEXT_AUDIT.md)
+documents what was checked, what remains unverified, and the separate
+20-page article and six-page supplement snapshots verified on Overleaf.
+`4 Academic Submission/` stays local under a blanket ignore rule; existing
+tracked files are not yet untracked. The separate Zavala v3 starter is
+retained; defer all deck drafting until a full paper draft exists.
+Both briefs remain unsent. Next: complete the first integrated draft with
+Angélica's review of sections 3 and 5–8, reconcile the discussion and
+supplement to the same evidence and preserve quantitative slots.
+**Private build, E.5 and C2 remain on hold.**
+
 
 **Current checkpoint — 14 November 2026: first paper, supplement and
 presentation sources assembled.** The [Paper folder](Paper/README.md)

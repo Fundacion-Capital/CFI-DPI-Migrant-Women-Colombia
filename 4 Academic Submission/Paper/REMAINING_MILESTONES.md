@@ -12,7 +12,7 @@
 | 6. H.5–H.6: select and approve the exact submission package | Refresh primary journal rules and adapt the substantive source to ITD first. Both authors approve the exact submission-ready version before CFI review and again after CFI review; documented CFI approval is required before initial journal submission. Resolve pending institutional wording and rights; replication publication is a separate exact-package decision. The corresponding author authorizes submission explicitly; no simultaneous submissions. |
 | 7. Post-submission | Track editorial questions and reviews, preserve submitted files and link responses to exact revised evidence. Both authors approve resubmission. Reconfirm proofs, author/declaration details, rights and approved replication materials before publication. Reformat for the next retained outlet only if needed. |
 
-Conference and seminar work can advance in parallel as an internal outline and starter deck. Confirm a real call and deadline, select allowable evidence, verify venue rules, secure author review and approval, and only then make an authorized submission or public release. Do not treat a presentation slot as manuscript, data or conference acceptance.
+Keep the Zavala v3 starter available, but defer conference and seminar drafting until there is a first full paper draft. Then confirm a real call and deadline, select allowable evidence, verify venue rules, secure author review and approval, and only then make an authorized submission or public release. Do not treat a presentation slot as manuscript, data or conference acceptance.
 
 ## Crosswalk to the original milestones
 
