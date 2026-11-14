@@ -1,5 +1,21 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 14 November 2026: first paper, supplement and
+presentation sources assembled.** The [Paper folder](Paper/README.md)
+contains the early article, technical supplement and [unsent review
+packet for Angélica](Paper/COAUTHOR_REVIEW.md), focused on sections 3
+and 5–8. The [Presentations folder](Presentations/README.md) uses the
+author's Zavala v3 Beamer theme. [Journal requirements](Paper/JOURNAL_REQUIREMENTS.md)
+retain Information Technology for Development first and distinguish
+verified requirements from inaccessible instructions. The [remaining
+milestones](Paper/REMAINING_MILESTONES.md) sequence coauthor review, the
+separately gated empirical work, joint checks, and publication and
+conference decisions. Next: consolidate Angélica's review and continue
+source-supported drafting; adopt no numerical exhibits yet. The
+custodian brief remains unsent. **Private build, E.5 and C2 remain on
+hold.** Earlier checkpoints below retain their dated meaning.
+
+
 **Current checkpoint — 14 November 2026:** [WP07 mixed-evidence and
 exhibit review](wp07-mixed-benchmark-integration/README.md) adds an
 academic draft integrating the existing migrant and expert findings
