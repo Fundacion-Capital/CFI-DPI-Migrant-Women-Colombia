@@ -1,7 +1,0 @@
-slot_id,family_id,model_id,construct,field,hypothesis_role,multiplicity,raw_p,adjusted_p,status
-R_IAT,PRIMARY_SIX,R0,IAT,wp07_iat3,Overall conditional association in main remittance model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST
-R_IADT,PRIMARY_SIX,R0,IADT,wp07_iadt2,Overall conditional association in main remittance model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST
-R_IAFF,PRIMARY_SIX,R0,IAFF,wp07_iaff2,Overall conditional association in main remittance model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST
-D_IAT,PRIMARY_SIX,D0,IAT,wp07_iat3,Overall conditional association in main domestic model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST
-D_IADT,PRIMARY_SIX,D0,IADT,wp07_iadt2,Overall conditional association in main domestic model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST
-D_IAFF,PRIMARY_SIX,D0,IAFF,wp07_iaff2,Overall conditional association in main domestic model,Single six-slot Holm family at nominal 5 percent,NOT_COMPUTED,NOT_COMPUTED,CONDITIONAL_ON_VALID_MODEL_VARIANCE_AND_TEST

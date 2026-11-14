@@ -1,8 +1,0 @@
-WP07 E.5: Bind the exact restricted five-ledger render contract
-
-Reconcile the recorded E.4 and E.5 ledger seals without reading any ledger
-bytes. Bind the qualified v3 producer, one quiet no-fit MCP request, exact
-private destination candidates, and independent numeric and visual gates.
-Record that fresh authority and verified access controls are mandatory
-before any restricted read or dispatch. Preserve all packets and keep
-Appendix C2 on hold.
