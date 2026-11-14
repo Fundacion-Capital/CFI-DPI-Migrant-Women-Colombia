@@ -1,0 +1,395 @@
+{
+  "qualification": "Bytes identify documentary sources; not empirical validation or source completeness.",
+  "sources": [
+    {
+      "path": "IADT_MEASUREMENT_AUDIT.md",
+      "sha256": "6582533B53AD37021856A841D2EEDCC52296F65DA875E587BA2B8F9CE7D1B6D7",
+      "bytes": 24743,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IAER_MEASUREMENT_AUDIT.md",
+      "sha256": "A445B3EF319CFFE50F8EF05A02F34C493F6F5C9AC8115E8BC6F355196E8BB5F1",
+      "bytes": 20003,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IAFF_MEASUREMENT_AUDIT.md",
+      "sha256": "26D6B95C286C4237C70F6104172C0BECAEA46F188C2CEF95564081D75503F491",
+      "bytes": 20775,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IAT_MEASUREMENT_AUDIT.md",
+      "sha256": "1544B78474F282A689B4D955EE2B6E023E06DFF8A2EFF21FF5EE7EE80880D869",
+      "bytes": 12793,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IBPD_MEASUREMENT_AUDIT.md",
+      "sha256": "855F8DDFCF1C79979EAFB86B8B411EB0088883E256B5D1C70069CB7EDED3F365",
+      "bytes": 22945,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "ICDP_MEASUREMENT_AUDIT.md",
+      "sha256": "1C4CF4503F775AE40F075EC1D645503CCC4AC654B268DEC80EA56AB6BC765CEA",
+      "bytes": 19857,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "ICPF_MEASUREMENT_AUDIT.md",
+      "sha256": "78BCA63498B98546C4EEF891FC1A524921E3C077CC63E89EC02B40C5ABC7F48C",
+      "bytes": 23223,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IEDF_MEASUREMENT_AUDIT.md",
+      "sha256": "36C7C4407611A949BC6F3854EC0C64E869B04E2DD8DDB9D4C0EC83CB86C016FF",
+      "bytes": 18495,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IEH_MEASUREMENT_AUDIT.md",
+      "sha256": "96E56F479D6BA67F1BFC3E0431242E7D763A71F9C0FDA7321E98FC27274CB8AF",
+      "bytes": 22474,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IETR_MEASUREMENT_AUDIT.md",
+      "sha256": "C7FE1B78C1E5C6E35B737D5F32325477C5A8FAF7F45F97BAC02DDDA9AC23F3D4",
+      "bytes": 24492,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IPCS_MEASUREMENT_AUDIT.md",
+      "sha256": "724845AF9215460DB55826293ABDF832676D6D572F9CF2D1C67FC0B109EDB0CD",
+      "bytes": 19747,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IUOF_MEASUREMENT_AUDIT.md",
+      "sha256": "BE7CADE185A566A5A9F93E00122705865E52CB5B047BB15B2DFE867F2AAFDED5",
+      "bytes": 19144,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IURD_MEASUREMENT_AUDIT.md",
+      "sha256": "1FDDFD5891936A611B6D748DBFDC3DBC06DEE9B64456F5A80F6D604BFFF75D31",
+      "bytes": 19689,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "IVS_MEASUREMENT_AUDIT.md",
+      "sha256": "BBA5D784A15FC8B1D51F92FC587C6A12BB6304B5017EB803954D2E5AAF965EA3",
+      "bytes": 16959,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "OQI_MEASUREMENT_AUDIT.md",
+      "sha256": "3B6D6A1BE632C4AE9DEDC3EB06A8B59E53BF29E6E3567E275970E65C1E088197",
+      "bytes": 18122,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "STATA_RESEARCH_CODING_STANDARD.md",
+      "sha256": "2AC8420D620100B2FE76896849FBF58350D49F9A965127BC01E79FFB4A32DDF4",
+      "bytes": 11393,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "WP03_PREFERRED_FINAL_SCIENTIFIC_PROTOCOL.md",
+      "sha256": "E9301616B7EB8AE542EB8439D98B4CD58A95AB2A6B66A365980F408BF02885C7",
+      "bytes": 21968,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "WP06_RETROSPECTIVE_DECISION_LOCK.md",
+      "sha256": "FC5FA3A4FB7BB5FF1C554BE118BDE78C96B0098CE070341CD459DF8917FCB611",
+      "bytes": 12167,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "WP06_SCIENTIFIC_OPERATIONAL_GATE_CROSSWALK.md",
+      "sha256": "66868BA71BD8399472E4CF9106B45C71957948FDD050E3B8AB213BF9CB93D8DD",
+      "bytes": 16588,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iadt-f2c99ab/choices.csv",
+      "sha256": "BA98A1AE574238F17128F75DA1C8C8DA5ACC9BD62FFE2CA006576FFDACDE7759",
+      "bytes": 2915,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iadt-f2c99ab/questionnaire.csv",
+      "sha256": "537364E9B352B9EEF6DA68A00C55C4452CCEF9285AF58C42811525B2356AE48B",
+      "bytes": 18096,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iaer-891549f/choices.csv",
+      "sha256": "A0D3E3B7E424D74058002EF73F2BD5D5D136328A3D2CAB62EE340FDE8AD4C04C",
+      "bytes": 13068,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iaer-891549f/questionnaire.csv",
+      "sha256": "3014B1A9427BCBC6E6EC74BAAE8C8233A01BFD6EF997BA183A32BC938FBE8A6D",
+      "bytes": 32240,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iaff-a9604d3/choices.csv",
+      "sha256": "B81DA94480EEFA21EF23203B0A635567129C2A6FDB07683371A9EFFA95B70215",
+      "bytes": 5910,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iaff-a9604d3/questionnaire.csv",
+      "sha256": "D07D3ED47D308B3F90333D1E7034E62CF9A7F6175D968D1B317CA60F518A020D",
+      "bytes": 18731,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iat-24f23bd/choices.csv",
+      "sha256": "240BD1CAC7EB4C3C19BCD09E63712609725259AB74258F8E88822C903F677020",
+      "bytes": 5302,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iat-24f23bd/questionnaire.csv",
+      "sha256": "E4E301BF90A0F63C7F61D8553FC57AC45A6C2F11FF9B9B05F922AA4527C985DF",
+      "bytes": 20001,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ibpd-c1050eb/choices.csv",
+      "sha256": "1E0AAB3E3C4410A3F920134F6AB8D4A29C53F35007036E53884C0D9FC4062FD7",
+      "bytes": 20904,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ibpd-c1050eb/questionnaire.csv",
+      "sha256": "08F2D58737D83BCDB73A9366DD54D5B48D30F3E58329E8A59156F41B76866E70",
+      "bytes": 28986,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/icdp-8eb3405/choices.csv",
+      "sha256": "DD6CE4E29A5326F2610C575EF7E9A730005D5EEBFE6EB2BC993758D4E8F2616F",
+      "bytes": 6556,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/icdp-8eb3405/questionnaire.csv",
+      "sha256": "25D0EF644F04F941EBC6A083D334202B4433F6AB64CABE85A48E044C57F5F05D",
+      "bytes": 20316,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/icpf-1a1db95/choices.csv",
+      "sha256": "A0D3E3B7E424D74058002EF73F2BD5D5D136328A3D2CAB62EE340FDE8AD4C04C",
+      "bytes": 13068,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/icpf-1a1db95/questionnaire.csv",
+      "sha256": "3014B1A9427BCBC6E6EC74BAAE8C8233A01BFD6EF997BA183A32BC938FBE8A6D",
+      "bytes": 32240,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iedf-4b7317e/choices.csv",
+      "sha256": "62EAE7F4CE391FAE51ACAE6A378E58CFE9AC36BC050AFE6A5A19FECFBCDA1172",
+      "bytes": 20854,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iedf-4b7317e/questionnaire.csv",
+      "sha256": "F63F06D735A151227AE97819D8BCF1A5DCC005D1982086CB0EBD25093800D7A1",
+      "bytes": 37078,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ieh-c639bda/choices.csv",
+      "sha256": "1E0AAB3E3C4410A3F920134F6AB8D4A29C53F35007036E53884C0D9FC4062FD7",
+      "bytes": 20904,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ieh-c639bda/questionnaire.csv",
+      "sha256": "08F2D58737D83BCDB73A9366DD54D5B48D30F3E58329E8A59156F41B76866E70",
+      "bytes": 28986,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ietr-0452e40/choices.csv",
+      "sha256": "0F8B2F6E8BC8D21D169BE926BDBE6320908553C7B90869663C6932BE07D8999E",
+      "bytes": 26650,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ietr-0452e40/questionnaire.csv",
+      "sha256": "7BAC28BF10C27D704D22A52316645BA8E442515481030F6DEA21A5DBC6A5D1BA",
+      "bytes": 44967,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/input-contract-c4be81a/restricted_preservation_matches.csv",
+      "sha256": "890ED289E8A3ECBA27DCD89180B469C59E74A502899BFA16C4073B054D385008",
+      "bytes": 16928,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/input-contract-c4be81a/retained_form_versions.csv",
+      "sha256": "00CBE253D38A180F72075A377112D0851C0DF1E44A35169A1E63C3708A0EDB8B",
+      "bytes": 94,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/input-contract-c4be81a/stata_source_schema.csv",
+      "sha256": "909A9B8029E53101D484C1EF0C61A2826FD7B4262DEFB164FC2661A446C2764A",
+      "bytes": 44542,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ipcs-bd46bba/choices.csv",
+      "sha256": "62EAE7F4CE391FAE51ACAE6A378E58CFE9AC36BC050AFE6A5A19FECFBCDA1172",
+      "bytes": 20854,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ipcs-bd46bba/questionnaire.csv",
+      "sha256": "F63F06D735A151227AE97819D8BCF1A5DCC005D1982086CB0EBD25093800D7A1",
+      "bytes": 37078,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iuof-8714646/choices.csv",
+      "sha256": "B893F8EE28E10346CE1AE91C413815ED8D3E33E39FEB3C59ED3CB0774A393CAC",
+      "bytes": 8375,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iuof-8714646/questionnaire.csv",
+      "sha256": "7335849EFCEA5F203FDE4B025255D0311F4AF13AFF512010B706EBB2FDA98DD0",
+      "bytes": 28306,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iurd-da6c988/choices.csv",
+      "sha256": "0F8B2F6E8BC8D21D169BE926BDBE6320908553C7B90869663C6932BE07D8999E",
+      "bytes": 26650,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/iurd-da6c988/questionnaire.csv",
+      "sha256": "7BAC28BF10C27D704D22A52316645BA8E442515481030F6DEA21A5DBC6A5D1BA",
+      "bytes": 44967,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ivs-4535102/choices.csv",
+      "sha256": "04E285AC6A38512F5DCAD893A6621F92B41E48DC097D3B1EA7FDC52DC8B9FA63",
+      "bytes": 4705,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/ivs-4535102/questionnaire.csv",
+      "sha256": "D09E68DACD4D1481AA8E86978F3F7C15007472FB31362872D96783E6C35839DF",
+      "bytes": 16781,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/oqi-4b8a2c5/choices.csv",
+      "sha256": "FE49DC97CFFA48223BB0C0B6973091FAB4C1265682DF9CBC630B20C67E1E0A2F",
+      "bytes": 29977,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "audit-local/intake/oqi-4b8a2c5/questionnaire.csv",
+      "sha256": "31807401EC4FF2B0DFF42420581FC6954023D80B23873DBD699A49E14BF08517",
+      "bytes": 56726,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "measurement-crosswalk/consumer_summary.csv",
+      "sha256": "3AB034CE1193E91E9352A03C298C924F2C08933259D674D1BD071F6E922D5896",
+      "bytes": 220,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "measurement-crosswalk/instrument_routes.csv",
+      "sha256": "5D55497CE610876630FADEF255FD752874FFAA0896F312E6F5F47D63CADED739",
+      "bytes": 66004,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "measurement-crosswalk/measurement_manifest.csv",
+      "sha256": "5820804C86528A03EC4F2C1B13891BBDDBB328E05AB9AEDB8BEA0B96E8823D64",
+      "bytes": 5941,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "measurement-crosswalk/overlap_pairs.csv",
+      "sha256": "AAE7B6702B33E148462A6C44C56BFFD4AF4C0BE449860EE8F8C472A48B4CD72A",
+      "bytes": 13167,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "scientific-foundation/core_equation_coverage.csv",
+      "sha256": "02079504080F66556CDA21E5FD0AF9EE65A56561761A79904556A6C6D5EB2DF7",
+      "bytes": 15496,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "scientific-foundation/downstream_outcome_roles.csv",
+      "sha256": "51321F5E75223F5905D0A0FC881104C7901CCA65DA1167C0EC2923C995478151",
+      "bytes": 28011,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "scientific-foundation/historical_analysis_coverage.csv",
+      "sha256": "F1E316433CCD8EA55A82A7B0AD721FC1C30A842E7170CB7A7182F7BBED14C6F7",
+      "bytes": 28281,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-contract/construct_resolution_cards.csv",
+      "sha256": "D90ACE76DCA47A9249CFF7BD68399B4EE5D40BBBD7997395024D77183C658522",
+      "bytes": 15073,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-d2-decision-package/D2_ACCEPTED_POLICY_ACCOUNT_2026-10-25.md",
+      "sha256": "FA8EAF0B3C4090120830D243ABE810273B962C02AC37ACD32554578173D0AAF0",
+      "bytes": 9957,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-d2-decision-package/proposed_validation_scope.json",
+      "sha256": "45B44718BBE98FEB88EFFEA477C95108CFC9A327F4C20A3925FCC5DFD4C30532",
+      "bytes": 3591,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-institutional-rights-review/R04_ACCEPTED_NARROWED_ROUTE_2026-10-24.md",
+      "sha256": "8813C35E4D5EE8F73341A42468C1B69B9FBE4BB2F9D83EEB19D03FD77D8406CD",
+      "bytes": 6711,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-institutional-rights-review/R07_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-24.md",
+      "sha256": "7787E50B557A7B764C63D91BCBD7E3099AE269852ABB990845DF84F3E8BBEE59",
+      "bytes": 9199,
+      "kind": "document_or_static_metadata_not_participant_content"
+    },
+    {
+      "path": "wp06-institutional-rights-review/R12_ACCEPTED_DOCUMENTARY_ACCOUNT_2026-10-25.md",
+      "sha256": "9DE3144D07EA623F8F18C132828943F1C8C3A45755CC00DC4BD7821B270DD11E",
+      "bytes": 8702,
+      "kind": "document_or_static_metadata_not_participant_content"
+    }
+  ]
+}

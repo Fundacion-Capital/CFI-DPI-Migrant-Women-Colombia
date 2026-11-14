@@ -1,0 +1,29 @@
+{
+  "status": "EVIDENCE_AND_READ_ONLY_RULES_LOCKED_MATERIAL_AUTHOR_DECISIONS_PENDING",
+  "retrospective": true,
+  "fits_authorized_now": 0,
+  "participant_processing_authorized_now": 0,
+  "scientific_decisions_approved": false,
+  "release_authorized_now": false,
+  "proposed_fit_ceiling": 12,
+  "proposed_classes": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "proposed_independent_schedules": 3,
+  "proposed_retries": 0,
+  "proposed_resampling_fits": 0,
+  "proposed_fits_approved": false,
+  "input_family_condition": "H1 seven-input family ONLY if approved measurement/sample review supports it; otherwise invalidate and replace proposal before execution",
+  "unresolved_before_execution": [
+    "population_and_consent",
+    "sample_missingness_version_semantics",
+    "measurement_indicator_roles",
+    "estimator_uncertainty_method",
+    "exact_seed_start_iteration_time_runtime_manifest",
+    "candidate_selection_reporting_rules"
+  ],
+  "budget_meaning": "Planning ceiling, not power/stability adequacy or authority. No executable recipe until all six decisions are signed."
+}

@@ -1,0 +1,6 @@
+model,outcome,estimator,vce,observable_eligible,missing_outcome,missing_predictors,expected_slots,expected_rank,expected_df,standardization_cohort,research_fit_executed,historical_display_comparison,scientific_approval,release_approval
+oqi_A,oqi_score_01,OLS,robust,423,0,0,9,7,416,423,False,held,False,False
+oqi_B,oqi_score_01,OLS,robust,423,0,0,13,11,412,423,False,held,False,False
+oqi_C,oqi_score_01,OLS,robust,423,0,0,14,12,411,423,False,held,False,False
+oqi_D,oqi_score_01,OLS,robust,423,0,0,15,13,410,423,False,held,False,False
+oqi_D_z,z_oqi,OLS,robust,423,0,0,15,13,410,423,False,held,False,False

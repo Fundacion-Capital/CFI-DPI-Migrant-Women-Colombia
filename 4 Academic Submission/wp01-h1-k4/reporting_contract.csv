@@ -1,0 +1,21 @@
+id,action,claim,scientific_acceptance,release
+1,RETAIN,Initial-grid H1_k4 identity and exact source remain distinct from the preferred final refit,False,False
+2,RETAIN,Preserve original specification and both saved states without fitting or modification,False,False
+3,RETAIN,Both own-state3199 native records and stripes verify exactly,False,False
+4,RETAIN,R3 comparison remains118 exact and3081 different with zero stripe mismatches,False,False
+5,RETAIN,203 metric records use exact decimal-hex transport after preserved aggregate-only precision recovery,False,False
+6,RETAIN,Finite stored56-slot gradients are availability evidence not a new convergence criterion,False,False
+7,HOLD,Stored e(H) absent means unavailable curvature evidence; do not fabricate an inverse-Hessian certificate,False,False
+8,RETAIN,Exclude the fixed reference coordinate from55-dimensional covariance geometry,False,False
+9,HOLD,Raw numerical-rank thresholds do not prove structural parameter counts or identification,False,False
+10,HOLD,Probability-coordinate rank55 is not global identification or regular inference,False,False
+11,RETAIN,Closest scratch permutation4123 is diagnostic only and not applied relabeling,False,False
+12,RETAIN,Theoretical1458-pattern distances are not participant predictions or empirical goodness-of-fit,False,False
+13,RETAIN,Retain label-order and scale diagnostics without exact-native promotion,False,False
+14,HOLD,Archival report_candidate1 is not a fresh reporting screen or scientific acceptance,False,False
+15,HOLD,Fresh information criteria remain NOT_RECOMPUTED; do not borrow archival metrics,False,False
+16,HOLD,Fresh posterior and modal-class metrics remain NOT_RECOMPUTED; N423 does not certify same membership,False,False
+17,EXCLUDE,Claims of global optimum or identified causal effects or validated Wald inference are unsupported,False,False
+18,HOLD,Independent preferred final H1 four-class fit remains untouched and pending,False,False
+19,HOLD,Protected provenance and aggregate outputs do not authorize public release or privacy closure,False,False
+20,HOLD,WP02 needs a source-exact explicitly authorized fit manifest; WP01 grants zero future fits,False,False

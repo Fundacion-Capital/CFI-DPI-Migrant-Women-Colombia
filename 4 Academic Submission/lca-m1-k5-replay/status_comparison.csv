@@ -1,0 +1,5 @@
+comparison_field,historical,replay,comparison
+command_rc,0,0,HISTORICAL_RC_AND_NONCONVERGENCE_MATCH
+converged,0,0,HISTORICAL_RC_AND_NONCONVERGENCE_MATCH
+report_candidate,0,,NOT_RECOMPUTED_NO_POSTERIOR_DIAGNOSTICS
+native_target,,,HISTORICAL_TARGET_UNAVAILABLE

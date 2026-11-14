@@ -1,0 +1,13 @@
+measure,observed,status
+estimator_dispatches,1,AUTHORIZED_ATTEMPT_EXHAUSTED
+successful_fits,0,FAILED_RUNTIME
+failure_return_code,900,OBSERVED
+fit_worker_maxvar,5000,OBSERVED
+projected_complete_cases,423,NOFIT_VALIDATED
+historical_native_target_cells,607,SAVED_STATE_VALIDATED
+current_native_capture_cells,0,NOT_AVAILABLE
+target_comparison_performed,false,NOT_PERFORMED
+milestone_complete,false,NOT_COMPLETE
+empty_worker_capacity_probe_maxvar,32767,SET_ACCEPTED_NOT_FIT_PROOF
+persistent_runtime_change,false,RESTORED_AND_WORKER_DESTROYED
+further_fit_authorized,false,FRESH_AUTHORITY_REQUIRED

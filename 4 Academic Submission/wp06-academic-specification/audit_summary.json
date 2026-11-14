@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-26",
+  "status": "POST_REVIEW_DOCUMENTARY_CHECKS_PASS_EXECUTION_HELD",
+  "entry_head": "0f2f91180e8ce807ae4f5f67c355c6b860c0daa9",
+  "coverage": {
+    "accepted_construct_accounts": 15,
+    "analysis_role_rows": 25,
+    "comparison_rows": 19,
+    "successor_dependency_rows": 15,
+    "documentary_source_pins": 65,
+    "historical_source_route_fields": 92,
+    "literal_proposed_projection_fields": 163,
+    "explicit_multiselect_dummies": 56
+  },
+  "preservation": {
+    "preexisting_paths_checked": 24566,
+    "unchanged_file_bytes": 24564,
+    "allowed_navigation_extensions": 2,
+    "original_navigation_bytes_retained": true,
+    "unexpected_prior_changes": 0
+  },
+  "checks": {
+    "record_and_scope_negative_controls": 12,
+    "all_negative_controls_rejected": true,
+    "review_boundary_cases_red_wrongly_accepted": 3,
+    "review_boundary_cases_green_rejected": 3,
+    "missing_role_source_fields_after_correction": 0,
+    "participant_records_inspected": 0,
+    "stata_calls": 0,
+    "fits": 0
+  },
+  "review": {
+    "kind": "one_independent_AI_agent_whole_package_review_then_owner_fix_pass",
+    "critical_findings": 0,
+    "important_findings": 4,
+    "important_findings_addressed": 4,
+    "extra_scope_guard_added": true,
+    "second_independent_review_claimed": false,
+    "human_or_institutional_approval": false
+  },
+  "limits": {
+    "D4_D6_owner_adopted": false,
+    "current_target_carrier_for_execution_verified": false,
+    "live_runtime_ready": false,
+    "participant_processing_authorized": false,
+    "fitting_authorized": false,
+    "release_authorized": false,
+    "whole_WP06_complete": false
+  },
+  "evidence": "Private entry, red/green probes, post-review audit and final seal/readback under audit-local/intake/wp06-d3-d4-d6-0f2f911; this summary is not empirical validation or an activation token."
+}

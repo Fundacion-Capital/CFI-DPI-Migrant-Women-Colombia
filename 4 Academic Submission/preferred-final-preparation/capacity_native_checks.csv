@@ -1,0 +1,9 @@
+metric,value
+configured_maxvar,32767
+allocated_synthetic_variables,32760
+restored_maxvar,5000
+induced_failure_rc,459
+archived_native_fields_exact,3199
+no_authority_refusal_rc,601
+current_fit_count,0
+failed_no_fit_diagnostic_attempts,3

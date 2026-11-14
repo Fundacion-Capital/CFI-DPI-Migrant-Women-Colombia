@@ -1,0 +1,21 @@
+disposition,claim_id,statement
+RETAIN,historical_status,Original M2_k5: five classes/six binaries excluding fraud harm; archival rc0/converged0/report_candidate0/N_complete423. Preserve as failed-candidate history.
+RETAIN,original_specification,"Original sample/order, seed6430005,500 randomid draws,difficult iterate7000 and original return-code capture retained. No recode, sorting, seed, tolerance or estimator correction."
+RETAIN,fresh_status,"Exactly one consumed fit:rc0/converged0/eligible423/no saved state. Historical return-code/nonconvergence status match, not numerical replication or scientific acceptance."
+RETAIN,unavailable_metrics,"Nine archival diagnostics unavailable, not zero. Fresh reporting/posterior metrics NOT_RECOMPUTED; no fitted-state N/rank/parameter count inferred from eligibility."
+RETAIN,transport_failure,Original RPC FAILED after300s despite requested3600s. Same owned worker continued; estimator never redispatched. Timeout itself is not convergence or statistical failure.
+RETAIN,completion_cleanup,Saved fit log records bodyrc0/restored5000/cleanup; later successful no-fit native-status DTA readback confirms0/0/423/0 and empty state. Owned worker destroyed/default inventory unchanged. No cleanup recovery fit.
+RETAIN,immutable_provenance,"Retain consumed source/adapter/request, actual failed RPC, live-log prefix, completed logs/status, failed metadata-reader invocation and RED/GREEN correction, all earlier packets/proofs. No retroactive success rewrite or reusable dispatch authority."
+RETAIN,native_target_absence,"No original M2_k5 saved estimate/native target in frozen intake; no newly saved replay state. Scoped absence only, not a global archive search."
+RETAIN,original_screen,"Historical screen:converged==1,k in4/5,min_class_pct>=5,entropy>=0.60. Separate small_class_flag/min_class_n warning is not an added screen condition. It is not a scientific validity test."
+RETAIN,screen_missing_caveat,Original threshold comparisons lack explicit nonmissing guards; Stata missing values exceed finite thresholds. Known convergence0 excludes M2_k5 under convergence clause; do not convert unavailable diagnostics into zeros or invent a fresh computed flag.
+HOLD,numerical_identity,"Coefficient/covariance identity, exact numerical replication and native target comparison unestablished; status agreement does not establish matching estimates."
+HOLD,scientific_use,"Accepted posterior profiles, respondent assignment/class interpretation, valid inference, substantive model acceptance and global identification remain held."
+EXCLUDE,fresh_flag_copy,Archived report_candidate0 is historical. Fresh flag/posteriors NOT_RECOMPUTED; observed nonconvergence excludes accepted reporting without manufacturing a fresh zero.
+EXCLUDE,missing_as_zero,Do not replace any unavailable diagnostic with zero or use missing diagnostics to rank fits.
+EXCLUDE,foreign_target,"M2_k4,M1_k5 or H1_k4 states cannot substitute for the absent M2_k5 historical target."
+EXCLUDE,cross_feature_ranking,Do not pool BIC/AIC rankings across different indicator/outcome sets; archival context is not a newly accepted model-selection table.
+RETAIN,preferred_model,"Historical H1_k4 preference unchanged, not revalidated or replaced by this disposition."
+EXCLUDE,unsupported_identification,"Nonconvergence/status match does not prove intrinsic invalidity, identification failure, global optimum or inevitable failure under every future fit."
+EXCLUDE,rpc_relabel,Later completion/readback does not turn the original failed RPC into an authenticated successful response. Keep observed bodyrc0 distinct from transport status.
+EXCLUDE,new_authority,"Single-fit authority consumed. No new fit/retry/prediction/numerical analysis/capture, production/manuscript/Git/cloud/release authority is granted."

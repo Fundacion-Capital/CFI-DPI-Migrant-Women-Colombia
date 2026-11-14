@@ -1,0 +1,19 @@
+disposition,claim_id,statement
+RETAIN,historical_candidate,"Original M3_k2 converged with N_complete=423, six binary indicators and report_candidate=0. The historical screen limits candidates to four or five classes."
+RETAIN,replay_status,"One original-specification replay converged with N423, rank13 and 14 slots; no refit or predictions."
+RETAIN,original_native_mismatch,"Original native comparison remains 217 cells, 34 exact matches, 183 differences and zero stripe mismatches."
+RETAIN,label_alignment,Class swap strongly explains the dominant difference; small residual coefficient/covariance/distribution differences remain. Approximate diagnostic alignment is not exact replication.
+RETAIN,reference_intercept,The first class-membership intercept is fixed to zero as the reference. Both mixture weights remain functions of the free intercept; neither probability is fixed by that constraint.
+RETAIN,archival_information_criteria,"Historical likelihood, df, AIC and BIC are archival grid values. Fresh replay information criteria were not recomputed; context is not a new candidate ranking."
+RETAIN,archival_posterior,"Historical entropy, posterior summary and class sizes are archival grid diagnostics, not fresh replay predictions."
+RETAIN,fitted_point_rank,Both distribution Jacobians and free covariance matrices have numerical rank13 at four relative thresholds. This is fitted-point numerical evidence under the assumed model.
+RETAIN,stored_derivatives,Stored gradients are finite; stored H is absent in both states. No fresh scores or Hessian were evaluated.
+HOLD,exact_identity,"Exact historical numerical identity remains unaccepted; no acceptance tolerance, native target substitution or saved-state rewriting."
+HOLD,scientific_acceptance,"Measurement validity, global identification/optimality, robustness, substantive class interpretation and scientific use are not accepted by this disposition."
+EXCLUDE,fresh_reporting_flag,Replay report_candidate and posterior metrics were not recomputed. Never present the archival flag or metrics as new replay outputs.
+EXCLUDE,missing_as_zero,Unavailable Hessian diagnostics must not become zero; historical missing-value screen caveat remains unchanged.
+EXCLUDE,selection_claim,The archival reporting screen is not a BIC-minimization or universal scientific-validity rule. M3_k2 exclusion does not imply nonconvergence or intrinsic invalidity.
+EXCLUDE,cross_feature_bic,Do not rank M3 and H1 by their absolute BIC/AIC values: their outcome/feature structures differ.
+EXCLUDE,preferred_model_change,The separately selected historical hybrid H1_k4 model is not changed or substituted for M3_k2.
+EXCLUDE,failed_candidate_blanks,Preserve M3_k5 archived rc0/convergence0 and blank likelihood/information/posterior/class-size fields. Missing failed-candidate values are not zero or newly evaluated failures.
+EXCLUDE,new_authority,"No new Stata call, fit, prediction, participant-data load, production edit, manuscript edit, Git/cloud change or release is authorized."

@@ -1,0 +1,130 @@
+{
+  "verified_on": "2026-11-05",
+  "validation_mode": "STATIC_DOCUMENT_SOURCE_AND_METADATA_ONLY",
+  "baseline_head": "078584f5cd66538fecf6183b36487b28d1149773",
+  "final_head": "078584f5cd66538fecf6183b36487b28d1149773",
+  "task_headings": 41,
+  "task_rows": 41,
+  "duplicates": 0,
+  "heading_register_mismatches": [],
+  "package_counts": [
+    {
+      "Name": "A",
+      "Count": 6
+    },
+    {
+      "Name": "B",
+      "Count": 5
+    },
+    {
+      "Name": "C",
+      "Count": 4
+    },
+    {
+      "Name": "D",
+      "Count": 4
+    },
+    {
+      "Name": "E",
+      "Count": 5
+    },
+    {
+      "Name": "F",
+      "Count": 4
+    },
+    {
+      "Name": "G",
+      "Count": 7
+    },
+    {
+      "Name": "H",
+      "Count": 6
+    }
+  ],
+  "unknown_dependencies": [],
+  "dependency_graph_acyclic": true,
+  "milestones": [
+    "M0",
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M10",
+    "M11",
+    "M12",
+    "M13"
+  ],
+  "input_files_checked": 20,
+  "changed_inputs": [],
+  "missing_current_pointers": [],
+  "substantive_tasks_not_completed_by_this_planning_task": 41,
+  "planning_complete": true,
+  "planning_completion_scope": "WORKPLAN_REVISION_ONLY",
+  "tracked_worktree_changes": [],
+  "index_changes": [],
+  "unexpected_untracked_files": [],
+  "planned_canonical_stata_paths_still_absent": true,
+  "appendix_c2": "HOLD",
+  "participant_loads": 0,
+  "saved_model_loads": 0,
+  "stata_calls": 0,
+  "analytical_fixture_or_python_tests": 0,
+  "fits": 0,
+  "tex_or_manuscript_edits": 0,
+  "compilation": "NOT_RUN",
+  "contacts": 0,
+  "settings_service_changes": 0,
+  "git_mutations": 0,
+  "cloud_sync": 0,
+  "independent_review": "READY_FOR_PLANNING_ONLY_ADOPTION; minor R11 wording clarified by parent",
+  "new_authorities": {
+    "release": false,
+    "participant_loads": false,
+    "scientific_gates_promoted": false,
+    "fits": 0,
+    "git_or_cloud": false
+  },
+  "artifacts_excluding_this_receipt": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2727,
+      "sha256": "6bd26a79bc9017bdfdc289c8ee14a6184e65b46f42683b8cf6ae8395474c5922"
+    },
+    {
+      "path": "4 Academic Submission/00_CURRENT_WORKPLAN.md",
+      "bytes": 40089,
+      "sha256": "be5a4f5679e6f75bec52532a6ba7e0254c652eecad54a2ac079fa9aeffd4adce"
+    },
+    {
+      "path": "4 Academic Submission/00_meta/current_workplan.json",
+      "bytes": 1972,
+      "sha256": "f065909f30047eab30ee94043d67f268141f0e1a68bacd297516bee874266245"
+    },
+    {
+      "path": "4 Academic Submission/workplan-revision-2026-11-05/TASK_REGISTER.csv",
+      "bytes": 9228,
+      "sha256": "07baaf885f5cc74ac42fe33d2be9c1758de1231a9bc035e8f4bb28139abbc5b5"
+    },
+    {
+      "path": "4 Academic Submission/workplan-revision-2026-11-05/INPUTS.json",
+      "bytes": 4300,
+      "sha256": "319f8e755f432c969275f117abb38e205adaf5ea0af1aba52d6d3f688cede0b1"
+    },
+    {
+      "path": "4 Academic Submission/workplan-revision-2026-11-05/AUDIT.md",
+      "bytes": 5664,
+      "sha256": "1f02e9a312c258ff855890fb5df137da17a6bd201c4cb5803a8d15e1d02fce23"
+    },
+    {
+      "path": "4 Academic Submission/workplan-revision-2026-11-05/COMMIT_MESSAGE.txt",
+      "bytes": 1392,
+      "sha256": "76a97d56208b2cb737afd1870aaf35389300ddee9f39bc7e46e9b4bb7df813d5"
+    }
+  ],
+  "result": "PASS_PLANNING_ONLY"
+}

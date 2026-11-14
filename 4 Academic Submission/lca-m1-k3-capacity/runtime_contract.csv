@@ -1,0 +1,11 @@
+measure,observed,status
+temporary_maxvar,32767,OBSERVED_NOFIT
+restored_maxvar,5000,OBSERVED_NOFIT
+research_fits,0,OBSERVED_NOFIT
+projected_cases,423,OBSERVED_NOFIT
+historical_native_cells,607,OBSERVED_NOFIT
+failure_path_restore_verified,true,OBSERVED_NOFIT
+research_milestone_complete,false,FALSE_HOLD
+further_fit_authorized,false,FALSE_HOLD
+fit_feasibility_established,false,FALSE_HOLD
+runtime_flavor_reconciled,false,FALSE_HOLD
