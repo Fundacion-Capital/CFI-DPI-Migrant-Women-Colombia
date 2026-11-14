@@ -1,9 +1,0 @@
-# WP06 — disabled fail-fast and bootstrap-return successor
-
-This additive V4 source does not grant execution authority. The V3 source, failed native packets, and SFI diagnosis remain preserved. The fresh Codex settings baseline applies only to this offline qualification; it does not repair, revise or reinstate earlier trial authorizations.
-
-- The watchdog and worker readiness waits check the retained role handle before reading and before accepting the existing authenticated ready frame. An exited role is rejected even when its frame is present. The same absolute deadline and once-only rollback apply. There is no PID lookup, replacement, retry or deadline extension.
-- A temporary worker-local wrapper verifies the exact pinned vendor config file and callable ownership. It captures the executable returned by the vendor resolver inside the original initialization call and the actual integer return from that call. It does not call the resolver again, change its return, change vendor source on disk, or bypass the existing SFI checks. It restores both original functions and preserves the primary exception if evidence publication fails.
-- The bounded create-only native-return record is diagnostic evidence, not an authenticated readiness frame. Its reader checks the exact schema, size, run scope, and binding digest. `NOT_REACHED` means the vendor call was not reached within the instrumented initializer; earlier import or pin failures may leave no return record. Absence is not a native return code.
-
-No native trial was requested or performed. This change can improve failure detection and evidence collection, but does not fix or establish the cause of the previous SFI failure. Participant execution, fitting, shared-service changes and publication remain out of scope. Any future live trial needs a separate source-exact checkpoint and authorization.
