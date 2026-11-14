@@ -1,5 +1,9 @@
-# Local-only academic drafting, intermediate outputs, and audit packets.
+# Private reconstruction, audit packets, and original review snapshots.
 /4 Academic Submission/
+
+# Draft sources stay local until the exact release is approved.
+/Working paper/
+/Presentation/
 
 # Root TeX launchers depend on the local-only workspace.
 /paper.tex
