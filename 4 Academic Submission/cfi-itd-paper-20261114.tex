@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\providecommand{\CFIPaperDir}{}
+% BEGIN Paper/preamble.tex
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\doublespacing
+\setlength{\emergencystretch}{1em}
+\newcommand{\exhibitplaceholder}[3]{%
+  \begin{quote}\small
+    \textbf{#1 --- #2 (reserved).} #3
+  \end{quote}%
+}
+
+% END Paper/preamble.tex
+\hypersetup{pdftitle={Digital payments after remittance receipt},pdfauthor={}}
+\title{Digital payments after remittance receipt:\\ Evidence from migrant women in Colombia}
+\author{}
+\date{Working draft --- not for submission}
+\begin{document}
+\maketitle
+% BEGIN Paper/sections/abstract.tex
+\begin{abstract}
+Using a digital wallet in Colombia does not mean a woman can complete a transfer across borders or control how the money is used. We study migrant women's reported handling of remittances and participation in domestic digital payments, alongside existing interviews, focus groups, expert interviews and a five-country institutional comparison. Migrant accounts describe routine domestic use alongside reliance on intermediaries for some cross-border journeys, as well as variation by corridor. The study distinguishes reported use from the ability to open, operate and protect an account. It does not estimate the effect of Colombia's recent interoperable payments rollout.
+\par\smallskip
+\emph{Working-draft note: the quantitative findings sentence and final abstract await accepted exhibits.}
+\end{abstract}
+\noindent\textbf{Keywords:} digital payments; remittances; migrant women; financial inclusion; digital public infrastructure; Colombia.
+
+% END Paper/sections/abstract.tex
+% BEGIN Paper/sections/introduction.tex
+\section{Introduction}
+A woman can receive a remittance in a wallet and withdraw it all in cash. She can also receive cash and use digital payments for other transactions. A woman who runs a business using a local wallet may still need someone else to send money across a border. These are different forms of participation. Treating them as one measure of financial inclusion makes it hard to tell which part of the transaction works and which does not.
+
+We study this distinction in Colombia. A survey of women with international migration experience separates the reported channel for the latest international remittance, the general disposition of remittance proceeds, and whether the respondent made or received a domestic digital payment or transfer in the previous 60 days. The latter two are the quantitative outcomes. They have different denominators and do not trace the same payment. Fee visibility, cash-out conditions, perceived safety, complaint outcomes and household decision arrangements provide context; they are not combined into a welfare measure.
+
+Interviews and focus groups with Venezuelan migrant women document a contrast the survey outcomes cannot capture on their own. Women described using wallets and transfers for purchases, work and family payments within Colombia. For some transactions involving Venezuela, the local payment was instead the first step in a chain involving an intermediary, currency conversion and a separate confirmation from the recipient. Women also described different experiences in other corridors. The study therefore distinguishes digital ability, connection to a domestic payment service and the ability to complete an international transaction on terms the user can understand and verify.
+
+This question complements work on earlier points of entry. \citet{barboni2025} study how perceived social acceptance shapes regularized Venezuelan migrants' willingness to engage with financial providers in Colombia. \citet{martinshields2022} distinguish access to technology from the use of digital government services in Bogotá. \citet{kabeer1999} separates resources, agency and achievements. We likewise distinguish access to a service from what people report doing with money and from who can decide how to use it. Neither a digital transaction nor a reported decision arrangement establishes a gain in agency.
+
+Research on shared public digital systems distinguishes the functions of identity, payments and data exchange from their governance and adoption \citep{eaves_rao_verified_2025}. Remittance studies likewise caution against reducing a transfer to a single rail: \citet{cirolia_remittance_2022} describe how formal, informal and digital arrangements intersect in two Cape Town cases serving Congolese migrants. These studies do not tell us how common a specific practice is in Colombia. They help frame three questions for our evidence: what women say they do after receipt; which conditions accompany domestic use and retaining value digitally; and what can the migrant and institutional accounts tell us about where a transaction becomes difficult?
+
+% BEGIN Paper/sections/literature.tex
+\subsection{From access to use: what the literature leaves open}
+
+\paragraph{Eligibility, acceptance and the ability to transact.}
+Research on Venezuelan migration to Colombia separates public recognition of migrants from access in practice. \citet{ibanez2025} exploit an eligibility cutoff for an earlier regularization program, the \emph{Permiso Especial de Permanencia} (PEP), and examine the consequences for income, public services and financial access. Their design addresses the effect of eligibility for that program, not of the later protection permit or an instant-payment service. In a randomized information study among regularized Venezuelan migrants in Colombia, \citet{barboni2025} investigate how perceptions of social acceptance affect willingness to engage with financial providers. Willingness is informative about a barrier before use, but it is not the same as controlling an account or making a payment. For Bogotá, \citet{martinshields2022} show why the availability of digital technology should not be read as engagement with government services. In finance, the parallel distinction is between having the means to connect, having a provider recognize a credential, and completing a transaction without assistance. The explanatory variables in our survey describe some of those conditions; they do not identify which barrier is decisive.
+
+\paragraph{A remittance is more than the channel in which it arrives.}
+Studies of remittances start from different points in the transaction. \citet{zapata_diaspora_2022} examine how Colombian diaspora policy has drawn cross-border household resources into financial markets. The country in that account is an origin state engaging its diaspora; our study observes women living in Colombia with varied international migration histories. \citet{cuadros_verified_2020} study remittance receipt and child welfare in Cali, using household-survey data and a matching design. Their outcomes illuminate the use of household resources but do not capture how a transfer was delivered, whether it stayed digital, or who could direct it. \citet{cirolia_remittance_2022} trace interacting intermediaries, technologies and obligations in two Cape Town remittance-service cases serving the Congolese diaspora. That work suggests what a channel variable can miss: a formal domestic leg can coexist with an informally coordinated cross-border leg. It does not establish which chain was used for any Colombian transfer.
+
+These distinctions determine what we compare. A reported receipt channel describes the latest international remittance. Reported retention or use describes what happens to remittance proceeds in general. Recent domestic digital participation can involve funds from other sources. A cash withdrawal can be consistent with access to a wallet if recipients need cash, face uncertainty about fees, or use cash for obligations for which digital payment is not useful. Conversely, someone who receives cash can make domestic digital payments. Neither outcome measures how much money moved or follows the same transfer through a sequence of stages.
+
+\paragraph{Who controls the funds, and when?}
+Access to a financial resource does not establish control over it. \citet{kabeer1999} distinguish resources, agency and achievements. An experiment offering U.S.-based Salvadoran migrants different degrees of control over home-country savings found that savings responded to the arrangement \citep{ashraf2015}. This shows why control matters as a design dimension, not which household member should control funds in our setting. Ethnographic research in Kenya shows that people use digital finance to sustain collective financial relationships as well as individual aims \citep{kusimba_it_2018}. \citet{smyth_challenging_2022} likewise challenges the assumption that linking remittances to formal finance has an unambiguous meaning for Indigenous women's agency in Oaxaca. Evidence on remittances and intimate partner violence among married women in Mexico examines a different outcome in a different population \citep{silveriomurillo_remittances_2022}; it cautions against equating transfers with protection, not against receiving remittances. Joint arrangements can be useful, constrained, or both. Our reported decision arrangements, assistance and recourse items can be read alongside the migrant accounts but do not establish verified coercion, empowerment or safety gains.
+
+\paragraph{Interoperability and the last mile.}
+\citet{eaves_rao_verified_2025} separate the functions of identity, payments and data exchange and distinguish technical features from adoption and public-interest safeguards. This matters because a rail can work across participating providers and still require a user to solve other problems: maintaining account access, seeing the fee in advance, confirming the payment and finding someone accountable if it fails. Comparative work on Pix, SINPE Móvil and CoDi treats adoption costs, network effects and coordination among providers as relevant to how usage spreads \citep{argente_verified_2025}. It does not rank those systems on migrant inclusion. A consumer-focused policy brief also makes the case for governance and safeguards rather than treating payment functionality as a proxy for welfare \citep{draper_verified_2024}. We use that brief as a design argument, not evidence that any specific protection worked.
+
+The literature thus gives competing reasons for the same reported behavior. Skills and access may facilitate use, but use can also develop skills. Keeping proceeds digital may reflect convenience, low expected costs, a provider rule, or another person's control of the account. Turning to cash or a trusted intermediary can reflect constraints or a practical choice. Our contribution is to put reported disposition and domestic participation side by side, with their proper bases, and use authored migrant and expert accounts to interpret where frictions can arise. The study does not identify the causal effect of any one of these explanations.
+
+% END Paper/sections/literature.tex
+
+The next section traces the rules and payment services that were in place during fieldwork. We then separate the two survey outcomes and their analytical bases, read migrant accounts alongside expert diagnoses, and use the regional cases to frame questions about implementation. The discussion asks what an evaluation would need to measure beyond use.
+
+% END Paper/sections/introduction.tex
+% BEGIN Paper/sections/setting.tex
+\section{Colombia's payments setting}
+
+\subsection{Migration, documentation and remittance receipt}
+Colombia is both a destination for migrants and a country whose households receive income from people living abroad. The central bank's balance-of-payments report puts inward workers' remittances at US\$13.1 billion in calendar year 2025, equivalent to 2.9\% of national GDP \citep{banrepbop2026}. Those are national flows into Colombia. They do not describe the Colombian--Venezuelan corridor in both directions, remittances sent by women living in Colombia, or the frequency and amount received by our survey respondents. Recipient households, individual users, and aggregate cross-border flows are different units.
+
+The documentation environment changed before fieldwork. The PEP evaluated in earlier regularization research and the \emph{Permiso por Protección Temporal} (PPT) are distinct. Decree 216 of 2021 established a temporary protection statute for eligible Venezuelan migrants and created the PPT and the associated register \citep{decree216}. A temporary migration credential is not a Colombian citizenship credential, and the statute does not describe the status of every migrant or returning Colombian. A provider must still recognize the relevant credential and verify the applicant for the financial product in question. The survey does not verify a woman's legal status or a provider's compliance. Similarly, relying on an account in someone else's name can solve immediate access to a transaction without solving the problem of continuing access or control.
+
+\subsection{From separate services to interoperable payments}
+Colombia's payment market predates Bre-B. Law 1735 of 2014 created the framework for specialized electronic deposits and payments companies, extending the institutional options for offering payment and deposit services \citep{law1735}. Wallets and private instant-transfer initiatives developed before national interoperation. A payment possible within one service, or through a bilateral arrangement, did not necessarily reach customers of other providers. Article 104 of Law 2294, External Resolution 6 of 2023 and Circular DSP-465 establish the regulatory basis for interoperability among low-value immediate payment systems \citep{banrepreg,banreptechnical2026}. The mandate, operating standards and actual launch are distinct events.
+
+Individual alias registration began in July 2025. A controlled operation ran from 23 September to 5 October, followed by full operation on 6 October 2025 \citep{banreppilot,banreptechnical2026,banrep2026}. Bre-B is not a standalone app. Participating providers offer the service through existing channels; aliases in the central directory and the central settlement arrangement serve different functions. The user who sends a transfer need not register an alias solely to send; receiving through an alias depends on the recipient's linked account or deposit. The central bank describes Bre-B as enabling domestic payments and transfers \citep{banrepfaq,banreptechnical2026}. That scope does not establish the origin, conversion or settlement of an incoming international remittance. A wallet can receive funds through a separate arrangement and then use a domestic rail for a subsequent payment.
+
+Published implementation statistics also answer different questions. The technical report distinguishes registered keys, customers, participating entities and operations settled on the new mechanism \citep{banreptechnical2026}. A customer can register more than one key, and registration does not establish use. Aggregate payment volume can rise without indicating which population gained access, benefited from lower prices, or had a complaint resolved. The survey does not identify the processing rail or the date of first use. The recorded interviews, from 9 December 2025 through 17 February 2026, came after full operation; some item reference periods extend farther back than others. Neither interview dates nor recall periods create an exposure measure or a before-and-after design.
+
+\subsection{The conditions around the rail}
+Connectivity provides one reason to distinguish technical availability from access. DANE's 2024 Quality of Life Survey reports internet connectivity for 65.6\% of households nationally, 72.5\% in municipal seats and 41.9\% in populated centres and dispersed rural areas \citep{daneentic2025}. These are household estimates for a pre-launch reference year, not the proportion of migrant women who have their own connected device. Global Findex 2025, by contrast, uses interviews with adults conducted in 2024 \citep{findex2025}. Household connectivity, adults' reported financial behavior and provider-reported registrations should not be joined into one adoption rate. For an individual customer, changing a phone number, lacking sufficient data, or needing help at a verification step can still interrupt use in a connected area.
+
+Rules for sharing financial data are also distinct from rules for sending funds. The 2022 open-finance framework preceded the fieldwork; Decree 0368, issued in April 2026, set a later mandatory framework \citep{decree1297,decree0368}. It is not part of the policy environment during the recorded interviews, and promulgation is not evidence that every data-sharing service was operating. In domestic Bre-B transactions, the central bank directs customers to the financial entities involved to pursue disputes \citep{banrepfaq}. This documents a route, not its accessibility in practice, a guaranteed refund, or responsibility for a foreign settlement or an intermediary's actions. Public oversight of a network and a user's ability to recover funds are separate questions.
+
+The setting therefore provides a concrete way to read the evidence that follows. Identity and access rules shape who can get and keep a usable account. The domestic rail changes what participating providers can exchange. Neither supplies the full cross-border journey, resolves costs and liquidity on the other side, or establishes what a woman decides to do after receipt. That is why we report the two outcomes separately and use expert and migrant accounts to examine the handoffs that the survey cannot observe.
+
+% END Paper/sections/setting.tex
+% BEGIN Paper/sections/data.tex
+\section{Data and measurement}
+\subsection{Survey}
+
+The recorded survey interviews span 9 December 2025 to 17 February 2026. Fundación Capital recruited migrant women leaders, who reached potential participants through contacts and referrals and administered the survey. Recruitment was not restricted to former program participants. The intended population included adult women with international migration experience, including Colombian return migrants, with about three months' residence after arrival or return. The programmed screen used consent, gender, age and receipt of remittances by the respondent or someone in her household in the previous 12 months. The form did not test every intended recruitment condition. Household receipt does not establish that the respondent personally received or managed a transfer.
+
+The revision retains the historical 423-record cohort and the original manual and coded exclusions. This is a nonprobability sample. Referral and household links were not systematically recorded, the cohort is not a count of verified distinct households, and there is no denominator for a response rate. Residence is recorded residence, not the interview site. The proposed cohort table (T1) describes the admitted records and the form-version partition; any additional geography panel has a separate source and disclosure check. A screening-flag diagnostic does not define a second set of exclusions.
+
+The first outcome distinguishes respondents reporting any digital retention or use of remittance proceeds from those reporting withdrawal of all proceeds in cash. We also retain the five response categories in questionnaire order. Two choices describe amounts on the same side of the halfway point in different words. We do not reconstruct monetary shares or treat the choices as a strictly ranked scale. The latest receipt channel and the 12-month receipt frequency are separate context items; the latter preserves the combined response for nonapplicability or not remembering.
+
+The second outcome is whether respondents report making or receiving a domestic digital payment or transfer in the previous 60 days. The denominator is valid yes/no answers, with refusal and other unscored states kept separate. Among affirmative domestic users, we retain the original five operation bins on the valid-bin base and report the response-state distribution on the affirmative-user base. Uncertainty is not a bin. Shared endpoints in the response labels cannot be resolved from the data. Fee visibility concerns the last operation in a separate 90-day window. The proposed T2 and F1 display the two outcomes without a common denominator or payment-flow arrows.
+
+The working models use three survey measures. The access/basic-use measure combines reported phone access/use, internet-use frequency and running out of data or balance; some content is close to the outcomes. The second averages reported ability to send or receive money by phone and confidence in avoiding online fraud and suspicious messages. It measures neither tested skills nor confidence in making a transfer as a standalone construct. The third combines address documentation in the respondent's name and a phone line in her own name; these are two onboarding conditions, not account ownership or provider-verified eligibility. All specified components must be present. The optional three-item alternative adds app installation under its own applicability rule. Pair-complete and common-complete comparisons are distinct; Pearson correlations do not validate a scale.
+
+\subsection{Interviews, focus groups and documentary comparison}
+
+The original methods chapter reports 30 semistructured interviews with Venezuelan migrant women and six focus groups involving 47 participants, across Bogotá, Soacha, Cali and Medellín. These are reported activity counts, not a claim about the number of distinct people across activities. The qualitative analysis combined themes informed by the study's conceptual domains with themes developed from the interview and focus-group material. We retain the existing authored findings. We do not infer their frequency in the survey or assume participant-level linkage.
+
+The original paper also draws on institutional and regional expert interviews and reviews regulatory, central-bank and policy documents. Experts describe implementation and institutional responsibilities; official sources document selected rules and system designs. Neither is evidence that a particular respondent could open an account, used a specific rail or resolved a complaint. The regional comparison examines counterpart systems, not comparable groups of women in five countries.
+
+\exhibitplaceholder{T1}{Cohort and form versions}{Admitted total and version accounting. Screening states are a separate diagnostic, not exclusions. No geography enters from the cohort emitter alone.}
+
+% END Paper/sections/data.tex
+% BEGIN Paper/sections/quantitative.tex
+\section{Quantitative approach and reporting}
+We describe each outcome on its own valid-response base. Separate core logit models relate the two outcomes to the three measures, age, grouped education and grouped recorded residence. The reference categories are completed secondary education and Bogotá. The residual residence group is neither a fourth city nor a sampling cluster. Extensions add grouped occupation (employee or worker as reference) and original first-arrival calendar year, not reconstructed tenure.
+
+The five model rows cover the two core models, their two extensions and a separate refit of the remittance core model on the shared outcome-observed core base. The design checks that the shared base equals the domestic core base before omitting a duplicate domestic fit. We distinguish intended eligibility from the estimator's sample. Completeness and valid inputs do not establish random missingness or justify treating model-specific exclusions as deletions from the cohort.
+
+Each core contrast compares average fitted probabilities at the higher and lower specified values of a measure, with other covariates at their observed values and the averages over that model's estimation sample. The endpoints are 0.50 and 0.75 for access/basic use and for the transfer ability/online-safety measure, and 0.50 and 1.00 for the two onboarding conditions. These are different increments. Observed support at the endpoints does not establish joint support for all combinations used in standardization.
+
+The proposed figure reports differences in percentage points with pointwise 95\% delta-method intervals from a working robust covariance that assumes independent records. The six raw and Holm-adjusted p-values concern coefficient-null tests in the two core models, not simultaneous confidence intervals for the plotted probability contrasts. The working covariance does not account for dependence through unrecorded referral or household links. Cross-sectional associations cannot distinguish skills acquired through use from skills that precede it, and adjustment does not remove unmeasured confounding. This is a reporting specification, not a preregistration claim.
+
+\subsection{Survey results: exhibits reserved}
+The observed outcome distributions come first, then the two core models and the separately specified checks. The slots below contain no estimates, counts from outputs, or rendered figures. See the technical supplement for field, denominator and source definitions.
+
+\exhibitplaceholder{T2/F1}{Reported disposition and domestic digital participation}{Each panel uses its own valid-response base. Neither panel is a share of money or a stage in a transaction funnel.}
+\exhibitplaceholder{QT1}{Working model status and sample sizes}{Show intended and estimator sample sizes and reasons for unavailability by model. E.5 hold.}
+\exhibitplaceholder{QF1}{Adjusted probability differences}{Six fixed core contrasts in percentage points with pointwise 95\% intervals. E.5 hold.}
+\exhibitplaceholder{QT2}{Six core coefficient tests}{Report raw and Holm-adjusted Wald-test probabilities, not simultaneous intervals. E.5 hold.}
+
+% END Paper/sections/quantitative.tex
+% BEGIN Paper/sections/migrant-findings.tex
+\section{What migrant women describe}
+\subsection{Domestic payments can work while a cross-border transfer still needs an intermediary}
+
+Women described using wallets, bank transfers and QR payments to buy goods, receive customer payments and manage small businesses. In the accounts of sending money to Venezuela, a transfer from a Colombian wallet could start rather than finish the transaction. Women described asking trusted contacts or exchange operators for rates, transferring money locally, waiting for the other leg, and checking a receipt or asking relatives to confirm delivery. The legacy chapter also reports more direct or faster experiences in some other corridors; dependence on intermediaries was not uniform. These accounts concern different journeys and sometimes the opposite direction from the survey's inbound questions.
+
+An intermediary could provide a service the local wallet did not: arrange the rate, coordinate delivery on the other side and confirm receipt. Some women used recommendations, repeat dealings and comparisons among contacts to decide whom to trust. These arrangements made transfers possible and sometimes offered useful reassurance. They also left women with work that did not end when the local transfer settled. Where charges and exchange-rate deductions were hard to separate, a fast local payment could still be part of a costly or time-consuming journey. These are reported experiences, not a price audit or a quantified loss of remittance value.
+
+\subsection{Documents, practical help and control over the account}
+
+Some women described trouble opening a product because they lacked a requested document; others said a document they held was not recognized by a provider or an app. Some relied on a relative's or partner's account. The same assistance could enable a transaction and limit privacy or direct control over it. Women described learning through use, comparing rates and helping others transact. The accounts tie these practices to livelihoods and to obligations such as paying for food, medicine or schooling across borders. Knowing how to move money and deciding where it should go do not guarantee control over the account or timely delivery.
+
+\subsection{Taking precautions is not the same as having recourse}
+
+The interviews and group discussions describe suspicious links, false confirmations and uncertainty about responsibility when a transfer was delayed or went wrong. Women reported checking requests and receipts, calling relatives and returning to known contacts. They could take these precautions and still find it hard to locate a complaint channel or know whether funds could be recovered. The legacy analysis distinguishes women facing barriers to formal entry, users who depend on intermediaries, digitally capable users constrained by available services, and women who transact more independently but still face corridor constraints. It treats security concerns as cross-cutting. These positions can overlap or change. They are not linked to survey respondents or assigned quantitative class labels.
+
+% END Paper/sections/migrant-findings.tex
+% BEGIN Paper/sections/expert-findings.tex
+\section{What experts identify at the institutional level}
+Experts distinguished formal recognition of a document from successful verification at a provider. They raised continuity when documentation changes, and practical disruptions such as limited data, unstable phone numbers and difficulties with app authentication. They proposed human assistance at onboarding and first use alongside simpler interfaces. This is an implementation diagnosis, not an estimate of the effect of training or support.
+
+They also distinguished domestic payment interoperability from the cross-border work of verifying identity, converting currency, delivering funds at destination and handling disputes across organizations. A faster domestic payment can improve one leg without changing the others. In hybrid transactions the protection attached to that leg may not settle who is responsible for the rest of the transfer. Experts identified separate responsibilities for migration authorities, regulators, payment operators, providers and organizations offering assistance. The issue they raised was coordination across those responsibilities, not simply whether a rail or complaint channel existed. For a domestic Bre-B transaction, for example, the central bank directs customers to the participating financial institution's complaint channel \citep{banrepfaq}. That documented route does not say what occurred in any interviewee's case or establish a remedy for a cross-border dispute.
+
+% END Paper/sections/expert-findings.tex
+% BEGIN Paper/sections/benchmark.tex
+\section{Institutional comparison: what can Colombia learn from its neighbours?}
+The original benchmark uses the DPI Map \citep{institute_for_innovation_and_public_purpose_ucl_dpi_2025}, operator and policy documents, expert interviews and Colombia's own findings. We keep the same five cases and the distinction between domestic system design and readiness to serve mobile or transnational users. The technical supplement records the evidence needed for the second question. A missing or unverified feature is not a low score.
+
+Brazil's Pix illustrates a public operator's ability to set common rules and operate settlement and an alias directory \citep{bcbpix}. Peru offers a different example: the central bank phased interoperability in, starting by connecting Yape and Plin rather than asking users to move to a single national wallet \citep{bcrp2025}. Costa Rica's SINPE Móvil illustrates a simple phone-based transfer through participating institutions, but the number is linked to a local colón-denominated account \citep{bccrsinpe}. Mexico distinguishes SPEI interbank transfers from CoDi's mobile payment and collection interface \citep{banxicocodi,banxicospei}. Access to the underlying rail and use of a particular interface are different measures.
+
+Colombia's Bre-B makes domestic interoperation available across participating providers. The comparisons help frame choices about operator responsibilities, phased connections, familiar interfaces and account requirements. They do not rank the five countries by migrant inclusion, verify acceptance of specific documents, or establish the effectiveness of cross-border protection. Any comparison of actual uptake, fees, recovery or international delivery needs its own population, period and source.
+
+% END Paper/sections/benchmark.tex
+% BEGIN Paper/sections/discussion.tex
+\section{Discussion and policy implications}
+The strands share a question, not a unit of observation. The survey distinguishes two reported uses. The interviews show how some women combine wallets, cash, trusted contacts and help from others. The expert findings describe why a product can work in one setting while another part of a transaction remains difficult. The benchmark documents what selected systems are designed to do. The strands complement each other without estimating a mechanism or validating one another's counts.
+
+Three practical tests follow. First, can customers open and continue using an account under their own name when an accepted document changes, and get help when verification fails? Second, can a user see the total price and the amount due at destination before confirming a transfer? Third, if a transfer spans providers or an intermediary, can the user identify who handles the complaint, trace the payment and obtain a remedy? These tests separate usable access, transparent pricing and recourse from the number or speed of transactions. None presumes one universal barrier or treats cash use as failure.
+
+The welfare implications concern things worth measuring: realized fees and exchange-rate spreads, travel or waiting time, delivery, losses and recovery, privacy, and control over spending. Some of these issues appear in the authored accounts; the survey's binary use outcomes cannot measure gains in them. Estimating welfare changes or ranking reforms would require outcomes and comparisons the present study does not provide. The contribution is to show why these questions should be asked at different stages of a payment.
+
+% END Paper/sections/discussion.tex
+% BEGIN Paper/sections/conclusion.tex
+\section{Conclusion}
+The migrant accounts make a distinction that is easy to miss when inclusion is measured by account access alone. A wallet can serve a household or small business in Colombia and still leave a woman dependent on someone else for a transfer abroad. Help from a relative or a trusted contact can make a transaction possible without giving the user control over the account or an effective remedy if the payment fails.
+
+The practical question is what people can do at each step: enroll and maintain access, know what the recipient will receive, confirm delivery, and seek redress. Tracking those outcomes alongside use would help establish whether a change improves people's options or only makes one step faster. The present design does not estimate such gains.
+
+\emph{Working-draft note: complete the quantitative conclusion and final declarations only after the joint evidentiary and release review.}
+
+% END Paper/sections/conclusion.tex
+% BEGIN Paper/bibliography/setup.tex
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Argente et~al.(2025)Argente, Gonzalez~Alvarez, Méndez, and Van~Patten]{argente_verified_2025}
+David Argente, Paula Gonzalez~Alvarez, Esteban Méndez, and Diana Van~Patten.
+\newblock {Drivers of digital payment adoption: Lessons from Brazil, Costa Rica, and Mexico}.
+\newblock Technical Report 34280, National Bureau of Economic Research, 2025.
+\newblock URL \url{https://doi.org/10.3386/w34280}.
+
+\bibitem[Ashraf et~al.(2015)Ashraf, Aycinena, Martínez~A., and Yang]{ashraf2015}
+Nava Ashraf, Diego Aycinena, Claudia Martínez~A., and Dean Yang.
+\newblock {Savings in transnational households: A field experiment among migrants from El Salvador}.
+\newblock \emph{The Review of Economics and Statistics}, 97\penalty0 (2):\penalty0 332--351, 2015.
+\newblock \doi{10.1162/REST_a_00462}.
+\newblock URL \url{https://doi.org/10.1162/REST_a_00462}.
+
+\bibitem[{Banco Central de Costa Rica}(n.d.)]{bccrsinpe}
+{Banco Central de Costa Rica}.
+\newblock {Servicios dirigidos a personas: SINPE Móvil}, n.d.
+\newblock URL \url{https://www.bccr.fi.cr/cr/es/sistema-de-pagos/servicios-sinpe/servicios-dirigidos-a-personas.html}.
+
+\bibitem[{Banco Central de Reserva del Perú}(2025)]{bcrp2025}
+{Banco Central de Reserva del Perú}.
+\newblock {Estrategia de interoperabilidad de los pagos minoristas en Perú: Principales avances al primer semestre del 2025}, 2025.
+\newblock URL \url{https://www.bcrp.gob.pe/docs/Sistema-Pagos/articulos/estrategia-de-interoperabilidad-2025-1.pdf}.
+
+\bibitem[{Banco Central do Brasil}(n.d.)]{bcbpix}
+{Banco Central do Brasil}.
+\newblock {Central Bank's role in Pix}, n.d.
+\newblock URL \url{https://www.bcb.gov.br/en/financialstability/pixcentralbanksrole}.
+
+\bibitem[{Banco de la República}(2025)]{banreppilot}
+{Banco de la República}.
+\newblock {Bre-B continúa avanzando}, 2025.
+\newblock URL \url{https://banrep.gov.co/es/noticias/bre-b-continua-avanzando}.
+
+\bibitem[{Banco de la República}(2026{\natexlab{a}})]{banrep2026}
+{Banco de la República}.
+\newblock {Bre-B, una breve historia del sistema interoperado de pagos inmediatos}, 2026{\natexlab{a}}.
+\newblock URL \url{https://www.banrep.gov.co/es/blog/bre-b-breve-historia-sistema-interoperado-pagos-inmediatos}.
+
+\bibitem[{Banco de la República}(2026{\natexlab{b}})]{banrepbop2026}
+{Banco de la República}.
+\newblock {Informe de la evolución de la balanza de pagos y de la posición de inversión internacional: IV trimestre de 2025}, 2026{\natexlab{b}}.
+\newblock URL \url{https://www.banrep.gov.co/sites/default/files/informeBOP202504.pdf}.
+
+\bibitem[{Banco de la República}(2026{\natexlab{c}})]{banreptechnical2026}
+{Banco de la República}.
+\newblock {Bre-B: Sistema de Pagos Inmediatos Interoperado de Colombia. Diseño, implementación y perspectivas}, 2026{\natexlab{c}}.
+\newblock URL \url{https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/documento-tecnico-bre-b-febrero-2026.pdf}.
+
+\bibitem[{Banco de la República}(n.d.{\natexlab{a}})]{banrepfaq}
+{Banco de la República}.
+\newblock {Preguntas frecuentes de Bre-B}, n.d.{\natexlab{a}}.
+\newblock URL \url{https://www.banrep.gov.co/es/bre-b/preguntas-frecuentes}.
+
+\bibitem[{Banco de la República}(n.d.{\natexlab{b}})]{banrepreg}
+{Banco de la República}.
+\newblock {Regulación sobre la interoperabilidad en los Sistemas de Pagos de Bajo Valor Inmediatos}, n.d.{\natexlab{b}}.
+\newblock URL \url{https://www.banrep.gov.co/es/normatividad/sistemas-pago/pagos-inmediatos-bre-b}.
+
+\bibitem[{Banco de México}(n.d.{\natexlab{a}})]{banxicocodi}
+{Banco de México}.
+\newblock {CoDi: Cobro Digital}, n.d.{\natexlab{a}}.
+\newblock URL \url{https://www.banxico.org.mx/sistemas-de-pago/codi-cobro-digital-banco-me.html}.
+
+\bibitem[{Banco de México}(n.d.{\natexlab{b}})]{banxicospei}
+{Banco de México}.
+\newblock {MI SPEI: Transferencias}, n.d.{\natexlab{b}}.
+\newblock URL \url{https://www.banxico.org.mx/servicios/mi-spei_-transferencias-ban.html}.
+
+\bibitem[Barboni et~al.(2025)Barboni, de~Roux, and Perez-Cardona]{barboni2025}
+Giorgia Barboni, Nicolás de~Roux, and Santiago Perez-Cardona.
+\newblock {Perceived social acceptance and migrants' financial inclusion}.
+\newblock Technical Report 745/2025, University of Warwick, CAGE, 2025.
+\newblock URL \url{https://warwick.ac.uk/fac/soc/economics/research/centres/cage/manage/publications/wp745.2025.pdf}.
+
+\bibitem[Cirolia et~al.(2022)Cirolia, Hall, and Nyamnjoh]{cirolia_remittance_2022}
+Liza~Rose Cirolia, Suzanne Hall, and Henrietta Nyamnjoh.
+\newblock Remittance micro‐worlds and migrant infrastructure: {Circulations}, disruptions, and the movement of money.
+\newblock \emph{Transactions of the Institute of British Geographers}, 47\penalty0 (1):\penalty0 63--76, March 2022.
+\newblock ISSN 0020-2754, 1475-5661.
+\newblock \doi{10.1111/tran.12467}.
+\newblock URL \url{https://rgs-ibg.onlinelibrary.wiley.com/doi/10.1111/tran.12467}.
+
+\bibitem[{Congreso de Colombia}(2014)]{law1735}
+{Congreso de Colombia}.
+\newblock {Ley 1735 de 2014}, 2014.
+\newblock URL \url{https://normograma.dian.gov.co/dian/compilacion/docs/ley_1735_2014.htm}.
+
+\bibitem[Cuadros-Menaca et~al.(2020)Cuadros-Menaca, Aguirre, and Borja]{cuadros_verified_2020}
+Andres Cuadros-Menaca, Isabella Aguirre, and Isabella Borja.
+\newblock {International remittances and child welfare: A case study on Cali Colombia}.
+\newblock \emph{Desarrollo y Sociedad}, 86:\penalty0 73--103, 2020.
+\newblock \doi{10.13043/DYS.86.3}.
+
+\bibitem[{Departamento Administrativo Nacional de Estadística}(2025)]{daneentic2025}
+{Departamento Administrativo Nacional de Estadística}.
+\newblock {Encuesta Nacional de Calidad de Vida (ECV) 2024}.
+\newblock Boletín técnico, Cuadro de acceso a internet, 2025.
+\newblock URL \url{https://www.dane.gov.co/files/operaciones/ECV/bol-ECV-2024.pdf}.
+
+\bibitem[Draper et~al.(2024)Draper, Belli, Meira, Leite~Contri, Magalhães, and Cruz]{draper_verified_2024}
+Hannah Draper, Luca Belli, Marina Meira, Camila Leite~Contri, Larissa Magalhães, and Luã Cruz.
+\newblock {A consumer-centric approach to digital public infrastructure for sustainable financial inclusion}.
+\newblock T20 policy brief, 2024.
+\newblock URL \url{https://www.t20brasil.org/media/documentos/arquivos/TF05_ST_02_A_Consumer-centric66d5d363d0a6f.pdf}.
+
+\bibitem[Eaves and Rao(2025)]{eaves_rao_verified_2025}
+David Eaves and Krisstina Rao.
+\newblock {Digital public infrastructure: A framework for conceptualisation and measurement}.
+\newblock Technical Report 2025-01, UCL Institute for Innovation and Public Purpose, 2025.
+\newblock URL \url{https://discovery.ucl.ac.uk/id/eprint/10210968/}.
+
+\bibitem[Ibáñez et~al.(2025)Ibáñez, Moya, Ortega, Rozo, and Urbina]{ibanez2025}
+Ana~María Ibáñez, Andrés Moya, María~Adelaida Ortega, Sandra~V. Rozo, and Maria~José Urbina.
+\newblock {Life out of the shadows: The impacts of regularization programs on the lives of forced migrants}.
+\newblock \emph{Journal of the European Economic Association}, 23\penalty0 (3):\penalty0 941--982, 2025.
+\newblock \doi{10.1093/jeea/jvae044}.
+\newblock URL \url{https://doi.org/10.1093/jeea/jvae044}.
+
+\bibitem[{Institute for Innovation and Public Purpose, UCL}(2025)]{institute_for_innovation_and_public_purpose_ucl_dpi_2025}
+{Institute for Innovation and Public Purpose, UCL}.
+\newblock {DPI} {Map}, November 2025.
+\newblock URL \url{https://dpimap.org/data}.
+
+\bibitem[Kabeer(1999)]{kabeer1999}
+Naila Kabeer.
+\newblock {Resources, agency, achievements: Reflections on the measurement of women's empowerment}.
+\newblock \emph{Development and Change}, 30\penalty0 (3):\penalty0 435--464, 1999.
+\newblock \doi{10.1111/1467-7660.00125}.
+\newblock URL \url{https://doi.org/10.1111/1467-7660.00125}.
+
+\bibitem[Kusimba(2018)]{kusimba_it_2018}
+Sibel Kusimba.
+\newblock “{It} is easy for women to ask!”: {Gender} and digital finance in {Kenya}.
+\newblock \emph{Economic Anthropology}, 5\penalty0 (2):\penalty0 247--260, June 2018.
+\newblock ISSN 2330-4847, 2330-4847.
+\newblock \doi{10.1002/sea2.12121}.
+\newblock URL \url{https://anthrosource.onlinelibrary.wiley.com/doi/10.1002/sea2.12121}.
+
+\bibitem[Martin-Shields et~al.(2022)Martin-Shields, Camacho, Taborda, and Ruhe]{martinshields2022}
+Charles~P. Martin-Shields, Sonia Camacho, Rodrigo Taborda, and Constantin Ruhe.
+\newblock {Digitalization and e-government in the lives of urban migrants: Evidence from Bogotá}.
+\newblock \emph{Policy \& Internet}, 14\penalty0 (2):\penalty0 450--467, 2022.
+\newblock \doi{10.1002/poi3.280}.
+\newblock URL \url{https://doi.org/10.1002/poi3.280}.
+
+\bibitem[{Presidencia de la República de Colombia}(2021)]{decree216}
+{Presidencia de la República de Colombia}.
+\newblock {Decreto 216 de 2021}, 2021.
+\newblock URL \url{https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=159606}.
+
+\bibitem[{Presidencia de la República de Colombia}(2022)]{decree1297}
+{Presidencia de la República de Colombia}.
+\newblock {Decreto 1297 de 2022}, 2022.
+\newblock URL \url{https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=190426}.
+
+\bibitem[{Presidencia de la República de Colombia}(2026)]{decree0368}
+{Presidencia de la República de Colombia}.
+\newblock {Decreto 0368 de 2026}, 2026.
+\newblock URL \url{https://jurinfo.jep.gov.co/Normograma/compilacion/docs/decreto_0368_2026.htm}.
+
+\bibitem[Silverio‐Murillo and Balmori De La~Miyar(2022)]{silveriomurillo_remittances_2022}
+Adan Silverio‐Murillo and Jose~Roberto Balmori De La~Miyar.
+\newblock Remittances and domestic violence.
+\newblock \emph{Review of Development Economics}, 26\penalty0 (4):\penalty0 2274--2295, November 2022.
+\newblock ISSN 1363-6669, 1467-9361.
+\newblock \doi{10.1111/rode.12907}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1111/rode.12907}.
+
+\bibitem[Smyth(2022)]{smyth_challenging_2022}
+Araby Smyth.
+\newblock Challenging the financialization of remittances agenda through {Indigenous} women’s practices in {Oaxaca}.
+\newblock \emph{Environment and Planning A: Economy and Space}, 54\penalty0 (4):\penalty0 761--778, June 2022.
+\newblock ISSN 0308-518X, 1472-3409.
+\newblock \doi{10.1177/0308518X20977186}.
+\newblock URL \url{https://journals.sagepub.com/doi/10.1177/0308518X20977186}.
+
+\bibitem[{World Bank}(2025)]{findex2025}
+{World Bank}.
+\newblock {The Global Findex Database 2025: Connectivity and financial inclusion in the digital economy}, 2025.
+\newblock URL \url{https://www.worldbank.org/en/publication/globalfindex/report}.
+
+\bibitem[Zapata(2022)]{zapata_diaspora_2022}
+Gisela~P Zapata.
+\newblock Diaspora engagement policies and transnational financialisation in {Colombia}.
+\newblock \emph{Environment and Planning A: Economy and Space}, 54\penalty0 (4):\penalty0 722--743, June 2022.
+\newblock ISSN 0308-518X, 1472-3409.
+\newblock \doi{10.1177/0308518X211045396}.
+\newblock URL \url{https://journals.sagepub.com/doi/10.1177/0308518X211045396}.
+
+\end{thebibliography}
+
+% END Paper/bibliography/setup.tex
+\end{document}
