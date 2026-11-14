@@ -1,5 +1,15 @@
 # Current academic research revision workplan
 
+**Current checkpoint — 14 November 2026:** [WP07 mixed-evidence and
+exhibit review](wp07-mixed-benchmark-integration/README.md) adds an
+academic draft integrating the existing migrant and expert findings
+and the five-country benchmark, with legacy anchors and revised exhibit
+notes. Next on the manuscript track: one coauthor review of the
+integrated passages and assembly of the main paper and technical
+supplement without substituting numerical results. The custodian brief
+is still unsent; no contained route is verified. **Private build, E.5
+and C2 stay HOLD.** Prior checkpoints remain dated history.
+
 **Current checkpoint — 13 November 2026:** [WP07 source-only
 advance](wp07-source-advance/README.md) adds a held descriptive and
 optional AS1 emitter, an exhibit handoff, and draft academic sections.
