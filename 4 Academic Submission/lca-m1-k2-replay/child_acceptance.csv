@@ -1,0 +1,13 @@
+task,child_id,gate_requirement,gate
+M6.04.24 / M6.08.23,M6.04.24.01,REQUIRED,owner authority/preservation
+M6.04.24 / M6.08.23,M6.04.24.02,REQUIRED,source/row-order fidelity
+M6.04.24 / M6.08.23,M6.04.24.03,REQUIRED,legacy verifier actual RED
+M6.04.24 / M6.08.23,M6.04.24.04,REQUIRED,hardened verifier actual GREEN
+M6.04.24 / M6.08.23,M6.04.24.05,REQUIRED,exclusive one-fit reservation
+M6.04.24 / M6.08.23,M6.04.24.06,REQUIRED,actual fit/native capture
+M6.04.24 / M6.08.23,M6.04.24.07,REQUIRED,current STER hardened readback
+M6.04.24 / M6.08.23,M6.04.24.08,REQUIRED,historical STER hardened readbacks
+M6.04.24 / M6.08.23,M6.04.24.09,REQUIRED,279-cell raw native comparison
+M6.04.24 / M6.08.23,M6.04.24.10,REQUIRED,worker/default ownership
+M6.04.24 / M6.08.23,M6.04.24.11,REQUIRED,additive public state/compiler
+M6.04.24 / M6.08.23,M6.04.24.12,REQUIRED,sole review/final suite/exclusive seal/separate proof

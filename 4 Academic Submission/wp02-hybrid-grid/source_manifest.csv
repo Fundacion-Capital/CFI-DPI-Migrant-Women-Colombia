@@ -1,0 +1,14 @@
+model_id,classes,source_file,source_start,source_end,indicators,seed,random_draws,iterations,maximum_fits,retries,native_target_available
+H1_k5,5,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8280,8291,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2,6529005,600,8000,1,0,False
+H2_k2,2,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8311,8323,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 h_icpf3,6530002,300,5000,1,0,True
+H2_k3,3,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8331,8343,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 h_icpf3,6530003,400,6000,1,0,False
+H2_k4,4,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8351,8363,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 h_icpf3,6530004,600,8000,1,0,False
+H2_k5,5,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8371,8383,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_iedf2 h_icpf3,6530005,600,8000,1,0,False
+H3_k2,2,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8403,8414,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_icpf3,6531002,300,5000,1,0,True
+H3_k3,3,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8422,8433,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_icpf3,6531003,400,6000,1,0,False
+H3_k4,4,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8441,8452,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_icpf3,6531004,600,8000,1,0,True
+H3_k5,5,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8460,8471,h_ivs3 h_icdp3 h_iaff3 h_iuof3 h_oqi3 h_iurd3 h_icpf3,6531005,600,8000,1,0,False
+H4_k2,2,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8491,8501,h_ivs3 h_icdp3 h_iaff3 h_oqi3 h_iurd3 h_iedf2,6532002,300,5000,1,0,True
+H4_k3,3,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8509,8519,h_ivs3 h_icdp3 h_iaff3 h_oqi3 h_iurd3 h_iedf2,6532003,400,6000,1,0,False
+H4_k4,4,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8527,8537,h_ivs3 h_icdp3 h_iaff3 h_oqi3 h_iurd3 h_iedf2,6532004,600,8000,1,0,False
+H4_k5,5,1 Code/2 Analysis_CFI DPI Migrant Women Colombia.do,8545,8555,h_ivs3 h_icdp3 h_iaff3 h_oqi3 h_iurd3 h_iedf2,6532005,600,8000,1,0,False

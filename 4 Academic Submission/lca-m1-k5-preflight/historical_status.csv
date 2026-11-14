@@ -1,0 +1,2 @@
+family,model_id,feature_set,model_type,k,converged,report_candidate,bic,aic,entropy,avg_max_posterior,min_class_n,min_class_pct,small_class_flag,rc,start_method,note,n_indicators,N_complete,ll,df
+minimal,M1_k5,M1_7bin_main,7-binary main LCA,5,0,0,,,,,,,,0,randomid_draws500_iter7000,Model estimated but did not converge,7,423,,

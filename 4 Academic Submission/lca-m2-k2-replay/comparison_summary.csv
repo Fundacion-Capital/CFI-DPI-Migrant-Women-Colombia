@@ -1,0 +1,5 @@
+kind,cells,exact_matches,mismatches,stripe_mismatches,max_abs_difference
+"all",217,34,183,0,3.597559853937978
+"V",196,27,169,0,.2297577852467991
+"b",14,1,13,0,3.597559853937978
+"meta",7,6,1,0,3.18323145621e-12

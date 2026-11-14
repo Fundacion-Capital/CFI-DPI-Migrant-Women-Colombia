@@ -1,0 +1,156 @@
+{
+  "origin": "ARTIFICIAL_ONLY",
+  "live_cancellation_validated": false,
+  "scenarios": [
+    {
+      "scenario": "natural_exit",
+      "snapshot": {
+        "origin": "ARTIFICIAL_ONLY",
+        "binding": {
+          "origin": "ARTIFICIAL_ONLY",
+          "session_id": "ART_session",
+          "owner_nonce": "ART_nonce",
+          "worker_epoch": 1,
+          "command_id": "ART_command",
+          "pid": 101,
+          "creation_time": "ART_creation",
+          "engine_module_digest": "ART_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "reservation_id": "ART_reservation"
+        },
+        "state": "EXIT_CONFIRMED",
+        "reason": "ARTIFICIAL_EXIT_AND_CLEANUP_ONLY",
+        "consumed": true,
+        "stop_intents": 0,
+        "delivery_confirmed": false,
+        "execution_deadline": 110.0,
+        "cleanup_deadline": 113.0,
+        "fits": 0,
+        "participant_processing": 0,
+        "service_changes": 0,
+        "live_stop_calls": 0,
+        "process_kills": 0
+      },
+      "artificial_channel_deliveries": 0
+    },
+    {
+      "scenario": "cancelled_exit",
+      "snapshot": {
+        "origin": "ARTIFICIAL_ONLY",
+        "binding": {
+          "origin": "ARTIFICIAL_ONLY",
+          "session_id": "ART_session",
+          "owner_nonce": "ART_nonce",
+          "worker_epoch": 1,
+          "command_id": "ART_command",
+          "pid": 101,
+          "creation_time": "ART_creation",
+          "engine_module_digest": "ART_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "reservation_id": "ART_reservation"
+        },
+        "state": "EXIT_CONFIRMED",
+        "reason": "ARTIFICIAL_EXIT_AND_CLEANUP_ONLY",
+        "consumed": true,
+        "stop_intents": 1,
+        "delivery_confirmed": true,
+        "execution_deadline": 110.0,
+        "cleanup_deadline": 103.0,
+        "fits": 0,
+        "participant_processing": 0,
+        "service_changes": 0,
+        "live_stop_calls": 0,
+        "process_kills": 0
+      },
+      "artificial_channel_deliveries": 1
+    },
+    {
+      "scenario": "deadline_no_exit",
+      "snapshot": {
+        "origin": "ARTIFICIAL_ONLY",
+        "binding": {
+          "origin": "ARTIFICIAL_ONLY",
+          "session_id": "ART_session",
+          "owner_nonce": "ART_nonce",
+          "worker_epoch": 1,
+          "command_id": "ART_command",
+          "pid": 101,
+          "creation_time": "ART_creation",
+          "engine_module_digest": "ART_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "reservation_id": "ART_reservation"
+        },
+        "state": "UNKNOWN_QUARANTINED",
+        "reason": "CLEANUP_DEADLINE",
+        "consumed": true,
+        "stop_intents": 1,
+        "delivery_confirmed": true,
+        "execution_deadline": 110.0,
+        "cleanup_deadline": 113.0,
+        "fits": 0,
+        "participant_processing": 0,
+        "service_changes": 0,
+        "live_stop_calls": 0,
+        "process_kills": 0
+      },
+      "artificial_channel_deliveries": 1
+    },
+    {
+      "scenario": "replacement_before_delivery",
+      "snapshot": {
+        "origin": "ARTIFICIAL_ONLY",
+        "binding": {
+          "origin": "ARTIFICIAL_ONLY",
+          "session_id": "ART_session",
+          "owner_nonce": "ART_nonce",
+          "worker_epoch": 1,
+          "command_id": "ART_command",
+          "pid": 101,
+          "creation_time": "ART_creation",
+          "engine_module_digest": "ART_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "reservation_id": "ART_reservation"
+        },
+        "state": "UNKNOWN_QUARANTINED",
+        "reason": "OWNERSHIP_CHANGED",
+        "consumed": true,
+        "stop_intents": 1,
+        "delivery_confirmed": false,
+        "execution_deadline": 110.0,
+        "cleanup_deadline": 103.0,
+        "fits": 0,
+        "participant_processing": 0,
+        "service_changes": 0,
+        "live_stop_calls": 0,
+        "process_kills": 0
+      },
+      "artificial_channel_deliveries": 0
+    },
+    {
+      "scenario": "cancel_before_start",
+      "snapshot": {
+        "origin": "ARTIFICIAL_ONLY",
+        "binding": {
+          "origin": "ARTIFICIAL_ONLY",
+          "session_id": "ART_session",
+          "owner_nonce": "ART_nonce",
+          "worker_epoch": 1,
+          "command_id": "ART_command",
+          "pid": 101,
+          "creation_time": "ART_creation",
+          "engine_module_digest": "ART_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "reservation_id": "ART_reservation"
+        },
+        "state": "UNKNOWN_QUARANTINED",
+        "reason": "CANCELLED_BEFORE_START",
+        "consumed": true,
+        "stop_intents": 0,
+        "delivery_confirmed": false,
+        "execution_deadline": 110.0,
+        "cleanup_deadline": 113.0,
+        "fits": 0,
+        "participant_processing": 0,
+        "service_changes": 0,
+        "live_stop_calls": 0,
+        "process_kills": 0
+      },
+      "artificial_channel_deliveries": 0
+    }
+  ]
+}

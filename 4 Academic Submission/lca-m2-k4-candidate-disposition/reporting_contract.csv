@@ -1,0 +1,21 @@
+disposition,claim_id,statement
+RETAIN,historical_candidate,"Original M2_k4 six-binary-indicator candidate: N_complete423, rc0, converged1, df27, archival report_candidate1. Preserve as historical evidence, not newly accepted replicated inference."
+RETAIN,original_screen,"Original minimal-LCA screen: converged==1, k in4/5, min_class_pct>=5 and entropy>=0.60. It is a reporting screen, not a validity proof; small_class_flag or min_class_n>=20 are not separate conditions in this expression."
+RETAIN,missing_screen_caveat,Original threshold comparisons lack explicit nonmissing guards; Stata missing values compare above finite thresholds. Actual M2_k4 class-share and entropy entries are populated; do not use this caveat to misdescribe its archived flag.
+RETAIN,replay_status,Exactly one original-specification replay completed rc0/converged0/N423/rank23/28slots. Return code0 is not convergence. Fresh state fails the known convergence condition; no new reporting flag or posterior metrics computed.
+RETAIN,native_discrepancy,Original exact comparison remains819cells:60exact/759different/0stripe; coefficient/covariance maxima21.28987811140425/35569311.28242976. Preserve unchanged.
+RETAIN,diagnostic_alignment,"Closest of24permutations is1432; aligned probabilities are close, not exact. Reference-rebased coefficient/covariance differences4.6416257365679314/35605745.85268259 remain. Alignment is diagnostic only, not recoding or acceptance."
+RETAIN,pattern_distribution,"All64theoretical response patterns have maximum difference2.1331685917946874e-6 and total variation1.1130145273297241e-5; these are saved-model distributions, not new observed frequencies or assignments."
+RETAIN,rank_conditioning,Fresh covariance singular with ranks9/23/23/23; finite-point probability Jacobians rank27 on both states at declared thresholds. Logit/boundary scaling and local mapping rank do not certify global identification or nonconverged inference.
+RETAIN,stored_derivatives,Both stored gradients finite; stored Hessians UNAVAILABLE. A smaller gradient does not override convergence0; do not substitute an inverse covariance or zero Hessian.
+RETAIN,archival_posterior,"Historical entropy0.705792766515335, average maximum posterior0.8272867535316151, minimum class_n44/share10.40189125295508 and small_class_flag0 are archival only; fresh counterparts NOT_RECOMPUTED."
+RETAIN,failure_provenance,"Original transport timeout300s, premature strict comparison601 and38-file pre-recovery packet remain failures. Separate diagnostic recovery does not retroactively change their status."
+HOLD,exact_identity,Exact historical numerical replication and tolerance- or relabel-based acceptance remain held.
+HOLD,scientific_use,"Formal/global identification, substantive model acceptance, usable standard errors and accepted respondent-level profiling remain held for this candidate."
+EXCLUDE,fresh_reporting_flag,"Do not copy archival report_candidate1, entropy, class shares or assignments to the nonconverged fresh replay; its reporting flag and posterior metrics are NOT_RECOMPUTED."
+EXCLUDE,missing_as_zero,"Unavailable fresh metrics, missing original failed-candidate metrics and unstored Hessian are not zeros, passing flags or usable ranking values."
+EXCLUDE,cross_feature_ic,Do not rank BIC/AIC across differing indicator/outcome sets or treat archival eligibility as optimality.
+EXCLUDE,preferred_model_change,Original H1_k4 preference is unchanged and not revalidated by this task; this contract does not select a new preferred model.
+EXCLUDE,invalidity_claim,"Nonconvergence, covariance rank deficiency and near-boundary scaling are not alone proof of structural nonidentification or intrinsic model invalidity."
+EXCLUDE,new_authority,"No Stata call, fit, retry, prediction, participant-data load/export, production/manuscript change, deletion, Git mutation, cloud synchronization or release is authorized."
+RETAIN,next_failed_candidate,"Next original M2_k5 source has seed6430005/classes5/draws500/iterate7000; archived rc0/converged0/report_candidate0 and unavailable fit/posterior metrics. The frozen intake contains no original savedSTER/native target; source/runtime/reporting preflight only, fits_allowed0."

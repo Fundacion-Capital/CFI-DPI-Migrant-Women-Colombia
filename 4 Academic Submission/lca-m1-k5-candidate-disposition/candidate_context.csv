@@ -1,0 +1,3 @@
+evidence,model_id,classes,indicators,eligible_rows,return_code,converged,report_candidate,native_state,disposition
+historical_frozen_grid,M1_k5,5,7,423,0,0,0,absent_in_frozen_intake,RETAIN_NONCONVERGED
+bounded_historical_replay,M1_k5,5,7,423,0,0,NOT_RECOMPUTED,not_saved,STATUS_MATCH_ONLY

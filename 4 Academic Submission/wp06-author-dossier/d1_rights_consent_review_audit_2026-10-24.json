@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "record_id": "D1_rights_historical_consent_review_2026-10-24",
+  "prepared_date": "2026-10-24",
+  "date_timezone": "Europe/Berlin",
+  "status": "PREPARATION_AUDITED_ACCOUNT_PENDING_REVIEW",
+  "task_scope": "Historical quantitative-survey consent account and evidence-and-limitations checklist; no original replacement, institutional decision or gate adoption.",
+  "baseline_head": "e756abdd60af76c561c1b6bdb50d6e9b0632cd3c",
+  "branch": "main",
+  "deliverables": [
+    {
+      "path": "4 Academic Submission\\wp06-author-dossier\\D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+      "bytes": 16611,
+      "sha256": "0B61F9795B4F1864CE8EC949135F3CFFB712458202A4870309E10DC5E657496E"
+    },
+    {
+      "path": "4 Academic Submission\\wp06-author-dossier\\D1_RIGHTS_CONSENT_EVIDENCE_CHECKLIST_2026-10-24.md",
+      "bytes": 10710,
+      "sha256": "744F82AF303D5F89F7AF7FFA0AA3EC1C47EA71402C0480C2421FD9CD55A45E8C"
+    }
+  ],
+  "checks": {
+    "account_pending": true,
+    "checklist_pending": true,
+    "spoken_only": true,
+    "no_verbatim_invention": true,
+    "cfi_outside_email": true,
+    "no_retrospective_replacement": true,
+    "no_reconsent_determination": true,
+    "secondary_choice_preserved": true,
+    "no_committee_clearance": true,
+    "modes_preserved": true,
+    "scope_quantitative": true,
+    "joint_approval_required": true,
+    "cfi_presubmission": true,
+    "admin_identity_discrepancy": true,
+    "mailbox_provenance_qualified": true,
+    "no_participant_processing": true,
+    "no_checked_boxes": true,
+    "twentyfour_unique_items": true,
+    "all_ids_present": true,
+    "blank_review_fields": true,
+    "proposed_not_executed": true,
+    "no_direct_contact_details": true,
+    "four_source_hashes": true,
+    "local_links_resolve": true,
+    "no_external_urls": true,
+    "rights_unchanged_pending": true,
+    "one_existing_documentary_acceptance": true,
+    "no_recorded_execution_grants": true,
+    "no_tracked_changes": true
+  },
+  "content_checks_passed": 29,
+  "content_check_failures": [],
+  "format_checks": [
+    {
+      "path": "4 Academic Submission/wp06-author-dossier/D1_RIGHTS_HISTORICAL_CONSENT_ACCOUNT_2026-10-24.md",
+      "words": 2197,
+      "whitespace_and_fences": "PASS"
+    },
+    {
+      "path": "4 Academic Submission/wp06-author-dossier/D1_RIGHTS_CONSENT_EVIDENCE_CHECKLIST_2026-10-24.md",
+      "words": 1447,
+      "whitespace_and_fences": "PASS"
+    }
+  ],
+  "preservation": {
+    "method": "SHA-256 over UTF-8 concatenation of case-sensitive PowerShell-sorted records: absolute_full_path<TAB>length<TAB>uppercase_file_SHA256<LF>. Hidden files included; source contents hashed without respondent parsing. All groups are scoped to this host.",
+    "baseline_timing": "Successful baseline was obtained during preparation of the two new untracked Markdown files, before the final preservation recheck. No existing tracked file, prior audit-local file or source original was edited. New review files are not part of the tracked baseline.",
+    "before": [
+      {
+        "group": "git_tracked",
+        "count": 1222,
+        "bytes": 66310455,
+        "sha256": "5349285B5B5C8CBB1FCA669DC6EB58F9933710527001568117C7E41D3A63C654"
+      },
+      {
+        "group": "prior_audit_local",
+        "count": 23280,
+        "bytes": 2135746989,
+        "sha256": "4405A6712D6FFAE7F35BCD160C647F5E4863A7DB7E4CF2DB1ACB06C5E5FD0D1D"
+      },
+      {
+        "group": "original_irb_and_grants",
+        "count": 40,
+        "bytes": 13362960,
+        "sha256": "507F0B13E9D5BCA0042BCEB673AF5595B8D21C991F8F2805E8FC2EDA2D7068B0"
+      }
+    ],
+    "after": [
+      {
+        "group": "git_tracked",
+        "count": 1222,
+        "bytes": 66310455,
+        "sha256": "5349285B5B5C8CBB1FCA669DC6EB58F9933710527001568117C7E41D3A63C654"
+      },
+      {
+        "group": "prior_audit_local",
+        "count": 23280,
+        "bytes": 2135746989,
+        "sha256": "4405A6712D6FFAE7F35BCD160C647F5E4863A7DB7E4CF2DB1ACB06C5E5FD0D1D"
+      },
+      {
+        "group": "original_irb_and_grants",
+        "count": 40,
+        "bytes": 13362960,
+        "sha256": "507F0B13E9D5BCA0042BCEB673AF5595B8D21C991F8F2805E8FC2EDA2D7068B0"
+      }
+    ],
+    "all_groups_equal": true,
+    "scope_limit": "Tracked repository files, the complete existing audit-local tree, and both local restricted IRB directories plus grant copies were hashed. Other protected project folders, cloud access settings and other people's mailboxes were not comprehensively audited."
+  },
+  "preserved_read_only_failed_attempts": [
+    {
+      "attempt": "Initial preservation scan",
+      "error": "Get-Item could not find the hidden Dropbox IRB/UNacional/desktop.ini item without -Force.",
+      "effect": "Read-only scan did not finish; it made no file changes and supplied no accepted baseline.",
+      "correction": "Repeat with Get-Item -Force; all three fingerprint groups then completed and matched at recheck."
+    },
+    {
+      "attempt": "Initial Markdown formatting check",
+      "error": "PowerShell ParserError: An empty pipe element is not allowed.",
+      "effect": "Parse failed before execution; no file changes.",
+      "correction": "Collect foreach results in an array before ConvertTo-Json; corrected checks passed for both documents."
+    }
+  ],
+  "source_review": {
+    "retained_originals": "S01-S04 locators, sizes and SHA-256 values are in the account. Source DOCX body text and relevant grant pages were read in place; originals were not copied into Git.",
+    "prior_outlook": "Historical observations from this conversation only; no current mailbox search, email export or message integrity seal. No nonexistent CFI approval email is presumed.",
+    "author_testimony": "Direct statements by the user, not independently authenticated institutional/coauthor attestations.",
+    "manual_review": "Same-agent second-pass source-to-claim and authority-boundary review. No independent external institutional or coauthor review is claimed."
+  },
+  "original_decision_status": {
+    "D1_rights": {
+      "choice": "",
+      "approved": false,
+      "status": "PREPARED_BLANK_NO_RESPONSE",
+      "execution_authorized": false
+    },
+    "D1_population": "Existing accepted documentary account remains unchanged; its separate execution/institutional limitations remain in force.",
+    "response_forms_changed": false,
+    "decision_cards_changed": false,
+    "readiness_changed": false,
+    "workflow_state_changed": false
+  },
+  "approvals_and_actions": {
+    "new_account_accepted": false,
+    "institutional_approval_assumed": false,
+    "coauthor_approval_assumed": false,
+    "ethics_clearance_assumed": false,
+    "reconsent_necessity_determined": false,
+    "participant_records_loaded": false,
+    "participant_records_exported": false,
+    "participants_contacted": false,
+    "institutions_contacted": false,
+    "fitting_performed": false,
+    "stata_executed": false,
+    "analytical_code_changed": false,
+    "sample_changed": false,
+    "manuscript_changed": false,
+    "original_consent_template_changed": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "cloud_sync_initiated": false,
+    "journal_submission_performed": false,
+    "public_release_authorized": false
+  },
+  "proposed_commit": {
+    "title": "docs: prepare historical consent account and evidence checklist",
+    "description": [
+      "Add a dated D1_rights review account distinguishing retained documents, author confirmations and prior Outlook observations.",
+      "Record spoken-only public-download explanation and CFI publication support reported as agreement outside email.",
+      "Retain template/secondary-use discrepancies and unresolved ethics-review history without inventing clearance or retrospective consent.",
+      "Add 24 unmarked review checks, blank reviewer fields and technical preservation/audit evidence.",
+      "Leave originals, prior packets, all existing decision/status files, manuscript, data and analytical code unchanged.",
+      "No participant processing, fitting, contact, commit, push, synchronization, submission or public release."
+    ]
+  },
+  "completion_boundary": "Technical preparation and audit only. Documentary acceptance, institutional rights/ethics determination, participant-record coverage, disclosure review, final author/funder approvals and all execution/submission/release gates remain outstanding."
+}

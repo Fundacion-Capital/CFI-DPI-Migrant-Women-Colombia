@@ -1,0 +1,13 @@
+child,status,reason
+owner_adoption,PASS,Exact predecessor seal and committed public checkpoint adopted
+authority_and_source,PASS,One original fit authorized and exclusive reservation preserved
+original_projection,PASS,423 complete cases with original sample and input order
+historical_native_readback,PASS,Both607 carriers match historical STER after preserved helper correction
+single_original_fit,FAIL_R900,Current5000-variable capacity exhausted
+current_ster_readback,NOT_AVAILABLE,No current fitted STER exists
+native_target_comparison,NOT_PERFORMED,No current native capture exists
+owned_worker_cleanup,PASS,All three owned workers destroyed and default unchanged
+additive_public_integration,REQUIRED,Exact eight paths and unchanged identities validated at evidence closure
+same_source_compilation,REQUIRED,Existing main.tex must compile without preamble change
+independent_review_and_cumulative_tests,REQUIRED,Actual original review and tests must be accepted
+failed_attempt_seal_and_proof,REQUIRED,Seal only failure evidence with milestone_complete=false

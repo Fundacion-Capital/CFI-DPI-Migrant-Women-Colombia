@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-26",
+  "date_timezone": "Europe/Berlin",
+  "status": "PROPOSED_FOR_OWNER_REVIEW_NOT_EXECUTABLE",
+  "owner_adopted": false,
+  "coauthor_approval_assumed": false,
+  "participant_processing_authorized": false,
+  "fitting_authorized": false,
+  "institutional_approval_assumed": false,
+  "release_authorized": false,
+  "design": {
+    "type": "retrospective_cross_sectional_associative",
+    "unit": "surveyed woman, not certified unique household",
+    "population": "accepted nonprobability leader-enumerator contact/referral and household-remittance account; preserve historical exclusions and verification limits",
+    "foundation": "LEGACY-A: original 31 July 2026 full draft",
+    "confirmatory_preregistration_claim": false,
+    "national_design_based_inference": false,
+    "qualitative_changes": false
+  },
+  "measurement": {
+    "accepted_documentary_constructs": 15,
+    "candidate_summary_constructs": [
+      "IAT",
+      "IVS",
+      "IADT",
+      "ICDP",
+      "IAFF",
+      "IUOF",
+      "OQI"
+    ],
+    "separate_domain_constructs": [
+      "IURD",
+      "IETR",
+      "IPCS",
+      "IEDF",
+      "IAER",
+      "ICPF",
+      "IEH",
+      "IBPD"
+    ],
+    "historical_H1_inputs": [
+      "IVS",
+      "ICDP",
+      "IAFF",
+      "IUOF",
+      "OQI",
+      "IURD",
+      "IEDF"
+    ],
+    "historical_H1_alias_substitution_adopted": false
+  },
+  "proposed_hierarchy": {
+    "primary": [
+      "P1: q6_13 digital retention/use; original categories plus accepted binary",
+      "P2: q6_14 recent domestic digital participation"
+    ],
+    "supporting": [
+      "S1: selected transaction experiences",
+      "S2: problems and conditional redress",
+      "S3: perceived safety and agency-related reports"
+    ],
+    "remaining": "descriptive/contextual/measurement-validation evidence; no automatic regression per item",
+    "typology": "optional conditional contribution; no-LCA remains available",
+    "scope_register": "analysis_roles.csv"
+  },
+  "model_preparation": {
+    "proposed_family": "binary logit for the two proposed binary engagement outcomes, subject to owner adoption and support",
+    "proposed_reporting": "unadjusted original-category distributions and binary prevalence; adjusted probabilities/average marginal effects with pointwise 95% intervals if adopted; retain coefficient/native evidence",
+    "fit_slots_proposed": [
+      "P1 one adjusted specification",
+      "P2 one adjusted specification",
+      "P1 at most one nominated substantive extension",
+      "P2 at most one nominated substantive extension"
+    ],
+    "fit_slots_authorized": 0,
+    "scope_limit": "Four slots are a planning envelope only, not executable commands or an approved fit ceiling; sensitivity fits and margins need their own exact grants.",
+    "context_candidate_pool": [
+      {
+        "field": "q4",
+        "meaning": "age in years",
+        "recommended_form": "continuous; functional form owner-pending"
+      },
+      {
+        "field": "q2_2",
+        "meaning": "education",
+        "recommended_form": "source categories, not automatic cardinal points"
+      },
+      {
+        "field": "q2_3",
+        "meaning": "occupation",
+        "recommended_form": "nominal, no vulnerability ordering"
+      },
+      {
+        "field": "q2_1 plus approved interview year",
+        "meaning": "calendar gap since first arrival",
+        "recommended_form": "not latest-return tenure; source and functional form pending"
+      },
+      {
+        "field": "q3 plus formdef_version",
+        "meaning": "residence geography",
+        "recommended_form": "version-aware; no historical pooling automatically"
+      }
+    ],
+    "final_explanatory_contrasts": null,
+    "final_covariate_list": null,
+    "final_reference_levels": null,
+    "covariance_method": null,
+    "multiplicity_method": null,
+    "alpha_for_hypothesis_tests": null,
+    "rule": "No fit until exact contrasts, covariates, reference levels, sample, covariance and comparison families are owner-adopted. Do not select by observed significance, event counts or convenience; use coverage evidence to propose an explicit amendment when needed.",
+    "restrictions": [
+      "Do not simultaneously adjust IVS and its constituents without an explicit interpretation.",
+      "Do not call raw and standardized historical equations simple rescalings when their predictors differ.",
+      "No automatic RDS weights, inferred household links, city/enumerator clustering or universal complete-case sample.",
+      "Generic robust standard errors do not solve unrecorded network/recruitment dependence or create national inference.",
+      "No automatic imputation, interaction grid, stepwise selection or category pooling."
+    ]
+  },
+  "D6": {
+    "retrospective_status": true,
+    "full_authorized_result_ledger_required": true,
+    "report_failures_omissions_and_unavailable_targets": true,
+    "selection_by_significance_prohibited": true,
+    "negative_or_inconclusive_dispositions_allowed": true,
+    "admissibility": "source/route/domain conformity; fixed accepted recipe; finite declared comparisons; coverage and uncertainty limits; no unexpected sample change",
+    "historical_parity": "exact historical targets remain separate from candidate-definition differences and scientific closeness",
+    "precision": "exact category mappings and declared computational precision; no tolerance widening to conceal a mismatch",
+    "minimum_class_size_threshold": null,
+    "entropy_acceptance_threshold": null,
+    "scientific_probability_tolerances": null,
+    "minimum_cell_rule": null,
+    "rule_for_unresolved_support": "hold inferential comparison and report its limitation; no automatic collapse/exclusion or change to the original answers",
+    "public_display": "exact derivative/package disclosure review, no release implied"
+  },
+  "LCA": {
+    "measurement_family": null,
+    "academic_class_count": null,
+    "academic_execution_authorized": false,
+    "historical_preferred_model_scientific_hold_retained": true,
+    "prior_twelve_fit_wave": "existing conditional proposal: one justified family, k2-k5, three separately fixed schedules; not approved here and not proof that three schedules are sufficient",
+    "required_before_manifest": [
+      "adopt a coherent indicator family or decide no academic LCA",
+      "fix sample/outcome space, missingness and version rules",
+      "justify class counts, seed schedules, starts, iterations and finite time/capacity limits",
+      "fix comparison coordinates/tolerances, label-matching and failure dispositions",
+      "plan separately authorized probability uncertainty, local-dependence and sparse/boundary checks",
+      "validate exact runtime/version and downstream classification-error method feasibility"
+    ],
+    "forbidden_inferences": [
+      "same likelihood proves global optimum",
+      "local rank proves global identification",
+      "modal classes are observed truth",
+      "AIC/BIC from different observed outcome spaces or samples can be ranked directly",
+      "same-source profiles are external validation"
+    ],
+    "dispositions": [
+      "qualified retention",
+      "revised family under a new contract",
+      "descriptive-only profiles",
+      "no academic LCA",
+      "inconclusive"
+    ],
+    "downstream": "choose an appropriate uncertainty-aware approach only after software/method feasibility; no assumed BCH/three-step compatibility"
+  },
+  "owner_decision_bundles": [
+    "A: primary/supporting/descriptive hierarchy",
+    "B: nominated substantive contrasts and finite adjusted/extension slots",
+    "C: exact covariates, reference levels, geography/time definitions and uncertainty",
+    "D: finite comparisons, multiplicity/reporting and support rules",
+    "E: conditional LCA route and admissibility or no-LCA disposition",
+    "F: exact protected-use input/output/operational permission for the no-fit contract"
+  ],
+  "official_sources_checked": [
+    {
+      "url": "https://www.stata.com/manuals/rlogit.pdf",
+      "accessed": "2026-10-26",
+      "scope": "current binary logit documentation, not historical runtime validation"
+    },
+    {
+      "url": "https://www.stata.com/manuals/rmargins.pdf",
+      "accessed": "2026-10-26",
+      "scope": "current margins capabilities, not executed or validated for historical Stata16"
+    },
+    {
+      "url": "https://www.strobe-statement.org/checklists/",
+      "accessed": "2026-10-26",
+      "scope": "cross-sectional reporting aid, not claimed journal mandate or achieved compliance"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "scope": "CURRENT_REVIEW_INTEGRITY_ONLY_NOT_SETTINGS_ADOPTION_OR_ACTIVATION",
+  "project_files_checked": 27129,
+  "external_files_checked": 11734,
+  "differences": [],
+  "errors": [],
+  "prior_seals": [
+    {
+      "files": 270,
+      "differences": []
+    },
+    {
+      "files": 1900,
+      "differences": []
+    },
+    {
+      "files": 31,
+      "differences": []
+    },
+    {
+      "files": 78,
+      "differences": []
+    },
+    {
+      "files": 118,
+      "differences": []
+    }
+  ],
+  "own_review_tests": 7,
+  "inherited_tests": 82,
+  "normal_and_optimized": true,
+  "named_startup_paths_checked": 51,
+  "named_paths_absent_at_final_check": 51,
+  "provider_catalog_files": 11778,
+  "source_candidate_changed": false,
+  "historical_full_preservation_contract_passed": false,
+  "current_entry_is_observation_only": true,
+  "prior_config_exception_adopted": false,
+  "activation_ready": false,
+  "execution_authorized": false,
+  "protected_stata_execution_gate": "CLOSED",
+  "participant_processing": false,
+  "stata_calls": 0,
+  "native_workers_started": 0,
+  "settings_written": false,
+  "shared_service_changes": false,
+  "git_head": "91fd20a5b8414a2d46415bd6fc4fd2da9282dd01",
+  "git_commit": false,
+  "git_push": false,
+  "independent_postfix_review": false
+}

@@ -1,0 +1,18 @@
+claim,status,qualification
+native_replay,SUPPORTED,3199 fields per saved state freshly match their frozen native targets; no tolerance or relabeling
+historical_convergence,SUPPORTED,Stored convergence1; no new fitting or optimization
+stored_gradient,SUPPORTED,"Stored finite1x56 gradient only, not a freshly evaluated score or scaled convergence test"
+fresh_Hessian,UNAVAILABLE,Stored e(H) absent; do not invent a Hessian by inverting covariance
+covariance_scaling,SUPPORTED,Raw versus diagonal-correlation spectra and four declared relative thresholds
+near_boundary_probabilities,SUPPORTED,80 explicit item-category coordinates; stable tails and complements; no participant predictions
+local_probability_map,BOUNDED,1458 theoretical patterns and55 numerical tangent coordinates; threshold/parameterization-specific
+global_identification,NOT_ESTABLISHED,Exact replication and local rank do not prove global uniqueness or regular inference
+Wald_inference,HELD,Huge cutpoint variance and severe native-coordinate scaling require scientific adjudication
+class_weight,BOUNDED,Model-implied mixing weight is not modal participant-class size
+posterior_assignments,NOT_RECOMPUTED,No participant data or prediction commands
+modal_class_sizes,NOT_RECOMPUTED,Do not claim the historical5percent modal-size screen passed freshly
+entropy,NOT_RECOMPUTED,Do not claim the historical0.60entropy screen passed freshly
+observed_goodness_of_fit,NOT_TESTED,Model-implied pattern mass is not observed-data fit
+relabeling,NOT_PERFORMED,Original saved coordinates retained; no scratch permutation search or applied mapping
+release,WITHHELD,Scientific/privacy/ethics/owner gates unchanged
+downstream_execution,WITHHELD,"No profiles, posterior exports, benchmark clustering, regressions or AMEs executed"

@@ -1,0 +1,46 @@
+model_id,first_line,last_line,outcome,original_statement,expanded_statement,static_source_not_fit_proof
+iurd_A,1250,1250,iurd_score_01,"reg iurd_score_01 $demo_controls, vce(robust)","reg iurd_score_01 i.age_cat i.q3, vce(robust)",True
+iurd_B,1256,1256,iurd_score_01,"reg iurd_score_01 $demo_controls $block_B, vce(robust)","reg iurd_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+iurd_C,1262,1262,iurd_score_01,"reg iurd_score_01 $demo_controls $block_B $block_C, vce(robust)","reg iurd_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01, vce(robust)",True
+iurd_D,1268,1268,iurd_score_01,"reg iurd_score_01 $demo_controls $block_B $block_C $block_D, vce(robust)","reg iurd_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)",True
+iurd_D_z,1275,1275,z_iurd,"reg z_iurd $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)","reg z_iurd i.age_cat i.q3 c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)",True
+form_A,1300,1300,formal_remittance,"logit formal_remittance $demo_controls, vce(robust)","logit formal_remittance i.age_cat i.q3, vce(robust)",True
+form_B,1306,1306,formal_remittance,"logit formal_remittance $demo_controls $block_B, vce(robust)","logit formal_remittance i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+form_C,1312,1312,formal_remittance,"logit formal_remittance $demo_controls $block_B $block_C, vce(robust)","logit formal_remittance i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01, vce(robust)",True
+form_D,1318,1318,formal_remittance,"logit formal_remittance $demo_controls $block_B $block_C $block_D, vce(robust)","logit formal_remittance i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)",True
+form_ame,1325,1325,formal_remittance,"logit formal_remittance $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)","logit formal_remittance i.age_cat i.q3 c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)",True
+iuof_A,1351,1351,iuof_score_01,"reg iuof_score_01 $demo_controls, vce(robust)","reg iuof_score_01 i.age_cat i.q3, vce(robust)",True
+iuof_B,1357,1357,iuof_score_01,"reg iuof_score_01 $demo_controls $block_B, vce(robust)","reg iuof_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+iuof_C,1364,1364,iuof_score_01,"reg iuof_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01, vce(robust)","reg iuof_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01, vce(robust)",True
+iuof_D,1370,1370,iuof_score_01,"reg iuof_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01 $block_D, vce(robust)","reg iuof_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)",True
+iuof_D_z,1377,1377,z_iuof,"reg z_iuof $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)","reg z_iuof i.age_cat i.q3 c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)",True
+ietr_A,1404,1404,ietr_score_01,"reg ietr_score_01 $demo_controls, vce(robust)","reg ietr_score_01 i.age_cat i.q3, vce(robust)",True
+ietr_B,1410,1410,ietr_score_01,"reg ietr_score_01 $demo_controls $block_B, vce(robust)","reg ietr_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+ietr_C,1416,1416,ietr_score_01,"reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01, vce(robust)","reg ietr_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01, vce(robust)",True
+ietr_D,1422,1422,ietr_score_01,"reg ietr_score_01 $demo_controls $block_B c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)","reg ietr_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.oqi_score_01 c.IEDF c.IEH, vce(robust)",True
+ietr_D_z,1429,1429,z_ietr,"reg z_ietr $demo_controls c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)","reg z_ietr i.age_cat i.q3 c.z_ivs c.z_iat c.z_icdp c.z_iaff c.z_oqi c.z_iedf c.z_ieh, vce(robust)",True
+oqi_A,1452,1452,oqi_score_01,"reg oqi_score_01 $demo_controls, vce(robust)","reg oqi_score_01 i.age_cat i.q3, vce(robust)",True
+oqi_B,1458,1458,oqi_score_01,"reg oqi_score_01 $demo_controls $block_B, vce(robust)","reg oqi_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+oqi_C,1464,1464,oqi_score_01,"reg oqi_score_01 $demo_controls $block_B c.iaff_score, vce(robust)","reg oqi_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score, vce(robust)",True
+oqi_D,1470,1470,oqi_score_01,"reg oqi_score_01 $demo_controls $block_B c.iaff_score c.IEH, vce(robust)","reg oqi_score_01 i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.iaff_score c.IEH, vce(robust)",True
+oqi_D_z,1477,1477,z_oqi,"reg z_oqi $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_iaff c.z_ieh, vce(robust)","reg z_oqi i.age_cat i.q3 c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_iaff c.z_ieh, vce(robust)",True
+ipcs_A,1504,1504,IPCS,"reg IPCS $demo_controls, vce(robust)","reg IPCS i.age_cat i.q3, vce(robust)",True
+ipcs_B,1510,1510,IPCS,"reg IPCS $demo_controls $block_B, vce(robust)","reg IPCS i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+ipcs_C,1516,1516,IPCS,"reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)","reg IPCS i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)",True
+ipcs_D,1522,1522,IPCS,"reg IPCS $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)","reg IPCS i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)",True
+ipcs_D_z,1529,1529,z_ipcs,"reg z_ipcs $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)","reg z_ipcs i.age_cat i.q3 c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)",True
+iedf_A,1552,1552,IEDF,"reg IEDF $demo_controls, vce(robust)","reg IEDF i.age_cat i.q3, vce(robust)",True
+iedf_B,1558,1558,IEDF,"reg IEDF $demo_controls $block_B, vce(robust)","reg IEDF i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score, vce(robust)",True
+iedf_C,1564,1564,IEDF,"reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)","reg IEDF i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01, vce(robust)",True
+iedf_D,1570,1570,IEDF,"reg IEDF $demo_controls c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)","reg IEDF i.age_cat i.q3 c.ivs_score c.iat_score c.iadt_score c.icdp_score c.oqi_score_01 c.IEH, vce(robust)",True
+iedf_D_z,1577,1577,z_iedf,"reg z_iedf $demo_controls c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)","reg z_iedf i.age_cat i.q3 c.z_ivs c.z_iat c.z_iadt c.z_icdp c.z_oqi c.z_ieh, vce(robust)",True
+iaer_A,1604,1604,IAER,"reg IAER $demo_controls, vce(robust)","reg IAER i.age_cat i.q3, vce(robust)",True
+iaer_B,1610,1610,IAER,"reg IAER $demo_controls c.ivs_score c.iurd_score_01, vce(robust)","reg IAER i.age_cat i.q3 c.ivs_score c.iurd_score_01, vce(robust)",True
+iaer_C,1616,1616,IAER,"reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF, vce(robust)","reg IAER i.age_cat i.q3 c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF, vce(robust)",True
+iaer_D,1622,1622,IAER,"reg IAER $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)","reg IAER i.age_cat i.q3 c.ivs_score c.iurd_score_01 c.iaff_score c.ICPF c.IEDF c.IEH, vce(robust)",True
+iaer_D_z,1629,1629,z_iaer,"reg z_iaer $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_icpf c.z_iedf c.z_ieh, vce(robust)","reg z_iaer i.age_cat i.q3 c.z_ivs c.z_iurd c.z_iaff c.z_icpf c.z_iedf c.z_ieh, vce(robust)",True
+icpf_A,1652,1652,ICPF,"reg ICPF $demo_controls, vce(robust)","reg ICPF i.age_cat i.q3, vce(robust)",True
+icpf_B,1658,1658,ICPF,"reg ICPF $demo_controls c.ivs_score c.iurd_score_01, vce(robust)","reg ICPF i.age_cat i.q3 c.ivs_score c.iurd_score_01, vce(robust)",True
+icpf_C,1664,1664,ICPF,"reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score, vce(robust)","reg ICPF i.age_cat i.q3 c.ivs_score c.iurd_score_01 c.iaff_score, vce(robust)",True
+icpf_D,1670,1670,ICPF,"reg ICPF $demo_controls c.ivs_score c.iurd_score_01 c.iaff_score c.IEDF c.IEH, vce(robust)","reg ICPF i.age_cat i.q3 c.ivs_score c.iurd_score_01 c.iaff_score c.IEDF c.IEH, vce(robust)",True
+icpf_D_z,1677,1677,z_icpf,"reg z_icpf $demo_controls c.z_ivs c.z_iurd c.z_iaff c.z_iedf c.z_ieh, vce(robust)","reg z_icpf i.age_cat i.q3 c.z_ivs c.z_iurd c.z_iaff c.z_iedf c.z_ieh, vce(robust)",True

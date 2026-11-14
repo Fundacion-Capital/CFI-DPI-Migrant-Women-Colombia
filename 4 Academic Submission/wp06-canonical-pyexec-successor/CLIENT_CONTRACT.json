@@ -1,0 +1,90 @@
+{
+  "schema": "WP06_EXACT_EMPTY_CLIENT_CANONICAL_PYEXEC_V6",
+  "enabled": false,
+  "assigned_run": null,
+  "preparation": "A separately approved binding/grant and unchanged complete inventory must pass before exclusive run-root/profile preparation. Existing roots and all failed attempts are retained, never reused or deleted.",
+  "entry": "empty_client.py with the exact prepared active_binding.json path",
+  "transport": "isolated SDK stdio only; fixed command, source, cwd and explicit overrides; no shared URL or global registration",
+  "sdk_environment": "Explicit pinned site-packages/win32/win32-lib paths and scoped pywin32_system32 DLL search; no .pth execution. SDK default safe variables may also be inherited by the parent; target roles receive the explicit six-field environment.",
+  "steps": [
+    {
+      "step": 1,
+      "operation": "MCP initialize",
+      "stata_execution": false
+    },
+    {
+      "step": 2,
+      "tool": "stata_session",
+      "action": "list",
+      "require": "exact assigned session; opened=false; closed=false"
+    },
+    {
+      "step": 3,
+      "tool": "stata_run_selection",
+      "selection_source": "deployment.literal_selections[0]",
+      "timeout": 10,
+      "require": "WP06_EMPTY_BEGIN and zero active-frame observations/variables"
+    },
+    {
+      "step": 4,
+      "tool": "stata_run_selection",
+      "selection_source": "deployment.literal_selections[1]",
+      "timeout": 10,
+      "require": "WP06_EMPTY_END and zero active-frame observations/variables"
+    },
+    {
+      "step": 5,
+      "tool": "stata_session",
+      "action": "list",
+      "require": "same session; opened=true; closed=true"
+    }
+  ],
+  "selection_calls": 2,
+  "selection_timeout_seconds": 10,
+  "transport_timeout_includes_bootstrap": true,
+  "overall_async_client_budget_seconds": 120,
+  "async_timeout_is_independent_native_containment": false,
+  "native_target_controls": "Preserved owned worker/watchdog/job controls and 60/80/90/95/100/110/120-second contract; not measured here.",
+  "retries": 0,
+  "replacement_workers": 0,
+  "failure_policy": "Stop on authority, startup, protocol, marker, nonzero-dimension or closure error. Preserve reservation, logs and failure receipt. No second selection after a first-call error and no automatic retry.",
+  "current_execution_authorized": false,
+  "independent_native_acceptance": false,
+  "participant_or_scientific_authority": false,
+  "native_role_launch": "Bound base python.exe for worker/watchdog only; SDK stdio client keeps the venv executable.",
+  "saved_exit_reader": "termination_evidence.read_exit_witness(run_root, expected_scope, required_roles); strict new-version receipts, no legacy fallback or native acceptance claim.",
+  "cache_policy": {
+    "schema": "WP06_PRIVATE_CACHE_PREFIX_V1",
+    "directory": "pycache",
+    "cache_tag": "cpython-311",
+    "source_backed_only": true
+  },
+  "client_command": [
+    "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8",
+    "-X",
+    "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\UNASSIGNED\\pycache",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\empty_client.py",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\UNASSIGNED\\active_binding.json"
+  ],
+  "adapter_command": [
+    "C:\\Users\\jzava\\.cursor\\extensions\\deepecon.stata-mcp-0.5.3-universal\\.venv\\Scripts\\python.exe",
+    "-I",
+    "-S",
+    "-B",
+    "-X",
+    "utf8",
+    "-X",
+    "pycache_prefix=C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\UNASSIGNED\\pycache",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\wp06-canonical-pyexec-successor\\mcp_adapter.py",
+    "C:\\Users\\jzava\\Documents\\GitHub\\CFI-DPI-Migrant-Women-Colombia\\4 Academic Submission\\audit-local\\intake\\wp06-canonical-pyexec-successor-1543966-20261103\\UNASSIGNED\\active_binding.json"
+  ],
+  "cache_evidence": "Actual five-field client, adapter, worker and watchdog proofs; exact reservation and empty terminal prefix. No saved MAC authentication claim.",
+  "saved_cache_reader": "termination_evidence.read_cache_witnesses(run_root,expected_scope,binding); strict new source only; no native or independent authentication acceptance.",
+  "python_bootstrap": "Worker-local exact Python DLL directory; positive SFI/plugin and six loaded identity components required before readiness. Artificial-only; no new authority or native acceptance.",
+  "bootstrap_return": "WP06_BOOTSTRAP_RETURN_V2: original, resolved and forwarded executable; not positive SFI proof."
+}
