@@ -13,7 +13,7 @@ For model $m$, let $S_m$ denote its estimation sample, and let $\widehat p_{im}(
 \]
 Differences are in percentage points. We compare 0.50 with 0.75 for IAT3 and IADT2, and 0.50 with 1.00 for IAFF2. The IAFF2 comparison pools the two ways of meeting exactly one condition at the lower endpoint. The different score increments do not rank the measures. The technical supplement checks whether both exact endpoints occur within each education-by-recorded-residence stratum and whether either falls outside its observed range. This screen neither verifies overlap on all covariates nor changes the sample over which we average predictions.
 
-The supplement's 95\% intervals are pointwise delta-method intervals using the model's independent-record sandwich covariance. They do not account for unrecorded referral or household dependence. We apply Holm's adjustment to one fixed family of six one-degree-of-freedom Wald tests: one coefficient-null test per focal measure in each core model \citep{holm1979}. The adjustment does not apply to the probability-contrast intervals. Current use may help respondents acquire the abilities they report. Neither covariate adjustment nor the common-sample comparison removes unmeasured confounding or selection into recruitment.
+The 95\% intervals are pointwise delta-method intervals using the model's independent-record sandwich covariance. They do not account for unrecorded referral or household dependence. We apply Holm's adjustment to one fixed family of six one-degree-of-freedom Wald tests: one coefficient-null test per focal measure in each core model \citep{holm1979}. The adjustment does not apply to the probability-contrast intervals. Current use may help respondents acquire the abilities they report. Neither covariate adjustment nor the common-sample comparison removes unmeasured confounding or selection into recruitment.
 
 \subsection{Role of exploratory profiling}
 Latent-class analysis asks a different question from the two outcome models: whether a small set of model components can summarize recurring patterns of answers across several items. The legacy search and its archived preferred-final model are documented in the technical supplement. Indicator recoding, local dependence, near-boundary estimates and class-assignment uncertainty remain scientific issues even where an archived numerical fit can be reproduced. This draft does not adopt a final class count, publish new assignments, or use fitted classes to validate the qualitative typology. The item-level descriptions and outcome models do not depend on a decision to retain the historical classes.
@@ -22,8 +22,28 @@ Latent-class analysis asks a different question from the two outcome models: whe
 \label{sec:survey-results}
 Of the 423 respondents with valid answers on remittance disposition, 169 (40.0\%) reported retaining or using some proceeds digitally. Of the 413 respondents with valid answers on domestic participation, 368 (89.1\%) reported sending or receiving money digitally within Colombia in the previous 60 days. These are shares of respondents on different bases, not shares of money or successive stages of a transfer.
 
-\exhibitplaceholder{T2/F1}{Reported disposition and domestic digital participation}{Each panel uses its own valid-response base. Neither panel is a share of money or a stage in a transaction funnel.}
+Figure~\ref{fig:onboarding-conditions} shows how often respondents reported the two own-name onboarding conditions. Among the 404 respondents with both answers observed, 100 (24.8\%) reported both conditions and 141 (34.9\%) reported neither. The two answers describe reported conditions, not a provider's eligibility decision.
 
-The two core models point to different associations. For remittances, the clearest association is with reporting both own-name onboarding conditions rather than one. For domestic participation, it is with reported transfer ability and confidence in avoiding online fraud. The corresponding coefficients are the only two of the six tested whose Holm-adjusted p-values fall below 0.05. Both comparisons have limited exact endpoint support in the education-by-residence screen. The technical supplement's \emph{Determinants results} section reports all 15 contrasts, intervals and support flags. These associations describe the recruited sample; they do not show which condition matters more or what an intervention would change.
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.94\linewidth]{"\CFIDescriptivesDir F2_onboarding_conditions_artwork.pdf"}
+\begin{minipage}{0.94\linewidth}
+\input{"\CFIDescriptivesDir F2_onboarding_conditions_caption.tex"}
+\end{minipage}
+\end{figure}
+
+The two core models point to different associations (Figure~\ref{fig:determinants-core}). For remittances, the clearest association is with reporting both own-name onboarding conditions rather than one. For domestic participation, it is with reported transfer ability and confidence in avoiding online fraud. The corresponding coefficients are the only two of the six tested whose Holm-adjusted p-values fall below 0.05. Both comparisons have limited exact endpoint support in the education-by-residence screen. The technical supplement's \emph{Determinants results} section reports all 15 contrasts, intervals and support flags. These associations describe the recruited sample; they do not show which condition matters more or what an intervention would change.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.98\linewidth]{"\CFIDeterminantsDir det_contrasts_core.pdf"}
+\caption{Adjusted associations with two digital-payment outcomes}
+\label{fig:determinants-core}
+\begin{minipage}{0.94\linewidth}
+\smallskip\footnotesize\raggedright
+Notes: R0 models digital retention or use of remittance proceeds ($N=402$); D0 models domestic digital participation ($N=394$). Points are average higher-minus-lower predicted probability differences, with pointwise 95\% intervals. IAT3 denotes reported phone, internet and data access; IADT2, reported transfer ability and fraud-avoidance confidence; IAFF2, reported own-name phone registration and proof of address. The contrasts compare 0.50 to 0.75 for IAT3 and IADT2, and one condition to both for IAFF2. Open markers indicate that at least one education-by-residence stratum lacks an exact endpoint. A filled marker does not establish overlap on all covariates. The intervals do not account for unrecorded household or referral dependence.\par
+Source: Authors' calculations from the CFI-DPI survey in Colombia.
+\end{minipage}
+\end{figure}
 
 \paragraph{Historical profiles.} The largest component in the archived four-class model carried 51.37\% of the fitted model weight. It combined comparatively substantial digital use with reported adverse experiences. The historical classification assigned 215 of 423 records to that component, a different quantity from its mixing weight. Neither number estimates prevalence among migrant women in Colombia. We do not adopt the archived classification: use and adverse experiences helped define the classes, and some historical regressors also reused class inputs. The technical supplement documents that overlap and the unresolved numerical and measurement checks.
