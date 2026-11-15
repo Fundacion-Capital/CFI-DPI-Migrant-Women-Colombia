@@ -15,14 +15,14 @@ Differences are in percentage points. We compare 0.50 with 0.75 for IAT3 and IAD
 
 The 95\% intervals are pointwise delta-method intervals using the model's independent-record sandwich covariance. They do not account for unrecorded referral or household dependence. We apply Holm's adjustment to one fixed family of six one-degree-of-freedom Wald tests: one coefficient-null test per focal measure in each core model \citep{holm1979}. The adjustment does not apply to the probability-contrast intervals. Current use may help respondents acquire the abilities they report. Neither covariate adjustment nor the common-sample comparison removes unmeasured confounding or selection into recruitment.
 
-\subsection{Role of exploratory profiling}
-Latent-class analysis asks a different question from the two outcome models: whether a small set of model components can summarize recurring patterns of answers across several items. The legacy search and its archived preferred-final model are documented in the technical supplement. Indicator recoding, local dependence, near-boundary estimates and class-assignment uncertainty remain scientific issues even where an archived numerical fit can be reproduced. This draft does not adopt a final class count, publish new assignments, or use fitted classes to validate the qualitative typology. The item-level descriptions and outcome models do not depend on a decision to retain the historical classes.
+\subsection{Observed profiles}
+We describe combinations of two reported onboarding conditions: proof of address in one's own name and a phone line in one's own name. The profiles are the four combinations of observed answers, not fitted groups. We count a respondent only when both answers are available and scorable. The technical supplement's \emph{Historical latent-class analysis} section documents the earlier model and why we do not use its classes here.
 
 \subsection{Survey results}
 \label{sec:survey-results}
 Of the 423 respondents with valid answers on remittance disposition, 169 (40.0\%) reported retaining or using some proceeds digitally. Of the 413 respondents with valid answers on domestic participation, 368 (89.1\%) reported sending or receiving money digitally within Colombia in the previous 60 days. These are shares of respondents on different bases, not shares of money or successive stages of a transfer.
 
-Figure~\ref{fig:onboarding-conditions} shows how often respondents reported the two own-name onboarding conditions. Among the 404 respondents with both answers observed, 100 (24.8\%) reported both conditions and 141 (34.9\%) reported neither. The two answers describe reported conditions, not a provider's eligibility decision.
+\paragraph{Observed onboarding profiles.} Among the 404 respondents with scorable answers to both questions, 141 (34.9\%) reported neither condition, 128 (31.7\%) reported an own-name phone line only, 35 (8.7\%) reported own-name proof of address only, and 100 (24.8\%) reported both (Figure~\ref{fig:onboarding-conditions}). The other 19 respondents were unscored and are not counted as having neither condition. The two one-condition groups differ in which condition they report; the regression contrast combines them at the lower endpoint. These profiles do not tell us whether a provider accepted a document or whether a respondent controlled an account.
 
 \begin{figure}[tbp]
 \centering
@@ -45,5 +45,3 @@ Notes: R0 models digital retention or use of remittance proceeds ($N=402$); D0 m
 Source: Authors' calculations from the CFI-DPI survey in Colombia.
 \end{minipage}
 \end{figure}
-
-\paragraph{Historical profiles.} The largest component in the archived four-class model carried 51.37\% of the fitted model weight. It combined comparatively substantial digital use with reported adverse experiences. The historical classification assigned 215 of 423 records to that component, a different quantity from its mixing weight. Neither number estimates prevalence among migrant women in Colombia. We do not adopt the archived classification: use and adverse experiences helped define the classes, and some historical regressors also reused class inputs. The technical supplement documents that overlap and the unresolved numerical and measurement checks.
