@@ -1,3873 +1,728 @@
 /*
-CFI DPI — academic quantitative analysis
-Authors: Jorge E. Zavala and Angélica Cardozo Cadavid
-Integrated source: 7 November 2026; form labels and held E.4 models: 8 November 2026. Stata 16 syntax.
+Digital Payments, Partial Inclusion | Academic quantitative analysis
+Jorge E. Zavala and Angélica Cardozo Cadavid
+1. Descriptive analysis
+2. Determinants (held)
 */
-* Source-review candidate only. No execution is authorized by this code revision.
-exit 198
+args stage out code
 
+* Call descriptives only with the prepared dataset already in memory.
+* The existing master route and all other invocations remain held.
+if "`stage'" != "descriptives" | "`out'" == "" | "`code'" == "" {
+    exit 198
+}
+
+* BEGIN DESCRIPTIVES
 version 16
 set varabbrev off
-
-* The same full prepared stage stays in memory. Do not load a numeric-only view.
-* Every displayed count and percentage, including small cells, stays restricted.
-count
-local admitted_n = r(N)
-display as text "Admitted cohort N (not a universal item denominator): " `admitted_n'
-count if consent == 0 | consent == 98
-display as text "Historical consent-filter disagreement; no new exclusion: " r(N)
-count if q1 == 2
-display as text "Historical gender-filter disagreement; no new exclusion: " r(N)
-count if q5 == 0 | q5 == 98
-display as text "Historical remittance-filter disagreement; no new exclusion: " r(N)
-count if wp07_known_form != 1
-display as text "Unknown/missing submitted form, retained for review: " r(N)
-
-* ITEM AND DOMAIN REPORTS
-* Scalar percentages use recorded applicable answers, including explicit sentinels.
-* Multiple-response option shares use ordinary-valid parents in the actual form.
-* An unoffered option has no invented zero or denominator. Empty bases are undefined.
-* See the version-specific CODEBOOK.csv; raw legacy value labels are not authoritative.
-
-* ============================================================================
-* DOMAIN IAT
-
-* ITEM q3_1 | ¿Usted tiene personalmente un teléfono móvil que usa con regularidad?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_1 == `state'
-    display as text "q3_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3"
-    quietly count if formdef_version == `fv' & wp07_route_q3_1 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_1 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_1 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_1, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_1, 1, 5) & q3_1 == `option'
-        local category_n = r(N)
-        display as text "q3_1 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_5 | ¿Con qué frecuencia usa Internet en cualquier dispositivo?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_5 == `state'
-    display as text "q3_5 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q3_5 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_5 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_5 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_5, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_5, 1, 5) & q3_5 == `option'
-        local category_n = r(N)
-        display as text "q3_5 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_6 | ¿Dónde accede principalmente a Internet?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_6 == `state'
-    display as text "q3_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6"
-    quietly count if formdef_version == `fv' & wp07_route_q3_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_6, 1, 5) & q3_6 == `option'
-        local category_n = r(N)
-        display as text "q3_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_7 | Actualmente, ¿cuenta con un plan de datos móviles activo en su teléfono principal?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_7 == `state'
-    display as text "q3_7 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q3_7 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_7 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_7 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_7, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_7, 1, 5) & q3_7 == `option'
-        local category_n = r(N)
-        display as text "q3_7 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_8 | En el último mes, ¿se quedó sin datos o saldo y eso le impidió usar servicios financieros o comunicarse?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_8 == `state'
-    display as text "q3_8 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q3_8 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_8 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_8 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_8, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_8, 1, 5) & q3_8 == `option'
-        local category_n = r(N)
-        display as text "q3_8 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_12 | ¿Puede leer mensajes cortos en su teléfono sin ayuda de otra persona?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_12 == `state'
-    display as text "q3_12 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3"
-    quietly count if formdef_version == `fv' & wp07_route_q3_12 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_12 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_12 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_12, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_12, 1, 5) & q3_12 == `option'
-        local category_n = r(N)
-        display as text "q3_12 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IVS
-
-* ITEM q2_1 | ¿En qué año llegó a vivir a Colombia por primera vez?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q2_1 == `state'
-    display as text "q2_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Numeric context only. Its own ordinary-valid N is not a common model sample.
-quietly count if wp07_state_q2_1 == 1
-if r(N) > 0 {
-    tabstat q2_1 if wp07_state_q2_1 == 1, statistics(n mean sd min p25 p50 p75 max) columns(statistics)
-}
-
-* ITEM q2_2 | ¿Cuál es el último nivel de estudios que completó?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q2_2 == `state'
-    display as text "q2_2 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 8 9 10"
-    quietly count if formdef_version == `fv' & wp07_route_q2_2 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q2_2 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q2_2 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q2_2, 1, 5)
-    local recorded_n = r(N)
-    display as text "q2_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q2_2, 1, 5) & q2_2 == `option'
-        local category_n = r(N)
-        display as text "q2_2 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q2_3 | Actualmente, ¿cuál es su ocupación principal?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q2_3 == `state'
-    display as text "q2_3 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 8 9"
-    quietly count if formdef_version == `fv' & wp07_route_q2_3 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q2_3 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q2_3 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q2_3, 1, 5)
-    local recorded_n = r(N)
-    display as text "q2_3 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q2_3, 1, 5) & q2_3 == `option'
-        local category_n = r(N)
-        display as text "q2_3 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4 | ¿Cuál es su edad en años cumplidos?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4 == `state'
-    display as text "q4 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Numeric context only. Its own ordinary-valid N is not a common model sample.
-quietly count if wp07_state_q4 == 1
-if r(N) > 0 {
-    tabstat q4 if wp07_state_q4 == 1, statistics(n mean sd min p25 p50 p75 max) columns(statistics)
-}
-
-* ITEM q3 | Residence geography; accepted D2 version-aware meanings
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3 == `state'
-    display as text "q3 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    if `fv' == 2512090157 {
-        local options "1 2 3 4"
-    }
-    if `fv' == 2512091719 {
-        local options "1 2 3 4"
-    }
-    if `fv' == 2512111044 {
-        local options "1 2 3 4"
-    }
-    if `fv' == 2512121811 {
-        local options "1 2 3 4"
-    }
-    quietly count if formdef_version == `fv' & wp07_route_q3 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3, 1, 5) & q3 == `option'
-        local category_n = r(N)
-        display as text "q3 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IADT
-
-* ITEM q3_15 | Sé descargar e instalar una aplicación en mi teléfono.
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_15 == `state'
-    display as text "q3_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q3_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_15, 1, 5) & q3_15 == `option'
-        local category_n = r(N)
-        display as text "q3_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_16 | Sé usar mi teléfono para enviar o recibir dinero (transferencias, billetera digital, pago móvil).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_16 == `state'
-    display as text "q3_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q3_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_16, 1, 5) & q3_16 == `option'
-        local category_n = r(N)
-        display as text "q3_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_17 | Me siento segura evitando fraudes y mensajes sospechosos en línea (PIN, códigos OTP, enlaces).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_17 == `state'
-    display as text "q3_17 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q3_17 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_17 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_17 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_17, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_17, 1, 5) & q3_17 == `option'
-        local category_n = r(N)
-        display as text "q3_17 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN ICDP
-
-* ITEM q3_20 | En los últimos 3 meses, ¿escaneó un código QR para pagar o para que le paguen?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_20 == `state'
-    display as text "q3_20 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q3_20 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_20 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_20 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_20, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_20, 1, 5) & q3_20 == `option'
-        local category_n = r(N)
-        display as text "q3_20 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_21 | Si recibe un SMS con un código de verificación (OTP), ¿puede leerlo y usarlo sin ayuda?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_21 == `state'
-    display as text "q3_21 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q3_21 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_21 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_21 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_21, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_21, 1, 5) & q3_21 == `option'
-        local category_n = r(N)
-        display as text "q3_21 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_22 | ¿Sabe crear o cambiar el PIN de su aplicación bancaria o billetera digital?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_22 == `state'
-    display as text "q3_22 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3"
-    quietly count if formdef_version == `fv' & wp07_route_q3_22 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_22 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_22 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_22, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_22, 1, 5) & q3_22 == `option'
-        local category_n = r(N)
-        display as text "q3_22 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q3_23 | Si recibe por WhatsApp o SMS un mensaje sospechoso que solicita dinero, claves o códigos, ¿qué haría primero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q3_23 == `state'
-    display as text "q3_23 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q3_23 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_23 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q3_23 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q3_23, 1, 5)
-    local recorded_n = r(N)
-    display as text "q3_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q3_23, 1, 5) & q3_23 == `option'
-        local category_n = r(N)
-        display as text "q3_23 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IAFF
-
-* ITEM q4_1 | ¿Cuáles de los siguientes documentos de identidad posee actualmente? (Marque todas las que apliquen).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_1 == `state'
-    display as text "q4_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 8 9 98"
-    quietly count if formdef_version == `fv' & wp07_route_q4_1 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_1 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_1 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_1, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        if `option' == 98 {
-            quietly count if formdef_version == `fv' & wp07_state_q4_1 == 5 & ///
-                strpos(" " + itrim(strtrim(q4_1)) + " ", " 98 ") > 0
-            local refusal_n = r(N)
-            display as text "q4_1 refusal N: " as result `refusal_n'
-            if `recorded_n' > 0 {
-                display as text "Percent all recorded parents refusing: " as result 100 * `refusal_n' / ///
-                    `recorded_n'
-            }
-        }
-        else {
-            quietly count if formdef_version == `fv' & wp07_state_q4_1 == 1 & ///
-                strpos(" " + itrim(strtrim(q4_1)) + " ", " `option' ") > 0
-            local selected_n = r(N)
-            display as text "q4_1 offered option " `option' " selected N: " as result `selected_n'
-            if `regular_n' > 0 {
-                display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-            }
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_5 | ¿Tiene a su nombre algún comprobante de dirección aceptado por entidades financieras (recibo de servicios, contrato de arriendo, certificado de residencia)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_5 == `state'
-    display as text "q4_5 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q4_5 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_5 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_5 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_5, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_5, 1, 5) & q4_5 == `option'
-        local category_n = r(N)
-        display as text "q4_5 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_6 | El número de teléfono que normalmente usa para sus cuentas o billeteras digitales, ¿está registrado a su nombre?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_6 == `state'
-    display as text "q4_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q4_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_6, 1, 5) & q4_6 == `option'
-        local category_n = r(N)
-        display as text "q4_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_12 | ¿Usted tiene personalmente alguna cuenta en una institución financiera o una cuenta/billetera de dinero móvil? (Marque todas las que apliquen).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_12 == `state'
-    display as text "q4_12 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q4_12 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_12 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_12 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_12, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & wp07_state_q4_12 == 1 & ///
-            strpos(" " + itrim(strtrim(q4_12)) + " ", " `option' ") > 0
-        local selected_n = r(N)
-        display as text "q4_12 offered option " `option' " selected N: " as result `selected_n'
-        if `regular_n' > 0 {
-            display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IUOF
-
-* ITEM q4_13 | De las cuentas o billeteras que mencionó, ¿cuál es la principal para recibir o manejar dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_13 == `state'
-    display as text "q4_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q4_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_13, 1, 5) & q4_13 == `option'
-        local category_n = r(N)
-        display as text "q4_13 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-* IUOF cross-item semantic review; this route already requires a valid positive q4_12 parent.
-quietly count if wp07_route_q4_13 == 1 & q4_13 == 5
-display as text "No account after positive account selection (semantic hold, no repair) N: " as result r(N)
-forvalues product = 1/4 {
-    quietly count if wp07_state_q4_13 == 1 & q4_13 == `product' & ///
-        !(strpos(" " + itrim(strtrim(q4_12)) + " ", " `product' ") > 0)
-    display as text "Principal product absent from selected accounts (semantic hold, no repair) code " ///
-        `product' " N: " as result r(N)
-}
-
-* ITEM q4_15 | En los últimos 60 días (2 meses), ¿con qué frecuencia usó su cuenta o billetera principal para cualquier operación (recibir, pagar, retirar, consultar saldo)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_15 == `state'
-    display as text "q4_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q4_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_15, 1, 5) & q4_15 == `option'
-        local category_n = r(N)
-        display as text "q4_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_16 | ¿Qué tan fácil le resulta depositar o retirar efectivo (cash-in / cash-out) cerca de su vivienda o trabajo?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_16 == `state'
-    display as text "q4_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 99"
-    quietly count if formdef_version == `fv' & wp07_route_q4_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_16, 1, 5) & q4_16 == `option'
-        local category_n = r(N)
-        display as text "q4_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_17 | ¿Aproximadamente cuánto tiempo tarda en llegar al punto de agente, cajero o sucursal más cercano donde puede hacer cash-in/cash-out?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_17 == `state'
-    display as text "q4_17 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 99"
-    quietly count if formdef_version == `fv' & wp07_route_q4_17 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_17 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_17 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_17, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_17, 1, 5) & q4_17 == `option'
-        local category_n = r(N)
-        display as text "q4_17 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_24 | ¿Usa su cuenta o billetera principal para pagar en comercios (por ejemplo, QR, transferencia, datafono sin tarjeta física)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_24 == `state'
-    display as text "q4_24 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q4_24 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_24 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_24 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_24, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_24 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_24, 1, 5) & q4_24 == `option'
-        local category_n = r(N)
-        display as text "q4_24 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_25 | ¿Mantiene ahorros en su cuenta o billetera principal (es decir, deja dinero guardado por más de una semana)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_25 == `state'
-    display as text "q4_25 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q4_25 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_25 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_25 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_25, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_25 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_25, 1, 5) & q4_25 == `option'
-        local category_n = r(N)
-        display as text "q4_25 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_26 | ¿Recibe notificaciones (SMS o app) cuando llega una transferencia o remesa a su cuenta o billetera principal?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_26 == `state'
-    display as text "q4_26 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q4_26 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_26 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_26 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_26, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_26 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_26, 1, 5) & q4_26 == `option'
-        local category_n = r(N)
-        display as text "q4_26 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q4_27 | En los últimos 60 días (2 meses), ¿prestó su cuenta o billetera a otra persona para que recibiera o moviera dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q4_27 == `state'
-    display as text "q4_27 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q4_27 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_27 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q4_27 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q4_27, 1, 5)
-    local recorded_n = r(N)
-    display as text "q4_27 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q4_27, 1, 5) & q4_27 == `option'
-        local category_n = r(N)
-        display as text "q4_27 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN OQI
-
-* ITEM q5_13 | En su registro (onboarding) más reciente, ¿qué le pidieron para verificar su identidad? (Marque todo lo que aplique).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_13 == `state'
-    display as text "q5_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        if `option' == 98 {
-            quietly count if formdef_version == `fv' & wp07_state_q5_13 == 5 & ///
-                strpos(" " + itrim(strtrim(q5_13)) + " ", " 98 ") > 0
-            local uncertainty_n = r(N)
-            display as text "q5_13 uncertainty N: " as result `uncertainty_n'
-            if `recorded_n' > 0 {
-                display as text "Percent all recorded parents uncertain: " as result 100 * `uncertainty_n' / ///
-                    `recorded_n'
-            }
-        }
-        else {
-            quietly count if formdef_version == `fv' & wp07_state_q5_13 == 1 & ///
-                strpos(" " + itrim(strtrim(q5_13)) + " ", " `option' ") > 0
-            local selected_n = r(N)
-            display as text "q5_13 offered option " `option' " selected N: " as result `selected_n'
-            if `regular_n' > 0 {
-                display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-            }
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_14 | En general, ¿qué tan fácil o difícil fue completar el registro hasta poder usar la cuenta o billetera principal?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_14 == `state'
-    display as text "q5_14 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_14 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_14 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_14 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_14, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_14, 1, 5) & q5_14 == `option'
-        local category_n = r(N)
-        display as text "q5_14 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_15 | ¿Cuánto tiempo tardó su registro hasta que la cuenta o billetera quedó activada para recibir o enviar dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_15 == `state'
-    display as text "q5_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_15, 1, 5) & q5_15 == `option'
-        local category_n = r(N)
-        display as text "q5_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_16 | ¿Necesitó ayuda para registrarse en esa cuenta o billetera principal?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_16 == `state'
-    display as text "q5_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_16, 1, 5) & q5_16 == `option'
-        local category_n = r(N)
-        display as text "q5_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_21 | ¿Recuerda haber aceptado términos y condiciones y autorización de manejo de datos personales durante el registro?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_21 == `state'
-    display as text "q5_21 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_21 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_21 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_21 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_21, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_21, 1, 5) & q5_21 == `option'
-        local category_n = r(N)
-        display as text "q5_21 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_22 | En su opinión, ¿el registro protegió adecuadamente su privacidad (solo pidió lo necesario y explicó el uso de sus datos)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_22 == `state'
-    display as text "q5_22 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_22 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_22 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_22 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_22, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_22, 1, 5) & q5_22 == `option'
-        local category_n = r(N)
-        display as text "q5_22 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q5_23 | En el registro o en el primer uso, ¿el sistema o app ofreció mensajes en español claro y algún tipo de asistencia (tutorial, ayuda paso a paso, chat)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q5_23 == `state'
-    display as text "q5_23 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q5_23 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_23 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q5_23 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q5_23, 1, 5)
-    local recorded_n = r(N)
-    display as text "q5_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q5_23, 1, 5) & q5_23 == `option'
-        local category_n = r(N)
-        display as text "q5_23 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IURD
-
-* ITEM q6_2 | Pensando solo en los últimos 12 meses, ¿con qué frecuencia recibió remesas del exterior?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_2 == `state'
-    display as text "q6_2 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 99"
-    quietly count if formdef_version == `fv' & wp07_route_q6_2 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_2 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_2 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_2, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_2, 1, 5) & q6_2 == `option'
-        local category_n = r(N)
-        display as text "q6_2 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_4 | ¿A través de qué canal recibió esa remesa más reciente?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_4 == `state'
-    display as text "q6_4 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q6_4 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_4 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_4 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_4, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_4, 1, 5) & q6_4 == `option'
-        local category_n = r(N)
-        display as text "q6_4 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_13 | En general, pensando en todas las remesas que recibe, ¿qué proporción termina en efectivo y qué proporción se mantiene o usa de forma digital?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_13 == `state'
-    display as text "q6_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q6_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_13, 1, 5) & q6_13 == `option'
-        local category_n = r(N)
-        display as text "q6_13 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_14 | En los últimos 60 días (2 meses), ¿realizó o recibió pagos digitales o remesas dentro de Colombia usando apps, transferencias, billeteras o códigos QR?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_14 == `state'
-    display as text "q6_14 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_14 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_14 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_14 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_14, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_14, 1, 5) & q6_14 == `option'
-        local category_n = r(N)
-        display as text "q6_14 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_15 | En esos últimos 60 días (2 meses), aproximadamente ¿cuántas operaciones digitales (enviar o recibir dinero) realizó en total?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_15 == `state'
-    display as text "q6_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_15, 1, 5) & q6_15 == `option'
-        local category_n = r(N)
-        display as text "q6_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IETR
-
-* ITEM q6_6 | ¿Cuánto tiempo pasó desde que la persona que envió la remesa hizo el envío hasta que usted pudo usar el dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_6 == `state'
-    display as text "q6_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_6, 1, 5) & q6_6 == `option'
-        local category_n = r(N)
-        display as text "q6_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_9 | Pensando en esa remesa más reciente, ¿qué tan clara fue para usted la tasa de cambio aplicada (si hubo cambio de moneda)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_9 == `state'
-    display as text "q6_9 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 99"
-    quietly count if formdef_version == `fv' & wp07_route_q6_9 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_9 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_9 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_9, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_9, 1, 5) & q6_9 == `option'
-        local category_n = r(N)
-        display as text "q6_9 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_11 | ¿Recibió alguna confirmación cuando llegó esa remesa (SMS, notificación de app, correo electrónico o recibo en papel)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_11 == `state'
-    display as text "q6_11 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_11 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_11 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_11 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_11, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_11, 1, 5) & q6_11 == `option'
-        local category_n = r(N)
-        display as text "q6_11 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_16 | En esos últimos 60 días (2 meses), ¿tuvo algún problema con pagos o transferencias digitales (por ejemplo, dinero que no llegó, reversos, operaciones rechazadas o duplicadas)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_16 == `state'
-    display as text "q6_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_16, 1, 5) & q6_16 == `option'
-        local category_n = r(N)
-        display as text "q6_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_17 | ¿Ha encontrado límites o topes que le impidan completar operaciones digitales (por monto por transacción, límite diario o mensual, o número de operaciones)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_17 == `state'
-    display as text "q6_17 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_17 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_17 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_17 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_17, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_17, 1, 5) & q6_17 == `option'
-        local category_n = r(N)
-        display as text "q6_17 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_18 | En la última operación digital que hizo en esos 90 días, ¿las comisiones se mostraron claramente antes de que usted confirmara la operación?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_18 == `state'
-    display as text "q6_18 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_18 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_18 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_18 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_18, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_18 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_18, 1, 5) & q6_18 == `option'
-        local category_n = r(N)
-        display as text "q6_18 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_20 | En esa última operación digital, ¿recibió una confirmación inmediata (por SMS o notificación en la app) al enviar o recibir el dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_20 == `state'
-    display as text "q6_20 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q6_20 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_20 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_20 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_20, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_20, 1, 5) & q6_20 == `option'
-        local category_n = r(N)
-        display as text "q6_20 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_21 | En general, ¿qué tan rápidos le resultan sus pagos o remesas digitales (desde que se envían hasta que usted puede usar el dinero)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_21 == `state'
-    display as text "q6_21 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6"
-    quietly count if formdef_version == `fv' & wp07_route_q6_21 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_21 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_21 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_21, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_21, 1, 5) & q6_21 == `option'
-        local category_n = r(N)
-        display as text "q6_21 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_22 | ¿Ha notado cargos adicionales al pagar con QR o transferencia en comercios, comparado con pagar en efectivo (por ejemplo, recargo o comisión extra)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_22 == `state'
-    display as text "q6_22 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98 99"
-    quietly count if formdef_version == `fv' & wp07_route_q6_22 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_22 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_22 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_22, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_22, 1, 5) & q6_22 == `option'
-        local category_n = r(N)
-        display as text "q6_22 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_23 | En general, ¿qué tan clara le resulta la información que dan los proveedores sobre límites, horarios, comisiones y tiempos de abono de las operaciones digitales?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_23 == `state'
-    display as text "q6_23 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q6_23 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_23 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_23 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_23, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_23 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_23, 1, 5) & q6_23 == `option'
-        local category_n = r(N)
-        display as text "q6_23 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q6_24 | En los últimos 60 días (2 meses), ¿cómo evaluaría su experiencia transaccional digital en general?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q6_24 == `state'
-    display as text "q6_24 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q6_24 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_24 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q6_24 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q6_24, 1, 5)
-    local recorded_n = r(N)
-    display as text "q6_24 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q6_24, 1, 5) & q6_24 == `option'
-        local category_n = r(N)
-        display as text "q6_24 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IPCS
-
-* ITEM q7_1 | En los últimos 12 meses, ¿recibió mensajes o llamadas sospechosas (SMS, WhatsApp, redes sociales o teléfono) pidiéndole códigos SMS/OTP, claves, PIN o que hiciera una transferencia urgente?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_1 == `state'
-    display as text "q7_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q7_1 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_1 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_1 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_1, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_1, 1, 5) & q7_1 == `option'
-        local category_n = r(N)
-        display as text "q7_1 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_2 | Pensando en el último mensaje o llamada sospechosa que recibió, ¿qué hizo usted primero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_2 == `state'
-    display as text "q7_2 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q7_2 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_2 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_2 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_2, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_2, 1, 5) & q7_2 == `option'
-        local category_n = r(N)
-        display as text "q7_2 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_6 | Actualmente, ¿usa algún método de autenticación segura en su teléfono o app (por ejemplo, huella, reconocimiento facial, PIN, patrón o bloqueo de pantalla)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_6 == `state'
-    display as text "q7_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q7_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_6, 1, 5) & q7_6 == `option'
-        local category_n = r(N)
-        display as text "q7_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_7 | ¿Con qué frecuencia cambia sus claves o PIN y revisa sus movimientos para detectar operaciones no reconocidas?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_7 == `state'
-    display as text "q7_7 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q7_7 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_7 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_7 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_7, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_7, 1, 5) & q7_7 == `option'
-        local category_n = r(N)
-        display as text "q7_7 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_8 | ¿Recibió en los últimos 12 meses mensajes de educación o alertas de su banco/app sobre estafas comunes (por ejemplo, “no comparta OTP”, “no haga clic en enlaces desconocidos”)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_8 == `state'
-    display as text "q7_8 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q7_8 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_8 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_8 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_8, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_8, 1, 5) & q7_8 == `option'
-        local category_n = r(N)
-        display as text "q7_8 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_9 | En general, ¿qué tan segura se siente al recibir remesas o pagos por canales digitales (app, QR, transferencia)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_9 == `state'
-    display as text "q7_9 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q7_9 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_9 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_9 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_9, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_9, 1, 5) & q7_9 == `option'
-        local category_n = r(N)
-        display as text "q7_9 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_10 | ¿Qué medida de seguridad considera más útil para evitar fraudes en su caso?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_10 == `state'
-    display as text "q7_10 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6"
-    if `fv' == 2512090157 {
-        local options "1 2 3 4 5 6 7"
-    }
-    quietly count if formdef_version == `fv' & wp07_route_q7_10 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_10 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_10 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_10, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_10 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_10, 1, 5) & q7_10 == `option'
-        local category_n = r(N)
-        display as text "q7_10 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* Shared q7_1 exposure is reported once under IPCS; it is not independent evidence.
-
-
-* ============================================================================
-* DOMAIN IEDF
-
-* ITEM q7_5 | En los últimos 12 meses, ¿su cuenta, tarjeta o app fue bloqueada o limitada por intentos fallidos, contraseñas erradas o sospecha de fraude?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_5 == `state'
-    display as text "q7_5 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q7_5 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_5 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_5 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_5, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_5, 1, 5) & q7_5 == `option'
-        local category_n = r(N)
-        display as text "q7_5 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_11 | En los últimos 12 meses, ¿tuvo algún problema con un pago o remesa digital (por ejemplo, dinero que no llegó, llegó incompleto o tarde, cobro indebido, error de destinatario)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_11 == `state'
-    display as text "q7_11 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 98"
-    quietly count if formdef_version == `fv' & wp07_route_q7_11 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_11 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_11 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_11, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_11, 1, 5) & q7_11 == `option'
-        local category_n = r(N)
-        display as text "q7_11 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_12 | Pensando en el problema más reciente, ¿a quién presentó el reclamo primero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_12 == `state'
-    display as text "q7_12 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6"
-    if `fv' == 2512090157 {
-        local options "1 2 3 4 5 6 7"
-    }
-    quietly count if formdef_version == `fv' & wp07_route_q7_12 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_12 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_12 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_12, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_12, 1, 5) & q7_12 == `option'
-        local category_n = r(N)
-        display as text "q7_12 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_13 | ¿Cuánto tiempo tardó en recibir una primera respuesta de ese canal de reclamo?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_13 == `state'
-    display as text "q7_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q7_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_13, 1, 5) & q7_13 == `option'
-        local category_n = r(N)
-        display as text "q7_13 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_14 | ¿El problema quedó resuelto y el dinero fue restituido o corregido?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_14 == `state'
-    display as text "q7_14 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q7_14 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_14 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_14 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_14, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_14, 1, 5) & q7_14 == `option'
-        local category_n = r(N)
-        display as text "q7_14 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q7_15 | En una escala de 1 a 5, ¿qué tan satisfecha quedó con la atención del proveedor o entidad que gestionó su reclamo?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q7_15 == `state'
-    display as text "q7_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q7_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q7_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q7_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q7_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q7_15, 1, 5) & q7_15 == `option'
-        local category_n = r(N)
-        display as text "q7_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IAER
-
-* ITEM q9_4 | Yo decido cómo se usan las remesas del hogar la mayor parte del tiempo.
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_4 == `state'
-    display as text "q9_4 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_4 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_4 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_4 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_4, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_4, 1, 5) & q9_4 == `option'
-        local category_n = r(N)
-        display as text "q9_4 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_5 | En el último mes en que recibió remesas, ¿quién guardó o administró la mayor parte de ese dinero?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_5 == `state'
-    display as text "q9_5 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_5 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_5 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_5 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_5, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_5 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_5, 1, 5) & q9_5 == `option'
-        local category_n = r(N)
-        display as text "q9_5 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_6 | Si usted quisiera destinar parte de la remesa a ahorro o a su negocio, ¿podría hacerlo sin pedir permiso a otra persona?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_6 == `state'
-    display as text "q9_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_6, 1, 5) & q9_6 == `option'
-        local category_n = r(N)
-        display as text "q9_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_7 | En general, me siento en control de mi dinero y de las decisiones sobre las remesas.
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_7 == `state'
-    display as text "q9_7 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_7 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_7 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_7 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_7, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_7 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_7, 1, 5) & q9_7 == `option'
-        local category_n = r(N)
-        display as text "q9_7 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_8 | En los últimos 12 meses, ¿alguna persona le pidió ver su teléfono o sus códigos (PIN/OTP) para manejar la remesa en contra de su voluntad?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_8 == `state'
-    display as text "q9_8 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_8 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_8 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_8 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_8, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_8 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_8, 1, 5) & q9_8 == `option'
-        local category_n = r(N)
-        display as text "q9_8 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_9 | Si pudiera elegir libremente, ¿a nombre de quién preferiría que estuviera la cuenta o billetera donde entra la remesa?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_9 == `state'
-    display as text "q9_9 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_9 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_9 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_9 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_9, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_9 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_9, 1, 5) & q9_9 == `option'
-        local category_n = r(N)
-        display as text "q9_9 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_11 | En su hogar, ¿quién suele decidir sobre su atención de salud (visitas a médico, exámenes, tratamientos)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_11 == `state'
-    display as text "q9_11 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_11 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_11 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_11 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_11, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_11, 1, 5) & q9_11 == `option'
-        local category_n = r(N)
-        display as text "q9_11 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_13 | En su hogar, ¿quién toma la decisión sobre los gastos importantes del hogar (por ejemplo, electrodomésticos, arriendo, matrículas)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_13 == `state'
-    display as text "q9_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_13, 1, 5) & q9_13 == `option'
-        local category_n = r(N)
-        display as text "q9_13 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_16 | En los últimos 12 meses, ¿ha sentido presión de alguien para entregar todo el dinero de la remesa o mostrar sus movimientos cuando usted no quería?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_16 == `state'
-    display as text "q9_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_16, 1, 5) & q9_16 == `option'
-        local category_n = r(N)
-        display as text "q9_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_18 | En general, siento que mi opinión sobre el uso de la remesa es escuchada y respetada en mi hogar.
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_18 == `state'
-    display as text "q9_18 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_18 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_18 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_18 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_18, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_18 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_18, 1, 5) & q9_18 == `option'
-        local category_n = r(N)
-        display as text "q9_18 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_19 | Si usted quisiera abrir una nueva cuenta o cambiar la cuenta donde llega la remesa, ¿podría decidirlo?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_19 == `state'
-    display as text "q9_19 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_19 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_19 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_19 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_19, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_19 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_19, 1, 5) & q9_19 == `option'
-        local category_n = r(N)
-        display as text "q9_19 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_20 | ¿Ha evitado usar pagos digitales o aplicaciones por miedo a conflictos o discusiones dentro del hogar?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_20 == `state'
-    display as text "q9_20 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_20 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_20 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_20 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_20, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_20 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_20, 1, 5) & q9_20 == `option'
-        local category_n = r(N)
-        display as text "q9_20 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN ICPF
-
-* ITEM q9_1 | Confío en que mi proveedor principal de pagos o cuenta mantendrá mi dinero seguro.
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_1 == `state'
-    display as text "q9_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_1 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_1 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_1 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_1, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_1, 1, 5) & q9_1 == `option'
-        local category_n = r(N)
-        display as text "q9_1 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_15 | En mi hogar, se considera apropiado que las mujeres usen pagos digitales (app, QR, transferencias).
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_15 == `state'
-    display as text "q9_15 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_15 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_15 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_15 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_15, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_15 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_15, 1, 5) & q9_15 == `option'
-        local category_n = r(N)
-        display as text "q9_15 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_17 | Si usted rechaza compartir su PIN/OTP o su teléfono para manejar la remesa, ¿qué podría ocurrir en su hogar?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_17 == `state'
-    display as text "q9_17 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_17 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_17 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_17 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_17, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_17 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        if `option' == 98 {
-            quietly count if formdef_version == `fv' & wp07_state_q9_17 == 5 & ///
-                strpos(" " + itrim(strtrim(q9_17)) + " ", " 98 ") > 0
-            local refusal_n = r(N)
-            display as text "q9_17 refusal N: " as result `refusal_n'
-            if `recorded_n' > 0 {
-                display as text "Percent all recorded parents refusing: " as result 100 * `refusal_n' / ///
-                    `recorded_n'
-            }
-        }
-        else {
-            quietly count if formdef_version == `fv' & wp07_state_q9_17 == 1 & ///
-                strpos(" " + itrim(strtrim(q9_17)) + " ", " `option' ") > 0
-            local selected_n = r(N)
-            display as text "q9_17 offered option " `option' " selected N: " as result `selected_n'
-            if `regular_n' > 0 {
-                display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-            }
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_21 | ¿Qué cambios harían más seguro para usted usar pagos digitales y evitar conflictos en el hogar?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_21 == `state'
-    display as text "q9_21 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q9_21 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_21 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_21 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_21, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_21 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & wp07_state_q9_21 == 1 & ///
-            strpos(" " + itrim(strtrim(q9_21)) + " ", " `option' ") > 0
-        local selected_n = r(N)
-        display as text "q9_21 offered option " `option' " selected N: " as result `selected_n'
-        if `regular_n' > 0 {
-            display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q9_22 | En su comunidad, ¿la mayoría cree que las mujeres deben poder decidir sobre el uso de las remesas del hogar?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q9_22 == `state'
-    display as text "q9_22 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q9_22 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_22 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q9_22 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q9_22, 1, 5)
-    local recorded_n = r(N)
-    display as text "q9_22 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q9_22, 1, 5) & q9_22 == `option'
-        local category_n = r(N)
-        display as text "q9_22 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-
-* ============================================================================
-* DOMAIN IEH
-
-* ITEM q10_4 | En general, ¿cuánta información siente que tiene sobre comisiones, tipos de cambio y qué hacer si tiene un problema con un pago digital o remesa?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_4 == `state'
-    display as text "q10_4 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4"
-    quietly count if formdef_version == `fv' & wp07_route_q10_4 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_4 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_4 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_4, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_4 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_4, 1, 5) & q10_4 == `option'
-        local category_n = r(N)
-        display as text "q10_4 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_6 | Pensando en los puntos donde retira efectivo (cash-out) cerca de su casa o trabajo, ¿cómo describiría el tiempo y el costo adicional para retirar dinero que llega de forma digital?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_6 == `state'
-    display as text "q10_6 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 98"
-    quietly count if formdef_version == `fv' & wp07_route_q10_6 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_6 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_6 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_6, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_6 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_6, 1, 5) & q10_6 == `option'
-        local category_n = r(N)
-        display as text "q10_6 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_10 | En los últimos 3 años, ¿participó en alguna capacitación sobre pagos digitales, remesas, billeteras o seguridad en línea?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_10 == `state'
-    display as text "q10_10 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 98"
-    quietly count if formdef_version == `fv' & wp07_route_q10_10 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_10 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_10 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_10, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_10 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_10, 1, 5) & q10_10 == `option'
-        local category_n = r(N)
-        display as text "q10_10 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_11 | ¿Quién organizó la capacitación más reciente a la que asistió?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_11 == `state'
-    display as text "q10_11 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q10_11 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_11 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_11 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_11, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_11 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_11, 1, 5) & q10_11 == `option'
-        local category_n = r(N)
-        display as text "q10_11 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_12 | Después de esa capacitación, ¿cómo cambió su disposición a usar pagos digitales o remesas por app?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_12 == `state'
-    display as text "q10_12 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5"
-    quietly count if formdef_version == `fv' & wp07_route_q10_12 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_12 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_12 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_12, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_12 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_12, 1, 5) & q10_12 == `option'
-        local category_n = r(N)
-        display as text "q10_12 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_13 | En los últimos 12 meses, ¿recibió acompañamiento individual para usar pagos digitales o remesas? (por ejemplo, alguien que le ayudó a instalar una app, abrir cuenta, activar QR o hacer sus primeras operaciones)
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_13 == `state'
-    display as text "q10_13 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "0 1 98"
-    quietly count if formdef_version == `fv' & wp07_route_q10_13 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_13 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_13 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_13, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_13 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_13, 1, 5) & q10_13 == `option'
-        local category_n = r(N)
-        display as text "q10_13 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_14 | ¿Quién le brindó ese acompañamiento individual la última vez?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_14 == `state'
-    display as text "q10_14 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6"
-    quietly count if formdef_version == `fv' & wp07_route_q10_14 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_14 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_14 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_14, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_14 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_14, 1, 5) & q10_14 == `option'
-        local category_n = r(N)
-        display as text "q10_14 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_16 | En los últimos 12 meses, ¿con qué frecuencia ha visto o usado materiales (folletos, videos, mensajes por WhatsApp, redes sociales) sobre fraudes y uso seguro de pagos digitales?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_16 == `state'
-    display as text "q10_16 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 98"
-    quietly count if formdef_version == `fv' & wp07_route_q10_16 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_16 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_16 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_16, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_16 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_16, 1, 5) & q10_16 == `option'
-        local category_n = r(N)
-        display as text "q10_16 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* Shared q10_4, q10_6 and q10_16 are reported once under IEH.
-
-
-* ============================================================================
-* DOMAIN IBPD
-
-* ITEM q10_1 | ¿Cuál diría que es el principal motivo por el cual no usa más pagos digitales (o no los usa en absoluto)?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_1 == `state'
-    display as text "q10_1 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 8 9 10 11 12 14 15 16 98"
-    if `fv' == 2512090157 {
-        local options "1 2 3 4 5 6 7 8 9 10 11"
-    }
-    quietly count if formdef_version == `fv' & wp07_route_q10_1 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_1 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_1 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_1, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_1 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Recorded-answer percentages retain offered sentinels as explicit categories.
-    * They are not percentages of all sampled women or estimates of population prevalence.
-    foreach option of local options {
-        quietly count if formdef_version == `fv' & inlist(wp07_state_q10_1, 1, 5) & q10_1 == `option'
-        local category_n = r(N)
-        display as text "q10_1 category " `option' " N: " as result `category_n'
-        if `recorded_n' > 0 {
-            display as text "Percent recorded answers (sentinels included): " as result 100 * `category_n' / ///
-                `recorded_n'
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-
-* ITEM q10_2 | Además de esa razón principal, ¿qué otras dificultades o barreras siente que enfrenta para usar pagos digitales?
-* Full admitted denominator includes all six states, even unasked/unresolved cases.
-foreach state in 1 2 3 4 5 6 {
-    quietly count if wp07_state_q10_2 == `state'
-    display as text "q10_2 response state " `state' " N / admitted: " as result r(N) " / " `admitted_n'
-}
-* Categories/options are interpreted within the actual form version.
-foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
-    local options "1 2 3 4 5 6 7 8 9 10 11 12 14 15 16 98"
-    if `fv' == 2512090157 {
-        local options "2 3 4 5 6 7 8 9 10 11 12 14 15 16 98"
-    }
-    quietly count if formdef_version == `fv' & wp07_route_q10_2 == 1
-    local applicable_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_2 == 1
-    local regular_n = r(N)
-    quietly count if formdef_version == `fv' & wp07_state_q10_2 == 5
-    local sentinel_n = r(N)
-    quietly count if formdef_version == `fv' & inlist(wp07_state_q10_2, 1, 5)
-    local recorded_n = r(N)
-    display as text "q10_2 version `fv': applicable / ordinary / sentinel / recorded" as result " " ///
-        `applicable_n' " / " `regular_n' " / " `sentinel_n' " / " `recorded_n'
-    * Percent selecting an offered option uses ordinary valid parent responses.
-    * Item-specific sentinels use recorded-parent N when offered; no parent strings are printed.
-    * Multiple-response percentages may exceed 100; unselected does not prove absence.
-    foreach option of local options {
-        if `option' == 98 {
-            quietly count if formdef_version == `fv' & wp07_state_q10_2 == 5 & ///
-                strpos(" " + itrim(strtrim(q10_2)) + " ", " 98 ") > 0
-            local refusal_n = r(N)
-            display as text "q10_2 refusal N: " as result `refusal_n'
-            if `recorded_n' > 0 {
-                display as text "Percent all recorded parents refusing: " as result 100 * `refusal_n' / ///
-                    `recorded_n'
-            }
-        }
-        else {
-            quietly count if formdef_version == `fv' & wp07_state_q10_2 == 1 & ///
-                strpos(" " + itrim(strtrim(q10_2)) + " ", " `option' ") > 0
-            local selected_n = r(N)
-            display as text "q10_2 offered option " `option' " selected N: " as result `selected_n'
-            if `regular_n' > 0 {
-                display as text "Percent ordinary valid parents: " as result 100 * `selected_n' / `regular_n'
-            }
-        }
-    }
-    if `recorded_n' == 0 {
-        display as text "No recorded applicable answers in this version; percentages undefined."
-    }
-}
-* D3 cross-item semantic review: main None versus valid additional named barriers.
-* Count only later forms where main code 16 means None; do not change either answer.
-quietly count if inlist(formdef_version, 2512091719, 2512111044, 2512121811, 2602120658) & ///
-    q10_1 == 16 & wp07_state_q10_2 == 1 & ///
-    regexm(itrim(strtrim(q10_2)), "(^| )(1|2|3|4|5|6|7|8|9|10|11|12|14|15)( |$)")
-display as text "Main None with valid additional named barriers (review, no repair) N: " as result r(N)
-
-* No output files, participant records, scores, model objects or class labels are written.
-
-* ============================================================================
-* CANDIDATES: own nonmissing N and fixed-component/common-observation coverage
-
-* CANDIDATE wp07_ivs_educ
-* Education component only; not normalized IVS or continuous tenure
-confirm numeric variable wp07_ivs_educ, exact
-assert missing(wp07_ivs_educ) | inrange(wp07_ivs_educ, 0, 1)
-quietly count if !missing(wp07_ivs_educ)
-local summary_n = r(N)
-display as text "Education component nonmissing N / admitted (not an IVS composite): " as result `summary_n' ///
-    " / " `admitted_n'
-if `summary_n' > 0 {
-    tabstat wp07_ivs_educ, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iat3
-* Fixed three-item candidate; financial-use content overlap remains
-confirm numeric variable wp07_iat3 wp07_iat_phone wp07_iat_internet wp07_iat_runout, exact
-assert missing(wp07_iat3) | inrange(wp07_iat3, 0, 1)
-assert missing(wp07_iat_phone) | inrange(wp07_iat_phone, 0, 1)
-assert missing(wp07_iat_internet) | inrange(wp07_iat_internet, 0, 1)
-assert missing(wp07_iat_runout) | inrange(wp07_iat_runout, 0, 1)
-quietly count if !missing(wp07_iat_phone, wp07_iat_internet, wp07_iat_runout)
-local component_n = r(N)
-quietly count if !missing(wp07_iat3)
-local summary_n = r(N)
-display as text "wp07_iat3 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iat3) & !missing(wp07_iat_phone, wp07_iat_internet, wp07_iat_runout)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iat3) & missing(wp07_iat_phone, wp07_iat_internet, wp07_iat_runout)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iat3, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iadt2
-* Two fixed components; phone applicability remains
-confirm numeric variable wp07_iadt2 wp07_iadt_transfer wp07_iadt_confidence, exact
-assert missing(wp07_iadt2) | inrange(wp07_iadt2, 0, 1)
-assert missing(wp07_iadt_transfer) | inrange(wp07_iadt_transfer, 0, 1)
-assert missing(wp07_iadt_confidence) | inrange(wp07_iadt_confidence, 0, 1)
-quietly count if !missing(wp07_iadt_transfer, wp07_iadt_confidence)
-local component_n = r(N)
-quietly count if !missing(wp07_iadt2)
-local summary_n = r(N)
-display as text "wp07_iadt2 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iadt2) & !missing(wp07_iadt_transfer, wp07_iadt_confidence)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iadt2) & missing(wp07_iadt_transfer, wp07_iadt_confidence)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iadt2, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iadt3
-* Smartphone-only app component; compare on common observations separately
-confirm numeric variable wp07_iadt3 wp07_iadt_app wp07_iadt_transfer wp07_iadt_confidence, exact
-assert missing(wp07_iadt3) | inrange(wp07_iadt3, 0, 1)
-assert missing(wp07_iadt_app) | inrange(wp07_iadt_app, 0, 1)
-assert missing(wp07_iadt_transfer) | inrange(wp07_iadt_transfer, 0, 1)
-assert missing(wp07_iadt_confidence) | inrange(wp07_iadt_confidence, 0, 1)
-quietly count if !missing(wp07_iadt_app, wp07_iadt_transfer, wp07_iadt_confidence)
-local component_n = r(N)
-quietly count if !missing(wp07_iadt3)
-local summary_n = r(N)
-display as text "wp07_iadt3 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iadt3) & !missing(wp07_iadt_app, wp07_iadt_transfer, wp07_iadt_confidence)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iadt3) & missing(wp07_iadt_app, wp07_iadt_transfer, wp07_iadt_confidence)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iadt3, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_icdp2
-* Both valid applicable OTP/PIN components; unfamiliarity/nonuse not zero
-confirm numeric variable wp07_icdp2 wp07_icdp_otp wp07_icdp_pin, exact
-assert missing(wp07_icdp2) | inrange(wp07_icdp2, 0, 1)
-assert missing(wp07_icdp_otp) | inrange(wp07_icdp_otp, 0, 1)
-assert missing(wp07_icdp_pin) | inrange(wp07_icdp_pin, 0, 1)
-quietly count if !missing(wp07_icdp_otp, wp07_icdp_pin)
-local component_n = r(N)
-quietly count if !missing(wp07_icdp2)
-local summary_n = r(N)
-display as text "wp07_icdp2 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_icdp2) & !missing(wp07_icdp_otp, wp07_icdp_pin)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_icdp2) & missing(wp07_icdp_otp, wp07_icdp_pin)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_icdp2, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iaff2
-* Two specific administrative conditions, not comprehensive formal inclusion
-confirm numeric variable wp07_iaff2 wp07_iaff_address wp07_iaff_phone, exact
-assert missing(wp07_iaff2) | inrange(wp07_iaff2, 0, 1)
-assert missing(wp07_iaff_address) | inrange(wp07_iaff_address, 0, 1)
-assert missing(wp07_iaff_phone) | inrange(wp07_iaff_phone, 0, 1)
-quietly count if !missing(wp07_iaff_address, wp07_iaff_phone)
-local component_n = r(N)
-quietly count if !missing(wp07_iaff2)
-local summary_n = r(N)
-display as text "wp07_iaff2 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iaff2) & !missing(wp07_iaff_address, wp07_iaff_phone)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iaff2) & missing(wp07_iaff_address, wp07_iaff_phone)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iaff2, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iuof3
-* Accepted 1/.75/.5/.25/0 frequency map with fixed components
-confirm numeric variable wp07_iuof3 wp07_iuof_frequency wp07_iuof_merchant wp07_iuof_saving, exact
-assert missing(wp07_iuof3) | inrange(wp07_iuof3, 0, 1)
-assert missing(wp07_iuof_frequency) | inrange(wp07_iuof_frequency, 0, 1)
-assert missing(wp07_iuof_merchant) | inrange(wp07_iuof_merchant, 0, 1)
-assert missing(wp07_iuof_saving) | inrange(wp07_iuof_saving, 0, 1)
-quietly count if !missing(wp07_iuof_frequency, wp07_iuof_merchant, wp07_iuof_saving)
-local component_n = r(N)
-quietly count if !missing(wp07_iuof3)
-local summary_n = r(N)
-display as text "wp07_iuof3 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iuof3) & !missing(wp07_iuof_frequency, wp07_iuof_merchant, wp07_iuof_saving)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iuof3) & missing(wp07_iuof_frequency, wp07_iuof_merchant, wp07_iuof_saving)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iuof3, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iuof3_oldmap
-* Declared historical frequency-spacing sensitivity, not automatic replacement
-confirm numeric variable wp07_iuof3_oldmap wp07_iuof_frequency_oldmap wp07_iuof_merchant wp07_iuof_saving, exact
-assert missing(wp07_iuof3_oldmap) | inrange(wp07_iuof3_oldmap, 0, 1)
-assert missing(wp07_iuof_frequency_oldmap) | inrange(wp07_iuof_frequency_oldmap, 0, 1)
-assert missing(wp07_iuof_merchant) | inrange(wp07_iuof_merchant, 0, 1)
-assert missing(wp07_iuof_saving) | inrange(wp07_iuof_saving, 0, 1)
-quietly count if !missing(wp07_iuof_frequency_oldmap, wp07_iuof_merchant, wp07_iuof_saving)
-local component_n = r(N)
-quietly count if !missing(wp07_iuof3_oldmap)
-local summary_n = r(N)
-display as text "wp07_iuof3_oldmap complete components / nonmissing summary / admitted: " as result ///
-    `component_n' " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iuof3_oldmap) & !missing(wp07_iuof_frequency_oldmap, wp07_iuof_merchant, ///
-    wp07_iuof_saving)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iuof3_oldmap) & missing(wp07_iuof_frequency_oldmap, wp07_iuof_merchant, ///
-    wp07_iuof_saving)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iuof3_oldmap, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_iuof2_no_frequency
-* Frequency-omission definition, not available-item fallback
-confirm numeric variable wp07_iuof2_no_frequency wp07_iuof_merchant wp07_iuof_saving, exact
-assert missing(wp07_iuof2_no_frequency) | inrange(wp07_iuof2_no_frequency, 0, 1)
-assert missing(wp07_iuof_merchant) | inrange(wp07_iuof_merchant, 0, 1)
-assert missing(wp07_iuof_saving) | inrange(wp07_iuof_saving, 0, 1)
-quietly count if !missing(wp07_iuof_merchant, wp07_iuof_saving)
-local component_n = r(N)
-quietly count if !missing(wp07_iuof2_no_frequency)
-local summary_n = r(N)
-display as text "wp07_iuof2_no_frequency complete components / nonmissing summary / admitted: " as result ///
-    `component_n' " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_iuof2_no_frequency) & !missing(wp07_iuof_merchant, wp07_iuof_saving)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_iuof2_no_frequency) & missing(wp07_iuof_merchant, wp07_iuof_saving)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_iuof2_no_frequency, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_oqi2
-* Registration ease and offered initial support; activation separate
-confirm numeric variable wp07_oqi2 wp07_oqi_ease wp07_oqi_support, exact
-assert missing(wp07_oqi2) | inrange(wp07_oqi2, 0, 1)
-assert missing(wp07_oqi_ease) | inrange(wp07_oqi_ease, 0, 1)
-assert missing(wp07_oqi_support) | inrange(wp07_oqi_support, 0, 1)
-quietly count if !missing(wp07_oqi_ease, wp07_oqi_support)
-local component_n = r(N)
-quietly count if !missing(wp07_oqi2)
-local summary_n = r(N)
-display as text "wp07_oqi2 complete components / nonmissing summary / admitted: " as result `component_n' ///
-    " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_oqi2) & !missing(wp07_oqi_ease, wp07_oqi_support)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_oqi2) & missing(wp07_oqi_ease, wp07_oqi_support)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_oqi2, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* CANDIDATE wp07_oqi2_oldmap
-* Declared historical ease-spacing sensitivity
-confirm numeric variable wp07_oqi2_oldmap wp07_oqi_ease_oldmap wp07_oqi_support, exact
-assert missing(wp07_oqi2_oldmap) | inrange(wp07_oqi2_oldmap, 0, 1)
-assert missing(wp07_oqi_ease_oldmap) | inrange(wp07_oqi_ease_oldmap, 0, 1)
-assert missing(wp07_oqi_support) | inrange(wp07_oqi_support, 0, 1)
-quietly count if !missing(wp07_oqi_ease_oldmap, wp07_oqi_support)
-local component_n = r(N)
-quietly count if !missing(wp07_oqi2_oldmap)
-local summary_n = r(N)
-display as text "wp07_oqi2_oldmap complete components / nonmissing summary / admitted: " as result ///
-    `component_n' " / " `summary_n' " / " `admitted_n'
-quietly count if missing(wp07_oqi2_oldmap) & !missing(wp07_oqi_ease_oldmap, wp07_oqi_support)
-display as text "Complete components but summary missing (review, no repair): " as result r(N)
-quietly count if !missing(wp07_oqi2_oldmap) & missing(wp07_oqi_ease_oldmap, wp07_oqi_support)
-display as text "Summary present despite missing component (review, no repair): " as result r(N)
-if `summary_n' > 0 {
-    tabstat wp07_oqi2_oldmap, statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-if `summary_n' == 0 {
-    display as text "No nonmissing candidate; summary statistics undefined, not zero."
-}
-
-* COMMON_SAMPLE IADT_TWO_VS_THREE: Definition and applicability comparison, not simple rescaling
-quietly count if !missing(wp07_iadt2, wp07_iadt3)
-local common_n = r(N)
-display as text "IADT_TWO_VS_THREE common nonmissing N / admitted: " as result `common_n' " / " `admitted_n'
-if `common_n' > 0 {
-    tabstat wp07_iadt2 wp07_iadt3 if !missing(wp07_iadt2, wp07_iadt3), ///
-        statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-
-* COMMON_SAMPLE IUOF_FREQUENCY_DEFINITIONS: Compare all three on their common observations; retain broader own-N reports above
-quietly count if !missing(wp07_iuof3, wp07_iuof3_oldmap, wp07_iuof2_no_frequency)
-local common_n = r(N)
-display as text "IUOF_FREQUENCY_DEFINITIONS common nonmissing N / admitted: " as result `common_n' " / " ///
-    `admitted_n'
-if `common_n' > 0 {
-    tabstat wp07_iuof3 wp07_iuof3_oldmap wp07_iuof2_no_frequency if !missing(wp07_iuof3, wp07_iuof3_oldmap, ///
-        wp07_iuof2_no_frequency), ///
-        statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-
-* COMMON_SAMPLE OQI_EASE_SPACING: Declared ease-spacing definitions on the same nonmissing observations
-quietly count if !missing(wp07_oqi2, wp07_oqi2_oldmap)
-local common_n = r(N)
-display as text "OQI_EASE_SPACING common nonmissing N / admitted: " as result `common_n' " / " `admitted_n'
-if `common_n' > 0 {
-    tabstat wp07_oqi2 wp07_oqi2_oldmap if !missing(wp07_oqi2, wp07_oqi2_oldmap), ///
-        statistics(n mean sd min p25 p50 p75 max) columns(statistics) varwidth(32)
-}
-
-* The two accepted primary binary contrasts retain separate valid-answer denominators.
-confirm numeric variable wp07_remit_disposition wp07_remit_any_digital wp07_domestic_60d ///
-    wp07_domestic_ops_bin, exact
-assert missing(wp07_remit_disposition) | inlist(wp07_remit_disposition, 1, 2, 3, 4, 5)
-assert missing(wp07_remit_any_digital) | inlist(wp07_remit_any_digital, 0, 1)
-assert missing(wp07_domestic_60d) | inlist(wp07_domestic_60d, 0, 1)
-assert missing(wp07_domestic_ops_bin) | inlist(wp07_domestic_ops_bin, 1, 2, 3, 4, 5, 98)
-* Prepared-field reports consume their own nonmissing values, without claiming route validation.
+* Supply an existing restricted output directory; files are not overwritten.
+* Shares describe this unweighted referral sample, not a target population.
+quietly findfile scheme-plotplain.scheme
+local dictionary "`code'/descriptive_options.csv"
+local admitted = _N
+
+* 1.1. Admitted cohort and screening coverage
+tempname cohort
+file open `cohort' using "`out'/cohort.csv", write text
+file write `cohort' "section,category,n,admitted_n" _n
+file write `cohort' "cohort,admitted," (`admitted') "," (`admitted') _n
+local versions 0
+foreach fv in 2512090157 2512091719 2512111044 2512121811 2602120658 {
+    quietly count if formdef_version == `fv'
+    local versions = `versions' + r(N)
+    file write `cohort' "version,`fv'," (r(N)) "," (`admitted') _n
+}
+file write `cohort' "version,UNKNOWN," (`admitted' - `versions') "," (`admitted') _n
+quietly count if eligible_flag == 1
+local eligible = r(N)
+quietly count if eligible_flag == 0
+local ineligible = r(N)
+quietly count if missing(eligible_flag)
+local screening_missing = r(N)
+local screening_other = `admitted' - `eligible' - `ineligible' - `screening_missing'
+file write `cohort' "screening,affirmative," (`eligible') "," (`admitted') _n
+file write `cohort' "screening,negative," (`ineligible') "," (`admitted') _n
+file write `cohort' "screening,missing," (`screening_missing') "," (`admitted') _n
+file write `cohort' "screening,other," (`screening_other') "," (`admitted') _n
+file close `cohort'
+
+* 1.2. Reported remittance disposition and domestic digital activity
+tempname engagement
+file open `engagement' using "`out'/engagement.csv", write text
+file write `engagement' "panel,basis,code,n,denominator_n,percent" _n
 quietly count if !missing(wp07_remit_disposition)
 local remit_n = r(N)
-quietly count if !missing(wp07_remit_any_digital)
-local remit_binary_n = r(N)
+forvalues code = 1/5 {
+    quietly count if wp07_remit_disposition == `code'
+    local n = r(N)
+    file write `engagement' "remittance,valid_category,`code'," (`n') "," (`remit_n') ","
+    if `remit_n' > 0 {
+        file write `engagement' %24.17g (100*`n'/`remit_n')
+    }
+    file write `engagement' _n
+}
+quietly count if wp07_remit_disposition == 1
+local all_cash = r(N)
+quietly count if wp07_remit_any_digital == 1
+local any_digital = r(N)
+forvalues code = 0/1 {
+    local n = cond(`code' == 0, `all_cash', `any_digital')
+    file write `engagement' "remittance,valid_binary,`code'," (`n') "," (`remit_n') ","
+    if `remit_n' > 0 {
+        file write `engagement' %24.17g (100*`n'/`remit_n')
+    }
+    file write `engagement' _n
+}
 quietly count if !missing(wp07_domestic_60d)
 local domestic_n = r(N)
-display as text "Remittance categories / binary / domestic binary / admitted: " as result `remit_n' " / " ///
-    `remit_binary_n' " / " `domestic_n' " / " `admitted_n'
-if `remit_n' > 0 {
-    tabulate wp07_remit_disposition, nolabel
-}
-if `remit_binary_n' > 0 {
-    tabulate wp07_remit_any_digital, nolabel
-}
-if `domestic_n' > 0 {
-    tabulate wp07_domestic_60d, nolabel
-}
-* Bin uncertainty is a valid recorded category, but not a substantive operation bin.
 quietly count if wp07_domestic_60d == 1
-local users_n = r(N)
+local users = r(N)
+forvalues code = 0/1 {
+    quietly count if wp07_domestic_60d == `code'
+    local n = r(N)
+    file write `engagement' "domestic,valid_binary,`code'," (`n') "," (`domestic_n') ","
+    if `domestic_n' > 0 {
+        file write `engagement' %24.17g (100*`n'/`domestic_n')
+    }
+    file write `engagement' _n
+}
+foreach item in q6_13 q6_14 {
+    local panel "remittance"
+    if "`item'" == "q6_14" {
+        local panel "domestic"
+    }
+    forvalues state = 2/6 {
+        quietly count if wp07_state_`item' == `state'
+        local n = r(N)
+        file write `engagement' "`panel',unscored_state,`state'," (`n') "," (`admitted') "," ///
+            %24.17g (100*`n'/`admitted') _n
+    }
+}
+file close `engagement'
+
+* Keep latest receipt channel separate from frequency in the past 12 months.
+tempname context
+file open `context' using "`out'/remittance_context.csv", write text
+file write `context' "item,basis,code,n,denominator_n,percent" _n
+foreach item in q6_2 q6_4 {
+    local codes "1 2 3 99"
+    if "`item'" == "q6_4" {
+        local codes "1 2 3 4 5"
+    }
+    quietly count if inlist(wp07_state_`item', 1, 5)
+    local recorded = r(N)
+    foreach code of local codes {
+        quietly count if inlist(wp07_state_`item', 1, 5) & `item' == `code'
+        local n = r(N)
+        file write `context' "`item',recorded_category,`code'," (`n') "," (`recorded') ","
+        if `recorded' > 0 {
+            file write `context' %24.17g (100*`n'/`recorded')
+        }
+        file write `context' _n
+    }
+    forvalues state = 1/6 {
+        quietly count if wp07_state_`item' == `state'
+        file write `context' "`item',admitted_state,`state'," (r(N)) "," (`admitted') "," ///
+            %24.17g (100*r(N)/`admitted') _n
+    }
+}
+
+* Frequency bins are conditional on affirmative users. Uncertainty is not a bin.
 quietly count if wp07_domestic_60d == 1 & inlist(wp07_domestic_ops_bin, 1, 2, 3, 4, 5)
-local bins_n = r(N)
-quietly count if wp07_domestic_60d == 1 & wp07_domestic_ops_bin == 98
-local unknown_bins_n = r(N)
-* Missing derived bins alone cannot distinguish an absent answer from an invalid one.
-quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == 4
-local missing_bins_n = r(N)
-quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == 6
-local unresolved_bins_n = r(N)
-display as text "Affirmative users / valid bins / uncertainty / nonresponse / unresolved: " ///
-    as result `users_n' " / " `bins_n' " / " `unknown_bins_n' " / " ///
-    `missing_bins_n' " / " `unresolved_bins_n'
-forvalues category = 1/5 {
-    quietly count if wp07_domestic_60d == 1 & wp07_domestic_ops_bin == `category'
-    local category_n = r(N)
-    display as text "Operation bin " `category' " N: " as result `category_n'
-    if `bins_n' > 0 {
-        display as text "Percent valid operation bins: " as result 100 * `category_n' / `bins_n'
+local bins = r(N)
+forvalues code = 1/5 {
+    quietly count if wp07_domestic_60d == 1 & wp07_domestic_ops_bin == `code'
+    local n = r(N)
+    file write `context' "q6_15,valid_bin,`code'," (`n') "," (`bins') ","
+    if `bins' > 0 {
+        file write `context' %24.17g (100*`n'/`bins')
+    }
+    file write `context' _n
+}
+forvalues state = 1/6 {
+    quietly count if wp07_domestic_60d == 1 & wp07_state_q6_15 == `state'
+    local n = r(N)
+    file write `context' "q6_15,affirmative_user_state,`state'," (`n') "," (`users') ","
+    if `users' > 0 {
+        file write `context' %24.17g (100*`n'/`users')
+    }
+    file write `context' _n
+}
+file close `context'
+
+* 1.3. IAT–IADT associations on pair-complete and common observation bases
+tempname association
+file open `association' using "`out'/associations.csv", write text
+file write `association' "basis,left,right,n,pearson_r,status" _n
+foreach basis in pair common {
+    local left_fields "wp07_iat3 wp07_iat3"
+    local right_fields "wp07_iadt2 wp07_iadt3"
+    local pairs 2
+    if "`basis'" == "common" {
+        local left_fields "`left_fields' wp07_iadt2"
+        local right_fields "`right_fields' wp07_iadt3"
+        local pairs 3
+    }
+    forvalues pair = 1/`pairs' {
+        local left : word `pair' of `left_fields'
+        local right : word `pair' of `right_fields'
+        local sample "!missing(`left', `right')"
+        if "`basis'" == "common" {
+            local sample "!missing(wp07_iat3, wp07_iadt2, wp07_iadt3)"
+        }
+        quietly count if `sample'
+        local n = r(N)
+        local status "insufficient_n"
+        if `n' >= 2 {
+            quietly summarize `left' if `sample', meanonly
+            local left_varies = r(min) < r(max)
+            quietly summarize `right' if `sample', meanonly
+            local right_varies = r(min) < r(max)
+            local status "constant_field"
+            if `left_varies' & `right_varies' {
+                quietly correlate `left' `right' if `sample'
+                local rho = r(rho)
+                local status "available"
+            }
+        }
+        file write `association' "`basis',`left',`right'," (`n') ","
+        if "`status'" == "available" {
+            file write `association' %24.17g (`rho')
+        }
+        file write `association' ",`status'" _n
     }
 }
-* No change to scores, labels, rows, historical outputs or Appendix C2.
+file close `association'
 
-* ============================================================================
-* ORIGINAL INPUT SCREENS: descriptive continuity, not estimated model samples
+* 1.4. Item routes, responses, residence and measure coverage
+* Unoffered choices do not become zeros.
+* The unknown-form bucket has state and route counts, but no choice shares.
+tempname forms denominators choices display_choices context residency scores
+frame create `forms'
+frame `forms': import delimited using "`dictionary'", varnames(1) stringcols(_all) clear
+frame `forms': destring form_version, replace
+frame `forms': isid item form_version
+frame `forms': levelsof item, local(items) clean
+local form_versions "2512090157 2512091719 2512111044 2512121811 2602120658"
 
-* Exact prepared input in memory. No loading, scoring, filtering or output file.
-confirm numeric variable formdef_version eligible_flag wp07_known_form, exact
-confirm numeric variable q4 q2_2 q2_3 q2_1 wp07_residence, exact
-confirm numeric variable wp07_iat3 wp07_iadt2 wp07_iaff2, exact
-confirm numeric variable wp07_remit_disposition, exact
-confirm numeric variable wp07_remit_any_digital wp07_domestic_60d, exact
+file open `denominators' using "`out'/item_denominators.csv", write text
+file write `denominators' "item,form_version,kind,form_n,route_yes,route_no,route_unknown,state1,state2,state3,state4,state5,state6,recorded_n" _n
+file open `choices' using "`out'/item_choices.csv", write text
+file write `choices' "item,form_version,kind,code,n,denominator_n,percent,sentinel_mentions_n" _n
+file open `display_choices' using "`out'/item_choice_display.csv", write text
+file write `display_choices' "item,form_version,kind,code,share_basis,n,denominator_n,percent" _n
+file open `context' using "`out'/numeric_context.csv", write text
+file write `context' "item,form_version,n,mean,p25,median,p75" _n
 
-* Verify the declared representation, not its scientific validity.
-assert missing(wp07_iat3) | inrange(wp07_iat3, 0, 1)
-assert missing(wp07_iadt2) | inrange(wp07_iadt2, 0, 1)
-assert missing(wp07_iaff2) | inlist(wp07_iaff2, 0, .5, 1)
-assert missing(wp07_remit_disposition) | ///
-    inlist(wp07_remit_disposition, 1, 2, 3, 4, 5)
-assert missing(wp07_remit_any_digital) | ///
-    inlist(wp07_remit_any_digital, 0, 1)
-assert missing(wp07_domestic_60d) | inlist(wp07_domestic_60d, 0, 1)
-assert missing(wp07_remit_disposition) == missing(wp07_remit_any_digital)
-assert wp07_remit_any_digital == (wp07_remit_disposition != 1) ///
-    if !missing(wp07_remit_disposition)
+foreach item of local items {
+    frame `forms': levelsof kind if item == "`item'", local(kind) clean
+    foreach fv in `form_versions' UNKNOWN {
+        local group "formdef_version == `fv'"
+        if "`fv'" == "UNKNOWN" {
+            local group "wp07_known_form != 1"
+        }
+        quietly count if `group'
+        local form_n = r(N)
+        quietly count if `group' & wp07_route_`item' == 1
+        local yes = r(N)
+        quietly count if `group' & wp07_route_`item' == 0
+        local no = r(N)
+        local unknown = `form_n' - `yes' - `no'
+        file write `denominators' "`item',`fv',`kind'," (`form_n') "," (`yes') "," (`no') "," (`unknown')
+        forvalues state = 1/6 {
+            quietly count if `group' & wp07_state_`item' == `state'
+            local state`state' = r(N)
+            file write `denominators' "," (r(N))
+        }
+        local recorded = `state1' + `state5'
+        file write `denominators' "," (`recorded') _n
+        if "`fv'" == "UNKNOWN" {
+            continue
+        }
+        if "`kind'" == "numeric" {
+            quietly summarize `item' if `group' & wp07_state_`item' == 1, detail
+            file write `context' "`item',`fv'," (r(N)) ","
+            if r(N) > 0 {
+                file write `context' %24.17g (r(mean)) "," (r(p25)) "," (r(p50)) "," (r(p75))
+            }
+            else {
+                file write `context' ",,,"
+            }
+            file write `context' _n
+            continue
+        }
+        frame `forms': levelsof codes if item == "`item'" & form_version == `fv', local(offered) clean
+        foreach code of local offered {
+            local sentinel "."
+            if "`kind'" == "multiple" {
+                * Whole-token matches only; a sentinel is not an ordinary selection.
+                quietly count if `group' & wp07_state_`item' == 5 & ///
+                    strpos(" " + itrim(strtrim(`item')) + " ", " `code' ") > 0
+                local sentinel = r(N)
+                quietly count if `group' & wp07_state_`item' == 1 & ///
+                    strpos(" " + itrim(strtrim(`item')) + " ", " `code' ") > 0
+                local base = `state1'
+            }
+            else {
+                quietly count if `group' & inlist(wp07_state_`item', 1, 5) & `item' == `code'
+                local base = `recorded'
+            }
+            local n = r(N)
+            file write `choices' "`item',`fv',`kind',`code'," (`n') "," (`base') ","
+            if `base' > 0 {
+                file write `choices' %24.17g (100*`n'/`base')
+            }
+            file write `choices' "," (`sentinel') _n
 
-* Every admitted row remains present. These are prospective restricted readouts.
-count
-display as text "Retained prepared rows; not a universal denominator: " r(N)
-count if wp07_known_form != 1
-display as text "Unknown or missing submitted-version status: " r(N)
-count if eligible_flag != 1
-display as text "Historical screening disagreement; no new exclusion: " r(N)
+            local basis "recorded_answer"
+            if "`kind'" == "multiple" {
+                local basis "ordinary_parent"
+                if `code' == 98 {
+                    * Explicit refusal is a share of all recorded parent answers.
+                    local basis "recorded_parent_refusal"
+                    local n = `sentinel'
+                    local base = `recorded'
+                }
+            }
+            file write `display_choices' "`item',`fv',`kind',`code',`basis'," (`n') "," (`base') ","
+            if `base' > 0 {
+                file write `display_choices' %24.17g (100*`n'/`base')
+            }
+            file write `display_choices' _n
+        }
+    }
+}
+file close `denominators'
+file close `choices'
+file close `display_choices'
+file close `context'
+frame drop `forms'
 
-* Outcome support remains separate for the two questions and reference periods.
-tabulate wp07_remit_disposition, missing
-tabulate wp07_remit_any_digital, missing
-tabulate wp07_domestic_60d, missing
+* Geography is the detailed version-aware field, not the model grouping.
+file open `residency' using "`out'/residence.csv", write text
+file write `residency' "code,n,denominator_n" _n
+foreach code in 1 2 3 4 5 6 . {
+    quietly count if wp07_residence == `code'
+    file write `residency' "`code'," (r(N)) "," (`admitted') _n
+}
+file close `residency'
 
-* These counts are nonmissing-field screens, NOT certified model samples.
-* They do not establish route validity, support, independence or estimability.
-count if !missing(wp07_remit_any_digital, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence)
-display as text "Remittance core nomination, nonmissing inputs only: " r(N)
-count if !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence)
-display as text "Domestic core nomination, nonmissing inputs only: " r(N)
-count if !missing(wp07_remit_any_digital, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence, q2_3, q2_1)
-display as text "Remittance extension, raw calendar input observed: " r(N)
-count if !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence, q2_3, q2_1)
-display as text "Domestic extension, raw calendar input observed: " r(N)
+* Score summaries keep fixed-component scores and their defined bases distinct.
+file open `scores' using "`out'/scores.csv", write text
+file write `scores' "field,basis,n,admitted_n,mean,sd,minimum,maximum" _n
+foreach field in wp07_ivs_educ wp07_iat_phone wp07_iat_internet wp07_iat_runout wp07_iat3 ///
+    wp07_iadt_app wp07_iadt_transfer wp07_iadt_confidence wp07_iadt2 wp07_iadt3 ///
+    wp07_icdp_otp wp07_icdp_pin wp07_icdp2 wp07_iaff_address wp07_iaff_phone wp07_iaff2 ///
+    wp07_iuof_frequency wp07_iuof_frequency_oldmap wp07_iuof_merchant wp07_iuof_saving ///
+    wp07_iuof3 wp07_iuof3_oldmap wp07_iuof2_no_frequency wp07_oqi_ease wp07_oqi_ease_oldmap ///
+    wp07_oqi_support wp07_oqi2 wp07_oqi2_oldmap {
+    quietly summarize `field'
+    file write `scores' "`field',own," (r(N)) "," (`admitted') "," ///
+        %24.17g (r(mean)) "," %24.17g (r(sd)) "," %24.17g (r(min)) "," %24.17g (r(max)) _n
+}
+foreach family in iadt iuof oqi {
+    if "`family'" == "iadt" {
+        local compare "wp07_iadt2 wp07_iadt3"
+        local complete "!missing(wp07_iadt2, wp07_iadt3)"
+    }
+    if "`family'" == "iuof" {
+        local compare "wp07_iuof3 wp07_iuof3_oldmap wp07_iuof2_no_frequency"
+        local complete "!missing(wp07_iuof3, wp07_iuof3_oldmap, wp07_iuof2_no_frequency)"
+    }
+    if "`family'" == "oqi" {
+        local compare "wp07_oqi2 wp07_oqi2_oldmap"
+        local complete "!missing(wp07_oqi2, wp07_oqi2_oldmap)"
+    }
+    foreach field of local compare {
+        quietly summarize `field' if `complete'
+        file write `scores' "`field',common_`family'," (r(N)) "," (`admitted') "," ///
+            %24.17g (r(mean)) "," %24.17g (r(sd)) "," %24.17g (r(min)) "," %24.17g (r(max)) _n
+    }
+}
+file close `scores'
 
-* Check raw covariate domains explicitly; never repair or drop an answer here.
-count if !missing(q4) & (!inrange(q4, 18, 100) | q4 != floor(q4))
-display as text "Age outside the instrument's integer 18-100 domain: " r(N)
-count if !missing(q2_2) & ///
-    (!inrange(q2_2, 1, 10) | q2_2 != floor(q2_2))
-display as text "Education outside the ten offered codes: " r(N)
-count if !missing(q2_3) & ///
-    (!inrange(q2_3, 1, 9) | q2_3 != floor(q2_3))
-display as text "Occupation outside the nine offered codes: " r(N)
-count if !missing(q2_1) & ///
-    (!inrange(q2_1, 1950, 2026) | q2_1 != floor(q2_1))
-display as text "Arrival year outside the retained form's domain: " r(N)
+* 1.5. Sample composition and reported onboarding conditions
+tempname composition onboarding
+file open `composition' using "`out'/sample_composition.csv", write text
+file write `composition' "section,code,label,n,denominator_n,percent,median,p25,p75" _n
+quietly summarize q4 if wp07_state_q4 == 1, detail
+file write `composition' "age,1,Age in years," (r(N)) "," (`admitted') ",," ///
+    %24.17g (r(p50)) "," (r(p25)) "," (r(p75)) _n
 
-* Code 5 is completed secondary education; code 3 is employee/worker.
-* These are overall support counts, not support within an estimated model.
-count if q2_2 == 5
-display as text "Proposed education reference, full prepared stage: " r(N)
-count if wp07_residence == 1
-display as text "Proposed Bogota reference, full prepared stage: " r(N)
-count if q2_3 == 3
-display as text "Proposed occupation reference, full prepared stage: " r(N)
+foreach section in residence education occupation {
+    if "`section'" == "residence" {
+        local field e4_residence4
+        local levels 1 2 3 4
+    }
+    if "`section'" == "education" {
+        local field e4_education3
+        local levels 1 2 3
+    }
+    if "`section'" == "occupation" {
+        local field e4_occupation6
+        local levels 1 3 4 5 7 9
+    }
+    quietly count if !missing(`field')
+    local base = r(N)
+    local labels : value label `field'
+    foreach level of local levels {
+        local label : label `labels' `level'
+        if "`section'" == "residence" & `level' == 4 {
+            local label "Other recorded residence responses"
+        }
+        quietly count if `field' == `level'
+        file write `composition' "`section',`level',`label'," (r(N)) "," (`base') ","
+        if `base' > 0 {
+            file write `composition' %24.17g (100*r(N)/`base')
+        }
+        file write `composition' ",,," _n
+    }
+}
+file close `composition'
 
-* Preserve Other/Soacha/Meta meanings by version. Small cells remain restricted.
-tabulate wp07_residence formdef_version, missing
-tabulate q2_2, missing
-tabulate q2_3, missing
+* Keep the four conditions separate, on the base with both answers observed.
+file open `onboarding' using "`out'/onboarding_conditions.csv", write text
+file write `onboarding' "pattern,address,phone,n,denominator_n,percent" _n
+quietly count if !missing(wp07_iaff_address, wp07_iaff_phone)
+local pair_n = r(N)
+local onboarding_unscored = `admitted' - `pair_n'
+forvalues address = 0/1 {
+    forvalues phone = 0/1 {
+        quietly count if wp07_iaff_address == `address' & wp07_iaff_phone == `phone'
+        file write `onboarding' (2*`address'+`phone'+1) ",`address',`phone'," (r(N)) "," (`pair_n') ","
+        if `pair_n' > 0 {
+            file write `onboarding' %24.17g (100*r(N)/`pair_n')
+        }
+        file write `onboarding' _n
+    }
+}
+file close `onboarding'
 
-* Do not derive tenure from the current year or change any historical clock.
-count if missing(q2_1)
-display as text "Missing first-arrival calendar input: " r(N)
-
-* This descriptive block does not fit. Approved E.4 code is held separately below.
-* Raw first-arrival year is a calendar term, not an adopted tenure clock.
-
-* ============================================================================
-* ASSOCIATION COMPARISON: declared IAT/IADT candidates only, not all-domain Pearson
-* These are descriptive score associations, not latent-construct validity or effects.
-
-confirm numeric variable wp07_iat3 wp07_iadt2 wp07_iadt3, exact
-assert missing(wp07_iadt3) | !missing(wp07_iadt2)
-
-* Each pair uses its own observed base. Constants have no correlation coefficient.
-foreach skill in wp07_iadt2 wp07_iadt3 {
-    quietly count if !missing(wp07_iat3, `skill')
-    local pair_n = r(N)
-    display as text "IAT and `skill', pair-complete N: " `pair_n'
-    quietly summarize wp07_iat3 if !missing(wp07_iat3, `skill'), meanonly
-    local iat_varies = r(min) < r(max)
-    quietly summarize `skill' if !missing(wp07_iat3, `skill'), meanonly
-    local skill_varies = r(min) < r(max)
-    if `pair_n' > 1 & `iat_varies' & `skill_varies' {
-        correlate wp07_iat3 `skill' if !missing(wp07_iat3, `skill')
+* 1.6. Paper, supplement and slide exhibits
+* Only aggregate CSVs enter this separate frame.
+tempname exhibit table remit_panel domestic_panel
+frame create `exhibit'
+local endrow "_char(92) _char(92) _n"
+frame `exhibit' {
+    * T1. Sample composition
+    import delimited using "`out'/sample_composition.csv", varnames(1) asdouble clear
+    file open `table' using "`out'/T1_sample_composition.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering" _n ///
+        "\caption{Characteristics of the recruited survey sample}" _n ///
+        "\label{tab:sample-composition}" _n "\begin{tabular}{@{}lrrl@{}}" _n ///
+        "\toprule Characteristic & Count & Base & Percent or summary " `endrow' "\midrule" _n ///
+        "Admitted survey records & " (`admitted') " & " (`admitted') " & -- " `endrow'
+    file write `table' "Age, median [25th, 75th percentile] & " (n[1]) " & " (denominator_n[1]) " & "
+    if n[1] > 0 {
+        file write `table' %4.1f (median[1]) " [" %4.1f (p25[1]) ", " %4.1f (p75[1]) "] "
     }
     else {
-        display as text "Coefficient unavailable: insufficient N or a constant field."
+        file write `table' "-- "
     }
-}
-
-* Compare definitions on the identical three-field complete sample.
-quietly count if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3)
-local common_n = r(N)
-display as text "IAT/IADT common-case N: " `common_n'
-quietly summarize wp07_iat3 if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3), meanonly
-local common_iat_varies = r(min) < r(max)
-foreach skill in wp07_iadt2 wp07_iadt3 {
-    quietly summarize `skill' if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3), meanonly
-    local skill_varies = r(min) < r(max)
-    if `common_n' > 1 & `common_iat_varies' & `skill_varies' {
-        correlate wp07_iat3 `skill' if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3)
+    file write `table' `endrow'
+    foreach group in residence education occupation {
+        if "`group'" == "residence" local header "Recorded residence"
+        if "`group'" == "education" local header "Highest reported education"
+        if "`group'" == "occupation" local header "Reported main occupation"
+        file write `table' "\addlinespace \multicolumn{4}{@{}l}{\textit{`header'}} " `endrow'
+        quietly summarize denominator_n if section == "`group'", meanonly
+        local base = r(min)
+        forvalues j = 2/`=_N' {
+            if section[`j'] == "`group'" {
+                local share = cond(`base' > 0, strtrim(string(percent[`j'], "%5.1f")), "--")
+                file write `table' (label[`j']) " & " (n[`j']) " & " (denominator_n[`j']) " & `share' " `endrow'
+            }
+        }
+        if `base' < `admitted' {
+            file write `table' "No classifiable answer & " (`admitted'-`base') " & " (`admitted') " & -- " `endrow'
+        }
     }
-    else {
-        display as text "Common-case IAT / `skill' coefficient unavailable: N or variance."
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Unweighted referral sample; not population estimates. Age uses ordinary recorded responses. Categorical percentages use classifiable answers. Other recorded residence combines early Other, Soacha and Meta; it is not one location. Occupation is self-reported, not a labour-force classification.\par}" _n "\end{table}" _n
+    file close `table'
+
+    * T2 and F1. The panels come from different questions, not a transaction funnel.
+    import delimited using "`out'/engagement.csv", varnames(1) asdouble clear
+    local r1 "Withdraw all in cash"
+    local r2 "Withdraw less than half in cash"
+    local r3 "Half cash, half digital"
+    local r4 "Keep more than half digitally"
+    local r5 "Keep all digitally"
+    quietly summarize denominator_n if panel == "remittance" & basis == "valid_category", meanonly
+    local remit_base = r(min)
+    quietly summarize denominator_n if panel == "domestic" & basis == "valid_binary", meanonly
+    local domestic_base = r(min)
+    file open `table' using "`out'/T2_digital_engagement.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering" _n ///
+        "\caption{Reported remittance disposition and domestic digital payments}" _n ///
+        "\label{tab:digital-engagement}" _n "\begin{tabular}{@{}lrrr@{}}" _n ///
+        "\toprule Survey response & Count & Base & Percent " `endrow' "\midrule" _n ///
+        "\multicolumn{4}{@{}l}{\textit{Disposition of received remittances}} " `endrow'
+    forvalues j = 1/`=_N' {
+        if panel[`j'] == "remittance" & (basis[`j'] == "valid_category" | (basis[`j'] == "valid_binary" & code[`j'] == 1)) {
+            local k = code[`j']
+            local label "Any digital retention or use (summary)"
+            if basis[`j'] == "valid_category" local label "`r`k''"
+            local share = cond(denominator_n[`j'] > 0, strtrim(string(percent[`j'], "%5.1f")), "--")
+            file write `table' "`label' & " (n[`j']) " & " (denominator_n[`j']) " & `share' " `endrow'
+        }
     }
-}
+    file write `table' "\addlinespace \multicolumn{4}{@{}l}{\textit{Domestic digital sending or receiving, past 60 days}} " `endrow'
+    forvalues j = 1/`=_N' {
+        if panel[`j'] == "domestic" & basis[`j'] == "valid_binary" {
+            local label = cond(code[`j'] == 1, "Yes", "No")
+            local share = cond(denominator_n[`j'] > 0, strtrim(string(percent[`j'], "%5.1f")), "--")
+            file write `table' "`label' & " (n[`j']) " & " (denominator_n[`j']) " & `share' " `endrow'
+        }
+    }
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Each panel uses its own valid-answer base. Unscored records: " ///
+        (`admitted'-`remit_base') " for remittances and " (`admitted'-`domestic_base') ///
+        " for domestic payments. The original disposition options remain separate even where wording overlaps. The any-digital row sums options 2--5. These are shares of respondents, not monetary shares or stages of a single transfer.\par}" _n "\end{table}" _n
+    file close `table'
 
-* Preserve the between-definition association on that same common base as well.
-quietly summarize wp07_iadt2 if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3), meanonly
-local iadt2_varies = r(min) < r(max)
-quietly summarize wp07_iadt3 if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3), meanonly
-local iadt3_varies = r(min) < r(max)
-if `common_n' > 1 & `iadt2_varies' & `iadt3_varies' {
-    correlate wp07_iadt2 wp07_iadt3 if !missing(wp07_iat3, wp07_iadt2, wp07_iadt3)
-}
-else {
-    display as text "Common-case IADT2 / IADT3 coefficient unavailable: N or variance."
-}
+    graph hbar (asis) percent if panel == "remittance" & basis == "valid_category", ///
+        over(code, relabel(1 "`r1'" 2 "`r2'" 3 "`r3'" 4 "`r4'" 5 "`r5'") label(labsize(small))) ///
+        title("A. Disposition of received remittances", size(medsmall)) ///
+        subtitle("`remit_base' valid answers", size(small)) ///
+        ytitle("Percent of valid answers", size(small)) ylabel(0(25)100, labsize(small)) ///
+        yscale(range(0 105)) bar(1, color(gs6)) blabel(bar, format(%4.1f) size(small)) ///
+        scheme(plotplain) name(`remit_panel') nodraw
+    graph hbar (asis) percent if panel == "domestic" & basis == "valid_binary", ///
+        over(code, relabel(1 "Did not send or receive digitally" ///
+            2 "Sent or received money digitally") label(labsize(small))) ///
+        title("B. Domestic digital sending or receiving", size(medsmall)) ///
+        subtitle("Past 60 days; `domestic_base' valid answers", size(small)) ///
+        ytitle("Percent of valid answers", size(small)) ylabel(0(25)100, labsize(small)) ///
+        yscale(range(0 105)) bar(1, color(gs6)) blabel(bar, format(%4.1f) size(small)) ///
+        scheme(plotplain) name(`domestic_panel') nodraw
+    local domestic_unscored = `admitted' - `domestic_base'
+    * Clean artwork has panel labels but no embedded caption or notes.
+    graph combine `remit_panel' `domestic_panel', cols(1) ycommon xsize(7) ysize(6) scheme(plotplain)
+    graph export "`out'/F1_digital_engagement_artwork.pdf", width(6.4) fontface(Arial)
 
-* ============================================================================ 
+    graph combine `remit_panel' `domestic_panel', cols(1) ycommon xsize(7) ysize(6.4) ///
+        scheme(plotplain) ///
+        note("Notes: Unweighted shares; the panels do not track the same transfer." ///
+            "`domestic_unscored' domestic answers were unscored." ///
+            "Two original remittance options overlap in wording; both are shown." ///
+            "Source: Authors' calculations from the CFI-DPI survey in Colombia.", size(small))
+    graph export "`out'/F1_digital_engagement.pdf", width(6.4) fontface(Arial)
+    * Seminar version puts the two headline shares on one scale.
+    graph bar (asis) percent if basis == "valid_binary" & code == 1, ///
+        over(panel, relabel(1 `" "Domestic digital payments" "Past 60 days (N=`domestic_base')" "' ///
+            2 `" "Any digital remittance retention or use" "(N=`remit_base')" "') label(labsize(medsmall))) ///
+        title("Digital engagement in two settings", size(medlarge)) ///
+        ytitle("Percent of valid answers", size(medsmall)) ylabel(0(25)100, labsize(medsmall)) ///
+        yscale(range(0 105)) bar(1, color(gs5)) blabel(bar, format(%4.1f) size(medsmall)) ///
+        scheme(plotplain) xsize(12) ysize(6.75) ///
+        note("Notes: Unweighted shares from different questions, not the same transfer." ///
+            "Any digital means an answer other than withdrawing all received remittances in cash." ///
+            "Source: Authors' calculations from the CFI-DPI survey in Colombia.", size(small))
+    graph export "`out'/F1_digital_engagement_slides.pdf", fontface(Arial)
+    graph export "`out'/F1_digital_engagement_slides.png", width(2400)
+    graph drop `remit_panel' `domestic_panel'
+
+    file open `table' using "`out'/F1_digital_engagement_caption.tex", write text
+    file write `table' "\caption{Reported remittance disposition and domestic digital payments}" _n ///
+        "\label{fig:digital-engagement}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Panel A uses " (`remit_base') ///
+        " valid answers about the disposition of received remittances. Two original response options overlap in wording; both are shown. Panel B uses " ///
+        (`domestic_base') " valid answers about sending or receiving money digitally in Colombia in the past 60 days; " ///
+        (`domestic_unscored') " records are unscored. Bars are unweighted shares of respondents, not monetary shares or stages of the same transfer." ///
+        "\par Source: Authors' calculations from the CFI-DPI survey in Colombia.\par}" _n
+    file close `table'
+
+    * F2. Reported conditions are not provider-verified eligibility or ownership.
+    import delimited using "`out'/onboarding_conditions.csv", varnames(1) asdouble clear
+    graph hbar (asis) percent, over(pattern, relabel(1 "Neither condition" 2 "Phone only" ///
+        3 "Proof of address only" 4 "Both conditions") label(labsize(medsmall))) ///
+        ytitle("Percent of complete pairs", size(medsmall)) ylabel(0(25)100, labsize(medsmall)) ///
+        yscale(range(0 105)) bar(1, color(gs5)) blabel(bar, format(%4.1f) size(medsmall)) ///
+        scheme(plotplain) xsize(9.5) ysize(4.8)
+    graph export "`out'/F2_onboarding_conditions_artwork.pdf", width(6.4) fontface(Arial)
+    graph hbar (asis) percent, over(pattern, relabel(1 "Neither condition" 2 "Phone only" ///
+        3 "Proof of address only" 4 "Both conditions") label(labsize(medsmall))) ///
+        title("Reported own-name onboarding conditions", size(medlarge)) ///
+        subtitle("`pair_n' complete pairs; `onboarding_unscored' unscored", size(medsmall)) ///
+        ytitle("Percent of complete pairs", size(medsmall)) ylabel(0(25)100, labsize(medsmall)) ///
+        yscale(range(0 105)) bar(1, color(gs5)) blabel(bar, format(%4.1f) size(medsmall)) ///
+        note("Notes: Unweighted shares of complete pairs. Own-name address proof was reported" ///
+            "as acceptable to financial institutions. Phone refers to the number normally used" ///
+            "for digital accounts or wallets. Neither condition verifies eligibility or ownership." ///
+            "Source: Authors' calculations from the CFI-DPI survey in Colombia.", size(small)) ///
+        scheme(plotplain) xsize(9.5) ysize(5.34)
+    graph export "`out'/F2_onboarding_conditions.pdf", width(6.4) fontface(Arial)
+    graph export "`out'/F2_onboarding_conditions.png", width(2400)
+
+    file open `table' using "`out'/F2_onboarding_conditions_caption.tex", write text
+    file write `table' "\caption{Reported own-name onboarding conditions}" _n ///
+        "\label{fig:onboarding-conditions}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Unweighted shares among the " ///
+        (`pair_n') " records with both answers observed (" (`onboarding_unscored') ///
+        " unscored). Own-name address proof was reported as acceptable to financial institutions. Phone refers to the number normally used for digital accounts or wallets. These conditions do not establish verified eligibility or account ownership." ///
+        "\par Source: Authors' calculations from the CFI-DPI survey in Colombia.\par}" _n
+    file close `table'
+
+* S1. Form and screening partitions are independent, not an exclusion flow.
+    import delimited using "`out'/cohort.csv", varnames(1) stringcols(2) clear
+    file open `table' using "`out'/S1_cohort_coverage.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering" _n ///
+        "\caption{Admitted cohort: form versions and recorded screening}" _n ///
+        "\label{tab:cohort-coverage}" _n "\begin{tabular}{@{}lrr@{}}" _n ///
+        "\toprule Category & Count & Admitted base " `endrow' "\midrule" _n ///
+        "Admitted survey records & " (n[1]) " & " (admitted_n[1]) " " `endrow'
+    foreach group in version screening {
+        if "`group'" == "version" local header "Submitted instrument version"
+        if "`group'" == "screening" local header "Recorded screening flag"
+        file write `table' "\addlinespace \multicolumn{3}{@{}l}{\textit{`header'}} " `endrow'
+        forvalues j = 2/`=_N' {
+            if section[`j'] == "`group'" {
+                local label = strproper(category[`j'])
+                if category[`j'] == "UNKNOWN" local label "Missing or unrecognized version"
+                file write `table' "`label' & " (n[`j']) " & " (admitted_n[`j']) " " `endrow'
+            }
+        }
+    }
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: These two partitions describe the same locked cohort. The screening flag is a diagnostic. No records are removed here, and the table is not a response rate.\par}" _n "\end{table}" _n
+    file close `table'
+
+    * S2. Receipt frequency, latest channel and domestic operation bins.
+    import delimited using "`out'/remittance_context.csv", varnames(1) asdouble clear
+    local freq1 "Monthly or more often"
+    local freq2 "Every 2--3 months"
+    local freq3 "Once or twice a year"
+    local freq99 "Not applicable / does not remember"
+    local mode1 "Bank account"
+    local mode2 "Digital wallet or app"
+    local mode3 "Cash at a counter"
+    local mode4 "Through a traveler"
+    local mode5 "Other channel (unspecified)"
+    local ops1 "Fewer than 5"
+    local ops2 "Between 5 and 10"
+    local ops3 "Between 10 and 20"
+    local ops4 "Between 20 and 50"
+    local ops5 "More than 50"
+    file open `table' using "`out'/S2_payment_context.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering" _n ///
+        "\caption{Remittance receipt and domestic operation frequency}" _n ///
+        "\label{tab:payment-context}" _n "\begin{tabular}{@{}lrrr@{}}" _n ///
+        "\toprule Response & Count & Base & Percent " `endrow' "\midrule" _n
+    foreach field in q6_2 q6_4 q6_15 {
+        if "`field'" == "q6_2" {
+            local header "Remittances from abroad in the past 12 months"
+            local option freq
+        }
+        if "`field'" == "q6_4" {
+            local header "Channel of most recent received remittance"
+            local option mode
+        }
+        if "`field'" == "q6_15" {
+            local header "Domestic sending or receiving in the past 60 days"
+            local option ops
+        }
+        file write `table' "\addlinespace \multicolumn{4}{@{}l}{\textit{`header'}} " `endrow'
+        forvalues j = 1/`=_N' {
+            if item[`j'] == "`field'" & inlist(basis[`j'], "recorded_category", "valid_bin") {
+                local k = code[`j']
+                local label "``option'`k''"
+                local share = cond(denominator_n[`j'] > 0, strtrim(string(percent[`j'], "%5.1f")), "--")
+                file write `table' "`label' & " (n[`j']) " & " (denominator_n[`j']) " & `share' " `endrow'
+            }
+        }
+    }
+    quietly summarize denominator_n if item == "q6_15" & basis == "affirmative_user_state", meanonly
+    local users = r(min)
+    quietly summarize n if item == "q6_15" & basis == "affirmative_user_state" & code == 5, meanonly
+    local uncertain = r(sum)
+    local share = cond(`users' > 0, strtrim(string(100*`uncertain'/`users', "%5.1f")), "--")
+    file write `table' "\addlinespace Does not know / remember domestic count & " ///
+        (`uncertain') " & " (`users') " & `share' " `endrow' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: The first two panels use their own recorded-answer bases. The combined frequency code is shown as recorded, not scored zero. The operation bins use affirmative domestic users with a valid bin. The separate uncertainty row uses all affirmative domestic users. Boundaries are as asked; bins are not converted to counts.\par}" _n "\end{table}" _n
+    file close `table'
+
+    * S3. Own-sample summaries and explicitly named common-base sensitivities.
+    import delimited using "`out'/scores.csv", varnames(1) asdouble clear
+    local fields wp07_iat3 wp07_iadt2 wp07_iadt3 wp07_icdp2 wp07_iaff2 ///
+        wp07_iuof3 wp07_iuof3_oldmap wp07_iuof2_no_frequency wp07_oqi2 wp07_oqi2_oldmap
+    local names `" "Reported access (IAT3)" "Reported transfer ability and safety confidence (IADT2)" "App-inclusive alternative (IADT3)" "Credential protection practices (ICDP2)" "Own-name onboarding conditions (IAFF2)" "Reported digital uses (IUOF3)" "Old-frequency mapping (IUOF3 alternative)" "Use summary without frequency (IUOF2)" "Ease and support (OQI2)" "Old-ease mapping (OQI2 alternative)" "'
+    file open `table' using "`out'/S3_score_coverage.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering\small" _n ///
+        "\caption{Coverage and distribution of fixed-component measures}" _n ///
+        "\label{tab:score-coverage}" _n "\begin{tabular}{@{}p{.59\linewidth}rrr@{}}" _n ///
+        "\toprule Measure & Valid \(N\) & Mean & SD " `endrow' "\midrule" _n
+    foreach base in own common_iadt common_iuof common_oqi {
+        local label "Own complete-component base"
+        if "`base'" == "common_iadt" local label "Common base: both IADT definitions"
+        if "`base'" == "common_iuof" local label "Common base: three IUOF definitions"
+        if "`base'" == "common_oqi" local label "Common base: both OQI definitions"
+        file write `table' "\addlinespace \multicolumn{4}{@{}l}{\textit{`label'}} " `endrow'
+        local index 0
+        foreach field of local fields {
+            local ++index
+            local label : word `index' of `names'
+            forvalues j = 1/`=_N' {
+                if basis[`j'] == "`base'" & field[`j'] == "`field'" {
+                    local average = cond(n[`j'] > 0, strtrim(string(mean[`j'], "%6.3f")), "--")
+                    local spread = cond(n[`j'] > 1, strtrim(string(sd[`j'], "%6.3f")), "--")
+                    file write `table' "`label' & " (n[`j']) " & `average' & `spread' " `endrow'
+                }
+            }
+        }
+    }
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Measures have a 0--1 scale and require all stipulated components. Alternative mappings are documented comparisons, not adopted replacements. A common base requires every indicated definition to be observed. The accompanying ledger gives all component and score summaries.\par}" _n "\end{table}" _n
+    file close `table'
+
+    * S4. The five declared correlations, not the held Appendix C2 matrix.
+    import delimited using "`out'/associations.csv", varnames(1) asdouble clear
+    file open `table' using "`out'/S4_iat_iadt_associations.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering" _n ///
+        "\caption{Descriptive correlations of access and alternative IADT definitions}" _n ///
+        "\label{tab:iat-iadt-associations}" _n "\begin{tabular}{@{}llrr@{}}" _n ///
+        "\toprule Measure pair & Observation base & Valid \(N\) & Pearson \(r\) " `endrow' "\midrule" _n
+    forvalues j = 1/`=_N' {
+        local pair = cond(left[`j'] == "wp07_iat3", "IAT3 and ", "IADT2 and ") + ///
+            cond(right[`j'] == "wp07_iadt2", "IADT2", "IADT3")
+        local base = cond(basis[`j'] == "pair", "Pair-complete", "Three-measure common")
+        local coef = cond(status[`j'] == "available", strtrim(string(pearson_r[`j'], "%6.3f")), "--")
+        file write `table' "`pair' & `base' & " (n[`j']) " & `coef' " `endrow'
+    }
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Unweighted within-sample Pearson coefficients. IADT3 shares the two IADT2 items and adds an app-installation item. Their association includes mechanical overlap; these comparisons do not validate a latent trait. Undefined coefficients are not replaced by zero.\par}" _n "\end{table}" _n
+    file close `table'
+
+    * S5. Selected item states; the complete versioned ledgers are separate.
+    import delimited using "`out'/item_denominators.csv", varnames(1) stringcols(2) clear
+    local fields q4 q2_2 q2_3 q2_1 q3_1 q3_5 q3_8 q3_15 q3_16 q3_17 q4_5 q4_6 q6_2 q6_4 q6_13 q6_14 q6_15
+    local names `" "Age" "Highest education" "Main occupation" "First-arrival calendar year" "Regular mobile phone use" "Internet-use frequency" "Data or balance ran out" "App installation" "Transfer ability by phone" "Confidence in avoiding online fraud" "Own-name proof of address" "Own-name phone line" "Remittance receipt frequency" "Latest remittance receipt channel" "Remittance disposition" "Domestic digital participation" "Domestic operation bin" "'
+    file open `table' using "`out'/S5_response_coverage.tex", write text
+    file write `table' "\begin{table}[htbp]" _n "\centering\small" _n ///
+        "\caption{Response coverage for selected survey items}" _n "\setlength{\tabcolsep}{4pt}" _n ///
+        "\label{tab:item-response-coverage}" _n "\begin{tabular}{@{}lrrrrrr@{}}" _n ///
+        "\toprule Item & Ordinary & Skip & Unavailable & Blank & Special & Unresolved " `endrow' "\midrule" _n
+    local index 0
+    foreach field of local fields {
+        local ++index
+        local label : word `index' of `names'
+        file write `table' "`label'"
+        forvalues state = 1/6 {
+            quietly summarize state`state' if item == "`field'", meanonly
+            file write `table' " & " (r(sum))
+        }
+        file write `table' " " `endrow'
+    }
+    file write `table' "\bottomrule" _n "\end{tabular}" _n ///
+        "\par\smallskip{\footnotesize\raggedright Notes: Each row partitions all " (`admitted') ///
+        " admitted records. Skip is a closed route; unavailable is not offered in that version. Blank is an applicable unanswered item. Special includes instrument-specific uncertainty, refusal or another explicit unscored code. Unresolved includes unknown versions/routes and unresolved entries. The versioned ledgers give the offered options and their denominators.\par}" _n "\end{table}" _n
+    file close `table'
+}
+frame drop `exhibit'
+
+* END DESCRIPTIVES
+exit
+
 * APPROVED E.4 MODELS — source integrated; native validation and execution still held.
 * Working robust VCE is NOT a correction for unrecorded referral/household dependence.
 * Associations concern each recruited-cohort model sample, not a causal/national effect.
@@ -3883,10 +738,10 @@ if "`e4_output'" == "" {
     exit 198
 }
 foreach filename in e4_model_status.csv e4_support.csv e4_native_matrices.csv ///
-    e4_probabilities.csv e4_primary_tests.csv {
+    e4_probabilities.csv e4_primary_tests.csv e4_joint_support.csv {
     confirm new file "`e4_output'/`filename'"
 }
-confirm numeric variable wp07_iat3 wp07_iadt2 wp07_iaff2 q4 q2_2 q2_3 q2_1 ///
+confirm numeric variable wp07_iat3 wp07_iadt2 wp07_iaff2 q4 wp07_state_q4 q2_2 q2_3 q2_1 ///
     wp07_residence e4_education3 e4_residence4 e4_occupation6 ///
     wp07_remit_any_digital wp07_domestic_60d, exact
 assert missing(wp07_iat3) | inrange(wp07_iat3, 0, 1)
@@ -3895,18 +750,18 @@ assert missing(wp07_iaff2) | inlist(wp07_iaff2, 0, .5, 1)
 assert missing(wp07_remit_any_digital) | inlist(wp07_remit_any_digital, 0, 1)
 assert missing(wp07_domestic_60d) | inlist(wp07_domestic_60d, 0, 1)
 
-* These are model-specific masks, not exclusions from the admitted cohort.
+* Ordinary age is required for the model masks, not for cohort membership.
 local e4_admitted_n = _N
-local e4_raw "q4 q2_2 q2_3 q2_1 wp07_residence wp07_iat3 wp07_iadt2 wp07_iaff2 wp07_remit_any_digital wp07_domestic_60d"
+local e4_raw "q4 wp07_state_q4 q2_2 q2_3 q2_1 wp07_residence wp07_iat3 wp07_iadt2 wp07_iaff2 wp07_remit_any_digital wp07_domestic_60d"
 _datasignature `e4_raw'
 local e4_signature "`r(datasignature)'"
 gen long e4_row_order = _n
 gen byte e4_mask_r0 = !missing(wp07_remit_any_digital, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence) & inrange(q4, 18, 100) & ///
-    q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
+    wp07_iaff2, q4, q2_2, wp07_residence) & wp07_state_q4 == 1 & ///
+    inrange(q4, 18, 100) & q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
 gen byte e4_mask_d0 = !missing(wp07_domestic_60d, wp07_iat3, wp07_iadt2, ///
-    wp07_iaff2, q4, q2_2, wp07_residence) & inrange(q4, 18, 100) & ///
-    q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
+    wp07_iaff2, q4, q2_2, wp07_residence) & wp07_state_q4 == 1 & ///
+    inrange(q4, 18, 100) & q4 == floor(q4) & inrange(q2_2, 1, 10) & q2_2 == floor(q2_2)
 gen byte e4_mask_r1 = e4_mask_r0 & !missing(q2_3, q2_1) & ///
     inrange(q2_3, 1, 9) & q2_3 == floor(q2_3) & ///
     inrange(q2_1, 1950, 2026) & q2_1 == floor(q2_1)
@@ -3917,10 +772,18 @@ gen byte e4_mask_common = e4_mask_r0 & e4_mask_d0
 * The existing coverage evidence supports omitting a redundant domestic common fit.
 * If exact equality fails, stop and amend the manifest; do not add a sixth fit.
 assert e4_mask_common == e4_mask_d0
-assert !missing(e4_education3, e4_residence4) if e4_mask_r0 | e4_mask_d0
+* Verify the intended core and extended rows on this locked cohort before fitting.
+assert e4_mask_r1 == e4_mask_r0
+assert e4_mask_d1 == e4_mask_d0
+quietly count if e4_mask_r0
+assert r(N) == 402
+quietly count if e4_mask_d0
+assert r(N) == 394
+assert inlist(e4_education3, 1, 2, 3) & inlist(e4_residence4, 1, 2, 3, 4) ///
+    if e4_mask_r0 | e4_mask_d0
 assert !missing(e4_occupation6) if e4_mask_r1 | e4_mask_d1
 
-tempname modelout supportout matrixout probabilityout primary
+tempname modelout supportout jointout matrixout probabilityout primary
 local e4_open ""
 capture noisily {
     file open `modelout' using "`e4_output'/e4_model_status.csv", write text
@@ -3929,6 +792,11 @@ capture noisily {
     file open `supportout' using "`e4_output'/e4_support.csv", write text
     local e4_open "`e4_open' `supportout'"
     file write `supportout' "model,check,field,level,outcome,n,minimum,maximum" _n
+    file open `jointout' using "`e4_output'/e4_joint_support.csv", write text
+    local e4_open "`e4_open' `jointout'"
+    file write `jointout' "model,focal,intended_n,lower,higher,lower_n,higher_n," ///
+        "nonempty_strata,strata_with_both,n_in_strata_with_both," ///
+        "strata_outside_range,n_in_strata_outside_range,support_status" _n
     file open `matrixout' using "`e4_output'/e4_native_matrices.csv", write text
     local e4_open "`e4_open' `matrixout'"
     file write `matrixout' "model,operation,matrix,row,column,row_name,column_name,value" _n
@@ -4023,17 +891,64 @@ capture noisily {
             if "`focal'" == "wp07_iaff2" {
                 local higher = 1
             }
-            local endpoint_ok = 1
+            quietly count if `mask' & `focal' == `lower'
+            local lower_n = r(N)
+            quietly count if `mask' & `focal' == `higher'
+            local higher_n = r(N)
+            local endpoint_ok = (`lower_n' > 0 & `higher_n' > 0)
             foreach endpoint in `lower' `higher' {
-                quietly count if `mask' & `focal' == `endpoint'
-                if r(N) == 0 {
-                    local endpoint_ok = 0
-                }
                 foreach response in 0 1 {
                     quietly count if `mask' & `focal' == `endpoint' & `outcome' == `response'
                     file write `supportout' "`model',endpoint,`focal',`endpoint',`response'," (r(N)) ",," _n
                 }
             }
+
+            * Screen each education-residence stratum without trimming the margins sample.
+            local nonempty = 0
+            local both_strata = 0
+            local both_n = 0
+            local outside_strata = 0
+            local outside_n = 0
+            forvalues education = 1/3 {
+                forvalues residence = 1/4 {
+                    local stratum "`mask' & e4_education3 == `education' & e4_residence4 == `residence'"
+                    quietly summarize `focal' if `stratum', meanonly
+                    local stratum_n = r(N)
+                    if `stratum_n' == 0 {
+                        continue
+                    }
+                    local nonempty = `nonempty' + 1
+                    if `lower' < r(min) | `higher' > r(max) {
+                        local outside_strata = `outside_strata' + 1
+                        local outside_n = `outside_n' + `stratum_n'
+                        continue
+                    }
+                    quietly count if `stratum' & `focal' == `lower'
+                    local stratum_lower_n = r(N)
+                    quietly count if `stratum' & `focal' == `higher'
+                    if `stratum_lower_n' > 0 & r(N) > 0 {
+                        local both_strata = `both_strata' + 1
+                        local both_n = `both_n' + `stratum_n'
+                    }
+                }
+            }
+            local support_status "BOTH_IN_ALL_SCREENED_STRATA"
+            if `intended_n' == 0 {
+                local support_status "NO_INTENDED_SAMPLE"
+            }
+            else if !`endpoint_ok' {
+                local support_status "ENDPOINT_ABSENT"
+            }
+            else if `both_strata' == 0 {
+                local support_status "NO_STRATUM_WITH_BOTH"
+            }
+            else if `both_strata' < `nonempty' {
+                local support_status "LIMITED_EXACT_SUPPORT"
+            }
+            file write `jointout' "`model',`focal'," (`intended_n') ",`lower',`higher'," ///
+                (`lower_n') "," (`higher_n') "," (`nonempty') "," (`both_strata') "," ///
+                (`both_n') "," (`outside_strata') "," (`outside_n') ",`support_status'" _n
+
             if "`focal'" == "wp07_iat3" {
                 local iat_endpoint_ok = `endpoint_ok'
             }
@@ -4230,6 +1145,7 @@ capture noisily {
                     if `margins_rc' == 0 {
                         * Copy all declared returns before another r-class command can replace them.
                         capture {
+                            matrix e4_MN = (r(N))
                             matrix e4_AT = r(at)
                             matrix e4_MB = r(b)
                             matrix e4_MV = r(V)
@@ -4244,8 +1160,14 @@ capture noisily {
                         local return_rc = _rc
                         local contrast_status "MATRIX_CAPTURE_UNAVAILABLE"
                         if `return_rc' == 0 {
-                            foreach matrix in e4_AT e4_MB e4_MV e4_ME e4_MT ///
-                                e4_DB e4_DV e4_DE e4_DT e4_L {
+                            capture matrix e4_MN_AT = r(_N)
+                            local has_endpoint_counts = (_rc == 0)
+                            local margins_matrices e4_MN e4_AT e4_MB e4_MV e4_ME e4_MT ///
+                                e4_DB e4_DV e4_DE e4_DT e4_L
+                            if `has_endpoint_counts' {
+                                local margins_matrices "`margins_matrices' e4_MN_AT"
+                            }
+                            foreach matrix of local margins_matrices {
                                 local rows : rowfullnames `matrix'
                                 local columns : colfullnames `matrix'
                                 forvalues i = 1/`=rowsof(`matrix')' {
@@ -4279,6 +1201,20 @@ capture noisily {
                                 if e4_AT[1,`at_column'] != `lower' | e4_AT[2,`at_column'] != `higher' | ///
                                     e4_L[1,1] != -1 | e4_L[1,2] != 1 | ///
                                     e4_ME[1,1] != 0 | e4_ME[1,2] != 0 | e4_DE[1,1] != 0 {
+                                    local layout_ok = 0
+                                }
+                            }
+                            if `layout_ok' {
+                                local full_sample = 0
+                                if `has_endpoint_counts' {
+                                    local full_sample = (rowsof(e4_MN_AT) == 1 & colsof(e4_MN_AT) == 2)
+                                }
+                                if `full_sample' {
+                                    local full_sample = (e4_MN[1,1] == `estimator_n' & ///
+                                        e4_MN_AT[1,1] == `estimator_n' & e4_MN_AT[1,2] == `estimator_n')
+                                }
+                                if !`full_sample' {
+                                    local contrast_status "MARGINS_SAMPLE_SIZE_HOLD"
                                     local layout_ok = 0
                                 }
                             }

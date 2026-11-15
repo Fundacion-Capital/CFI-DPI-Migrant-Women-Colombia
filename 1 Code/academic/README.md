@@ -1,6 +1,43 @@
 # Academic Stata track — current source checkpoint
+15 November 2026. The descriptive section of `2 Analysis.do` is available as a
+separate run on the locked, prepared survey file. It does not call preparation
+or run any model. The original Master, preparation and E.4 execution holds
+remain in place. The dated checkpoint below describes the earlier held source.
+
+## Run the descriptive section
+
+Start a separate Stata session. Load the approved prepared dataset in memory
+and use an existing, empty **restricted** output directory. Substitute your
+local paths:
+
+```stata
+ssc install blindschemes
+use "path/to/restricted/academic_prepared.dta", clear
+do "path/to/repository/1 Code/academic/2 Analysis.do" descriptives ///
+    "path/to/restricted/new-output-folder" "path/to/repository/1 Code/academic"
+```
+
+Install `blindschemes` only once if `plotplain` is not already available. The
+held Master checks for it and installs it only if missing. The descriptive
+call uses the verbatim version-specific offered-choice list in
+`descriptive_options.csv`; do not substitute pooled or historic value labels.
+
+The run writes two main tables, five supplementary tables, the two descriptive
+figures and their presentation or submission variants, and aggregate CSVs. Use
+the `_artwork.pdf` files and the corresponding `_caption.tex` fragments when
+the publisher requires captions outside artwork. Figures with in-image notes
+are for independent review or presentations. The detailed option and route
+counts stay restricted, including zero bases and small cells.
+`item_choices.csv` preserves the original audit columns;
+`item_choice_display.csv` distinguishes the ordinary multiple-response parent
+base from the all-recorded parent base used for explicit refusal. No prepared
+records are changed and no respondent-level file is created. The numerical and
+presentation checks are not release clearance.
+
+## 8 November checkpoint (historical)
+
 8 November 2026. E.4 decisions A–D are accepted by the owner and integrated
-**in held source only**. All three scripts retain their line-7 `exit 198`.
+**in held source only**. At that checkpoint all three scripts began with a hold.
 The analysis has an additional stop immediately before the E.4 estimation body.
 No execution, participant load, hold removal or release is authorized here.
 Appendix C2 remains HOLD.
@@ -21,8 +58,9 @@ evidence at their dated checkpoints, not standing execution authority.
   model-only education/residence/occupation groupings are appended explicitly.
   Original values, detailed descriptive categories and historical exclusions
   remain unchanged; no new pooled outcome or LCA input is created.
-- **2 Analysis.do:** existing item/domain reports and declared descriptive
-  associations are retained. After a separate stop, the E.4 body contains the
+- **2 Analysis.do:** the earlier item/domain reports are preserved in Git and
+  the private audit. The 15 November descriptive entry above replaces them in
+  the current source. After a separate stop, the unchanged E.4 body contains the
   five named logit specifications, model-specific masks, support and exact-sample
   checks, finite/rank/omission checks, six primary Wald slots, fixed probability
   comparisons and fixed-six Holm treatment. There is no helper program, external

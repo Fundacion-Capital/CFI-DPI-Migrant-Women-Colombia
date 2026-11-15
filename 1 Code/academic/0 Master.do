@@ -28,7 +28,11 @@ local carrier ///
     "`restricted_archive'/7132afe058718e790305f51e78a215b383d22009/2 Output/CFI_DPI Data for analysis.dta"
 
 * 2. Stata commands
-* The academic scripts use official Stata commands only. No add-ons to install.
+* Install the graphics theme only if it is not already available.
+capture findfile scheme-plotplain.scheme
+if _rc ssc install blindschemes
+set scheme plotplain
+
 which logit
 which margins
 
