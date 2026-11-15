@@ -1,8 +1,16 @@
-# Academic Stata track — current source checkpoint
-15 November 2026. `2 Analysis.do` has separate descriptive and determinants
-entry points on the locked, prepared data. The older Master, historical E.5,
-Appendix C2 and latent-class analysis are not part of these runs. The dated
-checkpoint below describes the earlier held source.
+# Academic Stata track
+
+The Master routes one explicit stage on the approved prepared data already in
+memory. It does not load the survey or run preparation, historical E.5,
+Appendix C2 or latent-class analysis. Pass the stage, repository root and a
+fresh, existing restricted output folder. The Master passes the stage, output
+folder and academic code directory to `2 Analysis.do`.
+
+The five determinants models and the exhibit producer are frozen at the
+audited standalone baseline `2c200e9`. The model specifications, analytical
+sample rules, and support flags were not changed by the Master routing fix.
+The Master was verified in Stata against an empty-session routing stub; this
+was not a new data load, fit, or test of a raw-to-results pipeline.
 
 ## Run the descriptive section
 
@@ -11,14 +19,13 @@ and use an existing, empty **restricted** output directory. Substitute your
 local paths:
 
 ```stata
-ssc install blindschemes
 use "path/to/restricted/academic_prepared.dta", clear
-do "path/to/repository/1 Code/academic/2 Analysis.do" descriptives ///
-    "path/to/restricted/new-output-folder" "path/to/repository/1 Code/academic"
+do "path/to/repository/1 Code/academic/0 Master.do" descriptives ///
+    "path/to/repository" "path/to/restricted/new-output-folder"
 ```
 
-Install `blindschemes` only once if `plotplain` is not already available. The
-held Master checks for it and installs it only if missing. The descriptive
+The Master installs `blindschemes` only if `plotplain` is not already available.
+The descriptive
 call uses the verbatim version-specific offered-choice list in
 `descriptive_options.csv`; do not substitute pooled or historic value labels.
 
@@ -38,15 +45,15 @@ presentation checks are not release clearance.
 
 For an authorized run only: start with the locked, prepared analytic dataset,
 project the 14 fields below, and use an existing empty **restricted** output
-folder for the estimation ledgers. Do not send the Master or the ledgers to
-Overleaf.
+folder for the estimation ledgers. Keep the restricted ledgers out of GitHub
+and Overleaf.
 
 ```stata
 use wp07_iat3 wp07_iadt2 wp07_iaff2 q4 wp07_state_q4 q2_2 q2_3 q2_1 ///
     wp07_residence e4_education3 e4_residence4 e4_occupation6 ///
     wp07_remit_any_digital wp07_domestic_60d using "path/to/restricted/academic_prepared.dta", clear
-do "path/to/repository/1 Code/academic/2 Analysis.do" determinants ///
-    "path/to/restricted/determinants-ledgers"
+do "path/to/repository/1 Code/academic/0 Master.do" determinants ///
+    "path/to/repository" "path/to/restricted/determinants-ledgers"
 
 * After checking the ledgers, start an empty session for the aggregate renderer.
 * Use an existing empty restricted output folder and the installed plotplain scheme.
@@ -72,7 +79,7 @@ in grayscale. Keep the caption and source/denominator notes outside the
 paper artwork. Export a separate annotated copy for slides. Check fonts
 and rendered layout at publication size; venue-specific rules still apply.
 
-## 8 November checkpoint (historical)
+## 8 November checkpoint (historical only; not run instructions)
 
 8 November 2026. E.4 decisions A–D are accepted by the owner and integrated
 **in held source only**. At that checkpoint all three scripts began with a hold.
