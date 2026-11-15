@@ -1,8 +1,8 @@
 # Academic Stata track — current source checkpoint
-15 November 2026. The descriptive section of `2 Analysis.do` is available as a
-separate run on the locked, prepared survey file. It does not call preparation
-or run any model. The original Master, preparation and E.4 execution holds
-remain in place. The dated checkpoint below describes the earlier held source.
+15 November 2026. `2 Analysis.do` has separate descriptive and determinants
+entry points on the locked, prepared data. The older Master, historical E.5,
+Appendix C2 and latent-class analysis are not part of these runs. The dated
+checkpoint below describes the earlier held source.
 
 ## Run the descriptive section
 
@@ -33,6 +33,44 @@ counts stay restricted, including zero bases and small cells.
 base from the all-recorded parent base used for explicit refusal. No prepared
 records are changed and no respondent-level file is created. The numerical and
 presentation checks are not release clearance.
+
+## Run the five determinants models and make the exhibits
+
+For an authorized run only: start with the locked, prepared analytic dataset,
+project the 14 fields below, and use an existing empty **restricted** output
+folder for the estimation ledgers. Do not send the Master or the ledgers to
+Overleaf.
+
+```stata
+use wp07_iat3 wp07_iadt2 wp07_iaff2 q4 wp07_state_q4 q2_2 q2_3 q2_1 ///
+    wp07_residence e4_education3 e4_residence4 e4_occupation6 ///
+    wp07_remit_any_digital wp07_domestic_60d using "path/to/restricted/academic_prepared.dta", clear
+do "path/to/repository/1 Code/academic/2 Analysis.do" determinants ///
+    "path/to/restricted/determinants-ledgers"
+
+* After checking the ledgers, start an empty session for the aggregate renderer.
+* Use an existing empty restricted output folder and the installed plotplain scheme.
+do "path/to/repository/1 Code/academic/3 Determinants exhibits.do" ///
+    "path/to/restricted/determinants-ledgers" "path/to/restricted/new-exhibits"
+```
+
+The analysis runs R0, D0, R1, D1 and R0C. The exhibit script reads saved
+aggregate ledgers; it does not estimate a model. It makes the focal
+coefficient table, both contrast tables, model and Wald tables, clean vector
+figures, annotated slide copies and a display-level CSV. Only those screened
+exhibits belong in [the repository output folder](../../2%20Output/Academic/Determinants).
+Keep the full coefficient table, support and matrix ledgers, and run receipts
+in restricted storage. Do not substitute the historical E.5 renderer.
+
+## Figure style for this project
+
+Use `scheme(plotplain)` on every new academic graph, including graphs
+generated from the analysis ledgers. Match the paper figures already adopted:
+Arial embedded in vector PDFs, white backgrounds, readable labels and units,
+consistent scales for like-for-like comparisons, and markers distinguishable
+in grayscale. Keep the caption and source/denominator notes outside the
+paper artwork. Export a separate annotated copy for slides. Check fonts
+and rendered layout at publication size; venue-specific rules still apply.
 
 ## 8 November checkpoint (historical)
 

@@ -2,13 +2,16 @@
 Digital Payments, Partial Inclusion | Academic quantitative analysis
 Jorge E. Zavala and Angélica Cardozo Cadavid
 1. Descriptive analysis
-2. Determinants (held)
+2. Determinants: sample, support, five logit fits and reporting
 */
 args stage out code
 
-* Call descriptives only with the prepared dataset already in memory.
-* The existing master route and all other invocations remain held.
-if "`stage'" != "descriptives" | "`out'" == "" | "`code'" == "" {
+* Both sections use the locked analytical data already in memory.
+if !inlist("`stage'", "descriptives", "determinants") | "`out'" == "" {
+    exit 198
+}
+if "`stage'" == "descriptives" {
+if "`code'" == "" {
     exit 198
 }
 
@@ -722,14 +725,12 @@ frame drop `exhibit'
 
 * END DESCRIPTIVES
 exit
+}
 
-* APPROVED E.4 MODELS — source integrated; native validation and execution still held.
+* 2. Determinants: core models, covariate extensions and a common-sample check.
 * Working robust VCE is NOT a correction for unrecorded referral/household dependence.
 * Associations concern each recruited-cohort model sample, not a causal/national effect.
-* Keep the full-script entry hold and this independent stop before any estimation.
-exit 198
-* BEGIN E4 ESTIMATION
-args e4_output
+local e4_output "`out'"
 * BEGIN E4 BODY
 version 16
 set varabbrev off
@@ -750,7 +751,7 @@ assert missing(wp07_iaff2) | inlist(wp07_iaff2, 0, .5, 1)
 assert missing(wp07_remit_any_digital) | inlist(wp07_remit_any_digital, 0, 1)
 assert missing(wp07_domestic_60d) | inlist(wp07_domestic_60d, 0, 1)
 
-* Ordinary age is required for the model masks, not for cohort membership.
+* 2.1. Sample: ordinary age is required for modelling, not for cohort membership.
 local e4_admitted_n = _N
 local e4_raw "q4 wp07_state_q4 q2_2 q2_3 q2_1 wp07_residence wp07_iat3 wp07_iadt2 wp07_iaff2 wp07_remit_any_digital wp07_domestic_60d"
 _datasignature `e4_raw'
@@ -836,7 +837,7 @@ capture noisily {
             local expected_rank = 6
         }
 
-        * Both outcomes and each present categorical level must support both responses.
+        * 2.2. Check outcome variation, covariate support and fixed score endpoints.
         foreach response in 0 1 {
             quietly count if `mask' & `outcome' == `response'
             file write `supportout' "`model',outcome,`outcome',,`response'," (r(N)) ",," _n
@@ -960,7 +961,7 @@ capture noisily {
             }
         }
 
-        * At most one of these five explicit commands is attempted in this iteration.
+        * 2.3. Fit the named model once, then verify the estimation sample and covariance.
         local attempted = 0
         local fit_rc = .
         local estimator_n = .
@@ -1074,7 +1075,7 @@ capture noisily {
             (`estimator_n') "," (`converged') "," (`model_rank') "," (`expected_rank') "," ///
             (`mismatch') "," (`determined_successes') "," (`determined_failures') ",`model_status'" _n
 
-        * Six primary slots: three coefficient-null Wald tests in each core, never extensions.
+        * 2.4. Test the three coefficient nulls in each core; no tests from extensions enter Holm.
         if inlist("`model'", "R0_E4", "D0_E4") {
             foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
                 local family_prefix "R"
@@ -1108,7 +1109,7 @@ capture noisily {
             }
         }
 
-        * Model state is restored for each declared probability comparison.
+        * 2.5. Standardize each comparison over the verified fitted sample.
         foreach focal in wp07_iat3 wp07_iadt2 wp07_iaff2 {
             local lower = 0.5
             local higher = 0.75
@@ -1300,7 +1301,6 @@ if `e4_run_rc' != 0 {
     exit `e4_run_rc'
 }
 * END E4 BODY
-* END E4 ESTIMATION
 
 * HISTORICAL REGRESSION/LCA RETIREMENT
 * No old model/interaction/supplementary grid, H1/k4 default or class assignment.
