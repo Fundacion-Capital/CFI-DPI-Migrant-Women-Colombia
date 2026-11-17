@@ -3,8 +3,18 @@ Digital Payments, Partial Inclusion | Academic quantitative analysis
 Jorge E. Zavala and Angélica Cardozo Cadavid
 1. Descriptive analysis
 2. Determinants: sample, support, five logit fits and reporting
+3. Measurement and latent-class analysis: explicit native Stata/MP stage
 */
-args stage out code
+args stage out code source reference
+
+* Revised LCA: single projected read and private output, separate from the frozen stages.
+if "`stage'" == "lca" {
+    if "`out'" == "" | "`code'" == "" | "`source'" == "" | "`reference'" == "" {
+        exit 198
+    }
+    do "`code'/2a Measurement and LCA.do" "`source'" "`reference'" "`out'" "`code'"
+    exit
+}
 
 * Both sections use the locked analytical data already in memory.
 if !inlist("`stage'", "descriptives", "determinants") | "`out'" == "" {

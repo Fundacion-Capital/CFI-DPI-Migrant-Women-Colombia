@@ -12,6 +12,31 @@ sample rules, and support flags were not changed by the Master routing fix.
 The Master was verified in Stata against an empty-session routing stub; this
 was not a new data load, fit, or test of a raw-to-results pipeline.
 
+## Run the measurement and LCA section
+
+Use a dedicated empty Stata/MP 19 session with its working directory
+set to the fresh restricted output directory. Close any explicit log or
+command log first; the native batch and fit logs stay in that directory.
+The opt-in branch is called through `2 Analysis.do`, not the
+Master. In addition to the approved prepared file, it requires the frozen
+F.2 aggregate pattern ledger. Both files must be the reviewed versions;
+neither is part of the public analysis source.
+
+```stata
+do "path/to/repository/1 Code/academic/2 Analysis.do" lca ///
+    "path/to/restricted/run" "path/to/repository/1 Code/academic" ///
+    "path/to/restricted/academic_prepared.dta" "path/to/restricted/patterns.csv"
+```
+
+The code reads 18 fields once, reconciles all 144 observed response pattern
+counts, and fits the prespecified LI and LD candidate schedule on the same
+407 complete cases. The one-class baselines are analytic. The two agreement
+items are pooled only within the LCA; the baseline survey responses, existing
+determinants and descriptive measures are unchanged. Output includes private
+fit logs, aggregate probabilities and model diagnostics; no respondent-level
+predictions or assignments are saved. Review convergence, identification,
+fit and stability before promoting any class-based figures or claims.
+
 ## Run the descriptive section
 
 Start a separate Stata session. Load the approved prepared dataset in memory

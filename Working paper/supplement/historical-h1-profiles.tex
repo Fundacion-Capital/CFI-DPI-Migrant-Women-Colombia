@@ -1,0 +1,33 @@
+\subsection{Exploratory four-class profiles from the archive}
+Table~\ref{tab:historical-h1-profiles} reconstructs the original preferred-final H1 solution. The audit verified the modal counts and both the posterior-weighted and modal-assignment profiles for all 80 item-category-by-class entries in the legacy exhibits. The table instead shows the \emph{fitted} response probabilities from the saved Stata coefficients. The legacy mapping exhibit used the label \emph{model marginal} for the mean posterior share. It matches the fitted mixing weight to within 0.00020 percentage points, but the two are calculated differently. Neither is the share obtained by assigning each case to its highest-probability class.
+
+\begin{table}[!htbp]
+\centering
+\caption{Historical H1: exploratory class weights and fitted response profiles}
+\label{tab:historical-h1-profiles}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & H1-A & H1-B & H1-C & H1-D \\
+\midrule
+Fitted mixing weight (\%) & 25.10 & 13.50 & 51.37 & 10.03 \\
+Modal count & 110 & 56 & 215 & 42 \\
+Modal share (\%) & 26.00 & 13.24 & 50.83 & 9.93 \\
+\addlinespace
+\multicolumn{5}{@{}l}{\textit{Fitted response probabilities (percent, by historical category)}} \\
+Socioeconomic vulnerability & 23.5/15.8/60.7 & 25.6/52.7/21.8 & 32.7/43.3/24.0 & 71.7/21.1/7.2 \\
+Digital capability & 82.2/15.2/2.6 & 11.6/62.8/25.6 & 30.6/56.3/13.1 & 3.5/18.3/78.2 \\
+Formal financial access & 66.8/26.0/7.1 & 90.4/9.6/0.0 & 12.8/49.2/38.0 & 43.8/28.2/28.0 \\
+Formal-system use & 95.4/4.6/0.0 & 0.0/36.0/64.0 & 19.2/53.6/27.2 & 0.0/0.0/100.0 \\
+Service quality & 70.2/21.5/8.2 & 38.5/59.7/1.8 & 20.4/38.2/41.4 & 0.0/4.9/95.1 \\
+Digital remittance/payment use & 70.3/20.8/9.0 & 0.5/85.4/14.1 & 31.5/33.2/35.3 & 4.1/2.5/93.4 \\
+Adverse-experience proxy & 56.9/43.1 & 9.4/90.6 & 25.0/75.0 & 79.8/20.2 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{0.98\linewidth}\footnotesize\raggedright
+\textit{Notes:} $N=423$ for the archived fit. A--D follow the original reporting order (native classes 1, 4, 3, and 2). The six ternary profiles list low/middle/high categories; the binary adverse-experience proxy lists the lower/upper categories under the implemented historical cutoff. A displayed 0.0 or 100.0 may be a rounded boundary estimate, not evidence of an impossible or certain response. Percentages may not sum to 100 because of rounding. These are conditional on the fitted historical model and are not population shares or independent validation of the classes.
+\end{minipage}
+\end{table}
+
+The profiles are informative mainly because the historical inputs did not all move together. H1-A combines high measured vulnerability with low capability and low use. H1-B has relatively high formal-system use despite low measured access, and its upper-category probability on the historical adverse-experience proxy is the highest. H1-C accounts for roughly half the historical fit and has comparatively high measured formal access, without a uniformly high profile across the other domains. H1-D has the highest fitted probabilities of high digital capability, service quality and digital remittance/payment use, and the lowest upper-category probability on the adverse-experience proxy. Those contrasts motivate distinguishing access, use and reported difficulties in the paper; they do not establish four types or show that any group was protected, experienced verified losses, or would respond differently to an intervention.

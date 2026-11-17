@@ -1,0 +1,118 @@
+\section{Revised latent-class analysis}
+\label{sec:revised-lca}
+
+The first revised comparison tested one through six classes in two model
+families on the initial 407-case indicator set. Neither family yielded an
+admissible multiclass fit. The later discrete-item sensitivity analysis below
+tests a broader set of measurement choices. Observed profiles remain the
+paper's basis for reporting.
+
+\paragraph{Indicators and common sample.}
+We used five reported items: regular use of a personal smartphone; proof of
+address in one's own name that the respondent considered acceptable to a
+financial institution; confidence in avoiding online fraud and suspicious
+messages; deciding how household remittances are used most of the time; and
+perceived information about fees, exchange rates and what to do if something
+goes wrong. The first two items were binary. For each agreement item, we
+combined adjacent degrees of disagreement and of agreement, retaining neutral
+as its own category. The information item retained all four ordered responses.
+The recodes apply only to this analysis. Of the 423 survey records, 407 had
+scorable responses on all five items. The 11 respondents whose address
+documentation was in process and the five who declined to answer that
+question were excluded from this complete-case comparison, not coded as
+lacking proof of address.
+
+\paragraph{Specifications and checks.}
+The local-independence model used two binary logits and three ordered logits
+with class-specific cutpoints, treating responses as independent within class.
+The local-dependence sensitivity modeled the nine-category joint response
+to the two agreement items with a multinomial logit, allowing those items
+to remain associated within class. The other items were unchanged. Both
+specifications assign probabilities to the same 144 possible response
+patterns on the same 407 records; 63 patterns occurred in the sample.
+We computed a one-class baseline from sample frequencies for each family.
+For two through six classes, we used three separately seeded fits at each
+class count in each family, with 120 initialization draws and a final
+iteration cap of 2,400 per fit in Stata/MP~19. The number of free parameters
+is $10K-1$ under local independence and $14K-1$ under local dependence.
+We fixed the search and reporting rules before the expanded run. This
+was a retrospective sensitivity analysis, not a preregistered test.
+
+Reporting a class solution required an interior, stationary fit with
+adequate class sizes and a usable covariance matrix. At least two
+independently seeded fits had to agree on the likelihood and profile
+probabilities after accounting for arbitrary class labels. In
+Table~\ref{tab:revised-lca}, the only four fits that Stata reported as
+converged had two classes. All four had at least one probability within
+$10^{-6}$ of zero or one. Two also failed the stationarity check: the
+maximum discrepancy between posterior-weighted counts and their fitted
+counterparts, divided by the sample size, exceeded $10^{-6}$. The other
+26 fits reached the iteration cap. We reconstructed all 30 terminal
+likelihoods independently from the saved coefficients and observed
+pattern counts. Numerical agreement verifies the recorded endpoints;
+it does not establish convergence.
+
+\begin{table}[!htbp]
+\centering
+\caption{Class-count diagnostics for the revised latent-class models}
+\label{tab:revised-lca}
+\begin{minipage}{\linewidth}
+\centering\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Model & $K$ & \shortstack{Free\\parameters} & \shortstack{Stata\\converged}
+& \shortstack{At iteration\\cap} & \shortstack{Log\\likelihood} & AIC & BIC \\
+\midrule
+Local independence & 1 & 9 & --- & --- & -1398.41 & 2814.83 & 2850.91 \\
+                   & 2 & 19 & 2 & 1 & -1372.17 & 2782.35 & 2858.51 \\
+                   & 3 & 29 & 0 & 3 & -1357.59 & 2773.18 & 2889.43 \\
+                   & 4 & 39 & 0 & 3 & -1350.46 & 2778.92 & 2935.26 \\
+                   & 5 & 49 & 0 & 3 & -1342.92 & 2783.83 & 2980.26 \\
+                   & 6 & 59 & 0 & 3 & -1339.11 & 2796.23 & 3032.75 \\
+\midrule
+Local dependence & 1 & 13 & --- & --- & -1392.14 & 2810.29 & 2862.40 \\
+                   & 2 & 27 & 2 & 1 & -1363.78 & 2781.55 & 2889.79 \\
+                   & 3 & 41 & 0 & 3 & -1352.42 & 2786.83 & 2951.19 \\
+                   & 4 & 55 & 0 & 3 & -1344.60 & 2799.20 & 3019.69 \\
+                   & 5 & 69 & 0 & 3 & -1338.52 & 2815.04 & 3091.65 \\
+                   & 6 & 83 & 0 & 3 & -1334.24 & 2834.48 & 3167.21 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright
+Notes: All rows use 407 complete cases. $K$ is the number of classes.
+The one-class baselines use no optimizer. Other rows summarize three
+fits each. The likelihood and the Akaike and Bayesian information criteria
+(AIC and BIC) use the largest recorded endpoint in each row, not a verified
+multiclass maximum. None of the multiclass fits passed the reporting checks.\par
+Source: Authors' calculations from the CFI-DPI survey in Colombia.
+\end{minipage}
+\end{table}
+
+\paragraph{Stability of the four-class candidates.}
+None of the six four-class fits converged. For each pair of seeds we matched
+class labels to minimize the largest difference across class shares and
+response probabilities. Even the closest pair differed by about
+20 percentage points on at least one quantity under local independence
+and 28 points under local dependence. These are discrepancies between
+terminal solutions, not intervals around a validated four-class model.
+The historical fit in Section~\ref{sec:lca} uses a different set of
+indicators and cannot settle the class count here.
+
+\paragraph{Implications for reporting.}
+BIC was lowest at the analytic one-class baseline within each family among
+the recorded endpoints. AIC favored different endpoints in the two
+families, but neither was admissible. There is also a bound that does
+not depend on optimization: no model on these data can exceed the
+saturated multinomial log likelihood, $\sum_{j:n_j>0} n_j\log(n_j/N)$,
+where $n_j$ is the count for response pattern $j$. Using that bound in
+BIC, even a four-class local-dependence fit attaining the saturated
+likelihood would have a BIC of at least 2929.54, compared with 2862.40
+for its one-class baseline. The bound also rules out a BIC improvement
+at five or six classes in either family. It does not settle the smaller
+candidates or rule out latent heterogeneity. We select no multiclass
+solution and report no class-based estimates. The paper's four observed
+onboarding profiles use a different pair of questions and 404 scorable
+pairs; they are not estimates of latent groups.
+
+\input{"\CFIPaperDir supplement/discrete-lca-sensitivity.tex"}

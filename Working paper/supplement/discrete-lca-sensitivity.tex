@@ -1,0 +1,41 @@
+\subsection{Discrete-item and category-count sensitivity}
+\label{sec:discrete-lca-sensitivity}
+The follow-up asks whether the data distinguish additional dimensions of access, capability, actual use and provider support once the measurement choices are varied. We fitted one to six classes in eleven fixed panels on 355--394 complete cases, allowing adjacent response categories to be collapsed at substantively defined thresholds. No panel used a continuous indicator or either outcome from the determinants analysis. Single items had two to four categories. Three specifications allow a pair of three-category responses to be associated within class by modeling their joint distribution. These are dependence checks on the same response vectors, not nine-category survey items. We kept refusal, uncertainty and skipped items unscored. The panels differ in which cases and responses can be used; changes in their absolute information criteria are not comparisons of model fit across different outcomes.
+
+The use-inclusive base combines personal smartphone use, own-name address proof, reported transfer ability, payments to merchants and perceived information about fees, exchange and recourse. The capability and use panel instead combines data or credit interruptions, a count of two own-name administrative resources (address proof and phone line), transfer ability, merchant payments, saving in the main account or wallet, and first-use support. We compare that panel with and without reported receipt of bank or app fraud alerts on the same cases. The OTP panel replaces saving with the ability to use a one-time passcode and retains the message item. The minimum-reach recode contrasts any access or use with none (including at least middle-category transfer ability, and no rather than any interruption). The established-use recode requires the top ordinary category on each graded item, keeping message receipt binary. These are different ways to operationalize access and use within the analytical survey; no recode changes a response in the prepared dataset.
+
+\begin{table}[!htbp]
+\centering
+\caption{Class-count screen under alternative categorical measurement designs}
+\label{tab:discrete-lca-sensitivity}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & & \multicolumn{5}{c}{Change in BIC from the panel's one-class baseline} \\
+\cmidrule(lr){3-7}
+Measurement panel & $N$ & $K=2$ & $K=3$ & $K=4$ & $K=5$ & $K=6$ \\
+\midrule
+Use-inclusive base & 394 & $-75.48$ & $-39.18$ & $-1.18$ & $39.74$ & $83.88$ \\
+Information threshold & 394 & $-74.08$ & $-51.59$ & $-15.23$ & $21.21$ & $59.53$ \\
+Base: transfer/payment pair & 394 & $-7.47$ & $53.33$ & $115.22$ & $179.86$ & $241.00$ \\
+Capability and use & 360 & $-168.53$ & $-162.50$ & $-127.85$ & $-85.99$ & $-37.03$ \\
+Capability: payment/saving pair & 360 & $-42.65$ & $-16.24$ & $42.66$ & $111.48$ & $181.93$ \\
+Capability plus message exposure & 356 & $-172.07$ & $-186.21$ & $-166.48$ & $-125.23$ & $-80.00$ \\
+Capability alone, matched & 356 & $-162.22$ & $-157.82$ & $-124.37$ & $-80.83$ & $-30.76$ \\
+Continuity, use and OTP ability & 355 & $-93.81$ & $-83.18$ & $-49.83$ & $-13.37$ & $39.77$ \\
+Code/transfer ability pair & 355 & $-52.74$ & $-21.06$ & $28.44$ & $86.72$ & $157.58$ \\
+Minimum reach, all binary & 360 & $-30.61$ & $-14.61$ & $12.34$ & $48.61$ & $84.26$ \\
+Established use, all binary & 355 & $-90.35$ & $-91.68$ & $-71.61$ & $-39.74$ & $-7.91$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{0.98\linewidth}\footnotesize\raggedright
+\textit{Notes:} Each cell uses the highest-likelihood endpoint across two independent start banks at that class count, including endpoints that do not pass the numerical screen. Negative differences favor the endpoint over that row's exact one-class baseline by BIC alone. They do not establish an admissible model. Each bank used 24 initializations and polished four endpoints in Stata Mata. An independent readback checked the likelihood, score, local rank, and residual associations; curvature was checked where the endpoint met the prerequisites. OTP denotes one-time passcode. No four-, five-, or six-class candidate passed. These are exploratory comparisons in the study sample, not tests of population types.
+\end{minipage}
+\end{table}
+
+\paragraph{What fewer categories changed.}
+On the same 394 cases, we recoded perceived information about costs and recourse as some or a lot versus little or none. This removed the boundary problem in the two-class endpoint and was the only alternative that cleared the full-sample screen. Native Stata \texttt{gsem}, using 0/1 Bernoulli inputs and ordered logits for the remaining three-level items, reproduced its likelihood ($-1182.74$) and its profiles. The fitted weights were 66.6\% and 33.4\%. In the larger fitted component, the probability of frequent merchant payments was 86.9\%, compared with 20.5\% in the smaller component. The larger component also had higher fitted probabilities of reporting transfer ability in the top category and some or a lot of information. These are differences on the items that define the classes, not evidence about external outcomes. The minimum-reach all-binary model also converged in native \texttt{gsem}, but retained two material pair-cell discrepancies. In the established-use panel a three-class boundary endpoint had a BIC 1.33 points lower than the interior two-class endpoint. That small difference between recorded endpoints does not support an admissible third class.
+
+\paragraph{Stability and disposition.}
+For the information-threshold panel, we repeatedly withheld 39 cases using the pattern frequencies and estimated both models on the remaining 355. Two classes improved out-of-fit log scores in nine of ten overlapping splits. The largest aligned share or profile change from the full-data fit was 6.2 percentage points, but both start banks returned to a numerical boundary in two of the ten splits. This fails the planned internal stability screen. These splits are not independent validation, and neither this exercise nor the historical four-class fit justifies adopting latent groups, reporting individual memberships, or using them as outcomes in the paper. The categorical results are consistent with an important distinction between access and active use, which the paper reports using observed profiles.
