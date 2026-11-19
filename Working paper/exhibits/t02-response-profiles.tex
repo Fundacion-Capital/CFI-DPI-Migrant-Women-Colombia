@@ -1,0 +1,66 @@
+\begin{figure}[tbp]
+\centering
+\begin{singlespace}
+\caption{Exploratory T02 profiles: fitted shares and item-response probabilities}
+\label{fig:t02-response-profiles}
+\smallskip
+\begin{tikzpicture}[x=1pt,y=-1pt,every node/.style={font=\footnotesize,inner sep=0pt}]
+% Reference fit: full-sample T02, K=4, delta=.50; percentages in saved profile order.
+\newcommand{\TTwoColumn}[3]{%
+  \node[font=\small\bfseries] at ({#1+41},0) {Profile #2};
+  \node at ({#1+41},13) {#3\%};
+  \foreach \tick in {0,50,100}{%
+    \draw[gray!37,line width=.3pt] ({#1+.54*\tick},34) -- ({#1+.54*\tick},317);
+    \node[font=\scriptsize] at ({#1+.54*\tick},27) {\tick};
+  }%
+}
+\newcommand{\TTwoItem}[2]{\node[anchor=west,font=\footnotesize\bfseries] at (0,#1) {#2};}
+\newcommand{\TTwoRow}[6]{%
+  \node[anchor=west] at (7,#1) {#2};
+  \foreach \origin/\prob in {118/#3,205/#4,292/#5,379/#6}{%
+    \fill ({\origin+.54*\prob},#1) circle[radius=1.5pt];
+    \node[anchor=east] at ({\origin+81},#1)
+      {\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use period]{\prob}};
+  }%
+}
+\node[anchor=west,font=\footnotesize\bfseries] at (0,13) {Fitted sample share};
+\node[anchor=west] at (0,27) {Response option};
+\TTwoColumn{118}{1}{37.7}
+\TTwoColumn{205}{2}{9.7}
+\TTwoColumn{292}{3}{8.5}
+\TTwoColumn{379}{4}{44.1}
+
+\TTwoItem{39}{Own-name phone line}
+\TTwoRow{51}{No}{70.21784966}{50.26691991}{24.42665891}{17.73840771}
+\TTwoRow{63}{Yes}{29.78215034}{49.73308009}{75.57334109}{82.26159229}
+\TTwoItem{79}{Needed help to register}
+\TTwoRow{91}{No}{52.68790583}{39.55698534}{15.87277011}{78.58648443}
+\TTwoRow{103}{Yes}{47.31209417}{60.44301466}{84.12722989}{21.41351557}
+\TTwoItem{119}{Phone-transfer ability}
+\TTwoRow{131}{Low}{1.35784117}{1.74354239}{36.27951728}{0.49061909}
+\TTwoRow{143}{Middle}{0.75696706}{29.16950890}{56.99017218}{0.56571022}
+\TTwoRow{155}{High}{97.88519177}{69.08694871}{6.73031054}{98.94367070}
+\TTwoItem{171}{Holds balance over a week}
+\TTwoRow{183}{Never}{8.38688622}{55.27981388}{59.59789017}{13.02675509}
+\TTwoRow{195}{Sometimes}{14.34006919}{35.33031146}{15.49161576}{64.11999703}
+\TTwoRow{207}{Regularly}{77.27304459}{9.38987466}{24.91049407}{22.85324787}
+\TTwoItem{223}{Uses authentication}
+\TTwoRow{235}{Never}{0.59504568}{29.13583759}{20.48279075}{4.29461332}
+\TTwoRow{247}{Sometimes}{5.36196170}{66.35429426}{35.56182087}{19.15856700}
+\TTwoRow{259}{Always}{94.04299261}{4.50986815}{43.95538838}{76.54681968}
+\TTwoItem{275}{Remittance allocation}
+\TTwoRow{287}{Without asking}{98.47995220}{42.53617831}{94.59833871}{83.77069798}
+\TTwoRow{299}{Inform or agree}{1.06070789}{43.28770302}{3.74779864}{15.82754792}
+\TTwoRow{311}{Someone else decides}{0.45933991}{14.17611867}{1.65386265}{0.40175410}
+
+\node at (289,330) {Item-response probability (\%)};
+\end{tikzpicture}
+
+\smallskip
+\begin{minipage}{0.95\linewidth}
+\footnotesize\raggedright
+Notes: The six-item model uses the same 362 scorable cases as Table~\ref{tab:exploratory-profiles-main}, with probability smoothing $\delta=0.50$. Dots and numbers show the fitted probability of each answer given a profile, not observed frequencies. The shares at the top average fitted posterior membership probabilities across the 362 cases; they are neither assignments nor population estimates. The allocation item asks what a respondent could do, not what she did. Point estimates only. The profiles are exploratory; they are not used in the main analysis.\par
+Source: Authors' calculations from the CFI-DPI survey in Colombia; saved reference fit described in the technical supplement.\par
+\end{minipage}
+\end{singlespace}
+\end{figure}
