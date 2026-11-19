@@ -1,0 +1,43 @@
+\begin{table}[tbp]
+\centering
+\caption{Exploratory latent profiles and prediction of reported problems and trust}
+\label{tab:exploratory-profiles-main}
+\smallskip
+\begin{minipage}{0.95\linewidth}
+\begin{singlespace}
+\small
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lr>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
+\toprule
+\multicolumn{3}{@{}l}{\textbf{Panel A. Four fitted profiles at the reference smoothing}} \\
+\addlinespace[2pt]
+Profile & Share (\%) & Distinctive reported responses \\
+\midrule
+1 & 37.7 & Regular balance holding with less common own-name phone registration. \\
+2 & 9.7 & Regular holding uncommon; least likely to report being able to allocate funds without asking. \\
+3 & 8.5 & Most need for registration help and least reported transfer ability; often report being able to allocate funds without asking. \\
+4 & 44.1 & High reported transfer ability and mostly intermittent balance holding. \\
+\bottomrule
+\end{tabular*}
+
+\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrr@{}}
+\toprule
+\multicolumn{3}{@{}l}{\textbf{Panel B. Held-out prediction of a separate outcome}} \\
+\addlinespace[2pt]
+Representation of the same six answers & Log score & Brier loss \\
+\midrule
+Three-class posterior probabilities & $-1.0625$ & 0.5728 \\
+Four-class posterior probabilities & $-1.0689$ & 0.5766 \\
+All six answers as category indicators & $-1.0553$ & 0.5667 \\
+Two continuous correspondence-analysis scores & $-1.0447$ & 0.5601 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+{\footnotesize\raggedright
+Notes: Both panels use the same 362 scorable cases. Panel A sums each profile's fitted posterior membership probabilities and divides by 362; shares are not counts assigned to classes or population estimates. The reference smoothing is $\delta=0.50$. The allocation item asks what the respondent could do, not what she did. Panel B predicts four combinations of a reported payment or remittance problem in the last year and endorsement of trust in the main provider. Neither item enters the class model. All rows use the same penalized outcome model and residence information. Scores average held-out evaluations from two partitions of the same respondents. Higher log scores and lower Brier losses are better. These are internal comparisons, not tests of differences or independent validation.\par
+Source: Authors' calculations from the CFI-DPI survey in Colombia; saved six-item sensitivity results and common-model comparisons in the technical supplement.\par}
+\end{singlespace}
+\end{minipage}
+\end{table}

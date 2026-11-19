@@ -16,7 +16,7 @@ Differences are in percentage points. We compare 0.50 with 0.75 for IAT3 and IAD
 The 95\% intervals are pointwise delta-method intervals using the model's independent-record sandwich covariance. They do not account for unrecorded referral or household dependence. We apply Holm's adjustment to one fixed family of six one-degree-of-freedom Wald tests: one coefficient-null test per focal measure in each core model \citep{holm1979}. The adjustment does not apply to the probability-contrast intervals. Current use may help respondents acquire the abilities they report. Neither covariate adjustment nor the common-sample comparison removes unmeasured confounding or selection into recruitment.
 
 \subsection{Observed profiles}
-We describe combinations of two reported onboarding conditions: proof of address in one's own name and a phone line in one's own name. The four profiles are combinations of observed answers, not fitted groups. We count a respondent only when both answers are available and scorable. In separate exploratory out-of-fold comparisons within the same survey, a regularized four-class model predicted its six defining responses better than a three-class model. Adding a fourth class did not improve prediction of the separate joint problem-and-trust outcome. A class-free two-dimensional representation using the same six responses and residence information performed better on that outcome. The technical supplement distinguishes these tasks; we do not use class assignments in the main analysis.
+We describe combinations of two reported onboarding conditions: proof of address in one's own name and a phone line in one's own name. We count a respondent only when both answers are available and scorable. These combinations are observed answers, not fitted groups. The separate exploratory latent-class exercise below asks what a model gains by grouping responses; it does not assign classes in the main analysis.
 
 \subsection{Survey results}
 \label{sec:survey-results}
@@ -47,3 +47,13 @@ Notes: R0 models digital retention or use of remittance proceeds ($N=402$); D0 m
 Source: Authors' calculations from the CFI-DPI survey in Colombia.
 \end{minipage}
 \end{figure}
+
+\subsection{What the exploratory latent profiles add}
+\label{sec:exploratory-profiles-main}
+
+The six-item model in Table~\ref{tab:exploratory-profiles-main} (T02 in the technical supplement) uses reported phone registration, help registering an account or wallet, ability to transfer by phone, balance holding for more than a week, authentication use, and hypothetical permission to allocate remittances to savings or a business. The four fitted profiles do not form an inclusion ladder. One combines regular balance holding with a less commonly reported own-name phone line. Another combines greater need for registration help and lower reported transfer ability with frequently reporting that one could allocate funds without asking. These patterns illustrate why account access, ability and control should not be treated as the same thing. They do not show who actually controls funds or match any interviewee to a fitted class.
+
+Four classes improved the held-out log score for the six defining answers over three by 0.022--0.025 nats per case across the tested smoothing settings. At the reference setting, nine of ten training fits matched the full-sample profiles within the alignment limits; the smallest profile had fewer than 20 expected cases in one training fit. The conventional four-class fits without smoothing did not pass the diagnostic checks. The fourth class did not help predict the separate joint outcome of reported payment problems and provider trust. Models using the same answers directly or as two continuous scores performed better on that task. All comparisons reuse the same survey; they are not independent validation. We retain the observed profiles as the main measurement result and treat the fitted classes as a sensitivity analysis. The technical supplement gives the full comparisons, fitting diagnostics and historical H1 results.
+
+\input{"\CFIPaperDir exhibits/exploratory-profiles.tex"}
+\clearpage
