@@ -1,0 +1,43 @@
+\section{Exploratory six-item profiles and class-free comparisons}
+\label{sec:t02}
+
+The historical H1 model classified recoded composite scores. The revised models above instead examined reported answers. A further exploratory screen kept reported transaction problems and trust out of the class definition so that they could be used in a separate check. We refer to the resulting six-item panel as T02. It tracks an own-name mobile line, help registering the main account or wallet, confidence in making a transfer, frequency of leaving money in the account or wallet for more than a week, use of authentication, and who decides how to allocate remittances. Needing help can enable access; holding a balance is not a measure of wealth; and authentication does not establish protection from fraud. Allocation decisions are nominal: informing or agreeing with someone else is not an assumed midpoint on an empowerment scale \citep{kabeer1999}.
+
+\paragraph{What the four-class fit adds.}
+The comparison holds the common-case base at 362 (240 in Bogot\'a and 122 elsewhere) and shares item probabilities across residence groups, allowing the class weights to vary. The 362 are the subset with scorable answers across the candidate panels, not a new sample or a revised survey cohort. Among T02 fits with probability smoothing, four classes improved held-out log scores for the \emph{six defining responses} relative to three by 0.022--0.025 nats per case over the three smoothing settings. At the reference setting ($\delta=0.50$), nine of ten training fits matched the full-sample profiles on the prespecified alignment criterion. The smallest fitted class accounted for 8.5\% of the full sample in expectation, but for fewer than 20 expected cases in one training fit. At the same smoothing, the five-class alternative did not improve the held-out measurement score or match the full-sample profiles more often.
+
+At the reference setting, the four estimated shares were 37.7\%, 9.7\%, 8.5\% and 44.1\%. The fitted patterns distinguish relatively regular balance holding despite lower own-name phone registration; low holding and less reported autonomy in allocating remittances; more registration help and lower transfer confidence despite substantial reported discretion; and high transfer confidence with mostly intermittent holding. These are model-implied patterns, not observed groups or welfare rankings. In the unrestricted four-class \texttt{gsem} checks, the empirical score matrix had rank 33 or 34 of 46 and 15--18 probabilities or class weights were near a boundary. A constrained ordinal four-class version also did not return a fit. Thus the regularized four-class result is not evidence of an admissible unpenalized solution.
+
+\paragraph{Do the classes improve prediction of a distinct outcome?}
+We predict the four combinations of whether a respondent reported a transaction problem and whether she endorsed trust; non-endorsement includes a neutral answer and is not equated with distrust. We use the same 362 cases, six answers and two fixed five-fold partitions. For the class models we reconstruct the posterior weights from the stored training estimates at $\delta=0.50$ and fit the outcome probabilities on the training sample. We also give each alternative the same ridge multinomial outcome model and the same residence indicator. In this comparison the inputs are the 16 original category indicators, one or two continuous multiple correspondence analysis (MCA) scores, or the soft probabilities from the three- or four-class T02 model. For MCA, category frequencies and axes are learned on training cases and used without re-estimation to project held-out cases \citep{stata19mca}. All predictors are standardized using training moments; penalties apply to slopes but not intercepts. The reference penalty is 5 for the summed negative log likelihood, with fixed sensitivities at 1 and 20.
+
+\begin{table}[tbp]
+\centering
+\caption{Held-out prediction of reported problems and trust endorsement}
+\label{tab:t02-equal-information}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Predictors or representation & Log score & Brier loss \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Reference predictions}} \\
+Residence only & $-1.1360$ & 0.6066 \\
+Three T02 classes, original outcome model & $-1.0709$ & 0.5797 \\
+Four T02 classes, original outcome model & $-1.0826$ & 0.5839 \\
+\addlinespace
+\multicolumn{3}{@{}l}{\textit{Common ridge outcome model, penalty 5}} \\
+Six answers, all category indicators & $-1.0553$ & 0.5667 \\
+One MCA dimension & $-1.0897$ & 0.5860 \\
+Two MCA dimensions & $-1.0447$ & 0.5601 \\
+Three T02 posterior weights & $-1.0625$ & 0.5728 \\
+Four T02 posterior weights & $-1.0689$ & 0.5766 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\linewidth}
+\smallskip\footnotesize\raggedright
+Notes: Means over two sets of held-out predictions for the same 362 respondents, not 724 independent cases. Higher log score is better; lower Brier loss (the sum of squared prediction errors across the four outcomes) is better \citep{gneitingRaftery2007}. The common outcome models include residence. The original T02 models use residence in their class weights. These scores concern the joint trust/problem outcome, not the likelihood of the six measurement responses.\\
+Source: Authors' calculations from the CFI-DPI survey in Colombia.
+\end{minipage}
+\end{table}
+
+Two continuous dimensions and the direct category model each predicted the outcome better than the three- and four-class alternatives under the common outcome model in both repetitions at the reference penalty. The two-dimensional model also outscored the class alternatives on both criteria at penalties 1 and 20. The direct model with the strongest shrinkage had a slightly better log score than the two-dimensional model at that same penalty; the ordering of the class-free approaches is not the key result. Four classes did not improve prediction over three with either outcome model. These comparisons show that classes were not needed for this predictive task. They do not establish two underlying traits or disprove other forms of latent structure. The outcome was already examined in the same survey, and the repeated folds are not independent validation. We retain observed profiles in the main paper and make no class-based welfare, policy or population claims.
