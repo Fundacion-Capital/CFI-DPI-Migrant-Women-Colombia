@@ -1,37 +1,44 @@
 \section{Determinants results}
 \label{sec:det-results-supplement}
-Table~\ref{tab:det-models} reports the intended and fitted samples for all five models. Tables~\ref{tab:det-core} and~\ref{tab:det-checks} show the complete set of 15 fixed-endpoint contrasts, with pointwise intervals, observed endpoint counts and support flags. Figure~\ref{fig:determinants-all} shows the same contrasts on a common scale.
+Table~\ref{tab:det-models} reports intended and fitted samples for the five models. The rank column is the rank of the fitted coefficient covariance matrix, as stored by Stata's logit estimator. Tables~\ref{tab:det-core} and~\ref{tab:det-checks} report all 15 contrasts, pointwise intervals, observed endpoint counts and support flags. Figure~\ref{fig:determinants-all} puts the contrasts on a common scale.
 
-The positive IAFF2 contrast for remittance disposition persists in the extension and the common-sample check. The positive IADT2 contrast for domestic participation persists in the extension. Both core comparisons have both exact endpoints in 11 of 12 screened strata. The IAT3 intervals include zero in all five models. For IAFF2 in the domestic models, the point estimates are close even though the D0 interval includes zero and the D1 interval does not; that difference does not test whether the two estimates differ.
+The positive adjusted association between the two-condition score and remittance disposition persists in the extension and common-sample check. The positive association between the ability and confidence score and domestic participation persists in its extension. For each of these two core contrasts, both exact endpoints appear in 11 of 12 education-by-residence strata. An endpoint lies outside the observed range in the remaining stratum, which is still included in each model's average. The access-score intervals include zero in all five models. For the onboarding score in the domestic models, the point estimates remain close even though the D0 interval includes zero and the D1 interval does not. This difference is not a test of whether the estimates differ.
 
-Only the remittance-core and remittance-extension IADT2 contrasts have both endpoints in all 12 strata. The other 13 contrasts have at least one stratum in which an endpoint falls outside the observed range. Five of those 13 also have a different stratum where an endpoint is inside the range but is not observed exactly. Neither kind of gap changes the fitted or standardization sample.
+Only the remittance-core and remittance-extension contrasts for IADT2 have both endpoints in all 12 strata. The other 13 contrasts each have at least one stratum in which an endpoint is outside the observed range. For five of these 13, a different stratum has an endpoint inside the range but not exactly observed. Neither circumstance changes the fitted sample or the sample used to average predictions.
 
-Table~\ref{tab:det-coefficients} reports the three focal logit coefficients and their standard errors. Table~\ref{tab:det-wald} gives the six core tests: R0/IAFF2 and D0/IADT2 are the only coefficient nulls rejected at the 5\% level after Holm adjustment. The adjusted test results do not apply to individual probability intervals or tests across specifications.
+Table~\ref{tab:det-coefficients} gives the three focal logit coefficients; Table~\ref{tab:det-wald} gives the six core coefficient-null tests. The Holm-adjusted p-values are below 0.05 for IAFF2 in R0 and IADT2 in D0 only. The adjustment does not apply to the probability intervals or to comparisons across specifications.
 
 \input{"\CFIDeterminantsDir det_models.tex"}
 \input{"\CFIDeterminantsDir det_contrasts_core.tex"}
 \input{"\CFIDeterminantsDir det_contrasts_checks.tex"}
-\input{"\CFIDeterminantsDir det_coefficients.tex"}
+% Align each coefficient with its label without changing the generated table.
+\ExplSyntaxOn
+\cs_new_protected:Npn \CFICoefficientTable #1#2
+  {
+    \file_get:nnN { \CFIDeterminantsDir det_coefficients.tex }
+      { \ExplSyntaxOff } \l_tmpa_tl
+    \tl_replace_once:Nnn \l_tmpa_tl {#1} {#2}
+    \tl_use:N \l_tmpa_tl
+  }
+\ExplSyntaxOff
+\begingroup
+\renewcommand{\shortstack}[1]{\begin{tabular}[t]{@{}r@{}}#1\end{tabular}}
+\CFICoefficientTable{IADT2: reported skills}{IADT2: reported ability/confidence}
+\endgroup
 \input{"\CFIDeterminantsDir det_wald.tex"}
 
 \begin{figure}[p]
-  \centering
-  \includegraphics[width=\linewidth]{"\CFIDeterminantsDir det_contrasts_all.pdf"}
-  \caption{Adjusted associations with remittance disposition and domestic digital participation}
-  \label{fig:determinants-all}
-  \begin{minipage}{0.96\linewidth}
-    \smallskip\footnotesize\raggedright
-    Notes: \input{"\CFIDeterminantsDir det_figure_note.tex"}\par
-    Source: Authors' calculations from the CFI-DPI survey in Colombia.\par
-  \end{minipage}
+\centering
+\includegraphics[width=\linewidth]{"\CFIDeterminantsDir det_contrasts_all.pdf"}
+\caption{Adjusted associations with remittance disposition and domestic digital participation}
+\label{fig:determinants-all}
+\begin{minipage}{0.96\linewidth}
+\smallskip\footnotesize\raggedright
+Notes: Points are higher-minus-lower predicted probability differences, averaged over the entire fitted sample. Bars are pointwise 95\% delta-method intervals using the independent-record sandwich covariance. R0 and D0 are the remittance and domestic core models; R1 and D1 add occupation and recorded arrival year. R0C is the remittance core fitted on the domestic core sample. IAT3 measures reported phone, internet and data access; IADT2, reported transfer ability and fraud-avoidance confidence; and IAFF2, reported own-name phone registration and address proof. Open markers flag limited exact support, not low precision. Tables~\ref{tab:det-core}--\ref{tab:det-checks} give endpoints and support counts. The intervals do not account for unrecorded household or referral dependence.\par
+Source: Authors' calculations from the CFI-DPI survey in Colombia.\par
+\end{minipage}
 \end{figure}
 \clearpage
 
-\section{Other exhibit slots and restricted records}
-The slots below are separate from the determinants results and do not contain new estimates.
-\exhibitplaceholder{S1--S2}{Dictionary and form-version routing}{Versioned item register and preparation mapping. Separate route states, offered options and response states.}
-\exhibitplaceholder{S3--S4}{Components and definition checks}{Candidate own Ns and common-case comparisons. Optional AS1: two pair-complete and three common-complete Pearson slots; record reasons for unavailability. AS1 is not Appendix C2.}
-\exhibitplaceholder{S5}{Receipt channel, frequency and operation bins}{Three distinct item bases.}
-\exhibitplaceholder{S6--S9}{Experiences, safety, decisions and support}{Keep instrument routes and recall windows; use the complaint route, not all respondents, for conditional complaint outcomes.}
-
-The determinants exhibits use screened aggregate results. Detailed endpoint predictions, covariance and support ledgers, complete coefficient tables and potentially disclosive counts remain restricted. The historical E.5 renderer, Appendix C2 and new latent-class estimates are not inputs to these exhibits.
+\section{Exhibit coverage}
+The main paper presents the survey summaries, observed onboarding combinations, core contrasts and exploratory profiles. This supplement presents estimates for the five working logit models, the exploratory measurement comparisons and the documentary source notes. It does not report frequency distributions for every question named in the joint display. Endpoint predictions by subgroup, the full support and covariance records, and coefficient estimates beyond the three focal scores are not included here. The data availability statement describes the access boundary; inclusion of an aggregate does not clear the underlying records for release.
